@@ -1,22 +1,54 @@
-<!doctype html>
+---
+/*
+  Layout.astro
+  Receives `frontmatter` from pages and injects SEO meta tags.
+*/
+const { frontmatter } = Astro.props;
+---
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Page Title & Description -->
+    <title>{frontmatter?.title ?? "Thought Archive"}</title>
+    <meta name="description" content={frontmatter?.description ?? ""} />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="article" />
+    <meta property="og:title"       content={frontmatter?.title} />
+    <meta property="og:description" content={frontmatter?.description} />
+    <meta property="og:url"         content={Astro.site + Astro.url.pathname} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content={frontmatter?.title} />
+    <meta name="twitter:description" content={frontmatter?.description} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline:       frontmatter?.title,
+        description:    frontmatter?.description,
+        datePublished:  frontmatter?.pubDate,
+        url:            Astro.site + Astro.url.pathname,
+      })}
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
