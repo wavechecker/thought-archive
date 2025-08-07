@@ -1,0 +1,30 @@
+---
+export const prerender = true; // statically generate your index
+
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+// Fetch all posts
+const posts = await getCollection('posts');
+// Sort by pubDate descending (fallback to empty string if missing)
+posts.sort((a, b) => {
+  const dateA = a.data.pubDate ?? '';
+  const dateB = b.data.pubDate ?? '';
+  return dateB.localeCompare(dateA);
+});
+
+---
+
+<Layout>
+  <h1>All Posts</h1>
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <a href={`/posts/${post.slug}`}>
+          {post.data.title}
+        </a>
+        <small> — {post.data.pubDate}</small>
+      </li>
+    ))}
+  </ul>
+</Layout>
