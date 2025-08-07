@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
+import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  // No integrations needed
+  // …any existing config…
+  adapter: netlify(),
 });
-
