@@ -1,25 +1,25 @@
 ---
-export const prerender = false; // SSR mode—no getStaticPaths required
+export const prerender = false; // SSR mode
 
-import { getEntry } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import { AstroError } from 'astro/errors';
-
-// 1️⃣ Grab the slug segment from the URL
-const { slug } = Astro.params;
-
-// 2️⃣ Fetch the post entry at request time
-const post = await getEntry('posts', slug);
-if (!post) {
-  throw new AstroError(`Post not found: ${slug}`);
+export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
 }
 
-// 3️⃣ Render Markdown to a component
+import { AstroError } from 'astro/errors';
+const { post } = Astro.props;
+if (!post) {
+  throw new AstroError(`Post props missing for slug`);
+}
+
 const { Content } = await post.render();
 const frontmatter = post.data;
 ---
 
-<Layout>
+<Layout frontmatter={frontmatter}>
   <article>
     <h1>{frontmatter.title}</h1>
     <p><em>{frontmatter.pubDate}</em></p>
