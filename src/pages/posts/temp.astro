@@ -1,0 +1,32 @@
+---
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+import { getEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { AstroError } from 'astro/errors';
+
+const { slug } = Astro.params;
+const post = await getEntry('posts', slug);
+if (!post) {
+  throw new AstroError(`Post not found: ${slug}`);
+}
+
+const { Content } = await post.render();
+const frontmatter = post.data;
+---
+
+<Layout frontmatter={frontmatter}>
+  <article>
+    <h1>{frontmatter.title}</h1>
+    <p><em>{frontmatter.pubDate}</em></p>
+    <Content />
+  </article>
+</Layout>

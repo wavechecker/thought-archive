@@ -1,0 +1,94 @@
+---
+import { getCollection } from "astro:content";
+import GuideLayout from "../../layouts/GuideLayout.astro";
+
+// Build all /guides/* pages at build time
+export async function getStaticPaths() {
+  const guides = await getCollection("guides");
+  return guides.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+// Receive the entry selected by getStaticPaths()
+const { entry } = Astro.props as { entry: any };
+const { Content } = await entry.render();
+const data = entry.data;
+
+// Page title
+const pageTitle = `${data.conditionName} – Patient Guide (${(data.lang || "en").toUpperCase()})`;
+
+// Language switcher + alternates
+const allGuides = await getCollection("guides");
+
+// support either `base.en` or `base-en` styles
+const SLUG_LANG_RE = /([.-])(en|es|ar|zh)$/;
+const baseSlug = entry.slug.replace(SLUG_LANG_RE, "");
+
+// find language siblings (both dot and hyphen styles)
+const siblings = allGuides.filter(
+  (g) => g.slug.startsWith(baseSlug + "-") || g.slug.startsWith(baseSlug + ".")
+);
+
+// build alternates for <link rel="alternate">
+const alternates = siblings.map((g) => ({
+  lang: (g.data.lang || "en").toLowerCase(),
+  href: `/guides/${g.slug}`,
+}));
+
+// render language links in a stable order, but only those that exist
+const languageOrder = ["en", "es", "ar", "zh"];
+const langLinks = languageOrder
+  .map((code) => {
+    const alt = alternates.find((a) => a.lang === code);
+    return alt ? { code, href: alt.href } : null;
+  })
+  .filter(Boolean) as { code: string; href: string }[];
+
+// Simple related guides (same language)
+const related = allGuides
+  .filter(
+    (g) => g.slug !== entry.slug && (g.data.lang || "en") === (data.lang || "en")
+  )
+  .slice(0, 5);
+---
+
+<GuideLayout title={pageTitle} data={data} alternates={alternates}>
+  <h1>{data.conditionName} – Patient Guide ({(data.lang || "en").toUpperCase()})</h1>
+  <p><em>Last reviewed:</em> {data.lastReviewed ?? "—"}</p>
+
+  {langLinks.length > 0 && (
+    <p><strong>Languages:</strong>
+      {langLinks.map((l, i) => (
+        <>
+          <a href={l.href}>{l.code.toUpperCase()}</a>{i < langLinks.length - 1 ? " · " : ""}
+        </>
+      ))}
+    </p>
+  )}
+
+  <Content />
+
+  <h2>Trusted Sources</h2>
+  <ul>
+    {data.sources?.map((s: any) => (
+      <li><a href={s.url} rel="nofollow noopener">{s.name}</a></li>
+    ))}
+  </ul>
+
+  {related.length > 0 && (
+    <>
+      <h2>Related guides</h2>
+      <ul>
+        {related.map((g) => (
+          <li><a href={`/guides/${g.slug}`}>{g.data.conditionName}</a></li>
+        ))}
+      </ul>
+    </>
+  )}
+</GuideLayout>
+
+
+
+

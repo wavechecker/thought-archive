@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const guides = (await getCollection("guides"))
+  .sort((a,b) => a.data.conditionName.localeCompare(b.data.conditionName));
+---
+
+<Layout title="Open Patient Guides – Thought-Archive">
+  <h1>Open Patient Guides</h1>
+  <ul>
+    {guides.map((g) => (
+      <li>
+        <a href={`/guides/${g.slug}`}>{g.data.conditionName} ({g.data.lang})</a>
+      </li>
+    ))}
+  </ul>
+</Layout>

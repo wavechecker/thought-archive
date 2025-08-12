@@ -1,0 +1,87 @@
+---
+import Layout from "./Layout.astro";
+
+interface GuideData {
+  conditionName: string;
+  lang?: string;
+  tags?: string[];
+  lastReviewed?: string;
+  icd10?: string;
+  synonyms?: string[];
+  summary?: string;
+}
+type Alt = { lang: string; href: string };
+
+const { title = "Guide", data, alternates = [] } = Astro.props as {
+  title?: string;
+  data?: GuideData;
+  alternates?: Alt[];
+};
+
+const url = new URL(Astro.url).toString();
+const condName = data?.conditionName ?? "Patient Guide";
+const lang = (data?.lang ?? "en").toLowerCase();
+const keywords = (data?.tags ?? []).join(", ");
+
+// JSON-LD schema
+const medicalCondition: Record<string, any> = {
+  "@context": "https://schema.org",
+  "@type": "MedicalCondition",
+  name: condName,
+  inLanguage: lang,
+  ...(data?.synonyms?.length ? { alternateName: data.synonyms.join(", ") } : {}),
+  ...(data?.icd10 ? { identifier: [{ "@type": "PropertyValue", propertyID: "ICD-10", value: data.icd10 }] } : {}),
+  ...(data?.summary ? { description: data.summary } : {})
+};
+
+const medicalGuideline: Record<string, any> = {
+  "@context": "https://schema.org",
+  "@type": "MedicalGuideline",
+  name: `${condName} – Self-care & When to Seek Help`,
+  guidelineSubject: { "@type": "MedicalCondition", "name": condName },
+  inLanguage: lang,
+  url,
+  evidenceLevel: "EvidenceBased",
+  ...(data?.lastReviewed ? { guidelineDate: data.lastReviewed } : {})
+};
+
+const article: Record<string, any> = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: `${condName} – Patient Guide`,
+  inLanguage: lang,
+  about: { "@type": "MedicalCondition", name: condName },
+  isAccessibleForFree: true,
+  mainEntityOfPage: url,
+  ...(keywords ? { keywords } : {}),
+  ...(data?.lastReviewed ? { dateModified: data.lastReviewed } : {})
+};
+
+const jsonld = JSON.stringify([medicalCondition, medicalGuideline, article]);
+---
+
+<Layout title={title}>
+  {/* Canonical + hreflang alternates */}
+  <link rel="canonical" href={url} />
+  {alternates.map((a) => (
+    <link rel="alternate" hreflang={a.lang} href={a.href} />
+  ))}
+
+  {/* Open Graph / Twitter */}
+  <meta property="og:title" content={title} />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content={lang.replace("-", "_")} />
+  <meta property="og:url" content={url} />
+  <meta property="og:description" content={data?.summary ?? `${condName} – Patient guide`} />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={data?.summary ?? `${condName} – Patient guide`} />
+
+  {/* JSON-LD */}
+  <script type="application/ld+json">{jsonld}</script>
+
+  <article class="prose max-w-none">
+    <slot />
+  </article>
+</Layout>
+
