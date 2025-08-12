@@ -1,28 +1,30 @@
 ---
-export const prerender = false; // SSR mode
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
 
+// Build all /posts/* pages at build time
 export async function getStaticPaths() {
-  const { getCollection } = await import('astro:content');
-  const posts = await getCollection('posts');
-  return posts.map((post) => ({
-    params: { slug: post.slug },
+  const posts = await getCollection("posts");
+  return posts.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
   }));
 }
 
-import { AstroError } from 'astro/errors';
-const { post } = Astro.props;
-if (!post) {
-  throw new AstroError(`Post props missing for slug`);
-}
+// Receive the entry from getStaticPaths
+const { entry } = Astro.props as { entry: any };
+const { Content } = await entry.render();
+const data = entry.data;
 
-const { Content } = await post.render();
-const frontmatter = post.data;
+// Title for the page/tab
+const pageTitle = data.title ?? entry.slug;
 ---
 
-<Layout frontmatter={frontmatter}>
-  <article>
-    <h1>{frontmatter.title}</h1>
-    <p><em>{frontmatter.pubDate}</em></p>
+<Layout title={pageTitle}>
+  <article class="prose max-w-none">
+    <h1>{data.title ?? entry.slug}</h1>
+    {data.pubDate && <p><em>{new Date(data.pubDate).toDateString()}</em></p>}
+    {data.description && <p>{data.description}</p>}
     <Content />
   </article>
 </Layout>
