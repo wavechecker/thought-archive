@@ -1,23 +1,9 @@
 ---
-conditionName: "Type 2 Diabetes"
-icd10: "E11"
-lang: "en"
-summary: "Type 2 diabetes occurs when the body does not use insulin well, causing high blood sugar and long term risks to the heart, kidneys, eyes, and nerves."
-audience: "patient"
-tags:
-  - "diabetes"
-  - "blood sugar"
-  - "endocrine"
-redFlags:
-  - "Very high blood sugar with vomiting or confusion"
-  - "Severe dehydration or trouble breathing"
-  - "Chest pain, weakness on one side, or sudden vision loss"
-lastReviewed: "2025-08-12"
-sources:
-  - name: "CDC - Type 2 Diabetes"
-    url: "https://www.cdc.gov/diabetes/basics/type2.html"
-  - name: "WHO - Diabetes"
-    url: "https://www.who.int/health-topics/diabetes"
+title: "Type 2 Diabetes — Causes, Symptoms, and Management"
+date: 2025-08-12
+description: "Understand Type 2 diabetes and how to manage it day to day."
+tags: ["medical", "diabetes", "health guides"]
+
 ---
 
 ## What this is (plain language)

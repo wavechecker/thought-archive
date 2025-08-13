@@ -1,25 +1,9 @@
 ---
-conditionName: "Asthma"
-icd10: "J45"
-synonyms:
-  - "Reactive airway disease"
-lang: "en"
-summary: "Asthma is a long-term condition where swollen, sensitive airways narrow and make it hard to breathe. Symptoms often flare with triggers like colds, smoke, or exercise."
-audience: "patient"
-tags:
-  - "asthma"
-  - "inhaler"
-  - "respiratory"
-redFlags:
-  - "Blue lips, severe breathlessness, or unable to speak full sentences"
-  - "Reliever inhaler not helping or wearing off quickly"
-  - "Peak flow <50% of personal best"
-lastReviewed: "2025-08-12"
-sources:
-  - name: "CDC – Asthma"
-    url: "https://www.cdc.gov/asthma/default.htm"
-  - name: "GINA – Global Strategy for Asthma"
-    url: "https://ginasthma.org"
+title: "Asthma — Symptoms, Triggers, and Treatment"
+date: 2025-08-12
+description: "What asthma is, common triggers, and how it’s treated."
+tags: ["medical", "asthma", "respiratory health", "health guides"]
+
 ---
 
 ## What this is (plain language)

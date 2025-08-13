@@ -1,22 +1,9 @@
 ---
-conditionName: "Diabetes tipo 2"
-lang: "es"
-summary: "La diabetes tipo 2 ocurre cuando el cuerpo no usa bien la insulina, lo que causa glucosa alta en sangre y riesgos a largo plazo para corazon, rinones, ojos y nervios."
-audience: "patient"
-tags:
-  - "diabetes"
-  - "glucosa"
-  - "endocrino"
-redFlags:
-  - "Glucosa muy alta con vomitos o confusion"
-  - "Deshidratacion grave o dificultad para respirar"
-  - "Dolor en el pecho, debilidad en un lado o perdida subita de vision"
-lastReviewed: "2025-08-12"
-sources:
-  - name: "CDC - Diabetes tipo 2"
-    url: "https://www.cdc.gov/diabetes/basics/type2.html"
-  - name: "OMS - Diabetes"
-    url: "https://www.who.int/health-topics/diabetes"
+title: "Diabetes tipo 2 — Causas, síntomas y manejo"
+date: 2025-08-12
+description: "Entiende la diabetes tipo 2 y cómo manejarla."
+tags: ["médico", "diabetes", "guías de salud"]
+
 ---
 
 ## Que es (en lenguaje sencillo)

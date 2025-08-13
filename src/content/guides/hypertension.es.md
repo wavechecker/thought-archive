@@ -1,22 +1,9 @@
 ---
-conditionName: "Hipertension arterial (presion alta)"
-lang: "es"
-summary: "La hipertension es cuando la sangre empuja con demasiada fuerza contra las paredes de las arterias, lo que aumenta el riesgo para el corazon, el cerebro, los rinones y los ojos."
-audience: "patient"
-tags:
-  - "hipertension"
-  - "presion arterial"
-  - "cardiovascular"
-redFlags:
-  - "Dolor u opresion en el pecho"
-  - "Dolor de cabeza intenso, confusion o cambios en la vision"
-  - "Dificultad para respirar o desmayo"
-lastReviewed: "2025-08-12"
-sources:
-  - name: "CDC - Presion arterial alta"
-    url: "https://www.cdc.gov/bloodpressure/index.htm"
-  - name: "OMS - Hipertension"
-    url: "https://www.who.int/news-room/fact-sheets/detail/hypertension"
+title: "Hipertensión — Conceptos básicos, riesgos y tratamiento"
+date: 2025-08-12
+description: "Lo esencial de la presión arterial alta, su importancia y cómo controlarla."
+tags: ["médico", "hipertensión", "salud cardiovascular", "guías de salud"]
+
 ---
 
 ## Que es (en lenguaje sencillo)

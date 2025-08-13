@@ -1,26 +1,9 @@
 ---
-conditionName: "Hypertension (High Blood Pressure)"
-icd10: "I10"
-synonyms:
-  - "High blood pressure"
-  - "HTN"
-lang: "en"
-summary: "High blood pressure means blood pushes too hard against artery walls over time, raising the risk of heart, brain, kidney, and eye problems."
-audience: "patient"
-tags:
-  - "hypertension"
-  - "blood pressure"
-  - "cardiovascular"
-redFlags:
-  - "Chest pain or pressure"
-  - "Severe headache, confusion, or vision changes"
-  - "Shortness of breath or fainting"
-lastReviewed: "2025-08-12"
-sources:
-  - name: "CDC – High Blood Pressure"
-    url: "https://www.cdc.gov/bloodpressure/index.htm"
-  - name: "WHO – Hypertension"
-    url: "https://www.who.int/news-room/fact-sheets/detail/hypertension"
+title: "Hypertension — Basics, Risks, and Treatment"
+date: 2025-08-12
+description: "The essentials of high blood pressure, why it matters, and how to manage it."
+tags: ["medical", "hypertension", "heart health", "health guides"]
+
 ---
 
 ## What this is (plain language)

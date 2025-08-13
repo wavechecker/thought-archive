@@ -1,18 +1,36 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro'; // adjust if your Layout lives elsewhere
 
-const guides = (await getCollection("guides"))
-  .sort((a,b) => a.data.conditionName.localeCompare(b.data.conditionName));
+const guides = await getCollection('guides');
+
+// newest first if dates exist
+guides.sort((a, b) => {
+  const da = a.data.date instanceof Date ? a.data.date.getTime() : 0;
+  const db = b.data.date instanceof Date ? b.data.date.getTime() : 0;
+  return db - da;
+});
 ---
 
-<Layout title="Open Patient Guides – Thought-Archive">
-  <h1>Open Patient Guides</h1>
-  <ul>
-    {guides.map((g) => (
-      <li>
-        <a href={`/guides/${g.slug}`}>{g.data.conditionName} ({g.data.lang})</a>
-      </li>
-    ))}
-  </ul>
+<Layout>
+  <section class="mx-auto max-w-3xl px-4 py-10">
+    <h1 class="mb-6">Guides</h1>
+    <ul class="space-y-3">
+      {guides.map((g) => {
+        const date =
+          g.data.date instanceof Date
+            ? g.data.date.toISOString().slice(0, 10)
+            : '';
+        return (
+          <li class="border-b pb-3">
+            <a href={`/guides/${g.slug}`} class="font-medium hover:underline">
+              {g.data.title}
+            </a>
+            {date && <small class="block opacity-70">{date}</small>}
+          </li>
+        );
+      })}
+    </ul>
+  </section>
 </Layout>

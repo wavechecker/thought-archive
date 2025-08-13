@@ -1,23 +1,9 @@
 ---
-conditionName: "Asma"
-icd10: "J45"
-lang: "es"
-summary: "El asma es una afección crónica en la que las vías respiratorias, inflamadas y sensibles, se estrechan y dificultan la respiración."
-audience: "patient"
-tags:
-  - "asma"
-  - "inhalador"
-  - "respiratorio"
-redFlags:
-  - "Labios azulados o gran dificultad para respirar"
-  - "Inhalador de rescate no ayuda o dura muy poco"
-  - "Flujo espiratorio máximo menor al 50% de tu mejor marca"
-lastReviewed: "2025-08-12"
-sources:
-  - name: "CDC - Asma"
-    url: "https://www.cdc.gov/asthma/default.htm"
-  - name: "GINA - Estrategia Global para el Asma"
-    url: "https://ginasthma.org"
+title: "Asma — Síntomas, desencadenantes y tratamiento"
+date: 2025-08-12
+description: "Qué es el asma, desencadenantes comunes y su tratamiento."
+tags: ["médico", "asma", "salud respiratoria", "guías de salud"]
+
 ---
 
 ## Qué es (en lenguaje sencillo)
