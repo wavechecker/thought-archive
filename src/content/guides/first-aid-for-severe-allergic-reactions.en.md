@@ -1,6 +1,6 @@
 ---
-layout: '@/layouts/GuideLayout.astro'
 title: First Aid for Severe Allergic Reactions (Anaphylaxis)
+date: 2025-08-13T00:00:00.000Z
 description: >-
   Recognize anaphylaxis quickly and give the right first aid steps, including
   epinephrine.
@@ -10,8 +10,8 @@ tags:
   - anaphylaxis
   - first aid
   - health guides
-publishDate: '2025-08-13T11:52:51.000Z'
-updatedDate: '2025-08-13T11:52:51.000Z'
+publishDate: '2025-08-13T15:52:51+04:00'
+updatedDate: '2025-08-13T15:52:51+04:00'
 ---
 
 # First Aid for Severe Allergic Reactions (Anaphylaxis)

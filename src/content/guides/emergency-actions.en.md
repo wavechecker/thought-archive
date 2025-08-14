@@ -1,6 +1,6 @@
 ---
-layout: '@/layouts/GuideLayout.astro'
 title: 'Emergency Actions — Hypos, Highs, and Ketones'
+date: 2025-08-13T00:00:00.000Z
 description: >-
   A quick reference for urgent diabetes situations: severe hypos, high BGL with
   ketones, vomiting/illness, and when to call an ambulance.
@@ -10,8 +10,8 @@ tags:
   - type 1 diabetes
   - emergency
   - health guides
-publishDate: '2025-08-13T12:55:39.000Z'
-updatedDate: '2025-08-13T12:55:39.000Z'
+publishDate: '2025-08-13T16:55:39+04:00'
+updatedDate: '2025-08-13T16:55:39+04:00'
 ---
 
 # Emergency Actions — Hypos, Highs, and Ketones
