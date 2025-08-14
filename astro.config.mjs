@@ -5,10 +5,8 @@ export default defineConfig({
   integrations: [mdx()],
   vite: {
     resolve: {
-      alias: {
-        // Optional, but harmless if you want to use "@/..."
-        '@': '/src',
-      },
+      alias: { '@': '/src' }, // optional
     },
   },
 });
+
