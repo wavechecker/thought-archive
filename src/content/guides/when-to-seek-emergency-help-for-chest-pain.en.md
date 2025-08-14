@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
+layout: '@/layouts/GuideLayout.astro'
 title: When to Seek Emergency Help for Chest Pain
 description: Know the warning signs of chest pain that require immediate medical attention.
 tags:
@@ -7,8 +7,8 @@ tags:
   - cardiology
   - emergencies
   - health guides
-publishDate: '2025-08-13T15:52:51+04:00'
-updatedDate: '2025-08-13T15:52:51+04:00'
+publishDate: '2025-08-13T11:52:51.000Z'
+updatedDate: '2025-08-13T11:52:51.000Z'
 ---
 
 # When to Seek Emergency Help for Chest Pain

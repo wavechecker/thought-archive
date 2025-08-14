@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
+layout: '@/layouts/GuideLayout.astro'
 title: First Aid for Severe Allergic Reactions (Anaphylaxis)
 description: >-
   Recognize anaphylaxis quickly and give the right first aid steps, including
@@ -10,8 +10,8 @@ tags:
   - anaphylaxis
   - first aid
   - health guides
-publishDate: '2025-08-13T15:52:51+04:00'
-updatedDate: '2025-08-13T15:52:51+04:00'
+publishDate: '2025-08-13T11:52:51.000Z'
+updatedDate: '2025-08-13T11:52:51.000Z'
 ---
 
 # First Aid for Severe Allergic Reactions (Anaphylaxis)

@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
+layout: '@/layouts/GuideLayout.astro'
 title: 'Emergency Actions — Hypos, Highs, and Ketones'
 description: >-
   A quick reference for urgent diabetes situations: severe hypos, high BGL with
@@ -10,8 +10,8 @@ tags:
   - type 1 diabetes
   - emergency
   - health guides
-publishDate: '2025-08-13T16:55:39+04:00'
-updatedDate: '2025-08-13T16:55:39+04:00'
+publishDate: '2025-08-13T12:55:39.000Z'
+updatedDate: '2025-08-13T12:55:39.000Z'
 ---
 
 # Emergency Actions — Hypos, Highs, and Ketones

@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
+layout: '@/layouts/GuideLayout.astro'
 title: Carbohydrate Counting — Matching Insulin to Your Meals
 description: >-
   Learn insulin-to-carb ratios, reading labels, estimating portions, and
@@ -10,8 +10,8 @@ tags:
   - type 1 diabetes
   - nutrition
   - health guides
-publishDate: '2025-08-13T16:55:39+04:00'
-updatedDate: '2025-08-13T16:55:39+04:00'
+publishDate: '2025-08-13T12:55:39.000Z'
+updatedDate: '2025-08-13T12:55:39.000Z'
 ---
 
 # Carbohydrate Counting — Matching Insulin to Your Meals

@@ -1,9 +1,9 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
+layout: '@/layouts/GuideLayout.astro'
 title: Newly Diagnosed with Type 1 Diabetes – First Steps and Finding Your Balance
 slug: newly-diagnosed-type1-diabetes
-publishDate: '2025-08-13T16:37:29+04:00'
-updatedDate: '2025-08-13T16:37:29+04:00'
+publishDate: '2025-08-13T12:37:29.000Z'
+updatedDate: '2025-08-13T12:37:29.000Z'
 ---
 
 Being told you have **Type 1 diabetes** can feel overwhelming. There’s a lot to learn, new routines to build, and emotions to process. But with the right information, support, and daily habits, it is absolutely possible to live a full, healthy, and active life. Thousands of people around the world manage Type 1 diabetes successfully every day — and so can you.

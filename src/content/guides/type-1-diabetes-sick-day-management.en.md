@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
+layout: '@/layouts/GuideLayout.astro'
 title: 'Type 1 Diabetes: Sick Day Management (Adults & Children)'
 description: >-
   Practical steps for managing Type 1 diabetes during illness, including pump vs
@@ -11,8 +11,8 @@ tags:
   - type 1 diabetes
   - sick day
   - health guides
-publishDate: '2025-08-13T16:15:28+04:00'
-updatedDate: '2025-08-13T16:15:28+04:00'
+publishDate: '2025-08-13T12:15:28.000Z'
+updatedDate: '2025-08-13T12:15:28.000Z'
 ---
 
 # Type 1 Diabetes: Sick Day Management (Adults & Children)

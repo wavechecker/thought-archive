@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
+layout: '@/layouts/GuideLayout.astro'
 title: 'Type 1 Diabetes: DKA Quick Reference (Recognise & Act)'
 description: >-
   Rapid checklist for recognising and acting on diabetic ketoacidosis (DKA):
@@ -10,8 +10,8 @@ tags:
   - type 1 diabetes
   - DKA
   - health guides
-publishDate: '2025-08-13T16:26:30+04:00'
-updatedDate: '2025-08-13T16:26:30+04:00'
+publishDate: '2025-08-13T12:26:30.000Z'
+updatedDate: '2025-08-13T12:26:30.000Z'
 ---
 
 # Type 1 Diabetes: DKA Quick Reference (Recognise & Act)

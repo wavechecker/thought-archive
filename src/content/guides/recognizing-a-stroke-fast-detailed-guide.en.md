@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
+layout: '@/layouts/GuideLayout.astro'
 title: Recognizing a Stroke FAST — A Practical Guide
 description: >-
   Use the FAST test and other warning signs to act quickly and reduce brain
@@ -10,8 +10,8 @@ tags:
   - stroke
   - emergencies
   - health guides
-publishDate: '2025-08-13T15:52:51+04:00'
-updatedDate: '2025-08-13T15:52:51+04:00'
+publishDate: '2025-08-13T11:52:51.000Z'
+updatedDate: '2025-08-13T11:52:51.000Z'
 ---
 
 # Recognizing a Stroke FAST — A Practical Guide
