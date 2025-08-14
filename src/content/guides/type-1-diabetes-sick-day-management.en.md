@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: 'Type 1 Diabetes: Sick Day Management (Adults & Children)'
 date: 2025-08-13T00:00:00.000Z
 description: >-

@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: First Aid for Severe Allergic Reactions (Anaphylaxis)
 date: 2025-08-13T00:00:00.000Z
 description: >-

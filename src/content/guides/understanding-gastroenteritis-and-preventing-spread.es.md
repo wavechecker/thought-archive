@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: Understanding Gastroenteritis And Preventing Spread
 date: null
 tags:

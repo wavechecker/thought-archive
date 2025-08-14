@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: Understanding Blood Oxygen Levels and Pulse Oximeters
 date: 2025-08-13T00:00:00.000Z
 description: >-

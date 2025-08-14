@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: The Basics Of Mental Health First Aid
 date: null
 tags:

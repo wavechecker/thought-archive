@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: How To Monitor Blood Pressure At Home
 date: null
 tags:

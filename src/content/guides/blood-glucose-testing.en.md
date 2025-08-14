@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: Blood Glucose Testing — How and When to Check
 date: 2025-08-13T00:00:00.000Z
 description: >-

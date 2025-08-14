@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: Skin Cancer Warning Signs And Prevention
 date: null
 tags:

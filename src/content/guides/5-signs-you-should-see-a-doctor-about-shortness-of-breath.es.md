@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: 5 Signs You Should See A Doctor About Shortness Of Breath
 date: null
 tags:

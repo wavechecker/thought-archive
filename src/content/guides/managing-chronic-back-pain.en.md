@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: Managing Chronic Back Pain
 date: null
 tags:

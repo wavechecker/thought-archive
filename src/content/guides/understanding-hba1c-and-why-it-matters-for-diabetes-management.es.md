@@ -1,4 +1,5 @@
 ---
+layout: "@/layouts/GuideLayout.astro"
 title: Understanding Hba1c And Why It Matters For Diabetes Management
 date: null
 tags:
