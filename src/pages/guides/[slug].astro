@@ -1,17 +1,21 @@
 ---
 import { getEntryBySlug } from "astro:content";
-import { isValidDate, fmt } from "../../lib/date";  // ← was "@/lib/date"
 
 const { slug } = Astro.params;
 const guide = await getEntryBySlug("guides", slug);
 if (!guide) { throw new Error(`Guide not found for slug: ${slug}`); }
 
 const { Content, data } = guide;
+
+// Inline helpers (no imports = no resolve errors)
+const isValidDate = (d) =>
+  d instanceof Date && !isNaN(+d) && +d > +new Date("1971-01-01");
+const fmt = (d) =>
+  new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(d);
+
 const displayDate = isValidDate(data.publishDate)
   ? data.publishDate
-  : isValidDate(data.updatedDate)
-    ? data.updatedDate
-    : undefined;
+  : (isValidDate(data.updatedDate) ? data.updatedDate : undefined);
 ---
 <html lang="en">
   <head>
@@ -29,4 +33,5 @@ const displayDate = isValidDate(data.publishDate)
     </article>
   </body>
 </html>
+
 

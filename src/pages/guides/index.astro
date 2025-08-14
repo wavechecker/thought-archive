@@ -1,16 +1,20 @@
 ---
 import { getCollection } from "astro:content";
-import { isValidDate, fmt } from "../../lib/date";  // ← was "@/lib/date"
+
+// Inline helpers (no imports)
+const isValidDate = (d) =>
+  d instanceof Date && !isNaN(+d) && +d > +new Date("1971-01-01");
+const fmt = (d) =>
+  new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(d);
 
 const posts = await getCollection("guides");
 
+// Sort by most recent valid date
 posts.sort((a, b) => {
-  const da = isValidDate(a.data.publishDate)
-    ? +a.data.publishDate
-    : isValidDate(a.data.updatedDate) ? +a.data.updatedDate : 0;
-  const db = isValidDate(b.data.publishDate)
-    ? +b.data.publishDate
-    : isValidDate(b.data.updatedDate) ? +b.data.updatedDate : 0;
+  const da = isValidDate(a.data.publishDate) ? +a.data.publishDate
+           : isValidDate(a.data.updatedDate) ? +a.data.updatedDate : 0;
+  const db = isValidDate(b.data.publishDate) ? +b.data.publishDate
+           : isValidDate(b.data.updatedDate) ? +b.data.updatedDate : 0;
   return db - da;
 });
 ---
@@ -29,7 +33,6 @@ posts.sort((a, b) => {
           : isValidDate(post.data.updatedDate)
             ? post.data.updatedDate
             : undefined;
-
         return (
           <li>
             <a href={`/guides/${post.slug}/`}>{post.data.title}</a>
@@ -40,6 +43,7 @@ posts.sort((a, b) => {
     </ul>
   </body>
 </html>
+
 
 
 
