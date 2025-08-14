@@ -1,8 +1,17 @@
 ---
-title: "Type 1 Diabetes: DKA Quick Reference (Recognise & Act)"
-date: 2025-08-13
-description: "Rapid checklist for recognising and acting on diabetic ketoacidosis (DKA): symptoms, ketone thresholds, fluids, insulin, and when to go to hospital."
-tags: ["medical", "diabetes", "type 1 diabetes", "DKA", "health guides"]
+title: 'Type 1 Diabetes: DKA Quick Reference (Recognise & Act)'
+date: 2025-08-13T00:00:00.000Z
+description: >-
+  Rapid checklist for recognising and acting on diabetic ketoacidosis (DKA):
+  symptoms, ketone thresholds, fluids, insulin, and when to go to hospital.
+tags:
+  - medical
+  - diabetes
+  - type 1 diabetes
+  - DKA
+  - health guides
+publishDate: '2025-08-13T16:26:30+04:00'
+updatedDate: '2025-08-13T16:26:30+04:00'
 ---
 
 # Type 1 Diabetes: DKA Quick Reference (Recognise & Act)

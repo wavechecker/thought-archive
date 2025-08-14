@@ -1,8 +1,17 @@
 ---
-title: "Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)"
-date: 2025-08-13
-description: "Clear steps to recognise and treat hypos in Type 1 diabetes, including severe hypos and sick-day considerations."
-tags: ["medical", "diabetes", "type 1 diabetes", "hypoglycaemia", "health guides"]
+title: 'Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)'
+date: 2025-08-13T00:00:00.000Z
+description: >-
+  Clear steps to recognise and treat hypos in Type 1 diabetes, including severe
+  hypos and sick-day considerations.
+tags:
+  - medical
+  - diabetes
+  - type 1 diabetes
+  - hypoglycaemia
+  - health guides
+publishDate: '2025-08-13T16:26:30+04:00'
+updatedDate: '2025-08-13T16:26:30+04:00'
 ---
 
 # Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)

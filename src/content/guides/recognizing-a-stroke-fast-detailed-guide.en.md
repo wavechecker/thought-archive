@@ -1,8 +1,17 @@
 ---
-title: "Recognizing a Stroke FAST — A Practical Guide"
-date: 2025-08-13
-description: "Use the FAST test and other warning signs to act quickly and reduce brain damage."
-tags: ["medical", "neurology", "stroke", "emergencies", "health guides"]
+title: Recognizing a Stroke FAST — A Practical Guide
+date: 2025-08-13T00:00:00.000Z
+description: >-
+  Use the FAST test and other warning signs to act quickly and reduce brain
+  damage.
+tags:
+  - medical
+  - neurology
+  - stroke
+  - emergencies
+  - health guides
+publishDate: '2025-08-13T15:52:51+04:00'
+updatedDate: '2025-08-13T15:52:51+04:00'
 ---
 
 # Recognizing a Stroke FAST — A Practical Guide

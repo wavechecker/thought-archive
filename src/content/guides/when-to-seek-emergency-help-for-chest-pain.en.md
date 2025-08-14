@@ -1,8 +1,14 @@
 ---
-title: "When to Seek Emergency Help for Chest Pain"
-date: 2025-08-13
-description: "Know the warning signs of chest pain that require immediate medical attention."
-tags: ["medical", "cardiology", "emergencies", "health guides"]
+title: When to Seek Emergency Help for Chest Pain
+date: 2025-08-13T00:00:00.000Z
+description: Know the warning signs of chest pain that require immediate medical attention.
+tags:
+  - medical
+  - cardiology
+  - emergencies
+  - health guides
+publishDate: '2025-08-13T15:52:51+04:00'
+updatedDate: '2025-08-13T15:52:51+04:00'
 ---
 
 # When to Seek Emergency Help for Chest Pain

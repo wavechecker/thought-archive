@@ -1,8 +1,16 @@
 ---
-title: "Understanding Blood Oxygen Levels and Pulse Oximeters"
-date: 2025-08-13
-description: "What SpO₂ numbers mean, how to measure accurately at home, and when to seek care."
-tags: ["medical", "respiratory", "pulse oximeter", "health guides"]
+title: Understanding Blood Oxygen Levels and Pulse Oximeters
+date: 2025-08-13T00:00:00.000Z
+description: >-
+  What SpO₂ numbers mean, how to measure accurately at home, and when to seek
+  care.
+tags:
+  - medical
+  - respiratory
+  - pulse oximeter
+  - health guides
+publishDate: '2025-08-13T15:52:51+04:00'
+updatedDate: '2025-08-13T15:52:51+04:00'
 ---
 
 # Understanding Blood Oxygen Levels and Pulse Oximeters

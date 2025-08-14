@@ -1,8 +1,17 @@
 ---
-title: "Recognising Highs and Lows — Symptoms and First Steps"
-date: 2025-08-13
-description: "Know the signs of hypo and hyperglycaemia, what to do immediately, and when to escalate."
-tags: ["medical", "diabetes", "type 1 diabetes", "symptoms", "health guides"]
+title: Recognising Highs and Lows — Symptoms and First Steps
+date: 2025-08-13T00:00:00.000Z
+description: >-
+  Know the signs of hypo and hyperglycaemia, what to do immediately, and when to
+  escalate.
+tags:
+  - medical
+  - diabetes
+  - type 1 diabetes
+  - symptoms
+  - health guides
+publishDate: '2025-08-13T16:55:39+04:00'
+updatedDate: '2025-08-13T16:55:39+04:00'
 ---
 
 # Recognising Highs and Lows — Symptoms and First Steps
