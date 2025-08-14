@@ -1,14 +1,17 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const guides = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
-    date: z.coerce.date(),
-    description: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    lang: z.string().optional(),
+    publishDate: z.union([z.string(), z.date()])
+      .transform((v) => new Date(v)),
+    updatedDate: z.union([z.string(), z.date()]).optional()
+      .transform((v) => (v ? new Date(v) : undefined)),
+    draft: z.boolean().default(false),
+    // add other fields here as needed
   }),
 });
 
 export const collections = { guides };
+
