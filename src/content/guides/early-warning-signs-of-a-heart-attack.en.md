@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Early Warning Signs Of A Heart Attack
-date: null
 tags:
   - medical
   - health guides

@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: 'Type 1 Diabetes: Sick Day Management (Adults & Children)'
-date: 2025-08-13T00:00:00.000Z
 description: >-
   Practical steps for managing Type 1 diabetes during illness, including pump vs
   injections, with/without CGM, ketone testing, fluids, and when to seek urgent

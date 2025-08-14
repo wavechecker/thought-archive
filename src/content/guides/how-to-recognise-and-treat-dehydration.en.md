@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: How To Recognise And Treat Dehydration
-date: null
 tags:
   - medical
   - health guides

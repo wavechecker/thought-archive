@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Hypertension
-date: null
 tags:
   - medical
   - health guides

@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Asthma Action Plans For Adults And Children
-date: null
 tags:
   - médico
   - guías de salud

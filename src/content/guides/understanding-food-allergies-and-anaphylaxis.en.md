@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Understanding Food Allergies And Anaphylaxis
-date: null
 tags:
   - medical
   - health guides

@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Carbohydrate Counting — Matching Insulin to Your Meals
-date: 2025-08-13T00:00:00.000Z
 description: >-
   Learn insulin-to-carb ratios, reading labels, estimating portions, and
   avoiding common pitfalls.

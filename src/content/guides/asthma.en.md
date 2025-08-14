@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Asthma
-date: null
 tags:
   - medical
   - health guides

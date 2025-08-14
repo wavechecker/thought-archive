@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: When A Fever Becomes Dangerous Adults Vs Children
-date: null
 tags:
   - medical
   - health guides

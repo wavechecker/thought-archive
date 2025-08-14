@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Difference Between Type 1 And Type 2 Diabetes
-date: null
 tags:
   - médico
   - guías de salud

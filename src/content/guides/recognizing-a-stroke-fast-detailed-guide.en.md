@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Recognizing a Stroke FAST — A Practical Guide
-date: 2025-08-13T00:00:00.000Z
 description: >-
   Use the FAST test and other warning signs to act quickly and reduce brain
   damage.

@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Recognising Highs and Lows — Symptoms and First Steps
-date: 2025-08-13T00:00:00.000Z
 description: >-
   Know the signs of hypo and hyperglycaemia, what to do immediately, and when to
   escalate.

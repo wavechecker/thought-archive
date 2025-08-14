@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Copd Vs Asthma Key Differences And Overlap
-date: null
 tags:
   - medical
   - health guides

@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: 'Type 1 Diabetes: DKA Quick Reference (Recognise & Act)'
-date: 2025-08-13T00:00:00.000Z
 description: >-
   Rapid checklist for recognising and acting on diabetic ketoacidosis (DKA):
   symptoms, ketone thresholds, fluids, insulin, and when to go to hospital.

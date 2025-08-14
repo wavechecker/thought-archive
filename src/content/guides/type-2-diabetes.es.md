@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Type 2 Diabetes
-date: null
 tags:
   - médico
   - guías de salud

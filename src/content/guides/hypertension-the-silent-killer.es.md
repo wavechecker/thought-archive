@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Hypertension The Silent Killer
-date: null
 tags:
   - médico
   - guías de salud

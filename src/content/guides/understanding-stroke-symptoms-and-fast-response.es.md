@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: Understanding Stroke Symptoms And Fast Response
-date: null
 tags:
   - médico
   - guías de salud

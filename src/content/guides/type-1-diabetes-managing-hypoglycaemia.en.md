@@ -1,7 +1,6 @@
 ---
 layout: "@/layouts/GuideLayout.astro"
 title: 'Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)'
-date: 2025-08-13T00:00:00.000Z
 description: >-
   Clear steps to recognise and treat hypos in Type 1 diabetes, including severe
   hypos and sick-day considerations.
