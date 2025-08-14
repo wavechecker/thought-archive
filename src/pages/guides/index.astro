@@ -1,27 +1,19 @@
 ---
 import { getCollection } from "astro:content";
-import { isValidDate, fmt } from "@/lib/date";
+import { isValidDate, fmt } from "../../lib/date";  // ← was "@/lib/date"
 
 const posts = await getCollection("guides");
 
-// Sort by latest date available
 posts.sort((a, b) => {
   const da = isValidDate(a.data.publishDate)
     ? +a.data.publishDate
-    : isValidDate(a.data.updatedDate)
-      ? +a.data.updatedDate
-      : 0;
-
+    : isValidDate(a.data.updatedDate) ? +a.data.updatedDate : 0;
   const db = isValidDate(b.data.publishDate)
     ? +b.data.publishDate
-    : isValidDate(b.data.updatedDate)
-      ? +b.data.updatedDate
-      : 0;
-
+    : isValidDate(b.data.updatedDate) ? +b.data.updatedDate : 0;
   return db - da;
 });
 ---
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -41,16 +33,13 @@ posts.sort((a, b) => {
         return (
           <li>
             <a href={`/guides/${post.slug}/`}>{post.data.title}</a>
-            {d && (
-              <>
-                {" "}— <time datetime={d.toISOString()}>{fmt(d)}</time>
-              </>
-            )}
+            {d && <> — <time datetime={d.toISOString()}>{fmt(d)}</time></>}
           </li>
         );
       })}
     </ul>
   </body>
 </html>
+
 
 

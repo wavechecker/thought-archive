@@ -1,28 +1,18 @@
 ---
 import { getEntryBySlug } from "astro:content";
-import { isValidDate, fmt } from "@/lib/date";
+import { isValidDate, fmt } from "../../lib/date";  // ← was "@/lib/date"
 
-// Pull the slug from the URL
 const { slug } = Astro.params;
-
-// Fetch the content entry
 const guide = await getEntryBySlug("guides", slug);
+if (!guide) { throw new Error(`Guide not found for slug: ${slug}`); }
 
-if (!guide) {
-  throw new Error(`Guide not found for slug: ${slug}`);
-}
-
-// Destructure for convenience
 const { Content, data } = guide;
-
-// Pick the best available date
 const displayDate = isValidDate(data.publishDate)
   ? data.publishDate
   : isValidDate(data.updatedDate)
     ? data.updatedDate
     : undefined;
 ---
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -33,9 +23,7 @@ const displayDate = isValidDate(data.publishDate)
     <article>
       <h1>{data.title}</h1>
       {displayDate && (
-        <p>
-          <time datetime={displayDate.toISOString()}>{fmt(displayDate)}</time>
-        </p>
+        <p><time datetime={displayDate.toISOString()}>{fmt(displayDate)}</time></p>
       )}
       <Content />
     </article>
