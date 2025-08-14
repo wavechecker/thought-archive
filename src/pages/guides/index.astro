@@ -1,36 +1,56 @@
 ---
-export const prerender = true;
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro'; // adjust if your Layout lives elsewhere
+import { getCollection } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date";
 
-const guides = await getCollection('guides');
+const posts = await getCollection("guides");
 
-// newest first if dates exist
-guides.sort((a, b) => {
-  const da = a.data.date instanceof Date ? a.data.date.getTime() : 0;
-  const db = b.data.date instanceof Date ? b.data.date.getTime() : 0;
+// Sort by latest date available
+posts.sort((a, b) => {
+  const da = isValidDate(a.data.publishDate)
+    ? +a.data.publishDate
+    : isValidDate(a.data.updatedDate)
+      ? +a.data.updatedDate
+      : 0;
+
+  const db = isValidDate(b.data.publishDate)
+    ? +b.data.publishDate
+    : isValidDate(b.data.updatedDate)
+      ? +b.data.updatedDate
+      : 0;
+
   return db - da;
 });
 ---
 
-<Layout>
-  <section class="mx-auto max-w-3xl px-4 py-10">
-    <h1 class="mb-6">Guides</h1>
-    <ul class="space-y-3">
-      {guides.map((g) => {
-        const date =
-          g.data.date instanceof Date
-            ? g.data.date.toISOString().slice(0, 10)
-            : '';
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Guides • PatientGuide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h1>Guides</h1>
+    <ul>
+      {posts.map((post) => {
+        const d = isValidDate(post.data.publishDate)
+          ? post.data.publishDate
+          : isValidDate(post.data.updatedDate)
+            ? post.data.updatedDate
+            : undefined;
+
         return (
-          <li class="border-b pb-3">
-            <a href={`/guides/${g.slug}`} class="font-medium hover:underline">
-              {g.data.title}
-            </a>
-            {date && <small class="block opacity-70">{date}</small>}
+          <li>
+            <a href={`/guides/${post.slug}/`}>{post.data.title}</a>
+            {d && (
+              <>
+                {" "}— <time datetime={d.toISOString()}>{fmt(d)}</time>
+              </>
+            )}
           </li>
         );
       })}
     </ul>
-  </section>
-</Layout>
+  </body>
+</html>
+
+
