@@ -1,23 +1,29 @@
 ---
-import { getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 
-const { slug } = Astro.params;
-const guide = await getEntryBySlug("guides", slug);
-if (!guide) { throw new Error(`Guide not found for slug: ${slug}`); }
+// 1) Tell Astro which slugs to build
+export async function getStaticPaths() {
+  const guides = await getCollection("guides");
+  return guides.map((g) => ({
+    params: { slug: g.slug },
+    props: { guide: g },
+  }));
+}
 
-const { Content, data } = guide;
+// 2) Receive the guide entry via props and render
+const { guide } = Astro.props;
+const { data } = guide;
+const { Content } = await guide.render();
 
-// Inline helpers (no imports = no resolve errors)
-const isValidDate = (d) =>
-  d instanceof Date && !isNaN(+d) && +d > +new Date("1971-01-01");
-const fmt = (d) =>
-  new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(d);
+// Inline date helpers (no imports ⇒ no path/alias issues)
+const isValidDate = (d) => d instanceof Date && !isNaN(+d) && +d > +new Date("1971-01-01");
+const fmt = (d) => new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(d);
 
 const displayDate = isValidDate(data.publishDate)
   ? data.publishDate
   : (isValidDate(data.updatedDate) ? data.updatedDate : undefined);
 ---
-<html lang="en">
+<html lang={data.lang || "en"}>
   <head>
     <meta charset="utf-8" />
     <title>{data.title} • PatientGuide</title>
@@ -26,9 +32,7 @@ const displayDate = isValidDate(data.publishDate)
   <body>
     <article>
       <h1>{data.title}</h1>
-      {displayDate && (
-        <p><time datetime={displayDate.toISOString()}>{fmt(displayDate)}</time></p>
-      )}
+      {displayDate && <p><time datetime={displayDate.toISOString()}>{fmt(displayDate)}</time></p>}
       <Content />
     </article>
   </body>
