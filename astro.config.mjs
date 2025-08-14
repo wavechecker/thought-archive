@@ -1,7 +1,14 @@
 import { defineConfig } from 'astro/config';
-import netlify from '@astrojs/netlify';
+import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  adapter: netlify(),
-  // ...any other integrations you had
+  integrations: [mdx()],
+  vite: {
+    resolve: {
+      alias: {
+        // Optional, but harmless if you want to use "@/..."
+        '@': '/src',
+      },
+    },
+  },
 });
