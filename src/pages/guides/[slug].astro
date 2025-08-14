@@ -1,32 +1,44 @@
 ---
-export const prerender = true;
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro'; // adjust if your Layout lives elsewhere
+import { getEntryBySlug } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date";
 
-export async function getStaticPaths() {
-  const guides = await getCollection('guides');
-  return guides.map((guide) => ({
-    params: { slug: guide.slug }, // e.g. "hypertension-the-silent-killer.en"
-    props: { guide },
-  }));
+// Pull the slug from the URL
+const { slug } = Astro.params;
+
+// Fetch the content entry
+const guide = await getEntryBySlug("guides", slug);
+
+if (!guide) {
+  throw new Error(`Guide not found for slug: ${slug}`);
 }
 
-const { guide } = Astro.props;
-const { Content } = await guide.render();
-const pubDate =
-  guide.data.date instanceof Date
-    ? guide.data.date.toISOString().slice(0, 10)
-    : String(guide.data.date);
+// Destructure for convenience
+const { Content, data } = guide;
+
+// Pick the best available date
+const displayDate = isValidDate(data.publishDate)
+  ? data.publishDate
+  : isValidDate(data.updatedDate)
+    ? data.updatedDate
+    : undefined;
 ---
 
-<Layout>
-  <article class="prose mx-auto max-w-3xl px-4 py-8">
-    <header class="mb-6">
-      <h1 class="mb-2">{guide.data.title}</h1>
-      <p class="text-sm opacity-70">{pubDate}</p>
-      {guide.data.description && <p class="mt-2">{guide.data.description}</p>}
-    </header>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{data.title} • PatientGuide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <article>
+      <h1>{data.title}</h1>
+      {displayDate && (
+        <p>
+          <time datetime={displayDate.toISOString()}>{fmt(displayDate)}</time>
+        </p>
+      )}
+      <Content />
+    </article>
+  </body>
+</html>
 
-    <Content />
-  </article>
-</Layout>
