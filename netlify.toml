@@ -1,0 +1,11 @@
+[[redirects]]
+from = "/"
+to = "/guides/"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.patientguide.io/*"
+to = "https://patientguide.io/:splat"
+status = 301
+force = true
