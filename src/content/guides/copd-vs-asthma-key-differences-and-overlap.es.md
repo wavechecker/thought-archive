@@ -1,12 +1,12 @@
 ---
-layout: '@/layouts/GuideLayout.astro'
 title: Copd Vs Asthma Key Differences And Overlap
+date: null
 tags:
   - médico
   - guías de salud
 lang: es
-publishDate: '2025-08-12T14:10:25.000Z'
-updatedDate: '2025-08-13T09:48:57.000Z'
+publishDate: '2025-08-12T18:10:25+04:00'
+updatedDate: '2025-08-13T13:48:57+04:00'
 ---
 
 

@@ -1,6 +1,6 @@
 ---
-layout: '@/layouts/GuideLayout.astro'
 title: 'Insulin Administration — Pens, Syringes, and Pumps'
+date: 2025-08-13T00:00:00.000Z
 description: >-
   How to give insulin safely and accurately: pens/syringes vs pumps, site
   rotation, storage, and when to seek help.
@@ -10,8 +10,8 @@ tags:
   - type 1 diabetes
   - insulin
   - health guides
-publishDate: '2025-08-13T12:55:39.000Z'
-updatedDate: '2025-08-13T12:55:39.000Z'
+publishDate: '2025-08-13T16:55:39+04:00'
+updatedDate: '2025-08-13T16:55:39+04:00'
 ---
 
 # Insulin Administration — Pens, Syringes, and Pumps
