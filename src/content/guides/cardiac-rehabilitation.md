@@ -20,6 +20,10 @@ Cardiac rehabilitation (rehab) is a program of exercise, education, and support 
 - Support for emotional wellbeing
 
 **Related Guides**
+- [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/)
+- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease-lifestyle-and-medical-screening/)
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications-and-their-side-effects/)
+
 - [Early Warning Signs of a Heart Attack](#)
 - [Preventing Heart Disease: Lifestyle and Medical Screening](#)
 - [Common Heart Medications and Their Side Effects](#)

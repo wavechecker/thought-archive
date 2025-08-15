@@ -25,6 +25,10 @@ Angina is chest discomfort caused by reduced blood flow to the heart muscle. Itâ
 - Medical review to prevent heart attack
 
 **Related Guides**
+- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain/)
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/)
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications-and-their-side-effects/)
+
 - [When to Seek Emergency Help for Chest Pain](#)
 - [Early Warning Signs of a Heart Attack](#)
 - [Common Heart Medications and Their Side Effects](#)

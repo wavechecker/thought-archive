@@ -24,6 +24,10 @@ Atrial fibrillation (AF) is an irregular heart rhythm that can increase your ris
 - Procedures such as cardioversion or ablation
 
 **Related Guides**
+- [Understanding Stroke Symptoms and FAST Response](/guides/understanding-stroke-symptoms-and-fast-response/)
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications-and-their-side-effects/)
+- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease-lifestyle-and-medical-screening/)
+
 - [Understanding Stroke Symptoms and FAST Response](#)
 - [Common Heart Medications and Their Side Effects](#)
 - [Preventing Heart Disease: Lifestyle and Medical Screening](#)

@@ -19,6 +19,10 @@ Insulin isn’t one single medicine — it comes in different types, each workin
 Your healthcare provider may prescribe a mix — e.g., long-acting for baseline coverage plus rapid-acting with meals.
 
 **Related Guides**
+- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration-pens-syringes-and-pumps/)
+- [Carbohydrate Counting — Matching Insulin to Your Meals](/guides/carbohydrate-counting-matching-insulin-to-your-meals/)
+- [Night-time Hypoglycaemia: Prevention & Safety](/guides/night-time-hypoglycaemia-prevention-and-safety/)
+
 - [Insulin Administration — Pens, Syringes, and Pumps](#)
 - [Carbohydrate Counting — Matching Insulin to Your Meals](#)
 - [Night-time Hypoglycaemia: Prevention & Safety](#)

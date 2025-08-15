@@ -23,6 +23,9 @@ With the right preparation, travel is completely possible with Type 1 diabetes. 
 - Wear medical ID
 
 **Related Guides**
+- [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions-hypos-highs-and-ketones/)
+- [Understanding Blood Oxygen Levels and Pulse Oximeters](/guides/understanding-blood-oxygen-levels-and-pulse-oximeters/)
+
 - [Sick Day Management (Adults & Children)](#)
 - [Emergency Actions — Hypos, Highs, and Ketones](#)
 - [Shortness of Breath](#)
