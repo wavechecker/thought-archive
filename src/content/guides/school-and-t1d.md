@@ -1,4 +1,11 @@
-# School and Type 1 Diabetes: A Parent’s Guide
+---
+title: "School and Type 1 Diabetes: A Parent’s Guide"
+description: "How to brief teachers, set plans, and keep kids safe and confident at school."
+category: "Type 1 Diabetes"
+publishDate: "2025-08-15"
+draft: false
+tags: ["Type 1 Diabetes", "patientguide"]
+---
 
 A new school year can be daunting if your child has Type 1 diabetes. With preparation and good communication, school can be safe and supportive.
 

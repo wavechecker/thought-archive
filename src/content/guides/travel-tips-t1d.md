@@ -1,4 +1,11 @@
-# Travel Tips for People with Type 1 Diabetes
+---
+title: "Travel Tips for People with Type 1 Diabetes"
+description: "Practical prep, packing lists, and in‑transit tactics to travel confidently with Type 1 diabetes."
+category: "Type 1 Diabetes"
+publishDate: "2025-08-15"
+draft: false
+tags: ["Type 1 Diabetes", "patientguide"]
+---
 
 With the right preparation, travel is completely possible with Type 1 diabetes. Planning ahead avoids emergencies and keeps your trip on track.
 

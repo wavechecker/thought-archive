@@ -1,4 +1,11 @@
-# Insulin Types Explained: Rapid, Short, Intermediate, Long-Acting
+---
+title: "Insulin Types Explained: Rapid, Short, Intermediate, Long-Acting"
+description: "Understand how rapid, short, intermediate and long‑acting insulins differ, and how they’re combined in real‑world treatment."
+category: "Type 1 Diabetes"
+publishDate: "2025-08-15"
+draft: false
+tags: ["Type 1 Diabetes", "patientguide"]
+---
 
 Insulin isn’t one single medicine — it comes in different types, each working at a different speed. Understanding these differences helps you match insulin to your lifestyle, meals, and blood glucose patterns.
 

@@ -1,4 +1,11 @@
-# Continuous Glucose Monitors (CGMs) vs Finger-Prick Testing
+---
+title: "Continuous Glucose Monitors (CGMs) vs Finger-Prick Testing"
+description: "Pros and cons of CGMs and meter testing, when to use each, and how to combine them for safer control."
+category: "Type 1 Diabetes"
+publishDate: "2025-08-15"
+draft: false
+tags: ["Type 1 Diabetes", "patientguide"]
+---
 
 Checking your blood sugar is the foundation of diabetes management. Today, there are two main approaches: traditional finger-prick testing and continuous glucose monitoring.
 

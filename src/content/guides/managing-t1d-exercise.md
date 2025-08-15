@@ -1,4 +1,11 @@
-# Managing Type 1 Diabetes During Exercise
+---
+title: "Managing Type 1 Diabetes During Exercise"
+description: "Before, during, and after‑exercise strategies to prevent hypos and manage delayed drops."
+category: "Type 1 Diabetes"
+publishDate: "2025-08-15"
+draft: false
+tags: ["Type 1 Diabetes", "patientguide"]
+---
 
 Exercise is great for health, but it can affect blood sugar in unpredictable ways. Planning is key.
 

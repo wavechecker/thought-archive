@@ -1,4 +1,11 @@
-# Type 1 Diabetes Guide Hub
+---
+title: "Type 1 Diabetes Guide Hub"
+description: "One page with every T1D guide — testing, insulin, hypos, sick days, travel, school, and more."
+category: "Hub"
+publishDate: "2025-08-15"
+draft: false
+tags: ["Hub", "patientguide"]
+---
 
 Welcome to the **Type 1 Diabetes Guide Hub** — your starting point for clear, practical advice on living with Type 1 diabetes.
 

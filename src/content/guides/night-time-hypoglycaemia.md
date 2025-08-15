@@ -1,4 +1,11 @@
-# Night-time Hypoglycaemia: Prevention & Safety
+---
+title: "Night-time Hypoglycaemia: Prevention & Safety"
+description: "Why lows happen overnight and concrete steps to reduce risk and wake safely."
+category: "Type 1 Diabetes"
+publishDate: "2025-08-15"
+draft: false
+tags: ["Type 1 Diabetes", "patientguide"]
+---
 
 Low blood sugar while sleeping can be dangerous — and sometimes goes unnoticed.
 
