@@ -1,15 +1,24 @@
 [[redirects]]
-from = "/"
+from = "/guides/type-1-diabetes-hub/"
 to = "/guides/"
 status = 301
 force = true
 
 [[redirects]]
-from = "https://www.patientguide.io/*"
-to = "https://patientguide.io/:splat"
+from = "/guides/heart-circulation-hub/"
+to = "/guides/"
 status = 301
 force = true
-[[headers]]
-for = "/*"
-  [headers.values]
-  Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+[[redirects]]
+from = "/guides/type-1-diabetes/"
+to = "/guides/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/guides/heart-circulation/"
+to = "/guides/"
+status = 301
+force = true
+
