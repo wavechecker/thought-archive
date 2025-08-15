@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+
+// Pull entries from the `guides` collection that are Type 1–related.
+// Match by category or tag containing "type 1".
+const all = await getCollection("guides");
+const items = all
+  .filter(({ data }) =>
+    (data.category && String(data.category).toLowerCase().includes("type 1")) ||
+    (Array.isArray(data.tags) && data.tags.some(t => String(t).toLowerCase().includes("type 1")))
+  )
+  .sort((a, b) => new Date(b.data.publishDate ?? 0) - new Date(a.data.publishDate ?? 0));
+---
+
+<h1>Type 1 Diabetes Guides</h1>
+<p>All our Type 1 diabetes guides — testing, insulin, hypos, sick days, travel, school, and more.</p>
+
+<ul>
+  {items.map(({ slug, data }) => (
+    <li><a href={`/guides/${slug}/`}>{data.title}</a></li>
+  ))}
+</ul>
