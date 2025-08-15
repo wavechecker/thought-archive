@@ -22,3 +22,15 @@ to = "/guides/"
 status = 301
 force = true
 
+[[redirects]]
+from = "/guides/type-1-diabetes-hub/"
+to = "/guides/type-1-diabetes/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/guides/heart-circulation-hub/"
+to = "/guides/heart-circulation/"
+status = 301
+force = true
+
