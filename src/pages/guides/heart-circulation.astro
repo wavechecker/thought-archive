@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+
+// Pull Heart/Circulation entries by category or tag
+const all = await getCollection("guides");
+const items = all
+  .filter(({ data }) =>
+    (data.category && String(data.category).toLowerCase().includes("heart")) ||
+    (Array.isArray(data.tags) && data.tags.some(t => {
+      const s = String(t).toLowerCase();
+      return s.includes("heart") || s.includes("circulation");
+    }))
+  )
+  .sort((a, b) => new Date(b.data.publishDate ?? 0) - new Date(a.data.publishDate ?? 0));
+---
+
+<h1>Heart & Circulation Guides</h1>
+<p>Symptoms, tests, treatments, medications, rehab, and prevention.</p>
+
+<ul>
+  {items.map(({ slug, data }) => (
+    <li><a href={`/guides/${slug}/`}>{data.title}</a></li>
+  ))}
+</ul>
