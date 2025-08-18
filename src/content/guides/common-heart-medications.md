@@ -20,8 +20,8 @@ Many heart conditions require long-term medication. Knowing what your medicines 
 - Always report severe symptoms to your doctor
 
 **Related Guides**
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)
-- [What is Angina? Symptoms & Management](/guides/angina-symptoms-management/)
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation-after-a-heart-event/)
+- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)
 - [Understanding Blood Oxygen Levels and Pulse Oximeters](/guides/understanding-blood-oxygen-levels-and-pulse-oximeters/)
 
 - [Cardiac Rehabilitation After a Heart Event](#)

@@ -25,7 +25,7 @@ A new school year can be daunting if your child has Type 1 diabetes. With prepar
 **Related Guides**
 - [Newly Diagnosed with Type 1 Diabetes – First Steps and Finding Your Balance](/guides/newly-diagnosed-with-type-1-diabetes-first-steps-and-finding-your-balance/)
 - [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions-hypos-highs-and-ketones/)
-- [Travel Tips for People with Type 1 Diabetes](/guides/travel-tips-t1d/)
+- [Travel Tips for People with Type 1 Diabetes](/guides/travel-tips-for-people-with-type-1-diabetes/)
 
 - [Newly Diagnosed with Type 1 Diabetes – First Steps and Finding Your Balance](#)
 - [Emergency Actions — Hypos, Highs, and Ketones](#)
