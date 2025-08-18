@@ -1,29 +1,68 @@
 ---
-title: "Statins — Benefits, Risks, and Common Myths"
-description: "Statins — Benefits, Risks, and Common Myths — practical, plain-language guidance."
-category: "Cardiac Health"
-publishDate: "2025-08-18T10:28:54.142Z"
-updatedDate: "2025-08-18T10:58:51.639Z"
+title: Statins — Benefits, Risks, and Common Myths
+lang: en
+slug: statins-benefits-risks-and-common-myths
+publishDate: 2025-08-18T10:28:54.142Z
+updatedDate: 2025-08-18T10:28:54.142Z
 draft: false
-tags: ["statins", "cholesterol", "prevention"]
+tags: []
 ---
 
-## Overview
+# Statins — Benefits, Risks, and Common Myths
 
-## Key Symptoms
+Statins — Benefits, Risks, and Common Myths
+Overview
 
-## Causes / Risk Factors
+Statins lower cholesterol and reduce risk of heart attack and stroke. They’re among the most widely prescribed medicines.
 
-## What To Do Now
+Key Symptoms (of high cholesterol)
 
-## Diagnosis & Treatment
+Usually silent; found on blood tests
 
-## Prevention / Daily Management
+Rarely: fatty deposits in skin or around eyes
 
-## Red-Flag Signs (Seek Urgent Care)
+Causes / Risk Factors
 
-## Related Guides
-- [Related](/guides/preventing-heart-disease-lifestyle-and-medical-screening/)
-- [Related](/guides/common-heart-medications-and-their-side-effects/)
+High LDL (“bad cholesterol”)
 
-## References
+Smoking, diabetes, high blood pressure
+
+Family history of early heart disease
+
+What To Do Now
+
+Don’t stop statins suddenly without medical advice
+
+Discuss side effects early; many are manageable
+
+Combine with lifestyle changes (diet, exercise, weight control)
+
+Diagnosis & Treatment
+
+Blood cholesterol checks guide treatment
+
+Statins reduce risk by stabilising artery plaques
+
+Some need higher doses or combination therapy
+
+Prevention / Daily Management
+
+Follow prescribed schedule (usually once daily)
+
+Monitor blood tests as advised
+
+Avoid excess grapefruit juice (can interfere with metabolism)
+
+Red-Flag Signs
+
+Severe unexplained muscle pain
+
+Dark urine with muscle symptoms
+
+Yellowing of skin/eyes (rare liver side effect)
+
+References
+
+NHS — Statins
+
+American College of Cardiology — Statin Safety and Side Effects

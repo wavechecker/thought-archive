@@ -1,29 +1,69 @@
 ---
-title: "Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care"
-description: "Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care — practical, plain-language guidance."
-category: "Respiratory Health"
-publishDate: "2025-08-18T10:29:02.687Z"
-updatedDate: "2025-08-18T10:58:51.639Z"
+title: Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care
+lang: en
+slug: pneumonia-vs-bronchitis-symptoms-tests-and-when-to-seek-care
+publishDate: 2025-08-18T10:29:02.687Z
+updatedDate: 2025-08-18T10:29:02.687Z
 draft: false
-tags: ["pneumonia", "bronchitis", "cough"]
+tags: []
 ---
 
-## Overview
+# Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care
 
-## Key Symptoms
+Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care
+Overview
 
-## Causes / Risk Factors
+Both cause cough and chest discomfort. Pneumonia is an infection of the lung tissue; bronchitis affects the airways.
 
-## What To Do Now
+Key Symptoms
 
-## Diagnosis & Treatment
+Bronchitis: cough, phlegm, usually viral, rarely high fever.
+Pneumonia: cough with fever, shortness of breath, chest pain, often more severe.
 
-## Prevention / Daily Management
+Causes / Risk Factors
 
-## Red-Flag Signs (Seek Urgent Care)
+Viruses (bronchitis)
 
-## Related Guides
-- [Related](/guides/flu-vs-common-cold-how-to-tell-the-difference/)
-- [Related](/guides/when-a-fever-becomes-dangerous-adults-vs-children/)
+Bacteria or viruses (pneumonia)
 
-## References
+Smoking, asthma, COPD
+
+Weak immune system
+
+What To Do Now
+
+Rest, fluids, simple pain/fever meds
+
+If high fever, breathlessness, or chest pain → see doctor
+
+Don’t demand antibiotics unless pneumonia confirmed
+
+Diagnosis & Treatment
+
+Bronchitis: usually no tests; supportive treatment
+
+Pneumonia: chest X-ray, blood tests, antibiotics if bacterial
+
+Prevention / Daily Management
+
+Stop smoking
+
+Annual flu vaccine, pneumococcal vaccine if at risk
+
+Hand hygiene
+
+Red-Flag Signs
+
+Breathing fast, blue lips/fingertips
+
+Chest pain with breathing
+
+Confusion in older adults
+
+References
+
+CDC — Pneumonia
+
+NHS — Bronchitis
+
+Mayo Clinic — Pneumonia

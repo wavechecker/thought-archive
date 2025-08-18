@@ -1,29 +1,72 @@
 ---
-title: "Concussion — Red Flags, Rest, and Safe Return to Activity"
-description: "Concussion — Red Flags, Rest, and Safe Return to Activity — practical, plain-language guidance."
-category: "First Aid"
-publishDate: "2025-08-18T10:29:01.590Z"
-updatedDate: "2025-08-18T10:58:51.639Z"
+title: Concussion — Red Flags, Rest, and Safe Return to Activity
+lang: en
+slug: concussion-red-flags-rest-and-safe-return-to-activity
+publishDate: 2025-08-18T10:29:01.590Z
+updatedDate: 2025-08-18T10:29:01.590Z
 draft: false
-tags: ["concussion", "head injury", "red flags"]
+tags: []
 ---
 
-## Overview
+# Concussion — Red Flags, Rest, and Safe Return to Activity
 
-## Key Symptoms
+Concussion — Red Flags, Rest, and Safe Return to Activity
+Overview
 
-## Causes / Risk Factors
+A concussion is a mild brain injury, often from sports or falls. Most recover with rest, but red flags need urgent care.
 
-## What To Do Now
+Key Symptoms
 
-## Diagnosis & Treatment
+Headache
 
-## Prevention / Daily Management
+Dizziness, balance problems
 
-## Red-Flag Signs (Seek Urgent Care)
+Blurred vision
 
-## Related Guides
-- [Related](/guides/common-causes-of-dizziness-and-when-to-worry/)
-- [Related](/guides/the-basics-of-mental-health-first-aid/)
+Difficulty concentrating
 
-## References
+Causes / Risk Factors
+
+Sports collisions
+
+Falls
+
+Car accidents
+
+What To Do Now
+
+Stop activity immediately
+
+Rest physically and mentally for 24–48 hours
+
+Gradual return to activity only if symptom-free
+
+Diagnosis & Treatment
+
+Clinical exam; CT only if red flags
+
+No same-day return to play
+
+Symptom-guided stepwise recovery plan
+
+Prevention / Daily Management
+
+Helmets for cycling/sports
+
+Safe environments at home/work
+
+Educate athletes, parents, teachers
+
+Red-Flag Signs
+
+Worsening headache, repeated vomiting
+
+Drowsiness, confusion, slurred speech
+
+Seizures or weakness/numbness
+
+References
+
+CDC — Concussion & Mild TBI
+
+Mayo Clinic — Concussion
