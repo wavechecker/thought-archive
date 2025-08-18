@@ -1,65 +1,29 @@
 ---
-title: Heat Exhaustion vs Heat Stroke — Recognise, Cool, and Act Fast
-lang: en
-slug: heat-exhaustion-vs-heat-stroke-recognise-cool-and-act-fast
-publishDate: 2025-08-18T10:29:00.536Z
-updatedDate: 2025-08-18T10:29:00.536Z
+title: "Heat Exhaustion vs Heat Stroke — Recognise, Cool, and Act Fast"
+description: "Heat Exhaustion vs Heat Stroke — Recognise, Cool, and Act Fast — practical, plain-language guidance."
+category: "First Aid"
+publishDate: "2025-08-18T10:29:00.536Z"
+updatedDate: "2025-08-18T10:58:51.639Z"
 draft: false
-tags: []
+tags: ["heat stroke", "heat exhaustion", "first aid"]
 ---
 
-# Heat Exhaustion vs Heat Stroke — Recognise, Cool, and Act Fast
+## Overview
 
-Heat Exhaustion vs Heat Stroke
-Overview
+## Key Symptoms
 
-Hot environments can overwhelm the body. Heat exhaustion is early, heat stroke is life-threatening.
+## Causes / Risk Factors
 
-Key Symptoms
+## What To Do Now
 
-Exhaustion: heavy sweating, weakness, nausea, dizziness.
-Stroke: confusion, no sweating, very high temperature, collapse.
+## Diagnosis & Treatment
 
-Causes / Risk Factors
+## Prevention / Daily Management
 
-High humidity, hot weather
+## Red-Flag Signs (Seek Urgent Care)
 
-Dehydration
+## Related Guides
+- [Related](/guides/when-a-fever-becomes-dangerous-adults-vs-children/)
+- [Related](/guides/first-aid-for-severe-allergic-reactions-anaphylaxis/)
 
-Strenuous activity without breaks
-
-What To Do Now
-
-Move to shade/cool area
-
-Cool with water, fans, loose clothing
-
-If altered consciousness or temp >40°C → call emergency immediately
-
-Diagnosis & Treatment
-
-Heat stroke is a medical emergency: IV fluids, hospital cooling
-
-Heat exhaustion resolves with rest, fluids, cooling
-
-Prevention / Daily Management
-
-Hydrate regularly in hot weather
-
-Wear light, breathable clothes
-
-Schedule outdoor activity for cooler hours
-
-Red-Flag Signs
-
-Confusion, seizures
-
-Core temperature ≥40°C (104°F)
-
-Loss of consciousness
-
-References
-
-CDC — Heat Stress
-
-Mayo Clinic — Heat Stroke
+## References

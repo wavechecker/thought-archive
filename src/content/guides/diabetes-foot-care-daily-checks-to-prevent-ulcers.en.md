@@ -1,66 +1,29 @@
 ---
-title: Diabetes Foot Care — Daily Checks To Prevent Ulcers
-lang: en
-slug: diabetes-foot-care-daily-checks-to-prevent-ulcers
-publishDate: 2025-08-18T10:28:56.272Z
-updatedDate: 2025-08-18T10:28:56.272Z
+title: "Diabetes Foot Care — Daily Checks To Prevent Ulcers"
+description: "Diabetes Foot Care — Daily Checks To Prevent Ulcers — practical, plain-language guidance."
+category: "Diabetes Management"
+publishDate: "2025-08-18T10:28:56.272Z"
+updatedDate: "2025-08-18T10:58:51.639Z"
 draft: false
-tags: []
+tags: ["foot care", "ulcers", "neuropathy"]
 ---
 
-# Diabetes Foot Care — Daily Checks To Prevent Ulcers
+## Overview
 
-Diabetes Foot Care — Daily Checks To Prevent Ulcers
-Overview
+## Key Symptoms
 
-High blood sugar can damage nerves and blood vessels in the feet, leading to ulcers or infections. Daily foot checks prevent complications.
+## Causes / Risk Factors
 
-Key Symptoms
+## What To Do Now
 
-Numbness or tingling
+## Diagnosis & Treatment
 
-Cuts or blisters that heal slowly
+## Prevention / Daily Management
 
-Swelling or redness
+## Red-Flag Signs (Seek Urgent Care)
 
-Causes / Risk Factors
+## Related Guides
+- [Related](/guides/understanding-hba1c-and-why-it-matters-for-diabetes-management/)
+- [Related](/guides/blood-glucose-testing-how-and-when-to-check/)
 
-Poor circulation
-
-Peripheral neuropathy
-
-Ill-fitting shoes
-
-What To Do Now
-
-Inspect feet daily with mirror or helper
-
-Wash, dry carefully (between toes), moisturise heels
-
-Wear comfortable, closed shoes with socks
-
-Diagnosis & Treatment
-
-Podiatry exam at least once a year
-
-Early referral if ulcers or infections appear
-
-Prevention / Daily Management
-
-Keep blood sugar in target range
-
-Trim nails carefully or by a podiatrist
-
-Never walk barefoot outdoors
-
-Red-Flag Signs
-
-Any foot wound with pus or spreading redness
-
-Blackened or very cold toes (possible poor circulation)
-
-References
-
-American Diabetes Association — Foot Care
-
-CDC — Take Care of Your Feet
+## References

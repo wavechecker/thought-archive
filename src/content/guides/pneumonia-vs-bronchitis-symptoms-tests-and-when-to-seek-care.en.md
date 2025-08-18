@@ -1,69 +1,29 @@
 ---
-title: Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care
-lang: en
-slug: pneumonia-vs-bronchitis-symptoms-tests-and-when-to-seek-care
-publishDate: 2025-08-18T10:29:02.687Z
-updatedDate: 2025-08-18T10:29:02.687Z
+title: "Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care"
+description: "Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care — practical, plain-language guidance."
+category: "Respiratory Health"
+publishDate: "2025-08-18T10:29:02.687Z"
+updatedDate: "2025-08-18T10:58:51.639Z"
 draft: false
-tags: []
+tags: ["pneumonia", "bronchitis", "cough"]
 ---
 
-# Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care
+## Overview
 
-Pneumonia vs Bronchitis — Symptoms, Tests, and When To Seek Care
-Overview
+## Key Symptoms
 
-Both cause cough and chest discomfort. Pneumonia is an infection of the lung tissue; bronchitis affects the airways.
+## Causes / Risk Factors
 
-Key Symptoms
+## What To Do Now
 
-Bronchitis: cough, phlegm, usually viral, rarely high fever.
-Pneumonia: cough with fever, shortness of breath, chest pain, often more severe.
+## Diagnosis & Treatment
 
-Causes / Risk Factors
+## Prevention / Daily Management
 
-Viruses (bronchitis)
+## Red-Flag Signs (Seek Urgent Care)
 
-Bacteria or viruses (pneumonia)
+## Related Guides
+- [Related](/guides/flu-vs-common-cold-how-to-tell-the-difference/)
+- [Related](/guides/when-a-fever-becomes-dangerous-adults-vs-children/)
 
-Smoking, asthma, COPD
-
-Weak immune system
-
-What To Do Now
-
-Rest, fluids, simple pain/fever meds
-
-If high fever, breathlessness, or chest pain → see doctor
-
-Don’t demand antibiotics unless pneumonia confirmed
-
-Diagnosis & Treatment
-
-Bronchitis: usually no tests; supportive treatment
-
-Pneumonia: chest X-ray, blood tests, antibiotics if bacterial
-
-Prevention / Daily Management
-
-Stop smoking
-
-Annual flu vaccine, pneumococcal vaccine if at risk
-
-Hand hygiene
-
-Red-Flag Signs
-
-Breathing fast, blue lips/fingertips
-
-Chest pain with breathing
-
-Confusion in older adults
-
-References
-
-CDC — Pneumonia
-
-NHS — Bronchitis
-
-Mayo Clinic — Pneumonia
+## References

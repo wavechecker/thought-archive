@@ -1,64 +1,29 @@
 ---
-title: Morning Highs in Diabetes — Dawn Phenomenon vs Somogyi Effect
-lang: en
-slug: morning-highs-in-diabetes-dawn-phenomenon-vs-somogyi-effect
-publishDate: 2025-08-18T10:28:57.321Z
-updatedDate: 2025-08-18T10:28:57.321Z
+title: "Morning Highs in Diabetes — Dawn Phenomenon vs Somogyi Effect"
+description: "Morning Highs in Diabetes — Dawn Phenomenon vs Somogyi Effect — practical, plain-language guidance."
+category: "Diabetes Management"
+publishDate: "2025-08-18T10:28:57.321Z"
+updatedDate: "2025-08-18T10:58:51.639Z"
 draft: false
-tags: []
+tags: ["dawn phenomenon", "somogyi", "morning highs"]
 ---
 
-# Morning Highs in Diabetes — Dawn Phenomenon vs Somogyi Effect
+## Overview
 
-Morning Highs in Diabetes — Dawn Phenomenon vs Somogyi Effect
-Overview
+## Key Symptoms
 
-Some people wake up with high blood sugar. Two main causes: Dawn phenomenon (normal hormone surge) and Somogyi effect (rebound from overnight hypo).
+## Causes / Risk Factors
 
-Key Symptoms
+## What To Do Now
 
-Morning blood glucose higher than bedtime
+## Diagnosis & Treatment
 
-Sometimes night sweats or disturbed sleep (if overnight hypo)
+## Prevention / Daily Management
 
-Causes / Risk Factors
+## Red-Flag Signs (Seek Urgent Care)
 
-Natural 3–8am hormone rise (cortisol, growth hormone)
+## Related Guides
+- [Related](/guides/insulin-types-explained-rapid-short-intermediate-long-acting/)
+- [Related](/guides/blood-glucose-testing-how-and-when-to-check/)
 
-Too much evening insulin causing night-time hypo → rebound high
-
-What To Do Now
-
-Test at 2–3am:
-
-High → Dawn phenomenon
-
-Low → Somogyi effect
-
-Adjust evening insulin or snacks with doctor guidance
-
-Diagnosis & Treatment
-
-Continuous glucose monitoring is most accurate
-
-Doctor may adjust timing/type of insulin
-
-Prevention / Daily Management
-
-Avoid late heavy carb snacks
-
-Consistent sleep routine
-
-Regular review of insulin regimen
-
-Red-Flag Signs
-
-Repeated severe morning highs (>15 mmol/L / >270 mg/dL)
-
-Night-time hypos with confusion or seizures
-
-References
-
-ADA — Dawn Phenomenon and Somogyi Effect
-
-NHS — Type 1 Diabetes and Blood Sugar Levels
+## References
