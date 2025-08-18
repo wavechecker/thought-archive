@@ -21,7 +21,7 @@ Heart disease is the leading cause of death worldwide — but much of it is prev
 - Blood glucose for diabetes
 
 **Related Guides**
-- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)
+- [What is Angina? Symptoms & Management](/guides/angina-symptoms-management/)
 - [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/)
 - [Understanding HbA1c and Why It Matters for Diabetes Management](/guides/understanding-hba1c-and-why-it-matters-for-diabetes-management/)
 

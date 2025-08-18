@@ -24,6 +24,6 @@ tags: ["blood pressure", "home monitoring", "hypertension"]
 
 ## Related Guides
 - [Related](/guides/when-to-seek-emergency-help-for-chest-pain/)
-- [Related](/guides/common-heart-medications-and-their-side-effects/)
+- [Related](/guides/common-heart-medications/)
 
 ## References

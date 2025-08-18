@@ -23,9 +23,9 @@ Coronary angiography is a test that uses dye and X-rays to show the inside of yo
 - Watch for swelling or bleeding
 
 **Related Guides**
-- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)
+- [What is Angina? Symptoms & Management](/guides/angina-symptoms-management/)
 - [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/)
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation-after-a-heart-event/)
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)
 
 - [What is Angina? Symptoms & Management](#)
 - [Early Warning Signs of a Heart Attack](#)

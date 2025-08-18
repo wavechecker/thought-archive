@@ -23,8 +23,8 @@ Low blood sugar while sleeping can be dangerous — and sometimes goes unnoticed
 Frequent night-time lows should be discussed with your diabetes care team.
 
 **Related Guides**
-- [Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)](/guides/type-1-diabetes-managing-low-blood-glucose-hypoglycaemia/)
-- [Recognising Highs and Lows — Symptoms and First Steps](/guides/recognising-highs-and-lows-symptoms-and-first-steps/)
+- [Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)](/guides/type-1-diabetes-managing-hypoglycaemia/)
+- [Recognising Highs and Lows — Symptoms and First Steps](/guides/recognising-highs-and-lows/)
 - [Insulin Types Explained: Rapid, Short, Intermediate, Long-Acting](/guides/insulin-types-explained-rapid-short-intermediate-long-acting/)
 
 - [Managing Low Blood Glucose (Hypoglycaemia)](#)

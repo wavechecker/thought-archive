@@ -24,6 +24,6 @@ tags: ["dawn phenomenon", "somogyi", "morning highs"]
 
 ## Related Guides
 - [Related](/guides/insulin-types-explained-rapid-short-intermediate-long-acting/)
-- [Related](/guides/blood-glucose-testing-how-and-when-to-check/)
+- [Related](/guides/blood-glucose-testing/)
 
 ## References

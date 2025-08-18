@@ -23,7 +23,7 @@ tags: ["pneumonia", "bronchitis", "cough"]
 ## Red-Flag Signs (Seek Urgent Care)
 
 ## Related Guides
-- [Related](/guides/flu-vs-common-cold-how-to-tell-the-difference/)
+- [Related](/guides/flu-vs-common-cold/)
 - [Related](/guides/when-a-fever-becomes-dangerous-adults-vs-children/)
 
 ## References
