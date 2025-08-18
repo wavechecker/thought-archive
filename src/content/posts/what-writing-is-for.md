@@ -1,9 +1,12 @@
 ---
-title: "What Writing Is For (Now That the Algorithms Have Taken Over)"
-description: "A personal manifesto on writing with purpose in an age of algorithms, surveillance, and digital clout-chasing."
-pubDate: "2025-07-23"
-tags: ["writing", "AI", "culture", "resistance", "social media"]
+title:       "What Writing Is For (Now That the Algorithms Have Taken Over)"
+description: "A manifesto on writing with purpose in an algorithmic age of surveillance, culture wars, and digital clout-chasing."
+publishDate: "2025-07-23"
+updatedDate: "2025-07-23"
+tags:        ["writing","ai","culture","resistance","social-media"]
+slug:        "what-writing-is-for-now-that-the-algorithms-have-taken-over"
 ---
+
 
 Most people writing online want attention, revenue, or status.  
 I want truth, clarity, release.

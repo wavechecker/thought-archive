@@ -1,9 +1,12 @@
 ---
-title: Are We Making AI Dumber?
-pubDate: 2025-08-12
-description: ...
-tags: [ai, editorial]
+title:       "Are We Making AI Dumber?"
+description: "As AI scales, training choices and human feedback may be narrowing its intelligence — raising questions about how we shape machine minds."
+publishDate: "2025-08-12"
+updatedDate: "2025-08-12"
+tags:        ["ai","training","bias","editorial","future"]
+slug:        "are-we-making-ai-dumber"
 ---
+
 
 
 *What if we’re not just using AI—we’re slowly making it worse? Every vague question, every lazy prompt, quietly training the machine (and ourselves) into mediocrity.*

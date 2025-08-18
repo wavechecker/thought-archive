@@ -1,8 +1,10 @@
 ---
 title:       "The Kind of AI I Want to See"
-description: "Why a human-centric AI matters, and what I’m building toward."
-pubDate:     "2025-08-07"
-tags:        ["AI","vision","future"]
+description: "Why a human-centric vision for AI matters — and how aligning technology with values could shape the future we actually want to live in."
+publishDate: "2025-08-07"
+updatedDate: "2025-08-07"
+tags:        ["ai","vision","future","human-centric","technology"]
+slug:        "the-kind-of-ai-i-want-to-see"
 ---
 
 

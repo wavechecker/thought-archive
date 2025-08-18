@@ -1,9 +1,10 @@
-
 ---
 title:       "When AI Gets Real"
-description: "A look at the moment AI stops being sci-fi and starts shaping our everyday lives."
-pubDate:     "2025-08-05"
-tags:        ["AI","reality"]
+description: "Exploring the moment AI stops being science fiction and begins reshaping our everyday lives, work, and relationships in tangible ways."
+publishDate: "2025-08-05"
+updatedDate: "2025-08-05"
+tags:        ["ai","reality","technology","future","society"]
+slug:        "when-ai-gets-real"
 ---
 
 

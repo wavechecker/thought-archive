@@ -1,9 +1,12 @@
 ---
 title:       "Why I Want to Punch My AI"
-description: "And Why It’s Never Taking Over the World"
-pubDate:     "2025-08-01"
-tags:        ["AI","frustration"]
+description: "A candid reflection on frustration with today’s AI — and why its flaws show it’s far from taking over the world."
+publishDate: "2025-08-01"
+updatedDate: "2025-08-01"
+tags:        ["ai","frustration","limits","technology","humor"]
+slug:        "why-i-want-to-punch-my-ai"
 ---
+
 
 
 

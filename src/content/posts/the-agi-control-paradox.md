@@ -1,9 +1,12 @@
 ---
 title:       "The AGI Control Paradox"
-description: "A deep dive into why controlling an AGI may be impossible."
-pubDate:     "2025-08-05"
-tags:        ["AGI","ethics","AI"]
+description: "Why efforts to control AGI may be doomed from the start — exploring the limits of alignment, power, and ethics in machine intelligence."
+publishDate: "2025-08-05"
+updatedDate: "2025-08-05"
+tags:        ["agi","ai","alignment","ethics","control"]
+slug:        "the-agi-control-paradox"
 ---
+
 
 
 We don’t fear intelligence. We fear control without consent.

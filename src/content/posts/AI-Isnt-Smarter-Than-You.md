@@ -1,9 +1,12 @@
 ---
 title:       "AI Isn’t Smarter Than You"
-description: "Why you’re still the top dog when it comes to creativity—and why that matters."
-pubDate:     "2025-08-06"
-tags:        ["AI","human","creativity"]
+description: "AI can outperform in speed and scale, but human creativity, intuition, and meaning-making remain unmatched — and that matters."
+publishDate: "2025-08-06"
+updatedDate: "2025-08-06"
+tags:        ["ai","human-creativity","technology","future","ethics"]
+slug:        "ai-isnt-smarter-than-you"
 ---
+
 
 
 

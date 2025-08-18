@@ -1,9 +1,12 @@
 ---
 title:       "The War on Attention"
-description: "How the battle for our focus reshapes culture, commerce, and consciousness."
-pubDate:     "2025-08-07"
-tags:        ["attention","culture","AI"]
+description: "How the battle for human focus is reshaping culture, commerce, and consciousness — and why attention may be the most valuable resource of all."
+publishDate: "2025-08-07"
+updatedDate: "2025-08-07"
+tags:        ["attention","culture","ai","economy","consciousness"]
+slug:        "the-war-on-attention"
 ---
+
 
 
 

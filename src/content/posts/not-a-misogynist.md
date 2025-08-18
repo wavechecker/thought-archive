@@ -1,9 +1,12 @@
 ---
-title: Not a Misogynist, Not a Victim - Just a Man with Questions
-description: A reflection on the gender double standard around tradition, identity, and modern masculinity.
-pubDate: "2025-07-31"
-tags: ["masculinity", "tradition", "gender", "identity", "culture"]
+title:       "Not a Misogynist, Not a Victim — Just a Man with Questions"
+description: "A reflection on the gender double standard around tradition, identity, and the search for meaning in modern masculinity."
+publishDate: "2025-07-31"
+updatedDate: "2025-07-31"
+tags:        ["masculinity","tradition","gender","identity","culture"]
+slug:        "not-a-misogynist-not-a-victim"
 ---
+
 
 # Not a Misogynist, Not a Victim - Just a Man with Questions
 
