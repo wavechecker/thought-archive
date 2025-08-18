@@ -1,49 +1,104 @@
 ---
 import { getCollection } from "astro:content";
 
-// Inline helpers (no imports)
-const isValidDate = (d) =>
-  d instanceof Date && !isNaN(+d) && +d > +new Date("1971-01-01");
-const fmt = (d) =>
-  new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(d);
+// Safe date utils that accept string | Date | undefined
+const toDate = (v) => {
+  if (!v) return undefined;
+  if (v instanceof Date) return isNaN(+v) ? undefined : v;
+  const d = new Date(v);
+  return isNaN(+d) ? undefined : d;
+};
+const isValidDate = (v) => !!toDate(v);
+const fmt = (v) =>
+  new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(toDate(v));
 
-const posts = await getCollection("guides");
+// Load collections
+const guides = await getCollection("guides");
+const posts = await getCollection("posts");
 
-// Sort by most recent valid date
-posts.sort((a, b) => {
-  const da = isValidDate(a.data.publishDate) ? +a.data.publishDate
-           : isValidDate(a.data.updatedDate) ? +a.data.updatedDate : 0;
-  const db = isValidDate(b.data.publishDate) ? +b.data.publishDate
-           : isValidDate(b.data.updatedDate) ? +b.data.updatedDate : 0;
-  return db - da;
-});
+// Helper: pick best date (publishDate > updatedDate) as Date or undefined
+const bestDate = (e) => toDate(e.data.publishDate) ?? toDate(e.data.updatedDate);
+
+// Sort newest → oldest
+guides.sort((a, b) => (+bestDate(b) || 0) - (+bestDate(a) || 0));
+posts.sort((a, b) => (+bestDate(b) || 0) - (+bestDate(a) || 0));
+
+// Limit previews if you like
+const latestGuides = guides.slice(0, 6);
+const latestPosts  = posts.slice(0, 6);
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Guides • PatientGuide</title>
+    <title>PatientGuide • Posts & Guides</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PatientGuide — essays, commentary, and reference guides."
+    />
   </head>
   <body>
-    <h1>Guides</h1>
-    <ul>
-      {posts.map((post) => {
-        const d = isValidDate(post.data.publishDate)
-          ? post.data.publishDate
-          : isValidDate(post.data.updatedDate)
-            ? post.data.updatedDate
-            : undefined;
-        return (
-          <li>
-            <a href={`/guides/${post.slug}/`}>{post.data.title}</a>
-            {d && <> — <time datetime={d.toISOString()}>{fmt(d)}</time></>}
-          </li>
-        );
-      })}
-    </ul>
+    <main class="prose lg:prose-xl mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold mb-8">PatientGuide</h1>
+
+      <!-- Latest Posts -->
+      <section class="mb-12">
+        <div class="flex items-baseline justify-between mb-4">
+          <h2 class="text-3xl font-semibold">Latest Posts</h2>
+          <a href="/posts/" class="text-blue-600 no-underline hover:underline">View all</a>
+        </div>
+        <ul class="list-none p-0 m-0 space-y-4">
+          {latestPosts.map((p) => {
+            const d = bestDate(p);
+            return (
+              <li class="border-b pb-4">
+                <h3 class="text-2xl font-medium m-0">
+                  <a href={`/posts/${p.data.slug}/`} class="no-underline hover:underline">
+                    {p.data.title}
+                  </a>
+                </h3>
+                <p class="text-gray-500 text-sm m-0">
+                  {d ? fmt(d) : ""}
+                </p>
+                <p class="m-0 mt-2">{p.data.description}</p>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <!-- Latest Guides -->
+      <section>
+        <div class="flex items-baseline justify-between mb-4">
+          <h2 class="text-3xl font-semibold">Latest Guides</h2>
+          <a href="/guides/" class="text-blue-600 no-underline hover:underline">View all</a>
+        </div>
+        <ul class="list-none p-0 m-0 space-y-4">
+          {latestGuides.map((g) => {
+            const d = bestDate(g);
+            return (
+              <li class="border-b pb-4">
+                <h3 class="text-2xl font-medium m-0">
+                  <a href={`/guides/${g.data.slug}/`} class="no-underline hover:underline">
+                    {g.data.title}
+                  </a>
+                </h3>
+                <p class="text-gray-500 text-sm m-0">
+                  {d ? fmt(d) : ""}
+                </p>
+                <p class="m-0 mt-2">{g.data.description}</p>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
-
-
 
 

@@ -1,41 +1,29 @@
 ---
-import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import { getEntryBySlug } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date";
 
-// 1) Tell Astro which slugs to build
-export async function getStaticPaths() {
-  const guides = await getCollection("guides");
-  return guides.map((g) => ({
-    params: { slug: g.slug },
-    props: { guide: g },
-  }));
-}
+const { slug } = Astro.params;
+const entry = await getEntryBySlug("guides", slug);
+if (!entry) return Astro.redirect("/404");
 
-// 2) Receive the guide entry via props and render
-const { guide } = Astro.props;
-const { data } = guide;
-const { Content } = await guide.render();
-
-// Inline date helpers (no imports ⇒ no path/alias issues)
-const isValidDate = (d) => d instanceof Date && !isNaN(+d) && +d > +new Date("1971-01-01");
-const fmt = (d) => new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(d);
-
-const displayDate = isValidDate(data.publishDate)
-  ? data.publishDate
-  : (isValidDate(data.updatedDate) ? data.updatedDate : undefined);
+const { Content, data } = await entry.render(); // `data` is the guide frontmatter
 ---
-<html lang={data.lang || "en"}>
-  <head>
-    <meta charset="utf-8" />
-    <title>{data.title} • PatientGuide</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <article>
-      <h1>{data.title}</h1>
-      {displayDate && <p><time datetime={displayDate.toISOString()}>{fmt(displayDate)}</time></p>}
-      <Content />
-    </article>
-  </body>
-</html>
+
+<Layout frontmatter={data}>
+  <h1>{data.title}</h1>
+  <p style="color:#6b7280; margin-top:.25rem;">
+    {isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
+    {data.updatedDate && ` • Updated ${fmt(data.updatedDate)}`}
+  </p>
+
+  <Content />
+
+  {data.tags?.length > 0 && (
+    <p style="color:#2563eb; margin-top:1rem;">
+      {data.tags.map((t, i) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
+    </p>
+  )}
+</Layout>
 
 

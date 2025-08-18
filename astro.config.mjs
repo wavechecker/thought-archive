@@ -1,13 +1,5 @@
+// astro.config.mjs
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-
 export default defineConfig({
-  integrations: [mdx()],
-  vite: {
-    resolve: {
-      alias: {
-        '@': '/src', // optional; harmless
-      },
-    },
-  },
+  site: 'https://patientguide.io', // set this if not already
 });

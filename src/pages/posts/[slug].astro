@@ -1,30 +1,28 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getEntryBySlug } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date";
 
-// Build all /posts/* pages at build time
-export async function getStaticPaths() {
-  const posts = await getCollection("posts");
-  return posts.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
-}
+const { slug } = Astro.params;
+const entry = await getEntryBySlug("posts", slug);
+if (!entry) return Astro.redirect("/404");
 
-// Receive the entry from getStaticPaths
-const { entry } = Astro.props as { entry: any };
-const { Content } = await entry.render();
-const data = entry.data;
-
-// Title for the page/tab
-const pageTitle = data.title ?? entry.slug;
+const { Content, data } = await entry.render(); // `data` is the post frontmatter
 ---
 
-<Layout title={pageTitle}>
-  <article class="prose max-w-none">
-    <h1>{data.title ?? entry.slug}</h1>
-    {data.pubDate && <p><em>{new Date(data.pubDate).toDateString()}</em></p>}
-    {data.description && <p>{data.description}</p>}
-    <Content />
-  </article>
+<Layout frontmatter={data}>
+  <h1>{data.title}</h1>
+  <p style="color:#6b7280; margin-top:.25rem;">
+    {isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
+    {data.updatedDate && ` • Updated ${fmt(data.updatedDate)}`}
+  </p>
+
+  <Content />
+
+  {data.tags?.length > 0 && (
+    <p style="color:#2563eb; margin-top:1rem;">
+      {data.tags.map((t, i) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
+    </p>
+  )}
 </Layout>
+
