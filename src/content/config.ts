@@ -1,12 +1,15 @@
 import { defineCollection, z } from "astro:content";
 
+// Accept ISO string *or* Date object for dates
+const DateLike = z.union([z.string(), z.date()]);
+
 const common = {
   title: z.string(),
-  description: z.string().max(200).optional(),   // some legacy guides may lack desc
-  publishDate: z.string(),                        // ISO "YYYY-MM-DD"
-  updatedDate: z.string().optional(),            // ISO "YYYY-MM-DD"
+  description: z.string().max(200).optional(),
+  publishDate: DateLike,              // was z.string()
+  updatedDate: DateLike.optional(),   // was z.string().optional()
   tags: z.array(z.string()).default([]),
-  slug: z.string(),
+  // no frontmatter slug; we use entry.slug everywhere
 };
 
 const guides = defineCollection({
@@ -20,4 +23,5 @@ const posts = defineCollection({
 });
 
 export const collections = { guides, posts };
+
 

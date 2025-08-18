@@ -7,7 +7,8 @@ const { slug } = Astro.params;
 const entry = await getEntryBySlug("guides", slug);
 if (!entry) return Astro.redirect("/404");
 
-const { Content, data } = await entry.render(); // `data` is the guide frontmatter
+const { Content, data } = await entry.render();
+const canonical = `https://patientguide.io/guides/${entry.slug}/`;  // ✅ use entry.slug
 ---
 
 <Layout frontmatter={data}>
@@ -16,14 +17,13 @@ const { Content, data } = await entry.render(); // `data` is the guide frontmatt
     {isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
     {data.updatedDate && ` • Updated ${fmt(data.updatedDate)}`}
   </p>
-
   <Content />
-
   {data.tags?.length > 0 && (
     <p style="color:#2563eb; margin-top:1rem;">
       {data.tags.map((t, i) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
     </p>
   )}
 </Layout>
+
 
 

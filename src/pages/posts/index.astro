@@ -1,47 +1,23 @@
 ---
-import { getCollection } from "astro:content";
-import { isValidDate, fmt } from "@/lib/date";
-
+// ...
 const posts = (await getCollection("posts"))
   .sort((a, b) => (a.data.publishDate < b.data.publishDate ? 1 : -1));
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Posts</title>
-    <meta name="description" content="Essays and commentary on AI, culture, and more." />
-  </head>
-  <body>
-    <main class="prose lg:prose-xl mx-auto px-4 py-12">
-      <h1 class="text-4xl font-bold mb-8">Posts</h1>
-
-      <ul class="space-y-8 list-none p-0 m-0">
-        {posts.map((post) => (
-          <li class="border-b pb-6">
-            <h2 class="text-2xl font-semibold mb-2">
-              <a href={`/posts/${post.data.slug}/`} class="no-underline hover:underline">
-                {post.data.title}
-              </a>
-            </h2>
-
-            <p class="text-gray-500 text-sm mb-3">
-              {isValidDate(post.data.publishDate) ? fmt(post.data.publishDate) : post.data.publishDate}
-              {post.data.updatedDate && ` • Updated ${fmt(post.data.updatedDate)}`}
-            </p>
-
-            <p class="mb-3">{post.data.description}</p>
-
-            {post.data.tags?.length > 0 && (
-              <ul class="flex flex-wrap gap-2 text-sm text-blue-600 p-0 m-0">
-                {post.data.tags.map((tag) => (
-                  <li key={tag} class="m-0">#{tag}</li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
-    </main>
-  </body>
-</html>
+<Layout title="Posts" description="Essays and commentary.">
+  <h1>Posts</h1>
+  <ul style="list-style:none; padding:0; margin:0;">
+    {posts.map((post) => (
+      <li style="border-bottom:1px solid #e5e7eb; padding:0 0 1rem; margin:0 0 1rem;">
+        <h2 style="margin:0 0 .25rem;">
+          <a href={`/posts/${post.slug}/`}>{post.data.title}</a>   {/* ✅ post.slug */}
+        </h2>
+        <p class="muted" style="margin:.25rem 0 .75rem;">
+          {isValidDate(post.data.publishDate) ? fmt(post.data.publishDate) : post.data.publishDate}
+          {post.data.updatedDate && ` • Updated ${fmt(post.data.updatedDate)}`}
+        </p>
+        <p style="margin:0;">{post.data.description}</p>
+      </li>
+    ))}
+  </ul>
+</Layout>
