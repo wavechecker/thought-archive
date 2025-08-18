@@ -23,7 +23,7 @@ tags: ["statins", "cholesterol", "prevention"]
 ## Red-Flag Signs (Seek Urgent Care)
 
 ## Related Guides
-- [Related](/guides/preventing-heart-disease/)
-- [Related](/guides/common-heart-medications/)
+- [Related](/guides/preventing-heart-disease-lifestyle-and-medical-screening/)
+- [Related](/guides/common-heart-medications-and-their-side-effects/)
 
 ## References

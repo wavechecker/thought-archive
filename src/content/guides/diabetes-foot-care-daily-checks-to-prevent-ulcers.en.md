@@ -24,6 +24,6 @@ tags: ["foot care", "ulcers", "neuropathy"]
 
 ## Related Guides
 - [Related](/guides/understanding-hba1c-and-why-it-matters-for-diabetes-management/)
-- [Related](/guides/blood-glucose-testing/)
+- [Related](/guides/blood-glucose-testing-how-and-when-to-check/)
 
 ## References

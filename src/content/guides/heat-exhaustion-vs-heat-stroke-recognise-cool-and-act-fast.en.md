@@ -24,6 +24,6 @@ tags: ["heat stroke", "heat exhaustion", "first aid"]
 
 ## Related Guides
 - [Related](/guides/when-a-fever-becomes-dangerous-adults-vs-children/)
-- [Related](/guides/first-aid-for-severe-allergic-reactions/)
+- [Related](/guides/first-aid-for-severe-allergic-reactions-anaphylaxis/)
 
 ## References

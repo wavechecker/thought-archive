@@ -22,9 +22,9 @@ Exercise is great for health, but it can affect blood sugar in unpredictable way
 - Monitor more frequently and adjust insulin if needed
 
 **Related Guides**
-- [Recognising Highs and Lows — Symptoms and First Steps](/guides/recognising-highs-and-lows/)
-- [Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)](/guides/type-1-diabetes-managing-hypoglycaemia/)
-- [Night-time Hypoglycaemia: Prevention & Safety](/guides/night-time-hypoglycaemia/)
+- [Recognising Highs and Lows — Symptoms and First Steps](/guides/recognising-highs-and-lows-symptoms-and-first-steps/)
+- [Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)](/guides/type-1-diabetes-managing-low-blood-glucose-hypoglycaemia/)
+- [Night-time Hypoglycaemia: Prevention & Safety](/guides/night-time-hypoglycaemia-prevention-and-safety/)
 
 - [Recognising Highs and Lows — Symptoms and First Steps](#)
 - [Managing Low Blood Glucose (Hypoglycaemia)](#)

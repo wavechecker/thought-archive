@@ -23,7 +23,7 @@ tags: ["insulin storage", "travel", "backup"]
 ## Red-Flag Signs (Seek Urgent Care)
 
 ## Related Guides
-- [Related](/guides/travel-tips-t1d/)
-- [Related](/guides/insulin-administration/)
+- [Related](/guides/travel-tips-for-people-with-type-1-diabetes/)
+- [Related](/guides/insulin-administration-pens-syringes-and-pumps/)
 
 ## References

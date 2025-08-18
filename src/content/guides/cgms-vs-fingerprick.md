@@ -22,9 +22,9 @@ Checking your blood sugar is the foundation of diabetes management. Today, there
 Many people use both — CGM for trends, finger-prick to confirm readings.
 
 **Related Guides**
-- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)
+- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing-how-and-when-to-check/)
 - [Understanding HbA1c and Why It Matters for Diabetes Management](/guides/understanding-hba1c-and-why-it-matters-for-diabetes-management/)
-- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration/)
+- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration-pens-syringes-and-pumps/)
 
 - [Blood Glucose Testing — How and When to Check](#)
 - [Understanding HbA1c and Why It Matters for Diabetes Management](#)
