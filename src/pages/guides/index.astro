@@ -1,26 +1,28 @@
 ---
-// ...
-const guides = (await getCollection("guides"))
-  .sort((a, b) => (a.data.publishDate < b.data.publishDate ? 1 : -1));
----
+import { getCollection } from "astro:content";
+const fmt = (v)=> new Intl.DateTimeFormat("en-GB",{day:"2-digit",month:"short",year:"numeric"}).format(new Date(v));
 
-<Layout title="Guides" description="Reference guides and resources.">
-  <h1>Guides</h1>
-  <ul style="list-style:none; padding:0; margin:0;">
-    {guides.map((g) => (
-      <li style="border-bottom:1px solid #e5e7eb; padding:0 0 1rem; margin:0 0 1rem;">
-        <h2 style="margin:0 0 .25rem;">
-          <a href={`/guides/${g.slug}/`}>{g.data.title}</a>     {/* ✅ g.slug */}
-        </h2>
-        <p class="muted" style="margin:.25rem 0 .75rem;">
-          {isValidDate(g.data.publishDate) ? fmt(g.data.publishDate) : g.data.publishDate}
-          {g.data.updatedDate && ` • Updated ${fmt(g.data.updatedDate)}`}
-        </p>
-        <p style="margin:0;">{g.data.description}</p>
-      </li>
-    ))}
-  </ul>
-</Layout>
+const guides = (await getCollection("guides"))
+  .sort((a,b)=> +new Date(a.data.publishDate) < +new Date(b.data.publishDate) ? 1 : -1);
+---
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Guides</title></head>
+  <body>
+    <main style="max-width:960px;margin:0 auto;padding:1.5rem;font-family:system-ui,sans-serif;">
+      <h1>Guides</h1>
+      <ul>
+        {guides.map((g)=>(
+          <li>
+            <a href={`/guides/${g.slug}/`}>{g.data.title}</a>
+            {g.data.publishDate && <> — <time>{fmt(g.data.publishDate)}</time></>}
+            <div>{g.data.description}</div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  </body>
+</html>
+
 
 
 

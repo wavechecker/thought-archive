@@ -1,23 +1,37 @@
 ---
-// ...
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+// Format a date-like value (string or Date)
+const fmt = (v) =>
+  v
+    ? new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" })
+        .format(new Date(v))
+    : "";
+
 const posts = (await getCollection("posts"))
-  .sort((a, b) => (a.data.publishDate < b.data.publishDate ? 1 : -1));
+  .sort((a, b) => +new Date(a.data.publishDate || a.data.updatedDate || 0) <
+                  +new Date(b.data.publishDate || b.data.updatedDate || 0) ? 1 : -1);
 ---
 
-<Layout title="Posts" description="Essays and commentary.">
+<Layout frontmatter={{ title: "Posts", description: "Essays and commentary." }}>
   <h1>Posts</h1>
-  <ul style="list-style:none; padding:0; margin:0;">
-    {posts.map((post) => (
-      <li style="border-bottom:1px solid #e5e7eb; padding:0 0 1rem; margin:0 0 1rem;">
-        <h2 style="margin:0 0 .25rem;">
-          <a href={`/posts/${post.slug}/`}>{post.data.title}</a>   {/* ✅ post.slug */}
-        </h2>
-        <p class="muted" style="margin:.25rem 0 .75rem;">
-          {isValidDate(post.data.publishDate) ? fmt(post.data.publishDate) : post.data.publishDate}
-          {post.data.updatedDate && ` • Updated ${fmt(post.data.updatedDate)}`}
-        </p>
-        <p style="margin:0;">{post.data.description}</p>
-      </li>
-    ))}
-  </ul>
+  {posts.length === 0 ? (
+    <p>No posts found in <code>src/content/posts/</code>.</p>
+  ) : (
+    <ul style="list-style:none; padding:0; margin:0;">
+      {posts.map((post) => (
+        <li style="border-bottom:1px solid #e5e7eb; padding:0 0 1rem; margin:0 0 1rem;">
+          <h2 style="margin:0 0 .25rem;">
+            <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+          </h2>
+          <p class="muted" style="margin:.25rem 0 .75rem;">
+            {post.data.publishDate ? fmt(post.data.publishDate) : (post.data.updatedDate ? fmt(post.data.updatedDate) : "")}
+          </p>
+          {post.data.description && <p style="margin:0;">{post.data.description}</p>}
+        </li>
+      ))}
+    </ul>
+  )}
 </Layout>
+

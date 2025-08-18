@@ -1,28 +1,17 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { getEntryBySlug } from "astro:content";
-import { isValidDate, fmt } from "@/lib/date";
 
 const { slug } = Astro.params;
 const entry = await getEntryBySlug("posts", slug);
 if (!entry) return Astro.redirect("/404");
 
 const { Content, data } = await entry.render();
-const canonical = `https://patientguide.io/posts/${entry.slug}/`;  // ✅ use entry.slug
 ---
 
 <Layout frontmatter={data}>
   <h1>{data.title}</h1>
-  <p style="color:#6b7280; margin-top:.25rem;">
-    {isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
-    {data.updatedDate && ` • Updated ${fmt(data.updatedDate)}`}
-  </p>
   <Content />
-  {data.tags?.length > 0 && (
-    <p style="color:#2563eb; margin-top:1rem;">
-      {data.tags.map((t, i) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
-    </p>
-  )}
 </Layout>
 
 

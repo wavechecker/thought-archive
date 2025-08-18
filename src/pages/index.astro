@@ -1,0 +1,55 @@
+---
+import { getCollection } from "astro:content";
+
+// safe date helpers for string | Date
+const toDate = (v) => (v ? new Date(v) : undefined);
+const fmt = (v) =>
+  v ? new Intl.DateTimeFormat("en-GB",{day:"2-digit",month:"short",year:"numeric"}).format(toDate(v)) : "";
+
+const guides = await getCollection("guides");
+const posts  = await getCollection("posts");
+
+const bestDate = (e) => e.data.publishDate || e.data.updatedDate;
+guides.sort((a,b)=> +new Date(bestDate(b)||0) - +new Date(bestDate(a)||0));
+posts.sort((a,b)=> +new Date(bestDate(b)||0) - +new Date(bestDate(a)||0));
+
+const latestGuides = guides.slice(0, 5);
+const latestPosts  = posts.slice(0, 5);
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PatientGuide • Home</title>
+  </head>
+  <body>
+    <main style="max-width:960px;margin:0 auto;padding:1.5rem;font-family:system-ui,sans-serif;">
+      <h1>PatientGuide</h1>
+
+      <section>
+        <h2>Latest Posts</h2>
+        <ul>
+          {latestPosts.map((p)=>(
+            <li>
+              <a href={`/posts/${p.slug}/`}>{p.data.title}</a>
+              {p.data.publishDate && <> — <time>{fmt(p.data.publishDate)}</time></>}
+            </li>
+          ))}
+        </ul>
+        <p><a href="/posts/">View all posts →</a></p>
+      </section>
+
+      <section>
+        <h2>Latest Guides</h2>
+        <ul>
+          {latestGuides.map((g)=>(
+            <li>
+              <a href={`/guides/${g.slug}/`}>{g.data.title}</a>
+              {g.data.publishDate && <> — <time>{fmt(g.data.publishDate)}</time></>}
+            </li>
+          ))}
+        </ul>
+        <p><a href="/guides/">View all guides →</a></p>
+      </section>
+    </main>
+  </body>
+</html>

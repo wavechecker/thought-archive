@@ -1,3 +1,4 @@
+---
 /*
   Layout.astro
   Receives `frontmatter` from pages and injects SEO meta tags.
@@ -21,7 +22,7 @@ const { frontmatter } = Astro.props;
     <meta property="og:type"        content="article" />
     <meta property="og:title"       content={frontmatter?.title} />
     <meta property="og:description" content={frontmatter?.description} />
-    <meta property="og:url"         content={Astro.site + Astro.url.pathname} />
+    <meta property="og:url"         content={(Astro.site && (Astro.site + Astro.url.pathname)) ?? ""} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image" />
@@ -35,16 +36,16 @@ const { frontmatter } = Astro.props;
         "@type": "BlogPosting",
         headline:       frontmatter?.title,
         description:    frontmatter?.description,
-        datePublished:  frontmatter?.publishDate, // ✅ updated to match new schema
-        url:            Astro.site + Astro.url.pathname,
+        datePublished:  frontmatter?.publishDate, // uses your new schema
+        url:            (Astro.site && (Astro.site + Astro.url.pathname)) ?? "",
       })}
     </script>
   </head>
   <body>
     <header>
       <nav>
-        <a href="/">Home</a> | 
-        <a href="/posts/">Posts</a> | 
+        <a href="/">Home</a> |
+        <a href="/posts/">Posts</a> |
         <a href="/guides/">Guides</a>
       </nav>
     </header>
