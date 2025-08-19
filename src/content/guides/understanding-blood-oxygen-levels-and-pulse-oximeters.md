@@ -9,7 +9,7 @@ slug: "understanding-blood-oxygen-levels-and-pulse-oximeters"
 ---
 
 
-# Understanding Blood Oxygen Levels and Pulse Oximeters
+
 
 Pulse oximeters estimate oxygen saturation (**SpO₂**) using light sensors on your finger.
 
