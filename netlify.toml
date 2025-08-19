@@ -29,3 +29,36 @@ status = 301
 from = "/guides/preventing-heart-disease-lifestyle-and-medical-screening/"
 to = "/guides/preventing-heart-disease/"
 status = 301
+
+# --- Bowel Cancer: legacy long slugs → short slugs ---
+
+[[redirects]]
+from = "/guides/understanding-bowel-cancer-risks-and-symptoms/"
+to = "/guides/understanding-bowel-cancer/"
+status = 301
+
+[[redirects]]
+from = "/guides/bowel-cancer-screening-colonoscopy-fit-test-and-early-detection/"
+to = "/guides/bowel-cancer-screening/"
+status = 301
+
+[[redirects]]
+from = "/guides/treatment-pathways-surgery-chemo-radiotherapy/"
+to = "/guides/bowel-cancer-treatment/"
+status = 301
+
+[[redirects]]
+from = "/guides/living-with-bowel-cancer-nutrition-exercise-and-mental-health/"
+to = "/guides/living-with-bowel-cancer/"
+status = 301
+
+[[redirects]]
+from = "/guides/family-risk-and-genetics-what-to-know/"
+to = "/guides/bowel-cancer-genetics/"
+status = 301
+
+# Optional: if any auto‑generated “.en” paths ever existed
+[[redirects]]
+from = "/guides/:slug.en/"
+to = "/guides/:slug/"
+status = 301
