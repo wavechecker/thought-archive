@@ -5,6 +5,7 @@ category: "Heart & Circulation"
 publishDate: "2025-08-15"
 draft: false
 tags: ["Heart & Circulation", "patientguide"]
+slug: "cardiac-rehabilitation"
 ---
 
 # Cardiac Rehabilitation After a Heart Event

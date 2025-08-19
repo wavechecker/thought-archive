@@ -1,17 +1,13 @@
 ---
-title: Understanding Blood Oxygen Levels and Pulse Oximeters
-date: 2025-08-13T00:00:00.000Z
-description: >-
-  What SpO₂ numbers mean, how to measure accurately at home, and when to seek
-  care.
-tags:
-  - medical
-  - respiratory
-  - pulse oximeter
-  - health guides
-publishDate: '2025-08-13T15:52:51+04:00'
-updatedDate: '2025-08-13T15:52:51+04:00'
+title: "Understanding Blood Oxygen Levels and Pulse Oximeters"
+description: "What SpO₂ numbers mean, how to measure accurately at home, and when to seek care."
+category: "Heart & Circulation"
+publishDate: "2025-08-13"
+draft: false
+tags: ["Heart & Circulation", "patientguide"]
+slug: "understanding-blood-oxygen-levels-and-pulse-oximeters"
 ---
+
 
 # Understanding Blood Oxygen Levels and Pulse Oximeters
 
@@ -43,6 +39,13 @@ Normal SpO₂ is usually **95–100%** at sea level. Readings **≤92% at rest**
 - World Health Organization — pulse oximetry in clinical care.  
 - Centers for Disease Control and Prevention (CDC) — home pulse oximeter guidance.  
 - National Health Service (NHS) — oxygen saturation monitoring at home.  
+
+## Related Guides
+
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications/)
+- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)
+
 
 ---
 *Educational only; not a substitute for professional medical advice.*

@@ -5,7 +5,9 @@ category: "Heart & Circulation"
 publishDate: "2025-08-19"
 draft: false
 tags: ["Heart & Circulation", "patientguide"]
+slug: "what-is-angina-symptoms-and-management"
 ---
+
 
 # What is Angina? Symptoms & Management
 
@@ -42,8 +44,8 @@ tags: ["Heart & Circulation", "patientguide"]
 
 ## Related Guides
 
-- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications-and-their-side-effects/)  
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation-after-a-heart-event/)  
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications/)
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)
 - [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/)
 
 ---

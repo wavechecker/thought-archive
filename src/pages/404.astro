@@ -1,48 +1,124 @@
 ---
-const home = "/guides/";
-const title = "Page not found";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+// --- helpers ---
+const toLower = (s) => (typeof s === "string" ? s.toLowerCase() : "");
+const uniq = (arr) => [...new Set(arr)];
+const includesAny = (text, words) => words.some(w => text.includes(w));
+
+const path = new URL(Astro.request.url).pathname.toLowerCase();
+
+// Tokenize the broken path (e.g., "/guides/type-1-diabetes/…" -> ["guides","type","1","diabetes"])
+const tokens = uniq(
+  path
+    .split(/[\/\-\_\.\s]+/g)
+    .map(t => t.trim())
+    .filter(Boolean)
+);
+
+// Optional keyword → canonical suggestions (quick wins)
+const keywordRoutes = [
+  { keys: ["diabetes","t1d","t2d","blood-glucose","insulin"],    href: "/guides/type-1-diabetes/" },
+  { keys: ["heart","circulation","cardio","atrial","angina"],     href: "/guides/heart-circulation/" },
+  { keys: ["womb","ectogenesis","pregnancy","china","robot"],     href: "/posts/china-pregnancy-robot-artificial-wombs/" },
+  { keys: ["artificial","wombs","ectogenesis"],                   href: "/posts/artificial-wombs-china-might-be-first/" },
+  { keys: ["attention","focus","concentration"],                  href: "/posts/the-war-on-attention/" },
+  { keys: ["agi","alignment","control"],                          href: "/posts/the-agi-control-paradox/" },
+  { keys: ["writing","algorithms","manifesto"],                   href: "/posts/what-writing-is-for-now-that-the-algorithms-have-taken-over/" },
+];
+
+// Collections
+const guides = await getCollection("guides");
+const posts  = await getCollection("posts");
+
+// Scoring: simple relevance based on tokens found in title/description/tags
+function scoreEntry(entry) {
+  const title = toLower(entry.data.title);
+  const desc  = toLower(entry.data.description ?? "");
+  const tags  = (entry.data.tags ?? []).map(toLower).join(" ");
+  const hay   = `${title} ${desc} ${tags}`;
+  let score = 0;
+  for (const t of tokens) {
+    if (!t) continue;
+    if (hay.includes(t)) score += 2;       // stronger hit in text
+    if (title.includes(t)) score += 1;     // extra bump for title
+  }
+  return score;
+}
+
+// Compute suggestions
+const all = [
+  ...guides.map(e => ({ ...e, kind: "guide" })),
+  ...posts.map(e  => ({ ...e, kind: "post"  })),
+];
+
+const ranked = all
+  .map(e => ({ e, s: scoreEntry(e) }))
+  .filter(x => x.s > 0)
+  .sort((a, b) => b.s - a.s)
+  .slice(0, 8)
+  .map(x => x.e);
+
+// Keyword → canonical direct suggestions (top of page if any)
+const direct = keywordRoutes
+  .filter(r => includesAny(path, r.keys))
+  .map(r => r.href);
+
+// Fallback lists
+const recentPosts  = posts.slice(0, 5);
+const recentGuides = guides.slice(0, 5);
+
+// De-dup hrefs in “Likely matches”
+const hrefFor = (e) => (e.kind === "guide" ? `/guides/${e.slug}/` : `/posts/${e.slug}/`);
+const likely = uniq(ranked.map(hrefFor));
+
+const frontmatter = {
+  title: "Page not found",
+  description: "We couldn’t find that page — here are some likely matches and recent content.",
+};
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{title} • PatientGuide</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- keep 404s out of search indexes -->
-    <meta name="robots" content="noindex" />
-    <style>
-      :root { color-scheme: light dark; }
-      body {
-        margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
-        display: grid; place-items: center; min-height: 100vh; padding: 2rem;
-      }
-      .card {
-        max-width: 720px; width: 100%;
-        border: 1px solid color-mix(in oklab, CanvasText 15%, Canvas);
-        border-radius: 16px; padding: 2rem;
-        box-shadow: 0 4px 24px color-mix(in oklab, CanvasText 10%, transparent);
-      }
-      h1 { margin: 0 0 .5rem 0; font-size: clamp(1.5rem, 2.5vw + 1rem, 2.2rem); }
-      p { margin: .25rem 0 1rem; line-height: 1.6; }
-      .links { display: flex; gap: .75rem; flex-wrap: wrap; }
-      a {
-        text-decoration: none; padding: .6rem .9rem; border-radius: 999px;
-        border: 1px solid color-mix(in oklab, CanvasText 15%, Canvas);
-      }
-      a:hover { background: color-mix(in oklab, CanvasText 6%, Canvas); }
-      code { background: color-mix(in oklab, CanvasText 6%, Canvas); padding: .2rem .4rem; border-radius: 6px; }
-    </style>
-  </head>
-  <body>
-    <main class="card">
-      <h1>404 — Page not found</h1>
-      <p>We couldn’t find that page. Try our guides index or check the URL.</p>
-      <div class="links">
-        <a href={home}>Go to Guides →</a>
-        <a href="/">Home</a>
-      </div>
-      <p style="margin-top:1rem; opacity:.7;">
-        If you typed the address, double‑check for typos — e.g. <code>/guides/</code>.
-      </p>
-    </main>
-  </body>
-</html>
+
+<Layout frontmatter={frontmatter}>
+  <h1>Page not found</h1>
+  <p>We couldn’t find <code>{path}</code>. Try one of these:</p>
+
+  {direct.length > 0 && (
+    <>
+      <h2>Direct suggestions</h2>
+      <ul>
+        {uniq(direct).map(href => (
+          <li><a href={href}>{href}</a></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  {likely.length > 0 && (
+    <>
+      <h2>Likely matches</h2>
+      <ul>
+        {likely.map(href => (
+          <li><a href={href}>{href}</a></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <h2>Recent Posts</h2>
+  <ul>
+    {recentPosts.map(p => (
+      <li><a href={`/posts/${p.slug}/`}>{p.data.title}</a></li>
+    ))}
+  </ul>
+
+  <h2>Top Guides</h2>
+  <ul>
+    {recentGuides.map(g => (
+      <li><a href={`/guides/${g.slug}/`}>{g.data.title}</a></li>
+    ))}
+  </ul>
+
+  <p><a href="/">← Back to Home</a></p>
+</Layout>
+

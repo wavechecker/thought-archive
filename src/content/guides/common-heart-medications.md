@@ -5,7 +5,9 @@ category: "Heart & Circulation"
 publishDate: "2025-08-15"
 draft: false
 tags: ["Heart & Circulation", "patientguide"]
+slug: "common-heart-medications"
 ---
+
 
 # Common Heart Medications and Their Side Effects
 
@@ -82,8 +84,8 @@ Prevent clots from forming or growing larger.
 
 ## Related Guides
 
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation-after-a-heart-event/)  
-- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)  
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)
+- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)
 - [Understanding Blood Oxygen Levels and Pulse Oximeters](/guides/understanding-blood-oxygen-levels-and-pulse-oximeters/)
 
 ---
