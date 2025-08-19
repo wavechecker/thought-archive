@@ -1,12 +1,13 @@
 ---
 title: "Common Heart Medications and Their Side Effects"
-description: "Overview of common heart medicines, their uses, and potential side effects."
-category: "Heart & Circulation"
-publishDate: "2025-08-15"
-draft: false
-tags: ["Heart & Circulation", "patientguide"]
 slug: "common-heart-medications"
+description: "Overview of key heart medications — beta blockers, ACE inhibitors, statins — and their common side effects."
+category: "Heart & Circulation"
+publishDate: "2025-08-20"
+draft: false
+tags: ["cardiology", "medications", "heart", "patientguide"]
 ---
+
 
 
 # Common Heart Medications and Their Side Effects
@@ -83,10 +84,9 @@ Prevent clots from forming or growing larger.
 ---
 
 ## Related Guides
-
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)
-- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)
-- [Understanding Blood Oxygen Levels and Pulse Oximeters](/guides/understanding-blood-oxygen-levels-and-pulse-oximeters/)
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/)  
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)  
+- [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation/)  
 
 ---
 

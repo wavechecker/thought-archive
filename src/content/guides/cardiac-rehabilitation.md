@@ -1,11 +1,11 @@
 ---
 title: "Cardiac Rehabilitation After a Heart Event"
-description: "Phases of rehab, proven benefits, and how to make the most of your program."
-category: "Heart & Circulation"
-publishDate: "2025-08-15"
-draft: false
-tags: ["Heart & Circulation", "patientguide"]
 slug: "cardiac-rehabilitation"
+description: "Why rehab matters after heart attack, surgery, or stents — exercise, recovery, and long-term heart health."
+category: "Heart & Circulation"
+publishDate: "2025-08-20"
+draft: false
+tags: ["cardiology", "rehabilitation", "heart", "patientguide"]
 ---
 
 # Cardiac Rehabilitation After a Heart Event
@@ -64,10 +64,9 @@ Cardiac rehabilitation (rehab) is a structured program of **exercise, education,
 ---
 
 ## Related Guides
-
-- [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/)  
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/)  
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications/)  
-- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)  
+- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease/)  
 
 ---
 

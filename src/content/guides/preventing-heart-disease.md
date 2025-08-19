@@ -1,10 +1,11 @@
 ---
 title: "Preventing Heart Disease: Lifestyle and Medical Screening"
-description: "High‑impact lifestyle changes and the essential checks that cut your long‑term risk."
+slug: "preventing-heart-disease"
+description: "Practical steps to reduce risk — diet, exercise, quitting smoking, and routine health checks."
 category: "Heart & Circulation"
-publishDate: "2025-08-15"
+publishDate: "2025-08-20"
 draft: false
-tags: ["Heart & Circulation", "patientguide"]
+tags: ["cardiology", "prevention", "screening", "patientguide"]
 ---
 
 Heart disease is the leading cause of death worldwide — but much of it is preventable.
@@ -20,11 +21,7 @@ Heart disease is the leading cause of death worldwide — but much of it is prev
 - Cholesterol levels
 - Blood glucose for diabetes
 
-**Related Guides**
-- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)
-- [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/)
-- [Understanding HbA1c and Why It Matters for Diabetes Management](/guides/understanding-hba1c-and-why-it-matters-for-diabetes-management/)
-
-- [What is Angina? Symptoms & Management](#)
-- [Early Warning Signs of a Heart Attack](#)
-- [Understanding HbA1c and Why It Matters for Diabetes Management](#)
+## Related Guides
+- [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation/)  
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications/)  
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)  
