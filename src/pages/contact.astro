@@ -10,3 +10,11 @@ const Content = rendered ? rendered.Content : null;
 ---
 
 {Content ? <Content /> : <p>Contact page not found.</p>}
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base title="Contact Us">
+  <h1>Contact</h1>
+  <p>You can reach us at: hello@patientguide.io</p>
+</Base>

@@ -1,18 +1,31 @@
 import { defineCollection, z } from "astro:content";
 
-const DateLike = z.union([z.string(), z.date()]);
+// ✅ Existing guides collection
+const guidesCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishDate: z.string().transform((str) => new Date(str)),
+    updatedDate: z.string().transform((str) => new Date(str)).optional(),
+    draft: z.boolean().default(false),
+    tags: z.array(z.string()).optional(),
+  }),
+});
 
-const common = {
-  title: z.string(),
-  description: z.string().max(200).optional(),
-  publishDate: DateLike,
-  updatedDate: DateLike.optional(),
-  tags: z.array(z.string()).default([]),
+// ✅ New pages collection (lightweight schema)
+const pagesCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    publishDate: z.string().transform((str) => new Date(str)),
+    draft: z.boolean().default(false),
+  }),
+});
+
+// ✅ Export both
+export const collections = {
+  guides: guidesCollection,
+  pages: pagesCollection,
 };
-
-const guides = defineCollection({ type: "content", schema: z.object(common) });
-const posts  = defineCollection({ type: "content", schema: z.object(common) });
-
-export const collections = { guides, posts };
 
 
