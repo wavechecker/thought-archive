@@ -34,3 +34,7 @@ to = "/guides/heart-circulation/"
 status = 301
 force = true
 
+[[redirects]]
+from = "/guides/:slug.en/"
+to = "/guides/:slug/"
+status = 301
