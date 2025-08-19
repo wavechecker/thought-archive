@@ -2,3 +2,30 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  
+# Legacy Heart & Circulation slugs → new short slugs
+
+[[redirects]]
+from = "/guides/understanding-coronary-angiography/"
+to = "/guides/understanding-coronary-angiography/"
+status = 301
+
+[[redirects]]
+from = "/guides/cardiac-rehabilitation-after-a-heart-event/"
+to = "/guides/cardiac-rehabilitation/"
+status = 301
+
+[[redirects]]
+from = "/guides/common-heart-medications-and-their-side-effects/"
+to = "/guides/common-heart-medications/"
+status = 301
+
+[[redirects]]
+from = "/guides/atrial-fibrillation-symptoms-risks-and-treatment/"
+to = "/guides/atrial-fibrillation/"
+status = 301
+
+[[redirects]]
+from = "/guides/preventing-heart-disease-lifestyle-and-medical-screening/"
+to = "/guides/preventing-heart-disease/"
+status = 301
