@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Bowel Cancer Screening — Colonoscopy, FIT Test, and Early Detection"
 slug: "bowel-cancer-screening"
 description: "How screening tests detect bowel cancer early, who should be screened, and what to expect."

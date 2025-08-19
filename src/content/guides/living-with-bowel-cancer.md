@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Living With Bowel Cancer — Nutrition, Exercise, and Mental Health"
 slug: "living-with-bowel-cancer"
 description: "Practical advice for life during and after bowel cancer treatment — diet, activity, and emotional wellbeing."

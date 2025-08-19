@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Type 2 Diabetes"
 publishDate: 2025-08-14
 updatedDate: 2025-08-14

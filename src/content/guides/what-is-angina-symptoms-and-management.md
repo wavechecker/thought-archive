@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "What is Angina? Symptoms & Management"
 description: "Types of angina, warning signs, and how it’s treated."
 category: "Heart & Circulation"

@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Family Risk and Genetics — What to Know"
 slug: "bowel-cancer-genetics"
 description: "When bowel cancer runs in families, how genetic testing works, and what it means for screening."

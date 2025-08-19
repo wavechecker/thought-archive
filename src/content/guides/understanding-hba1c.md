@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Understanding HbA1c and Why It Matters"
 slug: "understanding-hba1c"
 description: "What HbA1c measures, how often to test, and what the results mean for long-term diabetes health."

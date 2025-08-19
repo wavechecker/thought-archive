@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Preventing Heart Disease: Lifestyle and Medical Screening"
 slug: "preventing-heart-disease"
 description: "Practical steps to reduce risk — diet, exercise, quitting smoking, and routine health checks."

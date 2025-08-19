@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Skin Cancer Warning Signs and Prevention"
 publishDate: 2025-08-14
 updatedDate: 2025-08-14

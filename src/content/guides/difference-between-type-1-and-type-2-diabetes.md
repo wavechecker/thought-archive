@@ -1,12 +1,17 @@
 ---
-title: Difference Between Type 1 and Type 2 Diabetes
-lang: en
-slug: difference-between-type-1-and-type-2-diabetes
-publishDate: 2025-08-14T13:08:24.000Z
-updatedDate: 2025-08-14T13:08:24.000Z
-draft: false
-tags: [diabetes, type-1, type-2]
+draft: true
 ---
+
+---
+title: "Difference Between Type 1 and Type 2 Diabetes"
+slug: "difference-between-type-1-and-type-2-diabetes"
+description: "How Type 1 and Type 2 differ in cause, symptoms, treatment, and day-to-day management."
+publishDate: "2025-08-20"
+updatedDate: "2025-08-20"
+draft: false
+tags: ["diabetes", "patientguide"]
+---
+
 
 While both Type 1 and Type 2 diabetes involve high blood sugar levels, the causes, onset, and management differ.
 

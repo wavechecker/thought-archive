@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Flu vs. Common Cold — How to Tell the Difference"
 description: "Key differences in symptoms, severity, timing, and recovery — plus when to test or see a doctor."
 category: "Infectious Diseases"

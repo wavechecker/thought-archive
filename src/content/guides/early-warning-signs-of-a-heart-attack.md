@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: Early Warning Signs of a Heart Attack
 lang: en
 slug: early-warning-signs-of-a-heart-attack

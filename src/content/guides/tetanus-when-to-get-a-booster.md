@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Tetanus — When to Get a Booster"
 description: "Who needs a tetanus booster and when, including routine schedules and what to do after a dirty or high‑risk wound."
 category: "Travel Health"

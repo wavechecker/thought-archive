@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: 'Type 1 Diabetes: DKA Quick Reference (Recognise & Act)'
 date: 2025-08-13T00:00:00.000Z
 description: >-

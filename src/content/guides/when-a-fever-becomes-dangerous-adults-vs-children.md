@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "When a Fever Becomes Dangerous: Adults vs Children"
 publishDate: 2025-08-14
 updatedDate: 2025-08-14

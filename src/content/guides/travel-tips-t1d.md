@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Travel Tips for People with Type 1 Diabetes"
 description: "Practical prep, packing lists, and in‑transit tactics to travel confidently with Type 1 diabetes."
 category: "Type 1 Diabetes"

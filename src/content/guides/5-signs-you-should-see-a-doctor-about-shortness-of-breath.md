@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "5 Signs You Should See a Doctor About Shortness of Breath"
 slug: "shortness-of-breath-see-a-doctor"
 description: "Red flags for breathlessness that warrant medical review, and when to seek urgent care."

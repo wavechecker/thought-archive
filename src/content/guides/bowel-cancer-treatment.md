@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Treatment Pathways — Surgery, Chemo, Radiotherapy"
 slug: "bowel-cancer-treatment"
 description: "Main treatments for bowel cancer, when they’re used, and what patients can expect."

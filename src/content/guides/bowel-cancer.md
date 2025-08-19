@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Bowel Cancer — Guide Hub"
 slug: "bowel-cancer"
 description: "Guides on risks, screening, treatment, living well, and family risk for bowel cancer."

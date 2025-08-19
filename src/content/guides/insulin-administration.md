@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Insulin Administration — Pens, Syringes, and Pumps"
 slug: "insulin-administration"
 description: "How to choose and use pens, syringes, and pumps — plus insulin types, site rotation, storage, and safety."

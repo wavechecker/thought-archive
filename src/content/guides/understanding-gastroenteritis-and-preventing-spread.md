@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Understanding Gastroenteritis and Preventing Spread"
 publishDate: 2025-08-14
 updatedDate: 2025-08-14

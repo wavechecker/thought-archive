@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Cardiac Rehabilitation After a Heart Event"
 slug: "cardiac-rehabilitation"
 description: "Why rehab matters after heart attack, surgery, or stents — exercise, recovery, and long-term heart health."

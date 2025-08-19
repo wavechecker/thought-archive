@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: Recognizing a Stroke FAST — A Practical Guide
 date: 2025-08-13T00:00:00.000Z
 description: >-

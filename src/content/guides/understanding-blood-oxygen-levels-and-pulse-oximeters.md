@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Understanding Blood Oxygen Levels and Pulse Oximeters"
 description: "What SpO₂ numbers mean, how to measure accurately at home, and when to seek care."
 category: "Heart & Circulation"

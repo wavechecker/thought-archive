@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Understanding Stroke Symptoms and FAST Response"
 publishDate: 2025-08-14
 updatedDate: 2025-08-14

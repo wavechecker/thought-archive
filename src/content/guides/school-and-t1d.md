@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "School and Type 1 Diabetes: A Parent’s Guide"
 description: "How to brief teachers, set plans, and keep kids safe and confident at school."
 category: "Type 1 Diabetes"

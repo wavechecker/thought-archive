@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: Newly Diagnosed with Type 1 Diabetes – First Steps and Finding Your Balance
 date: 2025-08-13T00:00:00.000Z
 slug: newly-diagnosed-type1-diabetes

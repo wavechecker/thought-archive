@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Atrial Fibrillation: Symptoms, Risks, and Treatment"
 slug: "atrial-fibrillation"
 description: "An irregular heartbeat that increases risk of stroke and heart failure — how it’s diagnosed and treated."

@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Understanding Bowel Cancer — Risks and Symptoms"
 slug: "understanding-bowel-cancer"
 description: "What bowel cancer is, common risk factors, and red-flag symptoms to know."

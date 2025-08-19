@@ -1,4 +1,8 @@
 ---
+draft: true
+---
+
+---
 title: "Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing"
 slug: "cgm-vs-finger-prick"
 description: "Pros and cons of CGMs and meter testing, when to use each, and how to combine them for safer, clearer control."
