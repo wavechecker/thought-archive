@@ -1,12 +1,13 @@
 ---
-title: Asthma Action Plans for Adults and Children
-lang: en
-slug: asthma-action-plans-for-adults-and-children
-publishDate: 2025-08-14T13:08:24.000Z
-updatedDate: 2025-08-14T13:08:24.000Z
+title: "Asthma Action Plans for Adults and Children"
+slug: "asthma-action-plans-for-adults-and-children"
+description: "How to use an asthma action plan: green/yellow/red zones, when to step up treatment, and when to seek urgent care."
+publishDate: "2025-08-20"
+updatedDate: "2025-08-20"
 draft: false
-tags: [asthma, respiratory, self-management]
+tags: ["asthma", "respiratory", "patientguide"]
 ---
+
 
 An **Asthma Action Plan** is a personalised written guide that helps you recognise worsening asthma and take the right steps to keep it under control.  
 It’s a tool for both **day-to-day management** and **emergency response**.
