@@ -1,11 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-import Markdown from "@/components/Markdown.astro"; // if you don’t have this, I’ll give you a fallback
-const page = (await getCollection("pages")).find((p) => p.slug === "contact");
+
+// Find the entry with slug "contact" in the "pages" collection
+const entry = (await getCollection("pages")).find((e) => e.slug === "contact");
+
+// Render function for markdown entries
+const rendered = entry ? await entry.render() : null;
+const Content = rendered ? rendered.Content : null;
 ---
 
-{page ? (
-  <Markdown content={page.body} frontmatter={page.data} />
-) : (
-  <p>Contact page not found.</p>
-)}
+{Content ? <Content /> : <p>Contact page not found.</p>}
