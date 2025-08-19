@@ -1,47 +1,51 @@
 import { defineCollection, z } from "astro:content";
 
-// ✅ Existing guides collection
-const guidesCollection = defineCollection({
+/**
+ * Guides collection (strict; accepts string or Date for dates)
+ */
+const guides = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    publishDate: z.string().transform((str) => new Date(str)),
-    updatedDate: z.string().transform((str) => new Date(str)).optional(),
+    publishDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)),
+    updatedDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)).optional(),
     draft: z.boolean().default(false),
     tags: z.array(z.string()).optional(),
+    slug: z.string().optional(), // keep optional in case you derive from filename
   }),
 });
 
-// ✅ New pages collection (lightweight schema)
-const pagesCollection = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    publishDate: z.string().transform((str) => new Date(str)),
-    draft: z.boolean().default(false),
-  }),
-});
-
-// ✅ Export both
-export const collections = {
-  guides: guidesCollection,
-  pages: pagesCollection,
-};
-const postsCollection = defineCollection({
+/**
+ * Pages collection (simple static pages like Contact/About)
+ */
+const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
     publishDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)),
     draft: z.boolean().default(false),
+  }),
+});
+
+/**
+ * Posts collection (optional; only if you actually have src/content/posts/)
+ * If you don't use posts yet, you can remove this block AND the 'posts:' line below.
+ */
+const posts = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    publishDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)),
+    updatedDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)).optional(),
+    draft: z.boolean().default(false),
     tags: z.array(z.string()).optional(),
   }),
 });
 
-// and export it:
 export const collections = {
-  guides: guidesCollection,
-  pages: pagesCollection,
-  posts: postsCollection,
+  guides,
+  pages,
+  posts, // <- delete this line if you removed the 'posts' block above
 };
 
 
