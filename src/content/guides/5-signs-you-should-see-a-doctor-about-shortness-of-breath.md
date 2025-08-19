@@ -1,12 +1,13 @@
 ---
-title: 5 Signs You Should See a Doctor About Shortness of Breath
-lang: en
-slug: 5-signs-you-should-see-a-doctor-about-shortness-of-breath
-publishDate: 2025-08-14T13:08:24.000Z
-updatedDate: 2025-08-14T13:08:24.000Z
+title: "5 Signs You Should See a Doctor About Shortness of Breath"
+slug: "shortness-of-breath-see-a-doctor"
+description: "Red flags for breathlessness that warrant medical review, and when to seek urgent care."
+publishDate: "2025-08-20"
+updatedDate: "2025-08-20"
 draft: false
-tags: [breathing, respiratory, urgent-care]
+tags: ["respiratory", "shortness of breath", "patientguide"]
 ---
+
 
 Shortness of breath (dyspnoea) can happen after intense exercise or during times of stress — but when it occurs unexpectedly, worsens, or doesn’t resolve with rest, it may signal a serious health problem.  
 Here are **five warning signs** you shouldn’t ignore:
