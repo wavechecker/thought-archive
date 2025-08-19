@@ -1,29 +1,91 @@
 ---
 title: "Common Heart Medications and Their Side Effects"
-description: "Plain‑language guide to common cardiac drugs, what they do, and side effects to watch."
+description: "Overview of common heart medicines, their uses, and potential side effects."
 category: "Heart & Circulation"
 publishDate: "2025-08-15"
 draft: false
 tags: ["Heart & Circulation", "patientguide"]
 ---
 
-Many heart conditions require long-term medication. Knowing what your medicines do — and their possible side effects — helps you use them safely.
+# Common Heart Medications and Their Side Effects
 
-**Types of Heart Medications:**
-- **Antiplatelets** – Reduce clot risk
-- **Beta Blockers** – Lower heart rate and blood pressure
-- **ACE Inhibitors** – Relax blood vessels
-- **Statins** – Lower cholesterol
+Many heart conditions require long-term medication. Understanding what your medicines do — and their possible side effects — helps you use them safely and get the best results.
 
-**Common Side Effects:**
-- Fatigue, dizziness, cough, muscle aches
-- Always report severe symptoms to your doctor
+---
 
-**Related Guides**
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation-after-a-heart-event/)
-- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)
+## Main Types of Heart Medications
+
+### Antiplatelets
+Reduce the risk of blood clots forming in arteries.  
+**Examples:** Aspirin, Clopidogrel (*Plavix*), Ticagrelor (*Brilinta*), Prasugrel (*Effient*)  
+**Notes:** Often prescribed after a heart attack, stents, or bypass surgery.
+
+---
+
+### Beta Blockers
+Slow heart rate, lower blood pressure, reduce strain on the heart.  
+**Examples:** Metoprolol (*Lopressor, Toprol-XL*), Atenolol (*Tenormin*), Bisoprolol (*Zebeta*), Carvedilol (*Coreg*), Propranolol (*Inderal*)  
+**Notes:** Used for angina, arrhythmias, heart failure, and after a heart attack.
+
+---
+
+### ACE Inhibitors
+Help blood vessels relax, reduce workload on the heart.  
+**Examples:** Enalapril (*Vasotec*), Lisinopril (*Zestril, Prinivil*), Ramipril (*Altace*), Perindopril (*Coversyl*), Captopril (*Capoten*)  
+**Notes:** Can cause a persistent dry cough.
+
+---
+
+### ARBs (Angiotensin II Receptor Blockers)
+Similar to ACE inhibitors, but less likely to cause cough.  
+**Examples:** Losartan (*Cozaar*), Valsartan (*Diovan*), Candesartan (*Atacand*), Olmesartan (*Benicar*), Irbesartan (*Avapro*)
+
+---
+
+### Statins
+Lower cholesterol and reduce inflammation in artery walls.  
+**Examples:** Atorvastatin (*Lipitor*), Rosuvastatin (*Crestor*), Simvastatin (*Zocor*), Pravastatin (*Pravachol*), Lovastatin (*Mevacor*)  
+**Notes:** May cause muscle aches in some patients.
+
+---
+
+### Calcium Channel Blockers
+Relax blood vessels, reduce heart workload, help with angina and blood pressure.  
+**Examples:** Amlodipine (*Norvasc*), Diltiazem (*Cardizem*), Verapamil (*Calan, Verelan*), Nifedipine (*Adalat, Procardia*)
+
+---
+
+### Diuretics ("Water Pills")
+Help remove excess fluid, reduce blood pressure and swelling.  
+**Examples:** Furosemide (*Lasix*), Hydrochlorothiazide (*HCTZ*), Spironolactone (*Aldactone*), Indapamide, Chlorthalidone
+
+---
+
+### Anticoagulants ("Blood Thinners")
+Prevent clots from forming or growing larger.  
+**Examples:** Warfarin (*Coumadin*), Apixaban (*Eliquis*), Rivaroxaban (*Xarelto*), Dabigatran (*Pradaxa*), Edoxaban (*Savaysa*)  
+**Notes:** Require careful monitoring; some increase risk of bleeding.
+
+---
+
+## Common Side Effects
+
+- Fatigue, dizziness, or cold hands/feet (beta blockers)  
+- Persistent dry cough (ACE inhibitors)  
+- Muscle aches or cramps (statins, diuretics)  
+- Increased urination, low potassium (diuretics)  
+- Easy bruising or bleeding (antiplatelets, anticoagulants)  
+
+⚠️ Always report severe or unexpected symptoms to your doctor. Do not stop medicines suddenly without medical advice.
+
+---
+
+## Related Guides
+
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation-after-a-heart-event/)  
+- [What is Angina? Symptoms & Management](/guides/what-is-angina-symptoms-and-management/)  
 - [Understanding Blood Oxygen Levels and Pulse Oximeters](/guides/understanding-blood-oxygen-levels-and-pulse-oximeters/)
 
-- [Cardiac Rehabilitation After a Heart Event](#)
-- [What is Angina? Symptoms & Management](#)
-- [Blood Glucose Testing — How and When to Check](#)
+---
+
+*Educational only; not a substitute for professional medical advice.*
