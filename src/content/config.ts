@@ -1,17 +1,17 @@
 import { defineCollection, z } from "astro:content";
 
-/**
- * Guides collection (strict; accepts string or Date for dates)
- */
 const guides = defineCollection({
   schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    publishDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)),
-    updatedDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)).optional(),
+    // Make everything optional for now so legacy files without frontmatter pass
+    title: z.string().optional(),
+    description: z.string().optional(),
+    publishDate: z.union([z.string(), z.date()]).optional()
+      .transform((v) => (v ? new Date(v) : undefined)),
+    updatedDate: z.union([z.string(), z.date()]).optional()
+      .transform((v) => (v ? new Date(v) : undefined)),
     draft: z.boolean().default(false),
     tags: z.array(z.string()).optional(),
-    slug: z.string().optional(), // keep optional in case you derive from filename
+    slug: z.string().optional(),
   }),
 });
 
