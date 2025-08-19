@@ -27,5 +27,21 @@ export const collections = {
   guides: guidesCollection,
   pages: pagesCollection,
 };
+const postsCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    publishDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)),
+    draft: z.boolean().default(false),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
+// and export it:
+export const collections = {
+  guides: guidesCollection,
+  pages: pagesCollection,
+  posts: postsCollection,
+};
 
 
