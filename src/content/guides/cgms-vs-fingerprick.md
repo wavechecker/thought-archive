@@ -73,5 +73,6 @@ Think of CGM as the **weather radar** (direction + speed), and the meter as **lo
 - [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions/)
 - [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c/)
 
+
 ## References (plain text)
 - ISO 15197 meter accuracy standards; CGM manufacturer guidance (Dexcom, Libre, Guardian); ADA/ISPAD consensus on CGM use, TIR, and sick‑day rules.

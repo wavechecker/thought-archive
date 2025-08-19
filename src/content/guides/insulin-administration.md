@@ -74,11 +74,12 @@ Insulin delivery is about two things: **the insulin you use** and **how you deli
 - **Double‑check units:** U‑200/U‑300 pens dose in **units**; don’t transfer insulin from pens into syringes.  
 - **When to call for help:** persistent highs with ketones, vomiting, drowsiness/rapid breathing; severe hypo (can’t swallow) → **glucagon + emergency services**.
 
-## 5 Related guides
+## Related Guides
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)
-- [Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing](/posts/cgm-vs-finger-prick/) <!-- adjust path if this lives in /posts/ -->
+- [Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing](/guides/cgm-vs-finger-prick/)
 - [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions/)
 - [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c/)
+
 
 ## References (plain text)
 - Product information (local formularies), NDSS sick‑day/hypo resources, Diabetes Australia technique guides, ISPAD/ADA dosing principles.

@@ -49,7 +49,9 @@ In urgent situations, clear steps save time and reduce risk. Keep this guide wit
 - Spare pen needles/syringes; pump set  
 - Copy of your **diabetes plan** and emergency contacts
 
-## References (plain text, no live links)
-- NDSS — Sick day management, hypoglycaemia, and ketone testing.  
-- Diabetes Australia — Emergency actions for highs/lows/ketones.  
-- Healthdirect Australia — DKA symptoms and red flags.
+## Related Guides
+- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)
+- [Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing](/guides/cgm-vs-finger-prick/)
+- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration/)
+- [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c/)
+

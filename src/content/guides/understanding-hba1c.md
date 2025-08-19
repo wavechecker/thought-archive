@@ -18,8 +18,10 @@ HbA1c gives a 2–3 month average of blood glucose control. It’s a key marker 
 - Lowering HbA1c safely reduces risks, but avoid frequent hypos.  
 
 ## Related Guides
-- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)  
-- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration/)  
-- [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions/)  
+- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)
+- [Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing](/guides/cgm-vs-finger-prick/)
+- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration/)
+- [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions/)
+
 
 ---
