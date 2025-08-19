@@ -1,27 +1,11 @@
-[[redirects]]
-from = "/guides/type-1-diabetes-hub/"
-to = "/guides/"
-status = 301
-force = true
+# Netlify build settings
+[build]
+  command = "npm run build"
+  publish = "dist"
 
-[[redirects]]
-from = "/guides/heart-circulation-hub/"
-to = "/guides/"
-status = 301
-force = true
+# Redirects
 
-[[redirects]]
-from = "/guides/type-1-diabetes/"
-to = "/guides/"
-status = 301
-force = true
-
-[[redirects]]
-from = "/guides/heart-circulation/"
-to = "/guides/"
-status = 301
-force = true
-
+# Hubs → their section landing
 [[redirects]]
 from = "/guides/type-1-diabetes-hub/"
 to = "/guides/type-1-diabetes/"
@@ -34,7 +18,9 @@ to = "/guides/heart-circulation/"
 status = 301
 force = true
 
+# Optional: catch old `.en` URLs and forward to clean slugs
 [[redirects]]
 from = "/guides/:slug.en/"
 to = "/guides/:slug/"
 status = 301
+force = true
