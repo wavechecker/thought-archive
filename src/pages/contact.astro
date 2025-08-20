@@ -1,20 +1,14 @@
 ---
-import { getCollection } from "astro:content";
+// src/pages/contact.astro
+import Layout from "../layouts/Layout.astro";
 
-// Find the entry with slug "contact" in the "pages" collection
-const entry = (await getCollection("pages")).find((e) => e.slug === "contact");
-
-// Render function for markdown entries
-const rendered = entry ? await entry.render() : null;
-const Content = rendered ? rendered.Content : null;
+const frontmatter = {
+  title: "Contact",
+  description: "Get in touch."
+};
 ---
-
-{Content ? <Content /> : <p>Contact page not found.</p>}
----
-import Base from "@/layouts/Base.astro";
----
-
-<Base title="Contact Us">
+<Layout {frontmatter}>
   <h1>Contact</h1>
-  <p>You can reach us at: hello@patientguide.io</p>
-</Base>
+  <p>Tell me what you need. I’ll reply if it’s worth it.</p>
+  <!-- your form / details here -->
+</Layout>
