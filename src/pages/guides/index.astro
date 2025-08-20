@@ -1,27 +1,56 @@
 ---
-import { getCollection } from "astro:content";
-const fmt = (v)=> new Intl.DateTimeFormat("en-GB",{day:"2-digit",month:"short",year:"numeric"}).format(new Date(v));
+import Layout from "../../layouts/Layout.astro";
 
-const guides = (await getCollection("guides"))
-  .sort((a,b)=> +new Date(a.data.publishDate) < +new Date(b.data.publishDate) ? 1 : -1);
+const frontmatter = {
+  title: "Guides — Hub Index",
+  description: "All guide hubs in one place: Type 1 Diabetes, Heart & Circulation, and Bowel Cancer.",
+  publishDate: "2025-08-20",
+  draft: false,
+  tags: ["guides", "hub", "patientguide"],
+};
 ---
-<html lang="en">
-  <head><meta charset="utf-8" /><title>Guides</title></head>
-  <body>
-    <main style="max-width:960px;margin:0 auto;padding:1.5rem;font-family:system-ui,sans-serif;">
-      <h1>Guides</h1>
-      <ul>
-        {guides.map((g)=>(
-          <li>
-            <a href={`/guides/${g.slug}/`}>{g.data.title}</a>
-            {g.data.publishDate && <> — <time>{fmt(g.data.publishDate)}</time></>}
-            <div>{g.data.description}</div>
-          </li>
-        ))}
-      </ul>
-    </main>
-  </body>
-</html>
+
+<Layout {frontmatter}>
+  <h1>Guides</h1>
+  <p>Your starting point. Three hubs, zero fluff.</p>
+
+  <section aria-label="Guide hubs" style="margin-top:1.5rem;">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem;">
+      <article style="border:1px solid #e5e7eb; border-radius:.75rem; padding:1rem;">
+        <h2 style="margin:0 0 .25rem 0; font-size:1.1rem;">
+          <a href="/guides/type-1-diabetes/">Type 1 Diabetes — Guide Hub</a>
+        </h2>
+        <p style="margin:0; color:#444;">
+          Day‑to‑day living: testing, CGMs, insulin, HbA1c, emergency actions.
+        </p>
+      </article>
+
+      <article style="border:1px solid #e5e7eb; border-radius:.75rem; padding:1rem;">
+        <h2 style="margin:0 0 .25rem 0; font-size:1.1rem;">
+          <a href="/guides/heart-circulation/">Heart &amp; Circulation — Guide Hub</a>
+        </h2>
+        <p style="margin:0; color:#444;">
+          Rehab, common meds, atrial fibrillation, practical prevention.
+        </p>
+      </article>
+
+      <article style="border:1px solid #e5e7eb; border-radius:.75rem; padding:1rem;">
+        <h2 style="margin:0 0 .25rem 0; font-size:1.1rem;">
+          <a href="/guides/bowel-cancer/">Bowel Cancer — Guide Hub</a>
+        </h2>
+        <p style="margin:0; color:#444;">
+          Risks &amp; symptoms, screening, treatment pathways, living well, genetics.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Belt-and-braces: nuke any stray list markers a legacy stylesheet might inject -->
+  <style>
+    ul, ol { list-style: none; padding-left: 0; }
+    li::marker { content: ""; }
+  </style>
+</Layout>
 
 
 
