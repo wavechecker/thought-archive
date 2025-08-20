@@ -14,6 +14,14 @@ const { frontmatter } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
+    <!-- Feed autodiscovery -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="patientguide.io — Updates"
+      href="/rss.xml"
+    />
+
     <!-- Page Title & Description -->
     <title>{frontmatter?.title ?? "Thought Archive"}</title>
     <meta name="description" content={frontmatter?.description ?? ""} />
@@ -36,7 +44,7 @@ const { frontmatter } = Astro.props;
         "@type": "BlogPosting",
         headline:       frontmatter?.title,
         description:    frontmatter?.description,
-        datePublished:  frontmatter?.publishDate, // uses your new schema
+        datePublished:  frontmatter?.publishDate,
         url:            (Astro.site && (Astro.site + Astro.url.pathname)) ?? "",
       })}
     </script>
