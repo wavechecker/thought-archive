@@ -1,13 +1,12 @@
 ---
-/* If "@/..." alias isn't configured, change the import to: "../../layouts/Layout.astro" */
-import Layout from "@/layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 
 const frontmatter = {
   title: "Patient Guides — All Categories",
   description: "Browse all guide hubs. Start with a category to drill down into specific topics.",
   publishDate: "2025-08-20",
   draft: false,
-  tags: ["guides", "hub", "patientguide"],
+  tags: ["guides", "hub", "patientguide"]
 };
 
 const categories = [
@@ -22,9 +21,10 @@ const categories = [
     description: "A focused landing page for bowel-cancer guides and resources."
   },
   {
-    { title: "Heart Health", href:
-    href: "/guides/heart-circulation", ... }
-    description: "Coronary disease, cardiac rehab, medications, and lifestyle.",  },
+    title: "Heart Health",
+    href: "/guides/heart-circulation",
+    description: "Coronary disease, cardiac rehab, medications, and lifestyle."
+  },
   {
     title: "Diabetes",
     href: "/guides/diabetes",
@@ -63,7 +63,6 @@ const categories = [
     ))}
   </div>
 </Layout>
-
 
 
 
