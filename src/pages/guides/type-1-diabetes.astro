@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Type 1 Diabetes — Guide Hub",
+  slug: "type-1-diabetes",
+  description: "Core guides for living with Type 1 Diabetes: testing, CGMs, insulin, HbA1c, and emergency actions.",
+  publishDate: "2025-08-19",
+  draft: false,
+  tags: ["Type 1 Diabetes", "patientguide", "hub"],
+};
+---
+
+<Layout {frontmatter}>
+  <h1>Type 1 Diabetes — Guide Hub</h1>
+  <p>A single place to find our core day-to-day guides.</p>
+
+  <section style="margin-top:2rem;">
+    <h2>Core Guides</h2>
+    <ul style="list-style:none; padding:0; line-height:1.8;">
+      <li><a href="/guides/blood-glucose-testing/">Blood Glucose Testing — How and When to Check</a></li>
+      <li><a href="/guides/cgm-vs-finger-prick/">Continuous Glucose Monitors (CGMs) vs Finger-Prick Testing</a></li>
+      <li><a href="/guides/insulin-administration/">Insulin Administration — Pens, Syringes, and Pumps</a></li>
+      <li><a href="/guides/emergency-actions/">Emergency Actions — Hypos, Highs, and Ketones</a></li>
+      <li><a href="/guides/understanding-hba1c/">Understanding HbA1c and Why It Matters</a></li>
+    </ul>
+  </section>
+</Layout>
