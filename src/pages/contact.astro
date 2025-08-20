@@ -1,56 +1,66 @@
 ---
-// src/pages/contact.astro
-import Layout from "../layouts/Layout.astro";
+/* If "@/..." alias isn't configured, change the import to: "../../layouts/Layout.astro" */
+import Layout from "@/layouts/Layout.astro";
 
 const frontmatter = {
-  title: "Contact",
-  description: "Get in touch."
+  title: "Patient Guides — All Categories",
+  description: "Browse all guide hubs. Start with a category to drill down into specific topics.",
+  publishDate: "2025-08-20",
+  draft: false,
+  tags: ["guides", "hub", "patientguide"],
 };
+
+const categories = [
+  {
+    title: "Cancer",
+    href: "/guides/cancer",
+    description: "Screening, treatment, survivorship, and support — starting with bowel cancer."
+  },
+  {
+    title: "Bowel Cancer",
+    href: "/guides/bowel-cancer",
+    description: "A focused landing page for bowel-cancer guides and resources."
+  },
+  {
+    title: "Heart Health",
+    href: "/guides/heart-circulation", // <- you fixed this route
+    description: "Coronary disease, cardiac rehab, medications, and lifestyle."
+  },
+  {
+    title: "Diabetes",
+    href: "/guides/diabetes",
+    description: "Type 1 & 2 basics, monitoring, meds, complications, and nutrition."
+  },
+  {
+    title: "Respiratory",
+    href: "/guides/respiratory",
+    description: "Asthma, COPD, infections, self‑management plans."
+  },
+  {
+    title: "Medications",
+    href: "/guides/medications",
+    description: "Plain‑language guides to common patient meds and safety tips."
+  },
+  {
+    title: "Procedures",
+    href: "/guides/procedures",
+    description: "What to expect before, during, and after common procedures."
+  }
+];
 ---
+
 <Layout {frontmatter}>
-  <h1>Contact</h1>
-  <p>Short, direct messages get priority.</p>
-
-  <!-- Netlify static form -->
-  <form
-    name="contact"
-    method="POST"
-    action="/contact/thanks/"
-    data-netlify="true"
-    netlify-honeypot="bot-field"
-    style="max-width: 640px;"
-  >
-    <!-- Netlify needs these -->
-    <input type="hidden" name="form-name" value="contact" />
-    <p style="display:none;">
-      <label>Don’t fill this out: <input name="bot-field" /></label>
-    </p>
-
-    <div style="margin-bottom:1rem;">
-      <label for="name" style="display:block; font-weight:600;">Name</label>
-      <input id="name" name="name" type="text" required
-        style="width:100%; padding:.6rem; border:1px solid #ddd; border-radius:.5rem;" />
-    </div>
-
-    <div style="margin-bottom:1rem;">
-      <label for="email" style="display:block; font-weight:600;">Email</label>
-      <input id="email" name="email" type="email" required
-        style="width:100%; padding:.6rem; border:1px solid #ddd; border-radius:.5rem;" />
-    </div>
-
-    <div style="margin-bottom:1rem;">
-      <label for="message" style="display:block; font-weight:600;">Message</label>
-      <textarea id="message" name="message" rows="6" required
-        style="width:100%; padding:.6rem; border:1px solid #ddd; border-radius:.5rem;"></textarea>
-    </div>
-
-    <button type="submit"
-      style="padding:.7rem 1rem; border:1px solid #2563eb; background:#2563eb; color:white; border-radius:.5rem; cursor:pointer;">
-      Send
-    </button>
-  </form>
-
-  <p style="margin-top:1rem; color:#666; font-size:.9rem;">
-    Tip: avoid attachments. Paste links instead.
+  <h1 class="text-3xl font-bold mb-6">Patient Guides — All Categories</h1>
+  <p class="mb-8 text-lg text-gray-700">
+    Browse the full set of patient-friendly guides. Start with a category to drill down into specific topics.
   </p>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {categories.map((cat) => (
+      <a href={cat.href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
+        <h2 class="text-xl font-semibold mb-2">{cat.title}</h2>
+        <p class="text-gray-600 text-sm">{cat.description}</p>
+      </a>
+    ))}
+  </div>
 </Layout>
