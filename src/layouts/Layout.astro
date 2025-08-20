@@ -4,6 +4,7 @@
   Receives `frontmatter` from pages and injects SEO meta tags.
 */
 const { frontmatter } = Astro.props;
+const canonicalUrl = (Astro.site && (Astro.site + Astro.url.pathname)) ?? "";
 ---
 
 <!DOCTYPE html>
@@ -22,6 +23,9 @@ const { frontmatter } = Astro.props;
       href="/rss.xml"
     />
 
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
     <!-- Page Title & Description -->
     <title>{frontmatter?.title ?? "Thought Archive"}</title>
     <meta name="description" content={frontmatter?.description ?? ""} />
@@ -30,7 +34,7 @@ const { frontmatter } = Astro.props;
     <meta property="og:type"        content="article" />
     <meta property="og:title"       content={frontmatter?.title} />
     <meta property="og:description" content={frontmatter?.description} />
-    <meta property="og:url"         content={(Astro.site && (Astro.site + Astro.url.pathname)) ?? ""} />
+    <meta property="og:url"         content={canonicalUrl} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image" />
@@ -45,7 +49,7 @@ const { frontmatter } = Astro.props;
         headline:       frontmatter?.title,
         description:    frontmatter?.description,
         datePublished:  frontmatter?.publishDate,
-        url:            (Astro.site && (Astro.site + Astro.url.pathname)) ?? "",
+        url:            canonicalUrl,
       })}
     </script>
   </head>
@@ -87,3 +91,4 @@ const { frontmatter } = Astro.props;
   nav a:hover { text-decoration: underline; }
   main { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
 </style>
+yle>
