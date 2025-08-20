@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Diabetes — Guide Hub",
+  description: "Choose your path: Type 1 or Type 2. Then dive into testing, devices, meds, emergencies, and HbA1c.",
+  publishDate: "2025-08-20",
+  draft: false,
+  tags: ["diabetes", "guides", "patientguide"]
+};
+
+const hubs = [
+  {
+    title: "Type 1 Diabetes — Guide Hub",
+    href: "/guides/type-1-diabetes",
+    description: "Basics, CGMs vs finger‑prick, insulin administration, emergencies, HbA1c."
+  },
+  {
+    title: "Type 2 Diabetes — Guide Hub",
+    href: "/guides/type-2-diabetes",
+    description: "Diagnosis, diet & weight, meds (metformin, GLP‑1, SGLT2), monitoring, complications."
+  }
+];
+---
+
+<Layout {frontmatter}>
+  <h1 class="text-3xl font-bold mb-6">Diabetes — Guide Hub</h1>
+  <p class="mb-8 text-lg text-gray-700">Pick the guide that fits your situation.</p>
+
+  <div class="grid gap-6 sm:grid-cols-2">
+    {hubs.map((h) => (
+      <a href={h.href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
+        <h2 class="text-xl font-semibold mb-2">{h.title}</h2>
+        <p class="text-gray-600 text-sm">{h.description}</p>
+      </a>
+    ))}
+  </div>
+
+  <p class="mt-8 text-sm text-gray-600">
+    See all categories in the <a href="/guides" class="underline">Patient Guides index</a>.
+  </p>
+</Layout>

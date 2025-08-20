@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Type 2 Diabetes — Guide Hub",
+  description: "Diagnosis, diet & weight, medications, monitoring, and complications.",
+  publishDate: "2025-08-20",
+  draft: false,
+  tags: ["diabetes", "type 2", "guides", "patientguide"]
+};
+
+const guides = [
+  { title: "Getting Diagnosed — A1c, Fasting Glucose, OGTT", href: "/guides/t2-diagnosis", description: "How Type 2 is diagnosed and what your numbers mean." },
+  { title: "Diet & Weight — Practical Strategies", href: "/guides/t2-diet-weight", description: "Protein, fibre, glycemic load, and sustainable loss." },
+  { title: "Medications — Metformin, GLP‑1, SGLT2", href: "/guides/t2-medications", description: "First‑line meds, how they work, common side effects." },
+  { title: "Monitoring — Home Glucose & A1c", href: "/guides/t2-monitoring", description: "When to test, targets, and how to adjust plans." },
+  { title: "Complications — Eyes, Kidneys, Nerves", href: "/guides/t2-complications", description: "Screening frequency and early warning signs." }
+];
+---
+
+<Layout {frontmatter}>
+  <h1 class="text-3xl font-bold mb-6">Type 2 Diabetes — Guide Hub</h1>
+  <p class="mb-8 text-lg text-gray-700">Start with the basics, then work through medications and monitoring.</p>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {guides.map((g) => (
+      <a href={g.href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
+        <h2 class="text-xl font-semibold mb-2">{g.title}</h2>
+        <p class="text-gray-600 text-sm">{g.description}</p>
+      </a>
+    ))}
+  </div>
+
+  <p class="mt-8 text-sm text-gray-600">
+    Not Type 2? Visit the <a href="/guides/type-1-diabetes" class="underline">Type 1 hub</a> or the
+    <a href="/guides/diabetes" class="underline">Diabetes umbrella</a>.
+  </p>
+</Layout>
