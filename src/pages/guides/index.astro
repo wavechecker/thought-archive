@@ -1,55 +1,68 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+/* If "@/..." alias isn't configured, change the import to: "../../layouts/Layout.astro" */
+import Layout from "@/layouts/Layout.astro";
 
 const frontmatter = {
-  title: "Guides — Hub Index",
-  description: "All guide hubs in one place: Type 1 Diabetes, Heart & Circulation, and Bowel Cancer.",
+  title: "Patient Guides — All Categories",
+  description: "Browse all guide hubs. Start with a category to drill down into specific topics.",
   publishDate: "2025-08-20",
   draft: false,
   tags: ["guides", "hub", "patientguide"],
 };
+
+const categories = [
+  {
+    title: "Cancer",
+    href: "/guides/cancer",
+    description: "Screening, treatment, survivorship, and support — starting with bowel cancer."
+  },
+  {
+    title: "Bowel Cancer",
+    href: "/guides/bowel-cancer",
+    description: "A focused landing page for bowel-cancer guides and resources."
+  },
+  {
+    title: "Heart Health",
+    href: "/guides/heart",
+    description: "Coronary disease, cardiac rehab, medications, and lifestyle."
+  },
+  {
+    title: "Diabetes",
+    href: "/guides/diabetes",
+    description: "Type 1 & 2 basics, monitoring, meds, complications, and nutrition."
+  },
+  {
+    title: "Respiratory",
+    href: "/guides/respiratory",
+    description: "Asthma, COPD, infections, self‑management plans."
+  },
+  {
+    title: "Medications",
+    href: "/guides/medications",
+    description: "Plain‑language guides to common patient meds and safety tips."
+  },
+  {
+    title: "Procedures",
+    href: "/guides/procedures",
+    description: "What to expect before, during, and after common procedures."
+  }
+];
 ---
 
 <Layout {frontmatter}>
-  <h1>Guides</h1>
-  <p>Your starting point. Three hubs, zero fluff.</p>
+  <h1 class="text-3xl font-bold mb-6">Patient Guides — All Categories</h1>
+  <p class="mb-8 text-lg text-gray-700">
+    Browse the full set of patient-friendly guides. Start with a category to drill down into specific topics.
+  </p>
 
-  <section aria-label="Guide hubs" style="margin-top:1.5rem;">
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem;">
-      <article style="border:1px solid #e5e7eb; border-radius:.75rem; padding:1rem;">
-        <h2 style="margin:0 0 .25rem 0; font-size:1.1rem;">
-          <a href="/guides/type-1-diabetes/">Type 1 Diabetes — Guide Hub</a>
-        </h2>
-        <p style="margin:0; color:#444;">
-          Day‑to‑day living: testing, CGMs, insulin, HbA1c, emergency actions.
-        </p>
-      </article>
-
-      <article style="border:1px solid #e5e7eb; border-radius:.75rem; padding:1rem;">
-        <h2 style="margin:0 0 .25rem 0; font-size:1.1rem;">
-          <a href="/guides/heart-circulation/">Heart &amp; Circulation — Guide Hub</a>
-        </h2>
-        <p style="margin:0; color:#444;">
-          Rehab, common meds, atrial fibrillation, practical prevention.
-        </p>
-      </article>
-
-      <article style="border:1px solid #e5e7eb; border-radius:.75rem; padding:1rem;">
-        <h2 style="margin:0 0 .25rem 0; font-size:1.1rem;">
-          <a href="/guides/bowel-cancer/">Bowel Cancer — Guide Hub</a>
-        </h2>
-        <p style="margin:0; color:#444;">
-          Risks &amp; symptoms, screening, treatment pathways, living well, genetics.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Belt-and-braces: nuke any stray list markers a legacy stylesheet might inject -->
-  <style>
-    ul, ol { list-style: none; padding-left: 0; }
-    li::marker { content: ""; }
-  </style>
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {categories.map((cat) => (
+      <a href={cat.href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
+        <h2 class="text-xl font-semibold mb-2">{cat.title}</h2>
+        <p class="text-gray-600 text-sm">{cat.description}</p>
+      </a>
+    ))}
+  </div>
 </Layout>
 
 
