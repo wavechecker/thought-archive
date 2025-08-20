@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Bowel Cancer — Guide Hub",
+  slug: "bowel-cancer",
+  description: "Core guides on bowel cancer: risks, screening, treatment, living with cancer, and genetics.",
+  publishDate: "2025-08-19",
+  draft: false,
+  tags: ["Bowel Cancer", "patientguide", "hub"],
+};
+---
+
+<Layout {frontmatter}>
+  <h1>Bowel Cancer — Guide Hub</h1>
+  <p>A starting point for bowel cancer information and support.</p>
+
+  <section style="margin-top:2rem;">
+    <h2>Core Guides</h2>
+    <ul style="list-style:none; padding:0; line-height:1.8;">
+      <li><a href="/guides/understanding-bowel-cancer/">Understanding Bowel Cancer — Risks and Symptoms</a></li>
+      <li><a href="/guides/bowel-cancer-screening/">Bowel Cancer Screening — Colonoscopy, FIT Test, and Early Detection</a></li>
+      <li><a href="/guides/bowel-cancer-treatment/">Treatment Pathways — Surgery, Chemo, Radiotherapy</a></li>
+      <li><a href="/guides/living-with-bowel-cancer/">Living with Bowel Cancer — Nutrition, Exercise, and Mental Health</a></li>
+      <li><a href="/guides/bowel-cancer-genetics/">Family Risk and Genetics — What to Know</a></li>
+    </ul>
+  </section>
+</Layout>

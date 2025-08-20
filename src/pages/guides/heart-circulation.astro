@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Heart & Circulation — Guide Hub",
+  slug: "heart-circulation",
+  description: "Core guides on heart health: rehabilitation, medications, atrial fibrillation, and prevention.",
+  publishDate: "2025-08-19",
+  draft: false,
+  tags: ["Heart", "Circulation", "patientguide", "hub"],
+};
+---
+
+<Layout {frontmatter}>
+  <h1>Heart & Circulation — Guide Hub</h1>
+  <p>A central hub for our heart and circulation guides.</p>
+
+  <section style="margin-top:2rem;">
+    <h2>Core Guides</h2>
+    <ul style="list-style:none; padding:0; line-height:1.8;">
+      <li><a href="/guides/cardiac-rehabilitation/">Cardiac Rehabilitation after a Heart Event</a></li>
+      <li><a href="/guides/common-heart-medications/">Common Heart Medications and Their Side Effects</a></li>
+      <li><a href="/guides/atrial-fibrillation/">Atrial Fibrillation — Symptoms, Risks, and Treatment</a></li>
+      <li><a href="/guides/preventing-heart-disease/">Preventing Heart Disease — Lifestyle and Medical Screening</a></li>
+    </ul>
+  </section>
+</Layout>
