@@ -1,0 +1,14 @@
+---
+// src/pages/contact/thanks.astro
+import Layout from "../../layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Thanks",
+  description: "Your message was sent."
+};
+---
+<Layout {frontmatter}>
+  <h1>Message sent</h1>
+  <p>I’ll read it. If it matters, I’ll reply.</p>
+  <p><a href="/">Back to home</a></p>
+</Layout>

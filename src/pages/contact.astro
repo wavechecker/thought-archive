@@ -9,6 +9,48 @@ const frontmatter = {
 ---
 <Layout {frontmatter}>
   <h1>Contact</h1>
-  <p>Tell me what you need. I’ll reply if it’s worth it.</p>
-  <!-- your form / details here -->
+  <p>Short, direct messages get priority.</p>
+
+  <!-- Netlify static form -->
+  <form
+    name="contact"
+    method="POST"
+    action="/contact/thanks/"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    style="max-width: 640px;"
+  >
+    <!-- Netlify needs these -->
+    <input type="hidden" name="form-name" value="contact" />
+    <p style="display:none;">
+      <label>Don’t fill this out: <input name="bot-field" /></label>
+    </p>
+
+    <div style="margin-bottom:1rem;">
+      <label for="name" style="display:block; font-weight:600;">Name</label>
+      <input id="name" name="name" type="text" required
+        style="width:100%; padding:.6rem; border:1px solid #ddd; border-radius:.5rem;" />
+    </div>
+
+    <div style="margin-bottom:1rem;">
+      <label for="email" style="display:block; font-weight:600;">Email</label>
+      <input id="email" name="email" type="email" required
+        style="width:100%; padding:.6rem; border:1px solid #ddd; border-radius:.5rem;" />
+    </div>
+
+    <div style="margin-bottom:1rem;">
+      <label for="message" style="display:block; font-weight:600;">Message</label>
+      <textarea id="message" name="message" rows="6" required
+        style="width:100%; padding:.6rem; border:1px solid #ddd; border-radius:.5rem;"></textarea>
+    </div>
+
+    <button type="submit"
+      style="padding:.7rem 1rem; border:1px solid #2563eb; background:#2563eb; color:white; border-radius:.5rem; cursor:pointer;">
+      Send
+    </button>
+  </form>
+
+  <p style="margin-top:1rem; color:#666; font-size:.9rem;">
+    Tip: avoid attachments. Paste links instead.
+  </p>
 </Layout>
