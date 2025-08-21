@@ -2,52 +2,40 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-// 1) Pull every guide
+// Pull all guides
 const all = await getCollection("guides");
 
-// 2) Derive categories from frontmatter (prefer `category`, else selected tags)
-const PREFERRED_TAGS = new Set(["Type 1 Diabetes", "Type 2 Diabetes", "Diabetes", "Heart & Circulation", "Bowel Cancer"]);
+// Allowed categories that have real hub pages
+const ALLOWED = ["Type 1 Diabetes", "Type 2 Diabetes", "Heart & Circulation", "Bowel Cancer"];
 
-function deriveCategory(entry) {
-  const c = entry.data?.category;
-  if (typeof c === "string" && c.trim()) return c.trim();
-  const tags = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
-  const hit = tags.find(t => PREFERRED_TAGS.has(t));
-  return hit || "Other";
-}
-
-// 3) Group by category (exclude draft:true)
-const groups = new Map();
+// Group by category/tag, skip drafts and uncategorised ("Other")
+const groups = new Map<string, typeof all>();
 for (const e of all) {
   if (e.data?.draft === true) continue;
-  const cat = deriveCategory(e);
+  const cat =
+    (typeof e.data?.category === "string" && e.data.category.trim()) ||
+    (Array.isArray(e.data?.tags) ? e.data.tags.find(t => ALLOWED.includes(t)) : undefined);
+  if (!cat || !ALLOWED.includes(cat)) continue; // 👉 hides "Other" and "Diabetes"
   if (!groups.has(cat)) groups.set(cat, []);
-  groups.get(cat).push(e);
+  groups.get(cat)!.push(e);
 }
 
-// 4) Known hub routes (extend as you add hubs)
-const hubMap = new Map([
-  ["Diabetes", "/guides/diabetes"],
+// Map categories to hub URLs (no "Diabetes" on purpose)
+const hubMap = new Map<string, string>([
   ["Type 1 Diabetes", "/guides/type-1-diabetes"],
   ["Type 2 Diabetes", "/guides/type-2-diabetes"],
   ["Heart & Circulation", "/guides/heart-circulation"],
   ["Bowel Cancer", "/guides/bowel-cancer"],
 ]);
 
-// 5) Sort categories (Diabetes first, then A→Z)
-const orderedCats = Array.from(groups.keys()).sort((a, b) => {
-  if (a === "Diabetes") return -1;
-  if (b === "Diabetes") return 1;
-  return a.localeCompare(b);
-});
+const orderedCats = Array.from(groups.keys()).sort((a, b) => a.localeCompare(b));
 
-// Page meta
 const frontmatter = {
   title: "Guides — PatientGuide",
   description: "Browse all patient-friendly guides by category. Hubs stay in sync automatically.",
   publishDate: "2025-08-21",
   draft: false,
-  tags: ["guides", "patientguide"]
+  tags: ["guides", "patientguide"],
 };
 ---
 
@@ -60,24 +48,16 @@ const frontmatter = {
   <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {orderedCats.map((cat) => {
       const list = groups.get(cat) ?? [];
-      const hubHref = hubMap.get(cat);
+      const href = hubMap.get(cat)!; // guaranteed by ALLOWED filter
       return (
-        <a href={hubHref ?? "/guides"} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
+        <a href={href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
           <h2 class="text-xl font-semibold mb-1">{cat} — Guide Hub</h2>
-          <p class="text-gray-600 text-sm mb-3">
-            {hubHref ? "Browse focused guides in this hub." : "No dedicated hub page yet. Add one to map this category."}
-          </p>
-          <p class="text-gray-800 text-sm">
-            {list.length} guide{list.length === 1 ? "" : "s"}
-          </p>
+          <p class="text-gray-600 text-sm mb-3">Browse focused guides in this hub.</p>
+          <p class="text-gray-800 text-sm">{list.length} guide{list.length === 1 ? "" : "s"}</p>
         </a>
       );
     })}
   </div>
-
-  <p class="mt-8 text-sm text-gray-600">
-    Missing a hub link? Create a page like <code>/src/pages/guides/&lt;slug&gt;.astro</code> and add it to <code>hubMap</code> above.
-  </p>
 </Layout>
 
 
