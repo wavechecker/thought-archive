@@ -1,11 +1,13 @@
 ---
-title: "Living With Bowel Cancer — Side Effects, Diet, and Emotional Support"
-slug: living-with-bowel-cancer
-description: "What to expect during and after treatment, how to manage side effects, and where to find support."
-category: "Cancer"
-publishDate: 2025-08-20
-draft: false
-tags: ["cancer", "bowel cancer", "living with cancer", "patientguide"]
+title: "Living With Bowel Cancer"
+slug: "living-with-bowel-cancer"
+description: "Practical guidance on recovery, lifestyle adjustments, stoma care, and emotional support after a bowel cancer diagnosis."
+publishDate: 2025-08-21
+updatedDate: 2025-08-21
+tags: ["cancer", "bowel cancer", "support", "patientguide"]
+related:
+  - /guides/bowel-cancer-treatment
+  - /guides/bowel-cancer-screening
 ---
 
 # Living With Bowel Cancer — Side Effects, Diet, and Emotional Support

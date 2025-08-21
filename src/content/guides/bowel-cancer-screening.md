@@ -1,12 +1,15 @@
 ---
-title: "Bowel Cancer Screening — Colonoscopy, FIT Test, and Early Detection"
-slug: bowel-cancer-screening
-description: "How screening tests detect bowel cancer early, who should be screened, and what to expect."
-category: "Cancer"
-publishDate: 2025-08-20
-draft: false
+title: "Bowel Cancer Screening — Early Detection Matters"
+slug: "bowel-cancer-screening"
+description: "How bowel cancer screening works, who should be tested, and why early detection saves lives."
+publishDate: 2025-08-21
+updatedDate: 2025-08-21
 tags: ["cancer", "bowel cancer", "screening", "patientguide"]
+related:
+  - /guides/bowel-cancer-treatment
+  - /guides/living-with-bowel-cancer
 ---
+
 
 # Bowel Cancer Screening — Colonoscopy, FIT Test, and Early Detection
 
