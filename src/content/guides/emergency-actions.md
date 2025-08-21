@@ -1,61 +1,43 @@
 ---
-draft: true
----
-
----
 title: "Emergency Actions — Hypos, Highs, and Ketones"
 slug: "emergency-actions"
-date: 2025-08-13T00:00:00.000Z
-description: >
-  A quick reference for urgent diabetes situations: severe hypos, high BGL with
-  ketones, vomiting/illness, and when to call an ambulance.
-tags:
-  - medical
-  - diabetes
-  - type 1 diabetes
-  - emergency
-  - health guides
-publishDate: "2025-08-13T16:55:39+04:00"
-updatedDate: "2025-08-13T16:55:39+04:00"
+description: "Quick reference for severe hypos, high blood glucose with ketones, vomiting/illness, and when to call an ambulance."
+publishDate: 2025-08-13
+updatedDate: 2025-08-21
+tags: ["medical", "diabetes", "type 1 diabetes", "emergency", "health guides"]
+related:
+  - /guides/blood-glucose-testing
+  - /guides/continuous-glucose-monitors
+  - /guides/insulin-administration
+  - /guides/understanding-hba1c
 ---
 
 # Emergency Actions — Hypos, Highs, and Ketones
 
-## Why this matters
-In urgent situations, clear steps save time and reduce risk. Keep this guide with your diabetes plan and supplies.
-
 ## Severe hypo (can’t swallow / unconscious / seizure)
-- **Do not give food/fluids by mouth.**  
-- **Glucagon** (nasal or injection) if available and trained to use.  
-- **Call emergency services.**  
-- Once awake: longer-acting carbs; contact your diabetes team.
+- **Do not** give food or fluids by mouth.
+- **Glucagon** (nasal or injection) if available and trained.
+- **Call emergency services.**
+- Once awake: longer‑acting carbs; contact your diabetes team.
 
-## High BGL **with** ketones (sick day)
-- **Hydrate** with **unsweetened fluids**; small sips every 5–10 min.  
-- **Correction insulin** per your plan.  
-- **Recheck BGL & ketones in 1–2 hours.**  
-- **Pump users:** give correction by **pen/syringe** and **change set** if ketones present.  
-- **Seek urgent care** if ketones **≥3.0 mmol/L**, ketones rising, or if **vomiting/pain/drowsiness/rapid breathing** develop.
+## High BGL with ketones (sick day)
+- **Hydrate** with unsweetened fluids; small sips every 5–10 minutes.
+- **Correction insulin** per your plan; recheck BGL and ketones in 1–2 hours.
+- **Pump users:** give correction by pen/syringe and **change the set** if ketones present.
+- **Seek urgent care** if ketones ≥ **3.0 mmol/L**, rising ketones, or **vomiting, pain, drowsiness, rapid breathing**.
 
-## Vomiting or unable to keep fluids down
-- High risk for **DKA** even if BGL isn’t very high.  
-- Try **small frequent sips**; if not tolerated, **seek urgent medical help**.  
-- Do **not stop basal insulin**.
+## Vomiting / unable to keep fluids down
+- High risk for **DKA** even if BGL isn’t very high. Try small frequent sips; if not tolerated, **seek urgent help**.
+- **Do not stop basal insulin.**
 
 ## Driving safety
-- If you feel low or your CGM alarms low → **pull over** and treat.  
-- Do not drive until BGL has clearly recovered and you feel well.
+- If you feel low or CGM alarms low → **pull over and treat.**
+- Don’t drive again until BGL has clearly recovered **and** you feel well.
 
-## What to keep in an “emergency kit”
+## Emergency kit checklist
 - Glucose tablets/gel; small juice or regular soft drink  
-- Glucagon (check expiry); instructions  
-- Meter/strips or CGM; ketone strips/meter  
+- Glucagon (check expiry); quick instructions  
+- Meter/strips or CGM; **blood ketone** strips/meter  
 - Spare pen needles/syringes; pump set  
-- Copy of your **diabetes plan** and emergency contacts
-
-## Related Guides
-- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)
-- [Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing](/guides/cgm-vs-finger-prick/)
-- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration/)
-- [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c/)
+- Copy of your plan + **emergency contacts**
 

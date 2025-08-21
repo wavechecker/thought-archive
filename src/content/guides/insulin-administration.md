@@ -1,15 +1,14 @@
 ---
-draft: true
----
-
----
 title: "Insulin Administration — Pens, Syringes, and Pumps"
 slug: "insulin-administration"
-description: "How to choose and use pens, syringes, and pumps — plus insulin types, site rotation, storage, and safety."
-category: "Type 1 Diabetes"
-publishDate: "2025-08-19"
-draft: false
-tags: ["Type 1 Diabetes", "patientguide", "insulin"]
+description: "Basal and bolus basics, dosing methods, site rotation, and pump set changes."
+publishDate: 2025-08-18
+updatedDate: 2025-08-21
+tags: ["Type 1 Diabetes", "insulin", "patientguide"]
+related:
+  - /guides/blood-glucose-testing
+  - /guides/continuous-glucose-monitors
+  - /guides/emergency-actions
 ---
 
 Insulin delivery is about two things: **the insulin you use** and **how you deliver it**. Get both right and day‑to‑day control becomes simpler and safer.

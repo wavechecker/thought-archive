@@ -1,27 +1,21 @@
 ---
-draft: true
+title: "Carbohydrate Counting — Matching Food and Insulin"
+slug: "carbohydrate-counting"
+description: "Basics of carb counting, insulin-to-carb ratios, and label reading for Type 1 Diabetes."
+publishDate: 2025-08-21
+updatedDate: 2025-08-21
+tags: ["Type 1 Diabetes", "carbohydrates", "insulin", "patientguide"]
+related:
+  - /guides/insulin-administration
+  - /guides/blood-glucose-testing
 ---
 
----
-title: Carbohydrate Counting — Matching Insulin to Your Meals
-date: 2025-08-13T00:00:00.000Z
-description: >-
-  Learn insulin-to-carb ratios, reading labels, estimating portions, and
-  avoiding common pitfalls.
-tags:
-  - medical
-  - diabetes
-  - type 1 diabetes
-  - nutrition
-  - health guides
-publishDate: '2025-08-13T16:55:39+04:00'
-updatedDate: '2025-08-13T16:55:39+04:00'
----
 
 # Carbohydrate Counting — Matching Insulin to Your Meals
 
 ## Why this matters
 Carb counting helps you give the **right bolus** and reduce glucose swings. Over time, you can flexibly enjoy most foods with confidence.
+
 
 ## Core concepts
 - **Insulin-to-carbohydrate ratio (ICR):** e.g., 1 unit per 10 g carbs.  
