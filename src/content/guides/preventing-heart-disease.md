@@ -2,6 +2,7 @@
 title: "Preventing Heart Disease: Lifestyle and Medical Screening"
 slug: "preventing-heart-disease"
 description: "Steps to reduce your risk of heart disease — diet, exercise, risk factor control, and the role of regular screening."
+category: "Heart & Circulation"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
 tags: ["cardiology", "prevention", "screening", "heart", "patientguide"]

@@ -1,18 +1,12 @@
 ---
-draft: true
----
-
----
-title: When to Seek Emergency Help for Chest Pain
-date: 2025-08-13T00:00:00.000Z
-description: Know the warning signs of chest pain that require immediate medical attention.
-tags:
-  - medical
-  - cardiology
-  - emergencies
-  - health guides
-publishDate: '2025-08-13T15:52:51+04:00'
-updatedDate: '2025-08-13T15:52:51+04:00'
+title: "When to Seek Emergency Help for Chest Pain"
+slug: "chest-pain-emergency-help"
+description: "Know the warning signs of chest pain that require immediate medical attention."
+category: "Heart & Circulation"
+publishDate: "2025-08-13"
+updatedDate: "2025-08-20"
+draft: false
+tags: ["cardiology", "emergencies", "heart", "patientguide"]
 ---
 
 # When to Seek Emergency Help for Chest Pain
@@ -40,11 +34,16 @@ Chest pain can be harmless (muscle strain, heartburn) or a sign of something ser
 ## When it’s probably not urgent
 - Brief, sharp pain that worsens with touch or twisting and **goes away quickly**  
 - Reproducible muscle tenderness after activity  
+
 Even then, discuss with a clinician if it **keeps returning**.
 
 ## FAQ
-**Is heart pain always severe?** No—many heart attacks feel like pressure, not stabbing pain.  
-**If symptoms improve, can I skip care?** No—**get checked**; symptoms can wax and wane.
+**Is heart pain always severe?**  
+No—many heart attacks feel like pressure, not stabbing pain.  
+
+**If symptoms improve, can I skip care?**  
+No—**get checked**; symptoms can wax and wane.
 
 ---
+
 *Educational only; not a substitute for professional medical advice.*

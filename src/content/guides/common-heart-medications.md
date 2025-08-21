@@ -2,6 +2,7 @@
 title: "Common Heart Medications and Their Side Effects"
 slug: "common-heart-medications"
 description: "Overview of key heart medications — beta blockers, ACE inhibitors, statins — and their common side effects."
+category: "Heart & Circulation"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
 tags: ["cardiology", "medications", "heart", "patientguide"]

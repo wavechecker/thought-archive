@@ -1,28 +1,48 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-const frontmatter = {
-  title: "Type 1 Diabetes — Guide Hub",
-  slug: "type-1-diabetes",
-  description: "Core guides for living with Type 1 Diabetes: testing, CGMs, insulin, HbA1c, and emergency actions.",
-  publishDate: "2025-08-19",
-  draft: false,
-  tags: ["Type 1 Diabetes", "patientguide", "hub"],
-};
+// 🔁 EDIT THIS ONE LINE PER HUB
+const CATEGORY = "Type 1 Diabetes"; 
+
+const all = await getCollection("guides");
+const guides = all
+  .filter(({ data }) =>
+    data.draft !== true && (
+      data.category === CATEGORY ||
+      (Array.isArray(data.tags) && data.tags.includes(CATEGORY))
+    )
+  )
+  .sort((a, b) => {
+    const da = new Date(a.data.updatedDate ?? a.data.publishDate ?? 0).valueOf();
+    const db = new Date(b.data.updatedDate ?? b.data.publishDate ?? 0).valueOf();
+    return db - da || a.data.title.localeCompare(b.data.title);
+  });
+
+// Optional: set a nice page title/description for each hub
+const PAGE_TITLE = `${CATEGORY} — Guide Hub`;
+const PAGE_DESC = `Browse patient-friendly guides for ${CATEGORY}.`;
 ---
 
-<Layout {frontmatter}>
-  <h1>Type 1 Diabetes — Guide Hub</h1>
-  <p>A single place to find our core day-to-day guides.</p>
+<html lang="en">
+  <head>
+    <title>{PAGE_TITLE}</title>
+    <meta name="description" content={PAGE_DESC} />
+  </head>
+  <body>
+    <h1>{PAGE_TITLE}</h1>
+    <p>{PAGE_DESC}</p>
 
-  <section style="margin-top:2rem;">
-    <h2>Core Guides</h2>
-    <ul style="list-style:none; padding:0; line-height:1.8;">
-      <li><a href="/guides/blood-glucose-testing/">Blood Glucose Testing — How and When to Check</a></li>
-      <li><a href="/guides/cgm-vs-finger-prick/">Continuous Glucose Monitors (CGMs) vs Finger-Prick Testing</a></li>
-      <li><a href="/guides/insulin-administration/">Insulin Administration — Pens, Syringes, and Pumps</a></li>
-      <li><a href="/guides/emergency-actions/">Emergency Actions — Hypos, Highs, and Ketones</a></li>
-      <li><a href="/guides/understanding-hba1c/">Understanding HbA1c and Why It Matters</a></li>
-    </ul>
-  </section>
-</Layout>
+    {guides.length === 0 ? (
+      <p>No guides found yet.</p>
+    ) : (
+      <ul>
+        {guides.map(g => (
+          <li>
+            <a href={`/guides/${g.data.slug}`}>{g.data.title}</a>
+            {g.data.description && <small> — {g.data.description}</small>}
+          </li>
+        ))}
+      </ul>
+    )}
+  </body>
+</html>

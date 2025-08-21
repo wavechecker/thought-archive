@@ -2,6 +2,7 @@
 title: "Carbohydrate Counting — Matching Food and Insulin"
 slug: "carbohydrate-counting"
 description: "Basics of carb counting, insulin-to-carb ratios, and label reading for Type 1 Diabetes."
+category: "Type 1 Diabetes"
 publishDate: 2025-08-21
 updatedDate: 2025-08-21
 tags: ["Type 1 Diabetes", "carbohydrates", "insulin", "patientguide"]

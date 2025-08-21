@@ -1,27 +1,48 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-const frontmatter = {
-  title: "Heart & Circulation — Guide Hub",
-  slug: "heart-circulation",
-  description: "Core guides on heart health: rehabilitation, medications, atrial fibrillation, and prevention.",
-  publishDate: "2025-08-19",
-  draft: false,
-  tags: ["Heart", "Circulation", "patientguide", "hub"],
-};
+// 🔁 EDIT THIS ONE LINE PER HUB
+const CATEGORY = "Heart & Circulation";
+
+const all = await getCollection("guides");
+const guides = all
+  .filter(({ data }) =>
+    data.draft !== true && (
+      data.category === CATEGORY ||
+      (Array.isArray(data.tags) && data.tags.includes(CATEGORY))
+    )
+  )
+  .sort((a, b) => {
+    const da = new Date(a.data.updatedDate ?? a.data.publishDate ?? 0).valueOf();
+    const db = new Date(b.data.updatedDate ?? b.data.publishDate ?? 0).valueOf();
+    return db - da || a.data.title.localeCompare(b.data.title);
+  });
+
+// Optional: set a nice page title/description for each hub
+const PAGE_TITLE = `${CATEGORY} — Guide Hub`;
+const PAGE_DESC = `Browse patient-friendly guides for ${CATEGORY}.`;
 ---
 
-<Layout {frontmatter}>
-  <h1>Heart & Circulation — Guide Hub</h1>
-  <p>A central hub for our heart and circulation guides.</p>
+<html lang="en">
+  <head>
+    <title>{PAGE_TITLE}</title>
+    <meta name="description" content={PAGE_DESC} />
+  </head>
+  <body>
+    <h1>{PAGE_TITLE}</h1>
+    <p>{PAGE_DESC}</p>
 
-  <section style="margin-top:2rem;">
-    <h2>Core Guides</h2>
-    <ul style="list-style:none; padding:0; line-height:1.8;">
-      <li><a href="/guides/cardiac-rehabilitation/">Cardiac Rehabilitation after a Heart Event</a></li>
-      <li><a href="/guides/common-heart-medications/">Common Heart Medications and Their Side Effects</a></li>
-      <li><a href="/guides/atrial-fibrillation/">Atrial Fibrillation — Symptoms, Risks, and Treatment</a></li>
-      <li><a href="/guides/preventing-heart-disease/">Preventing Heart Disease — Lifestyle and Medical Screening</a></li>
-    </ul>
-  </section>
-</Layout>
+    {guides.length === 0 ? (
+      <p>No guides found yet.</p>
+    ) : (
+      <ul>
+        {guides.map(g => (
+          <li>
+            <a href={`/guides/${g.data.slug}`}>{g.data.title}</a>
+            {g.data.description && <small> — {g.data.description}</small>}
+          </li>
+        ))}
+      </ul>
+    )}
+  </body>
+</html>

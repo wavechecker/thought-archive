@@ -1,62 +1,48 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-const guides = [
-  {
-    title: "Understanding Bowel Cancer — Risks and Symptoms",
-    slug: "/guides/understanding-bowel-cancer",
-    description: "What bowel cancer is, common risk factors, and red-flag symptoms to know."
-  },
-  {
-    title: "Bowel Cancer Screening — Colonoscopy, FIT Test, and Early Detection",
-    slug: "/guides/bowel-cancer-screening",
-    description: "How screening tests detect bowel cancer early, who should be screened, and what to expect."
-  },
-  {
-    title: "Treatment Pathways — Surgery, Chemo, Radiotherapy",
-    slug: "/guides/bowel-cancer-treatment",
-    description: "Main treatments for bowel cancer, when they’re used, and what patients can expect."
-  },
-  {
-    title: "Living With Bowel Cancer — Side Effects, Diet, and Emotional Support",
-    slug: "/guides/living-with-bowel-cancer",
-    description: "Managing side effects, diet changes, and the emotional impact of bowel cancer."
-  },
-  {
-    title: "Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment",
-    slug: "/guides/bowel-cancer-nutrition",
-    description: "Dietary guidance to support bowel health, manage side effects, and aid recovery."
-  },
-  {
-    title: "Bowel Cancer Survivorship — Life After Treatment",
-    slug: "/guides/bowel-cancer-survivorship",
-    description: "Follow-up care, lifestyle changes, and emotional wellbeing after treatment."
-  },
-  {
-    title: "Family Risk and Genetics in Bowel Cancer",
-    slug: "/guides/bowel-cancer-genetics",
-    description: "How family history and inherited conditions affect risk, and when genetic testing is needed."
-  },
-  {
-    title: "Palliative Care in Bowel Cancer — Comfort, Dignity, and Support",
-    slug: "/guides/bowel-cancer-palliative-care",
-    description: "When cure is no longer possible, palliative care focuses on quality of life and dignity."
-  }
-];
+// 🔁 EDIT THIS ONE LINE PER HUB
+const CATEGORY = "cancer";
+
+const all = await getCollection("guides");
+const guides = all
+  .filter(({ data }) =>
+    data.draft !== true && (
+      data.category === CATEGORY ||
+      (Array.isArray(data.tags) && data.tags.includes(CATEGORY))
+    )
+  )
+  .sort((a, b) => {
+    const da = new Date(a.data.updatedDate ?? a.data.publishDate ?? 0).valueOf();
+    const db = new Date(b.data.updatedDate ?? b.data.publishDate ?? 0).valueOf();
+    return db - da || a.data.title.localeCompare(b.data.title);
+  });
+
+// Optional: set a nice page title/description for each hub
+const PAGE_TITLE = `${CATEGORY} — Guide Hub`;
+const PAGE_DESC = `Browse patient-friendly guides for ${CATEGORY}.`;
 ---
 
-<Layout frontmatter={{ title: "Cancer Guides — Bowel Cancer Information Hub" }}>
-  <h1 class="text-3xl font-bold mb-6">Cancer Guides — Bowel Cancer Information Hub</h1>
-  <p class="mb-8 text-lg">
-    A collection of guides on bowel cancer — from risks and symptoms to treatment, survivorship, and palliative care.
-  </p>
+<html lang="en">
+  <head>
+    <title>{PAGE_TITLE}</title>
+    <meta name="description" content={PAGE_DESC} />
+  </head>
+  <body>
+    <h1>{PAGE_TITLE}</h1>
+    <p>{PAGE_DESC}</p>
 
-  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    {guides.map((guide) => (
-      <a href={guide.slug} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
-        <h2 class="text-xl font-semibold mb-2">{guide.title}</h2>
-        <p class="text-gray-600 text-sm">{guide.description}</p>
-      </a>
-    ))}
-  </div>
-</Layout>
+    {guides.length === 0 ? (
+      <p>No guides found yet.</p>
+    ) : (
+      <ul>
+        {guides.map(g => (
+          <li>
+            <a href={`/guides/${g.data.slug}`}>{g.data.title}</a>
+            {g.data.description && <small> — {g.data.description}</small>}
+          </li>
+        ))}
+      </ul>
+    )}
+  </body>
+</html>

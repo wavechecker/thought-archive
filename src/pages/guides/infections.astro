@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 
 // 🔁 EDIT THIS ONE LINE PER HUB
-const CATEGORY = "Type 2 Diabetes";
+const CATEGORY = "Infections";
 
 const all = await getCollection("guides");
 const guides = all
@@ -18,9 +18,8 @@ const guides = all
     return db - da || a.data.title.localeCompare(b.data.title);
   });
 
-// Optional: set a nice page title/description for each hub
 const PAGE_TITLE = `${CATEGORY} — Guide Hub`;
-const PAGE_DESC = `Browse patient-friendly guides for ${CATEGORY}.`;
+const PAGE_DESC = `Browse patient-friendly guides for common infections, prevention, and treatment.`;
 ---
 
 <html lang="en">
