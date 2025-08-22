@@ -1,34 +1,53 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-// Pull all guides
+// Define the hubs you actually expose (order matters for display)
+const HUBS: Array<{ cat: string; href: string }> = [
+  { cat: "Type 1 Diabetes", href: "/guides/type-1-diabetes/" },
+  { cat: "Type 2 Diabetes", href: "/guides/type-2-diabetes/" },
+  { cat: "Heart & Circulation", href: "/guides/heart-circulation/" },
+  { cat: "Bowel Cancer", href: "/guides/bowel-cancer/" },
+  { cat: "Cancer", href: "/guides/cancer/" },
+  { cat: "Infections", href: "/guides/infections/" },
+  { cat: "Emergencies", href: "/guides/emergencies/" },
+];
+
+const HUB_MAP = new Map(HUBS.map(h => [h.cat, h.href]));
+const ALLOWED_LOWER = new Set(HUBS.map(h => h.cat.toLowerCase()));
+
+const norm = (s: unknown) => String(s ?? "").toLowerCase().trim();
+const firstMatchAllowed = (vals: string[] = []) => {
+  for (const v of vals) {
+    const n = norm(v);
+    if (ALLOWED_LOWER.has(n)) {
+      // return the original-cased category name from HUBS for consistent labels
+      return HUBS.find(h => h.cat.toLowerCase() === n)!.cat;
+    }
+  }
+  return undefined;
+};
+
 const all = await getCollection("guides");
 
-// Allowed categories that have real hub pages
-const ALLOWED = ["Type 1 Diabetes", "Type 2 Diabetes", "Heart & Circulation", "Bowel Cancer"];
-
-// Group by category/tag, skip drafts and uncategorised ("Other")
+// Group by category or matching tag (case-insensitive). Skip drafts.
 const groups = new Map<string, typeof all>();
 for (const e of all) {
   if (e.data?.draft === true) continue;
-  const cat =
-    (typeof e.data?.category === "string" && e.data.category.trim()) ||
-    (Array.isArray(e.data?.tags) ? e.data.tags.find(t => ALLOWED.includes(t)) : undefined);
-  if (!cat || !ALLOWED.includes(cat)) continue; // 👉 hides "Other" and "Diabetes"
+
+  // try category first, then tags
+  const catFromCategory = typeof e.data?.category === "string" ? firstMatchAllowed([e.data.category]) : undefined;
+  const catFromTags = Array.isArray(e.data?.tags) ? firstMatchAllowed(e.data.tags as string[]) : undefined;
+  const cat = catFromCategory ?? catFromTags;
+
+  if (!cat) continue; // ignore uncategorized content on this page
+
   if (!groups.has(cat)) groups.set(cat, []);
   groups.get(cat)!.push(e);
 }
 
-// Map categories to hub URLs (no "Diabetes" on purpose)
-const hubMap = new Map<string, string>([
-  ["Type 1 Diabetes", "/guides/type-1-diabetes"],
-  ["Type 2 Diabetes", "/guides/type-2-diabetes"],
-  ["Heart & Circulation", "/guides/heart-circulation"],
-  ["Bowel Cancer", "/guides/bowel-cancer"],
-]);
-
-const orderedCats = Array.from(groups.keys()).sort((a, b) => a.localeCompare(b));
+// Keep display order consistent with HUBS, but omit categories with 0 guides
+const orderedCats = HUBS.map(h => h.cat).filter(cat => (groups.get(cat)?.length ?? 0) > 0);
 
 const frontmatter = {
   title: "Guides — PatientGuide",
@@ -48,7 +67,7 @@ const frontmatter = {
   <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {orderedCats.map((cat) => {
       const list = groups.get(cat) ?? [];
-      const href = hubMap.get(cat)!; // guaranteed by ALLOWED filter
+      const href = HUB_MAP.get(cat)!; // safe due to ALLOWED list
       return (
         <a href={href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
           <h2 class="text-xl font-semibold mb-1">{cat} — Guide Hub</h2>
