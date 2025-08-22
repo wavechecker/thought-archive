@@ -5,33 +5,41 @@ import { isValidDate, fmt } from "@/lib/date";
 
 export const prerender = true;
 
+/**
+ * IMPORTANT: For a rest route like [...slug], Astro v5 expects
+ * getStaticPaths() to return STRING params (e.g. "a/b/c"), not arrays.
+ */
 export async function getStaticPaths() {
   const entries = await getCollection("guides");
-  // e.slug might be "type-1-diabetes/blood-glucose-testing" → split into ["type-1-diabetes","blood-glucose-testing"]
-  return entries.map((e) => ({ params: { slug: e.slug.split("/") } }));
+  return entries.map((e) => ({
+    params: { slug: e.slug }, // e.slug may include "/" for nested paths
+  }));
 }
 
-// Astro.params.slug is now an array for rest routes; normalize to "a/b/c"
-const raw = Astro.params.slug;
-const slug = Array.isArray(raw) ? raw.join("/") : raw;
+// With the above, Astro.params.slug will be a STRING like "section/slug"
+const slug = Astro.params.slug as string;
 
 const entry = await getEntryBySlug("guides", slug);
-if (!entry) return Astro.redirect("/404");
+if (!entry) {
+  // Safety: if a nested slug wasn't found
+  throw new Error(`[guides] No entry found for slug: ${slug}`);
+}
 
 const { Content } = await entry.render();
 const data = entry.data;
 
 const canonical = `https://patientguide.io/guides/${entry.slug}/`;
 
-// For "Related Guides"
+// Resolve "Related Guides" from frontmatter `related`
+// Accepts either "/guides/foo" or "foo" form
 const allGuides = await getCollection("guides");
-function resolveRelated(rel) {
+function resolveRelated(rel: unknown) {
   if (!Array.isArray(rel)) return [];
   return rel
     .map((r) => {
-      // allow "/guides/foo" or "foo"
+      if (typeof r !== "string") return null;
       const key = r.replace(/^\/guides\//, "").replace(/\/$/, "");
-      return allGuides.find((e) => e.slug === key);
+      return allGuides.find((e) => e.slug === key) ?? null;
     })
     .filter(Boolean);
 }
@@ -44,6 +52,7 @@ const related = resolveRelated(data.related);
   </Fragment>
 
   <h1>{data?.title ?? "Untitled"}</h1>
+
   <p style="color:#6b7280; margin-top:.25rem;">
     {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
     {data?.updatedDate && isValidDate(data.updatedDate) ? ` • Updated ${fmt(data.updatedDate)}` : ""}
@@ -62,10 +71,11 @@ const related = resolveRelated(data.related);
     </>
   )}
 
-  {data?.tags?.length > 0 && (
+  {Array.isArray(data?.tags) && data.tags.length > 0 && (
     <p style="color:#2563eb; margin-top:1rem;">
-      {data.tags.map((t, i) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
+      {data.tags.map((t: string, i: number) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
     </p>
   )}
 </Layout>
+
 
