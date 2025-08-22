@@ -1,74 +1,135 @@
 # --- Diabetes legacy → short ---
 [[redirects]]
-from = "/guides/blood-glucose-testing-how-and-when-to-check/"
-to   = "/guides/blood-glucose-testing/"
-status = 301
+  from = "/guides/blood-glucose-testing-how-and-when-to-check/"
+  to   = "/guides/blood-glucose-testing/"
+  status = 301
 
 [[redirects]]
-from = "/guides/continuous-glucose-monitors-cgms-vs-finger-prick-testing/"
-to   = "/guides/cgm-vs-finger-prick/"
-status = 301
+  from = "/guides/continuous-glucose-monitors-cgms-vs-finger-prick-testing/"
+  to   = "/guides/cgm-vs-finger-prick/"
+  status = 301
 
 [[redirects]]
-from = "/guides/insulin-administration-pens-syringes-and-pumps/"
-to   = "/guides/insulin-administration/"
-status = 301
+  from = "/guides/insulin-administration-pens-syringes-and-pumps/"
+  to   = "/guides/insulin-administration/"
+  status = 301
 
 [[redirects]]
-from = "/guides/emergency-actions-hypos-highs-and-ketones/"
-to   = "/guides/emergency-actions/"
-status = 301
+  from = "/guides/emergency-actions-hypos-highs-and-ketones/"
+  to   = "/guides/emergency-actions/"
+  status = 301
 
 [[redirects]]
-from = "/guides/understanding-hba1c-and-why-it-matters-for-diabetes-management/"
-to   = "/guides/understanding-hba1c/"
-status = 301
+  from = "/guides/understanding-hba1c-and-why-it-matters-for-diabetes-management/"
+  to   = "/guides/understanding-hba1c/"
+  status = 301
 
 # --- Heart & Circulation legacy → short ---
 [[redirects]]
-from = "/guides/cardiac-rehabilitation-after-a-heart-event/"
-to   = "/guides/cardiac-rehabilitation/"
-status = 301
+  from = "/guides/cardiac-rehabilitation-after-a-heart-event/"
+  to   = "/guides/cardiac-rehabilitation/"
+  status = 301
 
 [[redirects]]
-from = "/guides/common-heart-medications-and-their-side-effects/"
-to   = "/guides/common-heart-medications/"
-status = 301
+  from = "/guides/common-heart-medications-and-their-side-effects/"
+  to   = "/guides/common-heart-medications/"
+  status = 301
 
 [[redirects]]
-from = "/guides/atrial-fibrillation-symptoms-risks-and-treatment/"
-to   = "/guides/atrial-fibrillation/"
-status = 301
+  from = "/guides/atrial-fibrillation-symptoms-risks-and-treatment/"
+  to   = "/guides/atrial-fibrillation/"
+  status = 301
 
 [[redirects]]
-from = "/guides/preventing-heart-disease-lifestyle-and-medical-screening/"
-to   = "/guides/preventing-heart-disease/"
-status = 301
-
-# (No angiography redirect needed—short = canonical already.)
+  from = "/guides/preventing-heart-disease-lifestyle-and-medical-screening/"
+  to   = "/guides/preventing-heart-disease/"
+  status = 301
 
 # --- Bowel Cancer legacy → short ---
 [[redirects]]
-from = "/guides/understanding-bowel-cancer-risks-and-symptoms/"
-to   = "/guides/understanding-bowel-cancer/"
-status = 301
+  from = "/guides/understanding-bowel-cancer-risks-and-symptoms/"
+  to   = "/guides/understanding-bowel-cancer/"
+  status = 301
 
 [[redirects]]
-from = "/guides/bowel-cancer-screening-colonoscopy-fit-test-and-early-detection/"
-to   = "/guides/bowel-cancer-screening/"
-status = 301
+  from = "/guides/bowel-cancer-screening-colonoscopy-fit-test-and-early-detection/"
+  to   = "/guides/bowel-cancer-screening/"
+  status = 301
 
 [[redirects]]
-from = "/guides/treatment-pathways-surgery-chemo-radiotherapy/"
-to   = "/guides/bowel-cancer-treatment/"
-status = 301
+  from = "/guides/treatment-pathways-surgery-chemo-radiotherapy/"
+  to   = "/guides/bowel-cancer-treatment/"
+  status = 301
 
 [[redirects]]
-from = "/guides/living-with-bowel-cancer-nutrition-exercise-and-mental-health/"
-to   = "/guides/living-with-bowel-cancer/"
-status = 301
+  from = "/guides/living-with-bowel-cancer-nutrition-exercise-and-mental-health/"
+  to   = "/guides/living-with-bowel-cancer/"
+  status = 301
 
 [[redirects]]
-from = "/guides/family-risk-and-genetics-what-to-know/"
-to   = "/guides/bowel-cancer-genetics/"
-status = 301
+  from = "/guides/family-risk-and-genetics-what-to-know/"
+  to   = "/guides/bowel-cancer-genetics/"
+  status = 301
+
+# --- Contact route fix ---
+[[redirects]]
+  from = "/guides/contact"
+  to   = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/contact/"
+  to   = "/contact/"
+  status = 301
+
+# --- Hub aliases (were previously in _redirects syntax; now proper TOML) ---
+[[redirects]]
+  from = "/guides/diabetes-hub"
+  to   = "/guides/diabetes/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/diabetes-hub/"
+  to   = "/guides/diabetes/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/t1d"
+  to   = "/guides/type-1-diabetes/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/t1d/"
+  to   = "/guides/type-1-diabetes/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/t2d"
+  to   = "/guides/type-2-diabetes/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/t2d/"
+  to   = "/guides/type-2-diabetes/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/emergency"
+  to   = "/guides/emergencies/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/emergency/"
+  to   = "/guides/emergencies/"
+  status = 301
+
+# --- Infections → Infectious Diseases rename ---
+[[redirects]]
+  from = "/guides/infections"
+  to   = "/guides/infectious-diseases/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/infections/"
+  to   = "/guides/infectious-diseases/"
+  status = 301
