@@ -1,48 +1,55 @@
 ---
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-// 🔁 EDIT THIS ONE LINE PER HUB
-const CATEGORY = "Heart & Circulation";
+// Allow multiple spellings/synonyms
+const CATEGORY_KEYS = [
+  "Heart & Circulation",
+  "Heart and Circulation",
+  "heart-circulation",
+  "cardiology",
+  "heart",
+  "cardiac"
+];
+const PAGE_TITLE = "Heart & Circulation — Guide Hub";
+const PAGE_DESC  = `Browse patient-friendly guides for ${PAGE_TITLE.split(" — ")[0]}.`;
 
 const all = await getCollection("guides");
+const norm = (s: unknown) => String(s ?? "").toLowerCase().trim();
+
+const inCategory = (entry: any) => {
+  const cat = norm(entry.data?.category);
+  const tags = (entry.data?.tags ?? []).map(norm);
+  const keys = CATEGORY_KEYS.map(norm);
+  return (cat && keys.includes(cat)) || tags.some(t => keys.includes(t));
+};
+
 const guides = all
-  .filter(({ data }) =>
-    data.draft !== true && (
-      data.category === CATEGORY ||
-      (Array.isArray(data.tags) && data.tags.includes(CATEGORY))
-    )
-  )
+  .filter((e) => e.data?.draft !== true)
+  .filter(inCategory)
   .sort((a, b) => {
-    const da = new Date(a.data.updatedDate ?? a.data.publishDate ?? 0).valueOf();
-    const db = new Date(b.data.updatedDate ?? b.data.publishDate ?? 0).valueOf();
-    return db - da || a.data.title.localeCompare(b.data.title);
+    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+    return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
   });
 
-// Optional: set a nice page title/description for each hub
-const PAGE_TITLE = `${CATEGORY} — Guide Hub`;
-const PAGE_DESC = `Browse patient-friendly guides for ${CATEGORY}.`;
+const linkFor = (e: any) => `/guides/${e.slug}/`;
 ---
 
-<html lang="en">
-  <head>
-    <title>{PAGE_TITLE}</title>
-    <meta name="description" content={PAGE_DESC} />
-  </head>
-  <body>
-    <h1>{PAGE_TITLE}</h1>
-    <p>{PAGE_DESC}</p>
+<Layout frontmatter={{ title: PAGE_TITLE, description: PAGE_DESC }}>
+  <h1>Heart &amp; Circulation — Guide Hub</h1>
+  <p>{PAGE_DESC}</p>
 
-    {guides.length === 0 ? (
-      <p>No guides found yet.</p>
-    ) : (
-      <ul>
-        {guides.map(g => (
-          <li>
-            <a href={`/guides/${g.data.slug}`}>{g.data.title}</a>
-            {g.data.description && <small> — {g.data.description}</small>}
-          </li>
-        ))}
-      </ul>
-    )}
-  </body>
-</html>
+  {guides.length === 0 ? (
+    <p>No Heart &amp; Circulation guides found.</p>
+  ) : (
+    <ul>
+      {guides.map((g) => (
+        <li>
+          <a href={linkFor(g)}>{g.data?.title ?? "(Untitled)"}</a>
+          {g.data?.description && <small> — {g.data.description}</small>}
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>

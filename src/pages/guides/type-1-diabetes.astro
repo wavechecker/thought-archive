@@ -2,41 +2,44 @@
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const all = await getCollection("guides");
-const norm = (s) => (s ?? "").toLowerCase();
+const CATEGORY_KEYS = ["Type 1 Diabetes", "type 1 diabetes", "t1d", "diabetes"];
+const PAGE_TITLE = "Type 1 Diabetes — Guide Hub";
+const PAGE_DESC  = `Browse patient-friendly guides for ${PAGE_TITLE.split(" — ")[0]}.`;
 
-const isT1D = (e) => {
-  const cat = norm(e.data?.category);
-  const tags = (e.data?.tags ?? []).map(norm);
-  return (
-    cat === "type 1 diabetes" ||
-    tags.includes("type 1 diabetes") ||
-    tags.includes("t1d") ||
-    tags.includes("diabetes")
-  );
+const all = await getCollection("guides");
+const norm = (s: unknown) => String(s ?? "").toLowerCase().trim();
+
+const inCategory = (entry: any) => {
+  const cat = norm(entry.data?.category);
+  const tags = (entry.data?.tags ?? []).map(norm);
+  const keys = CATEGORY_KEYS.map(norm);
+  return (cat && keys.includes(cat)) || tags.some(t => keys.includes(t));
 };
 
-const items = all
-  .filter((e) => !e.data?.draft)
-  .filter(isT1D)
-  .sort((a, b) => new Date(b.data?.publishDate ?? 0) - new Date(a.data?.publishDate ?? 0));
+const guides = all
+  .filter((e) => e.data?.draft !== true)
+  .filter(inCategory)
+  .sort((a, b) => {
+    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+    return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
+  });
 
-// Build links directly from the collection slug, NO manual category prefixing
-const linkFor = (e) => `/guides/${e.slug}/`;
+const linkFor = (e: any) => `/guides/${e.slug}/`;
 ---
 
-<Layout frontmatter={{ title: "Type 1 Diabetes — Guide Hub", description: "Browse patient-friendly guides for Type 1 Diabetes." }}>
-  <h1>Type 1 Diabetes — Guide Hub</h1>
-  <p>Browse patient-friendly guides for Type 1 Diabetes.</p>
+<Layout frontmatter={{ title: PAGE_TITLE, description: PAGE_DESC }}>
+  <h1>{PAGE_TITLE}</h1>
+  <p>{PAGE_DESC}</p>
 
-  {items.length === 0 ? (
-    <p>No guides found. Check category/tags and draft flags.</p>
+  {guides.length === 0 ? (
+    <p>No guides found.</p>
   ) : (
     <ul>
-      {items.map((g) => (
+      {guides.map((g) => (
         <li>
-          <a href={linkFor(g)}>{g.data.title}</a>
-          {g.data?.description && <> — {g.data.description}</>}
+          <a href={linkFor(g)}>{g.data?.title ?? "(Untitled)"}</a>
+          {g.data?.description && <small> — {g.data.description}</small>}
         </li>
       ))}
     </ul>

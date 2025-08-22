@@ -2,39 +2,44 @@
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const all = await getCollection("guides");
-const norm = (s) => (s ?? "").toLowerCase();
+const CATEGORY_KEYS = ["Emergencies", "emergencies", "emergency", "urgent", "first aid"];
+const PAGE_TITLE = "Emergencies — Guide Hub";
+const PAGE_DESC  = `Browse patient-friendly guides for ${PAGE_TITLE.split(" — ")[0]}.`;
 
-const isEmergency = (e) => {
-  const cat = norm(e.data?.category);
-  const tags = (e.data?.tags ?? []).map(norm);
-  return (
-    cat === "emergencies" ||
-    tags.includes("emergency") ||
-    tags.includes("emergencies") ||
-    tags.includes("urgent") ||
-    tags.includes("first aid")
-  );
+const all = await getCollection("guides");
+const norm = (s: unknown) => String(s ?? "").toLowerCase().trim();
+
+const inCategory = (entry: any) => {
+  const cat = norm(entry.data?.category);
+  const tags = (entry.data?.tags ?? []).map(norm);
+  const keys = CATEGORY_KEYS.map(norm);
+  return (cat && keys.includes(cat)) || tags.some(t => keys.includes(t));
 };
 
-const items = all
-  .filter((e) => !e.data?.draft)
-  .filter(isEmergency)
-  .sort((a, b) => new Date(b.data?.publishDate ?? 0) - new Date(a.data?.publishDate ?? 0));
+const guides = all
+  .filter((e) => e.data?.draft !== true)
+  .filter(inCategory)
+  .sort((a, b) => {
+    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+    return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
+  });
 
-const linkFor = (e) => `/guides/${e.slug}/`;
+const linkFor = (e: any) => `/guides/${e.slug}/`;
 ---
 
-<Layout frontmatter={{ title: "Emergencies — Guide Hub", description: "When to act fast and how." }}>
-  <h1>Emergencies — Guide Hub</h1>
-  {items.length === 0 ? (
+<Layout frontmatter={{ title: PAGE_TITLE, description: PAGE_DESC }}>
+  <h1>{PAGE_TITLE}</h1>
+  <p>{PAGE_DESC}</p>
+
+  {guides.length === 0 ? (
     <p>No emergency guides found.</p>
   ) : (
     <ul>
-      {items.map((g) => (
+      {guides.map((g) => (
         <li>
-          <a href={linkFor(g)}>{g.data.title}</a>
-          {g.data?.description && <> — {g.data.description}</>}
+          <a href={linkFor(g)}>{g.data?.title ?? "(Untitled)"}</a>
+          {g.data?.description && <small> — {g.data.description}</small>}
         </li>
       ))}
     </ul>
