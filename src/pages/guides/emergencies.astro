@@ -1,54 +1,43 @@
 ---
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-// 🔁 CATEGORY for this hub
-const CATEGORY = "Emergencies";
-
 const all = await getCollection("guides");
-const guides = all
-  .filter(({ data }) =>
-    data.draft !== true &&
-    (data.category === CATEGORY ||
-     (Array.isArray(data.tags) && data.tags.includes(CATEGORY)))
-  )
-  .sort((a, b) => {
-    const da = new Date(a.data.updatedDate ?? a.data.publishDate ?? 0).valueOf();
-    const db = new Date(b.data.updatedDate ?? b.data.publishDate ?? 0).valueOf();
-    return db - da || a.data.title.localeCompare(b.data.title);
-  });
+const norm = (s) => (s ?? "").toLowerCase();
 
-const PAGE_TITLE = `${CATEGORY} — Guide Hub`;
-const PAGE_DESC = `Life-threatening conditions need quick action. Browse patient-friendly guides for emergencies like chest pain, stroke, and severe infections.`;
+const isEmergency = (e) => {
+  const cat = norm(e.data?.category);
+  const tags = (e.data?.tags ?? []).map(norm);
+  return (
+    cat === "emergencies" ||
+    tags.includes("emergency") ||
+    tags.includes("emergencies") ||
+    tags.includes("urgent") ||
+    tags.includes("first aid")
+  );
+};
+
+const items = all
+  .filter((e) => !e.data?.draft)
+  .filter(isEmergency)
+  .sort((a, b) => new Date(b.data?.publishDate ?? 0) - new Date(a.data?.publishDate ?? 0));
+
+const linkFor = (e) => `/guides/${e.slug}/`;
 ---
 
-<html lang="en">
-  <head>
-    <title>{PAGE_TITLE}</title>
-    <meta name="description" content={PAGE_DESC} />
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold mb-4">{PAGE_TITLE}</h1>
-    <p class="mb-6 text-lg text-gray-700">{PAGE_DESC}</p>
+<Layout frontmatter={{ title: "Emergencies — Guide Hub", description: "When to act fast and how." }}>
+  <h1>Emergencies — Guide Hub</h1>
+  {items.length === 0 ? (
+    <p>No emergency guides found.</p>
+  ) : (
+    <ul>
+      {items.map((g) => (
+        <li>
+          <a href={linkFor(g)}>{g.data.title}</a>
+          {g.data?.description && <> — {g.data.description}</>}
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>
 
-    {guides.length === 0 ? (
-      <p>No guides found yet.</p>
-    ) : (
-      <ul class="space-y-3">
-        {guides.map((g) => (
-          <li>
-            <a href={`/guides/${g.data.slug}`} class="text-blue-600 underline">
-              {g.data.title}
-            </a>
-            {g.data.description && (
-              <small class="block text-gray-600">{g.data.description}</small>
-            )}
-          </li>
-        ))}
-      </ul>
-    )}
-
-    <p class="mt-8 text-sm text-gray-600">
-      See all categories in the <a href="/guides" class="underline">Patient Guides index</a>.
-    </p>
-  </body>
-</html>

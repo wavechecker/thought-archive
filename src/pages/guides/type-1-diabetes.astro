@@ -1,48 +1,44 @@
 ---
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-// 🔁 EDIT THIS ONE LINE PER HUB
-const CATEGORY = "Type 1 Diabetes"; 
-
 const all = await getCollection("guides");
-const guides = all
-  .filter(({ data }) =>
-    data.draft !== true && (
-      data.category === CATEGORY ||
-      (Array.isArray(data.tags) && data.tags.includes(CATEGORY))
-    )
-  )
-  .sort((a, b) => {
-    const da = new Date(a.data.updatedDate ?? a.data.publishDate ?? 0).valueOf();
-    const db = new Date(b.data.updatedDate ?? b.data.publishDate ?? 0).valueOf();
-    return db - da || a.data.title.localeCompare(b.data.title);
-  });
+const norm = (s) => (s ?? "").toLowerCase();
 
-// Optional: set a nice page title/description for each hub
-const PAGE_TITLE = `${CATEGORY} — Guide Hub`;
-const PAGE_DESC = `Browse patient-friendly guides for ${CATEGORY}.`;
+const isT1D = (e) => {
+  const cat = norm(e.data?.category);
+  const tags = (e.data?.tags ?? []).map(norm);
+  return (
+    cat === "type 1 diabetes" ||
+    tags.includes("type 1 diabetes") ||
+    tags.includes("t1d") ||
+    tags.includes("diabetes")
+  );
+};
+
+const items = all
+  .filter((e) => !e.data?.draft)
+  .filter(isT1D)
+  .sort((a, b) => new Date(b.data?.publishDate ?? 0) - new Date(a.data?.publishDate ?? 0));
+
+// Build links directly from the collection slug, NO manual category prefixing
+const linkFor = (e) => `/guides/${e.slug}/`;
 ---
 
-<html lang="en">
-  <head>
-    <title>{PAGE_TITLE}</title>
-    <meta name="description" content={PAGE_DESC} />
-  </head>
-  <body>
-    <h1>{PAGE_TITLE}</h1>
-    <p>{PAGE_DESC}</p>
+<Layout frontmatter={{ title: "Type 1 Diabetes — Guide Hub", description: "Browse patient-friendly guides for Type 1 Diabetes." }}>
+  <h1>Type 1 Diabetes — Guide Hub</h1>
+  <p>Browse patient-friendly guides for Type 1 Diabetes.</p>
 
-    {guides.length === 0 ? (
-      <p>No guides found yet.</p>
-    ) : (
-      <ul>
-        {guides.map(g => (
-          <li>
-            <a href={`/guides/${g.data.slug}`}>{g.data.title}</a>
-            {g.data.description && <small> — {g.data.description}</small>}
-          </li>
-        ))}
-      </ul>
-    )}
-  </body>
-</html>
+  {items.length === 0 ? (
+    <p>No guides found. Check category/tags and draft flags.</p>
+  ) : (
+    <ul>
+      {items.map((g) => (
+        <li>
+          <a href={linkFor(g)}>{g.data.title}</a>
+          {g.data?.description && <> — {g.data.description}</>}
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>
