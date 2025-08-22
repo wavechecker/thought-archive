@@ -1,22 +1,58 @@
 ---
+/** Top‑level nav config */
 const NAV = [
   { label: "Home", href: "/" },
   { label: "Guides", href: "/guides/" },
   { label: "Type 1 Diabetes", href: "/guides/type-1-diabetes/" },
   { label: "Heart & Circulation", href: "/guides/heart-circulation/" },
-  { label: "Cancer", href: "/guides/cancer/" },            // ✅ renamed
+  { label: "Cancer", href: "/guides/cancer/" }, // renamed
   { label: "Contact", href: "/contact/" },
 ];
----
 
+/** Props coming in like: <Layout frontmatter={...}> */
+const { frontmatter = {} } = Astro.props;
+
+/** Safe defaults */
+const siteTitle = "Patient Guide";
+const siteTagline = "Clear, practical health guides — no fluff.";
+
+// Extract known frontmatter with fallbacks
+const {
+  title = siteTitle,
+  description = siteTagline,
+  publishDate,      // optional
+  updatedDate,      // optional
+  canonicalUrl: fmCanonical, // optional
+  schemaType,       // optional override for JSON‑LD
+} = frontmatter;
+
+// Only render canonical if explicitly provided
+const canonical =
+  typeof fmCanonical === "string" && fmCanonical.trim().length > 0
+    ? fmCanonical
+    : undefined;
+
+// Build minimal JSON‑LD; choose type if provided
+const ldType = typeof schemaType === "string" && schemaType ? schemaType : "WebPage";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": ldType,
+  name: title,
+  headline: title,
+  description,
+  url: canonical,
+  datePublished: publishDate,
+  dateModified: updatedDate,
+};
+---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Feed autodiscovery -->
     <link
@@ -26,43 +62,44 @@ const NAV = [
       href="/rss.xml"
     />
 
-    <!-- Canonical -->
-    <link rel="canonical" href={canonicalUrl} />
+    <!-- Canonical (optional) -->
+    {canonical && <link rel="canonical" href={canonical} />}
 
-    <!-- Page Title & Description -->
-    <title>{frontmatter?.title ?? "Thought Archive"}</title>
-    <meta name="description" content={frontmatter?.description ?? ""} />
+    <!-- Title & Description -->
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
 
     <!-- Open Graph -->
-    <meta property="og:type"        content="article" />
-    <meta property="og:title"       content={frontmatter?.title} />
-    <meta property="og:description" content={frontmatter?.description} />
-    <meta property="og:url"         content={canonicalUrl} />
+    <meta property="og:type" content="article" />
+    {title && <meta property="og:title" content={title} />}
+    {description && <meta property="og:description" content={description} />}
+    {canonical && <meta property="og:url" content={canonical} />}
 
     <!-- Twitter Card -->
-    <meta name="twitter:card"        content="summary_large_image" />
-    <meta name="twitter:title"       content={frontmatter?.title} />
-    <meta name="twitter:description" content={frontmatter?.description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {title && <meta name="twitter:title" content={title} />}
+    {description && <meta name="twitter:description" content={description} />}
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD (only include defined fields) -->
     <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline:       frontmatter?.title,
-        description:    frontmatter?.description,
-        datePublished:  frontmatter?.publishDate,
-        url:            canonicalUrl,
-      })}
+      {JSON.stringify(
+        Object.fromEntries(
+          Object.entries(jsonLd).filter(([, v]) => v !== undefined && v !== null && v !== "")
+        )
+      )}
     </script>
+
+    <!-- Allow pages to inject extra head tags -->
+    <slot name="head" />
   </head>
   <body>
     <header>
       <nav>
-        <a href="/">Home</a> |
-        <a href="/posts/">Posts</a> |
-        <a href="/guides/">Guides</a> |
-        <a href="/contact/">Contact</a>
+        {NAV.map((item, i) => (
+          <>
+            <a href={item.href}>{item.label}</a>{i < NAV.length - 1 ? " | " : ""}
+          </>
+        ))}
       </nav>
     </header>
 
@@ -72,7 +109,7 @@ const NAV = [
 
     <footer>
       <small>
-        © {new Date().getFullYear()} Thought Archive · <a href="/contact/">Contact</a>
+        © {new Date().getFullYear()} patientguide.io · <a href="/contact/">Contact</a>
       </small>
     </footer>
   </body>
@@ -83,7 +120,8 @@ const NAV = [
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: system-ui, sans-serif;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    background: #f8fafc;
   }
   header, footer {
     max-width: 960px;
@@ -94,4 +132,3 @@ const NAV = [
   nav a:hover { text-decoration: underline; }
   main { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
 </style>
-yle>
