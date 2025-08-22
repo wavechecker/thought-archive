@@ -1,11 +1,14 @@
 ---
-/*
-  Layout.astro
-  Receives `frontmatter` from pages and injects SEO meta tags.
-*/
-const { frontmatter } = Astro.props;
-const canonicalUrl = (Astro.site && (Astro.site + Astro.url.pathname)) ?? "";
+const NAV = [
+  { label: "Home", href: "/" },
+  { label: "Guides", href: "/guides/" },
+  { label: "Type 1 Diabetes", href: "/guides/type-1-diabetes/" },
+  { label: "Heart & Circulation", href: "/guides/heart-circulation/" },
+  { label: "Cancer", href: "/guides/cancer/" },            // ✅ renamed
+  { label: "Contact", href: "/contact/" },
+];
 ---
+
 
 <!DOCTYPE html>
 <html lang="en">
