@@ -133,3 +133,9 @@
   from = "/guides/infections/"
   to   = "/guides/infectious-diseases/"
   status = 301
+
+# Redirect sitemap.xml → sitemap-index.xml
+[[redirects]]
+  from = "/sitemap.xml"
+  to   = "/sitemap-index.xml"
+  status = 301
