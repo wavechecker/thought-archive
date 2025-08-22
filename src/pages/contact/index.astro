@@ -1,0 +1,22 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Contact",
+  description: "Get in touch with Patient Guide",
+};
+---
+
+<Layout {frontmatter}>
+  <h1>Contact</h1>
+  <p>Say hi at <a href="mailto:hello@patientguide.io">hello@patientguide.io</a>.</p>
+
+  <!-- Optional: simple static form that posts to /contact/thanks -->
+  <form action="/contact/thanks/" method="get" style="margin-top:1rem;">
+    <label>
+      Your message (not actually sent — placeholder)
+      <textarea name="message" rows="4" style="display:block;width:100%;margin-top:.5rem;"></textarea>
+    </label>
+    <button type="submit" style="margin-top:.75rem;">Send</button>
+  </form>
+</Layout>
