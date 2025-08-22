@@ -139,3 +139,20 @@
   from = "/sitemap.xml"
   to   = "/sitemap-index.xml"
   status = 301
+
+# --- Bowel Cancer hub → Cancer hub ---
+[[redirects]]
+  from = "/guides/bowel-cancer"
+  to   = "/guides/cancer/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/bowel-cancer/"
+  to   = "/guides/cancer/"
+  status = 301
+
+# Redirect sitemap.xml → sitemap-index.xml (keeps SEO tools happy)
+[[redirects]]
+  from = "/sitemap.xml"
+  to   = "/sitemap-index.xml"
+  status = 301
