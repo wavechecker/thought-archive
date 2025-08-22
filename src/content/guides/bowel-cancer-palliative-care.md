@@ -10,7 +10,7 @@ tags: ["cancer", "bowel cancer", "palliative care", "support", "patientguide"]
 
 # Palliative Care in Bowel Cancer — Comfort, Dignity, and Support
 
-For some people with bowel cancer, treatment cannot fully remove or control the disease. **Palliative care** is not about “giving up.” It’s about shifting the focus from cure to **comfort, dignity, and quality of life** — for both patients and their families.
+For some people with bowel cancer, treatment cannot fully remove or control the disease. **Palliative care** is not about "giving up." It's about shifting the focus from cure to **comfort, dignity, and quality of life** — for both patients and their families.
 
 ---
 
@@ -24,13 +24,13 @@ For some people with bowel cancer, treatment cannot fully remove or control the 
 
 ## Myths vs. Facts About Palliative Care
 
-- **Myth:** Palliative care means there’s nothing more to be done.  
+- **Myth:** Palliative care means there's nothing more to be done.  
   **Fact:** It means care shifts to focus on comfort, dignity, and quality of life — often alongside ongoing treatments.  
 
-- **Myth:** It’s only for the very end of life.  
+- **Myth:** It's only for the very end of life.  
   **Fact:** Palliative care can start early, even at diagnosis of advanced cancer, to help with symptoms and support.  
 
-- **Myth:** Accepting palliative care means “giving up.”  
+- **Myth:** Accepting palliative care means "giving up."  
   **Fact:** It means choosing to live as well as possible, for as long as possible, with expert support.  
 
 - **Myth:** Palliative care is only about the patient.  
@@ -52,7 +52,7 @@ Palliative care is provided by a **multidisciplinary team**: doctors, nurses, so
 ---
 
 ## When Palliative Care Starts
-- It does not only begin at the “end of life.”  
+- It does not only begin at the "end of life."  
 - Palliative care can be introduced **alongside treatment**, to improve comfort and support.  
 - As the illness progresses, the balance may shift more fully to comfort-focused care.  
 
@@ -61,12 +61,12 @@ Palliative care is provided by a **multidisciplinary team**: doctors, nurses, so
 ## Facing End of Life
 - **Advance care planning**: Patients are encouraged to express their wishes for treatment, place of care, and decision-making.  
 - **Hospice care**: Focuses on comfort and dignity in the final months or weeks.  
-- **Support for families**: Grief support and bereavement services often continue after a patient’s death.  
+- **Support for families**: Grief support and bereavement services often continue after a patient's death.  
 
 ---
 
 ## Takeaway
-Palliative care is about living as well as possible, for as long as possible, even when cure is not an option. It is centred on the patient’s goals and values, offering relief, support, and dignity.  
+Palliative care is about living as well as possible, for as long as possible, even when cure is not an option. It is centred on the patient's goals and values, offering relief, support, and dignity.  
 
 ---
 

@@ -20,7 +20,7 @@ updatedDate: '2025-08-13T16:26:30+04:00'
 
 # Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)
 
-**Hypoglycaemia** (a “hypo”) usually means **BGL < 4.0 mmol/L** in people using insulin. Treat **quickly** and **re-check** to avoid worsening lows. Always follow your **personal diabetes plan**; seek medical help if unsure or if recovery is not prompt.
+**Hypoglycaemia** (a "hypo") usually means **BGL < 4.0 mmol/L** in people using insulin. Treat **quickly** and **re-check** to avoid worsening lows. Always follow your **personal diabetes plan**; seek medical help if unsure or if recovery is not prompt.
 
 > **Safety first:** If driving or operating machinery, **stop immediately** and treat the hypo. Do not resume until glucose has clearly recovered and you feel well.
 
@@ -47,7 +47,7 @@ updatedDate: '2025-08-13T16:26:30+04:00'
 - Discuss **overnight basal adjustments** with your diabetes team if hypos are recurring.
 
 ## CGM vs no CGM
-- **With CGM:** Treat based on **low alerts** and **your symptoms**. Confirm with finger-stick if readings don’t match how you feel, or after severe hypos.  
+- **With CGM:** Treat based on **low alerts** and **your symptoms**. Confirm with finger-stick if readings don't match how you feel, or after severe hypos.  
 - **Without CGM:** Keep meter and hypo kit **with you**; test more often when unwell, after exercise, alcohol, or dose changes.
 
 ## Preventing future hypos
@@ -56,7 +56,7 @@ updatedDate: '2025-08-13T16:26:30+04:00'
 - During **illness**, balance insulin, fluids, and carb intake; avoid stacking rapid-acting insulin without planned carbs.
 
 ## When to seek medical help
-- Repeated hypos or **no warning symptoms (“hypo unawareness”)**  
+- Repeated hypos or **no warning symptoms ("hypo unawareness")**  
 - **Severe hypo** needing glucagon/help from others  
 - Hypos occurring with **vomiting**, **diarrhoea**, or **infection**  
 - Any time you are **concerned** or unsure how to adjust insulin

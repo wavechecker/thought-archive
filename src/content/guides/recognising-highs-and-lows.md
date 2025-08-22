@@ -35,13 +35,13 @@ Early recognition keeps you safe and prevents severe events. Learn your personal
 **Common symptoms:** thirst, frequent urination, tiredness, blurred vision, headache.  
 **Immediate action:**  
 - Give a **correction dose** per your plan.  
-- **Hydrate**, and **check ketones** if BGL ≥15 mmol/L or if you’re unwell/vomiting.  
+- **Hydrate**, and **check ketones** if BGL ≥15 mmol/L or if you're unwell/vomiting.  
 - **Pump users:** consider **site failure** — give correction by **pen/syringe** and **change set** if ketones present.
 
 ## Patterns and prevention
 - Track events: before meals, after meals, overnight, with exercise, during illness.  
 - Review **ICR**, correction factor, and **basal** with your team if patterns persist.  
-- Consider technology (CGM/pump) or refresher education if you’re struggling.
+- Consider technology (CGM/pump) or refresher education if you're struggling.
 
 ## When to seek help
 - Repeated hypos or **loss of warning signs**  

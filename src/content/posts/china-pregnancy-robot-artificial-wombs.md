@@ -19,16 +19,16 @@ And while Western societies squabble over reproductive rights, gender norms, and
 ---
 
 ## 📉 The Demographic Cliff  
-Japan just reported its largest population drop on record: over 900,000 people in a single year. South Korea’s fertility rate is below 0.8 — the lowest ever recorded in a developed country. China’s population is now shrinking faster than expected, with a rapidly aging base and not enough young people to replenish the workforce or sustain economic growth.  
+Japan just reported its largest population drop on record: over 900,000 people in a single year. South Korea's fertility rate is below 0.8 — the lowest ever recorded in a developed country. China's population is now shrinking faster than expected, with a rapidly aging base and not enough young people to replenish the workforce or sustain economic growth.  
 
 For decades, governments tried carrots: subsidies, baby bonuses, housing support. Then came the sticks: restrictions on abortion, penalties for childlessness, surveillance of reproductive-age women. Still, birth rates declined.  
 
-Why? Because the root problem isn’t just economics — it’s cultural, psychological, and structural:  
+Why? Because the root problem isn't just economics — it's cultural, psychological, and structural:  
 
 - Women are delaying or forgoing childbirth due to career pressure, unequal domestic burdens, or lack of support.  
 - Urban life is expensive and atomized.  
 - Men, especially in East Asia, are struggling with stagnant wages, social isolation, and a collapsing sense of identity.  
-- And no one wants to raise a child into a world they’re not sure will exist.  
+- And no one wants to raise a child into a world they're not sure will exist.  
 
 ---
 
@@ -42,7 +42,7 @@ At first glance, they promise liberation:
 - No maternal mortality.  
 - Equal biological roles for both parents.  
 
-But they also open a Pandora’s box of political possibilities:  
+But they also open a Pandora's box of political possibilities:  
 
 - What if states start subsidizing industrial reproduction to offset declining fertility?  
 - What if corporations begin offering artificial wombs to keep high-performing women at work?  
@@ -52,11 +52,11 @@ But they also open a Pandora’s box of political possibilities:
 ---
 
 ## 🇨🇳 Why China Might Go First  
-China’s government is pragmatic, long-termist, and increasingly authoritarian. It has a long history of population engineering:  
+China's government is pragmatic, long-termist, and increasingly authoritarian. It has a long history of population engineering:  
 
 - The One-Child Policy, enforced through surveillance, forced abortions, and sterilizations.  
 - The recent shift to a Three-Child Policy, with propaganda campaigns and economic incentives.  
-- Crackdowns on abortion, IVF, and “non-productive lifestyles.”  
+- Crackdowns on abortion, IVF, and "non-productive lifestyles."  
 
 It also has the infrastructure to deploy artificial wombs at scale:  
 
@@ -68,12 +68,12 @@ It also has the infrastructure to deploy artificial wombs at scale:
 Combine this with a looming demographic collapse, and ectogenesis becomes not a fringe option — but a national survival strategy.  
 
 Imagine it:  
-“State-supported gestation hubs” in urban megacities.  
+"State-supported gestation hubs" in urban megacities.  
 Government-owned artificial womb farms.  
 Children raised from conception to adolescence in systems designed for ideological conformity and economic output.  
 
-Sound dystopian? That’s because it is.  
-But it’s also disturbingly plausible.  
+Sound dystopian? That's because it is.  
+But it's also disturbingly plausible.  
 
 ---
 
@@ -86,14 +86,14 @@ In the West, artificial wombs will spark intense debate:
 
 But China may not wait for those questions to be answered.  
 
-If artificial wombs arrive during an existential population crisis — and they likely will — there won’t be time for philosophy. Only policy. And power.  
+If artificial wombs arrive during an existential population crisis — and they likely will — there won't be time for philosophy. Only policy. And power.  
 
 This is the paradox we face:  
 Technological progress may liberate us from biology — only to bind us in new chains.  
 The womb, once the most private space, may become the next frontier of state power.  
 
-It won’t start with mandates.  
-It will start with “support.”  
+It won't start with mandates.  
+It will start with "support."  
 With subsidies.  
 With incentives.  
 With emergency measures.  
@@ -108,4 +108,4 @@ Artificial wombs are coming.
 And if China goes first, the rest of the world may follow — not because they want to, but because they have to.  
 
 The question is no longer *if* —  
-It’s *who controls the cradle when nature no longer does.*  
+It's *who controls the cradle when nature no longer does.*  

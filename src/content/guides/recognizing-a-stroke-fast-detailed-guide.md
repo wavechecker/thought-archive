@@ -43,7 +43,7 @@ Use **FAST**: Face droop, Arm weakness, Speech difficulty — **Time to call eme
 - **Do not** start aspirin if hemorrhage is possible (e.g., thunderclap headache)  
 - Stay with the person; keep airway clear
 
-## After a TIA (“mini-stroke”)
+## After a TIA ("mini-stroke")
 - Symptoms may resolve, but near-term risk of major stroke is high → **urgent evaluation**
 
 ## References (plain text, no live links)

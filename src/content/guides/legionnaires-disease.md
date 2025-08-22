@@ -3,15 +3,15 @@ draft: true
 ---
 
 ---
-title: "Legionnaires’ Disease — Causes, Symptoms, and Prevention"
-description: "What Legionnaires’ disease is, how it spreads, symptoms to watch for, who’s at risk, and how to reduce exposure — especially when traveling."
+title: "Legionnaires' Disease — Causes, Symptoms, and Prevention"
+description: "What Legionnaires' disease is, how it spreads, symptoms to watch for, who's at risk, and how to reduce exposure — especially when traveling."
 category: "Infectious Diseases"
 publishDate: "2025-08-15"
 draft: false
 tags: ["legionella", "pneumonia", "travel", "water systems"]
 ---
 
-Legionnaires’ disease is a **severe pneumonia** caused by *Legionella* bacteria. People get sick by **inhaling tiny water droplets** containing the bacteria — not from drinking water and **not from person-to-person spread** (extremely rare). Outbreaks often trace back to **poorly maintained water systems**.
+Legionnaires' disease is a **severe pneumonia** caused by *Legionella* bacteria. People get sick by **inhaling tiny water droplets** containing the bacteria — not from drinking water and **not from person-to-person spread** (extremely rare). Outbreaks often trace back to **poorly maintained water systems**.
 
 ## How infection happens
 - **Aerosolized water** from cooling towers, decorative fountains, showers, hot tubs/spas, humidifiers, or complex plumbing.
@@ -37,7 +37,7 @@ Legionnaires’ disease is a **severe pneumonia** caused by *Legionella* bacteri
 - Tell clinicians about **recent travel or exposure to water systems**; this helps trigger **Legionella testing**.
 - Early diagnosis and **appropriate antibiotics** improve outcomes.
 
-> This guide is for general information and isn’t a substitute for professional medical advice. Seek emergency care for severe breathing difficulty, confusion, or chest pain.
+> This guide is for general information and isn't a substitute for professional medical advice. Seek emergency care for severe breathing difficulty, confusion, or chest pain.
 
 **Related Guides**
 - [Flu vs. Common Cold — How to Tell the Difference](/guides/flu-vs-cold-differences/)

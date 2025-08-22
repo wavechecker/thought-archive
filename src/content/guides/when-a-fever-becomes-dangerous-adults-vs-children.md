@@ -25,7 +25,7 @@ The danger level depends on age, symptoms, and underlying health.
 ## Children — seek urgent care if:
 - Temp **>38°C (100.4°F)** in infants under 3 months  
 - Persistent crying or irritability  
-- Rash that doesn’t fade when pressed  
+- Rash that doesn't fade when pressed  
 - Seizures  
 
 ## Self-care for mild fevers
@@ -38,7 +38,7 @@ The danger level depends on age, symptoms, and underlying health.
 - **Ibuprofen:** Can also reduce fever and ease pain. Suitable for adults and children over 6 months.  
   - Avoid in people with stomach ulcers, kidney problems, or certain heart conditions.  
   - Do not give to children with suspected **chickenpox** or **dehydration** unless advised by a doctor.  
-- *Tip:* It’s usually fine to use **either paracetamol or ibuprofen**, but alternating them isn’t usually needed unless a doctor specifically recommends it.  
+- *Tip:* It's usually fine to use **either paracetamol or ibuprofen**, but alternating them isn't usually needed unless a doctor specifically recommends it.  
 
 ## References
 - NHS — fever in adults and children  

@@ -31,7 +31,7 @@ A bowel cancer diagnosis changes life in many ways. Treatment can be demanding, 
 - **Emotional Wellbeing**  
   - Anxiety and fatigue are normal  
   - Counselling, support groups, mindfulness, and gentle exercise help  
-  - “Chemo brain” (memory lapses, brain fog) often improves over time  
+  - "Chemo brain" (memory lapses, brain fog) often improves over time  
 
 - **Practical Life Adjustments**  
   - Stoma nurses offer guidance and support  
@@ -42,7 +42,7 @@ A bowel cancer diagnosis changes life in many ways. Treatment can be demanding, 
   - Regular colonoscopy and check-ups  
   - Blood tests or scans to monitor for recurrence  
 
-> **Takeaway:** Recovery is not just medical — it’s physical, emotional, and social. Support is available every step of the way.
+> **Takeaway:** Recovery is not just medical — it's physical, emotional, and social. Support is available every step of the way.
 
 ---
 
@@ -67,8 +67,8 @@ Different treatments bring different challenges:
 
 ## Emotional and Mental Health
 - **Shock and anxiety** are normal after diagnosis.  
-- **Fatigue and “chemo brain”** can affect concentration and mood.  
-- **Support systems**: Counselling, support groups, or talking to others who’ve had bowel cancer can reduce isolation.  
+- **Fatigue and "chemo brain"** can affect concentration and mood.  
+- **Support systems**: Counselling, support groups, or talking to others who've had bowel cancer can reduce isolation.  
 - **Mind-body strategies**: Gentle exercise, mindfulness, or relaxation techniques may help manage stress.  
 
 ---
@@ -97,7 +97,7 @@ After treatment, regular check-ups are essential:
 ---
 
 ## Takeaway
-Living with bowel cancer involves more than medical treatment — it’s about adapting physically, emotionally, and socially. Support is available at every stage: from your healthcare team, from dietitians and stoma nurses, and from peers who’ve walked the same path.  
+Living with bowel cancer involves more than medical treatment — it's about adapting physically, emotionally, and socially. Support is available at every stage: from your healthcare team, from dietitians and stoma nurses, and from peers who've walked the same path.  
 
 You are not alone in this journey.  
 

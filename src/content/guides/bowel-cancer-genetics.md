@@ -48,7 +48,7 @@ Some rare inherited syndromes carry a very high risk:
 ---
 
 ## Takeaway
-Family history and genetics don’t guarantee you’ll develop bowel cancer, but they change your risk level and influence screening recommendations. If you’re concerned, talk to your doctor or a genetic counsellor — early awareness saves lives.  
+Family history and genetics don't guarantee you'll develop bowel cancer, but they change your risk level and influence screening recommendations. If you're concerned, talk to your doctor or a genetic counsellor — early awareness saves lives.  
 
 ---
 

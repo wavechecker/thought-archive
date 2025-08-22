@@ -22,13 +22,13 @@ updatedDate: '2025-08-13T16:26:30+04:00'
 
 **Diabetic ketoacidosis (DKA)** is a **medical emergency**. It develops when the body lacks insulin, builds up **ketones**, and becomes dehydrated/acidotic. Illness, missed insulin, or pump delivery problems are common triggers.
 
-> **Never stop basal insulin.** Seek **urgent care** if symptoms are severe, you **can’t keep fluids down**, or ketones **keep rising** despite extra insulin and fluids.
+> **Never stop basal insulin.** Seek **urgent care** if symptoms are severe, you **can't keep fluids down**, or ketones **keep rising** despite extra insulin and fluids.
 
 ## Warning signs
 - **Thirst**, dry mouth, frequent urination  
 - **Nausea/vomiting**, abdominal pain  
 - **Deep/rapid breathing**, **fruity breath**, **drowsiness/confusion**  
-- BGL often high, but be alert even if glucose isn’t very high in early illness
+- BGL often high, but be alert even if glucose isn't very high in early illness
 
 ## Ketone checks (blood preferred)
 - Check **any time you feel unwell**, are **vomiting**, or if BGL is **≥15 mmol/L**.  
@@ -43,7 +43,7 @@ updatedDate: '2025-08-13T16:26:30+04:00'
 ## Fluids
 - Aim to **prevent dehydration**: small, frequent sips (every 5–10 min).  
 - If **BGL high / ketones present** → use **unsweetened fluids** (water, broths, sugar-free oral rehydration).  
-- If **BGL low/normal** and you can’t eat → **carbohydrate-containing fluids** to avoid hypos.
+- If **BGL low/normal** and you can't eat → **carbohydrate-containing fluids** to avoid hypos.
 
 ## Insulin actions
 
@@ -59,9 +59,9 @@ updatedDate: '2025-08-13T16:26:30+04:00'
 - Give **correction rapid-acting insulin** per your sick-day plan.  
 - **Recheck** BGL & ketones in **1–2 h** and repeat per plan; seek help if not improving.
 
-## Do / Don’t
+## Do / Don't
 - **Do:** keep testing; keep taking insulin; maintain fluids; act early.  
-- **Don’t:** delay care with **persistent vomiting**, **worsening abdominal pain**, **drowsiness**, or **breathing changes** — **go to hospital**.
+- **Don't:** delay care with **persistent vomiting**, **worsening abdominal pain**, **drowsiness**, or **breathing changes** — **go to hospital**.
 
 ## For children and teens
 - DKA can progress **quickly**. If vomiting or unable to keep fluids down, **seek urgent medical advice early**, even with moderate ketones. Ensure caregivers know the **sick-day plan**, where supplies are, and how to contact your diabetes team.

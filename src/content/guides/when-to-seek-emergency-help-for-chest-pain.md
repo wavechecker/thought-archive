@@ -1,13 +1,15 @@
 ---
 title: "When to Seek Emergency Help for Chest Pain"
-slug: "chest-pain-emergency-help"
-description: "Know the warning signs of chest pain that require immediate medical attention."
-category: "Heart & Circulation"
-publishDate: "2025-08-13"
-updatedDate: "2025-08-20"
+slug: "when-to-seek-emergency-help-for-chest-pain"
+description: "How to tell if chest pain is an emergency and the actions to take right away."
+publishDate: "2025-08-12"
+updatedDate: "2025-08-12"
 draft: false
-tags: ["cardiology", "emergencies", "heart", "patientguide"]
+tags: ["chest pain", "emergency", "patientguide"]
+related:
+  - /guides/early-warning-signs-of-a-heart-attack
 ---
+
 
 # When to Seek Emergency Help for Chest Pain
 
@@ -31,7 +33,7 @@ Chest pain can be harmless (muscle strain, heartburn) or a sign of something ser
 - If not allergic and no contraindications, **chew 1 adult aspirin (300–325 mg)**  
 - Keep a list of medicines and allergies handy
 
-## When it’s probably not urgent
+## When it's probably not urgent
 - Brief, sharp pain that worsens with touch or twisting and **goes away quickly**  
 - Reproducible muscle tenderness after activity  
 

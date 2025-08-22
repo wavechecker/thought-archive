@@ -20,7 +20,7 @@ Being unwell with Type 1 diabetes raises your risk of high blood glucose and **d
 ---
 
 ## Core Rules
-- **Never stop basal insulin** — even if you’re not eating.  
+- **Never stop basal insulin** — even if you're not eating.  
 - **Check blood glucose more often** (every 2–4 hours, or as advised by your team).  
 - **Check ketones** if BGL is high or if you feel unwell.  
 
@@ -28,7 +28,7 @@ Being unwell with Type 1 diabetes raises your risk of high blood glucose and **d
 
 ## Fluids & Carbs
 - Take **small, frequent sips** of sugar-free fluids to stay hydrated.  
-- If you can’t eat normally, use **sick-day carb options** (juices, glucose drinks, oral rehydration solutions) to prevent ketosis.  
+- If you can't eat normally, use **sick-day carb options** (juices, glucose drinks, oral rehydration solutions) to prevent ketosis.  
 
 ---
 
@@ -44,7 +44,7 @@ Being unwell with Type 1 diabetes raises your risk of high blood glucose and **d
 - Vomiting, abdominal pain, or drowsiness  
 - Rapid or deep breathing (possible DKA)  
 
-⚠️ Don’t wait — go to emergency services if these appear.  
+⚠️ Don't wait — go to emergency services if these appear.  
 
 ---
 

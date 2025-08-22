@@ -29,10 +29,10 @@ tags: ["tetanus", "vaccination", "wounds", "booster"]
 - Animal bites may also require **rabies PEP** → see our rabies guide.
 
 ## Symptoms to watch for
-- **Jaw stiffness (“lockjaw”)**, muscle spasms, trouble swallowing, headache, fever.
+- **Jaw stiffness ("lockjaw")**, muscle spasms, trouble swallowing, headache, fever.
 - Symptoms can appear from **3 days to 3 weeks** after injury (sometimes longer).
 
-> Follow local immunization schedules and your clinician’s advice. This guide is general information only.
+> Follow local immunization schedules and your clinician's advice. This guide is general information only.
 
 **Related Guides**
 - [Rabies — Risks for Travellers and When to Seek Urgent Care](/guides/rabies-risks-travel-and-urgent-care/)

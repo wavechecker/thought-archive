@@ -10,7 +10,7 @@ publishDate: '2025-08-13T16:37:29+04:00'
 updatedDate: '2025-08-13T16:37:29+04:00'
 ---
 
-Being told you have **Type 1 diabetes** can feel overwhelming. There’s a lot to learn, new routines to build, and emotions to process. But with the right information, support, and daily habits, it is absolutely possible to live a full, healthy, and active life. Thousands of people around the world manage Type 1 diabetes successfully every day — and so can you.
+Being told you have **Type 1 diabetes** can feel overwhelming. There's a lot to learn, new routines to build, and emotions to process. But with the right information, support, and daily habits, it is absolutely possible to live a full, healthy, and active life. Thousands of people around the world manage Type 1 diabetes successfully every day — and so can you.
 
 ## 1. Understanding Your Diagnosis
 - **Type 1 diabetes** is an autoimmune condition. Your body no longer produces insulin, a hormone needed to move glucose (sugar) from your blood into your cells for energy.
@@ -23,7 +23,7 @@ Being told you have **Type 1 diabetes** can feel overwhelming. There’s a lot t
 - **Diabetes Educator** – teaches you how to check blood glucose, give insulin, and manage food and activity.
 - **Dietitian** – guides you on balanced eating and carbohydrate counting.
 - **GP / Family Doctor** – supports your overall health.
-- **Mental Health Support** – adjusting to a new diagnosis can be emotionally challenging. It’s OK to ask for help.
+- **Mental Health Support** – adjusting to a new diagnosis can be emotionally challenging. It's OK to ask for help.
 
 ## 3. Essential Skills to Learn Early
 1. **Blood Glucose Testing** – learn how and when to check your levels.
@@ -35,7 +35,7 @@ Being told you have **Type 1 diabetes** can feel overwhelming. There’s a lot t
 5. **Emergency Actions** – treating hypos quickly, checking for ketones during highs.
 
 ## 4. Emotional Wellbeing
-- It’s normal to feel fear, frustration, or sadness. You are learning to manage a life-long condition, and that takes time.
+- It's normal to feel fear, frustration, or sadness. You are learning to manage a life-long condition, and that takes time.
 - Connecting with others who live with Type 1 can help. Many find online support groups, community programs, or diabetes camps helpful.
 - Celebrate small wins — every step in learning your care routine is a success.
 

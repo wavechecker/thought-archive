@@ -12,11 +12,11 @@ draft: false
 tags: ["Type 1 Diabetes", "patientguide", "insulin"]
 ---
 
-Insulin delivery comes down to two things: **the type of insulin** you’re using, and **the device you use to inject it**. Get both right and daily management becomes more predictable and safer.
+Insulin delivery comes down to two things: **the type of insulin** you're using, and **the device you use to inject it**. Get both right and daily management becomes more predictable and safer.
 
 ## 1. Insulin Types
 
-> Names vary by country — check what’s available locally.
+> Names vary by country — check what's available locally.
 
 - **Ultra-rapid/rapid-acting (bolus):** lispro (*Humalog, Lyumjev*), aspart (*NovoRapid/Novolog, Fiasp*), glulisine (*Apidra*).  
   *Onset:* 5–15 min · *Peak:* ~1 hr · *Duration:* 3–5 hrs.
@@ -57,8 +57,8 @@ Insulin delivery comes down to two things: **the type of insulin** you’re usin
 - **Hypo plan:** always carry fast carbs; recheck in 15 min; follow with slower carbs.  
 - **Illness/sick days:** never stop basal; check ketones when high or unwell.  
 - **Storage:** unopened insulin in fridge (2–8 °C); in-use pens/vials at room temp (check expiry window). Avoid heat/freeze.  
-- **Driving:** check BGL before driving; don’t drive if low until recovered.  
-- **Units:** concentrated insulins (U-200/U-300) still dose in *units* — don’t transfer from pens to syringes.  
+- **Driving:** check BGL before driving; don't drive if low until recovered.  
+- **Units:** concentrated insulins (U-200/U-300) still dose in *units* — don't transfer from pens to syringes.  
 
 ## 4. Related Guides
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)  

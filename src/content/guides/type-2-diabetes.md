@@ -8,10 +8,10 @@ publishDate: 2025-08-14
 updatedDate: 2025-08-14
 ---
 
-Type 2 diabetes is a condition where your body resists insulin or doesn’t make enough of it, leading to high blood sugar.
+Type 2 diabetes is a condition where your body resists insulin or doesn't make enough of it, leading to high blood sugar.
 
 **Summary**  
-It’s the most common form of diabetes and is often linked to lifestyle, though genetics also play a role.
+It's the most common form of diabetes and is often linked to lifestyle, though genetics also play a role.
 
 ## Symptoms
 

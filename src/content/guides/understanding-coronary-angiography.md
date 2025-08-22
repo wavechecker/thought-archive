@@ -1,7 +1,7 @@
 ---
 title: "Understanding Coronary Angiography"
 slug: "understanding-coronary-angiography"
-description: "What coronary angiography is, when it’s used, and what to expect before, during, and after the procedure."
+description: "What coronary angiography is, when it's used, and what to expect before, during, and after the procedure."
 category: "Heart & Circulation"
 publishDate: "2025-08-20"
 updatedDate: "2025-08-21"
@@ -15,7 +15,7 @@ tags: ["Heart & Circulation", "Cardiology", "Angiography", "patientguide"]
 
 ---
 
-## When it’s used
+## When it's used
 
 Doctors may recommend angiography if you have:
 
@@ -39,13 +39,13 @@ Doctors may recommend angiography if you have:
 
 - **Fasting** — usually no food or drink for 6–8 hours before  
 - **Medications** — your doctor may adjust blood thinners, diabetes medicines, or ask you to take aspirin  
-- **Allergies** — tell your team if you’ve had a reaction to contrast dye, iodine, or shellfish  
+- **Allergies** — tell your team if you've had a reaction to contrast dye, iodine, or shellfish  
 
 ---
 
 ## Recovery
 
-- You’ll rest in a recovery area for a few hours.  
+- You'll rest in a recovery area for a few hours.  
 - Most people go home the same day (if stable).  
 - Avoid heavy lifting or strenuous activity for 1–2 days, especially if the groin was used.  
 - Watch for bleeding, swelling, or unusual pain at the catheter site.  

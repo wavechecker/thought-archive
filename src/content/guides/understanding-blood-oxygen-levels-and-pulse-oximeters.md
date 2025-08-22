@@ -23,11 +23,11 @@ Normal SpO₂ is usually **95–100%** at sea level. Readings **≤92% at rest**
 ## Normal values and limits
 - **Healthy adults (sea level):** typically **95–100%**  
 - **Concerning:** **<92–93%** at rest (context matters; follow your plan)  
-- Chronic lung disease or altitude may lower “normal” (follow clinician guidance)
+- Chronic lung disease or altitude may lower "normal" (follow clinician guidance)
 
 ## How to measure accurately
 - Warm hands; remove nail polish/false nails  
-- Rest 5 minutes; sit still and **don’t talk**  
+- Rest 5 minutes; sit still and **don't talk**  
 - Keep the probe steady until the reading stabilizes  
 - If numbers jump, take several readings and average
 

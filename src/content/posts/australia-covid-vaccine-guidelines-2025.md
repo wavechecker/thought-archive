@@ -1,16 +1,16 @@
 ---
 title: "COVID-19 Vaccination Guidelines in Australia (2025)"
 slug: "australia-covid-vaccine-guidelines-2025"
-description: "ATAGI’s 2025 recommendations on COVID-19 vaccines for children and adults in Australia, and how they diverge from U.S. pediatric guidance."
+description: "ATAGI's 2025 recommendations on COVID-19 vaccines for children and adults in Australia, and how they diverge from U.S. pediatric guidance."
 publishDate: 2025-08-21
 tags: ["COVID-19", "Australia", "Vaccination", "ATAGI", "Pediatrics", "Public Health"]
 ---
 
 # COVID-19 Vaccination Guidelines in Australia (2025)
 
-*See also: [The mRNA Vaccine War Isn’t Over — Pediatrics Just Drew a New Line](/posts/mRNA-vaccine-war-pediatrics-2025)*
+*See also: [The mRNA Vaccine War Isn't Over — Pediatrics Just Drew a New Line](/posts/mRNA-vaccine-war-pediatrics-2025)*
 
-Australia’s approach to COVID-19 vaccination has diverged from the U.S. and Europe in 2025.  
+Australia's approach to COVID-19 vaccination has diverged from the U.S. and Europe in 2025.  
 While the **American Academy of Pediatrics (AAP)** now recommends vaccination for all children 6–23 months, Australia has taken a far more conservative stance.
 
 ---

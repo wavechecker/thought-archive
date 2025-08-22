@@ -14,7 +14,7 @@ related:
 
 # Emergency Actions — Hypos, Highs, and Ketones
 
-## Severe hypo (can’t swallow / unconscious / seizure)
+## Severe hypo (can't swallow / unconscious / seizure)
 - **Do not** give food or fluids by mouth.
 - **Glucagon** (nasal or injection) if available and trained.
 - **Call emergency services.**
@@ -27,12 +27,12 @@ related:
 - **Seek urgent care** if ketones ≥ **3.0 mmol/L**, rising ketones, or **vomiting, pain, drowsiness, rapid breathing**.
 
 ## Vomiting / unable to keep fluids down
-- High risk for **DKA** even if BGL isn’t very high. Try small frequent sips; if not tolerated, **seek urgent help**.
+- High risk for **DKA** even if BGL isn't very high. Try small frequent sips; if not tolerated, **seek urgent help**.
 - **Do not stop basal insulin.**
 
 ## Driving safety
 - If you feel low or CGM alarms low → **pull over and treat.**
-- Don’t drive again until BGL has clearly recovered **and** you feel well.
+- Don't drive again until BGL has clearly recovered **and** you feel well.
 
 ## Emergency kit checklist
 - Glucose tablets/gel; small juice or regular soft drink  

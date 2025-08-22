@@ -24,7 +24,7 @@ The danger level depends on age, symptoms, and underlying health.
 
 - Temp **>38°C (100.4°F)** in infants under 3 months  
 - Persistent crying or irritability  
-- Rash that doesn’t fade when pressed  
+- Rash that doesn't fade when pressed  
 - Seizures
 
 ## Self-care for mild fevers

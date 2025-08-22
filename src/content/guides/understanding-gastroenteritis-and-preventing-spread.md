@@ -11,9 +11,9 @@ draft: false
 
 # Understanding Gastroenteritis and Preventing Spread
 
-**Gastroenteritis** (“stomach flu”) is inflammation of the stomach and intestines, usually caused by viruses, bacteria, or parasites.  
+**Gastroenteritis** ("stomach flu") is inflammation of the stomach and intestines, usually caused by viruses, bacteria, or parasites.  
 
-It spreads quickly in households, childcare centres, and aged care settings — but it’s usually short-lived.
+It spreads quickly in households, childcare centres, and aged care settings — but it's usually short-lived.
 
 ---
 

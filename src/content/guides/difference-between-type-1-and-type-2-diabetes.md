@@ -18,12 +18,12 @@ While both Type 1 and Type 2 diabetes involve high blood sugar levels, the cause
 - **Prevention:** Currently none — focus is on management.  
 
 ### Type 2 Diabetes
-- **Cause:** The body becomes resistant to insulin or doesn’t make enough.  
+- **Cause:** The body becomes resistant to insulin or doesn't make enough.  
 - **Onset:** Usually in adults over 40, but increasingly seen in younger people.  
 - **Treatment:** Lifestyle changes, oral medicines, sometimes insulin.  
 - **Prevention:** Healthy diet, regular exercise, maintaining a healthy weight.  
 
 **Key difference:** Type 1 is an autoimmune condition requiring insulin from diagnosis; Type 2 often develops gradually and can sometimes be managed without insulin early on.  
 
-If you’re unsure which type you have, see your healthcare provider — accurate diagnosis guides effective treatment.
+If you're unsure which type you have, see your healthcare provider — accurate diagnosis guides effective treatment.
 

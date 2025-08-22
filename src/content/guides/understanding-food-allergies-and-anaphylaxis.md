@@ -40,7 +40,7 @@ Food allergies occur when the immune system overreacts to a food protein.
 - Use **epinephrine auto-injector immediately**  
 - Call **emergency services**  
 - Lie the person flat unless breathing is difficult  
-- A second dose of epinephrine may be required if symptoms don’t improve after 5–10 minutes  
+- A second dose of epinephrine may be required if symptoms don't improve after 5–10 minutes  
 
 ---
 

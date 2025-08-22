@@ -14,7 +14,7 @@ This follow-up explores what comes next.
 ---
 
 ## Why China is Leading
-China’s rapid progress isn’t accidental. Several forces are converging:
+China's rapid progress isn't accidental. Several forces are converging:
 
 - **Demographic pressure**: With a shrinking birth rate, Beijing views reproductive technology as a national security issue.  
 - **State support**: Unlike in the West, where bioethics boards slow progress, China often prioritises scientific dominance over regulation.  
@@ -40,7 +40,7 @@ If China achieves reliable human ectogenesis, the impact could be profound:
 Artificial wombs carry as many risks as promises:
 
 - Who controls the embryos—**parents, the state, or corporations**?  
-- Will children born of ectogenesis face **social stigma** or be seen as “different”?  
+- Will children born of ectogenesis face **social stigma** or be seen as "different"?  
 - Could artificial wombs accelerate **genetic inequality**, with wealthy families selecting traits while others cannot?  
 
 The **bioethical gap** between China and the West may widen, with China pushing ahead while others stall.  

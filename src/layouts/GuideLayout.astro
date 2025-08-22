@@ -1,23 +1,33 @@
 ---
-import { isValidDate, fmt } from "@/lib/date";
-const { Content, data } = Astro.props;
+const url = new URL(Astro.url);
+const fm = Astro.props.frontmatter ?? {};
 
-const d = isValidDate(data.publishDate)
-  ? data.publishDate
-  : (isValidDate(data.updatedDate) ? data.updatedDate : undefined);
+const jsonLdObj = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": fm.title ?? "Untitled",
+  "description": fm.description ?? undefined,
+  "datePublished": fm.publishDate ?? undefined,
+  "dateModified": fm.updatedDate ?? fm.publishDate ?? undefined,
+  "author": { "@type": "Organization", "name": "Thought Archive" },
+  "mainEntityOfPage": url.href
+};
+const jsonLd = JSON.stringify(jsonLdObj);
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{data.title} • PatientGuide</title>
+    <title>{fm.title ?? "Untitled"}</title>
+    <meta name="description" content={fm.description ?? ""} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="application/ld+json">{jsonLd}</script>
   </head>
+
   <body>
-    <article>
-      <h1>{data.title}</h1>
-      { d ? <p><time datetime={d.toISOString()}>{fmt(d)}</time></p> : null }
-      <Content />
-    </article>
+    <main class="prose max-w-3xl mx-auto px-4 py-8">
+      <h1>{fm?.title ?? "Untitled"}</h1>
+      <slot />
+    </main>
   </body>
 </html>

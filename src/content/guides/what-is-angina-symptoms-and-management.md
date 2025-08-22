@@ -11,7 +11,7 @@ tags: ["angina", "heart", "patientguide"]
 
 # What is Angina? Symptoms & Management
 
-**Angina** is chest pain or discomfort caused by reduced blood flow to the heart muscle. It’s a warning sign that your heart isn’t getting enough oxygen — often linked to **coronary artery disease** (narrowing of the arteries that supply the heart).  
+**Angina** is chest pain or discomfort caused by reduced blood flow to the heart muscle. It's a warning sign that your heart isn't getting enough oxygen — often linked to **coronary artery disease** (narrowing of the arteries that supply the heart).  
 
 ---
 
@@ -22,7 +22,7 @@ tags: ["angina", "heart", "patientguide"]
 - **Unstable Angina**  
   Sudden, worsening pain that may occur at rest, last longer, or be more severe than usual. This is a **medical emergency** as it can signal an impending heart attack.  
 
-- **Variant (Prinzmetal’s) Angina**  
+- **Variant (Prinzmetal's) Angina**  
   Caused by temporary spasm of the coronary arteries. Can occur at night or early morning, even without exertion.  
 
 ---
@@ -33,7 +33,7 @@ tags: ["angina", "heart", "patientguide"]
 - Shortness of breath, sweating, nausea, or fatigue  
 - Lasts **minutes, not seconds**  
 
-⚠️ **Call emergency services** if chest pain is new, severe, or different from your usual pattern. Don’t wait it out.  
+⚠️ **Call emergency services** if chest pain is new, severe, or different from your usual pattern. Don't wait it out.  
 
 ---
 

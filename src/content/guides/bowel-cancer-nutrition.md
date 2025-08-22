@@ -10,7 +10,7 @@ tags: ["cancer", "bowel cancer", "nutrition", "diet", "patientguide"]
 
 # Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment
 
-Food choices play a major role in both **reducing risk** and **supporting recovery** from bowel cancer. While there’s no single “anti-cancer diet,” the right nutrition can help your body cope with treatment, maintain strength, and improve quality of life.
+Food choices play a major role in both **reducing risk** and **supporting recovery** from bowel cancer. While there's no single "anti-cancer diet," the right nutrition can help your body cope with treatment, maintain strength, and improve quality of life.
 
 ---
 
@@ -45,7 +45,7 @@ Food choices play a major role in both **reducing risk** and **supporting recove
 ---
 
 ## Takeaway
-Nutrition is not just about reducing cancer risk — it’s about supporting your body during treatment and recovery. Eating well helps maintain energy, strengthen the immune system, and improve overall wellbeing.  
+Nutrition is not just about reducing cancer risk — it's about supporting your body during treatment and recovery. Eating well helps maintain energy, strengthen the immune system, and improve overall wellbeing.  
 
 ---
 

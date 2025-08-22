@@ -40,4 +40,4 @@ This hub brings together all of our bowel cancer guides, from early detection th
 ---
 
 ## Takeaway
-No two patients’ journeys are the same — but knowledge, early detection, and the right support can make a profound difference. Use these guides as a starting point to ask questions, understand your options, and take an active role in your care.
+No two patients' journeys are the same — but knowledge, early detection, and the right support can make a profound difference. Use these guides as a starting point to ask questions, understand your options, and take an active role in your care.

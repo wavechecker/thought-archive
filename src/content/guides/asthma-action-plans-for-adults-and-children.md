@@ -14,7 +14,7 @@ tags: ["asthma", "respiratory", "patientguide"]
 
 
 An **Asthma Action Plan** is a personalised written guide that helps you recognise worsening asthma and take the right steps to keep it under control.  
-It’s a tool for both **day-to-day management** and **emergency response**.
+It's a tool for both **day-to-day management** and **emergency response**.
 
 ### Why have one?
 - Reduces the risk of hospital visits.

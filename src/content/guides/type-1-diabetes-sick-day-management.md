@@ -23,7 +23,7 @@ updatedDate: '2025-08-13T16:15:28+04:00'
 
 Being unwell can push blood glucose levels (BGLs) up or down and increase the risk of **ketones** and **DKA**. Always follow your **individual diabetes plan** if you have one, and seek medical help early if things are not improving. This guide gives general steps for **pump** and **MDI (injections)** users, with or without **CGM**.
 
-> **Important:** Keep taking insulin unless a clinician tells you otherwise. Illness often means you’ll need **more** insulin, not less. :contentReference[oaicite:0]{index=0}
+> **Important:** Keep taking insulin unless a clinician tells you otherwise. Illness often means you'll need **more** insulin, not less. :contentReference[oaicite:0]{index=0}
 
 ## Summary (quick start)
 - **Check more often:** BGL **every 2–4 hours** while unwell (more often if high ketones/symptoms). :contentReference[oaicite:1]{index=1}  
@@ -36,13 +36,13 @@ Being unwell can push blood glucose levels (BGLs) up or down and increase the ri
 
 ## How illness affects diabetes
 - Illness hormones raise glucose and **increase insulin needs**; dehydration raises ketones. :contentReference[oaicite:6]{index=6}  
-- Vomiting/poor intake can cause **lows** if rapid-acting insulin has been taken but you can’t keep carbs down. Balance **carbs, fluids, and insulin**.
+- Vomiting/poor intake can cause **lows** if rapid-acting insulin has been taken but you can't keep carbs down. Balance **carbs, fluids, and insulin**.
 
 ---
 
 ## Monitoring: what, when, how
 **With CGM:**  
-- Watch **trend arrows** and **alerts**; finger-stick if readings don’t match symptoms or during **ketones**.  
+- Watch **trend arrows** and **alerts**; finger-stick if readings don't match symptoms or during **ketones**.  
 - Check **BGL at least every 2–4 h** (hourly if ketones rising or symptoms worsening). :contentReference[oaicite:7]{index=7}
 
 **Without CGM:**  
@@ -56,7 +56,7 @@ Being unwell can push blood glucose levels (BGLs) up or down and increase the ri
 ## Fluids and food
 - Aim to **prevent dehydration**: small sips every 5–10 min.  
 - If **BGL high** or ketones present → **unsweetened fluids** (water, broth, sugar-free oral rehydration). :contentReference[oaicite:10]{index=10}  
-- If **BGL low/normal** and you **can’t eat** → **carb-containing fluids** (juice, regular soft drink, oral rehydration with glucose) to avoid hypos. :contentReference[oaicite:11]{index=11}
+- If **BGL low/normal** and you **can't eat** → **carb-containing fluids** (juice, regular soft drink, oral rehydration with glucose) to avoid hypos. :contentReference[oaicite:11]{index=11}
 
 ---
 

@@ -26,7 +26,7 @@ A collection of guides covering common heart conditions, treatments, and prevent
 ---
 
 ## How to Use This Hub
-- If you’re scheduled for a **coronary angiogram**, start with that guide to understand what to expect.  
+- If you're scheduled for a **coronary angiogram**, start with that guide to understand what to expect.  
 - After a **heart attack or surgery**, explore **cardiac rehab** and **medication guides**.  
 - If diagnosed with **atrial fibrillation**, review symptoms, risks, and treatment options.  
 - For everyone, **prevention** is key — lifestyle changes and medical checks save lives.  

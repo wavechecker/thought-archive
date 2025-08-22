@@ -46,11 +46,11 @@ Many heart conditions require **long-term medication**. Understanding what your 
 - Relax blood vessels, reduce heart workload, help with angina and blood pressure.  
 - **Examples:** Amlodipine (Norvasc), Diltiazem (Cardizem), Verapamil (Calan, Verelan), Nifedipine (Adalat, Procardia)  
 
-### Diuretics (“Water Pills”)
+### Diuretics ("Water Pills")
 - Help remove excess fluid, reduce blood pressure and swelling.  
 - **Examples:** Furosemide (Lasix), Hydrochlorothiazide (HCTZ), Spironolactone (Aldactone), Indapamide, Chlorthalidone  
 
-### Anticoagulants (“Blood Thinners”)
+### Anticoagulants ("Blood Thinners")
 - Prevent clots from forming or growing larger.  
 - **Examples:** Warfarin (Coumadin), Apixaban (Eliquis), Rivaroxaban (Xarelto), Dabigatran (Pradaxa), Edoxaban (Savaysa)  
 - **Notes:** Require careful monitoring; some increase risk of bleeding.  

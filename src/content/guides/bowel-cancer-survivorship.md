@@ -41,7 +41,7 @@ Completing treatment for bowel cancer is a major milestone. Survivorship is abou
 ---
 
 ## Emotional and Social Wellbeing
-- Anxiety about recurrence is common — this is sometimes called “scanxiety.”  
+- Anxiety about recurrence is common — this is sometimes called "scanxiety."  
 - Support groups, counselling, or mindfulness practices can help.  
 - Survivorship includes rebuilding confidence in work, relationships, and everyday life.  
 
@@ -54,7 +54,7 @@ Completing treatment for bowel cancer is a major milestone. Survivorship is abou
 ---
 
 ## Takeaway
-Survivorship isn’t just about being “cancer-free.” It’s about adapting, monitoring, and thriving after treatment. With regular follow-up and healthy lifestyle changes, many people live long, fulfilling lives after bowel cancer.  
+Survivorship isn't just about being "cancer-free." It's about adapting, monitoring, and thriving after treatment. With regular follow-up and healthy lifestyle changes, many people live long, fulfilling lives after bowel cancer.  
 
 ---
 

@@ -16,7 +16,7 @@ related:
 ## Core rules
 - **Never stop basal insulin.**
 - **Check BGL more often** (every 2–4 hours or as advised).
-- **Check ketones** if BGL is high or you’re unwell.
+- **Check ketones** if BGL is high or you're unwell.
 
 ## Fluids & carbs
 - Small, frequent sips of unsweetened fluids for hydration.

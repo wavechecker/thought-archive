@@ -14,7 +14,7 @@ tags: ["cancer", "bowel cancer", "patientguide", "hub"]
 
 # Bowel Cancer — Guide Hub
 
-A central hub for our bowel cancer guides: what it is, how it’s found, treatment options, and living well during and after care.
+A central hub for our bowel cancer guides: what it is, how it's found, treatment options, and living well during and after care.
 
 ## Core Guides
 - [Understanding Bowel Cancer — Risks and Symptoms](/guides/understanding-bowel-cancer/)  

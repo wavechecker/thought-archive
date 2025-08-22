@@ -3,7 +3,7 @@ draft: true
 ---
 
 ---
-title: "School and Type 1 Diabetes: A Parent’s Guide"
+title: "School and Type 1 Diabetes: A Parent's Guide"
 description: "How to brief teachers, set plans, and keep kids safe and confident at school."
 category: "Type 1 Diabetes"
 publishDate: "2025-08-15"
@@ -16,7 +16,7 @@ A new school year can be daunting if your child has Type 1 diabetes. With prepar
 **Before Term Starts:**
 - Meet with teachers and school nurse
 - Provide a written diabetes management plan
-- Stock hypo treatments in the classroom and nurse’s office
+- Stock hypo treatments in the classroom and nurse's office
 
 **During the Day:**
 - Encourage your child to speak up about symptoms

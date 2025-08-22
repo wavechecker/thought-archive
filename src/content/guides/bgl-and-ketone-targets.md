@@ -1,5 +1,5 @@
 ---
-title: "Blood Glucose and Ketones — What’s Normal, What’s Not"
+title: "Blood Glucose and Ketones — What's Normal, What's Not"
 slug: "bgl-and-ketone-targets"
 description: "Clear guide to safe blood glucose and ketone ranges in Type 1 Diabetes, and when to take urgent action."
 publishDate: 2025-08-22
@@ -12,7 +12,7 @@ related:
   - /guides/sick-day-management
 ---
 
-# Blood Glucose and Ketones — What’s Normal, What’s Not
+# Blood Glucose and Ketones — What's Normal, What's Not
 
 👉 Looking for the simple chart?  
 See [BGL & Ketones — Quick Reference](/guides/bgl-ketone-quick-reference).

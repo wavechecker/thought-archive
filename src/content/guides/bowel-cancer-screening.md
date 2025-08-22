@@ -26,7 +26,7 @@ Bowel cancer often grows silently, with no obvious warning signs in the early st
 ## The FIT Test
 - **What it is**: A simple stool test (Fecal Immunochemical Test) that checks for hidden blood not visible to the eye.  
 - **How it works**: You collect a small stool sample at home, which is analysed in a lab.  
-- **When it’s used**: Often the first-line screening test in national programs. If blood is detected, a colonoscopy is usually recommended.  
+- **When it's used**: Often the first-line screening test in national programs. If blood is detected, a colonoscopy is usually recommended.  
 - **Pros**: Easy, non-invasive, can be repeated regularly.  
 - **Cons**: Cannot detect all cancers or polyps, may give false positives or false negatives.  
 
@@ -34,18 +34,18 @@ Bowel cancer often grows silently, with no obvious warning signs in the early st
 
 ## Colonoscopy
 - **What it is**: A procedure where a flexible camera examines the inside of the colon and rectum.  
-- **Why it matters**: It’s the gold standard — doctors can not only see the bowel lining but also remove polyps or take biopsies during the procedure.  
-- **When it’s recommended**: If your FIT test is positive, or if you’re at increased risk due to family history, symptoms, or genetic factors.  
+- **Why it matters**: It's the gold standard — doctors can not only see the bowel lining but also remove polyps or take biopsies during the procedure.  
+- **When it's recommended**: If your FIT test is positive, or if you're at increased risk due to family history, symptoms, or genetic factors.  
 - **Pros**: Most accurate test, can treat as well as diagnose.  
 - **Cons**: Requires bowel prep, sedation, and carries small risks (bleeding, perforation).  
 
 ---
 
-## Burning vs. Removal — What’s the Difference?
+## Burning vs. Removal — What's the Difference?
 > 🔎 **Did you know?**  
-> During a colonoscopy, doctors can remove small polyps by “burning” them off with a wire loop and a mild electric current. This is painless under sedation and helps prevent polyps from becoming cancerous.  
+> During a colonoscopy, doctors can remove small polyps by "burning" them off with a wire loop and a mild electric current. This is painless under sedation and helps prevent polyps from becoming cancerous.  
 >  
-> If bowel cancer is already present and has grown deeper, “burning” alone isn’t enough. In those cases, **surgery is required** to remove a section of bowel and surrounding lymph nodes.  
+> If bowel cancer is already present and has grown deeper, "burning" alone isn't enough. In those cases, **surgery is required** to remove a section of bowel and surrounding lymph nodes.  
 
 ---
 
@@ -63,7 +63,7 @@ Bowel cancer often grows silently, with no obvious warning signs in the early st
 ---
 
 ## Takeaway
-Bowel cancer screening saves lives. A simple stool test can flag hidden warning signs, while colonoscopy can detect and remove precancerous growths before they develop further. If you’re eligible, take part in screening — it’s one of the most effective cancer prevention tools available.  
+Bowel cancer screening saves lives. A simple stool test can flag hidden warning signs, while colonoscopy can detect and remove precancerous growths before they develop further. If you're eligible, take part in screening — it's one of the most effective cancer prevention tools available.  
 
 ---
 

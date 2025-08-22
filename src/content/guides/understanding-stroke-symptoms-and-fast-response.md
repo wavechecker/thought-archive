@@ -19,11 +19,11 @@ A **stroke** happens when blood flow to the brain is interrupted or reduced, dep
 Remember **FAST** to spot common stroke signs quickly:
 
 - **F — Face**: drooping or numbness on one side  
-- **A — Arms**: weakness, can’t raise both arms evenly  
+- **A — Arms**: weakness, can't raise both arms evenly  
 - **S — Speech**: slurred, confused, or strange speech  
 - **T — Time**: call **emergency services immediately**  
 
-⚠️ Do not wait to see if symptoms improve. Some strokes are temporary (TIA, “mini-stroke”) but still signal urgent danger.  
+⚠️ Do not wait to see if symptoms improve. Some strokes are temporary (TIA, "mini-stroke") but still signal urgent danger.  
 
 ---
 
@@ -37,13 +37,13 @@ Not all strokes look the same. Call emergency services if you notice:
 
 ---
 
-## What Is a TIA (“Mini-Stroke”)?
+## What Is a TIA ("Mini-Stroke")?
 A **Transient Ischemic Attack (TIA)** is when stroke symptoms appear but resolve within minutes to hours.  
 - TIAs are **not harmless** — they are a **major warning sign** of a future stroke.  
 - About 1 in 3 people who experience a TIA will later have a stroke, often within days.  
 - TIAs require **immediate medical assessment**, even if symptoms disappear.  
 
-Think of a TIA as your body’s **“red alert”** — don’t ignore it.  
+Think of a TIA as your body's **"red alert"** — don't ignore it.  
 
 ---
 
@@ -68,13 +68,13 @@ Think of a TIA as your body’s **“red alert”** — don’t ignore it.
 - **Myth:** Stroke only happens to the elderly.  
   **Fact:** Stroke can occur at any age, even in young adults and children.  
 
-- **Myth:** If symptoms disappear, it’s nothing serious.  
-  **Fact:** A TIA (“mini-stroke”) is a **serious warning sign** and must be checked urgently.  
+- **Myth:** If symptoms disappear, it's nothing serious.  
+  **Fact:** A TIA ("mini-stroke") is a **serious warning sign** and must be checked urgently.  
 
 - **Myth:** Stroke pain is always severe.  
   **Fact:** Many strokes cause **numbness or weakness**, not pain.  
 
-- **Myth:** You can “sleep off” stroke symptoms.  
+- **Myth:** You can "sleep off" stroke symptoms.  
   **Fact:** Delaying care can mean permanent brain damage. Always call emergency services.  
 
 ---

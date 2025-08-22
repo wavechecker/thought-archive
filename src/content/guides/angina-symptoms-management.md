@@ -11,12 +11,12 @@ draft: false
 tags: ["Heart & Circulation", "patientguide"]
 ---
 
-Angina is chest discomfort caused by reduced blood flow to the heart muscle. It’s a warning sign that should never be ignored.
+Angina is chest discomfort caused by reduced blood flow to the heart muscle. It's a warning sign that should never be ignored.
 
 **Types of Angina:**
 - **Stable Angina** – Predictable, usually triggered by exertion or stress
 - **Unstable Angina** – Sudden, more severe, can occur at rest — medical emergency
-- **Variant (Prinzmetal’s) Angina** – Caused by spasm in the coronary arteries
+- **Variant (Prinzmetal's) Angina** – Caused by spasm in the coronary arteries
 
 **Common Symptoms:**
 - Pressure, heaviness, or squeezing in the chest

@@ -1,18 +1,17 @@
 ---
-draft: true
----
-
----
-title: Early Warning Signs of a Heart Attack
-lang: en
-slug: early-warning-signs-of-a-heart-attack
-publishDate: 2025-08-14T13:08:24.000Z
-updatedDate: 2025-08-14T13:08:24.000Z
+title: "Early Warning Signs of a Heart Attack"
+slug: "early-warning-signs-of-a-heart-attack"
+description: "Subtle symptoms that can appear hours or days before a heart attack, and what to do."
+publishDate: "2025-08-14"
+updatedDate: "2025-08-14"
 draft: false
-tags: [heart, cardiac, emergency]
+tags: ["heart", "cardiac", "emergency", "patientguide"]
+related:
+  - /guides/when-to-seek-emergency-help-for-chest-pain
 ---
 
-Heart attacks don’t always start with sudden, crushing chest pain.  
+
+Heart attacks don't always start with sudden, crushing chest pain.  
 In many cases, **subtle symptoms** appear hours or even days before.
 
 ### Common early warning signs
@@ -23,7 +22,7 @@ In many cases, **subtle symptoms** appear hours or even days before.
 5. **Nausea, lightheadedness, or cold sweats**.
 
 ### What to do
-- **Call emergency services immediately** — don’t wait to see if symptoms go away.
+- **Call emergency services immediately** — don't wait to see if symptoms go away.
 - **Chew aspirin** (unless allergic or advised not to) while waiting for help.
 - **Stay calm and still** — moving around can worsen heart strain.
 

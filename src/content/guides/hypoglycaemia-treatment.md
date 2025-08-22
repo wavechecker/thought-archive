@@ -26,6 +26,6 @@ related:
 - Review cause (too much insulin, delayed meal, exercise).
 
 ## Prevention tips
-- Don’t skip meals.  
+- Don't skip meals.  
 - Adjust insulin for exercise.  
 - Carry glucose everywhere.

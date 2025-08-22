@@ -21,9 +21,9 @@ Carb counting helps you give the **right bolus** and reduce glucose swings. Over
 ## Core concepts
 - **Insulin-to-carbohydrate ratio (ICR):** e.g., 1 unit per 10 g carbs.  
 - **Correction factor** (insulin sensitivity): how much 1 unit drops your BGL.  
-- **Active insulin** time: avoid “stacking” rapid-acting doses too close together.
+- **Active insulin** time: avoid "stacking" rapid-acting doses too close together.
 
-> Use the ratios your diabetes team set for you. Everyone’s numbers differ.
+> Use the ratios your diabetes team set for you. Everyone's numbers differ.
 
 ## How to count carbs
 - **Read labels:** subtract **fibre** according to your plan; use **per serve** or **per 100 g** carefully.  

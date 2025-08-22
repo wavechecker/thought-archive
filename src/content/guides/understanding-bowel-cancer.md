@@ -23,7 +23,7 @@ When bowel cancer is found at an early stage, treatment is much more effective a
 - **Age**: Risk increases sharply after age 50.  
 - **Family history**: Having a first-degree relative (parent, sibling, child) with bowel cancer.  
 - **Genetics**: Certain inherited conditions (e.g., Lynch syndrome, FAP).  
-- **Inflammatory bowel disease**: Long-standing ulcerative colitis or Crohn’s disease.  
+- **Inflammatory bowel disease**: Long-standing ulcerative colitis or Crohn's disease.  
 - **Lifestyle factors**: Diet high in red or processed meat, low in fibre, sedentary lifestyle, obesity, smoking, and heavy alcohol use.  
 
 ---
@@ -35,7 +35,7 @@ When bowel cancer is found at an early stage, treatment is much more effective a
 - Unexplained weight loss or loss of appetite.  
 - Fatigue or anaemia (from slow internal bleeding).  
 
-⚠️ These symptoms don’t always mean cancer, but they should never be ignored — especially if persistent.  
+⚠️ These symptoms don't always mean cancer, but they should never be ignored — especially if persistent.  
 
 ---
 
@@ -47,7 +47,7 @@ When bowel cancer is found at an early stage, treatment is much more effective a
 ---
 
 ## Takeaway
-Bowel cancer is common, but it’s also highly preventable and treatable if detected early. Knowing the risks, recognising symptoms, and taking part in screening programs saves lives.  
+Bowel cancer is common, but it's also highly preventable and treatable if detected early. Knowing the risks, recognising symptoms, and taking part in screening programs saves lives.  
 
 ---
 

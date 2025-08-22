@@ -34,4 +34,4 @@ Both **influenza (flu)** and the **common cold** are viral respiratory infection
 > This guide is for information only and not a diagnosis. Seek urgent care for severe symptoms or breathing difficulty.
 
 **Related Guides**
-- [Legionnaires’ Disease — Causes, Symptoms, and Prevention](/guides/legionnaires-disease/)
+- [Legionnaires' Disease — Causes, Symptoms, and Prevention](/guides/legionnaires-disease/)

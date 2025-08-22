@@ -1,7 +1,7 @@
 ---
 title: "Treatment Pathways — Surgery, Chemo, Radiotherapy"
 slug: "bowel-cancer-treatment"
-description: "Main treatments for bowel cancer, when they’re used, and what patients can expect."
+description: "Main treatments for bowel cancer, when they're used, and what patients can expect."
 category: "Bowel Cancer"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
@@ -20,7 +20,7 @@ Treatment depends on the **stage of the cancer** and your **overall health**. Mo
 ### Surgery
 - Often the first-line treatment.  
 - May involve removing part of the bowel (colectomy) with nearby lymph nodes.  
-- Can be open or laparoscopic (“keyhole”) surgery.  
+- Can be open or laparoscopic ("keyhole") surgery.  
 - In some cases, a stoma (colostomy/ileostomy) may be required temporarily or permanently.
 
 ### Chemotherapy

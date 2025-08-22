@@ -15,14 +15,14 @@ related:
 
 # Blood Glucose Testing — How and When to Check
 
-Checking blood glucose is the simplest, most direct way to know what’s happening right now. Even with a CGM, finger‑prick testing still matters.
+Checking blood glucose is the simplest, most direct way to know what's happening right now. Even with a CGM, finger‑prick testing still matters.
 
 ## When to check
 - **Before meals and before bed**
 - **Before driving**
 - **During and after exercise**
 - **When sick or adjusting insulin**
-- **If symptoms don’t match CGM readings**
+- **If symptoms don't match CGM readings**
 
 ## Why it matters
 - Early detection of highs/lows prevents accidents and hospital visits.

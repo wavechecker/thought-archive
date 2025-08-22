@@ -1,7 +1,7 @@
 ---
 title: "Atrial Fibrillation: Symptoms, Risks, and Treatment"
 slug: "atrial-fibrillation"
-description: "An irregular heartbeat that increases risk of stroke and heart failure — how it’s diagnosed and treated."
+description: "An irregular heartbeat that increases risk of stroke and heart failure — how it's diagnosed and treated."
 category: "Heart & Circulation"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
@@ -30,7 +30,7 @@ related:
 - **Medications**  
   - *Rate control*: beta blockers, calcium channel blockers, digoxin  
   - *Rhythm control*: antiarrhythmic drugs (e.g., flecainide, amiodarone)  
-- **Anticoagulants (“blood thinners”)**  
+- **Anticoagulants ("blood thinners")**  
   - Warfarin or newer oral anticoagulants (NOACs) to reduce stroke risk  
 - **Procedures**  
   - *Electrical cardioversion* to restore normal rhythm  

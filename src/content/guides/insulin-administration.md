@@ -14,13 +14,13 @@ related:
 
 Insulin delivery is about two things: **the insulin you use** and **how you deliver it**. Get both right and day‑to‑day control becomes simpler and safer.
 
-## 1 Insulin types (what’s in the pen/vial)
+## 1 Insulin types (what's in the pen/vial)
 > Availability and brand names vary by region. Check your local formulary.
 
 - **Ultra‑rapid/rapid‑acting (bolus):** for meals and corrections.  
   *Insulins:* lispro (Humalog**, Lyumjev**), aspart (NovoRapid/Novolog**, Fiasp**), glulisine (Apidra).  
   *Onset:* ~5–15 min · *Peak:* ~1 hr · *Duration:* 3–5 hrs.  
-  **Notes:** “Faster” versions (Fiasp, Lyumjev) start earlier; some people still pre‑bolus.
+  **Notes:** "Faster" versions (Fiasp, Lyumjev) start earlier; some people still pre‑bolus.
 
 - **Short‑acting (regular human insulin):**  
   *Insulins:* Regular (Actrapid/Humulin R/Novolin R).  
@@ -70,13 +70,13 @@ Insulin delivery is about two things: **the insulin you use** and **how you deli
 - **Pre‑bolus:** 0–20 min for rapid; shorter for ultra‑rapid.  
 - **Exercise:** reduce pre‑meal bolus and/or use temp basal; carry fast carbs.
 
-## 4 Safety, storage, and “gotchas”
+## 4 Safety, storage, and "gotchas"
 - **Hypo plan:** always carry 15–20 g fast carbs; recheck BGL after 15 min; follow with longer‑acting carbs if next meal >1 hr away.  
 - **Illness/ketones:** never stop basal; check ketones when high or unwell; hydrate; follow your sick‑day plan.  
 - **Storage:** unopened insulin in the **fridge** (2–8 °C). In‑use pens/vials at **room temp** (per product label, often 28–56 days). Avoid heat/freezing.  
 - **Site rotation:** prevents lumps and erratic absorption.  
-- **Double‑check units:** U‑200/U‑300 pens dose in **units**; don’t transfer insulin from pens into syringes.  
-- **When to call for help:** persistent highs with ketones, vomiting, drowsiness/rapid breathing; severe hypo (can’t swallow) → **glucagon + emergency services**.
+- **Double‑check units:** U‑200/U‑300 pens dose in **units**; don't transfer insulin from pens into syringes.  
+- **When to call for help:** persistent highs with ketones, vomiting, drowsiness/rapid breathing; severe hypo (can't swallow) → **glucagon + emergency services**.
 
 ## Related Guides
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)

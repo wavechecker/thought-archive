@@ -17,7 +17,7 @@ updatedDate: '2025-08-13T15:52:51+04:00'
 
 # Common Causes of Dizziness and When to Worry
 
-“Dizziness” covers spinning (vertigo), lightheadedness, or imbalance. Most causes are benign, but some are emergencies.
+"Dizziness" covers spinning (vertigo), lightheadedness, or imbalance. Most causes are benign, but some are emergencies.
 
 ## Summary
 Brief spinning with head movement often indicates BPPV; add red-flag symptoms (stroke signs, chest pain, severe headache) and it becomes urgent.
@@ -41,7 +41,7 @@ Brief spinning with head movement often indicates BPPV; add red-flag symptoms (s
 - Clinicians may teach **Epley** or other maneuvers for BPPV
 
 ## FAQs
-**How do I know if it’s vertigo?** Spinning made worse by head movement suggests vertigo.  
+**How do I know if it's vertigo?** Spinning made worse by head movement suggests vertigo.  
 **Can anxiety cause dizziness?** Yes—after other causes are ruled out.
 
 ## References (plain text, no live links)

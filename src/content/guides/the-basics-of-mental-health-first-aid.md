@@ -11,7 +11,7 @@ updatedDate: 2025-08-14
 Mental health first aid teaches how to support someone experiencing mental distress or crisis until professional help is available.
 
 **Summary**  
-It’s about recognising signs, offering help, and guiding towards resources.
+It's about recognising signs, offering help, and guiding towards resources.
 
 ## Key principles
 
@@ -31,7 +31,7 @@ It’s about recognising signs, offering help, and guiding towards resources.
 
 ## Useful actions
 
-- Ask directly if they’re thinking about suicide (it does not increase risk)  
+- Ask directly if they're thinking about suicide (it does not increase risk)  
 - Stay with them until help arrives if in crisis  
 - Provide helpline numbers and resources
 
@@ -41,7 +41,7 @@ It’s about recognising signs, offering help, and guiding towards resources.
 No, but training helps you respond more effectively.
 
 **Is mental health first aid like therapy?**  
-No — it’s short-term support, not ongoing treatment.
+No — it's short-term support, not ongoing treatment.
 
 ## References
 

@@ -46,5 +46,5 @@ Keep this as a simple reminder of when things are OK — and when to act fast.
 ---
 
 ## Related Guides
-- [Blood Glucose and Ketones — What’s Normal, What’s Not](/guides/bgl-and-ketone-targets)  
+- [Blood Glucose and Ketones — What's Normal, What's Not](/guides/bgl-and-ketone-targets)  
 - [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions)  

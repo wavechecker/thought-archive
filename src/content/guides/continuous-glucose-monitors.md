@@ -22,7 +22,7 @@ related:
 - Compression lows; sensor warm‑up periods; occasional sensor error.
 
 ## When to confirm with a finger‑prick
-- Symptoms don’t match CGM.
+- Symptoms don't match CGM.
 - Before driving if uncertain.
 - During rapid changes (exercise, after treating a hypo).
 - When calibrations/confirmations are recommended by your team.
