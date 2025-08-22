@@ -1,0 +1,71 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, getEntryBySlug } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const entries = await getCollection("guides");
+  // e.slug might be "type-1-diabetes/blood-glucose-testing" → split into ["type-1-diabetes","blood-glucose-testing"]
+  return entries.map((e) => ({ params: { slug: e.slug.split("/") } }));
+}
+
+// Astro.params.slug is now an array for rest routes; normalize to "a/b/c"
+const raw = Astro.params.slug;
+const slug = Array.isArray(raw) ? raw.join("/") : raw;
+
+const entry = await getEntryBySlug("guides", slug);
+if (!entry) return Astro.redirect("/404");
+
+const { Content } = await entry.render();
+const data = entry.data;
+
+const canonical = `https://patientguide.io/guides/${entry.slug}/`;
+
+// For "Related Guides"
+const allGuides = await getCollection("guides");
+function resolveRelated(rel) {
+  if (!Array.isArray(rel)) return [];
+  return rel
+    .map((r) => {
+      // allow "/guides/foo" or "foo"
+      const key = r.replace(/^\/guides\//, "").replace(/\/$/, "");
+      return allGuides.find((e) => e.slug === key);
+    })
+    .filter(Boolean);
+}
+const related = resolveRelated(data.related);
+---
+
+<Layout frontmatter={data}>
+  <Fragment slot="head">
+    <link rel="canonical" href={canonical} />
+  </Fragment>
+
+  <h1>{data?.title ?? "Untitled"}</h1>
+  <p style="color:#6b7280; margin-top:.25rem;">
+    {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
+    {data?.updatedDate && isValidDate(data.updatedDate) ? ` • Updated ${fmt(data.updatedDate)}` : ""}
+  </p>
+
+  <Content />
+
+  {related.length > 0 && (
+    <>
+      <h2>Related Guides</h2>
+      <ul>
+        {related.map((r) => (
+          <li><a href={`/guides/${r.slug}/`}>{r.data.title}</a></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  {data?.tags?.length > 0 && (
+    <p style="color:#2563eb; margin-top:1rem;">
+      {data.tags.map((t, i) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
+    </p>
+  )}
+</Layout>
+
