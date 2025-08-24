@@ -7,9 +7,11 @@ publishDate: 2025-08-20
 updatedDate: 2025-08-21
 tags: ["cardiology", "rehabilitation", "heart", "patientguide"]
 related:
+
   - /guides/coronary-angiography
   - /guides/heart-medications
   - /guides/preventing-heart-disease
+  - /guides/hormone-therapy-menopause/
 ---
 
 # Cardiac Rehabilitation After a Heart Event

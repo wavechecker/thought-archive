@@ -7,6 +7,8 @@ publishDate: "2025-08-20"
 updatedDate: "2025-08-21"
 draft: false
 tags: ["Heart & Circulation", "Cardiology", "Angiography", "patientguide"]
+related:
+- /guides/hormone-therapy-menopause/
 ---
 
 # Understanding Coronary Angiography
