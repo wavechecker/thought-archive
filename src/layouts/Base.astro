@@ -1,30 +1,6 @@
----
-const { title = "patientguide.io" } = Astro.props;
----
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <header style="padding:1rem; border-bottom:1px solid #ddd;">
-      <nav style="display:flex; gap:1rem; flex-wrap:wrap;">
-        <a href="/">Home</a>
-        <a href="/guides/">Guides</a>
-        <a href="/guides/type-1-diabetes/">Type 1 Diabetes</a>
-        <a href="/guides/heart-circulation/">Heart & Circulation</a>
-        <a href="/guides/bowel-cancer/">Bowel Cancer</a>
-        <a href="/contact/">Contact</a>
-      </nav>
-    </header>
-
-    <main style="padding:1rem;">
-      <slot />
-    </main>
-
-    <footer style="padding:1rem; border-top:1px solid #ddd; margin-top:2rem;">
-      <p>© {new Date().getFullYear()} patientguide.io · <a href="/contact/">Contact</a></p>
-    </footer>
-  </body>
-</html>
+<nav style="display:flex; gap:1rem; flex-wrap:wrap;">
+  <a href="/">Home</a>
+  <a href="/guides/">Guides</a>
+  <a href="/posts/">Posts</a>
+  <a href="/contact/">Contact</a>
+</nav>
