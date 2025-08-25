@@ -3,41 +3,21 @@ title: "How E. coli Responds to Chemical Cues"
 slug: "ecoli-chemical-cues"
 description: "Overview of how Escherichia coli regulates transport of antibiotics and other chemicals through porins and efflux pumps."
 category: "Infectious Disease"
-publishDate: 2025-08-25
-updatedDate: 2025-08-25
+publishDate: "2025-08-25"
+updatedDate: "2025-08-25"
 tags: ["microbiology", "antibiotic resistance", "E. coli", "research"]
 draft: false
+schema:
   "@context": "https://schema.org"
   "@type": "Article"
   "headline": "How E. coli Responds to Chemical Cues"
-  "datePublished": 2025-08-25
-  "dateModified": 2025-08-25
+  "datePublished": "2025-08-25"
+  "dateModified": "2025-08-25"
   "author":
     "@type": "Organization"
     "name": "Thought Archive"
-schema:
-  '@context': https://schema.org
-  '@type': FAQPage
-  mainEntity:
-  - '@type': Question
-    name: Why does caffeine matter for antibiotics?
-    acceptedAnswer:
-      '@type': Answer
-      text: It reduces antibiotic entry into E. coli by lowering OmpF levels, creating
-        mild resistance.
-  - '@type': Question
-    name: Is this effect seen in all bacteria?
-    acceptedAnswer:
-      '@type': Answer
-      text: "No \u2014 Salmonella has the same regulators but doesn\u2019t show the\
-        \ same caffeine effect."
-  - '@type': Question
-    name: Does this mean coffee makes antibiotics useless?
-    acceptedAnswer:
-      '@type': Answer
-      text: "No \u2014 the effect is modest (~40% shift) and species-specific, but\
-        \ it shows how common compounds can interfere."
 ---
+
 Escherichia coli, like many Gram-negative bacteria, survives by carefully controlling what enters and exits the cell. Recent research shows that E. coli can adjust the activity of porins and efflux pumps in response to common antibiotics, environmental stresses, and even everyday substances like caffeine.
 
 ## Key Points
