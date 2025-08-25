@@ -1,15 +1,29 @@
 ---
 import { getCollection } from 'astro:content';
-import { Astro } from 'astro/runtime';
 
-const tagParam = String(Astro.params.tag || '').toLowerCase();
+/** Build-time: enumerate every unique tag from posts */
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', (p) => !p.data.draft);
+  const tagSet = new Set<string>();
+
+  for (const p of posts) {
+    const tags = Array.isArray(p.data.tags) ? p.data.tags : [];
+    for (const t of tags) tagSet.add(String(t).toLowerCase());
+  }
+
+  return Array.from(tagSet).map((t) => ({ params: { tag: t } }));
+}
+
+/** Page data for this tag */
+const currentTag = String(Astro.params.tag || '').toLowerCase();
 
 const posts = await getCollection('posts', (p) =>
   !p.data.draft &&
   Array.isArray(p.data.tags) &&
-  p.data.tags.map((t) => String(t).toLowerCase()).includes(tagParam)
+  p.data.tags.map((t) => String(t).toLowerCase()).includes(currentTag)
 );
 
+// newest first
 posts.sort(
   (a, b) =>
     new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
@@ -18,12 +32,12 @@ posts.sort(
 
 <html lang="en">
   <head>
-    <title>{tagParam} — Thought-Archive</title>
-    <meta name="description" content={`Posts tagged ${tagParam}.`} />
+    <title>#{currentTag} — Thought-Archive</title>
+    <meta name="description" content={`Posts tagged ${currentTag}.`} />
   </head>
   <body>
     <main class="max-w-3xl mx-auto px-4 py-10">
-      <h1 class="text-3xl font-bold mb-6">#{tagParam}</h1>
+      <h1 class="text-3xl font-bold mb-6">#{currentTag}</h1>
 
       {posts.length === 0 ? (
         <p>No posts with this tag yet.</p>
