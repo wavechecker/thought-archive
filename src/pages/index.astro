@@ -74,10 +74,24 @@ const frontmatter = {
           const title = e.data?.title ?? "(Untitled)";
           const desc = e.data?.description ?? "";
           const cat = e.data?.category ?? "";
+
+          const rawGuideDate = e.data?.updatedDate ?? e.data?.publishDate;
+          const dateLabel = e.data?.updatedDate ? "Updated" : "Published";
+          const prettyGuideDate = isValidDate(rawGuideDate) ? fmt(rawGuideDate) : null;
+
           return (
             <li class="p-5">
               <a href={href} class="text-lg font-medium hover:underline">{title}</a>
-              {cat && <span class="ml-2 text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 align-middle">{cat}</span>}
+              {cat && (
+                <span class="ml-2 text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 align-middle">
+                  {cat}
+                </span>
+              )}
+              {prettyGuideDate && (
+                <span class="ml-2 text-xs text-gray-500 align-middle">
+                  {dateLabel} {prettyGuideDate}
+                </span>
+              )}
               {desc && <p class="text-sm text-gray-600 mt-1">{desc}</p>}
             </li>
           );
