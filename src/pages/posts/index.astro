@@ -2,36 +2,53 @@
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-// Format a date-like value (string or Date)
-const fmt = (v) =>
-  v
-    ? new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" })
-        .format(new Date(v))
-    : "";
-
+// Pull all posts (exclude drafts), newest first
 const posts = (await getCollection("posts"))
-  .sort((a, b) => +new Date(a.data.publishDate || a.data.updatedDate || 0) <
-                  +new Date(b.data.publishDate || b.data.updatedDate || 0) ? 1 : -1);
+  .filter((p) => p.data?.draft !== true)
+  .sort((a, b) => {
+    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+    return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
+  });
+
+const frontmatter = {
+  title: "Posts — Patient Guide",
+  description: "Opinion & analysis — timely takes linked to our evergreen guides.",
+};
 ---
 
-<Layout frontmatter={{ title: "Posts", description: "Essays and commentary." }}>
-  <h1>Posts</h1>
-  {posts.length === 0 ? (
-    <p>No posts found in <code>src/content/posts/</code>.</p>
-  ) : (
-    <ul style="list-style:none; padding:0; margin:0;">
-      {posts.map((post) => (
-        <li style="border-bottom:1px solid #e5e7eb; padding:0 0 1rem; margin:0 0 1rem;">
-          <h2 style="margin:0 0 .25rem;">
-            <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
-          </h2>
-          <p class="muted" style="margin:.25rem 0 .75rem;">
-            {post.data.publishDate ? fmt(post.data.publishDate) : (post.data.updatedDate ? fmt(post.data.updatedDate) : "")}
-          </p>
-          {post.data.description && <p style="margin:0;">{post.data.description}</p>}
-        </li>
-      ))}
-    </ul>
-  )}
+<Layout {frontmatter}>
+  <section class="py-10">
+    <h1 class="text-4xl font-bold mb-3">Posts</h1>
+    <p class="text-lg text-gray-700">
+      Opinion & analysis — timely takes that connect to our evergreen guides.
+    </p>
+  </section>
+
+  <section class="mt-8">
+    {posts.length === 0 ? (
+      <p>No posts yet.</p>
+    ) : (
+      <ul class="divide-y divide-gray-200 bg-white rounded-2xl shadow">
+        {posts.map((p) => {
+          const href = `/posts/${p.slug}/`;
+          const title = p.data?.title ?? "(Untitled)";
+          const desc = p.data?.description ?? "";
+          const date = p.data?.updatedDate ?? p.data?.publishDate;
+          return (
+            <li class="p-5">
+              <a href={href} class="text-lg font-medium hover:underline">{title}</a>
+              {date && (
+                <span class="ml-2 text-xs text-gray-500 align-middle">
+                  {String(date)}
+                </span>
+              )}
+              {desc && <p class="text-sm text-gray-600 mt-1">{desc}</p>}
+            </li>
+          );
+        })}
+      </ul>
+    )}
+  </section>
 </Layout>
 
