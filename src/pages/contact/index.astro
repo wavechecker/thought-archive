@@ -3,20 +3,31 @@ import Layout from "@/layouts/Layout.astro";
 
 const frontmatter = {
   title: "Contact",
-  description: "Get in touch with Patient Guide",
+  description: "Say hi at hello@patientguide.io.",
 };
 ---
 
-<Layout {frontmatter}>
+<Layout frontmatter={frontmatter}>
+  <!-- If Layout.astro auto-renders an H1, remove the <h1> below -->
   <h1>Contact</h1>
   <p>Say hi at <a href="mailto:hello@patientguide.io">hello@patientguide.io</a>.</p>
 
-  <!-- Optional: simple static form that posts to /contact/thanks -->
-  <form action="/contact/thanks/" method="get" style="margin-top:1rem;">
+  <form name="contact" method="POST" action="/contact/success" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact" />
+    <p style="display:none">
+      <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    </p>
+
     <label>
-      Your message (not actually sent â€” placeholder)
-      <textarea name="message" rows="4" style="display:block;width:100%;margin-top:.5rem;"></textarea>
+      Your Email
+      <input type="email" name="email" required />
     </label>
-    <button type="submit" style="margin-top:.75rem;">Send</button>
+
+    <label>
+      Message
+      <textarea name="message" rows="6" required></textarea>
+    </label>
+
+    <button type="submit">Send</button>
   </form>
 </Layout>
