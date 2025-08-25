@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import { Astro } from 'astro/runtime';
+
+const tagParam = String(Astro.params.tag || '').toLowerCase();
+
+const posts = await getCollection('posts', (p) =>
+  !p.data.draft &&
+  Array.isArray(p.data.tags) &&
+  p.data.tags.map((t) => String(t).toLowerCase()).includes(tagParam)
+);
+
+posts.sort(
+  (a, b) =>
+    new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+---
+
+<html lang="en">
+  <head>
+    <title>{tagParam} — Thought-Archive</title>
+    <meta name="description" content={`Posts tagged ${tagParam}.`} />
+  </head>
+  <body>
+    <main class="max-w-3xl mx-auto px-4 py-10">
+      <h1 class="text-3xl font-bold mb-6">#{tagParam}</h1>
+
+      {posts.length === 0 ? (
+        <p>No posts with this tag yet.</p>
+      ) : (
+        <ul class="space-y-6">
+          {posts.map(({ slug, data }) => (
+            <li class="border rounded-xl p-4">
+              <a class="text-xl font-semibold hover:underline" href={`/posts/${slug}`}>
+                {data.title}
+              </a>
+              <div class="text-sm opacity-70 mt-1">{data.publishDate}</div>
+              {data.description && <p class="mt-2">{data.description}</p>}
+              {Array.isArray(data.tags) && data.tags.length > 0 && (
+                <div class="mt-2 text-sm opacity-70">
+                  Tags: {data.tags.join(', ')}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </main>
+  </body>
+</html>
