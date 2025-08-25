@@ -1,8 +1,9 @@
 ---
-/** Top‑level nav config */
+/** Top-level nav config */
 const NAV = [
   { label: "Home", href: "/" },
   { label: "Guides", href: "/guides/" },
+  { label: "Posts", href: "/posts/" },   // 👈 now directly after Guides
   { label: "Type 1 Diabetes", href: "/guides/type-1-diabetes/" },
   { label: "Heart & Circulation", href: "/guides/heart-circulation/" },
   { label: "Cancer", href: "/guides/cancer/" }, // renamed
@@ -23,7 +24,7 @@ const {
   publishDate,      // optional
   updatedDate,      // optional
   canonicalUrl: fmCanonical, // optional
-  schemaType,       // optional override for JSON‑LD
+  schemaType,       // optional override for JSON-LD
 } = frontmatter;
 
 // Only render canonical if explicitly provided
@@ -32,7 +33,7 @@ const canonical =
     ? fmCanonical
     : undefined;
 
-// Build minimal JSON‑LD; choose type if provided
+// Build minimal JSON-LD; choose type if provided
 const ldType = typeof schemaType === "string" && schemaType ? schemaType : "WebPage";
 const jsonLd = {
   "@context": "https://schema.org",
