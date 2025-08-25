@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Thanks — We got your message",
+  description: "Your contact form was submitted successfully.",
+};
+---
+
+<Layout {frontmatter}>
+  <section class="py-10">
+    <h1 class="text-4xl font-bold mb-3">Thanks — we got your message</h1>
+    <p class="text-lg text-gray-700">
+      We’ll get back to you at the email address you provided. If it’s urgent, email
+      <a href="mailto:hello@patientguide.io" class="text-blue-600 underline">hello@patientguide.io</a>.
+    </p>
+    <p class="mt-6">
+      <a href="/" class="text-blue-600 underline">← Back to home</a>
+    </p>
+  </section>
+</Layout>
