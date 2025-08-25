@@ -1,20 +1,21 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date"; // ✅ date helpers
 
 // Hubs to feature on the landing page (order matters)
 const HUBS: Array<{ label: string; href: string; blurb?: string }> = [
   { label: "Type 1 Diabetes", href: "/guides/type-1-diabetes/", blurb: "Start here for T1D basics." },
   { label: "Type 2 Diabetes", href: "/guides/type-2-diabetes/", blurb: "Practical guides for T2D." },
   { label: "Heart & Circulation", href: "/guides/heart-circulation/", blurb: "Cardiac & vascular care." },
-  { label: "Cancer", href: "/guides/cancer/", blurb: "Screening, treatment, survivorship." },          // ✅ renamed
+  { label: "Cancer", href: "/guides/cancer/", blurb: "Screening, treatment, survivorship." }, // ✅ renamed
   { label: "Infectious Diseases", href: "/guides/infectious-diseases/", blurb: "Prevention and treatment." },
   { label: "Emergencies", href: "/guides/emergencies/", blurb: "When to act fast and how." },
   // ✅ New Posts hub tile
   { label: "Posts", href: "/posts/", blurb: "Opinion & analysis linked to evergreen guides." },
 ];
 
-// Pull all guides (exclude drafts), newest first
+// All guides (exclude drafts), newest first
 const all = (await getCollection("guides"))
   .filter((e) => e.data?.draft !== true)
   .sort((a, b) => {
@@ -23,7 +24,7 @@ const all = (await getCollection("guides"))
     return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
   });
 
-// Pull posts (exclude drafts), newest first
+// Posts (exclude drafts), newest first; show latest 5
 const posts = (await getCollection("posts"))
   .filter((p) => p.data?.draft !== true)
   .sort((a, b) => {
@@ -31,9 +32,9 @@ const posts = (await getCollection("posts"))
     const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
     return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
   })
-  .slice(0, 5); // show latest 5
+  .slice(0, 5);
 
-// Nice page meta
+// Page meta
 const frontmatter = {
   title: "Patient Guide — Clear, practical health guides",
   description: "Clear, practical health guides — no fluff.",
@@ -96,11 +97,12 @@ const frontmatter = {
           const href = `/posts/${p.slug}/`;
           const title = p.data?.title ?? "(Untitled)";
           const desc = p.data?.description ?? "";
-          const date = p.data?.updatedDate ?? p.data?.publishDate;
+          const rawDate = p.data?.updatedDate ?? p.data?.publishDate;
+          const date = isValidDate(rawDate) ? fmt(rawDate) : null;
           return (
             <li class="p-5">
               <a href={href} class="text-lg font-medium hover:underline">{title}</a>
-              {date && <span class="ml-2 text-xs text-gray-500 align-middle">{String(date)}</span>}
+              {date && <span class="ml-2 text-xs text-gray-500 align-middle">{date}</span>}
               {desc && <p class="text-sm text-gray-600 mt-1">{desc}</p>}
             </li>
           );
