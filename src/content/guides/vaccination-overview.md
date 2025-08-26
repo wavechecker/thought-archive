@@ -2,7 +2,7 @@
 title: "Vaccination Overview"
 slug: "vaccination-overview"
 description: "An introduction to vaccination, its principles, and key guides in this category."
-category: "Vaccination"
+category: "Guide Hubs"
 publishDate: 2025-08-26
 tags: ["overview", "vaccination", "public health"]
 draft: true
