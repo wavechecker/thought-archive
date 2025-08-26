@@ -2,82 +2,74 @@
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-// Define the hubs you actually expose (order matters for display)
-const HUBS: Array<{ cat: string; href: string }> = [
-  { cat: "Type 1 Diabetes", href: "/guides/type-1-diabetes/" },
-  { cat: "Type 2 Diabetes", href: "/guides/type-2-diabetes/" },
-  { cat: "Heart & Circulation", href: "/guides/heart-circulation/" },
-  { cat: "Bowel Cancer", href: "/guides/bowel-cancer/" },
-  { cat: "Cancer", href: "/guides/cancer/" },
-  { cat: "Infectious Diseases", href: "/guides/infectious-diseases/" },
-  { cat: "Emergencies", href: "/guides/emergencies/" },
-];
-
-const HUB_MAP = new Map(HUBS.map(h => [h.cat, h.href]));
-const ALLOWED_LOWER = new Set(HUBS.map(h => h.cat.toLowerCase()));
-
-const norm = (s: unknown) => String(s ?? "").toLowerCase().trim();
-const firstMatchAllowed = (vals: string[] = []) => {
-  for (const v of vals) {
-    const n = norm(v);
-    if (ALLOWED_LOWER.has(n)) {
-      // return the original-cased category name from HUBS for consistent labels
-      return HUBS.find(h => h.cat.toLowerCase() === n)!.cat;
-    }
-  }
-  return undefined;
-};
-
 const all = await getCollection("guides");
 
-// Group by category or matching tag (case-insensitive). Skip drafts.
-const groups = new Map<string, typeof all>();
-for (const e of all) {
-  if (e.data?.draft === true) continue;
+// 1) Published hub pages (category: "Guide Hubs")
+const hubs = all
+  .filter((e) => e.data?.category === "Guide Hubs" && e.data?.draft !== true)
+  .sort((a, b) => (a.data.title || "").localeCompare(b.data.title || ""));
 
-  // try category first, then tags
-  const catFromCategory = typeof e.data?.category === "string" ? firstMatchAllowed([e.data.category]) : undefined;
-  const catFromTags = Array.isArray(e.data?.tags) ? firstMatchAllowed(e.data.tags as string[]) : undefined;
-  const cat = catFromCategory ?? catFromTags;
+// 2) Non-hub guides for counts
+const nonHubs = all.filter((e) => e.data?.category !== "Guide Hubs" && e.data?.draft !== true);
 
-  if (!cat) continue; // ignore uncategorized content on this page
-
-  if (!groups.has(cat)) groups.set(cat, []);
-  groups.get(cat)!.push(e);
+// helper: derive a counting key for a hub
+function getHubKey(hub) {
+  const k = hub.data?.hubKey;
+  if (typeof k === "string" && k.trim().length) return k.trim();
+  // fallback: if title ends with "Overview", strip it; else use title
+  const t = String(hub.data?.title ?? "").trim();
+  return t.replace(/\s*Overview\s*$/i, "").trim() || t || "Misc";
 }
 
-// Keep display order consistent with HUBS, but omit categories with 0 guides
-const orderedCats = HUBS.map(h => h.cat).filter(cat => (groups.get(cat)?.length ?? 0) > 0);
-
-const frontmatter = {
-  title: "Guides — PatientGuide",
-  description: "Browse all patient-friendly guides by category. Hubs stay in sync automatically.",
-  publishDate: "2025-08-21",
-  draft: false,
-  tags: ["guides", "patientguide"],
-};
+// count guides that belong to a hub by:
+// - category EXACT match to hubKey OR
+// - tags containing hubKey (case-insensitive)
+function countForHub(hubKey) {
+  const keyLower = hubKey.toLowerCase();
+  return nonHubs.filter((g) => {
+    const cat = String(g.data?.category ?? "").toLowerCase();
+    if (cat === keyLower) return true;
+    const tags = Array.isArray(g.data?.tags) ? g.data.tags.map((t) => String(t).toLowerCase()) : [];
+    return tags.includes(keyLower);
+  }).length;
+}
 ---
 
-<Layout {frontmatter}>
+<Layout frontmatter={{
+  title: "Guides — PatientGuide",
+  description: "Browse all patient-friendly guides by hub. New hubs appear automatically.",
+  publishDate: "2025-08-26",
+  draft: false,
+  tags: ["guides","patientguide"]
+}}>
   <h1 class="text-3xl font-bold mb-6">Guide Hubs</h1>
   <p class="mb-8 text-lg text-gray-700">
     Categories below update automatically as you add or edit guides. Click a hub to explore.
   </p>
 
-  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    {orderedCats.map((cat) => {
-      const list = groups.get(cat) ?? [];
-      const href = HUB_MAP.get(cat)!; // safe due to ALLOWED list
-      return (
-        <a href={href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
-          <h2 class="text-xl font-semibold mb-1">{cat} — Guide Hub</h2>
-          <p class="text-gray-600 text-sm mb-3">Browse focused guides in this hub.</p>
-          <p class="text-gray-800 text-sm">{list.length} guide{list.length === 1 ? "" : "s"}</p>
-        </a>
-      );
-    })}
-  </div>
+  {hubs.length === 0 ? (
+    <div class="rounded-2xl border border-dashed p-6 text-gray-600">
+      No Guide Hubs published yet. To add one, create a guide with <code>category: "Guide Hubs"</code>, set <code>draft: false</code>, and (optionally) add <code>hubKey:</code> for accurate counts.
+    </div>
+  ) : (
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {hubs.map((hub) => {
+        const key = getHubKey(hub);
+        const count = countForHub(key);
+        const href = `/guides/${hub.slug}/`;
+        const desc = hub.data?.description || "Browse focused guides in this hub.";
+        return (
+          <a href={href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
+            <h2 class="text-xl font-semibold mb-1">{key} — Guide Hub</h2>
+            <p class="text-gray-600 text-sm mb-3">{desc}</p>
+            <p class="text-gray-800 text-sm">{count} guide{count === 1 ? "" : "s"}</p>
+          </a>
+        );
+      })}
+    </div>
+  )}
 </Layout>
+
 
 
 

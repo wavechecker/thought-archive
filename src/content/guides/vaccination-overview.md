@@ -5,7 +5,8 @@ description: "An introduction to vaccination, its principles, and key guides in 
 category: "Vaccination"
 publishDate: 2025-08-26
 tags: ["overview", "vaccination", "public health"]
-draft: true
+hubKey: "Vaccination"
+draft: false
 ---
 
 # Vaccination Overview
