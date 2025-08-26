@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 // Define the hubs you actually expose (order matters for display)
+// NOTE: Link hubs to their *overview* pages
 const HUBS: Array<{ cat: string; href: string }> = [
   { cat: "Type 1 Diabetes", href: "/guides/type-1-diabetes/" },
   { cat: "Type 2 Diabetes", href: "/guides/type-2-diabetes/" },
@@ -11,6 +12,8 @@ const HUBS: Array<{ cat: string; href: string }> = [
   { cat: "Cancer", href: "/guides/cancer/" },
   { cat: "Infectious Diseases", href: "/guides/infectious-diseases/" },
   { cat: "Emergencies", href: "/guides/emergencies/" },
+  // ✅ New hub for your recent work
+  { cat: "Vaccination", href: "/guides/vaccination-overview/" },
 ];
 
 const HUB_MAP = new Map(HUBS.map(h => [h.cat, h.href]));
@@ -31,9 +34,15 @@ const firstMatchAllowed = (vals: string[] = []) => {
 const all = await getCollection("guides");
 
 // Group by category or matching tag (case-insensitive). Skip drafts.
+// Also skip pages that are themselves "Guide Hubs" so they don't inflate counts.
 const groups = new Map<string, typeof all>();
 for (const e of all) {
   if (e.data?.draft === true) continue;
+
+  // ❗ Exclude hub/overview pages from counts even if their tags match a hub
+  if (typeof e.data?.category === "string" && e.data.category.trim() === "Guide Hubs") {
+    continue;
+  }
 
   // try category first, then tags
   const catFromCategory = typeof e.data?.category === "string" ? firstMatchAllowed([e.data.category]) : undefined;
