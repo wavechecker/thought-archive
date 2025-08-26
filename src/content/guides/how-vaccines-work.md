@@ -1,343 +1,77 @@
-Below are **ready-to-commit placeholder files** for your Thought‑Archive repo. Copy each block into the indicated path. All are drafted with your **Guide (evergreen)** structure and marked `draft: true` so you can iterate safely.
-
----
-
-## `src/content/guides/aluminum-in-vaccines.md`
-
-```markdown
----
-title: "Aluminum in Vaccines: Safety Evidence and Controversy"
-slug: "aluminum-in-vaccines"
-description: "A review of the evidence on aluminum adjuvants in vaccines and their potential health effects."
-category: "Vaccination"
-publishDate: 2025-08-26
-tags: ["adjuvants", "safety", "autism"]
-draft: true
----
-
-# Aluminum in Vaccines: Safety Evidence and Controversy
-
-## Intro
-Concise definition of aluminum adjuvants + why they’re used; brief note on safety debates.
-
-## Key Points
-- Aluminum salts boost immune response.
-- Large cohort data to date show no increased risk for ASD/autoimmune/allergic outcomes at vaccine doses.
-- Very rare risks cannot be fully excluded by any single study; moderate/large risks inconsistent with evidence.
-
-## Background
-What adjuvants are; history since 1920s; common vaccines containing aluminum.
-
-## Mechanisms
-Depot effect, antigen presentation, innate immune signaling.
-
-## Evidence & Reviews
-Summarize major cohort studies (e.g., Danish study) + global reviews (WHO/GACVS). Link PubMed/DOI.
-
-## Risks / Benefits / Prognosis
-Balance of benefits vs. theoretical risks; post‑marketing surveillance.
-
-## FAQ
-**Q: Do aluminum adjuvants cause autism?**  
-A: Current evidence does not support a causal link.
-
-## Further Reading
-- PubMed and DOI links to the Danish cohort
-- WHO GACVS page on aluminum
-
-## Related Guides
-- /guides/vaccines-and-autism
-- /guides/how-vaccines-work
-```
-
----
-
-## `src/content/guides/vaccines-and-autism.md`
-
-```markdown
----
-title: "Vaccines and Autism"
-slug: "vaccines-and-autism"
-description: "Evidence review on the alleged link between vaccines and autism."
-category: "Vaccination"
-publishDate: 2025-08-26
-tags: ["safety", "autism", "controversy"]
-draft: true
----
-
-# Vaccines and Autism
-
-## Intro
-Define the claim; why it matters; brief on scientific consensus.
-
-## Key Points
-- Multiple large, well‑designed studies do not support a link.  
-- Ecological/correlation analyses have known flaws.  
-- Surveillance continues; extremely rare effects can’t be fully excluded.
-
-## Background
-Origins of the controversy; timeline of key publications and retractions.
-
-## Evidence
-Large cohort studies; mechanistic data; meta‑analyses.
-
-## Risks / Benefits
-Public‑health impact of declining vaccination vs. speculative risks.
-
-## FAQ
-**Q: What about aluminum adjuvants?**  
-A: See related guide; current evidence does not support harm at vaccine doses.
-
-## Further Reading
-- WHO GACVS statements  
-- PubMed links to major cohort studies
-
-## Related Guides
-- /guides/aluminum-in-vaccines
-- /guides/how-vaccines-work
-```
-
----
-
-## `src/content/guides/mrna-vaccines.md`
-
-```markdown
----
-title: "mRNA Vaccines"
-slug: "mrna-vaccines"
-description: "A guide to mRNA vaccine technology, benefits, and risks."
-category: "Vaccination"
-publishDate: 2025-08-26
-tags: ["types", "mRNA", "safety", "controversy"]
-draft: true
----
-
-# mRNA Vaccines
-
-## Intro
-What mRNA vaccines are + why they matter.
-
-## Key Points
-- Mechanism: transient mRNA → antigen → immune response.  
-- Manufacturing speed & adaptability.  
-- Safety profile from trials + post‑marketing.
-
-## Background
-Discovery; lipid nanoparticles; COVID‑19 acceleration; approvals.
-
-## Mechanisms
-Innate/adaptive pathways; dosing; boosters.
-
-## Evidence
-Efficacy data; real‑world effectiveness; safety monitoring.
-
-## Risks / Benefits
-Known adverse events; risk comparison vs. disease risk.
-
-## FAQ
-**Q: Do mRNA vaccines alter DNA?**  
-A: No; they do not enter the nucleus or integrate into the genome.
-
-## Further Reading
-- FDA/EMA overviews; PubMed reviews
-
-## Related Guides
-- /guides/how-vaccines-work
-- /guides/covid-19-vaccines
-```
-
----
-
-## `src/content/guides/covid-19-vaccines.md`
-
-```markdown
----
-title: "COVID-19 Vaccines"
-slug: "covid-19-vaccines"
-description: "Overview of COVID-19 vaccines, types, safety, and global impact."
-category: "Vaccination"
-publishDate: 2025-08-26
-tags: ["disease-specific", "mRNA", "safety"]
-draft: true
----
-
-# COVID-19 Vaccines
-
-## Intro
-Snapshot of platforms (mRNA, viral vector, protein subunit) and why they matter.
-
-## Key Points
-- Effectiveness against severe disease.  
-- Waning immunity + booster strategies.  
-- Safety monitoring findings to date.
-
-## Background
-Timeline; global rollout; variants.
-
-## Evidence
-Trial data; real‑world studies; meta‑analyses.
-
-## Risks / Benefits
-Risk of myocarditis, thrombosis with thrombocytopenia syndrome (where relevant) vs. COVID risk.
-
-## FAQ
-**Q: Do boosters still help?**  
-A: Summarize current consensus and variant‑specific data.
-
-## Further Reading
-- CDC/EMA/WHO summaries; PubMed reviews
-
-## Related Guides
-- /guides/mrna-vaccines
-- /guides/how-vaccines-work
-```
-
----
-
-## `src/content/guides/influenza-vaccines.md`
-
-```markdown
----
-title: "Influenza Vaccines"
-slug: "influenza-vaccines"
-description: "Guide to seasonal influenza vaccination, safety, and effectiveness."
-category: "Vaccination"
-publishDate: 2025-08-26
-tags: ["disease-specific", "seasonal flu", "public health"]
-draft: true
----
-
-# Influenza Vaccines
-
-## Intro
-Annual flu burden + why vaccination matters.
-
-## Key Points
-- Updated seasonally; strain selection; effectiveness varies by match.
-- Strongest benefit: preventing severe disease in high‑risk groups.
-- Safety profile well‑characterized across decades.
-
-## Background
-Vaccine types (inactivated, live attenuated, high‑dose for older adults).
-
-## Evidence
-Effectiveness estimates by season; hospitalization reduction.
-
-## Risks / Benefits
-Common side effects vs. influenza complications.
-
-## FAQ
-**Q: Why do I need it every year?**  
-A: Antigenic drift + waning immunity.
-
-## Further Reading
-- WHO flu vaccine pages; PubMed effectiveness papers
-
-## Related Guides
-- /guides/how-vaccines-work
-```
-
----
-
-## `src/content/guides/how-vaccines-work.md`
-
-```markdown
 ---
 title: "How Vaccines Work"
 slug: "how-vaccines-work"
-description: "A primer on the immune system and how vaccines provide protection."
+description: "A primer on the immune system, vaccine mechanisms, and how immunisation provides protection."
 category: "Vaccination"
 publishDate: 2025-08-26
 tags: ["basics", "immunology", "public health"]
-draft: true
+draft: false
 ---
 
 # How Vaccines Work
 
 ## Intro
-Simple explanation of adaptive immunity and immunological memory.
+Vaccines train the immune system to recognise and fight infectious agents without causing the full disease. They are one of the most effective public health interventions, preventing millions of deaths each year. Understanding how they work requires a look at the immune system and the different types of vaccines used today.
 
 ## Key Points
-- Antigens stimulate B and T cell responses.
-- Memory cells speed and strengthen future responses.
-- Adjuvants enhance immunogenicity for some vaccines.
+- **Immunity basics:** Vaccines mimic infection to build protective memory without serious illness.  
+- **Innate vs adaptive:** The innate system responds first; vaccines build adaptive memory (B cells, T cells).  
+- **Types of vaccines:** Live attenuated, inactivated, subunit, conjugate, mRNA, and vector-based.  
+- **Adjuvants:** Ingredients like aluminum salts boost response in some vaccines.  
+- **Herd immunity:** When enough people are immune, diseases struggle to spread.  
 
-## Background
-Innate vs. adaptive; primary vs. secondary responses.
+## Background: The Immune System
+- **Innate immunity:** The body’s immediate, non-specific defense (skin, mucosa, macrophages, interferons).  
+- **Adaptive immunity:** A targeted response involving B cells (antibodies) and T cells (killer and helper cells).  
+- **Immunological memory:** After infection or vaccination, memory B and T cells persist, allowing rapid and strong responses to future exposure.  
 
-## Mechanisms
-Antigen presentation; affinity maturation; isotype switching.
+## How Vaccines Train Immunity
+1. **Antigen introduction:** A harmless part of the pathogen (protein, sugar, RNA instructions) is introduced.  
+2. **Immune recognition:** Antigen-presenting cells process the antigen and show it to T cells.  
+3. **Activation:** B cells produce antibodies; T cells coordinate and destroy infected cells.  
+4. **Memory formation:** After clearance, memory cells remain ready to respond.  
+
+## Types of Vaccines
+- **Live attenuated:** Weakened form of the virus/bacterium (e.g., measles, yellow fever). Strong, durable immunity but not for immunocompromised.  
+- **Inactivated:** Killed pathogens (e.g., polio [IPV], hepatitis A). Safer, but may need boosters.  
+- **Subunit/conjugate:** Specific proteins or sugars (e.g., HPV, Hib). Require adjuvants.  
+- **mRNA vaccines:** Provide genetic instructions for antigen production (e.g., COVID-19). Rapid design, strong immunity.  
+- **Viral vector:** Harmless carrier virus delivers genetic instructions (e.g., adenoviral COVID vaccines, Ebola).  
+
+## Role of Adjuvants
+- Some vaccines need a boost: adjuvants like aluminum salts (alum), MF59, or AS04 enhance immune response.  
+- Adjuvants stimulate innate sensors, prolong antigen exposure, and improve adaptive immunity.  
+
+## Herd Immunity
+- When a high proportion of the population is immune, transmission chains are disrupted.  
+- Herd immunity thresholds vary: measles (~95%), polio (~80–85%), COVID-19 (variable, higher due to evolving variants).  
+- Herd immunity protects vulnerable individuals who cannot be vaccinated (e.g., infants, immunocompromised).  
 
 ## Risks / Benefits
-Why mild side effects are expected; how protection scales at population level (herd immunity).
+- **Benefits:** Vaccines prevent disease, disability, and death, with benefits vastly outweighing risks.  
+- **Risks:** Mild side effects (soreness, fever, fatigue) are common. Serious adverse events are very rare and closely monitored.  
+- **Balance:** Risk of vaccine-preventable diseases is far greater than vaccine risks.  
 
 ## FAQ
 **Q: Can vaccines give me the disease?**  
-A: Briefly explain live attenuated vs. inactivated vs. subunit.
+A: Live attenuated vaccines very rarely revert, but licensed products are safe. Inactivated, subunit, and mRNA vaccines cannot cause infection.  
+
+**Q: How long does immunity last?**  
+A: Depends on the vaccine. Some (measles, yellow fever) provide lifelong protection; others (influenza, pertussis) need boosters.  
+
+**Q: Why are boosters needed?**  
+A: To counter waning immunity or evolving pathogens.  
+
+**Q: Do vaccines always prevent infection?**  
+A: Not always. Some vaccines mainly prevent severe illness and transmission, even if mild infection occurs.  
 
 ## Further Reading
-- Intro immunology texts; CDC/WHO primers
+- [CDC: How Vaccines Work](https://www.cdc.gov/vaccines/hcp/conversations/answering-questions.html#howvaccineswork)  
+- [WHO: Vaccine Q&A](https://www.who.int/news-room/q-a-detail/vaccines-and-immunization-what-is-vaccination)  
+- [PubMed: Immunology of vaccination reviews](https://pubmed.ncbi.nlm.nih.gov/?term=immunology+of+vaccination)  
 
 ## Related Guides
-- /guides/influenza-vaccines
-- /guides/mrna-vaccines
-```
-
----
-
-## `src/content/taxonomy/vaccination.md`
-
-```markdown
----
-title: "Vaccination Taxonomy"
-slug: "vaccination-taxonomy"
-description: "Guide structure for vaccination-related content."
-category: "Meta"
-publishDate: 2025-08-26
-draft: true
----
-
-# Vaccination Taxonomy
-
-- **Basics**
-  - How Vaccines Work
-  - Herd Immunity (future)
-  - Vaccine Development & Approval (future)
-
-- **Types of Vaccines**
-  - mRNA Vaccines
-  - Live Attenuated Vaccines (future)
-  - Inactivated Vaccines (future)
-  - Protein Subunit Vaccines (future)
-
-- **Adjuvants**
-  - Aluminum in Vaccines
-  - Other Adjuvants (MF59, AS04, etc.) (future)
-
-- **Safety & Controversies**
-  - Vaccines and Autism
-  - mRNA Safety Debates (future)
-  - Adverse Events Monitoring (VAERS, EudraVigilance) (future)
-  - Risk vs. Benefit in Pregnancy (future)
-
-- **Disease-Specific**
-  - Measles Vaccine (future)
-  - HPV Vaccine (future)
-  - COVID-19 Vaccines
-  - Influenza Vaccines
-
-- **Policy & Society**
-  - Vaccine Hesitancy (future)
-  - Mandates and Exemptions (future)
-  - Global Vaccine Equity (future)
-```
-
----
-
-### Optional: Commit message
-
-```
-feat(vaccination): add placeholder guides + taxonomy; align categories/tags for future build-out
-```
-
-> All placeholders are `draft: true`. Flip to `false` as you finalize content. You can extend this set anytime (e.g., add Measles/HPV) using the same scaffold.
+- /guides/aluminum-in-vaccines  
+- /guides/mrna-vaccines  
+- /guides/influenza-vaccines  
+- /guides/measles-vaccine
