@@ -1,49 +1,57 @@
 import { defineCollection, z } from "astro:content";
 
+const HUB_FROM_CATEGORY: Record<string, string> = {
+  "infectious disease": "Infectious Diseases",
+  "infectious diseases": "Infectious Diseases",
+  "infections": "Infectious Diseases",
+  "vaccination": "Vaccination",
+  "vaccinations": "Vaccination",
+  "emergencies": "Emergencies",
+  "heart & circulation": "Heart & Circulation",
+  "cancer": "Cancer",
+  "diabetes": "Diabetes",
+  "women's health": "Women’s Health",
+  "neurology": "Neurology",
+  "general health": "General Health",
+  "bowel cancer": "Bowel Cancer",
+  "type 1 diabetes": "Type 1 Diabetes",
+};
+
+const norm = (s?: string) => (s ?? "").toLowerCase().trim();
+
 const guides = defineCollection({
-  // type: "content", // optional in Astro v5 (defaults to content)
-  schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
+  schema: z
+    .object({
+      title: z.string().optional(),
+      description: z.string().optional(),
 
-    // Dates: allow string or Date; normalize to Date
-    publishDate: z.union([z.string(), z.date()]).optional()
-      .transform((v) => (v ? new Date(v) : undefined)),
-    updatedDate: z.union([z.string(), z.date()]).optional()
-      .transform((v) => (v ? new Date(v) : undefined)),
+      publishDate: z.union([z.string(), z.date()]).optional()
+        .transform((v) => (v ? new Date(v) : undefined)),
+      updatedDate: z.union([z.string(), z.date()]).optional()
+        .transform((v) => (v ? new Date(v) : undefined)),
 
-    draft: z.boolean().default(false),
+      draft: z.boolean().default(false),
 
-    // 🔑 REQUIRED for hubs page to work (even if optional here):
-    category: z.string().optional(),   // or z.enum([...]) once you’re ready
-    hubKey: z.string().optional(),
+      category: z.string().optional(),
+      hubKey: z.string().optional(),
 
-    tags: z.array(z.string()).optional(),
-    slug: z.string().optional(),
-  }),
+      tags: z.array(z.string()).optional(),
+      slug: z.string().optional(),
+    })
+    .transform((data) => {
+      // if hubKey missing, derive from category
+      if (!data.hubKey && data.category) {
+        const guess = HUB_FROM_CATEGORY[norm(data.category)];
+        return { ...data, hubKey: guess ?? undefined };
+      }
+      return data;
+    })
+    .refine((d) => !!d.hubKey, {
+      message:
+        "hubKey is required (add hubKey in frontmatter or map this category in HUB_FROM_CATEGORY).",
+    }),
 });
 
-const pages = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    publishDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)),
-    draft: z.boolean().default(false),
-  }),
-});
-
-const posts = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    publishDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)),
-    updatedDate: z.union([z.string(), z.date()]).transform((v) => new Date(v)).optional(),
-    draft: z.boolean().default(false),
-    tags: z.array(z.string()).optional(),
-  }),
-});
-
-export const collections = { guides, pages, posts };
 
 
 
