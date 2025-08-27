@@ -1,0 +1,42 @@
+---
+import { getCollection } from "astro:content";
+
+const norm = (s?: string) => (s ?? "").toLowerCase().trim();
+
+// 1) Fetch hub docs (category: "Guide Hubs") and published guides (exclude hubs)
+const hubs = await getCollection("guides", ({ data }) =>
+  data.draft !== true && norm(data.category) === "guide hubs"
+);
+
+const guides = await getCollection("guides", ({ data }) =>
+  data.draft !== true && norm(data.category) !== "guide hubs"
+);
+
+// 2) Build counts by hubKey from guides
+const counts = new Map<string, number>();
+for (const g of guides) {
+  const key = norm(g.data.hubKey);
+  if (!key) continue; // only count guides that declare a hubKey
+  counts.set(key, (counts.get(key) ?? 0) + 1);
+}
+
+// 3) Attach counts to hubs (use hub’s own hubKey, fallback to title)
+const hubsWithCounts = hubs.map((hub) => {
+  const hubKey = norm(hub.data.hubKey ?? hub.data.title);
+  const count = counts.get(hubKey) ?? 0;
+  return { ...hub, _hubKey: hubKey, _count: count };
+}).sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<h1>Guide Hubs</h1>
+<p>Categories below update automatically as you add or edit guides. Click a hub to explore.</p>
+
+{hubsWithCounts.map((h) => (
+  <section style="margin: 1.25rem 0; padding: 1rem; border: 1px solid var(--astro-divider-color, #eaeaea); border-radius: 12px;">
+    <h2 style="margin: 0 0 .25rem 0;">{h.data.title}</h2>
+    {h.data.description && <p style="margin: 0 0 .5rem 0;">{h.data.description}</p>}
+    <p style="margin: 0;"><strong>{h._count} guides</strong></p>
+  </section>
+))}
+
+
