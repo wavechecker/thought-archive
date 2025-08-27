@@ -4,6 +4,7 @@ slug: cancer
 description: "A collection of guides on bowel cancer — from risks and symptoms to treatment, survivorship, and palliative care."
 category: "Cancer"
 publishDate: 2025-08-20
+hubKey: "Cancer"
 draft: false
 tags: ["cancer", "bowel cancer", "guides", "patientguide"]
 ---

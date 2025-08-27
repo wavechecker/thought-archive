@@ -1,13 +1,10 @@
 ---
-draft: true
----
-
----
 title: "Heart & Circulation — Guide Hub"
 slug: "heart-circulation"
 description: "Core guides for heart health: angiography, rehab, medications, atrial fibrillation, and prevention."
 category: "Heart & Circulation"
 publishDate: "2025-08-20"
+hubKey: "Heart & Circulation"
 draft: false
 tags: ["cardiology", "patientguide", "hub"]
 ---

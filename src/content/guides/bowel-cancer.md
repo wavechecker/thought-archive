@@ -1,13 +1,10 @@
 ---
-draft: true
----
-
----
 title: "Bowel Cancer — Guide Hub"
 slug: "bowel-cancer"
 description: "Guides on risks, screening, treatment, living well, and family risk for bowel cancer."
 category: "Cancer"
 publishDate: "2025-08-20"
+hubKey: "Bowel Cancer"
 draft: false
 tags: ["cancer", "bowel cancer", "patientguide", "hub"]
 ---
