@@ -2,20 +2,25 @@
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const all = await getCollection("guides");
+// Normalize helper (prevents invisible spaces/casing issues)
+const norm = (v) => String(v ?? "").toLowerCase().trim();
+
+// Only pull published guides
+const all = await getCollection("guides", ({ data }) => data.draft !== true);
 
 // 1) Published hub pages (category: "Guide Hubs")
 const hubs = all
-  .filter((e) => e.data?.category === "Guide Hubs" && e.data?.draft !== true)
+  .filter((e) => norm(e.data?.category) === "guide hubs")
   .sort((a, b) => (a.data.title || "").localeCompare(b.data.title || ""));
 
 // 2) Non-hub guides for counts
-const nonHubs = all.filter((e) => e.data?.category !== "Guide Hubs" && e.data?.draft !== true);
+const nonHubs = all.filter((e) => norm(e.data?.category) !== "guide hubs");
 
 // helper: derive a counting key for a hub
 function getHubKey(hub) {
   const k = hub.data?.hubKey;
   if (typeof k === "string" && k.trim().length) return k.trim();
+
   // fallback: if title ends with "Overview", strip it; else use title
   const t = String(hub.data?.title ?? "").trim();
   return t.replace(/\s*Overview\s*$/i, "").trim() || t || "Misc";
@@ -25,11 +30,11 @@ function getHubKey(hub) {
 // - category EXACT match to hubKey OR
 // - tags containing hubKey (case-insensitive)
 function countForHub(hubKey) {
-  const keyLower = hubKey.toLowerCase();
+  const keyLower = norm(hubKey);
   return nonHubs.filter((g) => {
-    const cat = String(g.data?.category ?? "").toLowerCase();
+    const cat = norm(g.data?.category);
     if (cat === keyLower) return true;
-    const tags = Array.isArray(g.data?.tags) ? g.data.tags.map((t) => String(t).toLowerCase()) : [];
+    const tags = Array.isArray(g.data?.tags) ? g.data.tags.map(norm) : [];
     return tags.includes(keyLower);
   }).length;
 }
@@ -42,7 +47,16 @@ function countForHub(hubKey) {
   draft: false,
   tags: ["guides","patientguide"]
 }}>
-  <h1 class="text-3xl font-bold mb-6">Guide Hubs</h1>
+  <h1 class="text-3xl font-bold mb-2">Guide Hubs</h1>
+
+  <!-- Debug — remove after verifying -->
+  <p class="mb-2 text-sm text-gray-500">Debug: hubs found = {hubs.length}</p>
+  <p class="mb-6 text-xs text-gray-500">
+    Debug: categories seen = {
+      Array.from(new Set(all.map((e) => norm(e.data?.category)))).sort().join(", ")
+    }
+  </p>
+
   <p class="mb-8 text-lg text-gray-700">
     Categories below update automatically as you add or edit guides. Click a hub to explore.
   </p>
@@ -69,6 +83,7 @@ function countForHub(hubKey) {
     </div>
   )}
 </Layout>
+
 
 
 

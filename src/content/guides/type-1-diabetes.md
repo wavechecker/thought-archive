@@ -1,12 +1,9 @@
 ---
-draft: true
----
-
----
 title: "Type 1 Diabetes — Guide Hub"
 slug: "type-1-diabetes"
 description: "Core guides for living with Type 1 Diabetes: testing, CGMs, insulin, HbA1c, and emergency actions."
 publishDate: "2025-08-19"
+hubKey: "Type 1 Diabetes"
 draft: false
 tags: ["Type 1 Diabetes", "patientguide", "hub"]
 ---

@@ -1,23 +1,28 @@
 import { defineCollection, z } from "astro:content";
 
 const guides = defineCollection({
+  // type: "content", // optional in Astro v5 (defaults to content)
   schema: z.object({
-    // Make everything optional for now so legacy files without frontmatter pass
     title: z.string().optional(),
     description: z.string().optional(),
+
+    // Dates: allow string or Date; normalize to Date
     publishDate: z.union([z.string(), z.date()]).optional()
       .transform((v) => (v ? new Date(v) : undefined)),
     updatedDate: z.union([z.string(), z.date()]).optional()
       .transform((v) => (v ? new Date(v) : undefined)),
+
     draft: z.boolean().default(false),
+
+    // 🔑 REQUIRED for hubs page to work (even if optional here):
+    category: z.string().optional(),   // or z.enum([...]) once you’re ready
+    hubKey: z.string().optional(),
+
     tags: z.array(z.string()).optional(),
     slug: z.string().optional(),
   }),
 });
 
-/**
- * Pages collection (simple static pages like Contact/About)
- */
 const pages = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -27,10 +32,6 @@ const pages = defineCollection({
   }),
 });
 
-/**
- * Posts collection (optional; only if you actually have src/content/posts/)
- * If you don't use posts yet, you can remove this block AND the 'posts:' line below.
- */
 const posts = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -42,10 +43,7 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = {
-  guides,
-  pages,
-  posts, // <- delete this line if you removed the 'posts' block above
-};
+export const collections = { guides, pages, posts };
+
 
 
