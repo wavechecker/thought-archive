@@ -5,6 +5,7 @@ description: "How Type 1 and Type 2 differ in cause, symptoms, treatment, and da
 category: "Diabetes"
 publishDate: "2025-08-20"
 updatedDate: "2025-08-20"
+hubKey: "Type 2 Diabetes"
 draft: false
 tags: ["diabetes", "patientguide"]
 ---

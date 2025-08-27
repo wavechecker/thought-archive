@@ -1,8 +1,4 @@
 ---
-draft: true
----
-
----
 title: First Aid for Severe Allergic Reactions (Anaphylaxis)
 date: 2025-08-13T00:00:00.000Z
 description: >-
@@ -16,6 +12,7 @@ tags:
   - health guides
 publishDate: '2025-08-13T15:52:51+04:00'
 updatedDate: '2025-08-13T15:52:51+04:00'
+hubKey: "Emergencies"
 ---
 
 # First Aid for Severe Allergic Reactions (Anaphylaxis)

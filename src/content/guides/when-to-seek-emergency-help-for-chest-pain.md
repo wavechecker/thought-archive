@@ -4,6 +4,7 @@ slug: "when-to-seek-emergency-help-for-chest-pain"
 description: "How to tell if chest pain is an emergency and the actions to take right away."
 publishDate: "2025-08-12"
 updatedDate: "2025-08-12"
+hubKey: "Emergencies"
 draft: false
 tags: ["chest pain", "emergency", "patientguide"]
 related:

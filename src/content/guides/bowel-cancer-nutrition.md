@@ -4,6 +4,7 @@ slug: bowel-cancer-nutrition
 description: "Dietary guidance to support bowel health, manage treatment side effects, and aid recovery."
 category: "Cancer"
 publishDate: 2025-08-20
+hubKey: "Cancer"
 draft: false
 tags: ["cancer", "bowel cancer", "nutrition", "diet", "patientguide"]
 ---

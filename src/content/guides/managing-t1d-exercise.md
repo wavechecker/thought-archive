@@ -1,12 +1,9 @@
 ---
-draft: true
----
-
----
 title: "Managing Type 1 Diabetes During Exercise"
 description: "Before, during, and after‑exercise strategies to prevent hypos and manage delayed drops."
 category: "Type 1 Diabetes"
 publishDate: "2025-08-15"
+hubKey: "Type 1 Diabetes"
 draft: false
 tags: ["Type 1 Diabetes", "patientguide"]
 ---

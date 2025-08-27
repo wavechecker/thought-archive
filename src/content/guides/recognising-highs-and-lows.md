@@ -1,8 +1,4 @@
 ---
-draft: true
----
-
----
 title: Recognising Highs and Lows — Symptoms and First Steps
 date: 2025-08-13T00:00:00.000Z
 description: >-
@@ -16,6 +12,7 @@ tags:
   - health guides
 publishDate: '2025-08-13T16:55:39+04:00'
 updatedDate: '2025-08-13T16:55:39+04:00'
+hubKey: "Type 1 Diabetes"
 ---
 
 # Recognising Highs and Lows — Symptoms and First Steps

@@ -4,6 +4,7 @@ slug: "exercise-and-type1"
 description: "How activity affects blood glucose, tips for safe workouts, and managing hypos during exercise."
 publishDate: 2025-08-21
 updatedDate: 2025-08-21
+hubKey: "Type 1 Diabetes"
 tags: ["Type 1 Diabetes", "exercise", "blood glucose", "patientguide"]
 related:
   - /guides/blood-glucose-testing

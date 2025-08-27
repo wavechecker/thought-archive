@@ -5,6 +5,7 @@ description: "Overview of key heart medications — beta blockers, ACE inhibitor
 category: "Heart & Circulation"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
+hubKey: "Heart & Circulation"
 tags: ["cardiology", "medications", "heart", "patientguide"]
 related:
   - /guides/coronary-angiography

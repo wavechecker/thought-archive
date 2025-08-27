@@ -1,8 +1,4 @@
 ---
-draft: true
----
-
----
 title: Common Causes of Dizziness and When to Worry
 date: 2025-08-13T00:00:00.000Z
 description: Typical causes of dizziness and the warning signs that need urgent evaluation.
@@ -13,6 +9,7 @@ tags:
   - health guides
 publishDate: '2025-08-13T15:52:51+04:00'
 updatedDate: '2025-08-13T15:52:51+04:00'
+hubKey: "Emergencies"
 ---
 
 # Common Causes of Dizziness and When to Worry

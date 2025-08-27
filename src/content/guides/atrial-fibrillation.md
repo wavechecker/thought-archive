@@ -5,6 +5,7 @@ description: "An irregular heartbeat that increases risk of stroke and heart fai
 category: "Heart & Circulation"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
+hubKey: "Heart & Circulation"
 tags: ["cardiology", "arrhythmia", "atrial fibrillation", "afib", "patientguide"]
 related:
   - /guides/common-heart-medications

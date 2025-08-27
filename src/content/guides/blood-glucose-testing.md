@@ -5,12 +5,14 @@ description: "When and how to test blood glucose, what the numbers mean, and why
 category: "Type 1 Diabetes"
 publishDate: 2025-08-19
 updatedDate: 2025-08-21
+hubKey: "Type 1 Diabetes"
 tags: ["Type 1 Diabetes", "patientguide", "blood glucose"]
 related:
   - /guides/continuous-glucose-monitors
   - /guides/insulin-administration
   - /guides/emergency-actions
   - /guides/understanding-hba1c
+  - /guides/hormone-therapy-menopause/
 ---
 
 # Blood Glucose Testing — How and When to Check

@@ -4,6 +4,7 @@ slug: "living-with-bowel-cancer"
 description: "Practical guidance on recovery, lifestyle adjustments, stoma care, and emotional support after a bowel cancer diagnosis."
 publishDate: 2025-08-21
 updatedDate: 2025-08-21
+hubKey: "Cancer"
 tags: ["cancer", "bowel cancer", "support", "patientguide"]
 related:
   - /guides/bowel-cancer-treatment

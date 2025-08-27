@@ -5,6 +5,7 @@ description: "Basics of carb counting, insulin-to-carb ratios, and label reading
 category: "Type 1 Diabetes"
 publishDate: 2025-08-21
 updatedDate: 2025-08-21
+hubKey: "Type 1 Diabetes"
 tags: ["Type 1 Diabetes", "carbohydrates", "insulin", "patientguide"]
 related:
   - /guides/insulin-administration

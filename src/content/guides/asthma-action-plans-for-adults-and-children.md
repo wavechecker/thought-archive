@@ -1,13 +1,10 @@
 ---
-draft: true
----
-
----
 title: "Asthma Action Plans for Adults and Children"
 slug: "asthma-action-plans-for-adults-and-children"
 description: "How to use an asthma action plan: green/yellow/red zones, when to step up treatment, and when to seek urgent care."
 publishDate: "2025-08-20"
 updatedDate: "2025-08-20"
+hubKey: "Emergencies"
 draft: false
 tags: ["asthma", "respiratory", "patientguide"]
 ---

@@ -5,6 +5,7 @@ description: "Why rehab matters after heart attack, surgery, or stents — exerc
 category: "Heart & Circulation"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
+hubKey: "Heart & Circulation"
 tags: ["cardiology", "rehabilitation", "heart", "patientguide"]
 related:
 

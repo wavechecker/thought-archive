@@ -5,6 +5,7 @@ description: "Main treatments for bowel cancer, when they're used, and what pati
 category: "Bowel Cancer"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
+hubKey: "Cancer"
 tags: ["cancer", "bowel cancer", "treatment", "patientguide"]
 related:
   - /guides/bowel-cancer-screening

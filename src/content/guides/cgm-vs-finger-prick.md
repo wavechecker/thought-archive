@@ -5,6 +5,7 @@ description: "How CGMs work, their benefits and limits, and when to confirm with
 category: "Type 1 Diabetes"
 publishDate: 2025-08-18
 updatedDate: 2025-08-21
+hubKey: "Type 1 Diabetes"
 tags: ["Type 1 Diabetes", "CGM", "blood glucose", "patientguide"]
 related:
   - /guides/blood-glucose-testing

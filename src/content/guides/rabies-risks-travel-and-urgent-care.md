@@ -1,12 +1,9 @@
 ---
-draft: true
----
-
----
 title: "Rabies — Risks for Travellers and When to Seek Urgent Care"
 description: "Rabies basics, high‑risk regions, what to do after an animal bite, and when pre‑exposure vaccination makes sense."
 category: "Travel Health"
 publishDate: "2025-08-15"
+hubKey: "Infectious Diseases"
 draft: false
 tags: ["rabies", "travel", "bites", "PEP", "vaccination"]
 ---

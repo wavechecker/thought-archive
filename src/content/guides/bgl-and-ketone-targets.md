@@ -4,6 +4,7 @@ slug: "bgl-and-ketone-targets"
 description: "Clear guide to safe blood glucose and ketone ranges in Type 1 Diabetes, and when to take urgent action."
 publishDate: 2025-08-22
 updatedDate: 2025-08-22
+hubKey: "Type 1 Diabetes"
 tags: ["Type 1 Diabetes", "blood glucose", "ketones", "targets", "patientguide"]
 related:
   - /guides/bgl-ketone-quick-reference

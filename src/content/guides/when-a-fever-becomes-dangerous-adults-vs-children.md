@@ -5,6 +5,7 @@ description: "When a fever signals urgent care is needed in adults and children 
 category: "General Health"
 publishDate: "2025-08-14"
 updatedDate: "2025-08-21"
+hubKey: "Emergencies"
 draft: false
 tags: ["fever", "emergencies", "children", "patientguide"]
 ---

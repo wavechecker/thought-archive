@@ -7,6 +7,7 @@ title: "Legionnaires' Disease — Causes, Symptoms, and Prevention"
 description: "What Legionnaires' disease is, how it spreads, symptoms to watch for, who's at risk, and how to reduce exposure — especially when traveling."
 category: "Infectious Diseases"
 publishDate: "2025-08-15"
+hubKey: "Infectious Diseases"
 draft: false
 tags: ["legionella", "pneumonia", "travel", "water systems"]
 ---

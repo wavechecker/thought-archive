@@ -1,8 +1,4 @@
 ---
-draft: true
----
-
----
 title: 'Type 1 Diabetes: DKA Quick Reference (Recognise & Act)'
 date: 2025-08-13T00:00:00.000Z
 description: >-
@@ -16,6 +12,7 @@ tags:
   - health guides
 publishDate: '2025-08-13T16:26:30+04:00'
 updatedDate: '2025-08-13T16:26:30+04:00'
+hubKey: "Type 1 Diabetes"
 ---
 
 # Type 1 Diabetes: DKA Quick Reference (Recognise & Act)

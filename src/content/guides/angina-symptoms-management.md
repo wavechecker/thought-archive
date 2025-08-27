@@ -1,12 +1,9 @@
 ---
-draft: true
----
-
----
 title: "What is Angina? Symptoms & Management"
 description: "How to recognise angina, what it means, and the treatments that reduce risk."
 category: "Heart & Circulation"
 publishDate: "2025-08-15"
+hubKey: "Heart & Circulation"
 draft: false
 tags: ["Heart & Circulation", "patientguide"]
 ---

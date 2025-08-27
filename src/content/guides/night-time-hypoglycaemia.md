@@ -1,12 +1,9 @@
 ---
-draft: true
----
-
----
 title: "Night-time Hypoglycaemia: Prevention & Safety"
 description: "Why lows happen overnight and concrete steps to reduce risk and wake safely."
 category: "Type 1 Diabetes"
 publishDate: "2025-08-15"
+hubKey: "Type 1 Diabetes"
 draft: false
 tags: ["Type 1 Diabetes", "patientguide"]
 ---

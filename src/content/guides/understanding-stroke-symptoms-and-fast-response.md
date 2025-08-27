@@ -5,6 +5,7 @@ description: "Learn the warning signs of stroke, how to use the FAST acronym, an
 category: "Neurology"
 publishDate: "2025-08-14"
 updatedDate: "2025-08-21"
+hubKey: "Emergencies"
 draft: false
 tags: ["stroke", "neurology", "emergencies", "patientguide"]
 ---

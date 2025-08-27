@@ -1,8 +1,4 @@
 ---
-draft: true
----
-
----
 title: Recognizing a Stroke FAST — A Practical Guide
 date: 2025-08-13T00:00:00.000Z
 description: >-
@@ -16,6 +12,7 @@ tags:
   - health guides
 publishDate: '2025-08-13T15:52:51+04:00'
 updatedDate: '2025-08-13T15:52:51+04:00'
+hubKey: "Emergencies"
 ---
 
 # Recognizing a Stroke FAST — A Practical Guide

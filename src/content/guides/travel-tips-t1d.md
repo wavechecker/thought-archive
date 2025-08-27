@@ -1,12 +1,9 @@
 ---
-draft: true
----
-
----
 title: "Travel Tips for People with Type 1 Diabetes"
 description: "Practical prep, packing lists, and in‑transit tactics to travel confidently with Type 1 diabetes."
 category: "Type 1 Diabetes"
 publishDate: "2025-08-15"
+hubKey: "Type 1 Diabetes"
 draft: false
 tags: ["Type 1 Diabetes", "patientguide"]
 ---

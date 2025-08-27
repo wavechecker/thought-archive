@@ -5,6 +5,7 @@ description: "Recognising food allergies, emergency steps for anaphylaxis, and p
 category: "Emergencies"
 publishDate: 2025-08-14
 updatedDate: 2025-08-21
+hubKey: "Emergencies"
 draft: false
 tags: ["Emergencies", "Allergies", "patientguide"]
 ---

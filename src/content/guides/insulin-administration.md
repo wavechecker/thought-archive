@@ -5,6 +5,7 @@ description: "Basal and bolus basics, dosing methods, site rotation, and pump se
 category: "Type 1 Diabetes"
 publishDate: 2025-08-18
 updatedDate: 2025-08-21
+hubKey: "Type 1 Diabetes"
 tags: ["Type 1 Diabetes", "insulin", "patientguide"]
 related:
   - /guides/blood-glucose-testing

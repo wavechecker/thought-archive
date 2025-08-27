@@ -5,6 +5,7 @@ description: "Steps to reduce your risk of heart disease — diet, exercise, ris
 category: "Heart & Circulation"
 publishDate: 2025-08-20
 updatedDate: 2025-08-21
+hubKey: "Heart & Circulation"
 tags: ["cardiology", "prevention", "screening", "heart", "patientguide"]
 related:
   - /guides/common-heart-medications

@@ -1,13 +1,10 @@
 ---
-draft: true
----
-
----
 title: "Insulin Administration — Pens, Syringes, and Pumps"
 slug: "insulin-administration"
 description: "How to choose and use pens, syringes, and pumps — plus insulin types, site rotation, storage, and safety."
 category: "Type 1 Diabetes"
 publishDate: "2025-08-19"
+hubKey: "Type 1 Diabetes"
 draft: false
 tags: ["Type 1 Diabetes", "patientguide", "insulin"]
 ---

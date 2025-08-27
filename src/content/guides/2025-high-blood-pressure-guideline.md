@@ -4,6 +4,7 @@ slug: "2025-high-blood-pressure-guideline"
 description: "The 2025 AHA/ACC guideline emphasizes prevention, early treatment, pregnancy care, and brain health in managing high blood pressure."
 category: "Heart & Circulation"
 publishDate: "2025-08-22"
+hubKey: "Heart & Circulation"
 draft: false
 tags: ["hypertension", "heart", "guidelines", "cardiology", "prevention", "dementia"]
 ---

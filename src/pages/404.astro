@@ -1,31 +1,39 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
-// --- helpers ---
-const toLower = (s) => (typeof s === "string" ? s.toLowerCase() : "");
-const uniq = (arr) => [...new Set(arr)];
-const includesAny = (text, words) => words.some(w => text.includes(w));
+// ---------- types & helpers ----------
+type GuideEntry = CollectionEntry<"guides">;
+type PostEntry  = CollectionEntry<"posts">;
+type WithKind = (GuideEntry | PostEntry) & { kind: "guide" | "post" };
+
+const toLower = (s: unknown): string =>
+  typeof s === "string" ? s.toLowerCase() : "";
+
+const uniq = <T,>(arr: T[]): T[] => [...new Set(arr)];
+
+const includesAny = (text: string, words: string[]): boolean =>
+  words.some((w) => text.includes(w));
 
 const path = new URL(Astro.request.url).pathname.toLowerCase();
 
-// Tokenize the broken path (e.g., "/guides/type-1-diabetes/…" -> ["guides","type","1","diabetes"])
+// Tokenize the broken path (e.g. "/guides/type-1-diabetes/…" -> ["guides","type","1","diabetes"])
 const tokens = uniq(
   path
     .split(/[\/\-\_\.\s]+/g)
-    .map(t => t.trim())
+    .map((t) => t.trim())
     .filter(Boolean)
 );
 
 // Optional keyword → canonical suggestions (quick wins)
-const keywordRoutes = [
-  { keys: ["diabetes","t1d","t2d","blood-glucose","insulin"],    href: "/guides/type-1-diabetes/" },
-  { keys: ["heart","circulation","cardio","atrial","angina"],     href: "/guides/heart-circulation/" },
-  { keys: ["womb","ectogenesis","pregnancy","china","robot"],     href: "/posts/china-pregnancy-robot-artificial-wombs/" },
-  { keys: ["artificial","wombs","ectogenesis"],                   href: "/posts/artificial-wombs-china-might-be-first/" },
-  { keys: ["attention","focus","concentration"],                  href: "/posts/the-war-on-attention/" },
-  { keys: ["agi","alignment","control"],                          href: "/posts/the-agi-control-paradox/" },
-  { keys: ["writing","algorithms","manifesto"],                   href: "/posts/what-writing-is-for-now-that-the-algorithms-have-taken-over/" },
+const keywordRoutes: { keys: string[]; href: string }[] = [
+  { keys: ["diabetes", "t1d", "t2d", "blood-glucose", "insulin"], href: "/guides/type-1-diabetes/" },
+  { keys: ["heart", "circulation", "cardio", "atrial", "angina"], href: "/guides/heart-circulation/" },
+  { keys: ["womb", "ectogenesis", "pregnancy", "china", "robot"], href: "/posts/china-pregnancy-robot-artificial-wombs/" },
+  { keys: ["artificial", "wombs", "ectogenesis"], href: "/posts/artificial-wombs-china-might-be-first/" },
+  { keys: ["attention", "focus", "concentration"], href: "/posts/the-war-on-attention/" },
+  { keys: ["agi", "alignment", "control"], href: "/posts/the-agi-control-paradox/" },
+  { keys: ["writing", "algorithms", "manifesto"], href: "/posts/what-writing-is-for-now-that-the-algorithms-have-taken-over/" },
 ];
 
 // Collections
@@ -33,92 +41,51 @@ const guides = await getCollection("guides");
 const posts  = await getCollection("posts");
 
 // Scoring: simple relevance based on tokens found in title/description/tags
-function scoreEntry(entry) {
+function scoreEntry(entry: GuideEntry | PostEntry): number {
   const title = toLower(entry.data.title);
   const desc  = toLower(entry.data.description ?? "");
-  const tags  = (entry.data.tags ?? []).map(toLower).join(" ");
+  const tags  = (entry.data.tags ?? []).map((t: unknown) => toLower(t as string)).join(" ");
   const hay   = `${title} ${desc} ${tags}`;
   let score = 0;
   for (const t of tokens) {
     if (!t) continue;
-    if (hay.includes(t)) score += 2;       // stronger hit in text
-    if (title.includes(t)) score += 1;     // extra bump for title
+    if (hay.includes(t)) score += 2;   // stronger hit in text
+    if (title.includes(t)) score += 1; // extra bump for title
   }
   return score;
 }
 
 // Compute suggestions
-const all = [
-  ...guides.map(e => ({ ...e, kind: "guide" })),
-  ...posts.map(e  => ({ ...e, kind: "post"  })),
+const all: WithKind[] = [
+  ...guides.map((e) => ({ ...(e as GuideEntry), kind: "guide" as const })),
+  ...posts.map((e)  => ({ ...(e as PostEntry),  kind: "post"  as const })),
 ];
 
 const ranked = all
-  .map(e => ({ e, s: scoreEntry(e) }))
-  .filter(x => x.s > 0)
+  .map((e) => ({ e, s: scoreEntry(e) }))
+  .filter((x) => x.s > 0)
   .sort((a, b) => b.s - a.s)
   .slice(0, 8)
-  .map(x => x.e);
+  .map((x) => x.e);
 
 // Keyword → canonical direct suggestions (top of page if any)
-const direct = keywordRoutes
-  .filter(r => includesAny(path, r.keys))
-  .map(r => r.href);
+const direct: string[] = keywordRoutes
+  .filter((r) => includesAny(path, r.keys))
+  .map((r) => r.href);
 
-// Fallback lists
+// Fallback lists (latest first already fine for static suggestions)
 const recentPosts  = posts.slice(0, 5);
 const recentGuides = guides.slice(0, 5);
 
 // De-dup hrefs in “Likely matches”
-const hrefFor = (e) => (e.kind === "guide" ? `/guides/${e.slug}/` : `/posts/${e.slug}/`);
-const likely = uniq(ranked.map(hrefFor));
+const hrefFor = (e: WithKind): string =>
+  e.kind === "guide" ? `/guides/${e.slug}/` : `/posts/${e.slug}/`;
+
+const likely: string[] = uniq(ranked.map(hrefFor));
 
 const frontmatter = {
   title: "Page not found",
-  description: "We couldn’t find that page — here are some likely matches and recent content.",
+  description:
+    "We couldn’t find that page — here are some likely matches and recent content.",
 };
 ---
-
-<Layout frontmatter={frontmatter}>
-  <h1>Page not found</h1>
-  <p>We couldn’t find <code>{path}</code>. Try one of these:</p>
-
-  {direct.length > 0 && (
-    <>
-      <h2>Direct suggestions</h2>
-      <ul>
-        {uniq(direct).map(href => (
-          <li><a href={href}>{href}</a></li>
-        ))}
-      </ul>
-    </>
-  )}
-
-  {likely.length > 0 && (
-    <>
-      <h2>Likely matches</h2>
-      <ul>
-        {likely.map(href => (
-          <li><a href={href}>{href}</a></li>
-        ))}
-      </ul>
-    </>
-  )}
-
-  <h2>Recent Posts</h2>
-  <ul>
-    {recentPosts.map(p => (
-      <li><a href={`/posts/${p.slug}/`}>{p.data.title}</a></li>
-    ))}
-  </ul>
-
-  <h2>Top Guides</h2>
-  <ul>
-    {recentGuides.map(g => (
-      <li><a href={`/guides/${g.slug}/`}>{g.data.title}</a></li>
-    ))}
-  </ul>
-
-  <p><a href="/">← Back to Home</a></p>
-</Layout>
-

@@ -1,81 +1,58 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getCollection, getEntryBySlug } from "astro:content";
+import { getCollection, getEntryBySlug, type CollectionEntry } from "astro:content";
 import { isValidDate, fmt } from "@/lib/date";
 
 export const prerender = true;
 
+// ---------- types & helpers ----------
+type Guide = CollectionEntry<"guides">;
+
+const toStringSlug = (param: string | string[] | undefined): string =>
+  Array.isArray(param) ? param.join("/") : String(param ?? "");
+
+// ✅ Make TS aware that params.slug exists at runtime
+type CatchAllParams = { slug?: string | string[] };
+const slug = toStringSlug((Astro.params as unknown as CatchAllParams).slug);
+
 /**
- * IMPORTANT: For a rest route like [...slug], Astro v5 expects
- * getStaticPaths() to return STRING params (e.g. "a/b/c"), not arrays.
+ * For a catch-all route like [...slug], return a STRING param for each page.
+ * Astro v5 is happy with "section/child" style slugs here.
  */
 export async function getStaticPaths() {
   const entries = await getCollection("guides");
   return entries.map((e) => ({
-    params: { slug: e.slug }, // e.slug may include "/" for nested paths
+    params: { slug: e.slug }, // may include "/" for nested paths
   }));
 }
 
-// With the above, Astro.params.slug will be a STRING like "section/slug"
-const slug = Astro.params.slug as string;
+// Fetch entry (slug may be nested, e.g., "section/guide-name")
+const entry = (await getEntryBySlug("guides", slug)) as Guide | null;
 
-const entry = await getEntryBySlug("guides", slug);
 if (!entry) {
-  // Safety: if a nested slug wasn't found
+  Astro.response.status = 404;
   throw new Error(`[guides] No entry found for slug: ${slug}`);
 }
 
 const { Content } = await entry.render();
 const data = entry.data;
-
 const canonical = `https://patientguide.io/guides/${entry.slug}/`;
 
-// Resolve "Related Guides" from frontmatter `related`
-// Accepts either "/guides/foo" or "foo" form
+// Resolve "Related Guides" from frontmatter `related` ("/guides/foo" or "foo")
 const allGuides = await getCollection("guides");
-function resolveRelated(rel: unknown) {
+
+function resolveRelated(rel: unknown): Guide[] {
   if (!Array.isArray(rel)) return [];
   return rel
-    .map((r) => {
-      if (typeof r !== "string") return null;
-      const key = r.replace(/^\/guides\//, "").replace(/\/$/, "");
-      return allGuides.find((e) => e.slug === key) ?? null;
-    })
-    .filter(Boolean);
+    .map((r) => (typeof r === "string" ? r : null))
+    .filter(Boolean)
+    .map((r) => r!.replace(/^\/guides\//, "").replace(/\/$/, ""))
+    .map((key) => allGuides.find((e) => e.slug === key) ?? null)
+    .filter((e): e is Guide => Boolean(e));
 }
-const related = resolveRelated(data.related);
+const related = resolveRelated((data as any).related);
 ---
 
-<Layout frontmatter={data}>
-  <Fragment slot="head">
-    <link rel="canonical" href={canonical} />
-  </Fragment>
 
-  <h1>{data?.title ?? "Untitled"}</h1>
-
-  <p style="color:#6b7280; margin-top:.25rem;">
-    {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
-    {data?.updatedDate && isValidDate(data.updatedDate) ? ` • Updated ${fmt(data.updatedDate)}` : ""}
-  </p>
-
-  <Content />
-
-  {related.length > 0 && (
-    <>
-      <h2>Related Guides</h2>
-      <ul>
-        {related.map((r) => (
-          <li><a href={`/guides/${r.slug}/`}>{r.data.title}</a></li>
-        ))}
-      </ul>
-    </>
-  )}
-
-  {Array.isArray(data?.tags) && data.tags.length > 0 && (
-    <p style="color:#2563eb; margin-top:1rem;">
-      {data.tags.map((t: string, i: number) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
-    </p>
-  )}
-</Layout>
 
 

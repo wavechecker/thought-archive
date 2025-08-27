@@ -5,6 +5,7 @@ description: "Causes, symptoms, and how to stop the spread of gastroenteritis ('
 publishDate: 2025-08-14
 updatedDate: 2025-08-21
 category: "Infections"
+hubKey: "Infectious Diseases"
 tags: ["Infections", "gastroenteritis", "patientguide"]
 draft: false
 ---

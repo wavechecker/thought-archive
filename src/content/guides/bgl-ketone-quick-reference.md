@@ -5,6 +5,7 @@ description: "At-a-glance chart for safe and unsafe blood glucose and ketone lev
 category: "Type 1 Diabetes"
 publishDate: 2025-08-22
 updatedDate: 2025-08-22
+hubKey: "Type 1 Diabetes"
 tags: ["Type 1 Diabetes", "blood glucose", "ketones", "quick reference", "patientguide"]
 related:
   - /guides/bgl-and-ketone-targets

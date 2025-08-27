@@ -5,6 +5,7 @@ description: "Red flags for breathlessness that warrant medical review, and when
 publishDate: "2025-08-20"
 updatedDate: "2025-08-20"
 draft: false
+hubKey: "Emergencies"
 tags: ["respiratory", "shortness of breath", "patientguide"]
 related:
   - /guides/when-to-seek-emergency-help-for-chest-pain

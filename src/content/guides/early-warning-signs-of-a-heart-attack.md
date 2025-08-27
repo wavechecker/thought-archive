@@ -4,6 +4,7 @@ slug: "early-warning-signs-of-a-heart-attack"
 description: "Subtle symptoms that can appear hours or days before a heart attack, and what to do."
 publishDate: "2025-08-14"
 updatedDate: "2025-08-14"
+hubKey: "Emergencies"
 draft: false
 tags: ["heart", "cardiac", "emergency", "patientguide"]
 related:
