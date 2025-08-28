@@ -1,12 +1,14 @@
 ---
-draft: true
+title: "Mental Health First Aid — The Basics"
+slug: "mental-health-first-aid"
+description: "How to recognise mental health warning signs, offer immediate support, and guide someone to professional help."
+category: "Mental Health"
+tags: ["mental health", "first aid", "crisis", "suicide prevention"]
+publishDate: "2025-08-14"
+updatedDate: "2025-08-21"
+draft: false
 ---
 
----
-title: "The Basics of Mental Health First Aid"
-publishDate: 2025-08-14
-updatedDate: 2025-08-14
----
 
 Mental health first aid teaches how to support someone experiencing mental distress or crisis until professional help is available.
 
