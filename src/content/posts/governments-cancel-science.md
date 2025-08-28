@@ -65,11 +65,11 @@ A: No. Politics has always colored policy. What’s new is the systematic remova
 A: Then challenge them with better research, not political retribution. Science evolves through critique, not cancellation.  
 
 ## Further Reading
-- [CDC director Susan Monarez ousted after vaccine clash](https://www.theguardian.com/us-news/2025/aug/27/cdc-director-susan-monarez-ousted)  
-- [Trump removes Fed Governor Lisa Cook](https://www.foxbusiness.com/politics/trump-removes-federal-reserve-governor-lisa-cook-from-office-citing-fraud-allegations)  
+- [COVID-19 Vaccination Guidelines — United States (August 2025)](/guides/us-covid-vaccine-guidelines-aug-2025)   
 - [WHO: Global COVID-19 Vaccination Policy (2025 update)](https://www.who.int/publications/i/item/global-covid-19-vaccination-policy-2025)  
 - [CDC: Principles of Scientific Integrity](https://www.cdc.gov/about/integrity/)  
 - [Our guide to Legionnaires’ Disease](/guides/legionnaires-disease)  
+
 
 ## Closing
 Galileo’s telescope showed the Earth circling the sun — and for that, he was silenced. Bruno was burned. Mendel was ignored.  
