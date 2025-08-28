@@ -1,0 +1,48 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const PAGE_TITLE = "General Health";
+const CATEGORY_KEYS = ["General Health"];
+
+const all = await getCollection("guides");
+const norm = (s) => String(s ?? "").toLowerCase().trim();
+
+const matchesCategory = (entry) => {
+  const cat = norm(entry.data?.category);
+  const tags = (entry.data?.tags ?? []).map(norm);
+  const keys = CATEGORY_KEYS.map(norm);
+  return (cat && keys.includes(cat)) || tags.some(t => keys.includes(t));
+};
+
+const guides = all
+  .filter((e) => e.data?.draft !== true)
+  .filter(matchesCategory)
+  .sort((a, b) => {
+    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+    return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
+  });
+
+const pageDesc = `Browse guides in ${PAGE_TITLE}.`;
+---
+
+<Layout title={`${PAGE_TITLE} — Guides`} description={pageDesc}>
+  <section class="prose max-w-3xl mx-auto py-8">
+    <h1>{PAGE_TITLE}</h1>
+    <p>{pageDesc}</p>
+
+    {guides.length === 0 ? (
+      <p>No guides found yet.</p>
+    ) : (
+      <ul class="list-disc list-inside mt-6 space-y-2">
+        {guides.map((g) => (
+          <li>
+            <a href={`/guides/${g.slug}/`}>{g.data?.title ?? "(Untitled)"}</a>
+            {g.data?.description && <small> — {g.data.description}</small>}
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</Layout>

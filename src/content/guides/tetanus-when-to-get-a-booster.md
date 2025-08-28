@@ -1,15 +1,13 @@
 ---
-draft: true
+title: "Tetanus — When to Get a Booster"
+description: "Who needs a tetanus booster and when, including routine schedules and what to do after a dirty or high-risk wound."
+category: "Vaccination"
+tags: ["tetanus", "vaccination", "wounds", "booster"]
+publishDate: "2025-08-15"
+updatedDate: "2025-08-15"
+draft: false
 ---
 
----
-title: "Tetanus — When to Get a Booster"
-description: "Who needs a tetanus booster and when, including routine schedules and what to do after a dirty or high‑risk wound."
-category: "Travel Health"
-publishDate: "2025-08-15"
-draft: false
-tags: ["tetanus", "vaccination", "wounds", "booster"]
----
 
 **Tetanus** is caused by *Clostridium tetani* bacteria entering a wound and producing a toxin that affects the nervous system. The disease is rare where vaccination coverage is high — but **booster timing matters**, especially after injuries.
 

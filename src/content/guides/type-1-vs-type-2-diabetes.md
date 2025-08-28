@@ -1,6 +1,6 @@
 ---
 title: "Difference Between Type 1 and Type 2 Diabetes"
-slug: "type-1-vs-type-2-diabetes"
+slug: "difference-between-type-1-and-type-2-diabetes"
 description: "How Type 1 and Type 2 differ in cause, symptoms, treatment, and day-to-day management."
 category: "Diabetes"
 publishDate: "2025-08-20"
@@ -41,11 +41,36 @@ A: Yes — while Type 1 is more common in children, rising obesity and inactivit
 **Q: Is one type more serious than the other?**  
 A: Both can be serious if not managed. Type 1 carries immediate risks if insulin is missed, while Type 2 raises long-term risks for heart, kidney, and eye disease. Good management reduces complications in both types.
 
+**Q: Can diabetes be cured?**  
+A: Currently there is no cure for Type 1 or Type 2 diabetes. Type 1 requires lifelong insulin. Some people with Type 2 may achieve remission with weight loss, diet, and exercise, but this is not the same as a cure.
+
+**Q: What’s the difference between remission and control?**  
+A: *Remission* means blood sugar levels return to normal without medication, but diabetes may return later. *Control* means keeping blood sugar in the target range with medicines, insulin, or lifestyle measures.
+
+**Q: What happens if diabetes is not managed properly?**  
+A: Poorly controlled diabetes increases the risk of heart disease, kidney failure, vision loss, nerve damage, and serious infections.
+
+**Q: How often should I get checked if I have diabetes?**  
+A: At least every 3–6 months for routine blood sugar and HbA1c tests, plus yearly reviews for eyes, kidneys, feet, and blood pressure.
+
+**Q: Can lifestyle changes really make a difference?**  
+A: Yes — diet, exercise, and weight management are powerful tools, especially for Type 2 diabetes, and help reduce complications in both types.
+
 ---
 
 ⚠️ **Both Type 1 and Type 2 diabetes require medical care.**  
 If you have symptoms such as frequent urination, extreme thirst, unexplained weight loss, or fatigue, **see a doctor promptly for testing and treatment**.
 
+---
+
+⚠️ **Diabetes Red Flags — Seek Emergency Help Immediately**
+- Severe confusion, drowsiness, or loss of consciousness  
+- Rapid breathing, fruity-smelling breath, or abdominal pain (possible diabetic ketoacidosis, DKA)  
+- Persistent vomiting or inability to keep fluids down  
+- Very high or very low blood sugar that does not improve with treatment  
+- Sudden vision changes, weakness, or chest pain  
+
+If you or someone you care for has these symptoms, **call emergency services right away**.
+
 
 If you're unsure which type you have, see your healthcare provider — accurate diagnosis guides effective treatment.
-
