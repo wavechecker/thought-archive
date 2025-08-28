@@ -1,0 +1,33 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const resources = await getCollection("resources");
+const published = resources
+  .filter((r) => r.data?.draft !== true)
+  .sort((a, b) => {
+    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+    return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
+  });
+---
+
+<Layout title="Resources" description="Quick-reference checklists and patient handouts">
+  <section class="prose max-w-3xl mx-auto py-8">
+    <h1>Resources</h1>
+    <p>Download quick-reference checklists and printable handouts to support day-to-day health management.</p>
+
+    {published.length === 0 ? (
+      <p>No resources available yet.</p>
+    ) : (
+      <ul class="list-disc list-inside mt-6 space-y-2">
+        {published.map((r) => (
+          <li>
+            <a href={`/resources/${r.slug}/`}>{r.data?.title ?? "(Untitled)"}</a>
+            {r.data?.description && <small> — {r.data.description}</small>}
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</Layout>

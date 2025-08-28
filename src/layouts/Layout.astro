@@ -4,6 +4,7 @@ const NAV = [
   { label: "Home", href: "/" },
   { label: "Guides", href: "/guides/" },
   { label: "Posts", href: "/posts/" },
+  { label: "Resources", href: "/resources/" },   // ✅ Added
   { label: "Contact", href: "/contact/" },
 ];
 
@@ -42,6 +43,9 @@ const jsonLd = {
   datePublished: publishDate,
   dateModified: updatedDate,
 };
+
+// Current path for active link highlighting
+const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -93,11 +97,20 @@ const jsonLd = {
   <body>
     <header>
       <nav>
-        {NAV.map((item, i) => (
-          <>
-            <a href={item.href}>{item.label}</a>{i < NAV.length - 1 ? " | " : ""}
-          </>
-        ))}
+        {NAV.map((item, i) => {
+          const isActive = currentPath === item.href || currentPath.startsWith(item.href) && item.href !== "/";
+          return (
+            <>
+              <a
+                href={item.href}
+                class={isActive ? "active" : ""}
+              >
+                {item.label}
+              </a>
+              {i < NAV.length - 1 ? " | " : ""}
+            </>
+          );
+        })}
       </nav>
     </header>
 
@@ -126,7 +139,19 @@ const jsonLd = {
     margin: 0 auto;
     padding: 1rem;
   }
-  nav a { margin-right: .75rem; text-decoration: none; color: #2563eb; }
+  nav a { 
+    margin-right: .75rem; 
+    text-decoration: none; 
+    color: #2563eb; 
+  }
   nav a:hover { text-decoration: underline; }
-  main { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+  nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  main { 
+    max-width: 960px; 
+    margin: 0 auto; 
+    padding: 1.5rem; 
+  }
 </style>
