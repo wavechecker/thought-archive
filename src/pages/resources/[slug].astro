@@ -1,0 +1,38 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getEntryBySlug } from "astro:content";
+
+const { slug } = Astro.params;
+const entry = await getEntryBySlug("resources", slug);
+
+// 404 if not found or still draft
+if (!entry || entry.data?.draft === true) {
+  return Astro.redirect("/resources/", 302);
+}
+
+const { Content, headings } = await entry.render();
+const fm = entry.data;
+
+// Build frontmatter for Layout (used for <title>, meta, JSON-LD)
+const frontmatter = {
+  title: fm.title ?? "Resource",
+  description: fm.description ?? "",
+  publishDate: fm.publishDate,
+  updatedDate: fm.updatedDate,
+  schemaType: "TechArticle", // or "Article" if you prefer
+};
+---
+
+<Layout frontmatter={frontmatter}>
+  <section class="prose max-w-3xl mx-auto py-8">
+    <h1>{fm.title}</h1>
+    {fm.description && <p><em>{fm.description}</em></p>}
+
+    <Content />
+
+    {/* Optional: tags */}
+    {Array.isArray(fm.tags) && fm.tags.length > 0 && (
+      <p><strong>Tags:</strong> {fm.tags.join(", ")}</p>
+    )}
+  </section>
+</Layout>
