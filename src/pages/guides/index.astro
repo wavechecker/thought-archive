@@ -1,88 +1,26 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getCollection } from "astro:content";
-
-// Normalize helper (prevents invisible spaces/casing issues)
-const norm = (v) => String(v ?? "").toLowerCase().trim();
-
-// Only pull published guides
-const all = await getCollection("guides", ({ data }) => data.draft !== true);
-
-// 1) Published hub pages (category: "Guide Hubs")
-const hubs = all
-  .filter((e) => norm(e.data?.category) === "guide hubs")
-  .sort((a, b) => (a.data.title || "").localeCompare(b.data.title || ""));
-
-// 2) Non-hub guides for counts
-const nonHubs = all.filter((e) => norm(e.data?.category) !== "guide hubs");
-
-// helper: derive a counting key for a hub
-function getHubKey(hub) {
-  const k = hub.data?.hubKey;
-  if (typeof k === "string" && k.trim().length) return k.trim();
-
-  // fallback: if title ends with "Overview", strip it; else use title
-  const t = String(hub.data?.title ?? "").trim();
-  return t.replace(/\s*Overview\s*$/i, "").trim() || t || "Misc";
-}
-
-// count guides that belong to a hub by:
-// - category EXACT match to hubKey OR
-// - tags containing hubKey (case-insensitive)
-function countForHub(hubKey) {
-  const keyLower = norm(hubKey);
-  return nonHubs.filter((g) => {
-    const cat = norm(g.data?.category);
-    if (cat === keyLower) return true;
-    const tags = Array.isArray(g.data?.tags) ? g.data.tags.map(norm) : [];
-    return tags.includes(keyLower);
-  }).length;
-}
 ---
 
-<Layout frontmatter={{
-  title: "Guides — PatientGuide",
-  description: "Browse all patient-friendly guides by hub. New hubs appear automatically.",
-  publishDate: "2025-08-26",
-  draft: false,
-  tags: ["guides","patientguide"]
-}}>
-  <h1 class="text-3xl font-bold mb-2">Guide Hubs</h1>
+<Layout title="Guides" description="Browse health guides by category">
+  <section class="prose max-w-3xl mx-auto py-8">
+    <h1>Guides</h1>
+    <p>Explore our library of health guides, organized by category. Click a topic below to browse detailed guides.</p>
 
-  <!-- Debug — remove after verifying -->
-  <p class="mb-2 text-sm text-gray-500">Debug: hubs found = {hubs.length}</p>
-  <p class="mb-6 text-xs text-gray-500">
-    Debug: categories seen = {
-      Array.from(new Set(all.map((e) => norm(e.data?.category)))).sort().join(", ")
-    }
-  </p>
-
-  <p class="mb-8 text-lg text-gray-700">
-    Categories below update automatically as you add or edit guides. Click a hub to explore.
-  </p>
-
-  {hubs.length === 0 ? (
-    <div class="rounded-2xl border border-dashed p-6 text-gray-600">
-      No Guide Hubs published yet. To add one, create a guide with <code>category: "Guide Hubs"</code>, set <code>draft: false</code>, and (optionally) add <code>hubKey:</code> for accurate counts.
-    </div>
-  ) : (
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {hubs.map((hub) => {
-        const key = getHubKey(hub);
-        const count = countForHub(key);
-        const href = `/guides/${hub.slug}/`;
-        const desc = hub.data?.description || "Browse focused guides in this hub.";
-        return (
-          <a href={href} class="block p-6 rounded-2xl shadow hover:shadow-lg transition bg-white">
-            <h2 class="text-xl font-semibold mb-1">{key} — Guide Hub</h2>
-            <p class="text-gray-600 text-sm mb-3">{desc}</p>
-            <p class="text-gray-800 text-sm">{count} guide{count === 1 ? "" : "s"}</p>
-          </a>
-        );
-      })}
-    </div>
-  )}
+    <ul class="list-disc list-inside mt-6 space-y-2">
+      <li><a href="/guides/emergencies/">Emergencies</a> — What to do in urgent situations.</li>
+      <li><a href="/guides/infectious-diseases/">Infectious Diseases</a> — Prevention, treatment, and key facts.</li>
+      <li><a href="/guides/vaccination/">Vaccination</a> — Vaccines, schedules, and safety.</li>
+      <li><a href="/guides/heart-circulation/">Heart &amp; Circulation</a> — Cardiac health and risk management.</li>
+      <li><a href="/guides/womens-health/">Women’s Health</a> — Conditions, prevention, and care options.</li>
+      <li><a href="/guides/diabetes/">Diabetes</a> — Type 1, Type 2, and management strategies.</li>
+      <li><a href="/guides/cancer/">Cancer</a> — Screening, treatment, and support resources.</li>
+      <li><a href="/guides/neurology/">Neurology</a> — Brain and nervous system conditions.</li>
+      <li><a href="/guides/general-health/">General Health</a> — Lifestyle, prevention, and wellness.</li>
+    </ul>
+  </section>
 </Layout>
+
 
 
 
