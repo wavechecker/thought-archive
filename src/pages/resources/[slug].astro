@@ -1,25 +1,27 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 
-const { slug } = Astro.params;
-const entry = await getEntryBySlug("resources", slug);
-
-// 404 if not found or still draft
-if (!entry || entry.data?.draft === true) {
-  return Astro.redirect("/resources/", 302);
+// Build all resource pages at build time (skip drafts)
+export async function getStaticPaths() {
+  const entries = await getCollection("resources", (entry) => entry.data?.draft !== true);
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
-const { Content, headings } = await entry.render();
+const { entry } = Astro.props;
+const { Content } = await entry.render();
 const fm = entry.data;
 
-// Build frontmatter for Layout (used for <title>, meta, JSON-LD)
+// Frontmatter for <Layout> meta/LD+JSON
 const frontmatter = {
   title: fm.title ?? "Resource",
   description: fm.description ?? "",
   publishDate: fm.publishDate,
   updatedDate: fm.updatedDate,
-  schemaType: "TechArticle", // or "Article" if you prefer
+  schemaType: "TechArticle", // or "Article"
 };
 ---
 
@@ -30,9 +32,9 @@ const frontmatter = {
 
     <Content />
 
-    {/* Optional: tags */}
     {Array.isArray(fm.tags) && fm.tags.length > 0 && (
       <p><strong>Tags:</strong> {fm.tags.join(", ")}</p>
     )}
   </section>
 </Layout>
+
