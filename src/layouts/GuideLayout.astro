@@ -1,7 +1,6 @@
 ---
 const url = new URL(Astro.url);
 const fm = Astro.props.frontmatter ?? {};
-
 const jsonLdObj = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -13,21 +12,32 @@ const jsonLdObj = {
   "mainEntityOfPage": url.href
 };
 const jsonLd = JSON.stringify(jsonLdObj);
+
+// OG + Twitter setup
+const ogImage = fm.image ?? "https://patientguide.io/og-default.png";
+const title = fm.title ?? "Untitled";
+const description = fm.description ?? "";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{fm.title ?? "Untitled"}</title>
-    <meta name="description" content={fm.description ?? ""} />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="application/ld+json">{jsonLd}</script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="application/ld+json">{jsonLd}</script>
 
-  <body>
-    <main class="prose max-w-3xl mx-auto px-4 py-8">
-      <h1>{fm?.title ?? "Untitled"}</h1>
-      <slot />
-    </main>
-  </body>
-</html>
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={url.href} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:site_name" content="PatientGuide.io" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+</head>
+

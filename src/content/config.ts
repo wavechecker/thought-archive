@@ -52,6 +52,27 @@ const guides = defineCollection({
     }),
 });
 
+// src/content/config.ts
+import { z, defineCollection } from "astro:content";
+
+const resources = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    slug: z.string(),
+    description: z.string().optional(),
+    category: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    publishDate: z.string().optional(),
+    updatedDate: z.string().optional(),
+    draft: z.boolean().optional(),
+  }),
+});
+
+export const collections = {
+  // existing collections...
+  resources,
+};
 
 
 
