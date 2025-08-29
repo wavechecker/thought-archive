@@ -5,7 +5,7 @@ description: "An index of guides on vaccine safety, controversies, and monitorin
 category: "Vaccination"
 publishDate: 2025-08-26
 tags: ["safety", "overview", "controversy"]
-draft: true
+draft: false
 ---
 
 # Vaccination Safety Overview

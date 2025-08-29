@@ -156,3 +156,14 @@
   from = "/sitemap.xml"
   to   = "/sitemap-index.xml"
   status = 301
+
+  [[redirects]]
+from = "/guides/cancer-guides-bowel-cancer-information-hub/"
+to = "/guides/bowel-cancer/"
+status = 301
+
+[[redirects]]
+from = "/guides/vaccination-overview/"
+to = "/guides/vaccination/"
+status = 301
+
