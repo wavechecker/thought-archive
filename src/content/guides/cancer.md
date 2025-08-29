@@ -1,44 +1,33 @@
 ---
-title: "Cancer Guides — Bowel Cancer Information Hub"
+title: "Cancer — Guide Hub"
 slug: cancer
-description: "A collection of guides on bowel cancer — from risks and symptoms to treatment, survivorship, and palliative care."
+description: "Browse guides on cancer, including bowel cancer, skin cancer, and other related conditions."
 category: "Cancer"
-publishDate: 2025-08-20
+publishDate: "2025-08-20"
+updatedDate: "2025-08-29"
 hubKey: "Cancer"
 draft: false
-tags: ["cancer", "bowel cancer", "guides", "patientguide"]
+tags: ["cancer", "oncology", "patientguide", "hub"]
 ---
 
-# Cancer Guides — Bowel Cancer Information Hub
+# Cancer — Guide Hub
 
-Bowel cancer is one of the most common cancers worldwide — but also one of the most preventable and treatable when caught early.  
-This hub brings together all of our bowel cancer guides, from early detection through to survivorship and palliative care.  
+Cancer is a group of diseases where abnormal cells grow uncontrollably and can spread throughout the body.  
+This hub connects our condition-specific cancer resources, with practical guides for patients and families.
 
----
+## Condition Hubs
+- [Bowel Cancer — Guide Hub](/guides/bowel-cancer/)  
+- [Breast Cancer — Guide Hub](/guides/breast-cancer/)  
+- [Prostate Cancer — Guide Hub](/guides/prostate-cancer/)  
+- [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-warning-signs/)  
 
-## Core Guides
-- [Understanding Bowel Cancer — Risks and Symptoms](/guides/understanding-bowel-cancer)  
-- [Bowel Cancer Screening — Colonoscopy, FIT Test, and Early Detection](/guides/bowel-cancer-screening)  
-- [Treatment Pathways — Surgery, Chemo, Radiotherapy](/guides/bowel-cancer-treatment)  
-
----
-
-## Living With and Beyond Cancer
-- [Living With Bowel Cancer — Side Effects, Diet, and Emotional Support](/guides/living-with-bowel-cancer)  
-- [Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment](/guides/bowel-cancer-nutrition)  
-- [Bowel Cancer Survivorship — Life After Treatment](/guides/bowel-cancer-survivorship)  
+*Contact us if there is a hub you would like added: [contact@patientguide.io](mailto:contact@patientguide.io).*
 
 ---
 
-## Family and Risk
-- [Family Risk and Genetics in Bowel Cancer](/guides/bowel-cancer-genetics)  
+## Related Hubs
+- [Infectious Diseases — Guide Hub](/guides/infectious-diseases/)  
+- [Emergencies — Guide Hub](/guides/emergencies/)  
 
----
+*Last reviewed: August 29, 2025*
 
-## Advanced Care
-- [Palliative Care in Bowel Cancer — Comfort, Dignity, and Support](/guides/bowel-cancer-palliative-care)  
-
----
-
-## Takeaway
-No two patients' journeys are the same — but knowledge, early detection, and the right support can make a profound difference. Use these guides as a starting point to ask questions, understand your options, and take an active role in your care.

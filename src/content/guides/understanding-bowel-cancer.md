@@ -53,4 +53,7 @@ Bowel cancer is common, but it's also highly preventable and treatable if detect
 
 ## Related Guides
 - [Bowel Cancer Screening](/guides/bowel-cancer-screening)  
-- [Family Risk and Genetics](/guides/family-risk-genetics)  
+- [Family Risk and Genetics in Bowel Cancer](/guides/bowel-cancer-genetics)
+
+*Last reviewed: August 29, 2025*
+ 

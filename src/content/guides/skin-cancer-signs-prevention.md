@@ -1,26 +1,28 @@
 ---
-title: "Skin Cancer Warning Signs and Prevention"
+title: "Skin Cancer — Warning Signs and Prevention"
+slug: "skin-cancer-signs-prevention"
 description: "How to recognise early signs of skin cancer, reduce risk, and know when to seek medical care."
 category: "Cancer"
-tags: ["skin cancer", "melanoma", "prevention", "warning signs"]
 publishDate: "2025-08-14"
-updatedDate: "2025-08-14"
+updatedDate: "2025-08-29"
 draft: false
+tags: ["cancer", "skin cancer", "melanoma", "prevention", "warning signs", "patientguide"]
 ---
 
+# Skin Cancer — Warning Signs and Prevention
 
 Skin cancer is one of the most common cancers worldwide, but early detection greatly improves outcomes.
 
 **Summary**  
 Know the signs, check your skin regularly, and protect yourself from UV exposure.
 
-## Types
+## Types of Skin Cancer
 
 - **Basal cell carcinoma** — slow-growing, rarely spreads  
 - **Squamous cell carcinoma** — can spread if untreated  
 - **Melanoma** — most dangerous, can spread rapidly
 
-## Warning signs (ABCDE for moles)
+## Warning Signs (ABCDE for moles)
 
 - **A**symmetry — uneven halves  
 - **B**order — irregular edges  
@@ -37,11 +39,11 @@ Know the signs, check your skin regularly, and protect yourself from UV exposure
 
 ## FAQs
 
-**Do darker skin tones get skin cancer?**  
-Yes — though risk is lower, late detection is common.
+**Q: Do darker skin tones get skin cancer?**  
+A: Yes — though risk is lower, late detection is common.
 
-**How often should I check my skin?**  
-Monthly self-checks, yearly professional skin exams.
+**Q: How often should I check my skin?**  
+A: Monthly self-checks, yearly professional skin exams.
 
 **Q: Is every mole a risk?**  
 A: No — most moles are harmless. The key is noticing changes: new moles, or existing ones that change in shape, colour, or size. Use the ABCDE rule as a guide.
@@ -59,9 +61,12 @@ Always take new or changing skin spots seriously. Perform regular skin checks, p
 
 ## References
 
-- American Cancer Society — skin cancer prevention and detection.  
-- Cancer Council Australia — sun safety guidelines.
+- American Cancer Society — skin cancer prevention and detection  
+- Cancer Council Australia — sun safety guidelines
 
 ---
 
-*Educational only; not a substitute for professional medical advice.*
+## Related Hub
+- [Cancer — Guide Hub](/guides/cancer/)
+
+*Last reviewed: August 29, 2025*

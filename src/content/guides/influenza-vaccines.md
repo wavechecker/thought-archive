@@ -3,9 +3,10 @@ title: "Influenza Vaccines"
 slug: "influenza-vaccines"
 description: "Guide to seasonal influenza vaccination, effectiveness, safety, and public health impact."
 category: "Vaccination"
-publishDate: 2025-08-26
-tags: ["disease-specific", "influenza", "public health", "seasonal flu"]
+publishDate: "2025-08-26"
+updatedDate: "2025-08-29"
 draft: false
+tags: ["influenza", "flu", "vaccination", "public health", "seasonal flu", "patientguide"]
 ---
 
 # Influenza Vaccines
@@ -64,6 +65,19 @@ A: Even in mismatch years, vaccination reduces severity, hospitalization, and co
 - [PubMed: Influenza vaccine effectiveness studies](https://pubmed.ncbi.nlm.nih.gov/?term=influenza+vaccine+effectiveness)  
 
 ## Related Guides
-- /guides/how-vaccines-work  
-- /guides/vaccine-hesitancy  
-- /guides/adverse-events-monitoring
+- [How Vaccines Work](/guides/how-vaccines-work/)  
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy/)  
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring/)  
+
+---
+
+## Related Hub
+- [Vaccination — Guide Hub](/guides/vaccination/)  
+
+*Last reviewed: August 29, 2025*
+
+---
+
+## Disclaimer
+This guide is for **educational purposes only** and is **not a substitute for professional medical advice**.  
+Always consult a qualified healthcare provider for diagnosis, treatment, and personal medical advice.

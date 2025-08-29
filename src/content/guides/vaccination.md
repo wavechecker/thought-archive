@@ -28,7 +28,7 @@ This hub connects our guides on COVID-19 and other vaccines, along with resource
 - [Measles Vaccine](/guides/measles-vaccine/)  
 - [mRNA Vaccines](/guides/mrna-vaccines/)  
 - [Vaccine Hesitancy](/guides/vaccine-hesitancy/)  
-- [Tetanus — When to Get a Booster](/guides/tetanus-when-to-get-a-booster/)
+- [Tetanus — When to Get a Booster](/guides/tetanus/)
 
 
 *Contact us if there is a guide you would like added: [contact@patientguide.io](mailto:contact@patientguide.io).*

@@ -3,8 +3,9 @@ title: "HPV Vaccine"
 slug: "hpv-vaccine"
 description: "Guide to the HPV vaccine, its role in preventing cervical and other cancers, and safety evidence."
 category: "Vaccination"
-publishDate: 2025-08-26
-tags: ["disease-specific", "HPV", "cancer prevention", "public health"]
+publishDate: "2025-08-26"
+updatedDate: "2025-08-29"
+tags: ["HPV", "vaccination", "cancer prevention", "sexual health", "public health", "patientguide"]
 draft: false
 ---
 
@@ -62,6 +63,20 @@ A: WHO and many countries now recommend a **single dose** for adolescents, thoug
 - [PubMed: Systematic reviews on HPV vaccine impact](https://pubmed.ncbi.nlm.nih.gov/?term=hpv+vaccine+impact)  
 
 ## Related Guides
-- /guides/how-vaccines-work  
-- /guides/vaccine-hesitancy  
-- /guides/adverse-events-monitoring
+- [How Vaccines Work](/guides/how-vaccines-work/)  
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy/)  
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring/)  
+
+---
+
+## Related Hubs
+- [Vaccination — Guide Hub](/guides/vaccination/)  
+- [Sexual Health — Guide Hub](/guides/sexual-health/)  
+
+*Last reviewed: August 29, 2025*
+
+---
+
+## Disclaimer
+This guide is for **educational purposes only** and is **not a substitute for professional medical advice**.  
+Always consult a qualified healthcare provider for diagnosis, treatment, and personal medical advice.

@@ -62,3 +62,6 @@ Survivorship isn't just about being "cancer-free." It's about adapting, monitori
 - [Living With Bowel Cancer](/guides/living-with-bowel-cancer)  
 - [Nutrition Basics for Bowel Cancer](/guides/bowel-cancer-nutrition)  
 - [Family Risk and Genetics](/guides/bowel-cancer-genetics)  
+- [Bowel Cancer — Guide Hub](/guides/bowel-cancer/)
+
+*Last reviewed: August 29, 2025*

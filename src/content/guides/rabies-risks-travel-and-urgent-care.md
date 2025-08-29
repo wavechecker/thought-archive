@@ -45,4 +45,4 @@ tags: ["rabies", "travel", "bites", "PEP", "vaccination"]
 > Seek urgent care after any suspicious exposure. This guide is not a substitute for professional medical advice.
 
 **Related Guides**
-- [Tetanus — When to Get a Booster](/guides/tetanus-when-to-get-a-booster/)
+- [Tetanus — When to Get a Booster](/guides/tetanus/)

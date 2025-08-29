@@ -53,3 +53,6 @@ Nutrition is not just about reducing cancer risk — it's about supporting your 
 - [Living With Bowel Cancer](/guides/living-with-bowel-cancer)  
 - [Treatment Pathways](/guides/bowel-cancer-treatment)  
 - [Understanding Bowel Cancer](/guides/understanding-bowel-cancer)  
+- [Bowel Cancer — Guide Hub](/guides/bowel-cancer/)
+
+*Last reviewed: August 29, 2025*
