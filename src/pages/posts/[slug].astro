@@ -1,39 +1,32 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { getCollection, getEntryBySlug } from "astro:content";
-import { isValidDate, fmt } from "@/lib/date";
+const fm = Astro.props.frontmatter ?? {};
+const url = new URL(Astro.url);
 
-export const prerender = true;
-
-// Build-time paths for all posts
-export async function getStaticPaths() {
-  const entries = await getCollection("posts");
-  return entries.map((e) => ({ params: { slug: e.slug } }));
-}
-
-const { slug } = Astro.params;
-const entry = await getEntryBySlug("posts", slug);
-if (!entry) return Astro.redirect("/404");
-
-// Astro v5: use entry.data for frontmatter
-const { Content } = await entry.render();
-const data = entry.data;
-
-const canonical = `https://patientguide.io/posts/${entry.slug}/`;
+// Defensive values
+const title = fm.title ?? "Untitled";
+const description = fm.description ?? "";
+const ogImage = fm.image ?? "/og-default.png"; // local path; we prefix the domain in meta tags
 ---
 
-<Layout frontmatter={data}>
-  <h1>{data?.title ?? "Untitled"}</h1>
-  <p style="color:#6b7280; margin-top:.25rem;">
-    {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
-    {data?.updatedDate && ` • Updated ${fmt(data.updatedDate)}`}
-  </p>
-  <Content />
-  {data?.tags?.length > 0 && (
-    <p style="color:#2563eb; margin-top:1rem;">
-      {data.tags.map((t, i) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
-    </p>
-  )}
-</Layout>
+<head>
+  <meta charset="utf-8" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={url.href} />
+  <meta property="og:image" content={`https://patientguide.io${ogImage}`} />
+  <meta property="og:site_name" content="PatientGuide.io" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`https://patientguide.io${ogImage}`} />
+</head>
 
 
