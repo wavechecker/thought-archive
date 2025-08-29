@@ -167,3 +167,8 @@ from = "/guides/vaccination-overview/"
 to = "/guides/vaccination/"
 status = 301
 
+[[redirects]]
+from = "/guides/tetanus-when-to-get-a-booster/"
+to = "/guides/tetanus/"
+status = 301
+
