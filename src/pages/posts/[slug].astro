@@ -1,32 +1,49 @@
 ---
-const fm = Astro.props.frontmatter ?? {};
-const url = new URL(Astro.url);
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, getEntryBySlug } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date";
 
-// Defensive values
-const title = fm.title ?? "Untitled";
-const description = fm.description ?? "";
-const ogImage = fm.image ?? "/og-default.png"; // local path; we prefix the domain in meta tags
+export const prerender = true;
+
+// Build-time paths for all posts
+export async function getStaticPaths() {
+  const entries = await getCollection("posts");
+  return entries.map((e) => ({ params: { slug: e.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntryBySlug("posts", slug);
+if (!entry) return Astro.redirect("/404");
+
+// Render MD content + pull frontmatter
+const { Content } = await entry.render();
+const data = entry.data;
+
+// Hero image (frontmatter override or fallback)
+const hero = data?.image ?? "/og-default.png";
 ---
 
-<head>
-  <meta charset="utf-8" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<Layout frontmatter={data}>
+  <h1>{data?.title ?? "Untitled"}</h1>
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content={url.href} />
-  <meta property="og:image" content={`https://patientguide.io${ogImage}`} />
-  <meta property="og:site_name" content="PatientGuide.io" />
+  <p style="color:#6b7280; margin-top:.25rem;">
+    {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
+    {data?.updatedDate && ` • Updated ${fmt(data.updatedDate)}`}
+  </p>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={`https://patientguide.io${ogImage}`} />
-</head>
+  <img
+    src={hero}
+    alt={data?.title ?? "Hero image"}
+    style="width:100%; height:auto; aspect-ratio:1200/630; object-fit:cover; border-radius:12px; margin:1rem 0;"
+  />
+
+  <Content />
+
+  {data?.tags?.length > 0 && (
+    <p style="color:#2563eb; margin-top:1rem;">
+      {data.tags.map((t, i) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
+    </p>
+  )}
+</Layout>
 
 
