@@ -8,21 +8,26 @@ export const prerender = true;
 /**
  * IMPORTANT: For a rest route like [...slug], Astro v5 expects
  * getStaticPaths() to return STRING params (e.g. "a/b/c"), not arrays.
+ * We also exclude drafts so they don't get built or linked.
  */
 export async function getStaticPaths() {
-  const entries = await getCollection("guides");
-  return entries.map((e) => ({
-    params: { slug: e.slug }, // e.slug may include "/" for nested paths
-  }));
+  const entries = await getCollection("guides", ({ data }) => data?.draft !== true);
+  return entries.map((e) => ({ params: { slug: e.slug } })); // e.slug may include "/" for nested paths
 }
 
 // With the above, Astro.params.slug will be a STRING like "section/slug"
 const slug = Astro.params.slug as string;
 
+// Hard guard → never 500 on bad slugs
+if (!slug || typeof slug !== "string") {
+  return Astro.redirect("/404");
+}
+
 const entry = await getEntryBySlug("guides", slug);
-if (!entry) {
-  // Safety: if a nested slug wasn't found
-  throw new Error(`[guides] No entry found for slug: ${slug}`);
+
+// Stale path or draft → 404
+if (!entry || entry.data?.draft === true) {
+  return Astro.redirect("/404");
 }
 
 const { Content } = await entry.render();
@@ -32,7 +37,7 @@ const canonical = `https://patientguide.io/guides/${entry.slug}/`;
 
 // Resolve "Related Guides" from frontmatter `related`
 // Accepts either "/guides/foo" or "foo" form
-const allGuides = await getCollection("guides");
+const allGuides = await getCollection("guides", ({ data }) => data?.draft !== true);
 function resolveRelated(rel: unknown) {
   if (!Array.isArray(rel)) return [];
   return rel
@@ -44,6 +49,9 @@ function resolveRelated(rel: unknown) {
     .filter(Boolean);
 }
 const related = resolveRelated(data.related);
+
+// Hero image (frontmatter override or fallback)
+const hero = data?.image ?? "/og-default.png";
 ---
 
 <Layout frontmatter={data}>
@@ -51,31 +59,55 @@ const related = resolveRelated(data.related);
     <link rel="canonical" href={canonical} />
   </Fragment>
 
-  <h1>{data?.title ?? "Untitled"}</h1>
+  <article class="mx-auto max-w-3xl">
+    <header class="mb-6">
+      <p class="text-xs uppercase tracking-wide text-slate-500">
+        {data?.category ?? "Guide"}
+      </p>
 
-  <p style="color:#6b7280; margin-top:.25rem;">
-    {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
-    {data?.updatedDate && isValidDate(data.updatedDate) ? ` • Updated ${fmt(data.updatedDate)}` : ""}
-  </p>
+      <h1 class="mt-1 text-3xl/tight font-semibold tracking-tight">
+        {data?.title ?? "Untitled"}
+      </h1>
 
-  <Content />
+      <p class="mt-2 text-sm text-slate-500">
+        {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
+        {data?.updatedDate && isValidDate(data.updatedDate) ? ` • Updated ${fmt(data.updatedDate)}` : ""}
+      </p>
 
-  {related.length > 0 && (
-    <>
-      <h2>Related Guides</h2>
-      <ul>
-        {related.map((r) => (
-          <li><a href={`/guides/${r.slug}/`}>{r.data.title}</a></li>
+      <img
+        src={hero}
+        alt={data?.title ?? "Hero image"}
+        class="mt-4 aspect-[1200/630] w-full rounded-xl object-cover"
+        loading="lazy"
+      />
+    </header>
+
+    <div class="prose prose-slate max-w-none">
+      <Content />
+    </div>
+
+    {Array.isArray(data?.tags) && data.tags.length > 0 && (
+      <ul class="mt-6 flex flex-wrap gap-2">
+        {data.tags.map((t: string) => (
+          <li class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+            #{t}
+          </li>
         ))}
       </ul>
-    </>
-  )}
+    )}
 
-  {Array.isArray(data?.tags) && data.tags.length > 0 && (
-    <p style="color:#2563eb; margin-top:1rem;">
-      {data.tags.map((t: string, i: number) => `#${t}${i < data.tags.length - 1 ? " " : ""}`)}
-    </p>
-  )}
+    {related.length > 0 && (
+      <section class="mt-10">
+        <h2 class="mb-3 text-xl font-semibold">Related Guides</h2>
+        <ul class="space-y-2">
+          {related.map((r) => (
+            <li>
+              <a class="text-sky-600 hover:underline" href={`/guides/${r.slug}/`}>{r.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </article>
 </Layout>
-
 

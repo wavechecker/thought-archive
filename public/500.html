@@ -3,34 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>We’re fixing something</title>
+  <title>500 — Something went wrong</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;line-height:1.5;margin:0;padding:2rem;display:grid;place-items:center;min-height:100vh}
-    .card{max-width:560px;padding:2rem;border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.08);text-align:center}
-    h1{margin:0 0 .5rem;font-size:1.75rem}
-    p{color:#555;margin:.25rem 0}
-    a{display:inline-block;margin-top:1rem;text-decoration:none}
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 2rem;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background: #f9fafb;
+      color: #1f2937;
+    }
+    .card {
+      max-width: 560px;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0,0,0,.08);
+      text-align: center;
+      background: #fff;
+    }
+    h1 {
+      margin: 0 0 .5rem;
+      font-size: 1.75rem;
+    }
+    p {
+      margin: .25rem 0;
+      color: #555;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>We’re fixing something</h1>
-    <p>Our server hit a snag. Please try again in a moment.</p>
-    <p><a href="/">Return to homepage →</a></p>
-  </div>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>We’re fixing something</title>
-  <style>body{font-family:system-ui;display:grid;place-items:center;height:100vh} .card{max-width:480px;text-align:center}</style>
-</head>
-<body>
-  <div class="card">
-    <h1>Server hiccup</h1>
-    <p>Something went wrong. Please try again in a moment.</p>
+    <h1>500 — Server hiccup</h1>
+    <p>Something went wrong on our side. Please try again in a moment.</p>
     <p><a href="/">← Back to Home</a></p>
   </div>
 </body>

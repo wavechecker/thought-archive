@@ -1,1 +1,37 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Base prose defaults */
+.prose {
+  --tw-prose-body: #0f172a;           /* slate-900 */
+  --tw-prose-headings: #0f172a;
+  --tw-prose-links: #2563eb;          /* blue-600 (a bit stronger for readability) */
+  --tw-prose-bold: #0f172a;
+  --tw-prose-quotes: #475569;         /* slate-600 */
+  --tw-prose-quote-borders: #e2e8f0;  /* slate-200 */
+  --tw-prose-code: #111827;           /* gray-900 */
+  --tw-prose-th-borders: #e5e7eb;
+  --tw-prose-td-borders: #e5e7eb;
+  max-width: 65ch;                    /* improve readability line length */
+}
+
+.prose a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8; /* hover blue-700 */
+}
+
+.prose img {
+  border-radius: 0.75rem;             /* rounded-xl */
+  margin: 1.5rem auto;                /* center images with breathing room */
+}
+
+.prose blockquote {
+  background: #f8fafc;                /* subtle callout */
+  border-left: 4px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+  font-style: italic;
+}

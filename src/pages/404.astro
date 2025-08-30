@@ -1,84 +1,5 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getCollection } from "astro:content";
-
-export const prerender = true; // <— important
-
-// --- helpers ---
-const toLower = (s) => (typeof s === "string" ? s.toLowerCase() : "");
-const uniq = (arr) => [...new Set(arr)];
-const includesAny = (text, words) => words.some((w) => text.includes(w));
-
-// SAFE: works during prerender (will be "/404")
-const path = Astro.url.pathname.toLowerCase();
-
-// Tokenize the broken path (e.g., "/guides/type-1-diabetes/…" -> ["guides","type","1","diabetes"])
-const tokens = uniq(
-  path
-    .split(/[\/\-\_\.\s]+/g)
-    .map((t) => t.trim())
-    .filter(Boolean)
-);
-
-// Optional keyword → canonical suggestions (quick wins)
-const keywordRoutes = [
-  { keys: ["diabetes","t1d","t2d","blood-glucose","insulin"], href: "/guides/type-1-diabetes/" },
-  { keys: ["heart","circulation","cardio","atrial","angina"],  href: "/guides/heart-circulation/" },
-  { keys: ["womb","ectogenesis","pregnancy","china","robot"],  href: "/posts/china-pregnancy-robot-artificial-wombs/" },
-  { keys: ["artificial","wombs","ectogenesis"],                href: "/posts/artificial-wombs-china-might-be-first/" },
-  { keys: ["attention","focus","concentration"],               href: "/posts/the-war-on-attention/" },
-  { keys: ["agi","alignment","control"],                       href: "/posts/the-agi-control-paradox/" },
-  { keys: ["writing","algorithms","manifesto"],                href: "/posts/what-writing-is-for-now-that-the-algorithms-have-taken-over/" },
-];
-
-// Only published content
-const guides = await getCollection("guides", ({ data }) => data?.draft !== true);
-const posts  = await getCollection("posts",  ({ data }) => data?.draft !== true);
-
-// Sort recent by publishDate desc (fallback to title)
-const byDateDesc = (a, b) =>
-  (new Date(b.data.publishDate || 0)).getTime() - (new Date(a.data.publishDate || 0)).getTime()
-  || (a.data.title || "").localeCompare(b.data.title || "");
-
-// Scoring: simple relevance based on tokens found in title/description/tags
-function scoreEntry(entry) {
-  const title = toLower(entry.data.title);
-  const desc  = toLower(entry.data.description ?? "");
-  const tags  = (entry.data.tags ?? []).map(toLower).join(" ");
-  const hay   = `${title} ${desc} ${tags}`;
-  let score = 0;
-  for (const t of tokens) {
-    if (!t) continue;
-    if (hay.includes(t)) score += 2;    // stronger hit in text
-    if (title.includes(t)) score += 1;  // extra bump for title
-  }
-  return score;
-}
-
-const all = [
-  ...guides.map((e) => ({ ...e, kind: "guide" })),
-  ...posts.map((e)  => ({ ...e, kind: "post"  })),
-];
-
-const ranked = all
-  .map((e) => ({ e, s: scoreEntry(e) }))
-  .filter((x) => x.s > 0)
-  .sort((a, b) => b.s - a.s)
-  .slice(0, 8)
-  .map((x) => x.e);
-
-// Keyword → canonical direct suggestions (top of page if any)
-const direct = keywordRoutes
-  .filter((r) => includesAny(path, r.keys))
-  .map((r) => r.href);
-
-// Fallback lists
-const recentPosts  = posts.sort(byDateDesc).slice(0, 5);
-const recentGuides = guides.sort(byDateDesc).slice(0, 5);
-
-// De-dup hrefs in “Likely matches”
-const hrefFor = (e) => (e.kind === "guide" ? `/guides/${e.slug}/` : `/posts/${e.slug}/`);
-const likely = uniq(ranked.map(hrefFor));
 
 const frontmatter = {
   title: "Page not found",
@@ -87,45 +8,28 @@ const frontmatter = {
 ---
 
 <Layout frontmatter={frontmatter}>
-  <h1>Page not found</h1>
-  <p>We couldn’t find <code>{path}</code>. Try one of these:</p>
+  <article class="mx-auto max-w-2xl prose prose-slate">
+    <h1 class="text-3xl font-semibold tracking-tight">Page not found</h1>
+    <p>Sorry — the page you’re looking for doesn’t exist or may have moved.</p>
 
-  {direct.length > 0 && (
-    <>
-      <h2>Direct suggestions</h2>
-      <ul>
-        {uniq(direct).map((href) => (
-          <li><a href={href}>{href}</a></li>
-        ))}
-      </ul>
-    </>
-  )}
+    <h2>Try these options</h2>
+    <ul>
+      <li><a href="/">← Back to Home</a></li>
+      <li><a href="/guides/">Browse Guides</a></li>
+      <li><a href="/posts/">Browse Posts</a></li>
+    </ul>
 
-  {likely.length > 0 && (
-    <>
-      <h2>Likely matches</h2>
-      <ul>
-        {likely.map((href) => (
-          <li><a href={href}>{href}</a></li>
-        ))}
-      </ul>
-    </>
-  )}
+    <h2>Popular Guides</h2>
+    <ul>
+      <li><a href="/guides/angina-symptoms-management/">Angina — Symptoms & Management</a></li>
+      <li><a href="/guides/coronary-angiography/">Coronary Angiography — What to Expect</a></li>
+      <li><a href="/guides/fever-danger-adults-children/">Fever — When Is It Dangerous?</a></li>
+    </ul>
 
-  <h2>Recent Posts</h2>
-  <ul>
-    {recentPosts.map((p) => (
-      <li><a href={`/posts/${p.slug}/`}>{p.data.title}</a></li>
-    ))}
-  </ul>
-
-  <h2>Top Guides</h2>
-  <ul>
-    {recentGuides.map((g) => (
-      <li><a href={`/guides/${g.slug}/`}>{g.data.title}</a></li>
-    ))}
-  </ul>
-
-  <p><a href="/">← Back to Home</a></p>
+    <p class="mt-8 text-sm text-slate-500">
+      If you believe this is an error, please <a href="/contact/">contact us</a>.
+    </p>
+  </article>
 </Layout>
+
 

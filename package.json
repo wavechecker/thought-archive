@@ -6,7 +6,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "down": "sed -i '1s|# /*   /maintenance.html   200|/*   /maintenance.html   200|' public/_redirects && git add public/_redirects && git commit -m \"chore: site down for maintenance\" && git push origin main",
+    "up": "sed -i '1s|/*   /maintenance.html   200|# /*   /maintenance.html   200|' public/_redirects && git add public/_redirects && git commit -m \"chore: site live again\" && git push origin main",
+    "status": "curl -sL https://patientguide.io | grep -qi '<title>Maintenance Mode' && echo 'MAINTENANCE' || echo 'LIVE'",
+    "purge": "curl -X POST \"https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache\" -H \"Authorization: Bearer $CF_API_TOKEN\" -H \"Content-Type: application/json\" --data '{\"purge_everything\":true}'",
+    "down:purge": "npm run down && npm run purge",
+    "up:purge": "npm run up && npm run purge"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -19,6 +25,7 @@
     "@astrojs/netlify": "^6.5.9",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
+    "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.12",
     "autoprefixer": "^10.4.21",
     "globby": "^14.1.0",
@@ -27,3 +34,4 @@
     "tailwindcss": "^4.1.12"
   }
 }
+
