@@ -1,11 +1,12 @@
-// astro.config.mjs
-import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
+import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 
-// IMPORTANT: this must be your production URL with https
 export default defineConfig({
-  site: "https://patientguide.io",
+  output: 'static',
+  trailingSlash: 'never',
   integrations: [sitemap()],
-  // If you have other integrations, include them here too, e.g.:
-// integrations: [mdx(), sitemap(), tailwind()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

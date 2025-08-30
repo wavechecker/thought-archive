@@ -1,2 +1,15 @@
 /guides/heart    /guides/heart-circulation   301!
 /guides/heart/   /guides/heart-circulation   301!
+# RFK post cleanup
+/posts/wiki-draft-rfk-vaccine-2025    /posts/rfk-vaccine-2025     301!
+
+# Legionnaires typo
+/guides/legionairres-disease          /guides/legionnaires-disease  301!
+
+# Heart guide canonicalization
+/guides/heart           /guides/heart-circulation/            301!
+/guides/heart/          /guides/heart-circulation/            301!
+/guides/heart/*         /guides/heart-circulation/:splat      301!
+
+# Gone for good
+/posts/governments-cancel-science     -   410

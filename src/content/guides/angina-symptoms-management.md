@@ -1,38 +1,57 @@
 ---
-draft: true
----
-
----
-title: "What is Angina? Symptoms & Management"
-description: "How to recognise angina, what it means, and the treatments that reduce risk."
+title: "Angina — Symptoms & Management"
+description: "How to recognize angina, what causes it, when to seek care, and treatment options."
 category: "Heart & Circulation"
-publishDate: "2025-08-15"
+publishDate: "2025-08-30"
 draft: false
-tags: ["Heart & Circulation", "patientguide"]
+tags: ["angina", "chest pain", "heart", "circulation", "patientguide"]
 ---
 
-Angina is chest discomfort caused by reduced blood flow to the heart muscle. It's a warning sign that should never be ignored.
+## Intro
+Angina is chest discomfort caused by reduced blood flow to the heart muscle. It is a warning sign of underlying heart disease and should never be ignored. Recognizing angina and managing it early can help prevent a heart attack.
 
-**Types of Angina:**
-- **Stable Angina** – Predictable, usually triggered by exertion or stress
-- **Unstable Angina** – Sudden, more severe, can occur at rest — medical emergency
-- **Variant (Prinzmetal's) Angina** – Caused by spasm in the coronary arteries
+## Key Points
+- Angina = reduced blood flow to the heart muscle.
+- Main types: **Stable**, **Unstable** (emergency), and **Variant (Prinzmetal’s)**.
+- Symptoms include pressure, heaviness, pain radiating to arms/jaw, breathlessness.
+- Management includes medication, lifestyle change, and urgent medical care for unstable angina.
 
-**Common Symptoms:**
-- Pressure, heaviness, or squeezing in the chest
-- Pain spreading to shoulders, arms, neck, jaw
-- Shortness of breath, nausea, sweating
+## Background
+Angina occurs when the heart’s demand for oxygen exceeds the supply delivered by narrowed or spasming coronary arteries. It does not permanently damage the heart muscle by itself, but it signals a high risk of heart attack and cardiovascular complications.
 
-**Management:**
-- Rest and prescribed medications
-- Lifestyle changes
-- Medical review to prevent heart attack
+## Types of Angina
+- **Stable Angina** — Predictable pattern, often triggered by exertion, stress, or heavy meals. Symptoms usually resolve with rest or medication.  
+- **Unstable Angina** — More severe, occurs suddenly, and may happen at rest. This is a medical emergency that can precede a heart attack.  
+- **Variant (Prinzmetal’s) Angina** — Caused by spasm of the coronary arteries, often at night or early morning. Less common.  
 
-**Related Guides**
-- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain/)
-- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/)
-- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications-and-their-side-effects/)
+## Symptoms
+- Chest pressure, heaviness, or squeezing sensation.
+- Pain spreading to the shoulders, arms, neck, jaw, or back.
+- Shortness of breath.
+- Nausea, lightheadedness, or cold sweats.
 
-- [When to Seek Emergency Help for Chest Pain](#)
-- [Early Warning Signs of a Heart Attack](#)
-- [Common Heart Medications and Their Side Effects](#)
+## Management
+- **Immediate relief:** Rest and use of prescribed medications such as nitroglycerin.  
+- **Medical treatment:** Doctors may prescribe beta-blockers, calcium channel blockers, statins, or antiplatelet medicines.  
+- **Lifestyle changes:** Quit smoking, adopt a heart-healthy diet, manage stress, maintain healthy weight, and exercise as advised.  
+- **Procedures:** Some people may need angioplasty or coronary artery bypass surgery.  
+- **When to seek help:** Any sudden or worsening chest pain (unstable angina) requires emergency care.
+
+## Risks & Outlook
+Untreated angina increases the risk of heart attack and sudden cardiac death. With proper management—medications, lifestyle changes, and regular follow-up—many people live active lives.
+
+## FAQ
+**Q: When should I call emergency services?**  
+A: If chest pain is new, worsening, or occurring at rest, call emergency services immediately — this could be unstable angina or a heart attack.  
+
+**Q: Is angina the same as a heart attack?**  
+A: No. Angina is temporary chest discomfort from reduced blood flow. A heart attack occurs when blood flow is completely blocked, causing permanent heart damage.  
+
+## Further Reading
+- [American Heart Association: Angina](https://www.heart.org/en/health-topics/heart-attack/angina-chest-pain)  
+- [Mayo Clinic: Angina Overview](https://www.mayoclinic.org/diseases-conditions/angina)  
+
+## Related Guides
+- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain/)  
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/)  
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications-and-their-side-effects/)  

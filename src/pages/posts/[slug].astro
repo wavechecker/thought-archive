@@ -5,17 +5,27 @@ import { isValidDate, fmt } from "@/lib/date";
 
 export const prerender = true;
 
-// Build-time paths for all posts
+// Build only published posts (draft !== true)
 export async function getStaticPaths() {
-  const entries = await getCollection("posts");
+  const entries = await getCollection("posts", ({ data }) => data?.draft !== true);
   return entries.map((e) => ({ params: { slug: e.slug } }));
 }
 
 const { slug } = Astro.params;
-const entry = await getEntryBySlug("posts", slug);
-if (!entry) return Astro.redirect("/404");
 
-// Render MD content + pull frontmatter
+// Hard guard: if slug is missing or bad, 404 (never 500)
+if (!slug || typeof slug !== "string") {
+  return Astro.redirect("/404");
+}
+
+const entry = await getEntryBySlug("posts", slug);
+
+// If somehow a stale path sneaks in (old cache, bot, etc.)
+if (!entry || entry.data?.draft === true) {
+  return Astro.redirect("/404");
+}
+
+// Render MD content + frontmatter
 const { Content } = await entry.render();
 const data = entry.data;
 

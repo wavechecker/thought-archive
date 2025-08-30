@@ -16,10 +16,14 @@
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.3.3",
-    "@astrojs/netlify": "^6.5.6",
+    "@astrojs/netlify": "^6.5.9",
     "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.5.0",
+    "@astrojs/sitemap": "^3.5.1",
+    "@tailwindcss/vite": "^4.1.12",
+    "autoprefixer": "^10.4.21",
     "globby": "^14.1.0",
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
   }
 }

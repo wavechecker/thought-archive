@@ -1,78 +1,64 @@
 import { defineCollection, z } from "astro:content";
 
-const HUB_FROM_CATEGORY: Record<string, string> = {
-  "infectious disease": "Infectious Diseases",
-  "infectious diseases": "Infectious Diseases",
-  "infections": "Infectious Diseases",
-  "vaccination": "Vaccination",
-  "vaccinations": "Vaccination",
-  "emergencies": "Emergencies",
-  "heart & circulation": "Heart & Circulation",
-  "cancer": "Cancer",
-  "diabetes": "Diabetes",
-  "women's health": "Women’s Health",
-  "neurology": "Neurology",
-  "general health": "General Health",
-  "bowel cancer": "Bowel Cancer",
-  "type 1 diabetes": "Type 1 Diabetes",
+// Common fields
+const base = {
+  title: z.string(),
+  description: z.string().optional(),
+  publishDate: z.coerce.date().optional(),
+  updatedDate: z.coerce.date().optional(),
+  draft: z.boolean().default(false),
+  tags: z.array(z.string()).default([]),
+  image: z.string().optional(),
 };
 
-const norm = (s?: string) => (s ?? "").toLowerCase().trim();
-
+// Guides
 const guides = defineCollection({
-  schema: z
-    .object({
-      title: z.string().optional(),
-      description: z.string().optional(),
-
-      publishDate: z.union([z.string(), z.date()]).optional()
-        .transform((v) => (v ? new Date(v) : undefined)),
-      updatedDate: z.union([z.string(), z.date()]).optional()
-        .transform((v) => (v ? new Date(v) : undefined)),
-
-      draft: z.boolean().default(false),
-
-      category: z.string().optional(),
-      hubKey: z.string().optional(),
-
-      tags: z.array(z.string()).optional(),
-      slug: z.string().optional(),
-    })
-    .transform((data) => {
-      // if hubKey missing, derive from category
-      if (!data.hubKey && data.category) {
-        const guess = HUB_FROM_CATEGORY[norm(data.category)];
-        return { ...data, hubKey: guess ?? undefined };
-      }
-      return data;
-    })
-    .refine((d) => !!d.hubKey, {
-      message:
-        "hubKey is required (add hubKey in frontmatter or map this category in HUB_FROM_CATEGORY).",
-    }),
-});
-
-// src/content/config.ts
-import { z, defineCollection } from "astro:content";
-
-const resources = defineCollection({
   type: "content",
   schema: z.object({
-    title: z.string(),
-    slug: z.string(),
-    description: z.string().optional(),
+    ...base,
     category: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    publishDate: z.string().optional(),
-    updatedDate: z.string().optional(),
-    draft: z.boolean().optional(),
+    hubKey: z.string().optional(),
   }),
 });
 
-export const collections = {
-  // existing collections...
-  resources,
-};
+// Posts
+const posts = defineCollection({
+  type: "content",
+  schema: z.object({
+    ...base,
+  }),
+});
+
+// Resources
+const resources = defineCollection({
+  type: "content",
+  schema: z.object({
+    ...base,
+    category: z.string().optional(),
+  }),
+});
+
+// Taxonomy / Pages (if you use them as content)
+const taxonomy = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    hubKey: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+const pages = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { guides, posts, resources, taxonomy, pages };
+
 
 
 
