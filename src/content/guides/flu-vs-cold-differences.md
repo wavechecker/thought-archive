@@ -1,37 +1,76 @@
 ---
-draft: true
----
-
----
-title: "Flu vs. Common Cold — How to Tell the Difference"
-description: "Key differences in symptoms, severity, timing, and recovery — plus when to test or see a doctor."
-category: "Infectious Diseases"
-publishDate: "2025-08-15"
+title: "Flu vs. Cold — Key Differences & What to Do"
+description: "How to tell influenza from a common cold, what symptoms to watch for, when to test, and when to seek care."
+category: "Infectious Disease"
+publishDate: "2025-08-30"
 draft: false
-tags: ["influenza", "common cold", "respiratory infections"]
+tags: ["flu", "influenza", "cold", "upper respiratory infection", "fever", "patientguide"]
 ---
 
-Both **influenza (flu)** and the **common cold** are viral respiratory infections — but flu tends to hit **hard and fast**, while colds are usually milder.
+## Intro
+Colds and flu are both respiratory infections, but **influenza** tends to start suddenly, hit harder, and cause higher fever and body aches. Knowing the differences helps you decide on testing, antivirals, and when to seek care.
 
-## Quick comparison
-- **Onset:** Flu often **sudden**; colds **gradual**.
-- **Fever:** Flu **common (often high)**; colds **uncommon or low‑grade**.
-- **Aches:** Flu **prominent muscle aches**; colds **mild**.
-- **Fatigue:** Flu **marked**; colds **mild to moderate**.
-- **Nose/throat:** Colds **more congestion/sore throat**; flu may have dry cough early.
-- **Complications:** Flu can cause **pneumonia** or worsen chronic illness.
+## Key Points
+- **Onset:** Flu = **sudden**; Cold = **gradual**.  
+- **Fever & aches:** Flu = **higher fever & prominent body aches**; Cold = milder.  
+- **Cough:** Both can cough; flu cough often deeper and more exhausting.  
+- **Sore throat/runny nose:** More prominent with **colds**.  
+- **Antivirals:** Flu may benefit from **early antivirals** (within 48 hours for higher-risk groups).  
+- **Testing:** Consider if symptoms are severe, you’re high-risk, or during known flu waves.
 
-## When to test or seek care
-- **High fever**, **shortness of breath**, chest pain, confusion, dehydration.
-- Adults 65+, pregnancy, chronic heart/lung disease, diabetes, or weakened immunity.
-- Antiviral treatment is **time‑sensitive** — earlier is better for those at risk.
+## Symptom Comparison
 
-## Prevention & self‑care
-- **Annual flu vaccination** (best single preventive step).
-- Hand hygiene; avoid close contact when ill.
-- Rest, fluids, pain/fever relief as advised by your clinician.
+| Feature | Flu (Influenza) | Common Cold |
+| --- | --- | --- |
+| Onset | **Abrupt** (hours) | **Gradual** (1–2 days) |
+| Fever | **High (≥38°C / 100.4°F)** common | Low-grade or none |
+| Aches & chills | **Prominent** | Mild |
+| Fatigue | **Marked**, can be prolonged | Mild–moderate |
+| Headache | **Common** | Less common |
+| Sore throat | Sometimes | **Common** |
+| Runny/stuffy nose | Sometimes | **Common** |
+| Cough | **Common, can be severe** | Common, milder |
 
-> This guide is for information only and not a diagnosis. Seek urgent care for severe symptoms or breathing difficulty.
+## When to Test
+- Severe symptoms or **high-risk** (pregnancy, age ≥65, chronic heart/lung/kidney disease, diabetes, immunocompromise).  
+- Outbreak exposure (household, school, workplace) during flu season.  
+- If results will change management (e.g., antivirals, isolation).
 
-**Related Guides**
-- [Legionnaires' Disease — Causes, Symptoms, and Prevention](/guides/legionnaires-disease/)
+## Treatment
+- **Flu:** Rest, fluids, fever relief (paracetamol/acetaminophen or ibuprofen if appropriate).  
+  - **Antivirals (e.g., oseltamivir)** may be recommended for high-risk patients or severe disease, ideally **within 48 hours** of symptom onset.  
+- **Cold:** Symptomatic care—fluids, saline nasal rinse, honey for cough (age >1), decongestants/lozenges as appropriate.
+
+> **Antibiotics do not treat viral infections** like flu or colds.
+
+## Red Flags — Seek Urgent Care
+- Difficulty breathing, chest pain, bluish lips/face.  
+- Confusion, severe dehydration, fainting.  
+- **Persistent high fever** (>3 days) or fever that improves then **returns with worse cough**.  
+- In children: fast/labored breathing, lethargy, poor intake/urine, or any cyanosis.  
+- In infants <3 months: **any fever ≥38.0°C**.
+
+## Recovery & Prevention
+- Most colds resolve in **7–10 days**; flu may take **1–2 weeks** (fatigue can linger).  
+- **Vaccination:** Annual flu shot reduces risk of severe disease.  
+- **Reduce spread:** Stay home when unwell, hand hygiene, cover coughs, consider a mask in crowded indoor spaces when symptomatic.
+
+## FAQ
+**How do I know it’s flu without a test?**  
+The combination of **sudden onset, high fever, and body aches** during flu season strongly suggests flu, but testing is the only way to be sure.
+
+**Do I need antivirals?**  
+If you’re at **higher risk** or have severe disease, speak to a clinician **as soon as symptoms start**—treatment works best early.
+
+**Can you have flu without a fever?**  
+Yes, especially in older adults or those on certain medications—but it’s less common.
+
+## Further Reading
+- [NHS — Flu](https://www.nhs.uk/conditions/flu/)  
+- [CDC — Influenza (Flu)](https://www.cdc.gov/flu/)  
+
+## Related Guides
+- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children/)  
+- [Angina — Symptoms & Management](/guides/angina-symptoms-management/)  
+- [Coronary Angiography — What to Expect](/guides/coronary-angiography/)  
+

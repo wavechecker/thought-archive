@@ -1,161 +1,43 @@
 ---
 import "@/styles/global.css";
----
 
----
-/** Top-level nav config */
-const NAV = [
-  { label: "Home", href: "/" },
-  { label: "Guides", href: "/guides/" },
-  { label: "Posts", href: "/posts/" },
-  { label: "Resources", href: "/resources/" },   // ✅ Added
-  { label: "Contact", href: "/contact/" },
-];
-
-/** Props coming in like: <Layout frontmatter={...}> */
 const { frontmatter = {} } = Astro.props;
-
-/** Safe defaults */
-const siteTitle = "Patient Guide";
-const siteTagline = "Clear, practical health guides — no fluff.";
-
-// Extract known frontmatter with fallbacks
 const {
-  title = siteTitle,
-  description = siteTagline,
-  publishDate,      // optional
-  updatedDate,      // optional
-  canonicalUrl: fmCanonical, // optional
-  schemaType,       // optional override for JSON-LD
+  title = "Thought Archive",
+  description = "",
+  image = "/og-default.png",
 } = frontmatter;
-
-// Only render canonical if explicitly provided
-const canonical =
-  typeof fmCanonical === "string" && fmCanonical.trim().length > 0
-    ? fmCanonical
-    : undefined;
-
-// Build minimal JSON-LD; choose type if provided
-const ldType = typeof schemaType === "string" && schemaType ? schemaType : "WebPage";
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": ldType,
-  name: title,
-  headline: title,
-  description,
-  url: canonical,
-  datePublished: publishDate,
-  dateModified: updatedDate,
-};
-
-// Current path for active link highlighting
-const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- Feed autodiscovery -->
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="patientguide.io — Updates"
-      href="/rss.xml"
-    />
-
-    <!-- Canonical (optional) -->
-    {canonical && <link rel="canonical" href={canonical} />}
-
-    <!-- Title & Description -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="article" />
-    {title && <meta property="og:title" content={title} />}
+    <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
-    {canonical && <meta property="og:url" content={canonical} />}
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    {title && <meta name="twitter:title" content={title} />}
-    {description && <meta name="twitter:description" content={description} />}
-
-    <!-- JSON-LD (only include defined fields) -->
-    <script type="application/ld+json">
-      {JSON.stringify(
-        Object.fromEntries(
-          Object.entries(jsonLd).filter(([, v]) => v !== undefined && v !== null && v !== "")
-        )
-      )}
-    </script>
-
-    <!-- Allow pages to inject extra head tags -->
-    <slot name="head" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content={image} />
+    <link rel="icon" href="/favicon.ico" />
   </head>
-  <body>
-    <header>
-      <nav>
-        {NAV.map((item, i) => {
-          const isActive = currentPath === item.href || currentPath.startsWith(item.href) && item.href !== "/";
-          return (
-            <>
-              <a
-                href={item.href}
-                class={isActive ? "active" : ""}
-              >
-                {item.label}
-              </a>
-              {i < NAV.length - 1 ? " | " : ""}
-            </>
-          );
-        })}
-      </nav>
+  <body class="min-h-screen bg-white text-slate-900 antialiased">
+    <header class="w-full border-b border-slate-200">
+      <div class="mx-auto max-w-3xl px-4 py-4">
+        <a href="/" class="font-semibold">Thought Archive</a>
+      </div>
     </header>
 
-    <main>
+    <main class="mx-auto max-w-3xl px-4 py-8">
       <slot />
     </main>
 
-    <footer>
-      <small>
-        © {new Date().getFullYear()} patientguide.io · <a href="/contact/">Contact</a>
-      </small>
+    <footer class="w-full border-t border-slate-200">
+      <div class="mx-auto max-w-3xl px-4 py-6 text-sm text-slate-500">
+        © {new Date().getFullYear()} Thought Archive
+      </div>
     </footer>
   </body>
 </html>
 
-<style>
-  html, body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-    background: #f8fafc;
-  }
-  header, footer {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  nav a { 
-    margin-right: .75rem; 
-    text-decoration: none; 
-    color: #2563eb; 
-  }
-  nav a:hover { text-decoration: underline; }
-  nav a.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  main { 
-    max-width: 960px; 
-    margin: 0 auto; 
-    padding: 1.5rem; 
-  }
-</style>

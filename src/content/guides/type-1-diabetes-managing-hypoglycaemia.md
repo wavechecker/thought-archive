@@ -1,70 +1,76 @@
 ---
-draft: true
+title: "Type 1 Diabetes — Managing Hypoglycaemia"
+description: "How to recognize lows, treat them fast, prevent recurrences, and adjust insulin/carbs to stay safe."
+category: "Diabetes"
+publishDate: "2025-08-30"
+draft: false
+tags: ["type 1 diabetes", "hypoglycaemia", "low blood sugar", "glucagon", "CGM", "patientguide"]
 ---
 
----
-title: 'Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)'
-date: 2025-08-13T00:00:00.000Z
-description: >-
-  Clear steps to recognise and treat hypos in Type 1 diabetes, including severe
-  hypos and sick-day considerations.
-tags:
-  - medical
-  - diabetes
-  - type 1 diabetes
-  - hypoglycaemia
-  - health guides
-publishDate: '2025-08-13T16:26:30+04:00'
-updatedDate: '2025-08-13T16:26:30+04:00'
----
+## Intro
+Hypoglycaemia (low blood sugar) is a common risk in T1D. Fast recognition and treatment prevent harm, and smart prevention reduces how often lows happen.
 
-# Type 1 Diabetes: Managing Low Blood Glucose (Hypoglycaemia)
+## Key Points
+- Treat **immediately** if < **3.9 mmol/L (70 mg/dL)** or if symptomatic.  
+- Use the **Rule of 15** (15–20 g fast carbs → recheck in 15 min).  
+- Identify **triggers** (insulin timing/amount, exercise, alcohol, missed meals).  
+- Recurrent or severe lows → **adjust regimen** with your diabetes team.
 
-**Hypoglycaemia** (a "hypo") usually means **BGL < 4.0 mmol/L** in people using insulin. Treat **quickly** and **re-check** to avoid worsening lows. Always follow your **personal diabetes plan**; seek medical help if unsure or if recovery is not prompt.
+## Recognizing a Low
+- **Adrenergic:** shakiness, sweating, palpitations, anxiety, hunger.  
+- **Neuroglycopenic:** headache, blurred vision, confusion, irritability, drowsiness.  
+- **Severe:** seizures, unconsciousness (needs help from others).
 
-> **Safety first:** If driving or operating machinery, **stop immediately** and treat the hypo. Do not resume until glucose has clearly recovered and you feel well.
+CGM trend arrows help anticipate drops; confirm with finger-stick if readings don’t match how you feel.
 
-## Recognise a hypo
-- Shaking, sweating, hunger, tingling lips  
-- Irritability, confusion, headache, blurred vision  
-- In severe cases: **unable to swallow**, **unconscious**, or **seizure**
+## Immediate Treatment — Rule of 15
+1. Take **15–20 g fast-acting carbs**  
+   - e.g., 4 glucose tabs (≈16 g), 150–200 ml juice, glucose gel.  
+2. **Recheck in 15 minutes.**  
+3. If still < **3.9 mmol/L (70 mg/dL)**, repeat step 1.  
+4. If the next meal is **>1 hour away**, add a **slow carb** (toast, crackers).  
 
-## Step-by-step treatment (mild–moderate hypo, able to swallow)
-1) **Take 15 g fast-acting carbohydrate**, e.g. glucose tablets/gel, small juice, or regular soft drink.  
-2) **Wait 15 minutes**, then **re-check BGL**.  
-3) If still **< 4.0 mmol/L**, **repeat step 1** and re-check again after 15 minutes.  
-4) Once recovered (≥4.0 and symptoms resolving), if the next meal is **>1 hour** away, take a **longer-acting snack** (e.g., sandwich, milk/yoghurt, fruit + crackers) to prevent another drop.
+> Avoid chocolate or high-fat foods for the initial correction—they act too slowly.
 
-## Severe hypo (cannot swallow / unconscious / seizure)
-- **Do NOT give food or drink by mouth.**  
-- **Use glucagon** (nasal or injection) if available and trained to use it.  
+## Severe Hypoglycaemia
+- If unconscious or unable to swallow: a trained person should give **glucagon**  
+  - **Nasal** (spray) or **injectable** per device instructions.  
 - **Call emergency services.**  
-- After recovery, **eat longer-acting carbohydrate** and contact your diabetes team to review insulin doses.
+- Place on side (recovery position) once breathing is safe.
 
-## If you have a hypo overnight
-- Treat as above (15 g fast carb → recheck after 15 min → repeat if needed).  
-- Take a **longer-acting snack** before returning to sleep.  
-- Discuss **overnight basal adjustments** with your diabetes team if hypos are recurring.
+## Common Triggers & Fixes
+- **Too much bolus / wrong timing:** review insulin-to-carb ratio and pre-meal timing.  
+- **Basal set too high:** look for patterns at the same time daily → discuss basal reduction.  
+- **Exercise (during/after):** reduce bolus/basal around activity; carry fast carbs.  
+- **Alcohol:** eat with drinks; check before bed and overnight.  
+- **Missed/low-carb meals:** match bolus to actual carbs; consider smaller correction doses.
 
-## CGM vs no CGM
-- **With CGM:** Treat based on **low alerts** and **your symptoms**. Confirm with finger-stick if readings don't match how you feel, or after severe hypos.  
-- **Without CGM:** Keep meter and hypo kit **with you**; test more often when unwell, after exercise, alcohol, or dose changes.
+## Prevention Strategies
+- Set **CGM low alerts** (and predictive alerts) appropriately; consider higher overnight thresholds if prone to nocturnal lows.  
+- Use **temp basal reductions** on pumps for planned activity; with MDI, reduce bolus or add carbs.  
+- Rotate **injection/infusion sites** to avoid unpredictable absorption.  
+- Keep **hypo kit** (glucose + glucagon) accessible at home, work, school, and during exercise.
 
-## Preventing future hypos
-- Review insulin timing/doses with your clinician after any **severe** or **recurrent** hypo.  
-- Adjust bolus around **exercise** (and carry hypo treatment).  
-- During **illness**, balance insulin, fluids, and carb intake; avoid stacking rapid-acting insulin without planned carbs.
+## After a Low
+- Note the **time, activity, insulin, and food** leading up to it.  
+- If two or more lows occur in a week—or any severe episode—contact your team to reassess doses.  
+- Consider brief **target adjustments** (slightly higher) after clusters of lows.
 
-## When to seek medical help
-- Repeated hypos or **no warning symptoms ("hypo unawareness")**  
-- **Severe hypo** needing glucagon/help from others  
-- Hypos occurring with **vomiting**, **diarrhoea**, or **infection**  
-- Any time you are **concerned** or unsure how to adjust insulin
+## FAQ
+**Do I need to eat after I’m back above 3.9 mmol/L?**  
+If your next meal is far away, add a **slow carb** to prevent another dip.
 
-## References (plain text, no live links)
-- NDSS (National Diabetes Services Scheme) — Managing hypoglycaemia fact sheet.  
-- Diabetes Australia — Hypoglycaemia (patient info).  
-- Health services guidance on immediate treatment and follow-up after severe hypoglycaemia.
+**My CGM says I’m low but I feel fine.**  
+Confirm with a **finger-stick**; treat if confirmed or if trend arrows show a fast drop.
 
----
-*Educational only; not a substitute for professional medical advice. Always follow your diabetes plan and local clinical guidance.*
+**Why do I get lows overnight?**  
+Common reasons: **too much basal**, **evening exercise**, or **alcohol**. Adjust plan and consider higher overnight alerts.
+
+## Further Reading
+- [ADA — Hypoglycemia](https://diabetes.org/health-wellness/medication/hypoglycemia)  
+- [NHS — Hypoglycaemia](https://www.nhs.uk/conditions/hypoglycaemia/)  
+
+## Related Guides
+- [Recognising Highs and Lows](/guides/recognising-highs-and-lows/)  
+- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia/)  
+- [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise/)  

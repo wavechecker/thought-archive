@@ -1,75 +1,73 @@
 ---
-draft: true
+title: "DKA Quick Reference (Type 1 Diabetes)"
+description: "Fast checklist for recognizing diabetic ketoacidosis (DKA), home steps, when to go to ED, and what to expect in hospital."
+category: "Diabetes"
+publishDate: "2025-08-30"
+draft: false
+tags: ["DKA", "type 1 diabetes", "ketones", "hyperglycaemia", "emergency", "patientguide"]
 ---
 
----
-title: 'Type 1 Diabetes: DKA Quick Reference (Recognise & Act)'
-date: 2025-08-13T00:00:00.000Z
-description: >-
-  Rapid checklist for recognising and acting on diabetic ketoacidosis (DKA):
-  symptoms, ketone thresholds, fluids, insulin, and when to go to hospital.
-tags:
-  - medical
-  - diabetes
-  - type 1 diabetes
-  - DKA
-  - health guides
-publishDate: '2025-08-13T16:26:30+04:00'
-updatedDate: '2025-08-13T16:26:30+04:00'
----
+## Intro
+Diabetic ketoacidosis (DKA) is a **medical emergency** caused by insufficient insulin leading to high blood glucose and acidic blood. It develops over hours and needs **urgent hospital treatment**.
 
-# Type 1 Diabetes: DKA Quick Reference (Recognise & Act)
+## Key Points
+- Think DKA if **high glucose + positive ketones + symptoms** (nausea/vomiting, abdominal pain, deep breathing, dehydration).
+- **Do not delay**: give correction insulin, drink fluids, and **seek urgent care** if ketones remain high or you’re vomiting.
+- Pump users: suspect **site/tubing failure** first.
 
-**Diabetic ketoacidosis (DKA)** is a **medical emergency**. It develops when the body lacks insulin, builds up **ketones**, and becomes dehydrated/acidotic. Illness, missed insulin, or pump delivery problems are common triggers.
+## Red Flags — Go to ED Now
+- **Blood ketones ≥3.0 mmol/L** (or moderate/large urine ketones).  
+- **Persistent vomiting**, severe abdominal pain, **drowsiness/confusion**, **fast/deep breathing** (Kussmaul), **fruity breath**, or **unable to keep fluids down**.  
+- Child, pregnancy, or significant illness → **lower threshold** to attend ED.
 
-> **Never stop basal insulin.** Seek **urgent care** if symptoms are severe, you **can't keep fluids down**, or ketones **keep rising** despite extra insulin and fluids.
+## Home Assessment (If Not Yet in Distress)
+1. **Check glucose** and **blood ketones** (preferred) or urine ketones.  
+2. **Hydrate**: small frequent sips of water/electrolytes.  
+3. **Inspect pump** (if using): check site, tubing, occlusions; change set and give a **pen/syringe correction** if needed.
 
-## Warning signs
-- **Thirst**, dry mouth, frequent urination  
-- **Nausea/vomiting**, abdominal pain  
-- **Deep/rapid breathing**, **fruity breath**, **drowsiness/confusion**  
-- BGL often high, but be alert even if glucose isn't very high in early illness
+## Quick Action Table
 
-## Ketone checks (blood preferred)
-- Check **any time you feel unwell**, are **vomiting**, or if BGL is **≥15 mmol/L**.  
-- **Recheck every 1–2 hours** until ketones clear and symptoms improve.
+| Situation | What to do at home (while arranging care) |
+|---|---|
+| Glucose >13.9 mmol/L (>250 mg/dL) **and** ketones 0.6–1.4 | Take **correction insulin** per plan; drink fluids; recheck ketones in **1–2 h**. |
+| Ketones 1.5–2.9 | **Extra insulin** per sick-day plan (often 10–20% of total daily dose or 0.1 u/kg; follow your clinician’s plan); fluids; recheck **hourly**. |
+| Ketones ≥3.0 or any vomiting/abdominal pain/drowsiness | **ED now.** Give correction insulin if advised, **do not** delay travel. |
 
-### Typical action thresholds (general guidance — follow your personal plan)
-- **<0.6 mmol/L:** likely normal. Continue fluids and monitoring.  
-- **0.6–1.4 mmol/L:** **mild**. Increase **fluids** and consider **extra rapid-acting insulin** per your plan; recheck in **1–2 h**.  
-- **1.5–2.9 mmol/L:** **moderate**. High risk; give **extra insulin**, take **unsweetened fluids**, recheck **hourly–2-hourly**, and **contact your diabetes team**.  
-- **≥3.0 mmol/L** or worsening symptoms: **Emergency** → **go to hospital / call emergency services**.
+> Always follow your personalized **sick-day rules**; numbers above are common frameworks but vary by clinic.
 
-## Fluids
-- Aim to **prevent dehydration**: small, frequent sips (every 5–10 min).  
-- If **BGL high / ketones present** → use **unsweetened fluids** (water, broths, sugar-free oral rehydration).  
-- If **BGL low/normal** and you can't eat → **carbohydrate-containing fluids** to avoid hypos.
+## Common Triggers
+- Missed insulin doses or **pump/site failure**.  
+- Infection/illness, dehydration.  
+- New-onset type 1 diabetes.
 
-## Insulin actions
+## In the Emergency Department — What to Expect
+- Blood tests: glucose, ketones, electrolytes, blood gases.  
+- **IV fluids**, **insulin infusion**, and **electrolyte (potassium) replacement**.  
+- Treatment of underlying cause (infection, pump failure).  
+- Frequent monitoring until ketones clear and you can switch to usual insulin.
 
-### Pump users
-- **Suspect site failure** if ketones are present:  
-  1) Give a **correction bolus by pen/syringe** (to bypass the pump).  
-  2) **Change infusion set and site**; check for kinks/air bubbles.  
-  3) Consider **temporary basal increase** per your plan.  
-  4) **Recheck BGL & ketones in 1–2 h**; seek urgent care if not improving.
+## Prevention
+- **Sick-day plan** written and accessible.  
+- Keep **backup pens/syringes** even if you use a pump.  
+- Check **ketones** whenever glucose is high **and** you feel unwell.  
+- Change infusion sets regularly; carry spares and inspect for leaks.
 
-### Injections (MDI)
-- **Do not skip basal**.  
-- Give **correction rapid-acting insulin** per your sick-day plan.  
-- **Recheck** BGL & ketones in **1–2 h** and repeat per plan; seek help if not improving.
+## FAQ
+**Can I exercise to lower high glucose with ketones?**  
+No. Exercise can **worsen ketones** when insulin is low.
 
-## Do / Don't
-- **Do:** keep testing; keep taking insulin; maintain fluids; act early.  
-- **Don't:** delay care with **persistent vomiting**, **worsening abdominal pain**, **drowsiness**, or **breathing changes** — **go to hospital**.
+**I took a correction but ketones won’t drop.**  
+Suspect pump/site failure—**inject** with a pen/syringe and **seek care**.
 
-## For children and teens
-- DKA can progress **quickly**. If vomiting or unable to keep fluids down, **seek urgent medical advice early**, even with moderate ketones. Ensure caregivers know the **sick-day plan**, where supplies are, and how to contact your diabetes team.
+**Does DKA happen in type 2?**  
+Less common, but possible—especially in ketosis-prone T2 or with SGLT2 inhibitors (then called **euglycaemic DKA**).
 
-## References (plain text, no live links)
-- NDSS — Type 1 diabetes sick-day management, clinical guiding principles for sick days.  
-- Diabetes Australia — Sick day management and ketone monitoring.  
-- Healthdirect Australia — Diabetic ketoacidosis overview and red flags.
+## Further Reading
+- [NHS — Diabetic Ketoacidosis](https://www.nhs.uk/conditions/diabetic-ketoacidosis/)  
+- [ADA — DKA Basics](https://diabetes.org/)  
 
----
-*Educational only; not a substitute for professional medical advice. Always follow your diabetes plan and local clinical guidance.*
+## Related Guides
+- [Recognising Highs and Lows](/guides/recognising-highs-and-lows/)  
+- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia/)  
+- [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise/)  
+

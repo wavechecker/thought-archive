@@ -1,72 +1,76 @@
 ---
-draft: true
----
-
----
-title: "Insulin Administration — Pens, Syringes, and Pumps"
-slug: "insulin-administration"
-description: "How to choose and use pens, syringes, and pumps — plus insulin types, site rotation, storage, and safety."
-category: "Type 1 Diabetes"
-publishDate: "2025-08-19"
+title: "Insulin Types Explained"
+description: "A guide to the main types of insulin, how they work, onset and duration, and how they fit into diabetes care."
+category: "Diabetes"
+publishDate: "2025-08-30"
 draft: false
-tags: ["Type 1 Diabetes", "patientguide", "insulin"]
+tags: ["insulin", "diabetes", "type 1 diabetes", "type 2 diabetes", "patientguide"]
 ---
 
-Insulin delivery comes down to two things: **the type of insulin** you're using, and **the device you use to inject it**. Get both right and daily management becomes more predictable and safer.
+## Intro
+Insulin therapy is central to diabetes management, especially for people with type 1 diabetes and some with type 2. Understanding the different insulin types helps patients, carers, and clinicians tailor treatment to individual needs.
 
-## 1. Insulin Types
+## Key Points
+- Four main categories: **rapid-acting, short-acting, intermediate-acting, long-acting**.  
+- They differ by **onset**, **peak**, and **duration**.  
+- Often used in combination to mimic natural insulin release.  
+- Delivery methods: injection pens, pumps, or syringes.
 
-> Names vary by country — check what's available locally.
+## Types of Insulin
 
-- **Ultra-rapid/rapid-acting (bolus):** lispro (*Humalog, Lyumjev*), aspart (*NovoRapid/Novolog, Fiasp*), glulisine (*Apidra*).  
-  *Onset:* 5–15 min · *Peak:* ~1 hr · *Duration:* 3–5 hrs.
+### Rapid-acting
+- **Examples:** Lispro (Humalog), Aspart (NovoRapid), Glulisine (Apidra).  
+- **Onset:** 10–20 minutes.  
+- **Peak:** 1–3 hours.  
+- **Duration:** 3–5 hours.  
+- **Use:** Taken at mealtimes to cover blood sugar rise.
 
-- **Short-acting (regular):** Actrapid, Humulin R, Novolin R.  
-  *Onset:* ~30 min · *Peak:* 2–3 hrs · *Duration:* 6–8 hrs.
+### Short-acting (Regular)
+- **Examples:** Humulin R, Actrapid.  
+- **Onset:** 30 minutes.  
+- **Peak:** 2–4 hours.  
+- **Duration:** 6–8 hours.  
+- **Use:** Mealtime coverage; must inject 30 minutes before eating.
 
-- **Intermediate:** NPH (*Protaphane, Humulin N*).  
-  *Onset:* 1–2 hrs · *Peak:* 4–10 hrs · *Duration:* 12–18 hrs.
+### Intermediate-acting
+- **Examples:** NPH (Humulin N, Insulatard).  
+- **Onset:** 1–2 hours.  
+- **Peak:** 4–12 hours.  
+- **Duration:** 12–18 hours.  
+- **Use:** Often combined with short- or rapid-acting insulin.
 
-- **Long/ultra-long (basal):** glargine (*Lantus, Basaglar, Toujeo*), detemir (*Levemir*), degludec (*Tresiba*).  
-  *Onset:* 1–2 hrs · *Duration:* 20–42+ hrs, flatter profile.
+### Long-acting (Basal)
+- **Examples:** Glargine (Lantus, Toujeo), Detemir (Levemir), Degludec (Tresiba).  
+- **Onset:** 1–2 hours.  
+- **Duration:** Up to 24–42 hours depending on preparation.  
+- **Use:** Provides baseline insulin between meals and overnight.
 
-- **Premixed:** fixed ratios of rapid or regular + NPH (e.g. 70/30, 75/25). Less flexible, fewer injections.
+## Delivery Methods
+- **Pens:** Most common, prefilled, dose dial.  
+- **Syringes:** Less common, may still be used in some regions.  
+- **Pumps:** Provide continuous basal insulin, with programmable boluses at mealtimes.  
 
-- **Concentrated:** lispro U-200, degludec U-200, glargine U-300, regular U-500. Always match pens/syringes carefully.
+## Risks & Considerations
+- Main risk: **hypoglycemia** (low blood sugar).  
+- Weight gain is possible with some insulins.  
+- Rotation of injection sites helps prevent lipodystrophy.  
+- Dosing must be individualized by a clinician.  
 
-## 2. Delivery Methods
+## FAQ
+**Q: What’s the difference between rapid-acting and short-acting?**  
+Rapid-acting works faster and is taken right at mealtime; short-acting is slower and must be taken earlier.
 
-### Pens
-- Accurate dosing, portable, fine needles (4–6 mm).  
-- Prime 1–2 units before injection.  
-- Inject at 90°, hold 10 sec, rotate sites to avoid lumps.
+**Q: Can long-acting insulin replace mealtime insulin?**  
+No. Long-acting covers baseline needs; mealtime spikes require rapid or short-acting insulin.
 
-### Syringes
-- Cheapest option, flexible for unusual doses.  
-- Draw **clear before cloudy** when mixing rapid + NPH.  
-- Rotate sites the same way as pens.
+**Q: Are biosimilar insulins safe?**  
+Yes, biosimilars undergo rigorous testing and are equally effective.
 
-### Pumps (CSII & AID systems)
-- Continuous basal delivery + bolus dosing.  
-- Allows temp basal for exercise/illness.  
-- With CGM, can automate adjustments (AID).  
-- **Risks:** infusion set failure = fast rise in ketones.  
-- Change sets every 2–3 days, sooner in heat.
+## Further Reading
+- [American Diabetes Association: Types of Insulin](https://diabetes.org/health-wellness/medication/insulin)  
+- [NHS — Insulin](https://www.nhs.uk/conditions/insulin/)  
 
-## 3. Safety & Practical Tips
-- **Hypo plan:** always carry fast carbs; recheck in 15 min; follow with slower carbs.  
-- **Illness/sick days:** never stop basal; check ketones when high or unwell.  
-- **Storage:** unopened insulin in fridge (2–8 °C); in-use pens/vials at room temp (check expiry window). Avoid heat/freeze.  
-- **Driving:** check BGL before driving; don't drive if low until recovered.  
-- **Units:** concentrated insulins (U-200/U-300) still dose in *units* — don't transfer from pens to syringes.  
-
-## 4. Related Guides
-- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)  
-- [Continuous Glucose Monitors (CGMs) vs Finger-Prick Testing](/posts/cgm-vs-finger-prick/)  
-- [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions/)  
-- [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c/)  
-
-## References
-- ISPAD & ADA insulin guidelines  
-- NDSS injection technique and sick-day resources  
-- Diabetes Australia: insulin types and safe use
+## Related Guides
+- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children/)  
+- [Angina — Symptoms & Management](/guides/angina-symptoms-management/)  
+- [Coronary Angiography — What to Expect](/guides/coronary-angiography/)  
