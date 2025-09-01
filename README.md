@@ -44,3 +44,13 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+---
+
+## 🔧 Maintenance (Weekly Ops)
+See **[ops-checklist.md](./ops-checklist.md)** for a 60-second weekly review:
+- Error rates (4xx/5xx)
+- Cache-hit ratio
+- Top 404s from `pg404-log`
+- Top referrers
+- Sanity click test
