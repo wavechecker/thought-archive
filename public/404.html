@@ -71,5 +71,37 @@
       If you typed the address, double-check for typos — e.g. <code>/guides/</code>.
     </p>
   </div>
+
+  <!-- 404 logger -->
+  <script>
+    (function () {
+      const key = "pg404:" + location.href + ":" + document.referrer;
+      if (sessionStorage.getItem(key)) return; // prevent duplicates
+      sessionStorage.setItem(key, "1");
+
+      const payload = {
+        path: location.pathname + location.search + location.hash,
+        referrer: document.referrer || null,
+        userAgent: navigator.userAgent,
+        ts: new Date().toISOString(),
+      };
+
+const url = "/.netlify/functions/pg404-log";
+
+
+      try {
+        const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+        const ok = navigator.sendBeacon && navigator.sendBeacon(url, blob);
+        if (!ok) throw 0;
+      } catch (e) {
+        fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          keepalive: true,
+          body: JSON.stringify(payload),
+        }).catch(() => {});
+      }
+    })();
+  </script>
 </body>
 </html>
