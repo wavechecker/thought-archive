@@ -1,18 +1,24 @@
-# /*   /maintenance.html   200
+# Toggle maintenance mode by uncommenting the next line
+# /*                                  /maintenance.html                 200
 
-/guides/heart    /guides/heart-circulation   301!
-/guides/heart/   /guides/heart-circulation   301!
+# --- Canonicalizations ---
+/guides/heart                          /guides/heart-circulation/       301!
+/guides/heart/                         /guides/heart-circulation/       301!
+/guides/heart/*                        /guides/heart-circulation/:splat 301!
 
 # RFK post cleanup
-/posts/wiki-draft-rfk-vaccine-2025    /posts/rfk-vaccine-2025     301!
+/posts/wiki-draft-rfk-vaccine-2025     /posts/rfk-vaccine-2025          301!
+/posts/wiki-draft-rfk-vaccine-2025/    /posts/rfk-vaccine-2025          301!
 
-# Legionnaires typo
-/guides/legionairres-disease          /guides/legionnaires-disease  301!
+# Legionnaires typo → correct slug
+/guides/legionairres-disease           /guides/legionnaires-disease     301!
+/guides/legionairres-disease/          /guides/legionnaires-disease     301!
 
-# Heart guide canonicalization
-/guides/heart           /guides/heart-circulation/            301!
-/guides/heart/          /guides/heart-circulation/            301!
-/guides/heart/*         /guides/heart-circulation/:splat      301!
+# --- Gone for good (use a real target for local parsers) ---
+/posts/governments-cancel-science      /404.html                         410
+/posts/governments-cancel-science/     /404.html                         410
 
-# Gone for good
-/posts/governments-cancel-science     -   410
+# --- Bot probe hard 404s ---
+/wp-login.php                          /404.html                         404
+/xmlrpc.php                            /404.html                         404
+/phpmyadmin/*                          /404.html                         404
