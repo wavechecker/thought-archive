@@ -3,7 +3,7 @@ title: "Family Risk and Genetics in Bowel Cancer"
 slug: bowel-cancer-genetics
 description: "How family history and inherited conditions affect bowel cancer risk, and when genetic testing is recommended."
 category: "Cancer"
-publishDate: 2025-08-20
+publishDate: "2025-08-20"
 draft: false
 tags: ["cancer", "bowel cancer", "genetics", "family risk", "patientguide"]
 ---

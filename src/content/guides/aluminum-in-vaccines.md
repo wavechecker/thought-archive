@@ -3,7 +3,7 @@ title: "Aluminum in Vaccines: Safety Evidence and Controversy"
 slug: "aluminum-in-vaccines"
 description: "What aluminum adjuvants are, how they work, and what the evidence says about safety."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["adjuvants", "safety", "autism"]
 draft: false
 ---

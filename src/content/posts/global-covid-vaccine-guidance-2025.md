@@ -2,7 +2,7 @@
 title: "Global Snapshot: COVID-19 Vaccine Guidance in 2025"
 slug: "global-covid-vaccine-guidance-2025"
 description: "How Australia, the UK, Canada, and the U.S. differ in their COVID-19 vaccine recommendations — especially for children."
-publishDate: 2025-08-22
+publishDate: "2025-08-22"
 tags: ["COVID-19", "Vaccines", "Global Health", "ATAGI", "JCVI", "NACI", "CDC"]
 related:
   - /posts/rfk-vaccine-war-legal-2025

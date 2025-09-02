@@ -3,7 +3,7 @@ title: "COVID-19 Vaccination Guidelines — United States (August 2025)"
 slug: "us-covid-vaccine-guidelines-aug-2025"
 description: "The FDA’s latest approvals, CDC’s shifting stance, and AAP/ACOG recommendations on COVID-19 vaccination as of August 2025."
 category: "Infectious Diseases"
-publishDate: 2025-08-28
+publishDate: "2025-08-28"
 tags: ["COVID-19", "Vaccination", "United States", "FDA", "CDC", "AAP"]
 draft: false
 ---

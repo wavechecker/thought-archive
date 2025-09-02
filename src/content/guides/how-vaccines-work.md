@@ -3,7 +3,7 @@ title: "How Vaccines Work"
 slug: "how-vaccines-work"
 description: "A primer on the immune system, vaccine mechanisms, and how immunisation provides protection."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["basics", "immunology", "public health"]
 draft: false
 ---

@@ -3,7 +3,7 @@ title: "Bowel Cancer Survivorship — Life After Treatment"
 slug: bowel-cancer-survivorship
 description: "What to expect after treatment, how follow-up works, and lifestyle changes that support long-term health."
 category: "Cancer"
-publishDate: 2025-08-20
+publishDate: "2025-08-20"
 draft: false
 tags: ["cancer", "bowel cancer", "survivorship", "long-term care", "patientguide"]
 ---

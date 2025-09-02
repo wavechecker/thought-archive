@@ -3,7 +3,7 @@ title: "Palliative Care in Bowel Cancer — Comfort, Dignity, and Support"
 slug: bowel-cancer-palliative-care
 description: "When cure is no longer possible, palliative care focuses on quality of life, symptom relief, and supporting patients and families."
 category: "Cancer"
-publishDate: 2025-08-20
+publishDate: "2025-08-20"
 draft: false
 tags: ["cancer", "bowel cancer", "palliative care", "support", "patientguide"]
 ---

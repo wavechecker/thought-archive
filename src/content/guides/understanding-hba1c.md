@@ -2,8 +2,8 @@
 title: "Sick-Day Management for Type 1 Diabetes"
 slug: "sick-day-management-type-1-diabetes"
 description: "How to adjust insulin, fluids, and monitoring when unwell with Type 1 diabetes."
-publishDate: 2025-08-21
-updatedDate: 2025-08-21
+publishDate: "2025-08-21"
+updatedDate: "2025-08-21"
 category: "Type 1 Diabetes"
 tags: ["Type 1 Diabetes", "sick day", "patientguide"]
 related:

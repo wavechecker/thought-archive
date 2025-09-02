@@ -2,7 +2,7 @@
 title: "When Governments Cancel Science"
 slug: "governments-cancel-science"
 description: "CDC leadership purged, Fed governors fired, data disappearing: we’re watching the scaffolding of evidence-based policy being dismantled."
-publishDate: 2025-08-28
+publishDate: "2025-08-28"
 tags: ["opinion", "analysis", "politics", "public health", "science"]
 draft: false
 related:

@@ -3,7 +3,7 @@ title: "Understanding Bowel Cancer — Risks and Symptoms"
 slug: understanding-bowel-cancer
 description: "What bowel cancer is, common risk factors, and red-flag symptoms to know."
 category: "Cancer"
-publishDate: 2025-08-20
+publishDate: "2025-08-20"
 draft: false
 tags: ["cancer", "bowel cancer", "patientguide"]
 ---

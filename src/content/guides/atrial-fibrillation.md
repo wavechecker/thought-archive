@@ -3,8 +3,8 @@ title: "Atrial Fibrillation: Symptoms, Risks, and Treatment"
 slug: "atrial-fibrillation"
 description: "An irregular heartbeat that increases risk of stroke and heart failure — how it's diagnosed and treated."
 category: "Heart & Circulation"
-publishDate: 2025-08-20
-updatedDate: 2025-08-21
+publishDate: "2025-08-20"
+updatedDate: "2025-08-21"
 tags: ["cardiology", "arrhythmia", "atrial fibrillation", "afib", "patientguide"]
 related:
   - /guides/common-heart-medications

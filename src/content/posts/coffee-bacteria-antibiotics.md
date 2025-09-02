@@ -2,8 +2,8 @@
 title: "Your Morning Coffee Could Be Training Bacteria"
 slug: "coffee-bacteria-antibiotics"
 description: "New research shows caffeine nudges E. coli toward resisting antibiotics."
-publishDate: 2025-08-25
-updatedDate: 2025-08-25
+publishDate: "2025-08-25"
+updatedDate: "2025-08-25"
 tags: ["opinion", "analysis", "antibiotics", "microbiome"]
 draft: false
 related:

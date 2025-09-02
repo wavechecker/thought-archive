@@ -2,7 +2,9 @@
 title: "The End of Aspirin’s Reign?"
 slug: "aspirin-vs-clopidogrel"
 description: "A meta-analysis of 29,000 patients suggests clopidogrel may finally dethrone aspirin as the default heart pill."
-publishDate: 2025-09-01
+publishDate: "2025-08-31"
+updatedDate: "2025-09-01"
+
 tags: ["opinion", "analysis", "heart disease", "cardiology"]
 draft: false
 related:

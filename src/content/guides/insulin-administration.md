@@ -3,8 +3,8 @@ title: "Insulin Administration — Pens, Syringes, and Pumps"
 slug: "insulin-administration"
 description: "Basal and bolus basics, dosing methods, site rotation, and pump set changes."
 category: "Type 1 Diabetes"
-publishDate: 2025-08-18
-updatedDate: 2025-08-21
+publishDate: "2025-08-18"
+updatedDate: "2025-08-21"
 tags: ["Type 1 Diabetes", "insulin", "patientguide"]
 related:
   - /guides/blood-glucose-testing

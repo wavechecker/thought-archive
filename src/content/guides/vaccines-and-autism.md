@@ -3,7 +3,7 @@ title: "Vaccines and Autism"
 slug: "vaccines-and-autism"
 description: "Review of the evidence on the alleged link between vaccines and autism, and the public health impact of this controversy."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["safety", "autism", "controversy"]
 draft: true
 ---

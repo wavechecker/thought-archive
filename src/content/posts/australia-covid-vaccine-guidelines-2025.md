@@ -2,7 +2,7 @@
 title: "COVID-19 Vaccination Guidelines in Australia (2025)"
 slug: "australia-covid-vaccine-guidelines-2025"
 description: "ATAGI's 2025 recommendations on COVID-19 vaccines for children and adults in Australia, and how they diverge from U.S. pediatric guidance."
-publishDate: 2025-08-21
+publishDate: "2025-08-21"
 tags: ["COVID-19", "Australia", "Vaccination", "ATAGI", "Pediatrics", "Public Health"]
 ---
 

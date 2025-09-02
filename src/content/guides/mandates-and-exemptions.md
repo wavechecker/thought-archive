@@ -3,7 +3,7 @@ title: "Vaccine Mandates and Exemptions"
 slug: "mandates-and-exemptions"
 description: "A guide to vaccine mandate policies, types of exemptions, and the debates around them."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["policy", "society", "mandates", "exemptions"]
 draft: false
 ---

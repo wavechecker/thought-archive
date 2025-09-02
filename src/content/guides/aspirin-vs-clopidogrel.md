@@ -3,7 +3,7 @@ title: "Aspirin vs Clopidogrel — Which Is Better for Heart Disease?"
 slug: "aspirin-vs-clopidogrel"
 description: "How aspirin and clopidogrel compare for preventing heart attacks and strokes, including safety, side effects, and latest evidence."
 category: "Heart & Circulation"
-publishDate: 2025-09-01
+publishDate: "2025-09-01"
 tags: ["aspirin", "clopidogrel", "heart attack", "stroke", "antiplatelet"]
 draft: false
 ---

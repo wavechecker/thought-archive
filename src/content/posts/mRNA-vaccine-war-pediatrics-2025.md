@@ -2,7 +2,7 @@
 title: "The mRNA Vaccine War Isn't Over — Pediatrics Just Drew a New Line"
 slug: "mRNA-vaccine-war-pediatrics-2025"
 description: "The American Academy of Pediatrics broke with U.S. federal guidance, recommending COVID-19 vaccination for the youngest children. Here's why — and why the CDC disagrees."
-publishDate: 2025-08-21
+publishDate: "2025-08-21"
 tags: ["COVID-19", "mRNA", "Vaccines", "Pediatrics", "Public Health", "Trust"]
 ---
 

@@ -2,7 +2,7 @@
 title: "COVID Vaccines at High Noon: Science, Politics, and Patient Safety in a Three-Way Standoff"
 slug: "covid-vaccine-standoff"
 description: "Trump, RFK Jr., and the science of COVID vaccines are circling each other in a Sergio Leone moment. Who fires first?"
-publishDate: 2025-08-27
+publishDate: "2025-08-27"
 tags: ["opinion", "analysis", "covid-19", "politics", "society"]
 draft: false
 related:

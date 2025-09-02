@@ -3,8 +3,8 @@ title: "Treatment Pathways — Surgery, Chemo, Radiotherapy"
 slug: "bowel-cancer-treatment"
 description: "Main treatments for bowel cancer, when they're used, and what patients can expect."
 category: "Bowel Cancer"
-publishDate: 2025-08-20
-updatedDate: 2025-08-21
+publishDate: "2025-08-20"
+updatedDate: "2025-08-21"
 tags: ["cancer", "bowel cancer", "treatment", "patientguide"]
 related:
   - /guides/bowel-cancer-screening

@@ -3,8 +3,8 @@ title: "Blood Glucose Testing — How and When to Check"
 slug: "blood-glucose-testing"
 description: "When and how to test blood glucose, what the numbers mean, and why it matters for Type 1 Diabetes management."
 category: "Type 1 Diabetes"
-publishDate: 2025-08-19
-updatedDate: 2025-08-21
+publishDate: "2025-08-19"
+updatedDate: "2025-08-21"
 tags: ["Type 1 Diabetes", "patientguide", "blood glucose"]
 related:
   - /guides/continuous-glucose-monitors

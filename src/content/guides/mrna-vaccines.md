@@ -3,7 +3,7 @@ title: "mRNA Vaccines"
 slug: "mrna-vaccines"
 description: "A guide to mRNA vaccine technology, how it works, its benefits, risks, and future applications."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["types", "mRNA", "safety", "technology"]
 draft: false
 ---

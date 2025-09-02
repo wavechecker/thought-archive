@@ -3,7 +3,7 @@ title: "Adverse Events Monitoring in Vaccines"
 slug: "adverse-events-monitoring"
 description: "How systems like VAERS, EudraVigilance, and AusVaxSafety monitor vaccine safety after rollout."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["safety", "monitoring", "policy"]
 draft: false
 ---

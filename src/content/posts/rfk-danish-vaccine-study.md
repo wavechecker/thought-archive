@@ -2,7 +2,7 @@
 title: "RFK Jr. vs the Danish Vaccine Study: Politics, Not Public Health"
 slug: "rfk-danish-vaccine-study"
 description: "When the US Health Secretary demands a study be retracted, it says more about politics than science."
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["opinion", "analysis", "vaccines", "society"]
 draft: false
 related:

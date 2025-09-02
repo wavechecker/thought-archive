@@ -2,7 +2,7 @@
 title: "RFK’s Vaccine War Reaches the Pharmacies"
 slug: "rfk-vaccine-war-cvs-hold"
 description: "CVS suspends COVID shots in 16 states as RFK Jr.’s policies unsettle the nation’s vaccine system."
-publishDate: 2025-08-29
+publishDate: "2025-08-29"
 tags: ["opinion", "analysis", "public health", "vaccines", "policy"]
 related:
   - /posts/rfk-covid-war

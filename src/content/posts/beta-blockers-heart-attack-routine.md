@@ -2,7 +2,7 @@
 title: "Should Beta Blockers Still Be Routine After a Heart Attack?"
 slug: "beta-blockers-heart-attack-routine"
 description: "Two major studies just questioned 40 years of standard practice — is it time to rethink the reflex prescription of beta blockers after MI?"
-publishDate: 2025-08-30
+publishDate: "2025-08-30"
 tags: ["opinion", "analysis", "cardiology", "patientguide"]
 draft: false
 related:

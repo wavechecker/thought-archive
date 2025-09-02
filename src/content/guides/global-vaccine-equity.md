@@ -3,7 +3,7 @@ title: "Global Vaccine Equity"
 slug: "global-vaccine-equity"
 description: "An overview of disparities in vaccine access worldwide and efforts to close the gap."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["equity", "global health", "access", "policy"]
 draft: false
 ---

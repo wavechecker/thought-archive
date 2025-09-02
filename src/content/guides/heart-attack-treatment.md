@@ -3,7 +3,7 @@ title: "Heart Attack Treatment — What to Expect"
 slug: "heart-attack-treatment"
 description: "Overview of how heart attacks are treated today — from emergency care to long-term recovery."
 category: "Heart & Circulation"
-publishDate: 2025-08-30
+publishDate: "2025-08-30"
 draft: true
 tags: ["heart attack", "treatment", "cardiology", "patientguide"]
 ---

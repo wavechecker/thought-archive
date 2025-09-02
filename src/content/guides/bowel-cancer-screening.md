@@ -3,8 +3,8 @@ title: "Bowel Cancer Screening — Early Detection Matters"
 slug: "bowel-cancer-screening"
 description: "How bowel cancer screening works, who should be tested, and why early detection saves lives."
 category: "Bowel Cancer"
-publishDate: 2025-08-21
-updatedDate: 2025-08-21
+publishDate: "2025-08-21"
+updatedDate: "2025-08-21"
 tags: ["cancer", "bowel cancer", "screening", "patientguide"]
 related:
   - /guides/bowel-cancer-treatment

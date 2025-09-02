@@ -4,7 +4,7 @@ slug: "emergencies"
 description: "Browse guides on emergency medical conditions and what to do in urgent situations."
 category: "Guide Hubs"
 hubKey: "Emergencies"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["overview", "emergency"]
 draft: false
 ---

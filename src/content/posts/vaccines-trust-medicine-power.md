@@ -1,7 +1,7 @@
 ---
 title: "Vaccines, Trust, and the Line Between Medicine and Power"
 slug: vaccines-trust-medicine-power
-publishDate: 2025-08-20
+publishDate: "2025-08-20"
 tags: ["vaccines", "measles", "covid", "public health", "trust"]
 description: "A vaccination nurse reflects on measles, COVID-19, and the line between medicine and government overreach."
 ---

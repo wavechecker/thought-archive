@@ -3,7 +3,7 @@ title: "Nutrition Basics for Bowel Cancer — Eating Well During and After Treat
 slug: bowel-cancer-nutrition
 description: "Dietary guidance to support bowel health, manage treatment side effects, and aid recovery."
 category: "Cancer"
-publishDate: 2025-08-20
+publishDate: "2025-08-20"
 draft: false
 tags: ["cancer", "bowel cancer", "nutrition", "diet", "patientguide"]
 ---

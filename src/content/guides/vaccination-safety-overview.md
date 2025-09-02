@@ -3,7 +3,7 @@ title: "Vaccination Safety Overview"
 slug: "vaccination-safety-overview"
 description: "An index of guides on vaccine safety, controversies, and monitoring systems."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["safety", "overview", "controversy"]
 draft: false
 ---

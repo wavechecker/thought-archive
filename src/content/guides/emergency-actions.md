@@ -2,8 +2,8 @@
 title: "Emergency Actions — Hypos, Highs, and Ketones"
 slug: "emergency-actions"
 description: "Quick reference for severe hypos, high blood glucose with ketones, vomiting/illness, and when to call an ambulance."
-publishDate: 2025-08-13
-updatedDate: 2025-08-21
+publishDate: "2025-08-13"
+updatedDate: "2025-08-21"
 tags: ["medical", "diabetes", "type 1 diabetes", "emergency", "health guides"]
 related:
   - /guides/blood-glucose-testing

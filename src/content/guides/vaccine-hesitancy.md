@@ -3,7 +3,7 @@ title: "Vaccine Hesitancy"
 slug: "vaccine-hesitancy"
 description: "Understanding the causes of vaccine hesitancy and approaches to improve trust."
 category: "Vaccination"
-publishDate: 2025-08-26
+publishDate: "2025-08-26"
 tags: ["policy", "society", "hesitancy", "trust"]
 draft: false
 ---

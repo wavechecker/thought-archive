@@ -3,8 +3,8 @@ title: "Cardiac Rehabilitation After a Heart Event"
 slug: "cardiac-rehabilitation"
 description: "Why rehab matters after heart attack, surgery, or stents — exercise, recovery, and long-term heart health."
 category: "Heart & Circulation"
-publishDate: 2025-08-20
-updatedDate: 2025-08-21
+publishDate: "2025-08-20"
+updatedDate: "2025-08-21"
 tags: ["cardiology", "rehabilitation", "heart", "patientguide"]
 related:
 
