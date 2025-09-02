@@ -6,14 +6,13 @@ const guides = await getCollection('guides', ({ data }) => data?.draft !== true)
 
 // 2) Build a map: category -> array of guides
 const byCategory = new Map<string, typeof guides>();
-
 for (const e of guides) {
-  const cat = e.data.category?.trim() || 'General';
+  const cat = e.data.category?.trim() || 'General Health';
   if (!byCategory.has(cat)) byCategory.set(cat, []);
   byCategory.get(cat)!.push(e);
 }
 
-// 3) Preferred category order
+// 3) Preferred category order; any others sorted alphabetically after
 const preferredOrder = [
   'Emergencies',
   'Infectious Diseases',
@@ -26,6 +25,8 @@ const preferredOrder = [
   'Mental Health',
   'General Health',
   'End of Life',
+  'Child & Adolescent Health',
+  'Guide Hubs',
 ];
 
 const categories = Array.from(byCategory.keys()).sort((a, b) => {
@@ -37,7 +38,7 @@ const categories = Array.from(byCategory.keys()).sort((a, b) => {
   return ia - ib;
 });
 
-// 4) Optional: descriptions
+// 4) Optional descriptions
 const catDesc: Record<string, string> = {
   'Emergencies': 'What to do in urgent situations.',
   'Infectious Diseases': 'Prevention, treatment, and key facts.',
@@ -50,6 +51,8 @@ const catDesc: Record<string, string> = {
   'General Health': 'Lifestyle, prevention, and wellness.',
   'Mental Health': 'Emotional well-being, psychology, and psychiatry.',
   'End of Life': 'Voluntary assisted dying, palliation, choices.',
+  'Child & Adolescent Health': 'Browse guides in this topic.',
+  'Guide Hubs': 'Browse topical hubs.',
 };
 ---
 
@@ -65,17 +68,16 @@ const catDesc: Record<string, string> = {
         <h3><a href={`/guides/?category=${encodeURIComponent(cat)}`}>{cat}</a></h3>
         <p>{catDesc[cat] ?? 'Browse guides in this topic.'}</p>
         <small>{count} guide{count === 1 ? '' : 's'}</small>
-
         <ul class="mini">
           {list
             .slice()
             .sort((a, b) =>
-              new Date(b.data.updatedDate ?? b.data.publishDate).getTime() -
-              new Date(a.data.updatedDate ?? a.data.publishDate).getTime()
+              new Date(b.data.updatedDate ?? b.data.publishDate).getTime()
+              - new Date(a.data.updatedDate ?? a.data.publishDate).getTime()
             )
             .slice(0, 5)
             .map((e) => {
-              const href = `/guides/${e.slug}`;            // ✅ use entry.slug
+              const href = `/guides/${e.slug}`;      // ← use entry.slug
               const title = e.data.title ?? '(Untitled)';
               return <li><a href={href}>{title}</a></li>;
             })}
