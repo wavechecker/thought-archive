@@ -2,7 +2,7 @@
 title: "Stem Cell 'Cure' for Type 1 Diabetes—Hope or Hype?"
 slug: "stem-cell-diabetes-cure"
 description: "Lab-grown pancreatic cells may free Type 1 diabetics from insulin—but are we ready to call it a cure?"
-publishDate: 2025-09-02
+publishDate: "2025-09-02"
 tags: ["opinion", "analysis", "general health", "diabetes"]
 draft: false
 related:

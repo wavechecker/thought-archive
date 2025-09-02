@@ -2,7 +2,7 @@
 title: "Bespoke Brain Implants for Pain — Promise or Pitfall?"
 slug: "brain-implants-for-pain"
 description: "New closed-loop brain implants halve chronic pain in a tiny study — but are we too quick to celebrate hardware inside our heads?"
-publishDate: 2025-09-02
+publishDate: "2025-09-02"
 tags: ["opinion", "analysis", "chronic pain", "general health"]
 draft: false
 related:
