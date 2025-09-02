@@ -2,19 +2,18 @@
 import { getCollection } from 'astro:content';
 
 // 1) Load all published guides
-const guides = await getCollection('guides', ({ data }) => !data.draft);
+const guides = await getCollection('guides', ({ data }) => data?.draft !== true);
 
 // 2) Build a map: category -> array of guides
 const byCategory = new Map<string, typeof guides>();
 
-for (const g of guides) {
-  const cat = g.data.category?.trim() || 'General';
+for (const e of guides) {
+  const cat = e.data.category?.trim() || 'General';
   if (!byCategory.has(cat)) byCategory.set(cat, []);
-  byCategory.get(cat)!.push(g);
+  byCategory.get(cat)!.push(e);
 }
 
-// 3) Nice display order (put your most important first)
-// Anything not listed falls under "Other" order at the end.
+// 3) Preferred category order
 const preferredOrder = [
   'Emergencies',
   'Infectious Diseases',
@@ -26,7 +25,7 @@ const preferredOrder = [
   'Neurology',
   'Mental Health',
   'General Health',
-  'End of Life', // ← new
+  'End of Life',
 ];
 
 const categories = Array.from(byCategory.keys()).sort((a, b) => {
@@ -38,7 +37,7 @@ const categories = Array.from(byCategory.keys()).sort((a, b) => {
   return ia - ib;
 });
 
-// 4) Optional: descriptions for known categories
+// 4) Optional: descriptions
 const catDesc: Record<string, string> = {
   'Emergencies': 'What to do in urgent situations.',
   'Infectious Diseases': 'Prevention, treatment, and key facts.',
@@ -50,7 +49,7 @@ const catDesc: Record<string, string> = {
   'Neurology': 'Brain and nervous system conditions.',
   'General Health': 'Lifestyle, prevention, and wellness.',
   'Mental Health': 'Emotional well-being, psychology, and psychiatry.',
-  'End of Life': 'Voluntary assisted dying, palliation, choices.', // ← new
+  'End of Life': 'Voluntary assisted dying, palliation, choices.',
 };
 ---
 
@@ -66,14 +65,20 @@ const catDesc: Record<string, string> = {
         <h3><a href={`/guides/?category=${encodeURIComponent(cat)}`}>{cat}</a></h3>
         <p>{catDesc[cat] ?? 'Browse guides in this topic.'}</p>
         <small>{count} guide{count === 1 ? '' : 's'}</small>
+
         <ul class="mini">
           {list
-            .slice() // copy
-            .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
-            .slice(0, 5) // show top 5 recent titles per category (tweak/remove as you like)
-            .map(({ data }) => (
-              <li><a href={`/guides/${data.slug}`}>{data.title}</a></li>
-            ))}
+            .slice()
+            .sort((a, b) =>
+              new Date(b.data.updatedDate ?? b.data.publishDate).getTime() -
+              new Date(a.data.updatedDate ?? a.data.publishDate).getTime()
+            )
+            .slice(0, 5)
+            .map((e) => {
+              const href = `/guides/${e.slug}`;            // ✅ use entry.slug
+              const title = e.data.title ?? '(Untitled)';
+              return <li><a href={href}>{title}</a></li>;
+            })}
         </ul>
       </li>
     );
@@ -86,6 +91,7 @@ const catDesc: Record<string, string> = {
   .mini { margin-top:.5rem; padding-left:1rem; }
   .mini li { list-style: disc; }
 </style>
+
 
 
 
