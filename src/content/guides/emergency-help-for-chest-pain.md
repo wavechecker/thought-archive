@@ -1,4 +1,5 @@
 ---
+category: "Emergencies"
 title: "When to Seek Emergency Help for Chest Pain"
 slug: "when-to-seek-emergency-help-for-chest-pain"
 description: "How to tell if chest pain is an emergency and the actions to take right away."
@@ -8,6 +9,7 @@ draft: false
 tags: ["chest pain", "emergency", "patientguide"]
 related:
   - /guides/early-warning-signs-of-a-heart-attack
+---
 ---
 
 
@@ -46,6 +48,7 @@ No—many heart attacks feel like pressure, not stabbing pain.
 **If symptoms improve, can I skip care?**  
 No—**get checked**; symptoms can wax and wane.
 
+---
 ---
 
 *Educational only; not a substitute for professional medical advice.*

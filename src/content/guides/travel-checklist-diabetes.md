@@ -1,4 +1,5 @@
 ---
+category: "Diabetes"
 title: "Travel Checklist for Type 1 Diabetes"
 slug: "travel-checklist-diabetes"
 description: "Essential supplies, airport tips, and planning for safe travel with Type 1 Diabetes."
@@ -9,6 +10,7 @@ related:
   - /guides/emergency-actions
   - /guides/insulin-administration
   - /guides/sick-day-management
+---
 ---
 
 # Travel Checklist for Type 1 Diabetes

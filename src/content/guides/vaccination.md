@@ -2,7 +2,7 @@
 title: "Vaccination — Guide Hub"
 slug: "vaccination"
 description: "Guides on vaccines: how they work, current recommendations, COVID-19 updates, and addressing myths and misinformation."
-category: "Preventive Health"
+category: "General Health"
 publishDate: "2025-08-29"
 updatedDate: "2025-08-29"
 hubKey: "Vaccination"

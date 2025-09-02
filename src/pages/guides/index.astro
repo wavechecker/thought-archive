@@ -1,26 +1,92 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+
+// 1) Load all published guides
+const guides = await getCollection('guides', ({ data }) => !data.draft);
+
+// 2) Build a map: category -> array of guides
+const byCategory = new Map<string, typeof guides>();
+
+for (const g of guides) {
+  const cat = g.data.category?.trim() || 'General';
+  if (!byCategory.has(cat)) byCategory.set(cat, []);
+  byCategory.get(cat)!.push(g);
+}
+
+// 3) Nice display order (put your most important first)
+// Anything not listed falls under "Other" order at the end.
+const preferredOrder = [
+  'Emergencies',
+  'Infectious Diseases',
+  'Vaccination',
+  'Heart & Circulation',
+  'Women’s Health',
+  'Diabetes',
+  'Cancer',
+  'Neurology',
+  'Mental Health',
+  'General Health',
+  'End of Life', // ← new
+];
+
+const categories = Array.from(byCategory.keys()).sort((a, b) => {
+  const ia = preferredOrder.indexOf(a);
+  const ib = preferredOrder.indexOf(b);
+  if (ia === -1 && ib === -1) return a.localeCompare(b);
+  if (ia === -1) return 1;
+  if (ib === -1) return -1;
+  return ia - ib;
+});
+
+// 4) Optional: descriptions for known categories
+const catDesc: Record<string, string> = {
+  'Emergencies': 'What to do in urgent situations.',
+  'Infectious Diseases': 'Prevention, treatment, and key facts.',
+  'Vaccination': 'Vaccines, schedules, and safety.',
+  'Heart & Circulation': 'Cardiac health and risk management.',
+  'Women’s Health': 'Conditions, prevention, and care options.',
+  'Diabetes': 'Type 1, Type 2, and management strategies.',
+  'Cancer': 'Screening, treatment, and support resources.',
+  'Neurology': 'Brain and nervous system conditions.',
+  'General Health': 'Lifestyle, prevention, and wellness.',
+  'Mental Health': 'Emotional well-being, psychology, and psychiatry.',
+  'End of Life': 'Voluntary assisted dying, palliation, choices.', // ← new
+};
 ---
 
-<Layout title="Guides" description="Browse health guides by category">
-  <section class="prose max-w-3xl mx-auto py-8">
-    <h1>Guides</h1>
-    <p>Explore our library of health guides, organized by category. Click a topic below to browse detailed guides.</p>
+<h1>Guides</h1>
+<p>Explore our library of health guides, organized by category. Click a topic to browse detailed guides.</p>
 
-    <ul class="list-disc list-inside mt-6 space-y-2">
-      <li><a href="/guides/emergencies/">Emergencies</a> — What to do in urgent situations.</li>
-      <li><a href="/guides/infectious-diseases/">Infectious Diseases</a> — Prevention, treatment, and key facts.</li>
-      <li><a href="/guides/vaccination/">Vaccination</a> — Vaccines, schedules, and safety.</li>
-      <li><a href="/guides/heart-circulation/">Heart &amp; Circulation</a> — Cardiac health and risk management.</li>
-      <li><a href="/guides/womens-health/">Women’s Health</a> — Conditions, prevention, and care options.</li>
-      <li><a href="/guides/diabetes/">Diabetes</a> — Type 1, Type 2, and management strategies.</li>
-      <li><a href="/guides/cancer/">Cancer</a> — Screening, treatment, and support resources.</li>
-      <li><a href="/guides/neurology/">Neurology</a> — Brain and nervous system conditions.</li>
-      <li><a href="/guides/general-health/">General Health</a> — Lifestyle, prevention, and wellness.</li>
-      <li><a href="/guides/mental-health/">Mental Health</a> — Emotional well-being, psychology, and psychiatry.</li>
-    </ul>
-  </section>
-</Layout>
+<ul class="grid">
+  {categories.map((cat) => {
+    const list = byCategory.get(cat)!;
+    const count = list.length;
+    return (
+      <li class="card">
+        <h3><a href={`/guides/?category=${encodeURIComponent(cat)}`}>{cat}</a></h3>
+        <p>{catDesc[cat] ?? 'Browse guides in this topic.'}</p>
+        <small>{count} guide{count === 1 ? '' : 's'}</small>
+        <ul class="mini">
+          {list
+            .slice() // copy
+            .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+            .slice(0, 5) // show top 5 recent titles per category (tweak/remove as you like)
+            .map(({ data }) => (
+              <li><a href={`/guides/${data.slug}/`}>{data.title}</a></li>
+            ))}
+        </ul>
+      </li>
+    );
+  })}
+</ul>
+
+<style>
+  .grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card { padding:1rem; border:1px solid var(--astro-border, #e5e7eb); border-radius:12px; }
+  .mini { margin-top:.5rem; padding-left:1rem; }
+  .mini li { list-style: disc; }
+</style>
+
 
 
 

@@ -2,7 +2,7 @@
 title: "How E. coli Responds to Chemical Cues"
 slug: "ecoli-chemical-cues"
 description: "Overview of how Escherichia coli regulates transport of antibiotics and other chemicals through porins and efflux pumps."
-category: "Infectious Disease"
+category: "Infectious Diseases"
 publishDate: "2025-08-25"
 updatedDate: "2025-08-25"
 tags: ["microbiology", "antibiotic resistance", "E. coli", "research"]

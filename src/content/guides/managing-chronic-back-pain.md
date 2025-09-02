@@ -1,7 +1,7 @@
 ---
 title: "Managing Chronic Back Pain"
 description: "Causes, red flags, evidence-based self-care, treatments, and when to seek specialist help."
-category: "Muscle & Joints"
+category: "General Health"
 publishDate: "2025-08-30"
 draft: false
 tags: ["back pain", "low back pain", "sciatica", "pain", "rehab", "patientguide"]

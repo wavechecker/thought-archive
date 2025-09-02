@@ -2,7 +2,7 @@
 title: "Sunscreen and Skin Protection — Benefits, Risks, and Myths"
 slug: "sunscreen-skin-protection"
 description: "How sunscreen works, why it matters, the truth about micro- and nanoparticles, and how to choose safe and effective products."
-category: "Preventive Health"
+category: "General Health"
 publishDate: "2025-08-29"
 updatedDate: "2025-08-29"
 draft: false

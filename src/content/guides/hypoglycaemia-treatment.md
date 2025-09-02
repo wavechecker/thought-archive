@@ -1,4 +1,5 @@
 ---
+category: "Diabetes"
 title: "Hypoglycaemia — Fast Treatment Guide"
 slug: "hypoglycaemia-treatment"
 description: "How to recognize, treat, and prevent low blood glucose episodes (hypos)."
@@ -8,6 +9,7 @@ tags: ["Type 1 Diabetes", "hypoglycaemia", "blood glucose", "patientguide"]
 related:
   - /guides/emergency-actions
   - /guides/blood-glucose-testing
+---
 ---
 
 # Hypoglycaemia — Fast Treatment Guide

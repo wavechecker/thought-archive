@@ -1,4 +1,5 @@
 ---
+category: "Heart & Circulation"
 title: "Early Warning Signs of a Heart Attack"
 slug: "early-warning-signs-of-a-heart-attack"
 description: "Subtle symptoms that can appear hours or days before a heart attack, and what to do."
@@ -8,6 +9,7 @@ draft: false
 tags: ["heart", "cardiac", "emergency", "patientguide"]
 related:
   - /guides/when-to-seek-emergency-help-for-chest-pain
+---
 ---
 
 

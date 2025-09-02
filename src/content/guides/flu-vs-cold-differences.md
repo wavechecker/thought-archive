@@ -1,7 +1,7 @@
 ---
 title: "Flu vs. Cold — Key Differences & What to Do"
 description: "How to tell influenza from a common cold, what symptoms to watch for, when to test, and when to seek care."
-category: "Infectious Disease"
+category: "Infectious Diseases"
 publishDate: "2025-08-30"
 draft: false
 tags: ["flu", "influenza", "cold", "upper respiratory infection", "fever", "patientguide"]

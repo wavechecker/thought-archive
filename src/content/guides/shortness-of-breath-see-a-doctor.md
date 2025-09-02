@@ -1,4 +1,5 @@
 ---
+category: "Emergencies"
 title: "5 Signs You Should See a Doctor About Shortness of Breath"
 slug: "shortness-of-breath-see-a-doctor"
 description: "Red flags for breathlessness that warrant medical review, and when to seek urgent care."
@@ -9,6 +10,7 @@ tags: ["respiratory", "shortness of breath", "patientguide"]
 related:
   - /guides/when-to-seek-emergency-help-for-chest-pain
   - /guides/early-warning-signs-of-a-heart-attack
+---
 ---
 
 

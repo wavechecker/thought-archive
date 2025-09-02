@@ -1,4 +1,5 @@
 ---
+category: "Diabetes"
 title: "Exercise and Type 1 Diabetes"
 slug: "exercise-and-type1"
 description: "How activity affects blood glucose, tips for safe workouts, and managing hypos during exercise."
@@ -9,6 +10,7 @@ related:
   - /guides/blood-glucose-testing
   - /guides/hypoglycaemia-treatment
   - /guides/insulin-administration
+---
 ---
 
 # Exercise and Type 1 Diabetes

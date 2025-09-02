@@ -2,7 +2,7 @@
 title: "Evidence-First COVID Vaccine Policy"
 slug: "evidence-first-covid-vaccine-policy"
 description: "A framework for evaluating COVID-19 vaccine policy based on absolute risk, safety signals, and transparent choice."
-category: "Infectious Disease"
+category: "Infectious Diseases"
 publishDate: "2025-08-27"
 tags: ["covid-19", "vaccination", "policy", "risk-benefit"]
 hubKey: "Vaccination"

@@ -1,7 +1,7 @@
 ---
 title: "Rabies — Travel Risks & What To Do After a Bite"
 description: "Where rabies risk is highest, how to prevent exposure, and urgent steps after animal bites or scratches (PEP timelines)."
-category: "Infectious Disease"
+category: "Infectious Diseases"
 publishDate: "2025-08-30"
 draft: false
 tags: ["rabies", "travel", "post-exposure prophylaxis", "PEP", "vaccine", "bites", "bats", "patientguide"]

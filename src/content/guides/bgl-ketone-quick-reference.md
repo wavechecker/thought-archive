@@ -2,7 +2,7 @@
 title: "BGL & Ketones — Quick Reference Chart"
 slug: "bgl-ketone-quick-reference"
 description: "At-a-glance chart for safe and unsafe blood glucose and ketone levels in Type 1 Diabetes."
-category: "Type 1 Diabetes"
+category: "Diabetes"
 publishDate: "2025-08-22"
 updatedDate: "2025-08-22"
 tags: ["Type 1 Diabetes", "blood glucose", "ketones", "quick reference", "patientguide"]

@@ -2,7 +2,7 @@
 title: "Preventive Health — Guide Hub"
 slug: "preventive-health"
 description: "Guides on staying healthy through prevention: screening, lifestyle, vaccination, and sun safety."
-category: "Preventive Health"
+category: "General Health"
 publishDate: "2025-08-29"
 updatedDate: "2025-08-29"
 hubKey: "Preventive Health"

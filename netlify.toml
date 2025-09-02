@@ -12,3 +12,11 @@
   to = "/404.html"
   status = 410
   force = true
+
+# ==== BEGIN_MAINTENANCE (leave commented by default) ====
+# [[redirects]]
+#   from = "/*"
+#   to = "/maintenance.html"
+#   status = 200
+#   force = true
+# ==== END_MAINTENANCE ====

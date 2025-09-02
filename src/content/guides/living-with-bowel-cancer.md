@@ -1,4 +1,5 @@
 ---
+category: "Cancer"
 title: "Living With Bowel Cancer"
 slug: "living-with-bowel-cancer"
 description: "Practical guidance on recovery, lifestyle adjustments, stoma care, and emotional support after a bowel cancer diagnosis."
@@ -9,11 +10,13 @@ related:
   - /guides/bowel-cancer-treatment
   - /guides/bowel-cancer-screening
 ---
+---
 
 # Living With Bowel Cancer — Side Effects, Diet, and Emotional Support
 
 A bowel cancer diagnosis changes life in many ways. Treatment can be demanding, recovery takes time, and the emotional impact is often just as significant as the physical. Yet with the right support, many people continue to live full and meaningful lives during and after treatment.
 
+---
 ---
 
 ## At a Glance — Living With Bowel Cancer
@@ -45,6 +48,7 @@ A bowel cancer diagnosis changes life in many ways. Treatment can be demanding, 
 > **Takeaway:** Recovery is not just medical — it's physical, emotional, and social. Support is available every step of the way.
 
 ---
+---
 
 ## Managing Side Effects
 Different treatments bring different challenges:  
@@ -56,6 +60,7 @@ Different treatments bring different challenges:
 💡 **Tip**: Keep a diary of your symptoms — it helps your care team adjust medications, diet, or timing to reduce side effects.  
 
 ---
+---
 
 ## Nutrition and Diet
 - **After surgery**: A low-fibre diet may be recommended initially, before gradually reintroducing fibre.  
@@ -63,6 +68,7 @@ Different treatments bring different challenges:
 - **Hydration**: Staying well-hydrated helps digestion and energy levels.  
 - **Specialist advice**: A dietitian can provide tailored guidance, especially if you have a stoma or ongoing digestive changes.  
 
+---
 ---
 
 ## Emotional and Mental Health
@@ -72,6 +78,7 @@ Different treatments bring different challenges:
 - **Mind-body strategies**: Gentle exercise, mindfulness, or relaxation techniques may help manage stress.  
 
 ---
+---
 
 ## Stoma Care and Adjustment
 For some, surgery leads to a **stoma** (an opening in the abdomen for waste).  
@@ -79,6 +86,7 @@ For some, surgery leads to a **stoma** (an opening in the abdomen for waste).
 - Many people return to work, sports, and travel with a stoma.  
 - Appliances and supplies are widely available and discreet.  
 
+---
 ---
 
 ## Follow-Up and Surveillance
@@ -88,6 +96,7 @@ After treatment, regular check-ups are essential:
 - Early detection of recurrence improves outcomes.  
 
 ---
+---
 
 ## Relationships and Work
 - Open conversations with family and friends make adjustment easier.  
@@ -95,12 +104,14 @@ After treatment, regular check-ups are essential:
 - Employers are often required to provide reasonable adjustments during recovery.  
 
 ---
+---
 
 ## Takeaway
 Living with bowel cancer involves more than medical treatment — it's about adapting physically, emotionally, and socially. Support is available at every stage: from your healthcare team, from dietitians and stoma nurses, and from peers who've walked the same path.  
 
 You are not alone in this journey.  
 
+---
 ---
 
 ## Related Guides

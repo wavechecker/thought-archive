@@ -1,8 +1,8 @@
 ---
 title: "China Races Towards Artificial Wombs"
 description: "A look at China's advances in artificial womb technology, its ethical dilemmas, and the global race for control of reproduction."
-publishDate: 2025-08-18T12:00:00.000Z
-updatedDate: 2025-08-18T12:00:00.000Z
+publishDate: "2025-08-18T12:00:00.000Z"
+updatedDate: "2025-08-18T12:00:00.000Z"
 tags: ["bioethics", "technology", "china", "artificial wombs"]
 ---
 

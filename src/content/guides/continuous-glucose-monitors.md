@@ -1,4 +1,5 @@
 ---
+category: "Diabetes"
 title: "Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing"
 slug: "continuous-glucose-monitors"
 description: "How CGMs work, their benefits and limits, and when to confirm with a finger‑prick test."
@@ -9,6 +10,7 @@ related:
   - /guides/blood-glucose-testing
   - /guides/emergency-actions
   - /guides/insulin-administration
+---
 ---
 
 # Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing

@@ -2,7 +2,7 @@
 title: "Sexual Health — Guide Hub"
 slug: "sexual-health"
 description: "Guides on sexual health, contraception, STI prevention, and safe practices."
-category: "Sexual Health"
+category: "General Health"
 publishDate: "2025-08-29"
 updatedDate: "2025-08-29"
 hubKey: "Sexual Health"
