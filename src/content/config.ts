@@ -19,6 +19,7 @@ const CATEGORY = z.enum([
   "Mental Health",
   "General Health",
   "End of Life",   // ← NEW for VAD content
+  "Child & Adolescent Health",
   "Guide Hubs",    // ← if you publish hub cards as guides
 ]);
 
