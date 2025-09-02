@@ -3,9 +3,11 @@ title: "Vaccination Overview"
 slug: "vaccination-overview"
 description: "Hub for vaccination-related guides."
 category: "Guide Hubs"
+publishDate: "2025-08-22"
 draft: false
 hubKey: "Vaccination"   # optional, but recommended for counts
 ---
+
 
 
 # Vaccination Overview
