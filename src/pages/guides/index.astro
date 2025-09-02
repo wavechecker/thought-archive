@@ -72,7 +72,7 @@ const catDesc: Record<string, string> = {
             .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
             .slice(0, 5) // show top 5 recent titles per category (tweak/remove as you like)
             .map(({ data }) => (
-              <li><a href={`/guides/${data.slug}/`}>{data.title}</a></li>
+              <li><a href={`/guides/${data.slug}`}>{data.title}</a></li>
             ))}
         </ul>
       </li>

@@ -32,7 +32,7 @@ const frontmatter = {
     ) : (
       <ul class="divide-y divide-gray-200 bg-white rounded-2xl shadow">
         {posts.map((p) => {
-          const href = `/posts/${p.slug}/`;
+          const href = `/posts/${p.slug}`;
           const title = p.data?.title ?? "(Untitled)";
           const desc = p.data?.description ?? "";
           const rawDate = p.data?.updatedDate ?? p.data?.publishDate;

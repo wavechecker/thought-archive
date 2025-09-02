@@ -38,7 +38,7 @@ const pageDesc = `Browse guides in ${PAGE_TITLE}.`;
       <ul class="list-disc list-inside mt-6 space-y-2">
         {guides.map((g) => (
           <li>
-            <a href={`/guides/${g.slug}/`}>{g.data?.title ?? "(Untitled)"}</a>
+            <a href={`/guides/${g.slug}`}>{g.data?.title ?? "(Untitled)"}</a>
             {g.data?.description && <small> — {g.data.description}</small>}
           </li>
         ))}
