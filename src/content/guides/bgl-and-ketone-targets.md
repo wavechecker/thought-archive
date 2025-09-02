@@ -1,9 +1,11 @@
 ---
+category: "Diabetes"
 title: "Blood Glucose and Ketones — What's Normal, What's Not"
 slug: "bgl-and-ketone-targets"
 description: "Clear guide to safe blood glucose and ketone ranges in Type 1 Diabetes, and when to take urgent action."
 publishDate: "2025-08-22"
 updatedDate: "2025-08-22"
+category: "Diabetes"
 tags: ["Type 1 Diabetes", "blood glucose", "ketones", "targets", "patientguide"]
 related:
   - /guides/bgl-ketone-quick-reference
@@ -11,12 +13,14 @@ related:
   - /guides/emergency-actions
   - /guides/sick-day-management
 ---
+---
 
 # Blood Glucose and Ketones — What's Normal, What's Not
 
 👉 Looking for the simple chart?  
 See [BGL & Ketones — Quick Reference](/guides/bgl-ketone-quick-reference).
 
+---
 ---
 
 Understanding **target ranges** for blood glucose and ketones helps you know when things are on track — and when urgent action is needed.
@@ -35,6 +39,7 @@ Typical goals for adults with Type 1 Diabetes (your individual plan may differ):
 - **Persistent highs despite correction:** contact your diabetes team.
 
 ---
+---
 
 ## Ketone Levels
 
@@ -46,6 +51,7 @@ Ketones indicate how much the body is breaking down fat for fuel. In Type 1 Diab
 - **≥ 3.0 mmol/L:** High risk of DKA — seek urgent medical help  
 
 ---
+---
 
 ## Red Flags (Seek Help Immediately)
 - Ketones ≥ 3.0 mmol/L  
@@ -54,6 +60,7 @@ Ketones indicate how much the body is breaking down fat for fuel. In Type 1 Diab
 - Persistent BGL > 14 mmol/L despite correction insulin  
 
 ---
+---
 
 ## Related Guides
 - [BGL & Ketones — Quick Reference](/guides/bgl-ketone-quick-reference)  
@@ -61,6 +68,7 @@ Ketones indicate how much the body is breaking down fat for fuel. In Type 1 Diab
 - [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions)  
 - [Sick-Day Management for Type 1 Diabetes](/guides/sick-day-management)  
 
+---
 ---
 
 > **Note:** These ranges are general guidance. Always follow your own diabetes care plan and consult your healthcare team.
