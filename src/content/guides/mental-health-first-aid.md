@@ -74,6 +74,18 @@ Always take suicidal thoughts or severe distress seriously. Stay with the person
 
 ---
 
+## Get Help Now
+If you or someone you know is in immediate crisis, help is available:
+
+- **United States:** Call or text **988** for the Suicide & Crisis Lifeline.  
+- **United Kingdom:** Call **116 123** for Samaritans.  
+- **Australia:** Call **13 11 14** for Lifeline.  
+- **Canada:** Call or text **988** for Suicide Crisis Helpline.  
+
+If you are outside these regions, please check local emergency numbers or hotlines in your country. You are not alone, and support is available.
+
+---
+
 ## References
 - [Mental Health First Aid Australia](https://mhfa.com.au) — official MHFA program and training resources  
 - [Mental Health First Aid International](https://mhfainternational.org) — global network of MHFA programs  
