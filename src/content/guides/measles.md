@@ -3,7 +3,7 @@ title: "Understanding Measles: Risks, Prevention, and Outbreaks"
 slug: "measles"
 description: "Measles is one of the most contagious viruses known. Vaccination prevents outbreaks and protects communities."
 category: "Infectious Diseases"
-publishDate: 2025-09-04
+publishDate: "publishDate: 2025-09-04"
 tags: ["measles", "MMR vaccine", "outbreaks", "public health"]
 draft: false
 ---

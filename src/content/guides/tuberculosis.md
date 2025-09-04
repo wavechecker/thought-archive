@@ -3,7 +3,7 @@ title: "Tuberculosis (TB): Causes, Symptoms, and Treatment"
 slug: "tuberculosis"
 description: "Tuberculosis is a serious bacterial infection that primarily affects the lungs. Learn about transmission, symptoms, diagnosis, prevention, and treatment."
 category: "Infectious Diseases"
-publishDate: 2025-09-04
+publishDate: "publishDate: 2025-09-04"
 tags: ["tuberculosis", "TB", "infection", "antibiotics", "public health"]
 draft: false
 ---

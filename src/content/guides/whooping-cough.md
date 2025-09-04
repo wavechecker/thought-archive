@@ -3,7 +3,7 @@ title: "Whooping Cough (Pertussis): Why Vaccination Still Matters"
 slug: "whooping-cough"
 description: "Pertussis is a highly contagious respiratory infection. Vaccination remains the best protection for children and communities."
 category: "Infectious Diseases"
-publishDate: 2025-09-04
+publishDate: "publishDate: 2025-09-04"
 tags: ["whooping cough", "pertussis", "vaccines", "public health"]
 draft: false
 ---

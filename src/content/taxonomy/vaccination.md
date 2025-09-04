@@ -3,7 +3,7 @@ title: "Vaccination Taxonomy"
 slug: "vaccination-taxonomy"
 description: "Guide structure for vaccination-related content."
 category: "Meta"
-publishDate: 2025-08-26
+publishDate: "publishDate: 2025-08-26"
 draft: true
 ---
 

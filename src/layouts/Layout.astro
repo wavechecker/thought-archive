@@ -6,7 +6,12 @@ const {
   title = "Thought Archive",
   description = "",
   image = "/og-default.png",
+  canonical, // optional in frontmatter
 } = frontmatter;
+
+// Build canonical URL: prefer frontmatter, else fallback to self
+const selfUrl = new URL(Astro.url).href;
+const canonicalUrl = canonical ?? selfUrl;
 ---
 
 <!DOCTYPE html>
@@ -16,10 +21,17 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
-    <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={image} />
+
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body class="min-h-screen bg-white text-slate-900 antialiased">
@@ -40,4 +52,3 @@ const {
     </footer>
   </body>
 </html>
-

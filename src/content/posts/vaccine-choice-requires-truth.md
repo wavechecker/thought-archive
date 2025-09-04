@@ -3,7 +3,7 @@ title: "Choice Requires Truth: Vaccines and the Danger of False Debate"
 slug: "vaccine-choice-requires-truth"
 description: "Debating mRNA vaccines is valid, but dismantling proven childhood protections against measles, polio, and whooping cough is reckless."
 category: "Posts"
-publishDate: 2025-09-04
+publishDate: "publishDate: 2025-09-04"
 tags: ["vaccines", "public health", "opinion", "Florida"]
 draft: false
 canonical: "https://patientguide.io/posts/vaccine-choice-requires-truth"

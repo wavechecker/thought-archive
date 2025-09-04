@@ -1,22 +1,33 @@
 ---
 const url = new URL(Astro.url);
 const fm = Astro.props.frontmatter ?? {};
+
+// Canonical: use frontmatter if provided, else self URL
+const canonicalUrl = fm.canonical ?? url.href;
+
+// Site origin for absolute assets
+const siteOrigin = "https://patientguide.io";
+
+// OG/Twitter image (absolute)
+const ogImage = fm.image ?? "/og-default.png";
+const ogImageAbs = ogImage.startsWith("http") ? ogImage : `${siteOrigin}${ogImage}`;
+
+const title = fm.title ?? "Untitled";
+const description = fm.description ?? "";
+
+// Structured data: Article
 const jsonLdObj = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": fm.title ?? "Untitled",
-  "description": fm.description ?? undefined,
+  "headline": title,
+  "description": description || undefined,
   "datePublished": fm.publishDate ?? undefined,
   "dateModified": fm.updatedDate ?? fm.publishDate ?? undefined,
   "author": { "@type": "Organization", "name": "Thought Archive" },
-  "mainEntityOfPage": url.href
+  "mainEntityOfPage": canonicalUrl,
+  "image": ogImageAbs
 };
 const jsonLd = JSON.stringify(jsonLdObj);
-
-// OG + Twitter setup
-const ogImage = fm.image ?? "/og-default.png"; // use local path for <img>, full URL is resolved in meta
-const title = fm.title ?? "Untitled";
-const description = fm.description ?? "";
 ---
 
 <html lang="en">
@@ -25,31 +36,36 @@ const description = fm.description ?? "";
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Structured data -->
     <script type="application/ld+json">{jsonLd}</script>
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={url.href} />
-    <meta property="og:image" content={`https://patientguide.io${ogImage}`} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageAbs} />
     <meta property="og:site_name" content="PatientGuide.io" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`https://patientguide.io${ogImage}`} />
+    <meta name="twitter:image" content={ogImageAbs} />
   </head>
 
   <body>
     <main class="prose max-w-3xl mx-auto px-4 py-8">
-      <h1>{fm?.title ?? "Untitled"}</h1>
+      <h1>{title}</h1>
 
-      <!-- Hero image -->
+      <!-- Optional hero image -->
       <img
         src={ogImage}
-        alt={fm.title ?? "Hero image"}
+        alt={title}
         style="width:100%; height:auto; aspect-ratio:1200/630; object-fit:cover; border-radius:12px; margin-top:1rem;"
       />
 

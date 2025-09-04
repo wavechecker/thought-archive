@@ -3,7 +3,7 @@ title: "Hepatitis B: Risks, Prevention, and Treatment"
 slug: "hepatitis-b"
 description: "Hepatitis B is a viral infection that attacks the liver and can cause chronic disease, cirrhosis, or liver cancer. Vaccination is the best prevention."
 category: "Infectious Diseases"
-publishDate: 2025-09-04
+publishDate: "publishDate: 2025-09-04"
 tags: ["hepatitis B", "liver disease", "vaccination", "public health"]
 draft: false
 ---
