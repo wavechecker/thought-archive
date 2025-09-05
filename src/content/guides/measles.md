@@ -1,71 +1,74 @@
 ---
-title: "Understanding Measles: Risks, Prevention, and Outbreaks"
+title: "Measles and the Measles Vaccine"
 slug: "measles"
-description: "Measles is one of the most contagious viruses known. Vaccination prevents outbreaks and protects communities."
-category: "Infectious Diseases"
-publishDate: "publishDate: 2025-09-04"
-tags: ["measles", "MMR vaccine", "outbreaks", "public health"]
+description: "Measles is one of the most contagious viruses known. The measles vaccine is safe, effective, and critical for global public health."
+category: "Vaccination"
+publishDate: "2025-09-05"
+tags: ["measles", "MMR", "vaccination", "public health"]
 draft: false
 ---
 
-## Overview
-Measles is a highly contagious viral infection caused by the measles virus, a member of the paramyxovirus family. It spreads through respiratory droplets when an infected person coughs, sneezes, or even breathes. The virus can linger in the air or on surfaces for up to two hours.  
+# Measles and the Measles Vaccine
 
-Before widespread vaccination, measles infected millions of children each year and caused hundreds of thousands of deaths globally. Thanks to immunization campaigns, measles was declared eliminated in the United States in 2000. However, declining vaccination rates have allowed outbreaks to re-emerge.
+## Intro
+Measles is a highly contagious viral disease that can cause severe complications, including pneumonia, encephalitis, deafness, and death.  
+The measles vaccine — usually given as the combined MMR (measles, mumps, rubella) or MMRV (with varicella) — is one of the safest and most effective vaccines ever developed.  
+
+Thanks to immunisation, measles deaths have fallen dramatically, but outbreaks are returning wherever coverage drops.
 
 ## Key Points
-- Measles is **one of the most contagious diseases** known; a single case can infect 90% of nearby unvaccinated people.  
-- About **95% vaccination coverage** is needed for herd immunity.  
-- The **MMR vaccine** (measles, mumps, rubella) is safe and highly effective.  
-- Outbreaks occur quickly when vaccination coverage falls below the herd immunity threshold.  
-- Complications can include pneumonia, encephalitis (brain swelling), deafness, and death.  
+- **Contagious:** Up to 90% of unvaccinated contacts will catch measles after exposure.  
+- **Herd immunity:** ~95% coverage needed to stop outbreaks.  
+- **Vaccine effectiveness:** ~97% after two doses.  
+- **Impact:** Prevented an estimated 23 million deaths between 2000 and 2018.  
+- **Safety:** Decades of surveillance confirm safety; no link to autism.  
 
-## Symptoms
-Measles symptoms typically appear 7–14 days after exposure:  
-- High fever (often > 40°C / 104°F)  
-- Cough, runny nose, red watery eyes  
-- **Koplik spots**: tiny white spots inside the mouth, unique to measles  
-- Rash: starts on the face/hairline and spreads downward to the trunk and limbs  
+## The Disease
+- **Transmission:** Spread via coughing, sneezing, or breathing; virus can linger in the air up to 2 hours.  
+- **Symptoms:** High fever, cough, runny nose, red eyes, Koplik spots, and a spreading rash.  
+- **Complications:** Pneumonia (most common cause of death), encephalitis (~1 in 1,000), SSPE (rare, fatal brain disorder years later).  
+- **At risk:** Infants, pregnant women, and the immunocompromised.  
 
-The illness lasts about 7–10 days. Patients are contagious from 4 days before the rash until 4 days after it appears.
+## The Vaccine
+- **History:** First licensed in 1963, improved versions soon followed.  
+- **Formulations:** MMR or MMRV.  
+- **Effectiveness:** One dose ~93%, two doses ~97%.  
+- **Safety:** Common side effects are mild (fever, rash). Rare side effects include febrile seizures; serious reactions are extremely rare.  
+- **Myths:** The 1998 autism claim was fraudulent and has been thoroughly debunked.  
 
-## Complications
-While measles is sometimes dismissed as a “childhood rash,” it can be deadly:  
-- **Pneumonia**: most common cause of measles-related death in children.  
-- **Encephalitis**: occurs in ~1 in 1,000 cases; can cause permanent brain damage.  
-- **Death**: 1–2 per 1,000 cases in high-income countries; higher in low-resource settings.  
-- **Subacute Sclerosing Panencephalitis (SSPE)**: a rare, fatal brain disorder developing years after infection.  
-
-Infants, pregnant women, and immunocompromised individuals face the greatest risk.
-
-## Prevention
-- **MMR vaccine**:  
-  - First dose at 12–15 months.  
-  - Second dose at 4–6 years.  
-  - Two doses provide ~97% protection; one dose provides ~93%.  
-- **Catch-up vaccination**: older children and adults without documented immunity should receive the MMR vaccine.  
-- **Herd immunity**: sustained coverage above 95% is critical to prevent outbreaks.  
+## Global Recommendations
+- **WHO:** Two doses for all children, first at 9–12 months, second at 15–18 months.  
+- **CDC (US):** First dose 12–15 months, second at 4–6 years.  
+- **ATAGI (Australia):** 12 months (MMR), 18 months (MMRV). Catch-up for unvaccinated adults.  
 
 ## Recent Outbreaks
-- In recent years, measles has resurged in parts of the U.S., Europe, and globally due to vaccine hesitancy and disruptions in healthcare access.  
-- In 2025, Texas reported a large outbreak that spread to neighboring states, showing how quickly measles can return when vaccination coverage dips.  
-- International travel plays a major role: imported cases spark outbreaks in undervaccinated communities.  
+- 2025: Texas outbreak spread to nearby states after local vaccination rates dipped.  
+- Europe and Asia continue to see resurgences linked to vaccine hesitancy and healthcare disruptions.  
+- International travel remains a key driver of imported cases.  
+
+## Risks / Benefits
+- **Benefits:** Prevents a disease with a case fatality rate of ~1–3 per 1,000 in high-income countries (higher in low-resource settings). Protects against severe complications and death.  
+- **Risks:** Very small; overwhelmingly outweighed by benefits.  
 
 ## FAQ
-**Q: Is measles just a childhood illness?**  
-A: No. It can cause severe disease and death in both children and adults.  
+**Q: Is measles just a childhood rash?**  
+A: No. It can cause life-threatening illness and long-term complications.  
 
-**Q: Can adults catch measles?**  
-A: Yes. Adults without immunity (from vaccination or prior infection) remain at risk.  
+**Q: Can adults get measles?**  
+A: Yes. Adults without immunity remain at risk. Vaccination is recommended.  
 
-**Q: Is the MMR vaccine safe?**  
-A: Yes. Decades of research confirm its safety. Side effects are usually mild, such as fever or rash. Serious side effects are extremely rare.  
+**Q: How many doses are needed for lifelong protection?**  
+A: Two doses usually provide lifelong immunity.  
 
-**Q: Why are measles outbreaks happening again?**  
-A: Declines in vaccination coverage, fueled by misinformation and complacency, undermine herd immunity.  
+**Q: Why do outbreaks still occur?**  
+A: Measles is so contagious that even small drops in coverage allow outbreaks.  
 
----
-
-**Further Reading**  
-- [CDC: Measles Information](https://www.cdc.gov/measles/)  
+## Further Reading
+- [CDC: Measles](https://www.cdc.gov/measles/)  
 - [WHO: Measles Fact Sheet](https://www.who.int/news-room/fact-sheets/detail/measles)  
+- [PubMed: Measles vaccine effectiveness](https://pubmed.ncbi.nlm.nih.gov/?term=measles+vaccine+effectiveness)  
+
+## Related Guides
+- [How Vaccines Work](/guides/how-vaccines-work)  
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)  
+- [Vaccines and Autism](/guides/vaccines-and-autism)  
