@@ -1,3 +1,60 @@
+# patientguide.io — robots.txt
+# Strategy: Allow search engines + reputable AI assistants;
+# Block bulk scrapers and pure training crawlers.
+
+# --- Search engines (allowed) ---
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+# Apple uses Applebot for search previews (allowed) and Applebot-Extended for AI training (blocked below). :contentReference[oaicite:0]{index=0}
+User-agent: Applebot
+Disallow:
+
+# --- AI assistants (allowed for visibility) ---
+# OpenAI (ChatGPT Browse / GPTBot) — honors robots. :contentReference[oaicite:1]{index=1}
+User-agent: GPTBot
+Disallow:
+
+User-agent: ChatGPT-User
+Disallow:
+
+# Perplexity (allowed here for referrals), but see Cloudflare note below. :contentReference[oaicite:2]{index=2}
+User-agent: PerplexityBot
+Disallow:
+
+# Anthropic Claude web crawler (allowed here for visibility). :contentReference[oaicite:3]{index=3}
+User-agent: ClaudeBot
+Disallow:
+
+# --- Block bulk/training scrapers (little/no traffic back) ---
+# Common Crawl / CCBot — widely reused for model training. :contentReference[oaicite:4]{index=4}
+User-agent: CCBot
+Disallow: /
+
+User-agent: CommonCrawl
+Disallow: /
+
+# Block SEO scrapers that don’t send users
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Opt out of Apple AI training, while keeping Applebot search allowed. :contentReference[oaicite:5]{index=5}
+User-agent: Applebot-Extended
+Disallow: /
+
+# Meta’s AI training crawler (optional block). :contentReference[oaicite:6]{index=6}
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# --- Default ---
 User-agent: *
-Allow: /
+Disallow:
+
+# --- Sitemap(s) ---
 Sitemap: https://patientguide.io/sitemap-index.xml
