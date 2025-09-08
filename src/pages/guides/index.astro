@@ -1,58 +1,45 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
+import { fmt, isValidDate } from "@/lib/date.ts";
+import {
+  slugifyCategory,
+  CATEGORY_ORDER,
+  CATEGORY_DESCRIPTIONS,
+} from "@/lib/slug.ts";
 
-// 1) Load all published guides
-const guides = await getCollection('guides', ({ data }) => data?.draft !== true);
+// Redirect legacy links like /guides/?category=Emergencies → /guides/category/emergencies
+const q = Astro.url.searchParams.get("category");
+if (q) {
+  return Astro.redirect(`/guides/category/${slugifyCategory(q)}`, 301);
+}
 
-// 2) Build a map: category -> array of guides
+// Load all published guides
+const guides = await getCollection("guides", ({ data }) => data?.draft !== true);
+
+// Build map: category -> guides
 const byCategory = new Map<string, typeof guides>();
 for (const e of guides) {
-  const cat = e.data.category?.trim() || 'General Health';
+  const cat = (e.data.category ?? "General Health").trim();
   if (!byCategory.has(cat)) byCategory.set(cat, []);
   byCategory.get(cat)!.push(e);
 }
 
-// 3) Preferred category order; any others sorted alphabetically after
-const preferredOrder = [
-  'Emergencies',
-  'Infectious Diseases',
-  'Vaccination',
-  'Heart & Circulation',
-  'Women’s Health',
-  'Diabetes',
-  'Cancer',
-  'Neurology',
-  'Mental Health',
-  'General Health',
-  'End of Life',
-  'Child & Adolescent Health',
-  'Guide Hubs',
-];
-
+// Order categories by preferred list, then alpha for any extras
 const categories = Array.from(byCategory.keys()).sort((a, b) => {
-  const ia = preferredOrder.indexOf(a);
-  const ib = preferredOrder.indexOf(b);
+  const ia = CATEGORY_ORDER.indexOf(a);
+  const ib = CATEGORY_ORDER.indexOf(b);
   if (ia === -1 && ib === -1) return a.localeCompare(b);
   if (ia === -1) return 1;
   if (ib === -1) return -1;
   return ia - ib;
 });
 
-// 4) Optional descriptions
-const catDesc: Record<string, string> = {
-  'Emergencies': 'What to do in urgent situations.',
-  'Infectious Diseases': 'Prevention, treatment, and key facts.',
-  'Vaccination': 'Vaccines, schedules, and safety.',
-  'Heart & Circulation': 'Cardiac health and risk management.',
-  'Women’s Health': 'Conditions, prevention, and care options.',
-  'Diabetes': 'Type 1, Type 2, and management strategies.',
-  'Cancer': 'Screening, treatment, and support resources.',
-  'Neurology': 'Brain and nervous system conditions.',
-  'General Health': 'Lifestyle, prevention, and wellness.',
-  'Mental Health': 'Emotional well-being, psychology, and psychiatry.',
-  'End of Life': 'Voluntary assisted dying, palliation, choices.',
-  'Child & Adolescent Health': 'Browse guides in this topic.',
-  'Guide Hubs': 'Browse topical hubs.',
+const MAX_VISIBLE = 5;
+
+// Optional overrides: point some categories to a hub page
+const overrides: Record<string, string> = {
+  // "Vaccination": "/guides/vaccination-guide-hub",
+  // "Emergencies": "/guides/emergencies-guide-hub",
 };
 ---
 
@@ -63,25 +50,59 @@ const catDesc: Record<string, string> = {
   {categories.map((cat) => {
     const list = byCategory.get(cat)!;
     const count = list.length;
+
+    const defaultHref = `/guides/category/${slugifyCategory(cat)}`;
+    const catHref = overrides[cat] ?? defaultHref;
+
+    const sorted = list
+      .slice()
+      .sort(
+        (a, b) =>
+          +new Date((b.data.updatedDate ?? b.data.publishDate) as any) -
+          +new Date((a.data.updatedDate ?? a.data.publishDate) as any)
+      );
+
+    const visible = sorted.slice(0, MAX_VISIBLE);
+    const hidden = sorted.slice(MAX_VISIBLE);
+
     return (
       <li class="card">
-        <h3><a href={`/guides/?category=${encodeURIComponent(cat)}`}>{cat}</a></h3>
-        <p>{catDesc[cat] ?? 'Browse guides in this topic.'}</p>
-        <small>{count} guide{count === 1 ? '' : 's'}</small>
+        <h3><a href={catHref}>{cat}</a></h3>
+        <p>{CATEGORY_DESCRIPTIONS[cat] ?? "Browse guides in this topic."}</p>
+        <small>{count} guide{count === 1 ? "" : "s"}</small>
+
         <ul class="mini">
-          {list
-            .slice()
-            .sort((a, b) =>
-              new Date(b.data.updatedDate ?? b.data.publishDate).getTime()
-              - new Date(a.data.updatedDate ?? a.data.publishDate).getTime()
-            )
-            .slice(0, 5)
-            .map((e) => {
-              const href = `/guides/${e.slug}`;      // ← use entry.slug
-              const title = e.data.title ?? '(Untitled)';
-              return <li><a href={href}>{title}</a></li>;
-            })}
+          {visible.map((e) => {
+            const href = `/guides/${e.slug}`;
+            const title = e.data.title ?? "(Untitled)";
+            const d = e.data.updatedDate ?? e.data.publishDate;
+            return (
+              <li>
+                <a href={href}>{title}</a>
+                {isValidDate(d) && <span class="date"> {fmt(d)}</span>}
+              </li>
+            );
+          })}
         </ul>
+
+        {hidden.length > 0 && (
+          <details class="more">
+            <summary>Show {hidden.length} more</summary>
+            <ul class="mini">
+              {hidden.map((e) => {
+                const href = `/guides/${e.slug}`;
+                const title = e.data.title ?? "(Untitled)";
+                const d = e.data.updatedDate ?? e.data.publishDate;
+                return (
+                  <li>
+                    <a href={href}>{title}</a>
+                    {isValidDate(d) && <span class="date"> {fmt(d)}</span>}
+                  </li>
+                );
+              })}
+            </ul>
+          </details>
+        )}
       </li>
     );
   })}
@@ -92,7 +113,11 @@ const catDesc: Record<string, string> = {
   .card { padding:1rem; border:1px solid var(--astro-border, #e5e7eb); border-radius:12px; }
   .mini { margin-top:.5rem; padding-left:1rem; }
   .mini li { list-style: disc; }
+  .date { color:#6b7280; font-size:.85em; margin-left:.35rem; }
+  details.more { margin-top:.5rem; }
+  details.more summary { cursor:pointer; text-decoration: underline; }
 </style>
+
 
 
 
