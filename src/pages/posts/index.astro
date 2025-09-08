@@ -1,54 +1,104 @@
 ---
-import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import { isValidDate, fmt } from "@/lib/date"; // ✅ date helpers
+import Layout from "@/layouts/Layout.astro";
+import { fmt, isValidDate } from "@/lib/date.ts";
 
-// Pull all posts (exclude drafts), newest first
-const posts = (await getCollection("posts"))
-  .filter((p) => p.data?.draft !== true)
-  .sort((a, b) => {
-    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
-    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
-    return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
-  });
+// Load all non-draft posts
+const posts = (await getCollection("posts", ({ data }) => data?.draft !== true))
+  .slice()
+  .sort((a, b) => +new Date(b.data.publishDate as any) - +new Date(a.data.publishDate as any));
 
-const frontmatter = {
-  title: "Posts — Patient Guide",
-  description: "Opinion & analysis — timely takes linked to our evergreen guides.",
-};
+// Group by category with fallback
+type GroupKey = "AI & Society" | "Health & Policy" | "Opinion" | "Uncategorized";
+const GROUPS: GroupKey[] = ["AI & Society", "Health & Policy", "Opinion", "Uncategorized"];
+
+const byGroup = new Map<GroupKey, typeof posts>();
+for (const p of posts) {
+  const key = (p.data.category as GroupKey) ?? "Uncategorized";
+  if (!byGroup.has(key)) byGroup.set(key, []);
+  byGroup.get(key)!.push(p);
+}
+
+// Optional: Jump directly to a group from query ?category=AI%20%26%20Society
+const q = Astro.url.searchParams.get("category");
+const jumpTo = q && GROUPS.includes(q as GroupKey) ? (q as GroupKey) : null;
+
+const title = "Posts";
+const description = "Opinion, analysis, and essays — grouped by category.";
 ---
 
-<Layout {frontmatter}>
-  <section class="py-10">
-    <h1 class="text-4xl font-bold mb-3">Posts</h1>
-    <p class="text-lg text-gray-700">
-      Opinion & analysis — timely takes that connect to our evergreen guides.
-    </p>
-  </section>
+<Layout frontmatter={{ title, description }}>
+  <article class="mx-auto max-w-3xl">
+    <header class="mb-6">
+      <h1 class="text-3xl/tight font-semibold tracking-tight">Posts</h1>
+      <p class="mt-2 text-slate-600">Opinion, analysis, and essays — grouped by category.</p>
 
-  <section class="mt-8">
-    {posts.length === 0 ? (
-      <p>No posts yet.</p>
-    ) : (
-      <ul class="divide-y divide-gray-200 bg-white rounded-2xl shadow">
-        {posts.map((p) => {
-          const href = `/posts/${p.slug}`;
-          const title = p.data?.title ?? "(Untitled)";
-          const desc = p.data?.description ?? "";
-          const rawDate = p.data?.updatedDate ?? p.data?.publishDate;
-          const date = isValidDate(rawDate) ? fmt(rawDate) : null;
-          return (
-            <li class="p-5">
-              <a href={href} class="text-lg font-medium hover:underline">{title}</a>
-              {date && (
-                <span class="ml-2 text-xs text-gray-500 align-middle">{date}</span>
-              )}
-              {desc && <p class="text-sm text-gray-600 mt-1">{desc}</p>}
-            </li>
-          );
-        })}
-      </ul>
-    )}
-  </section>
+      {GROUPS.filter((g) => (byGroup.get(g) ?? []).length > 0).length > 1 && (
+        <nav class="mt-4 flex flex-wrap gap-2 text-sm">
+          {GROUPS.map((g) =>
+            (byGroup.get(g) ?? []).length > 0 && (
+              <a href={`#${g.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} class="rounded-full bg-slate-100 px-3 py-1 hover:bg-slate-200">
+                {g}
+              </a>
+            )
+          )}
+        </nav>
+      )}
+    </header>
+
+    {GROUPS.map((group) => {
+      const list = byGroup.get(group) ?? [];
+      if (list.length === 0) return null;
+      const anchor = group.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+      return (
+        <section id={anchor} class="mb-10 scroll-mt-20">
+          <h2 class="text-xl font-semibold">{group}</h2>
+          <ul class="mt-3 space-y-3">
+            {list.map((p) => {
+              const href = `/posts/${p.slug}`;
+              const d = p.data.publishDate;
+              const tags = Array.isArray(p.data.tags) ? p.data.tags : [];
+              return (
+                <li class="border-b border-slate-200 pb-3">
+                  <a href={href} class="text-sky-600 hover:underline">
+                    {p.data.title ?? "(Untitled)"}
+                  </a>
+                  {isValidDate(d) && (
+                    <span class="ml-2 text-sm text-slate-500">{fmt(d)}</span>
+                  )}
+                  {tags.length > 0 && (
+                    <ul class="mt-1 flex flex-wrap gap-2">
+                      {tags.map((t: string) => (
+                        <li class="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-700">#{t}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {p.data.description && (
+                    <p class="mt-2 text-slate-600">{p.data.description}</p>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      );
+    })}
+  </article>
+
+  {jumpTo && (
+    <script is:inline>
+      // Jump to requested section after paint
+      const id = {JSON.stringify(jumpTo.toLowerCase().replace(/[^a-z0-9]+/g, "-"))};
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    </script>
+  )}
 </Layout>
+
+<style>
+  .scroll-mt-20 { scroll-margin-top: 5rem; }
+</style>
 
