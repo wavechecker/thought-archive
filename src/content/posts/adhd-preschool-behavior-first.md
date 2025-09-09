@@ -2,7 +2,6 @@
 title: "ADHD in Preschoolers — Why Behavioral Support Comes Before Medication"
 slug: "adhd-preschool-behavior-first"
 description: "What parents should know about ADHD diagnosis and treatment in children aged 3–5, and why guidelines recommend behavioral approaches before medication."
-category: "Child & Adolescent Health"
 publishDate: "2025-08-31"
 draft: false
 tags: ["ADHD", "preschool", "behavior therapy", "medication", "parenting"]

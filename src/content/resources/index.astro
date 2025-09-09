@@ -1,0 +1,93 @@
+---
+import { getCollection } from "astro:content";
+
+const items = await getCollection("resources", ({ data }) => !data.draft);
+
+// Group by category (fallback to "General")
+const groups = items.reduce((acc, entry) => {
+  const cat = entry.data.category ?? "General";
+  (acc[cat] ||= []).push(entry);
+  return acc;
+}, /** @type{Record<string, typeof items>} */ ({}));
+
+// Sort categories and entries
+const sortedCats = Object.keys(groups).sort((a, b) => a.localeCompare(b));
+for (const c of sortedCats) {
+  groups[c].sort((a, b) => (a.data.title ?? "").localeCompare(b.data.title ?? ""));
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Resources</title>
+    <meta name="description" content="Quick-reference checklists and tools." />
+    <style>
+      /* minimal utility-ish styles */
+      .wrap { max-width: 72rem; margin: 0 auto; padding: 2rem 1rem; }
+      .hdr { display:flex; flex-wrap:wrap; align-items:center; gap:.75rem; margin-bottom:1.25rem; }
+      .search { flex:1 1 320px; padding:.6rem .8rem; border:1px solid #ddd; border-radius:.5rem; font-size:1rem; }
+      h1 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); margin:0 0 .25rem; }
+      h2 { font-size: 1.15rem; margin: 2rem 0 .75rem; color:#111; }
+      .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .9rem; }
+      .card { border:1px solid #e5e7eb; border-radius:.75rem; padding:1rem; background:#fff; display:flex; flex-direction:column; gap:.5rem; }
+      .card h3 { font-size:1.05rem; margin:0; }
+      .muted { color:#6b7280; font-size:.92rem; }
+      .row { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+      .btn { display:inline-flex; gap:.4rem; align-items:center; border:1px solid #e5e7eb; padding:.4rem .6rem; border-radius:.5rem; text-decoration:none; font-size:.92rem; color:#111; background:#f9fafb; }
+      .btn:hover { background:#f3f4f6; }
+      .pill { font-size:.75rem; padding:.15rem .45rem; border:1px solid #e5e7eb; border-radius:999px; color:#374151; }
+      @media print {
+        .hdr, .btn { display:none !important; }
+        .card { break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <div class="hdr">
+        <h1>Resources</h1>
+        <input id="q" class="search" type="search" placeholder="Search checklists & tools…" aria-label="Search resources" />
+      </div>
+
+      {
+        sortedCats.map((cat) => (
+          <section data-cat={cat}>
+            <h2>{cat}</h2>
+            <div class="grid" role="list">
+              {groups[cat].map(({ id, data, slug, body }) => {
+                const url = `/resources/${slug ?? id}`;
+                return (
+                  <article class="card" role="listitem" data-title={(data.title ?? "").toLowerCase()} data-desc={(data.description ?? "").toLowerCase()}>
+                    <h3><a href={url}>{data.title}</a></h3>
+                    {data.description && <p class="muted">{data.description}</p>}
+                    <div class="row">
+                      {Array.isArray(data.tags) && data.tags.slice(0,3).map((t) => <span class="pill">{t}</span>)}
+                    </div>
+                    <div class="row">
+                      <a class="btn" href={url}>Open</a>
+                      <button class="btn" type="button" onclick={`window.open('${url}?print=1','_blank')`}>Print</button>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ))
+      }
+    </main>
+
+    <script>
+      // Lightweight client-side search (title + description)
+      const q = document.getElementById('q');
+      const cards = Array.from(document.querySelectorAll('.card'));
+      q?.addEventListener('input', () => {
+        const term = q.value.trim().toLowerCase();
+        for (const c of cards) {
+          const hay = (c.dataset.title || '') + ' ' + (c.dataset.desc || '');
+          c.style.display = hay.includes(term) ? '' : 'none';
+        }
+      });
+    </script>
+  </body>
+</html>

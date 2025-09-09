@@ -12,6 +12,9 @@ const {
 // Build canonical URL: prefer frontmatter, else fallback to self
 const selfUrl = new URL(Astro.url).href;
 const canonicalUrl = canonical ?? selfUrl;
+
+// Detect print mode from query param
+const printMode = Astro.url.searchParams.get("print") === "1";
 ---
 
 <!DOCTYPE html>
@@ -33,22 +36,33 @@ const canonicalUrl = canonical ?? selfUrl;
     <meta property="og:image" content={image} />
 
     <link rel="icon" href="/favicon.ico" />
+
+    <style>
+      @media print {
+        header, footer { display: none !important; }
+        main { padding: 0 !important; }
+      }
+    </style>
   </head>
   <body class="min-h-screen bg-white text-slate-900 antialiased">
-    <header class="w-full border-b border-slate-200">
-      <div class="mx-auto max-w-3xl px-4 py-4">
-        <a href="/" class="font-semibold">Thought Archive</a>
-      </div>
-    </header>
+    {!printMode && (
+      <header class="w-full border-b border-slate-200">
+        <div class="mx-auto max-w-3xl px-4 py-4">
+          <a href="/" class="font-semibold">Thought Archive</a>
+        </div>
+      </header>
+    )}
 
     <main class="mx-auto max-w-3xl px-4 py-8">
       <slot />
     </main>
 
-    <footer class="w-full border-t border-slate-200">
-      <div class="mx-auto max-w-3xl px-4 py-6 text-sm text-slate-500">
-        © {new Date().getFullYear()} Thought Archive
-      </div>
-    </footer>
+    {!printMode && (
+      <footer class="w-full border-t border-slate-200">
+        <div class="mx-auto max-w-3xl px-4 py-6 text-sm text-slate-500">
+          © {new Date().getFullYear()} Thought Archive
+        </div>
+      </footer>
+    )}
   </body>
 </html>

@@ -1,0 +1,49 @@
+---
+const riskBand = (sex: string, whr: number) => {
+  if (!sex || !whr) return "";
+  if (sex === "male") return whr > 0.90 ? "Higher risk" : "Lower risk";
+  if (sex === "female") return whr > 0.85 ? "Higher risk" : "Lower risk";
+  return "";
+};
+---
+
+<section class="max-w-xl space-y-4 p-4 border rounded-lg">
+  <h3 class="text-xl font-semibold">Waist-to-Hip Ratio Calculator</h3>
+  <div class="grid gap-3">
+    <label class="grid gap-1">
+      <span>Sex</span>
+      <select id="sex" class="border p-2 rounded">
+        <option value="">Select…</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </label>
+    <label class="grid gap-1">
+      <span>Waist (cm)</span>
+      <input id="waist" type="number" min="0" step="0.1" class="border p-2 rounded" />
+    </label>
+    <label class="grid gap-1">
+      <span>Hips (cm)</span>
+      <input id="hips" type="number" min="0" step="0.1" class="border p-2 rounded" />
+    </label>
+    <button id="calc" class="px-3 py-2 rounded bg-black text-white">Calculate</button>
+    <div id="out" class="text-lg font-medium"></div>
+    <p class="text-sm text-gray-600">
+      Tip: measure waist at the belly-button level, hips at the widest point.
+    </p>
+  </div>
+</section>
+
+<script>
+  document.getElementById('calc').addEventListener('click', () => {
+    const sex = (document.getElementById('sex')).value;
+    const w = parseFloat((document.getElementById('waist')).value);
+    const h = parseFloat((document.getElementById('hips')).value);
+    const out = document.getElementById('out');
+    if (!sex || !w || !h || h <= 0) { out.textContent = "Please enter all values."; return; }
+    const whr = +(w / h).toFixed(2);
+    const band = (sex === "male" ? (whr > 0.90 ? "Higher risk" : "Lower risk")
+                                  : (whr > 0.85 ? "Higher risk" : "Lower risk"));
+    out.textContent = `WHR: ${whr} — ${band}`;
+  });
+</script>

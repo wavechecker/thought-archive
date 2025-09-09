@@ -1,13 +1,12 @@
 ---
 title: "Sick-Day Checklist for Type 1 Diabetes"
-slug: "sick-day-checklist-type1-diabetes"
-description: "A quick-reference checklist for managing Type 1 diabetes during illness, including core rules, fluids, insulin adjustments, and red flags."
+description: "Quick-reference checklist for managing Type 1 diabetes during illness."
 category: "Diabetes"
-tags: ["type 1 diabetes", "sick day rules", "insulin", "illness", "checklist"]
 publishDate: "2025-08-21"
-updatedDate: "2025-08-21"
+tags: ["type 1 diabetes", "checklist"]
 draft: false
 ---
+
 
 # Sick-Day Checklist for Type 1 Diabetes
 

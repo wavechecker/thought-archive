@@ -1,13 +1,17 @@
 // src/content/config.ts
 import { defineCollection, z } from "astro:content";
 
+// -----------------------------
 // Reusable validators
+// -----------------------------
 const isoDate = z.string().refine((d) => !Number.isNaN(Date.parse(d)), {
   message: "Invalid date — use ISO YYYY-MM-DD",
 });
 
-// Canonical categories (single source of truth)
+// -----------------------------
+// Canonical categories
 // NOTE: ASCII apostrophe in "Women's Health" (avoid smart-quote drift)
+// -----------------------------
 const CATEGORY = z.enum([
   "Emergencies",
   "Infectious Diseases",
@@ -21,53 +25,73 @@ const CATEGORY = z.enum([
   "General Health",
   "End of Life",
   "Child & Adolescent Health",
+  "Obesity & Metabolic Health Hub",
   "Guide Hubs",
 ]);
 
+// Optional categories for posts
+const POST_CATEGORY = z.enum([
+  "AI & Society",
+  "Health & Policy",
+  "Opinion",
+]);
+
+// -----------------------------
 // Common fields
+// -----------------------------
 const base = {
   title: z.string(),
   description: z.string().optional(),
-  // Prefer string dates so you control formatting in the UI
   publishDate: isoDate.optional(),
   updatedDate: isoDate.optional(),
   draft: z.boolean().default(false),
   tags: z.array(z.string()).default([]),
   image: z.string().optional(),
-  // Optional: include if your pages read data.slug instead of entry.slug
-  slug: z.string().optional(),
+  slug: z.string().optional(), // optional: for custom routing
 };
 
-// Guides (strict)
+// -----------------------------
+// Guides (strict, category required)
+// -----------------------------
 const guides = defineCollection({
   type: "content",
   schema: z.object({
     ...base,
-    publishDate: isoDate,        // required
-    category: CATEGORY,          // required + enum-locked
-    hubKey: z.string().optional()
+    publishDate: isoDate, // required
+    category: CATEGORY,   // required + enum-locked
+    hubKey: z.string().optional(),
   }),
 });
 
-// Posts (dates required; no strict category)
+// -----------------------------
+// Posts (category optional)
+// -----------------------------
 const posts = defineCollection({
   type: "content",
   schema: z.object({
     ...base,
-    publishDate: isoDate,        // required
+    publishDate: isoDate,               // required
+    category: POST_CATEGORY.optional(), // optional grouping
+    related: z.array(z.string()).optional(),
   }),
 });
 
-// Resources (optional category, but from same enum when present)
+// -----------------------------
+// Resources (tools, checklists, quick refs)
+// Category optional, but must match CATEGORY when used
+// -----------------------------
 const resources = defineCollection({
   type: "content",
   schema: z.object({
     ...base,
+    publishDate: isoDate,        // required for consistency
     category: CATEGORY.optional(),
   }),
 });
 
-// Taxonomy
+// -----------------------------
+// Taxonomy (hub definitions, category mapping)
+// -----------------------------
 const taxonomy = defineCollection({
   type: "content",
   schema: z.object({
@@ -77,7 +101,9 @@ const taxonomy = defineCollection({
   }),
 });
 
-// Pages
+// -----------------------------
+// Pages (static content like About, Contact)
+// -----------------------------
 const pages = defineCollection({
   type: "content",
   schema: z.object({
@@ -87,7 +113,17 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { guides, posts, resources, taxonomy, pages };
+// -----------------------------
+// Export all collections
+// -----------------------------
+export const collections = {
+  guides,
+  posts,
+  resources,
+  taxonomy,
+  pages,
+};
+
 
 
 

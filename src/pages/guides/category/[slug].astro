@@ -1,0 +1,75 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date.ts";
+import { unslugifyCategory } from "@/lib/slug.ts";
+
+export const prerender = true;
+
+// Build-time: list all guides (exclude drafts)
+const allGuides = await getCollection("guides", ({ data }) => data?.draft !== true);
+
+/** Generate static paths for every category in your content */
+export async function getStaticPaths() {
+  const categories = Array.from(
+    new Set(
+      (await getCollection("guides", ({ data }) => data?.draft !== true))
+        .map((e) => (e.data?.category || "").trim())
+        .filter(Boolean)
+    )
+  );
+
+  const { slugifyCategory } = await import("@/lib/slug.ts");
+  return categories.map((name) => ({
+    params: { slug: slugifyCategory(name) },
+    props: { name },
+  }));
+}
+
+// Decode + hard-guard slug
+const rawSlug = Astro.params.slug;
+const slug = typeof rawSlug === "string" ? decodeURIComponent(rawSlug) : "";
+if (!slug) {
+  return Astro.redirect("/404");
+}
+
+const categoryName = unslugifyCategory(slug);
+
+// Filter guides by category (case-insensitive), newest first
+const items = allGuides
+  .filter((g) => (g.data.category || "").toLowerCase() === categoryName.toLowerCase())
+  .sort(
+    (a, b) =>
+      +new Date(b.data.publishDate as any) - +new Date(a.data.publishDate as any)
+  );
+
+const title = `${categoryName} — Guides`;
+const desc = `All ${categoryName} guides (newest first).`;
+---
+
+<Layout frontmatter={{ title, description: desc }}>
+  <article class="mx-auto max-w-3xl">
+    <header class="mb-6">
+      <p class="text-xs uppercase tracking-wide text-slate-500">Category</p>
+      <h1 class="mt-1 text-3xl/tight font-semibold tracking-tight">{categoryName}</h1>
+      <p class="mt-2 text-sm text-slate-500">
+        {items.length} guide{items.length === 1 ? "" : "s"}
+      </p>
+    </header>
+
+    {items.length === 0 ? (
+      <p class="text-slate-600">No guides found yet.</p>
+    ) : (
+      <ul class="space-y-3">
+        {items.map((e) => (
+          <li>
+            <a class="text-sky-600 hover:underline" href={`/guides/${e.slug}`}>{e.data.title}</a>
+            {isValidDate(e.data.publishDate) && (
+              <span class="ml-2 text-sm text-slate-500">{fmt(e.data.publishDate)}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    )}
+  </article>
+</Layout>
