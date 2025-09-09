@@ -3,18 +3,6 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { isValidDate, fmt } from "@/lib/date"; // ✅ date helpers
 
-// Hubs to feature on the landing page (order matters)
-const HUBS: Array<{ label: string; href: string; blurb?: string }> = [
-  { label: "Type 1 Diabetes", href: "/guides/type-1-diabetes/", blurb: "Start here for T1D basics." },
-  { label: "Type 2 Diabetes", href: "/guides/type-2-diabetes/", blurb: "Practical guides for T2D." },
-  { label: "Heart & Circulation", href: "/guides/heart-circulation/", blurb: "Cardiac & vascular care." },
-  { label: "Cancer", href: "/guides/cancer/", blurb: "Screening, treatment, survivorship." },
-  { label: "Infectious Diseases", href: "/guides/infectious-diseases/", blurb: "Prevention and treatment." },
-  { label: "Emergencies", href: "/guides/emergencies/", blurb: "When to act fast and how." },
-  // ✅ Posts hub tile
-  { label: "Posts", href: "/posts/", blurb: "Opinion & analysis linked to evergreen guides." },
-];
-
 // All guides (exclude drafts + Guide Hubs), newest first
 const all = (await getCollection("guides", ({ data }) =>
   data?.draft !== true && data?.category !== "Guide Hubs"
@@ -58,22 +46,9 @@ const frontmatter = {
     <p class="text-lg text-gray-700">Clear, practical health guides — no fluff.</p>
   </section>
 
-  <!-- Hubs -->
-  <section class="mt-8">
-    <h2 class="text-2xl font-semibold mb-4">Start here</h2>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {HUBS.map((hub) => (
-        <a href={hub.href} class="block p-5 rounded-2xl shadow hover:shadow-lg transition bg-white">
-          <h3 class="text-xl font-semibold mb-1">{hub.label} Hub</h3>
-          {hub.blurb && <p class="text-sm text-gray-600">{hub.blurb}</p>}
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <!-- Category summary -->
+  <!-- Category summary pills -->
   {categories.length > 0 && (
-    <section class="mt-6">
+    <section class="mt-2">
       <div class="flex flex-wrap gap-2">
         {categories.map(([cat, count]) => (
           <a
@@ -87,15 +62,15 @@ const frontmatter = {
     </section>
   )}
 
-  <!-- All Guides -->
+  <!-- Latest Guides (top 12 by date) -->
   <section class="mt-8">
-    <h2 class="text-2xl font-semibold mb-4">All guides</h2>
+    <h2 class="text-2xl font-semibold mb-4">Latest Guides</h2>
 
-    {all.length === 0 ? (
+    {(all.length === 0) ? (
       <p>No guides yet.</p>
     ) : (
       <ul class="divide-y divide-gray-200 bg-white rounded-2xl shadow">
-        {all.map((e) => {
+        {all.slice(0, 12).map((e) => {
           const href = `/guides/${e.slug}`; // ✅ collection slug → correct link
           const title = e.data?.title ?? "(Untitled)";
           const desc = e.data?.description ?? "";
