@@ -29,11 +29,16 @@ const CATEGORY = z.enum([
   "Guide Hubs",
 ]);
 
+// -----------------------------
 // Optional categories for posts
+// -----------------------------
 const POST_CATEGORY = z.enum([
   "AI & Society",
   "Health & Policy",
   "Opinion",
+  "Posts",
+  "Public Health",
+  "Relationships",
 ]);
 
 // -----------------------------
@@ -78,7 +83,6 @@ const posts = defineCollection({
 
 // -----------------------------
 // Resources (tools, checklists, quick refs)
-// Category optional, but must match CATEGORY when used
 // -----------------------------
 const resources = defineCollection({
   type: "content",
