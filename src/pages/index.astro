@@ -1,4 +1,72 @@
-  <!-- Latest Posts (moved above guides) -->
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date";
+
+// Helpers
+const safeDate = (d: unknown) => (typeof d === "string" && isValidDate(d) ? fmt(d) : null);
+const safeCat = (c: unknown) => (typeof c === "string" && c.trim().length ? c.trim() : "General");
+const safeSlug = (s: unknown) => (typeof s === "string" ? s : "");
+
+// Guides: exclude drafts + Guide Hubs, sort newest first
+const guides = (await getCollection("guides", ({ data }) =>
+  data?.draft !== true && data?.category !== "Guide Hubs"
+)).sort((a, b) => {
+  const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+  const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+  return db - da || String(a.data?.title ?? "").localeCompare(String(b.data?.title ?? ""));
+});
+
+// Build category summary safely
+const byCategory = guides.reduce((acc, e) => {
+  const cat = safeCat(e.data?.category);
+  acc[cat] = (acc[cat] ?? 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+const categories = Object.entries(byCategory).sort(([a], [b]) => a.localeCompare(b));
+
+// Posts: exclude drafts, newest first, latest 5
+const posts = (await getCollection("posts"))
+  .filter((p) => p.data?.draft !== true)
+  .sort((a, b) => {
+    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+    return db - da || String(a.data?.title ?? "").localeCompare(String(b.data?.title ?? ""));
+  })
+  .slice(0, 5);
+
+// Page meta
+const frontmatter = {
+  title: "Patient Guide — Clear, practical health guides",
+  description: "Clear, practical health guides — no fluff.",
+};
+---
+
+<Layout {frontmatter}>
+  <!-- Hero -->
+  <section class="py-10">
+    <h1 class="text-4xl font-bold mb-3">Patient Guide</h1>
+    <p class="text-lg text-gray-700">Clear, practical health guides — no fluff.</p>
+  </section>
+
+  <!-- Category summary pills (defensive URL build) -->
+  {categories.length > 0 && (
+    <section class="mt-2">
+      <div class="flex flex-wrap gap-2">
+        {categories.map(([cat, count]) => {
+          const c = safeCat(cat);
+          const href = `/guides/?category=${encodeURIComponent(c)}`;
+          return (
+            <a href={href} class="text-sm px-2 py-1 rounded-full border hover:bg-gray-50">
+              {c} · {count}
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  <!-- Latest posts -->
   <section class="mt-8">
     <h2 class="text-2xl font-semibold mb-4">Latest posts</h2>
     {posts.length === 0 ? (
@@ -6,11 +74,10 @@
     ) : (
       <ul class="divide-y divide-gray-200 bg-white rounded-2xl shadow">
         {posts.map((p) => {
-          const href = `/posts/${p.slug}`;
+          const href = `/posts/${safeSlug(p.slug)}`;
           const title = p.data?.title ?? "(Untitled)";
           const desc = p.data?.description ?? "";
-          const rawDate = p.data?.updatedDate ?? p.data?.publishDate;
-          const date = isValidDate(rawDate) ? fmt(rawDate) : null;
+          const date = safeDate(p.data?.updatedDate ?? p.data?.publishDate);
           return (
             <li class="p-5">
               <a href={href} class="text-lg font-medium hover:underline">{title}</a>
@@ -30,23 +97,22 @@
     </p>
   </section>
 
-  <!-- Latest Guides -->
+  <!-- Latest Guides (top 12 by date) -->
   <section class="mt-12">
     <h2 class="text-2xl font-semibold mb-4">Latest Guides</h2>
 
-    {all.length === 0 ? (
+    {guides.length === 0 ? (
       <p>No guides yet.</p>
     ) : (
       <ul class="divide-y divide-gray-200 bg-white rounded-2xl shadow">
-        {all.slice(0, 12).map((e) => {
-          const href = `/guides/${e.slug}`;
+        {guides.slice(0, 12).map((e) => {
+          const href = `/guides/${safeSlug(e.slug)}`;
           const title = e.data?.title ?? "(Untitled)";
           const desc = e.data?.description ?? "";
-          const cat = e.data?.category ?? "";
-
-          const rawGuideDate = e.data?.updatedDate ?? e.data?.publishDate;
+          const cat = safeCat(e.data?.category);
+          const rawDate = e.data?.updatedDate ?? e.data?.publishDate;
+          const prettyDate = safeDate(rawDate);
           const dateLabel = e.data?.updatedDate ? "Updated" : "Published";
-          const prettyGuideDate = isValidDate(rawGuideDate) ? fmt(rawGuideDate) : null;
 
           return (
             <li class="p-5">
@@ -56,9 +122,9 @@
                   {cat}
                 </span>
               )}
-              {prettyGuideDate && (
+              {prettyDate && (
                 <span class="ml-2 text-xs text-gray-500 align-middle">
-                  {dateLabel} {prettyGuideDate}
+                  {dateLabel} {prettyDate}
                 </span>
               )}
               {desc && <p class="text-sm text-gray-600 mt-1">{desc}</p>}
@@ -75,3 +141,4 @@
       </a>
     </p>
   </section>
+</Layout>
