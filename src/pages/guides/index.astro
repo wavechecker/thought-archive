@@ -16,7 +16,38 @@ if (q) {
 // Load all published guides
 const guides = await getCollection("guides", ({ data }) => data?.draft !== true);
 
-// Build map: category -> guides
+// ---- Featured row (Child & Adolescent Health) ----
+const FEATURED = [
+  {
+    slug: "childhood-obesity-prevention",
+    title: "Childhood Obesity Prevention",
+    blurb:
+      "Childhood obesity has now surpassed underweight globally, driven by ultra-processed foods, sugary drinks, and weak policy protections. This guide explains the causes, risks, and proven strategies for prevention at home, in schools, and through public policy."
+  },
+  {
+    slug: "healthy-diets-for-children",
+    title: "Healthy Diets for Children",
+    blurb:
+      "Balanced nutrition is key to children’s growth, learning, and long-term health. This guide explains the food groups, portion sizes, and simple strategies families can use to build healthier eating habits at home and in schools."
+  },
+  {
+    slug: "diabetes-children",
+    title: "Diabetes in Children and Adolescents",
+    blurb:
+      "Diabetes is rising among children worldwide, with type 1 remaining common and type 2 increasing rapidly due to obesity. This guide covers symptoms, diagnosis, treatment, and prevention, helping families and schools support affected children."
+  }
+];
+
+// Map: slug -> entry (only if present)
+const bySlug = new Map(guides.map((e) => [e.slug, e]));
+const featuredEntries = FEATURED
+  .map((f) => {
+    const entry = bySlug.get(f.slug);
+    return entry ? { ...f, href: `/guides/${entry.slug}` } : null;
+  })
+  .filter(Boolean);
+
+// ---- Build map: category -> guides ----
 const byCategory = new Map<string, typeof guides>();
 for (const e of guides) {
   const cat = (e.data.category ?? "General Health").trim();
@@ -40,11 +71,27 @@ const MAX_VISIBLE = 5;
 const overrides: Record<string, string> = {
   // "Vaccination": "/guides/vaccination-guide-hub",
   // "Emergencies": "/guides/emergencies-guide-hub",
+  // If you created the hub page we discussed:
+  // "Child & Adolescent Health": "/guides/child-adolescent-health-hub",
 };
 ---
 
 <h1>Guides</h1>
 <p>Explore our library of health guides, organized by category. Click a topic to browse detailed guides.</p>
+
+{featuredEntries.length > 0 && (
+  <>
+    <h2>Featured: Child &amp; Adolescent Health</h2>
+    <div class="cards">
+      {featuredEntries.map((f) => (
+        <article class="card">
+          <h3><a href={f!.href}>{f!.title}</a></h3>
+          <p>{f!.blurb}</p>
+        </article>
+      ))}
+    </div>
+  </>
+)}
 
 <ul class="grid">
   {categories.map((cat) => {
@@ -66,7 +113,7 @@ const overrides: Record<string, string> = {
     const hidden = sorted.slice(MAX_VISIBLE);
 
     return (
-      <li class="card">
+      <li class="cat-card">
         <h3><a href={catHref}>{cat}</a></h3>
         <p>{CATEGORY_DESCRIPTIONS[cat] ?? "Browse guides in this topic."}</p>
         <small>{count} guide{count === 1 ? "" : "s"}</small>
@@ -109,8 +156,31 @@ const overrides: Record<string, string> = {
 </ul>
 
 <style>
-  .grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .card { padding:1rem; border:1px solid var(--astro-border, #e5e7eb); border-radius:12px; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-block: .5rem 1.5rem;
+  }
+  .card {
+    padding: 1rem;
+    border: 1px solid var(--astro-border, #e5e7eb);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    background: white;
+  }
+  .grid { 
+    display:grid; 
+    gap:1rem; 
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    margin-top: .75rem;
+  }
+  .cat-card { 
+    padding:1rem; 
+    border:1px solid var(--astro-border, #e5e7eb); 
+    border-radius:12px; 
+    background: white;
+  }
   .mini { margin-top:.5rem; padding-left:1rem; }
   .mini li { list-style: disc; }
   .date { color:#6b7280; font-size:.85em; margin-left:.35rem; }
