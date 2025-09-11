@@ -26,6 +26,7 @@ const CATEGORY = z.enum([
   "End of Life",
   "Child & Adolescent Health",
   "Obesity & Metabolic Health Hub",
+  "Men's Health",
   "Guide Hubs",
 ]);
 
