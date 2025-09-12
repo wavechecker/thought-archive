@@ -3,8 +3,8 @@ layout: "@/layouts/GuideLayout.astro"
 title: "West Nile Virus (WNV)"
 description: "What West Nile virus is, how it spreads, how to recognize it, and what you can do to prevent infection."
 category: "Infectious Diseases"
-publishDate: 2025-09-12
-updatedDate: 2025-09-12
+publishDate: "2025-09-12"
+updatedDate: "2025-09-12"
 
 # 🔐 Opt-in: turns on InfectiousDisease JSON-LD (safe if omitted)
 infectiousAgentClass: "Virus"

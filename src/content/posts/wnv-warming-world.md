@@ -2,8 +2,8 @@
 layout: "@/layouts/PostLayout.astro"
 title: "West Nile Virus: A Mosquito-Borne Disease in a Warming World"
 description: "West Nile is surging again — and it’s part of a global pattern as climates shift, extending mosquito seasons and habitats."
-publishDate: 2025-09-12
-updatedDate: 2025-09-12
+publishDate: "2025-09-12"
+updatedDate: "2025-09-12"
 tags: ["West Nile Virus","Mosquito-Borne Diseases","Global Health","Climate and Health"]
 # image: "/images/wnv-hero.webp"   # optional
 # canonical: "https://patientguide.io/posts/wnv-warming-world"  # optional
