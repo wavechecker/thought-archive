@@ -1,0 +1,73 @@
+---
+export interface FAQ { question: string; answer: string }
+export interface Props {
+  title: string;
+  description?: string;
+  publishDate?: string;
+  updatedDate?: string;
+  diseaseName: string;
+  infectiousAgentClass?: "Virus" | "Bacterium" | "Protozoa" | "Fungus" | "Helminth";
+  infectiousAgent?: string;
+  transmissionMethods?: string[];
+  reservoirs?: string[];
+  regions?: string[];
+  symptoms?: string[];
+  treatments?: string[];
+  sameAs?: string[];
+  faqs?: FAQ[];
+}
+
+const {
+  title, description, publishDate, updatedDate,
+  diseaseName, infectiousAgentClass, infectiousAgent,
+  transmissionMethods = [], reservoirs = [], regions = [],
+  symptoms = [], treatments = [], sameAs = [], faqs = [],
+} = Astro.props;
+
+// Only emit when you opt in (by setting infectiousAgentClass)
+const shouldEmit = !!infectiousAgentClass;
+
+if (shouldEmit) {
+  const pageJson = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": title,
+    "description": description,
+    "datePublished": publishDate,
+    "dateModified": updatedDate ?? publishDate,
+    "about": {
+      "@type": "InfectiousDisease",
+      "name": diseaseName || title,
+      ...(infectiousAgent ? { "infectiousAgent": infectiousAgent } : {}),
+      ...(infectiousAgentClass ? { "infectiousAgentClass": infectiousAgentClass } : {}),
+      ...(transmissionMethods.length ? { "transmissionMethod": transmissionMethods } : {}),
+      ...(reservoirs.length ? { "reservoir": reservoirs } : {}),
+      ...(regions.length ? { "areaServed": regions } : {}),
+      ...(symptoms.length ? { "signOrSymptom": symptoms.map(s => ({ "@type": "MedicalSymptom", "name": s })) } : {}),
+      ...(treatments.length ? { "possibleTreatment": treatments.map(t => ({ "@type": "MedicalTherapy", "name": t })) } : {}),
+      ...(sameAs.length ? { "sameAs": sameAs } : {}),
+    },
+    "publisher": { "@type": "Organization", "name": "Patientguide.io" }
+  };
+
+  const faqJson = faqs.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(({ question, answer }) => ({
+          "@type": "Question",
+          "name": question,
+          "acceptedAnswer": { "@type": "Answer", "text": answer }
+        }))
+      }
+    : null;
+
+  const jsonStr = JSON.stringify(pageJson);
+  const faqStr = faqJson ? JSON.stringify(faqJson) : null;
+---
+<script type="application/ld+json">{jsonStr}</script>
+{faqStr ? <script type="application/ld+json">{faqStr}</script> : null}
+---
+} else {
+  /* no-op */
+}
