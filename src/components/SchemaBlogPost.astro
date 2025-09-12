@@ -1,0 +1,32 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  publishDate?: string;
+  updatedDate?: string;
+  authorName?: string;
+  section?: string;
+  tags?: string[];
+  sameAs?: string[];
+}
+const {
+  title, description, publishDate, updatedDate,
+  authorName = "Patientguide.io", section, tags = [], sameAs = []
+} = Astro.props;
+
+const json = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": publishDate,
+  "dateModified": updatedDate ?? publishDate,
+  ...(section ? { "articleSection": section } : {}),
+  ...(tags.length ? { "keywords": tags.join(", ") } : {}),
+  ...(sameAs.length ? { "sameAs": sameAs } : {}),
+  "author": { "@type": "Organization", "name": authorName },
+  "publisher": { "@type": "Organization", "name": "Patientguide.io" }
+};
+const jsonStr = JSON.stringify(json);
+---
+<script type="application/ld+json">{jsonStr}</script>

@@ -1,39 +1,35 @@
 ---
-import SchemaInfectiousDisease from "@/components/SchemaInfectiousDisease.astro";
+import SchemaBlogPost from "@/components/SchemaBlogPost.astro";
 
 const url = new URL(Astro.url);
 const fm = Astro.props.frontmatter ?? {};
 
-// Canonical: use frontmatter if provided, else self URL
+// Canonical: prefer frontmatter, else current URL
 const canonicalUrl = fm.canonical ?? url.href;
 
 // Site origin for absolute assets
 const siteOrigin = "https://patientguide.io";
 
-// OG/Twitter image (absolute)
+// Social image (absolute)
 const ogImage = fm.image ?? "/og-default.png";
 const ogImageAbs = ogImage.startsWith("http") ? ogImage : `${siteOrigin}${ogImage}`;
 
 const title = fm.title ?? "Untitled";
 const description = fm.description ?? "";
 
-// Structured data: Article (baseline, always safe)
-const jsonLdObj = {
+// Basic Article JSON-LD (safe baseline; complements BlogPosting schema)
+const articleJson = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": title,
   "description": description || undefined,
   "datePublished": fm.publishDate ?? undefined,
   "dateModified": fm.updatedDate ?? fm.publishDate ?? undefined,
-  "author": { "@type": "Organization", "name": "Thought Archive" },
+  "author": { "@type": "Organization", "name": "Patientguide.io" },
   "mainEntityOfPage": canonicalUrl,
   "image": ogImageAbs
 };
-const jsonLd = JSON.stringify(jsonLdObj);
-
-// Backward-compatible gate for InfectiousDisease schema
-const isInfectious = (fm?.category ?? "") === "Infectious Diseases";
-const schemaReady = !!fm?.infectiousAgentClass || fm?.schema === true;
+const articleJsonStr = JSON.stringify(articleJson);
 ---
 
 <html lang="en">
@@ -47,27 +43,19 @@ const schemaReady = !!fm?.infectiousAgentClass || fm?.schema === true;
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Structured data (Article baseline) -->
-    <script type="application/ld+json">{jsonLd}</script>
+    <script type="application/ld+json">{articleJsonStr}</script>
 
-    <!-- Optional Medical/InfectiousDisease schema -->
-    {isInfectious && schemaReady ? (
-      <SchemaInfectiousDisease
-        title={fm.title}
-        description={fm.description}
-        publishDate={fm.publishDate}
-        updatedDate={fm.updatedDate}
-        diseaseName={fm.diseaseName ?? fm.title}
-        infectiousAgentClass={fm.infectiousAgentClass}
-        infectiousAgent={fm.infectiousAgent}
-        transmissionMethods={fm.transmissionMethods}
-        reservoirs={fm.reservoirs}
-        regions={fm.regions}
-        symptoms={fm.symptoms}
-        treatments={fm.treatments}
-        sameAs={fm.sameAs}
-        faqs={fm.faqs}
-      />
-    ) : null}
+    <!-- Structured data (BlogPosting; omits missing fields) -->
+    <SchemaBlogPost
+      title={fm.title}
+      description={fm.description}
+      publishDate={fm.publishDate}
+      updatedDate={fm.updatedDate}
+      authorName="Patientguide.io"
+      section={fm.section ?? "Global Health"}
+      tags={fm.tags}
+      sameAs={fm.sameAs ?? []}
+    />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
@@ -99,5 +87,3 @@ const schemaReady = !!fm?.infectiousAgentClass || fm?.schema === true;
     </main>
   </body>
 </html>
-
-
