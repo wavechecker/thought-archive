@@ -1,71 +1,103 @@
 ---
 title: "Type 1 Diabetes — Sick-Day Management"
-description: "What to do when you’re ill with T1D: testing schedule, insulin adjustments, fluids, ketone thresholds, and when to go to ED."
+slug: "type-1-diabetes-sick-day-management"
+description: "What to do when you’re ill with type 1 diabetes: sick-day rules, ketone thresholds, insulin adjustments, hydration, and when to seek urgent care."
 category: "Diabetes"
 publishDate: "2025-08-30"
+updatedDate: "2025-09-14"
 draft: false
 tags: ["type 1 diabetes", "sick day", "ketones", "DKA", "insulin", "patientguide"]
 ---
 
-## Intro
-Illness (fever, vomiting, infections) raises stress hormones that push glucose up and increase ketone risk. **Never stop insulin** on sick days—dose adjustments, more frequent checks, and fluids keep you safe.
+# Type 1 Diabetes — Sick-Day Management
 
-## Key Points
-- **Keep taking basal insulin** (pump or long-acting) even if not eating.
-- Check **glucose and ketones** more often (see schedule below).
-- **Fluids every hour**; add salts if vomiting/diarrhoea.
-- **Seek urgent care** with high ketones, vomiting, or signs of DKA.
+Illness (fever, vomiting, infections) raises stress hormones that push glucose up and increase ketone risk. **Never stop insulin** on sick days — careful adjustments, more frequent checks, and hydration keep you safe.  
+
+---
+
+## 🚑 Bottom Line
+- **Keep taking basal insulin** (pump or long-acting), even if not eating.  
+- **Check glucose + ketones frequently** (every 2–4 hours; hourly if unwell or glucose rising).  
+- **Seek urgent care** with ketones ≥3.0 mmol/L, vomiting, abdominal pain, drowsiness, or rapid breathing.  
+
+---
 
 ## Sick-Day Testing Schedule
-- **Glucose:** every **2–4 h** (hourly if rising fast).
-- **Ketones (blood preferred):**
-  - If glucose **>13.9 mmol/L (250 mg/dL)** or you feel unwell → **check now**.
-  - Re-check **every 1–2 h** until normal.
+- **Glucose:** every **2–4 hours** (hourly if rising fast).  
+- **Ketones (blood preferred):**  
+  - If glucose **>13.9 mmol/L (250 mg/dL)** or if you feel unwell → **check now**.  
+  - Re-check **every 1–2 hours** until back to normal.  
+
+---
 
 ## Ketone Actions (general framework — follow your clinic plan)
+
 | Blood ketones | What to do |
 |---|---|
-| **0.6–1.4 mmol/L** | Extra **fluids**; **correction insulin** per plan; recheck in **1–2 h**. |
-| **1.5–2.9 mmol/L** | **Fluids**, **extra insulin** (often 10–20% of total daily dose or ~0.1 u/kg*); recheck **hourly**. |
-| **≥3.0 mmol/L** or any vomiting/abdominal pain/drowsiness | **Emergency department now.** Start fluids and follow correction advice **en route**. |
+| **0.6–1.4 mmol/L** | Extra **fluids**; **correction insulin** per plan; recheck in 1–2 h. |
+| **1.5–2.9 mmol/L** | **Fluids**, **extra insulin** (often 10–20% of total daily dose or ~0.1 u/kg*); recheck hourly. |
+| **≥3.0 mmol/L** or any vomiting/abdominal pain/drowsiness | ⚠️ **Emergency department now.** Start fluids and correction insulin en route. |
 
-\*Use your personalized sick-day rules; doses vary by clinic and individual.
+\*Use your personalised sick-day rules; doses vary by clinic and individual.
+
+---
 
 ## Insulin Adjustments
-- **Pumps:** check for site/tubing failure first; change set if in doubt. Consider temporary **higher basal** if persistently high without ketones (per plan).
-- **MDI:** continue long-acting; use **correction rapid-acting** according to your sensitivity factor. If not eating, you still need basal and may need small correction boluses.
+- **Pump users:** check for site/tubing failure first; change set if in doubt. Consider a temporary **higher basal rate** if persistently high without ketones.  
+- **MDI (multiple daily injections):** continue long-acting; give **correction rapid-acting** as needed. Even if not eating, you must take basal and small corrections.  
+
+---
 
 ## Hydration & Food
-- Aim for **250–500 ml** fluids hourly. Use electrolyte solutions if vomiting/diarrhoea.
-- If unable to eat solids, try **carb liquids** (juice, oral rehydration) in small sips to match insulin needs.
-- If you **cannot keep fluids down** → **urgent care**.
+- Aim for **250–500 ml** fluids hourly.  
+- Use electrolyte drinks if vomiting/diarrhoea.  
+- If unable to eat solids: take **carb-containing liquids** (juice, ORS, broth) in small sips to match insulin.  
+- If you **cannot keep fluids down** → ⚠️ **urgent medical care required**.  
+
+---
 
 ## When to Seek Urgent Care
-- **Ketones ≥3.0 mmol/L**, or **moderate/large urine ketones**.
-- **Persistent vomiting**, severe abdominal pain, **deep/fast breathing**, confusion, or extreme drowsiness.
-- Child, pregnancy, or significant co-illness → **lower threshold** for ED.
+- **Ketones ≥3.0 mmol/L**, or moderate/large urine ketones.  
+- **Persistent vomiting**, severe abdominal pain.  
+- **Rapid breathing, fruity-smelling breath, confusion, extreme drowsiness.**  
+- Children, pregnancy, or other co-illness → **lower threshold** for ED.  
+
+---
 
 ## Medications & Extras
-- Avoid NSAIDs if dehydrated unless advised.
-- Some cold meds contain sugar/stimulants—check labels.
-- Keep **backup pens/syringes** even if you use a pump.
+- Avoid NSAIDs if dehydrated unless prescribed.  
+- Check cold/flu meds — some contain sugar or stimulants.  
+- Keep **backup pens/syringes** in case of pump failure.  
+
+---
 
 ## FAQ
 **Should I stop insulin if I’m not eating?**  
-No. Keep **basal** going and use small corrections as needed.
+No. Always continue basal insulin; use corrections as needed.  
 
 **Can I exercise to bring glucose down?**  
-Not with **positive ketones**—exercise can worsen DKA risk.
+Not with **positive ketones** — this can worsen DKA.  
 
 **What if ketone strips aren’t available?**  
-Treat as higher risk: hydrate, give correction insulin per plan, and seek medical advice sooner.
+Act cautiously: hydrate, give correction insulin per plan, and seek medical advice sooner.  
+
+---
 
 ## Further Reading
-- [NHS — Type 1 Diabetes: Sick Day Rules](https://www.nhs.uk/)  
-- [ADA — Sick Day Management](https://diabetes.org/)  
+- [NHS — Type 1 Diabetes: Sick Day Rules](https://www.nhs.uk/conditions/type-1-diabetes/diabetes-sick-day-rules/)  
+- [American Diabetes Association — Sick Day Management](https://diabetes.org/)  
+- [ISPAD Clinical Practice Consensus Guidelines — Sick Day Management (2022)](https://doi.org/10.1111/pedi.13395)  
+
+---
 
 ## Related Guides
-- [DKA Quick Reference (Type 1 Diabetes)](/guides/type-1-diabetes-dka-quick-reference/)  
-- [Recognising Highs and Lows](/guides/recognising-highs-and-lows/)  
-- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia/)  
+- [Diabetes Emergencies — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)  
+- [DKA Quick Reference (Type 1 Diabetes)](/guides/type-1-diabetes-dka-quick-reference)  
+- [Recognising Highs and Lows](/guides/recognising-highs-and-lows)  
+- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia)  
+- [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents)  
+- [Type 1 Diabetes — Guide Hub](/guides/type-1-diabetes)  
 
+---
+
+*Educational only; not a substitute for professional medical advice.*

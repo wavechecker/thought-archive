@@ -7,7 +7,6 @@ tags: ["type 1 diabetes", "checklist"]
 draft: false
 ---
 
-
 # Sick-Day Checklist for Type 1 Diabetes
 
 Being unwell places extra stress on the body. “Sick-day rules” help you manage Type 1 diabetes safely during illness and reduce the risk of serious complications like diabetic ketoacidosis (DKA).
@@ -15,33 +14,33 @@ Being unwell places extra stress on the body. “Sick-day rules” help you mana
 ---
 
 ## ✅ Core Rules
-- Never stop basal insulin  
-- Check blood glucose every 2–4 hours (including overnight if unwell)  
-- Check ketones if blood glucose > 13–15 mmol/L or if feeling unwell  
-- Follow your personalised sick-day plan if you have one  
+- Never stop **basal insulin**  
+- Check **blood glucose every 2–4 h** (overnight if unwell)  
+- Check **ketones** if BGL > 13–15 mmol/L or if feeling unwell  
+- Follow your **personalised sick-day plan** if you have one  
 
 ---
 
-## 💧 Fluids & Carbohydrates
-- Drink water or sugar-free fluids regularly  
-- If not eating normally, take in “sick-day carbs” (juice, soft drink, honey, glucose tablets) to avoid ketosis  
+## 💧 Fluids & 🍎 Carbohydrates
+- Drink water or sugar-free fluids **regularly**  
+- If not eating normally, take in “sick-day carbs” (juice, soft drink, honey, glucose tabs)  
 - Aim for ~50 g carbohydrate every 3–4 hours if unable to manage regular meals  
 
 ---
 
 ## 💉 Insulin Adjustments
-- Illness can raise insulin needs  
-- Use correction doses or temporary basal increases if advised  
-- If vomiting or glucose remains high despite extra insulin, contact your diabetes team early  
+- Illness can **raise insulin needs**  
+- Use **correction doses** or **temporary basal increases** if advised  
+- If vomiting or glucose stays high despite extra insulin → **call your diabetes team early**  
 - Record doses, glucose, ketone results, and fluids taken  
 
 ---
 
-## ⚠️ Red Flags — Seek Urgent Medical Care
-- Ketones ≥ 3.0 mmol/L, or rising ketones despite insulin and fluids  
-- Persistent vomiting or inability to keep fluids down  
-- Abdominal pain, rapid breathing, fruity breath, or drowsiness (possible DKA)  
-- Severe dehydration (very little urine, extreme thirst, sunken eyes)  
+## 🚨 Red Flags — Seek Urgent Medical Care
+- Ketones **≥3.0 mmol/L** or rising despite insulin and fluids  
+- Persistent **vomiting** or inability to keep fluids down  
+- Abdominal pain, rapid breathing, fruity breath, drowsiness (possible **DKA**)  
+- Signs of severe dehydration (very little urine, extreme thirst, sunken eyes)  
 
 ---
 
@@ -52,4 +51,4 @@ Being unwell places extra stress on the body. “Sick-day rules” help you mana
 
 ---
 
-*This checklist is for educational purposes only and is not a substitute for professional medical advice. Always follow your personal diabetes care plan and seek medical help promptly when needed.*
+⚠️ *This checklist is for educational purposes only and is not a substitute for professional medical advice. Always follow your personal diabetes care plan and seek medical help promptly when needed.*

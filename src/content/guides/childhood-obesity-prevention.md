@@ -4,6 +4,7 @@ slug: "childhood-obesity-prevention"
 description: "A practical guide to understanding the global rise in childhood obesity, its causes, risks, and strategies for prevention."
 category: "Child & Adolescent Health"
 publishDate: "2025-09-10"
+updatedDate: "2025-09-13"
 tags: ["child nutrition", "obesity", "prevention", "malnutrition"]
 draft: false
 related:
@@ -59,7 +60,8 @@ A: Sugar taxes, restrictions on junk food advertising, healthy school food polic
 - Lancet Commission on Obesity  
 
 ## Related Guides
+- [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents)  
+- [Difference Between Type 1 and Type 2 Diabetes](/guides/type-1-vs-type-2-diabetes)  
+- [Prediabetes & Metabolic Health](/guides/prediabetes)  
 - [Healthy Diets for Children](/guides/healthy-diets-for-children)  
-- [Diabetes in Children and Adolescents](/guides/diabetes-children)  
-- [Child & Adolescent Health Hub](/guides/child-adolescent-health-hub)
 

@@ -4,6 +4,7 @@ slug: "healthy-diets-for-children"
 description: "A guide to building balanced, nutritious diets for children, covering food groups, portion sizes, and practical strategies for families."
 category: "Child & Adolescent Health"
 publishDate: "2025-09-10"
+updatedDate: "2025-09-13"
 tags: ["child nutrition", "healthy eating", "prevention", "diet"]
 draft: false
 related:
@@ -57,6 +58,8 @@ A: Yes, with careful planning to ensure adequate protein, vitamin B12, iron, cal
 - UNICEF: Child nutrition resources
 
 ## Related Guides
+- [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents)  
+- [Difference Between Type 1 and Type 2 Diabetes](/guides/type-1-vs-type-2-diabetes)  
 - [Childhood Obesity Prevention](/guides/childhood-obesity-prevention)  
-- [Diabetes in Children and Adolescents](/guides/diabetes-children)  
-- [Child & Adolescent Health Hub](/guides/child-adolescent-health-hub)
+- [Prediabetes & Metabolic Health](/guides/prediabetes)  
+
