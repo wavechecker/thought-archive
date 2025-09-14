@@ -1,103 +1,196 @@
 ---
-import SchemaInfectiousDisease from "@/components/SchemaInfectiousDisease.astro";
+/**
+ * GuideLayout.astro
+ * Renders one guide page with SEO + JSON-LD (Article/WebPage, optional MedicalCondition, FAQPage, BreadcrumbList)
+ */
+import { isValidDate } from "@/lib/date.ts";
 
-const url = new URL(Astro.url);
-const fm = Astro.props.frontmatter ?? {};
+// Props expected from guide frontmatter
+const {
+  title,
+  description,
+  category,
+  publishDate,
+  updatedDate,
+  tags = [],
+  heroImage = "/images/lada-guide-hero.jpg",
+  // optional extras from frontmatter:
+  faq = [],            // e.g., [{ q: "Question", a: "Answer" }]
+  sameAs = [],         // external canonical refs (NCBI, ADA, etc.)
+  breadcrumbs = [],    // optional override, else built from category + current page
+  // optional control for MedicalCondition LD (lets non-diabetes pages opt-in)
+  medicalConditionName,           // e.g., "Latent Autoimmune Diabetes in Adults"
+  medicalConditionAlternateName,  // e.g., ["LADA","Type 1.5 diabetes"]
+  medicalConditionDescription,    // custom description
+} = Astro.props;
 
-// Canonical: use frontmatter if provided, else self URL
-const canonicalUrl = fm.canonical ?? url.href;
+// Defensive dates
+const pub = isValidDate(publishDate) ? publishDate : undefined;
+const mod = isValidDate(updatedDate) ? updatedDate : pub;
 
-// Site origin for absolute assets
-const siteOrigin = "https://patientguide.io";
+// Canonical URL (requires `site` in astro.config)
+const site = Astro.site?.toString().replace(/\/+$/, "") ?? "https://patientguide.io";
+const canonicalPath = Astro.url.pathname.replace(/\/+$/, "") || "/guides";
+const canonicalUrl = `${site}${canonicalPath}`;
 
-// OG/Twitter image (absolute)
-const ogImage = fm.image ?? "/og-default.png";
-const ogImageAbs = ogImage.startsWith("http") ? ogImage : `${siteOrigin}${ogImage}`;
+// Normalize hero image to absolute for OG/Twitter
+const heroAbs = heroImage
+  ? (heroImage.startsWith("http") ? heroImage : `${site}${heroImage}`)
+  : undefined;
 
-const title = fm.title ?? "Untitled";
-const description = fm.description ?? "";
+// Default breadcrumbs if not provided
+const bc = breadcrumbs.length
+  ? breadcrumbs
+  : [
+      { name: "Guides", url: `${site}/guides` },
+      { name: category ?? "General", url: `${site}/guides?category=${encodeURIComponent(category ?? "General")}` },
+      { name: title ?? "Guide", url: canonicalUrl },
+    ];
 
-// Structured data: Article (baseline, always safe)
-const jsonLdObj = {
+// JSON-LD 1) Article/WebPage
+const articleLd = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": ["Article", "WebPage"],
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
   "headline": title,
-  "description": description || undefined,
-  "datePublished": fm.publishDate ?? undefined,
-  "dateModified": fm.updatedDate ?? fm.publishDate ?? undefined,
-  "author": { "@type": "Organization", "name": "Thought Archive" },
-  "mainEntityOfPage": canonicalUrl,
-  "image": ogImageAbs
+  "description": description ?? "",
+  "keywords": tags,
+  "datePublished": pub ?? undefined,
+  "dateModified": mod ?? undefined,
+  "author": { "@type": "Organization", "name": "patientguide.io", "url": site },
+  "publisher": {
+    "@type": "Organization",
+    "name": "patientguide.io",
+    "logo": { "@type": "ImageObject", "url": `${site}/logo.png` }
+  },
+  "isPartOf": {
+    "@type": "Collection",
+    "name": `${category ?? "Guides"} Guides`,
+    "url": `${site}/guides?category=${encodeURIComponent(category ?? "General")}`
+  },
+  "inLanguage": "en",
+  "image": heroAbs,
+  // Lightweight topical hint; safe to keep
+  "about": (title ? { "@type": "Thing", "name": title, "sameAs": sameAs } : undefined)
 };
-const jsonLd = JSON.stringify(jsonLdObj);
 
-// Backward-compatible gate for InfectiousDisease schema
-const isInfectious = (fm?.category ?? "") === "Infectious Diseases";
-const schemaReady = !!fm?.infectiousAgentClass || fm?.schema === true;
+// Should we emit MedicalCondition LD?
+// Emit if either (a) frontmatter provides medicalConditionName, or (b) category is clearly medical (e.g., "Diabetes")
+const shouldEmitCondition =
+  typeof medicalConditionName === "string" && medicalConditionName.trim().length > 0
+  || (category && ["Diabetes","Infectious Diseases","Heart & Circulation","Vaccination","Mental Health","Cancer","Neurology","General Health","Child & Adolescent Health","End of Life"].includes(category));
+
+// JSON-LD 2) MedicalCondition (only if shouldEmitCondition)
+const conditionLd = shouldEmitCondition
+  ? {
+      "@context": "https://schema.org",
+      "@type": "MedicalCondition",
+      "name": medicalConditionName ?? "Latent Autoimmune Diabetes in Adults",
+      "alternateName": medicalConditionAlternateName ?? ["LADA", "Type 1.5 diabetes"],
+      "description": medicalConditionDescription ?? "An adult-onset autoimmune diabetes characterized by positive islet autoantibodies (often GAD) and a slower progression to insulin dependence compared with classic type 1 diabetes.",
+      "signOrSymptom": ["Hyperglycemia","Polydipsia","Polyuria","Unintentional weight loss","Fatigue"],
+      "associatedAnatomy": { "@type": "AnatomicalStructure", "name": "Pancreatic islets (beta cells)" },
+      "cause": "Autoimmune destruction of pancreatic beta cells.",
+      "possibleTreatment": [
+        "Insulin therapy",
+        "DPP-4 inhibitors",
+        "GLP-1 receptor agonists",
+        "Thiazolidinediones",
+        "Lifestyle modification (diet, exercise)"
+      ],
+      "differentialDiagnosis": [
+        "Type 1 diabetes (autoimmune, rapid progression)",
+        "Type 2 diabetes (insulin resistance, antibody negative)"
+      ],
+      "medicalSpecialty": ["Endocrinology", "Diabetology"],
+      "sameAs": sameAs,
+      "url": canonicalUrl
+    }
+  : null;
+
+// JSON-LD 3) FAQPage (only emit if you have Q&A)
+const faqLd = Array.isArray(faq) && faq.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faq.map((item) => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": { "@type": "Answer", "text": item.a }
+      }))
+    }
+  : null;
+
+// JSON-LD 4) BreadcrumbList
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": bc.map((b, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": b.name,
+    "item": b.url
+  }))
+};
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Canonical -->
+    <title>{title} | patientguide.io</title>
+    <meta name="description" content={description ?? ""} />
     <link rel="canonical" href={canonicalUrl} />
 
-    <!-- Structured data (Article baseline) -->
-    <script type="application/ld+json">{jsonLd}</script>
-
-    <!-- Optional Medical/InfectiousDisease schema -->
-    {isInfectious && schemaReady ? (
-      <SchemaInfectiousDisease
-        title={fm.title}
-        description={fm.description}
-        publishDate={fm.publishDate}
-        updatedDate={fm.updatedDate}
-        diseaseName={fm.diseaseName ?? fm.title}
-        infectiousAgentClass={fm.infectiousAgentClass}
-        infectiousAgent={fm.infectiousAgent}
-        transmissionMethods={fm.transmissionMethods}
-        reservoirs={fm.reservoirs}
-        regions={fm.regions}
-        symptoms={fm.symptoms}
-        treatments={fm.treatments}
-        sameAs={fm.sameAs}
-        faqs={fm.faqs}
-      />
-    ) : null}
-
-    <!-- Open Graph -->
+    <!-- OpenGraph -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={description ?? ""} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={ogImageAbs} />
-    <meta property="og:site_name" content="PatientGuide.io" />
+    <meta property="og:site_name" content="patientguide.io" />
+    {heroAbs && <meta property="og:image" content={heroAbs} />}
+    {pub && <meta property="article:published_time" content={pub} />}
+    {mod && <meta property="article:modified_time" content={mod} />}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImageAbs} />
+    <meta name="twitter:description" content={description ?? ""} />
+    {heroAbs && <meta name="twitter:image" content={heroAbs} />}
+    <meta name="twitter:site" content="@patientguide" />
+
+    <!-- JSON-LD 1) Article/WebPage -->
+    <script type="application/ld+json">
+      {JSON.stringify(articleLd)}
+    </script>
+
+    <!-- JSON-LD 2) MedicalCondition (conditional) -->
+    {conditionLd && (
+      <script type="application/ld+json">
+        {JSON.stringify(conditionLd)}
+      </script>
+    )}
+
+    <!-- JSON-LD 3) FAQPage (conditional) -->
+    {faqLd && (
+      <script type="application/ld+json">
+        {JSON.stringify(faqLd)}
+      </script>
+    )}
+
+    <!-- JSON-LD 4) BreadcrumbList -->
+    <script type="application/ld+json">
+      {JSON.stringify(breadcrumbLd)}
+    </script>
   </head>
 
-  <body>
-    <main class="prose max-w-3xl mx-auto px-4 py-8">
-      <h1>{title}</h1>
-
-      <!-- Optional hero image -->
-      <img
-        src={ogImage}
-        alt={title}
-        style="width:100%; height:auto; aspect-ratio:1200/630; object-fit:cover; border-radius:12px; margin-top:1rem;"
-      />
-
-      <slot />
+  <body class="min-h-screen">
+    <main class="container mx-auto px-4 py-8">
+      <article class="prose lg:prose-lg max-w-none">
+        <slot />
+      </article>
     </main>
   </body>
 </html>
+
 
 

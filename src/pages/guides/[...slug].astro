@@ -1,31 +1,23 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import GuideLayout from "@/layouts/GuideLayout.astro";
 import { getCollection, getEntryBySlug } from "astro:content";
 import { isValidDate, fmt } from "@/lib/date";
 
 export const prerender = true;
 
-/**
- * IMPORTANT: For a rest route like [...slug], Astro v5 expects
- * getStaticPaths() to return STRING params (e.g. "a/b/c"), not arrays.
- * We also exclude drafts so they don't get built or linked.
- */
 export async function getStaticPaths() {
   const entries = await getCollection("guides", ({ data }) => data?.draft !== true);
-  return entries.map((e) => ({ params: { slug: e.slug } })); // e.slug may include "/" for nested paths
+  return entries.map((e) => ({ params: { slug: e.slug } }));
 }
 
-// With the above, Astro.params.slug will be a STRING like "section/slug"
 const slug = Astro.params.slug as string;
 
-// Hard guard → never 500 on bad slugs
 if (!slug || typeof slug !== "string") {
   return Astro.redirect("/404");
 }
 
 const entry = await getEntryBySlug("guides", slug);
 
-// Stale path or draft → 404
 if (!entry || entry.data?.draft === true) {
   return Astro.redirect("/404");
 }
@@ -33,10 +25,9 @@ if (!entry || entry.data?.draft === true) {
 const { Content } = await entry.render();
 const data = entry.data;
 
-const canonical = `https://patientguide.io/guides/${entry.slug}`;
+const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
+const canonical = `${site}/guides/${entry.slug}`;
 
-// Resolve "Related Guides" from frontmatter `related`
-// Accepts either "/guides/foo" or "foo" form
 const allGuides = await getCollection("guides", ({ data }) => data?.draft !== true);
 function resolveRelated(rel: unknown) {
   if (!Array.isArray(rel)) return [];
@@ -50,15 +41,23 @@ function resolveRelated(rel: unknown) {
 }
 const related = resolveRelated(data.related);
 
-// Hero image (frontmatter override or fallback)
-const hero = data?.image ?? "/og-default.png";
+const hero = data?.image ?? data?.heroImage ?? "/og-default.png";
+
+const published =
+  data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : "";
+const updated =
+  data?.updatedDate && isValidDate(data.updatedDate) ? ` • Updated ${fmt(data.updatedDate)}` : "";
 ---
 
-<Layout frontmatter={data}>
-  <Fragment slot="head">
-    <link rel="canonical" href={canonical} />
-  </Fragment>
-
+<GuideLayout
+  {...data}
+  heroImage={hero}
+  breadcrumbs={[
+    { name: "Guides", url: `${site}/guides` },
+    { name: data?.category ?? "General", url: `${site}/guides?category=${encodeURIComponent(data?.category ?? "General")}` },
+    { name: data?.title ?? "Guide", url: canonical }
+  ]}
+>
   <article class="mx-auto max-w-3xl">
     <header class="mb-6">
       <p class="text-xs uppercase tracking-wide text-slate-500">
@@ -70,8 +69,7 @@ const hero = data?.image ?? "/og-default.png";
       </h1>
 
       <p class="mt-2 text-sm text-slate-500">
-        {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
-        {data?.updatedDate && isValidDate(data.updatedDate) ? ` • Updated ${fmt(data.updatedDate)}` : ""}
+        {published}{updated}
       </p>
 
       <img
@@ -109,5 +107,7 @@ const hero = data?.image ?? "/og-default.png";
       </section>
     )}
   </article>
-</Layout>
+</GuideLayout>
+
+
 
