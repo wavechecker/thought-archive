@@ -1,24 +1,50 @@
 # Toggle maintenance mode by uncommenting the next line
 # /*                                  /maintenance.html                 200
 
-# --- Canonicalizations ---
+# ──────────────────────────────────────────────────────────────────────────────
+# Canonicalizations & slugs
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Old "heart" section → canonical "heart-circulation"
 /guides/heart                          /guides/heart-circulation/       301!
 /guides/heart/                         /guides/heart-circulation/       301!
 /guides/heart/*                        /guides/heart-circulation/:splat 301!
 
+# Canonicalize Vaccinations → Vaccination (singular)
+/guides/vaccinations                   /guides/vaccination/              301!
+/guides/vaccinations/                  /guides/vaccination/              301!
+
+# Category route: "Vaccinations" → "vaccination"
+/guides/category/Vaccinations          /guides/category/vaccination/     301!
+/guides/category/Vaccinations/         /guides/category/vaccination/     301!
+
+# Enforce trailing slash for ALL category pages (after specific rules above)
+/guides/category/:slug                 /guides/category/:slug/           301!
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Targeted post slugs & typos
+# ──────────────────────────────────────────────────────────────────────────────
+
 # RFK post cleanup
-/posts/wiki-draft-rfk-vaccine-2025     /posts/rfk-vaccine-2025          301!
-/posts/wiki-draft-rfk-vaccine-2025/    /posts/rfk-vaccine-2025          301!
+/posts/wiki-draft-rfk-vaccine-2025     /posts/rfk-vaccine-2025           301!
+/posts/wiki-draft-rfk-vaccine-2025/    /posts/rfk-vaccine-2025           301!
 
 # Legionnaires typo → correct slug
-/guides/legionairres-disease           /guides/legionnaires-disease     301!
-/guides/legionairres-disease/          /guides/legionnaires-disease     301!
+/guides/legionairres-disease           /guides/legionnaires-disease      301!
+/guides/legionairres-disease/          /guides/legionnaires-disease      301!
 
-# --- Gone for good (use a real target for local parsers) ---
+# ──────────────────────────────────────────────────────────────────────────────
+# Gone for good
+# ──────────────────────────────────────────────────────────────────────────────
+
 /posts/governments-cancel-science      /404.html                         410
 /posts/governments-cancel-science/     /404.html                         410
 
-# --- Bot probe hard 404s ---
+# ──────────────────────────────────────────────────────────────────────────────
+# Bot probe hard 404s
+# ──────────────────────────────────────────────────────────────────────────────
+
 /wp-login.php                          /404.html                         404
 /xmlrpc.php                            /404.html                         404
 /phpmyadmin/*                          /404.html                         404
+
