@@ -1,17 +1,44 @@
 ---
-title: "Continuous Glucose Monitors (CGMs) vs Finger-Prick Testing"
-slug: "cgm-vs-finger-prick"
-description: "How CGMs work, their benefits and limits, and when to confirm with a finger-prick test."
-category: "Diabetes"
-publishDate: "2025-08-18"
-updatedDate: "2025-08-21"
-tags: ["Type 1 Diabetes", "CGM", "blood glucose", "patientguide"]
+title: Continuous Glucose Monitors (CGMs) vs Finger-Prick Testing
+slug: cgm-vs-finger-prick
+description: >-
+  How CGMs work, their benefits and limits, and when to confirm with a
+  finger-prick test.
+category: Diabetes
+publishDate: '2025-08-18'
+updatedDate: '2025-08-21'
+tags:
+  - Type 1 Diabetes
+  - CGM
+  - blood glucose
+  - patientguide
 related:
   - /guides/blood-glucose-testing
   - /guides/emergency-actions
   - /guides/insulin-administration
+draft: true
+schema:
+  medicalCondition:
+    name: Continuous Glucose Monitors (CGMs) vs Finger-Prick Testing
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is continuous glucose monitors (cgms) vs finger-prick testing?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 Monitoring blood glucose isn't busywork — it's what keeps you safe and gives you agency. Two tools dominate: the **finger‑prick meter** and the **continuous glucose monitor (CGM)**. They serve different purposes and, used together, cover each other's blind spots.
 
 ## Finger‑Prick Testing (BGM)

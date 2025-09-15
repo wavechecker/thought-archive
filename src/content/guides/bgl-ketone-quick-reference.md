@@ -1,16 +1,44 @@
 ---
-title: "BGL & Ketones — Quick Reference Chart"
-slug: "bgl-ketone-quick-reference"
-description: "At-a-glance chart for safe and unsafe blood glucose and ketone levels in Type 1 Diabetes."
-category: "Diabetes"
-publishDate: "2025-08-22"
-updatedDate: "2025-08-22"
-tags: ["Type 1 Diabetes", "blood glucose", "ketones", "quick reference", "patientguide"]
+title: BGL & Ketones — Quick Reference Chart
+slug: bgl-ketone-quick-reference
+description: >-
+  At-a-glance chart for safe and unsafe blood glucose and ketone levels in Type
+  1 Diabetes.
+category: Diabetes
+publishDate: '2025-08-22'
+updatedDate: '2025-08-22'
+tags:
+  - Type 1 Diabetes
+  - blood glucose
+  - ketones
+  - quick reference
+  - patientguide
 related:
   - /guides/bgl-and-ketone-targets
   - /guides/emergency-actions
+draft: true
+schema:
+  medicalCondition:
+    name: BGL & Ketones — Quick Reference Chart
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is bgl & ketones — quick reference chart?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # BGL & Ketones — Quick Reference Chart
 
 Keep this as a simple reminder of when things are OK — and when to act fast.  

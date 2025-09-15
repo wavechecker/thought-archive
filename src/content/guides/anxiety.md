@@ -1,13 +1,39 @@
 ---
-title: "Anxiety Disorders"
-slug: "anxiety"
-description: "Overview of anxiety disorders, their causes, symptoms, treatments, and long-term outlook."
-category: "Mental Health"
-publishDate: "2025-09-03"
-tags: ["anxiety", "mental health", "WHO"]
+title: Anxiety Disorders
+slug: anxiety
+description: >-
+  Overview of anxiety disorders, their causes, symptoms, treatments, and
+  long-term outlook.
+category: Mental Health
+publishDate: '2025-09-03'
+tags:
+  - anxiety
+  - mental health
+  - WHO
 draft: false
+updatedDate: '2025-09-03'
+schema:
+  medicalCondition:
+    name: Anxiety Disorders
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is anxiety disorders?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 ## Intro
 Anxiety disorders are among the most common mental health conditions worldwide. While occasional anxiety is normal, anxiety disorders involve persistent, excessive fear or worry that interferes with daily life. The good news: anxiety disorders are highly treatable, and many people achieve lasting recovery.
 

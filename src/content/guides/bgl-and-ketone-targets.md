@@ -1,19 +1,46 @@
 ---
-title: "Blood Glucose and Ketones — What's Normal, What's Not"
-slug: "bgl-and-ketone-targets"
-description: "Clear guide to safe blood glucose and ketone ranges in Type 1 Diabetes, and when to take urgent action."
-publishDate: "2025-08-22"
-updatedDate: "2025-08-22"
-category: "Diabetes"
-tags: ["Type 1 Diabetes", "blood glucose", "ketones", "targets", "patientguide"]
+title: 'Blood Glucose and Ketones — What''s Normal, What''s Not'
+slug: bgl-and-ketone-targets
+description: >-
+  Clear guide to safe blood glucose and ketone ranges in Type 1 Diabetes, and
+  when to take urgent action.
+publishDate: '2025-08-22'
+updatedDate: '2025-08-22'
+category: Diabetes
+tags:
+  - Type 1 Diabetes
+  - blood glucose
+  - ketones
+  - targets
+  - patientguide
 related:
   - /guides/bgl-ketone-quick-reference
   - /guides/blood-glucose-testing
   - /guides/emergency-actions
   - /guides/sick-day-management
+draft: true
+schema:
+  medicalCondition:
+    name: 'Blood Glucose and Ketones — What''s Normal, What''s Not'
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: 'What is blood glucose and ketones — what''s normal, what''s not?'
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
-
 # Blood Glucose and Ketones — What's Normal, What's Not
 
 👉 Looking for the simple chart?  

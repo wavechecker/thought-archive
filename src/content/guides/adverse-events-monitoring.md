@@ -1,13 +1,39 @@
 ---
-title: "Adverse Events Monitoring in Vaccines"
-slug: "adverse-events-monitoring"
-description: "How systems like VAERS, EudraVigilance, and AusVaxSafety monitor vaccine safety after rollout."
-category: "Vaccination"
-publishDate: "2025-08-26"
-tags: ["safety", "monitoring", "policy"]
+title: Adverse Events Monitoring in Vaccines
+slug: adverse-events-monitoring
+description: >-
+  How systems like VAERS, EudraVigilance, and AusVaxSafety monitor vaccine
+  safety after rollout.
+category: Vaccination
+publishDate: '2025-08-26'
+tags:
+  - safety
+  - monitoring
+  - policy
 draft: false
+updatedDate: '2025-08-26'
+schema:
+  medicalCondition:
+    name: Adverse Events Monitoring in Vaccines
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is adverse events monitoring in vaccines?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Adverse Events Monitoring in Vaccines
 
 ## Intro

@@ -1,16 +1,41 @@
 ---
-title: "Bowel Cancer — Guide Hub"
-slug: "bowel-cancer"
-description: "Guides on risks, screening, treatment, living well, and family risk for bowel cancer."
-category: "Cancer"
-publishDate: "2025-08-20"
-updatedDate: "2025-08-29"
-hubKey: "Bowel Cancer"
+title: Bowel Cancer — Guide Hub
+slug: bowel-cancer
+description: >-
+  Guides on risks, screening, treatment, living well, and family risk for bowel
+  cancer.
+category: Cancer
+publishDate: '2025-08-20'
+updatedDate: '2025-08-29'
+hubKey: Bowel Cancer
 draft: false
-tags: ["cancer", "bowel cancer", "patientguide", "hub"]
+tags:
+  - cancer
+  - bowel cancer
+  - patientguide
+  - hub
+schema:
+  medicalCondition:
+    name: Bowel Cancer — Guide Hub
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is bowel cancer — guide hub?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
-
 # Bowel Cancer — Guide Hub
 
 Bowel cancer (colorectal cancer) is one of the most common cancers worldwide. Early detection greatly improves outcomes, making screening and awareness essential.

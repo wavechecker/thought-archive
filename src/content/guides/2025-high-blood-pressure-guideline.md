@@ -1,13 +1,48 @@
 ---
-title: "New 2025 High Blood Pressure Guideline: Prevention, Early Treatment, and Brain Health"
-slug: "2025-high-blood-pressure-guideline"
-description: "The 2025 AHA/ACC guideline emphasizes prevention, early treatment, pregnancy care, and brain health in managing high blood pressure."
-category: "Heart & Circulation"
-publishDate: "2025-08-22"
+title: >-
+  New 2025 High Blood Pressure Guideline: Prevention, Early Treatment, and Brain
+  Health
+slug: 2025-high-blood-pressure-guideline
+description: >-
+  The 2025 AHA/ACC guideline emphasizes prevention, early treatment, pregnancy
+  care, and brain health in managing high blood pressure.
+category: Heart & Circulation
+publishDate: '2025-08-22'
 draft: false
-tags: ["hypertension", "heart", "guidelines", "cardiology", "prevention", "dementia"]
+tags:
+  - hypertension
+  - heart
+  - guidelines
+  - cardiology
+  - prevention
+  - dementia
+updatedDate: '2025-08-22'
+schema:
+  medicalCondition:
+    name: >-
+      New 2025 High Blood Pressure Guideline: Prevention, Early Treatment, and
+      Brain Health
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: >-
+      What is new 2025 high blood pressure guideline: prevention, early
+      treatment, and brain health?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # New 2025 High Blood Pressure Guideline: Prevention, Early Treatment, and Brain Health  
 
 **Nearly half of U.S. adults have high blood pressure**, and it remains the leading preventable cause of heart disease, stroke, kidney failure, and now — cognitive decline. The new **2025 Joint Guideline from the American Heart Association (AHA) and American College of Cardiology (ACC)** takes aim at this risk with updated recommendations that replace the 2017 version.  

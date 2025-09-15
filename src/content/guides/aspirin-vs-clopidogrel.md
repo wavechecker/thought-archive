@@ -1,13 +1,41 @@
 ---
-title: "Aspirin vs Clopidogrel — Which Is Better for Heart Disease?"
-slug: "aspirin-vs-clopidogrel"
-description: "How aspirin and clopidogrel compare for preventing heart attacks and strokes, including safety, side effects, and latest evidence."
-category: "Heart & Circulation"
-publishDate: "2025-09-01"
-tags: ["aspirin", "clopidogrel", "heart attack", "stroke", "antiplatelet"]
+title: Aspirin vs Clopidogrel — Which Is Better for Heart Disease?
+slug: aspirin-vs-clopidogrel
+description: >-
+  How aspirin and clopidogrel compare for preventing heart attacks and strokes,
+  including safety, side effects, and latest evidence.
+category: Heart & Circulation
+publishDate: '2025-09-01'
+tags:
+  - aspirin
+  - clopidogrel
+  - heart attack
+  - stroke
+  - antiplatelet
 draft: false
+updatedDate: '2025-09-01'
+schema:
+  medicalCondition:
+    name: Aspirin vs Clopidogrel — Which Is Better for Heart Disease?
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is aspirin vs clopidogrel — which is better for heart disease??
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Aspirin vs Clopidogrel — Which Is Better for Heart Disease?
 
 ## Intro  

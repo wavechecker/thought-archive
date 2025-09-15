@@ -1,17 +1,43 @@
 ---
-title: "Bowel Cancer Screening — Early Detection Matters"
-slug: "bowel-cancer-screening"
-description: "How bowel cancer screening works, who should be tested, and why early detection saves lives."
-category: "Cancer"
-publishDate: "2025-08-21"
-updatedDate: "2025-08-21"
-tags: ["cancer", "bowel cancer", "screening", "patientguide"]
+title: Bowel Cancer Screening — Early Detection Matters
+slug: bowel-cancer-screening
+description: >-
+  How bowel cancer screening works, who should be tested, and why early
+  detection saves lives.
+category: Cancer
+publishDate: '2025-08-21'
+updatedDate: '2025-08-21'
+tags:
+  - cancer
+  - bowel cancer
+  - screening
+  - patientguide
 related:
   - /guides/bowel-cancer-treatment
   - /guides/living-with-bowel-cancer
+draft: true
+schema:
+  medicalCondition:
+    name: Bowel Cancer Screening — Early Detection Matters
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is bowel cancer screening — early detection matters?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
-
 # Bowel Cancer Screening — Colonoscopy, FIT Test, and Early Detection
 
 Screening can detect bowel cancer before symptoms develop, when treatment is most effective. In many cases, it can even prevent cancer by finding and removing polyps before they turn malignant.

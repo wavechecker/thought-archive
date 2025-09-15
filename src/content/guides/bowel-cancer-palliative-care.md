@@ -1,13 +1,41 @@
 ---
-title: "Palliative Care in Bowel Cancer — Comfort, Dignity, and Support"
+title: 'Palliative Care in Bowel Cancer — Comfort, Dignity, and Support'
 slug: bowel-cancer-palliative-care
-description: "When cure is no longer possible, palliative care focuses on quality of life, symptom relief, and supporting patients and families."
-category: "Cancer"
-publishDate: "2025-08-20"
+description: >-
+  When cure is no longer possible, palliative care focuses on quality of life,
+  symptom relief, and supporting patients and families.
+category: Cancer
+publishDate: '2025-08-20'
 draft: false
-tags: ["cancer", "bowel cancer", "palliative care", "support", "patientguide"]
+tags:
+  - cancer
+  - bowel cancer
+  - palliative care
+  - support
+  - patientguide
+updatedDate: '2025-08-20'
+schema:
+  medicalCondition:
+    name: 'Palliative Care in Bowel Cancer — Comfort, Dignity, and Support'
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: 'What is palliative care in bowel cancer — comfort, dignity, and support?'
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Palliative Care in Bowel Cancer — Comfort, Dignity, and Support
 
 For some people with bowel cancer, treatment cannot fully remove or control the disease. **Palliative care** is not about "giving up." It's about shifting the focus from cure to **comfort, dignity, and quality of life** — for both patients and their families.

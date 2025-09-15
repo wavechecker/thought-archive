@@ -1,13 +1,39 @@
 ---
-title: "Aluminum in Vaccines: Safety Evidence and Controversy"
-slug: "aluminum-in-vaccines"
-description: "What aluminum adjuvants are, how they work, and what the evidence says about safety."
-category: "Vaccination"
-publishDate: "2025-08-26"
-tags: ["adjuvants", "safety", "autism"]
+title: 'Aluminum in Vaccines: Safety Evidence and Controversy'
+slug: aluminum-in-vaccines
+description: >-
+  What aluminum adjuvants are, how they work, and what the evidence says about
+  safety.
+category: Vaccination
+publishDate: '2025-08-26'
+tags:
+  - adjuvants
+  - safety
+  - autism
 draft: false
+updatedDate: '2025-08-26'
+schema:
+  medicalCondition:
+    name: 'Aluminum in Vaccines: Safety Evidence and Controversy'
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: 'What is aluminum in vaccines: safety evidence and controversy?'
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Aluminum in Vaccines: Safety Evidence and Controversy
 
 ## Intro

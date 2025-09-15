@@ -1,13 +1,43 @@
 ---
-title: "ADHD in Preschoolers — Why Behavioral Support Comes Before Medication"
-slug: "adhd-preschool-behavior-first"
-description: "What parents should know about ADHD diagnosis and treatment in children aged 3–5, and why guidelines recommend behavioral approaches before medication."
-category: "Child & Adolescent Health"
-publishDate: "2025-08-31"
+title: ADHD in Preschoolers — Why Behavioral Support Comes Before Medication
+slug: adhd-preschool-behavior-first
+description: >-
+  What parents should know about ADHD diagnosis and treatment in children aged
+  3–5, and why guidelines recommend behavioral approaches before medication.
+category: Child & Adolescent Health
+publishDate: '2025-08-31'
 draft: false
-tags: ["ADHD", "preschool", "behavior therapy", "medication", "parenting"]
+tags:
+  - ADHD
+  - preschool
+  - behavior therapy
+  - medication
+  - parenting
+updatedDate: '2025-08-31'
+schema:
+  medicalCondition:
+    name: ADHD in Preschoolers — Why Behavioral Support Comes Before Medication
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: >-
+      What is adhd in preschoolers — why behavioral support comes before
+      medication?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # ADHD in Preschoolers — Why Behavioral Support Comes Before Medication
 
 ## Intro

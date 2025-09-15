@@ -1,19 +1,45 @@
 ---
-title: "Cardiac Rehabilitation After a Heart Event"
-slug: "cardiac-rehabilitation"
-description: "Why rehab matters after heart attack, surgery, or stents — exercise, recovery, and long-term heart health."
-category: "Heart & Circulation"
-publishDate: "2025-08-20"
-updatedDate: "2025-08-21"
-tags: ["cardiology", "rehabilitation", "heart", "patientguide"]
+title: Cardiac Rehabilitation After a Heart Event
+slug: cardiac-rehabilitation
+description: >-
+  Why rehab matters after heart attack, surgery, or stents — exercise, recovery,
+  and long-term heart health.
+category: Heart & Circulation
+publishDate: '2025-08-20'
+updatedDate: '2025-08-21'
+tags:
+  - cardiology
+  - rehabilitation
+  - heart
+  - patientguide
 related:
-
   - /guides/coronary-angiography
   - /guides/heart-medications
   - /guides/preventing-heart-disease
   - /guides/hormone-therapy-menopause/
+draft: true
+schema:
+  medicalCondition:
+    name: Cardiac Rehabilitation After a Heart Event
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is cardiac rehabilitation after a heart event?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Cardiac Rehabilitation After a Heart Event
 
 Cardiac rehabilitation (rehab) is a structured program of exercise, education, and support after a heart attack, surgery, or diagnosis of heart disease. It helps you recover safely and reduce the risk of future problems.

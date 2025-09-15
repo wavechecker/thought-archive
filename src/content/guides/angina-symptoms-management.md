@@ -1,12 +1,40 @@
 ---
-title: "Angina — Symptoms & Management"
-description: "How to recognize angina, what causes it, when to seek care, and treatment options."
-category: "Heart & Circulation"
-publishDate: "2025-08-30"
+title: Angina — Symptoms & Management
+description: >-
+  How to recognize angina, what causes it, when to seek care, and treatment
+  options.
+category: Heart & Circulation
+publishDate: '2025-08-30'
 draft: false
-tags: ["angina", "chest pain", "heart", "circulation", "patientguide"]
+tags:
+  - angina
+  - chest pain
+  - heart
+  - circulation
+  - patientguide
+updatedDate: '2025-08-30'
+schema:
+  medicalCondition:
+    name: Angina — Symptoms & Management
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is angina — symptoms & management?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 ## Intro
 Angina is chest discomfort caused by reduced blood flow to the heart muscle. It is a warning sign of underlying heart disease and should never be ignored. Recognizing angina and managing it early can help prevent a heart attack.
 

@@ -29,11 +29,66 @@ if (!entry || entry.data?.draft === true) {
 const { Content } = await entry.render();
 const data = entry.data;
 
-// Hero image (frontmatter override or fallback)
+// Site + canonical
+const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
+const url = `${site}/posts/${entry.slug}`;
+
+// Hero image (frontmatter override or fallback) + absolute URL for sharing/LD
 const hero = data?.image ?? "/og-default.png";
+const heroAbs = hero.startsWith("http") ? hero : `${site}${hero}`;
+
+// Dates
+const pub = isValidDate?.(data.publishDate) ? data.publishDate : undefined;
+const mod = isValidDate?.(data.updatedDate) ? data.updatedDate : pub;
+
+// ---------- JSON-LD (BlogPosting) ----------
+const blogLd = {
+  "@context": "https://schema.org",
+  "@type": ["BlogPosting", "Article"],
+  "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+  "headline": data.title,
+  "description": data.description ?? "",
+  "image": heroAbs,
+  "datePublished": pub,
+  "dateModified": mod,
+  "author": { "@type": "Person", "name": data.author ?? "patientguide.io" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "patientguide.io",
+    "logo": { "@type": "ImageObject", "url": `${site}/logo.png` }
+  },
+  "inLanguage": "en",
+  "url": url,
+  "keywords": Array.isArray(data.tags) && data.tags.length ? data.tags : undefined
+};
 ---
 
 <Layout frontmatter={data}>
+  <!-- Put meta + JSON-LD into the layout head -->
+  <Fragment slot="head">
+    <link rel="canonical" href={url} />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={data.title} />
+    <meta property="og:description" content={data.description ?? ""} />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content="patientguide.io" />
+    <meta property="og:image" content={heroAbs} />
+    {pub && <meta property="article:published_time" content={pub} />}
+    {mod && <meta property="article:modified_time" content={mod} />}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={data.title} />
+    <meta name="twitter:description" content={data.description ?? ""} />
+    <meta name="twitter:image" content={heroAbs} />
+    <meta name="twitter:site" content="@patientguide" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(blogLd)} />
+  </Fragment>
+
   <article class="mx-auto max-w-3xl">
     <header class="mb-6">
       <h1 class="text-3xl/tight font-semibold tracking-tight">
@@ -41,8 +96,8 @@ const hero = data?.image ?? "/og-default.png";
       </h1>
 
       <p class="mt-2 text-sm text-slate-500">
-        {data?.publishDate && isValidDate(data.publishDate) ? fmt(data.publishDate) : ""}
-        {data?.updatedDate && ` • Updated ${fmt(data.updatedDate)}`}
+        {pub ? fmt(pub) : ""}
+        {mod && pub !== mod ? ` • Updated ${fmt(mod)}` : ""}
       </p>
 
       <img
@@ -68,6 +123,5 @@ const hero = data?.image ?? "/og-default.png";
     )}
   </article>
 </Layout>
-
 
 

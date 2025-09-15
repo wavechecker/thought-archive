@@ -3,13 +3,16 @@
  * GuideLayout.astro
  * Renders one guide page with SEO + JSON-LD:
  *  - Article/WebPage (always)
- *  - MedicalCondition (if schema.medicalCondition provided)
- *  - FAQPage (if faq array provided)
+ *  - MedicalCondition (if schema.medicalCondition)
+ *  - MedicalDevice (if schema.medicalDevice)
+ *  - MedicalProcedure (if schema.medicalProcedure)
+ *  - MedicalSignOrSymptom (if schema.medicalSignOrSymptom)
+ *  - FAQPage (if faq array)
  *  - BreadcrumbList (Guides → Category → Title)
  */
 import { isValidDate } from "@/lib/date.ts";
 
-// Frontmatter props (passed via [...slug].astro)
+// Frontmatter props
 const {
   title,
   description,
@@ -19,28 +22,28 @@ const {
   tags = [],
   heroImage = "/images/lada-guide-hero.jpg",
 
-  // Optional structured inputs in frontmatter:
-  faq = [],                 // [{ q: string, a: string }]
-  sameAs = [],             // external canonical refs (WHO, MedlinePlus, etc.)
+  // Structured inputs
+  faq = [],                 // [{ q, a }]
+  sameAs = [],             // external refs (WHO, MedlinePlus, etc.)
   breadcrumbs = [],        // optional manual override
-  schema = {}              // { medicalCondition: {...} }
+  schema = {}              // { medicalCondition?, medicalDevice?, medicalProcedure?, medicalSignOrSymptom? }
 } = Astro.props;
 
-// Defensive dates
+// Dates
 const pub = isValidDate(publishDate) ? publishDate : undefined;
 const mod = isValidDate(updatedDate) ? updatedDate : pub;
 
-// Canonical URL (requires `site` in astro.config)
+// Canonical URL
 const site = Astro.site?.toString().replace(/\/+$/, "") ?? "https://patientguide.io";
 const canonicalPath = Astro.url.pathname.replace(/\/+$/, "") || "/guides";
 const canonicalUrl = `${site}${canonicalPath}`;
 
-// Normalize hero image to absolute for OG/Twitter
+// Hero image → absolute
 const heroAbs = heroImage
   ? (heroImage.startsWith("http") ? heroImage : `${site}${heroImage}`)
   : undefined;
 
-// Default breadcrumbs if not provided
+// Breadcrumbs
 const bc = breadcrumbs.length
   ? breadcrumbs
   : [
@@ -77,11 +80,10 @@ const articleLd = {
   "about": (title ? { "@type": "Thing", "name": title, "sameAs": sameAs && sameAs.length ? sameAs : undefined } : undefined)
 };
 
-// 2) MedicalCondition (only if provided in frontmatter)
+// 2) MedicalCondition
 function buildMedicalConditionLD(med) {
   if (!med || typeof med !== "object") return null;
 
-  // Map convenience arrays to schema.org structures
   const riskFactor = Array.isArray(med.riskFactors) && med.riskFactors.length
     ? med.riskFactors.map((r) => ({ "@type": "MedicalRiskFactor", "name": r }))
     : undefined;
@@ -90,7 +92,6 @@ function buildMedicalConditionLD(med) {
     ? med.symptoms.map((s) => ({ "@type": "MedicalSignOrSymptom", "name": s }))
     : undefined;
 
-  // Optional infectious hint if author sets a boolean `contagious`
   const infectiousAgentClass = (typeof med.contagious === "boolean")
     ? (med.contagious ? "Pathogen" : undefined)
     : undefined;
@@ -104,15 +105,64 @@ function buildMedicalConditionLD(med) {
     "riskFactor": riskFactor,
     "signOrSymptom": signOrSymptom,
     "possibleComplication": Array.isArray(med.possibleComplication) && med.possibleComplication.length ? med.possibleComplication : undefined,
-    "infectiousAgentClass": infectiousAgentClass, // only present if contagious === true
+    "infectiousAgentClass": infectiousAgentClass,
     "sameAs": Array.isArray(med.sameAs) && med.sameAs.length ? med.sameAs : undefined,
     "url": canonicalUrl
   };
 }
 
-const conditionLd = buildMedicalConditionLD(schema?.medicalCondition);
+// 3) MedicalDevice
+function buildMedicalDeviceLD(dev) {
+  if (!dev || typeof dev !== "object") return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalDevice",
+    "name": dev.name ?? title,
+    "description": dev.description ?? description,
+    "manufacturer": dev.manufacturer ? { "@type": "Organization", "name": dev.manufacturer } : undefined,
+    "model": dev.model,
+    "sameAs": Array.isArray(dev.sameAs) && dev.sameAs.length ? dev.sameAs : undefined,
+    "url": canonicalUrl
+  };
+}
 
-// 3) FAQPage
+// 4) MedicalProcedure
+function buildMedicalProcedureLD(proc) {
+  if (!proc || typeof proc !== "object") return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": proc.name ?? title,
+    "description": proc.description ?? description,
+    "howPerformed": proc.howPerformed,
+    "preparation": proc.preparation,
+    "followup": proc.followup,
+    "sameAs": Array.isArray(proc.sameAs) && proc.sameAs.length ? proc.sameAs : undefined,
+    "url": canonicalUrl
+  };
+}
+
+// 5) MedicalSignOrSymptom
+function buildMedicalSignOrSymptomLD(sym) {
+  if (!sym || typeof sym !== "object") return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalSignOrSymptom",
+    "name": sym.name ?? title,
+    "description": sym.description ?? description,
+    "possibleTreatment": Array.isArray(sym.possibleTreatment) && sym.possibleTreatment.length ? sym.possibleTreatment : undefined,
+    "identifyingTest": Array.isArray(sym.identifyingTest) && sym.identifyingTest.length ? sym.identifyingTest : undefined,
+    "sameAs": Array.isArray(sym.sameAs) && sym.sameAs.length ? sym.sameAs : undefined,
+    "url": canonicalUrl
+  };
+}
+
+const conditionLd = buildMedicalConditionLD(schema?.medicalCondition);
+const deviceLd = buildMedicalDeviceLD(schema?.medicalDevice);
+const procedureLd = buildMedicalProcedureLD(schema?.medicalProcedure);
+const signOrSymptomLd = buildMedicalSignOrSymptomLD(schema?.medicalSignOrSymptom);
+
+// 6) FAQPage
 const faqLd = Array.isArray(faq) && faq.length
   ? {
       "@context": "https://schema.org",
@@ -125,7 +175,7 @@ const faqLd = Array.isArray(faq) && faq.length
     }
   : null;
 
-// 4) BreadcrumbList
+// 7) BreadcrumbList
 const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -167,10 +217,25 @@ const breadcrumbLd = {
       {JSON.stringify(articleLd)}
     </script>
 
-    <!-- JSON-LD: MedicalCondition (conditional) -->
+    <!-- JSON-LD: Medical schemas (conditional) -->
     {conditionLd && (
       <script type="application/ld+json">
         {JSON.stringify(conditionLd)}
+      </script>
+    )}
+    {deviceLd && (
+      <script type="application/ld+json">
+        {JSON.stringify(deviceLd)}
+      </script>
+    )}
+    {procedureLd && (
+      <script type="application/ld+json">
+        {JSON.stringify(procedureLd)}
+      </script>
+    )}
+    {signOrSymptomLd && (
+      <script type="application/ld+json">
+        {JSON.stringify(signOrSymptomLd)}
       </script>
     )}
 

@@ -1,14 +1,41 @@
 ---
-title: "Choking — First Aid Guide"
-slug: "choking"
-description: "How to recognize choking and provide first aid for adults, children, and infants until emergency help arrives."
-category: "Emergencies"
-publishDate: "2025-09-13"
-updatedDate: "2025-09-13"
-tags: ["choking", "first aid", "airway", "emergency", "Heimlich"]
+title: Choking — First Aid Guide
+slug: choking
+description: >-
+  How to recognize choking and provide first aid for adults, children, and
+  infants until emergency help arrives.
+category: Emergencies
+publishDate: '2025-09-13'
+updatedDate: '2025-09-13'
+tags:
+  - choking
+  - first aid
+  - airway
+  - emergency
+  - Heimlich
 draft: false
+schema:
+  medicalCondition:
+    name: Choking — First Aid Guide
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is choking — first aid guide?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 ## Intro
 Choking occurs when the airway is blocked by food or an object. Without quick action, choking can lead to unconsciousness and death within minutes. Knowing simple first aid steps can save a life.
 

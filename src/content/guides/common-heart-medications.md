@@ -1,17 +1,44 @@
 ---
-title: "Common Heart Medications and Their Side Effects"
-slug: "common-heart-medications"
-description: "Overview of key heart medications — beta blockers, ACE inhibitors, statins — and their common side effects."
-category: "Heart & Circulation"
-publishDate: "2025-08-20"
-updatedDate: "2025-08-21"
-tags: ["cardiology", "medications", "heart", "patientguide"]
+title: Common Heart Medications and Their Side Effects
+slug: common-heart-medications
+description: >-
+  Overview of key heart medications — beta blockers, ACE inhibitors, statins —
+  and their common side effects.
+category: Heart & Circulation
+publishDate: '2025-08-20'
+updatedDate: '2025-08-21'
+tags:
+  - cardiology
+  - medications
+  - heart
+  - patientguide
 related:
   - /guides/coronary-angiography
   - /guides/cardiac-rehabilitation
   - /guides/atrial-fibrillation
+draft: true
+schema:
+  medicalCondition:
+    name: Common Heart Medications and Their Side Effects
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is common heart medications and their side effects?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Common Heart Medications and Their Side Effects
 
 Many heart conditions require **long-term medication**. Understanding what your medicines do — and their possible side effects — helps you use them safely and get the best results.

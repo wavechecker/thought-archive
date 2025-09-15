@@ -1,14 +1,41 @@
 ---
-title: "Anaphylaxis — Severe Allergic Reaction"
-slug: "anaphylaxis"
-description: "How to recognize and respond to severe allergic reactions (anaphylaxis) with epinephrine and emergency action."
-category: "Emergencies"
-publishDate: "2025-08-14"
-updatedDate: "2025-09-13"
-tags: ["allergies", "anaphylaxis", "emergency", "first aid", "immune system"]
+title: Anaphylaxis — Severe Allergic Reaction
+slug: anaphylaxis
+description: >-
+  How to recognize and respond to severe allergic reactions (anaphylaxis) with
+  epinephrine and emergency action.
+category: Emergencies
+publishDate: '2025-08-14'
+updatedDate: '2025-09-13'
+tags:
+  - allergies
+  - anaphylaxis
+  - emergency
+  - first aid
+  - immune system
 draft: false
+schema:
+  medicalCondition:
+    name: Anaphylaxis — Severe Allergic Reaction
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is anaphylaxis — severe allergic reaction?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 ## Intro
 Food and environmental allergies are common, but **anaphylaxis** is a severe, life-threatening allergic reaction. It can happen within minutes of exposure to an allergen, and requires **immediate emergency action**. Even a tiny exposure can trigger a reaction in sensitive individuals.
 

@@ -1,31 +1,28 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getCollection } from "astro:content";
 
-const PAGE_TITLE = "Diabetes";
-const CATEGORY_KEYS = ["Diabetes", "Type 1 Diabetes", "Type 2 Diabetes", "T1D", "T2D"];
+const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
+const pageUrl = `${site}/guides/diabetes`;
+const title = "Diabetes — Guides";
+const description = "Type 1, Type 2, LADA, hypoglycaemia, insulin, CGM tips, exercise, sick-day rules, and emergency actions.";
 
-const all = await getCollection("guides");
-const norm = (s) => String(s ?? "").toLowerCase().trim();
-
-const matchesCategory = (entry) => {
-  const cat = norm(entry.data?.category);
-  const tags = (entry.data?.tags ?? []).map(norm);
-  const keys = CATEGORY_KEYS.map(norm);
-  return (cat && keys.includes(cat)) || tags.some(t => keys.includes(t));
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Guides", item: `${site}/guides` },
+    { "@type": "ListItem", position: 2, name: "Diabetes", item: pageUrl }
+  ]
 };
 
-const guides = all
-  .filter((e) => e.data?.draft !== true)
-  .filter(matchesCategory)
-  .sort((a, b) => {
-    const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
-    const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
-    return db - da || String(a.data?.title).localeCompare(String(b.data?.title));
-  });
-
-const pageDesc = `Browse guides in ${PAGE_TITLE}.`;
+const collectionPageLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title, description, url: pageUrl, inLanguage: "en",
+  isPartOf: { "@type": "WebSite", name: "patientguide.io", url: site }
+};
 ---
+
 
 <Layout title={`${PAGE_TITLE} — Guides`} description={pageDesc}>
   <section class="prose max-w-3xl mx-auto py-8">

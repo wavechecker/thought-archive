@@ -1,17 +1,43 @@
 ---
-title: "Carbohydrate Counting — Matching Food and Insulin"
-slug: "carbohydrate-counting"
-description: "Basics of carb counting, insulin-to-carb ratios, and label reading for Type 1 Diabetes."
-category: "Diabetes"
-publishDate: "2025-08-21"
-updatedDate: "2025-08-21"
-tags: ["Type 1 Diabetes", "carbohydrates", "insulin", "patientguide"]
+title: Carbohydrate Counting — Matching Food and Insulin
+slug: carbohydrate-counting
+description: >-
+  Basics of carb counting, insulin-to-carb ratios, and label reading for Type 1
+  Diabetes.
+category: Diabetes
+publishDate: '2025-08-21'
+updatedDate: '2025-08-21'
+tags:
+  - Type 1 Diabetes
+  - carbohydrates
+  - insulin
+  - patientguide
 related:
   - /guides/insulin-administration
   - /guides/blood-glucose-testing
+draft: true
+schema:
+  medicalCondition:
+    name: Carbohydrate Counting — Matching Food and Insulin
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is carbohydrate counting — matching food and insulin?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
-
 # Carbohydrate Counting — Matching Insulin to Your Meals
 
 ## Why this matters

@@ -15,7 +15,8 @@
     "down:purge": "npm run down && npm run purge",
     "up:purge": "npm run up && npm run purge",
     "new:guide": "node scripts/create-guide.mjs",
-    "migrate:guides": "node scripts/migrate-guides.mjs"
+    "migrate:guides": "node scripts/migrate-guides.mjs",
+    "validate:jsonld": "node scripts/validate-jsonld.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

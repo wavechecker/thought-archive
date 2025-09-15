@@ -1,16 +1,43 @@
 ---
-title: "Treatment Pathways — Surgery, Chemo, Radiotherapy"
-slug: "bowel-cancer-treatment"
-description: "Main treatments for bowel cancer, when they're used, and what patients can expect."
-category: "Cancer"
-publishDate: "2025-08-20"
-updatedDate: "2025-08-21"
-tags: ["cancer", "bowel cancer", "treatment", "patientguide"]
+title: 'Treatment Pathways — Surgery, Chemo, Radiotherapy'
+slug: bowel-cancer-treatment
+description: >-
+  Main treatments for bowel cancer, when they're used, and what patients can
+  expect.
+category: Cancer
+publishDate: '2025-08-20'
+updatedDate: '2025-08-21'
+tags:
+  - cancer
+  - bowel cancer
+  - treatment
+  - patientguide
 related:
   - /guides/bowel-cancer-screening
   - /guides/living-with-bowel-cancer
+draft: true
+schema:
+  medicalCondition:
+    name: 'Treatment Pathways — Surgery, Chemo, Radiotherapy'
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: 'What is treatment pathways — surgery, chemo, radiotherapy?'
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Treatment Pathways — Surgery, Chemo, Radiotherapy
 
 Treatment depends on the **stage of the cancer** and your **overall health**. Most people are treated within a **multidisciplinary team** (MDT) that includes surgeons, oncologists, radiologists, and specialist nurses.

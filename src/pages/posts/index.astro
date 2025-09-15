@@ -25,9 +25,58 @@ const jumpTo = q && GROUPS.includes(q as GroupKey) ? (q as GroupKey) : null;
 
 const title = "Posts";
 const description = "Opinion, analysis, and essays — grouped by category.";
+
+// --- JSON-LD: Blog + ItemList ---
+const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
+const indexUrl = `${site}/posts`;
+
+// Minimal per-post metadata
+const postSummaries = posts.map((p) => ({
+  url: `${site}/posts/${p.slug}`,
+  title: p.data.title ?? "(Untitled)",
+  date: isValidDate(p.data.publishDate) ? p.data.publishDate : undefined
+}));
+
+const blogLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: title,
+  description,
+  url: indexUrl,
+  inLanguage: "en",
+  publisher: {
+    "@type": "Organization",
+    name: "patientguide.io",
+    logo: { "@type": "ImageObject", url: `${site}/logo.png` }
+  },
+  blogPost: postSummaries.map((p) => ({
+    "@type": "BlogPosting",
+    headline: p.title,
+    url: p.url,
+    datePublished: p.date
+  }))
+};
+
+const listLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: postSummaries.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: p.url,
+    name: p.title
+  }))
+};
 ---
 
 <Layout frontmatter={{ title, description }}>
+  <!-- Head injection: canonical + JSON-LD -->
+  <Fragment slot="head">
+    <link rel="canonical" href={indexUrl} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(blogLd)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(listLd)} />
+  </Fragment>
+
   <article class="mx-auto max-w-3xl">
     <header class="mb-6">
       <h1 class="text-3xl/tight font-semibold tracking-tight">Posts</h1>
@@ -101,4 +150,5 @@ const description = "Opinion, analysis, and essays — grouped by category.";
 <style>
   .scroll-mt-20 { scroll-margin-top: 5rem; }
 </style>
+
 

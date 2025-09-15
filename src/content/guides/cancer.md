@@ -1,15 +1,41 @@
 ---
-title: "Cancer — Guide Hub"
-slug: "cancer"
-description: "Browse guides on cancer, including bowel cancer, skin cancer, and other related conditions."
-category: "Cancer"
-publishDate: "2025-08-20"
-updatedDate: "2025-09-13"
-hubKey: "Cancer"
+title: Cancer — Guide Hub
+slug: cancer
+description: >-
+  Browse guides on cancer, including bowel cancer, skin cancer, and other
+  related conditions.
+category: Cancer
+publishDate: '2025-08-20'
+updatedDate: '2025-09-13'
+hubKey: Cancer
 draft: false
-tags: ["cancer", "oncology", "patientguide", "hub"]
+tags:
+  - cancer
+  - oncology
+  - patientguide
+  - hub
+schema:
+  medicalCondition:
+    name: Cancer — Guide Hub
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is cancer — guide hub?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Cancer — Guide Hub
 
 Cancer is a group of diseases where abnormal cells grow uncontrollably and can spread to other parts of the body.  

@@ -1,15 +1,41 @@
 ---
-title: "Blood Oxygen Levels and Pulse Oximeters"
-slug: "blood-oxygen-pulse-oximeters"
-description: "What SpO₂ numbers mean, how to measure them accurately at home, and when to seek care."
-category: "Heart & Circulation"
-tags: ["blood oxygen", "SpO₂", "pulse oximeter", "heart", "respiratory health"]
-publishDate: "2025-08-13"
-updatedDate: "2025-08-21"
+title: Blood Oxygen Levels and Pulse Oximeters
+slug: blood-oxygen-pulse-oximeters
+description: >-
+  What SpO₂ numbers mean, how to measure them accurately at home, and when to
+  seek care.
+category: Heart & Circulation
+tags:
+  - blood oxygen
+  - SpO₂
+  - pulse oximeter
+  - heart
+  - respiratory health
+publishDate: '2025-08-13'
+updatedDate: '2025-08-21'
 draft: false
+schema:
+  medicalCondition:
+    name: Blood Oxygen Levels and Pulse Oximeters
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is blood oxygen levels and pulse oximeters?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
-
 Pulse oximeters estimate oxygen saturation (**SpO₂**) using light sensors on your finger.
 
 ## Summary

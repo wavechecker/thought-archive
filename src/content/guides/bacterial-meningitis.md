@@ -1,55 +1,70 @@
 ---
-title: "Bacterial Meningitis"
-description: "Bacterial meningitis is a life-threatening infection of the membranes covering the brain and spinal cord, requiring immediate antibiotics and hospital care."
-category: "Infectious Diseases"
-publishDate: "2025-09-15"
-updatedDate: "2025-09-15"
+title: Bacterial Meningitis
+description: >-
+  Bacterial meningitis is a life-threatening infection of the membranes covering
+  the brain and spinal cord, requiring immediate antibiotics and hospital care.
+category: Infectious Diseases
+publishDate: '2025-09-15'
+updatedDate: '2025-09-15'
 draft: false
-tags: ["bacterial meningitis", "meningitis", "CNS infection", "meningococcal"]
-
+tags:
+  - bacterial meningitis
+  - meningitis
+  - CNS infection
+  - meningococcal
 schema:
   medicalCondition:
-    name: "Bacterial Meningitis"
-    description: "Acute inflammation of the meninges caused by bacterial infection, leading to fever, headache, stiff neck, and altered consciousness; a medical emergency."
+    name: Bacterial Meningitis
+    description: >-
+      Acute inflammation of the meninges caused by bacterial infection, leading
+      to fever, headache, stiff neck, and altered consciousness; a medical
+      emergency.
     alternateName:
-      - "Meningococcal meningitis"
-      - "Pneumococcal meningitis"
+      - Meningococcal meningitis
+      - Pneumococcal meningitis
     riskFactors:
-      - "Age <5 or 15–24 years"
-      - "Crowded living (dormitories, barracks)"
-      - "Asplenia or complement deficiency"
-      - "Head trauma or neurosurgery"
-      - "Immunosuppression"
+      - Age <5 or 15–24 years
+      - 'Crowded living (dormitories, barracks)'
+      - Asplenia or complement deficiency
+      - Head trauma or neurosurgery
+      - Immunosuppression
     symptoms:
-      - "Severe headache"
-      - "Stiff neck"
-      - "Fever, chills"
-      - "Nausea/vomiting"
-      - "Confusion or drowsiness"
-      - "Seizures"
-      - "Photophobia"
+      - Severe headache
+      - Stiff neck
+      - 'Fever, chills'
+      - Nausea/vomiting
+      - Confusion or drowsiness
+      - Seizures
+      - Photophobia
     possibleComplication:
-      - "Septicemia and septic shock"
-      - "Hearing loss"
-      - "Neurologic damage"
-      - "Death"
+      - Septicemia and septic shock
+      - Hearing loss
+      - Neurologic damage
+      - Death
     contagious: true
     sameAs:
-      - "https://www.who.int/news-room/fact-sheets/detail/meningitis"
-      - "https://www.cdc.gov/meningitis/bacterial.html"
-      - "https://medlineplus.gov/meningitis.html"
-
+      - 'https://www.who.int/news-room/fact-sheets/detail/meningitis'
+      - 'https://www.cdc.gov/meningitis/bacterial.html'
+      - 'https://medlineplus.gov/meningitis.html'
 faq:
-  - q: "Why is bacterial meningitis an emergency?"
-    a: "It can cause death or severe disability within hours; immediate antibiotics and hospital care are essential."
-  - q: "What are the warning signs?"
-    a: "Fever, headache, stiff neck, light sensitivity, confusion, vomiting, and sometimes a purplish rash (meningococcal)."
-  - q: "How is it treated?"
-    a: "IV antibiotics, steroids, and supportive care in hospital; close contacts may need preventive antibiotics (prophylaxis)."
-  - q: "Can it be prevented?"
-    a: "Yes — vaccines protect against common causes (meningococcal, pneumococcal, Hib). Early treatment of infections also lowers risk."
+  - q: Why is bacterial meningitis an emergency?
+    a: >-
+      It can cause death or severe disability within hours; immediate
+      antibiotics and hospital care are essential.
+  - q: What are the warning signs?
+    a: >-
+      Fever, headache, stiff neck, light sensitivity, confusion, vomiting, and
+      sometimes a purplish rash (meningococcal).
+  - q: How is it treated?
+    a: >-
+      IV antibiotics, steroids, and supportive care in hospital; close contacts
+      may need preventive antibiotics (prophylaxis).
+  - q: Can it be prevented?
+    a: >-
+      Yes — vaccines protect against common causes (meningococcal, pneumococcal,
+      Hib). Early treatment of infections also lowers risk.
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 ## Intro
 Bacterial meningitis is an infection of the **meninges** (membranes covering the brain and spinal cord). It progresses rapidly and can be fatal if not treated immediately.
 

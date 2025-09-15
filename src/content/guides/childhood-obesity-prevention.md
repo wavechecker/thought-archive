@@ -1,17 +1,43 @@
 ---
-title: "Childhood Obesity Prevention"
-slug: "childhood-obesity-prevention"
-description: "A practical guide to understanding the global rise in childhood obesity, its causes, risks, and strategies for prevention."
-category: "Child & Adolescent Health"
-publishDate: "2025-09-10"
-updatedDate: "2025-09-13"
-tags: ["child nutrition", "obesity", "prevention", "malnutrition"]
+title: Childhood Obesity Prevention
+slug: childhood-obesity-prevention
+description: >-
+  A practical guide to understanding the global rise in childhood obesity, its
+  causes, risks, and strategies for prevention.
+category: Child & Adolescent Health
+publishDate: '2025-09-10'
+updatedDate: '2025-09-13'
+tags:
+  - child nutrition
+  - obesity
+  - prevention
+  - malnutrition
 draft: false
 related:
   - /guides/healthy-diets-for-children
   - /guides/diabetes-children
+schema:
+  medicalCondition:
+    name: Childhood Obesity Prevention
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is childhood obesity prevention?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 ## Intro
 In 2025, childhood obesity overtook underweight worldwide for the first time. This marked a global tipping point in nutrition: the challenge is no longer just too little food, but too much of the wrong food. Preventing obesity in children is now one of the most urgent public health priorities.
 

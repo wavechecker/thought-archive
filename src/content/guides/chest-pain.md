@@ -1,12 +1,40 @@
 ---
-title: "Chest Pain: When to Call 911 vs Wait for a Doctor"
-description: "Chest pain can be harmless or life-threatening. Learn red flags, common causes, and when urgent help is needed."
-category: "Heart & Circulation"
-tags: ["chest pain", "heart attack", "angina", "emergency", "cardiology"]
-publishDate: "2025-09-08"
+title: 'Chest Pain: When to Call 911 vs Wait for a Doctor'
+description: >-
+  Chest pain can be harmless or life-threatening. Learn red flags, common
+  causes, and when urgent help is needed.
+category: Heart & Circulation
+tags:
+  - chest pain
+  - heart attack
+  - angina
+  - emergency
+  - cardiology
+publishDate: '2025-09-08'
 draft: false
+updatedDate: '2025-09-08'
+schema:
+  medicalCondition:
+    name: 'Chest Pain: When to Call 911 vs Wait for a Doctor'
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: 'What is chest pain: when to call 911 vs wait for a doctor?'
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 ## Intro
 Chest pain is one of the most important symptoms in medicine. It may be caused by something minor — like muscle strain or heartburn — or by life-threatening conditions such as a heart attack or blood clot in the lungs. Knowing when to call emergency services can save lives.
 

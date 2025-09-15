@@ -1,12 +1,40 @@
 ---
-title: "Blood Pressure at Home: How to Measure Correctly"
-description: "A step-by-step guide to checking your blood pressure at home, what the numbers mean, and when to seek medical advice."
-category: "Heart & Circulation"
-tags: ["blood pressure", "hypertension", "home monitoring", "heart health", "sphygmomanometer"]
-publishDate: "2025-09-08"
+title: 'Blood Pressure at Home: How to Measure Correctly'
+description: >-
+  A step-by-step guide to checking your blood pressure at home, what the numbers
+  mean, and when to seek medical advice.
+category: Heart & Circulation
+tags:
+  - blood pressure
+  - hypertension
+  - home monitoring
+  - heart health
+  - sphygmomanometer
+publishDate: '2025-09-08'
 draft: false
+updatedDate: '2025-09-08'
+schema:
+  medicalCondition:
+    name: 'Blood Pressure at Home: How to Measure Correctly'
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: 'What is blood pressure at home: how to measure correctly?'
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 ## Intro
 Home blood pressure monitoring is an effective way to track your heart health and manage high blood pressure (hypertension). Done properly, it can help guide treatment decisions and catch problems early. Done incorrectly, it can cause unnecessary worry.
 

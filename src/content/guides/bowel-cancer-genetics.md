@@ -1,13 +1,41 @@
 ---
-title: "Family Risk and Genetics in Bowel Cancer"
+title: Family Risk and Genetics in Bowel Cancer
 slug: bowel-cancer-genetics
-description: "How family history and inherited conditions affect bowel cancer risk, and when genetic testing is recommended."
-category: "Cancer"
-publishDate: "2025-08-20"
+description: >-
+  How family history and inherited conditions affect bowel cancer risk, and when
+  genetic testing is recommended.
+category: Cancer
+publishDate: '2025-08-20'
 draft: false
-tags: ["cancer", "bowel cancer", "genetics", "family risk", "patientguide"]
+tags:
+  - cancer
+  - bowel cancer
+  - genetics
+  - family risk
+  - patientguide
+updatedDate: '2025-08-20'
+schema:
+  medicalCondition:
+    name: Family Risk and Genetics in Bowel Cancer
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is family risk and genetics in bowel cancer?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Family Risk and Genetics in Bowel Cancer
 
 Most bowel cancers are **sporadic** (happen by chance), but about **1 in 10 cases are linked to inherited genetic factors**. Knowing your family risk helps decide whether you should start screening earlier, or consider genetic testing.

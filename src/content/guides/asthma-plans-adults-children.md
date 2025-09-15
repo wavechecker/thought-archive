@@ -1,15 +1,40 @@
 ---
-title: "Asthma Action Plans for Adults and Children"
-slug: "asthma-plans-adults-children"
-description: "How to use an asthma action plan: green/yellow/red zones, when to step up treatment, and when to seek urgent care."
-category: "General Health"
-tags: ["asthma", "respiratory", "action plan", "urgent care"]
-publishDate: "2025-08-20"
-updatedDate: "2025-08-20"
+title: Asthma Action Plans for Adults and Children
+slug: asthma-plans-adults-children
+description: >-
+  How to use an asthma action plan: green/yellow/red zones, when to step up
+  treatment, and when to seek urgent care.
+category: General Health
+tags:
+  - asthma
+  - respiratory
+  - action plan
+  - urgent care
+publishDate: '2025-08-20'
+updatedDate: '2025-08-20'
 draft: false
+schema:
+  medicalCondition:
+    name: Asthma Action Plans for Adults and Children
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is asthma action plans for adults and children?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
-
 An **Asthma Action Plan** is a personalised written guide that helps you recognise worsening asthma and take the right steps to keep it under control.  
 It's a tool for both **day-to-day management** and **emergency response**.
 

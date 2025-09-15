@@ -1,13 +1,43 @@
 ---
-title: "Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment"
+title: Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment
 slug: bowel-cancer-nutrition
-description: "Dietary guidance to support bowel health, manage treatment side effects, and aid recovery."
-category: "Cancer"
-publishDate: "2025-08-20"
+description: >-
+  Dietary guidance to support bowel health, manage treatment side effects, and
+  aid recovery.
+category: Cancer
+publishDate: '2025-08-20'
 draft: false
-tags: ["cancer", "bowel cancer", "nutrition", "diet", "patientguide"]
+tags:
+  - cancer
+  - bowel cancer
+  - nutrition
+  - diet
+  - patientguide
+updatedDate: '2025-08-20'
+schema:
+  medicalCondition:
+    name: Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: >-
+      What is nutrition basics for bowel cancer — eating well during and after
+      treatment?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment
 
 Food choices play a major role in both **reducing risk** and **supporting recovery** from bowel cancer. While there's no single "anti-cancer diet," the right nutrition can help your body cope with treatment, maintain strength, and improve quality of life.

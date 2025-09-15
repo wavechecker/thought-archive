@@ -9,7 +9,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import yaml from "js-yaml";
+import { globbySync } from "globby";
 
 // ---- flags ----
 const argv = process.argv.slice(2);
@@ -27,7 +27,7 @@ for (let i = 0; i < argv.length; i++) {
 const WRITE = flags.has("write");
 const ADD_UPDATED = flags.has("addUpdated");
 const DEFAULT_CATEGORY = flags.get("defaultCategory") || "General";
-const GLOB = flags.get("glob") || "src/content/guides";
+const GLOB = flags.get("glob") || "src/content/guides/**/*.md";
 
 // ---- utils ----
 const isIsoDate = (s) => typeof s === "string" && /^\d{4}-\d{2}-\d{2}$/.test(s);
@@ -37,33 +37,88 @@ const toIsoDate = (s) => {
   return m ? m[1] : new Date().toISOString().slice(0, 10);
 };
 
-function collectMdFiles(root) {
-  const files = [];
-  function walk(p) {
-    const stat = fs.statSync(p);
-    if (stat.isDirectory()) {
-      for (const name of fs.readdirSync(p)) walk(path.join(p, name));
-    } else if (stat.isFile() && p.toLowerCase().endsWith(".md")) {
-      files.push(p);
-    }
+// ---- schema chooser ----
+function chooseSchemaType(slug, title) {
+  const s = `${slug} ${title}`.toLowerCase();
+
+  if (/\b(device|monitor|sensor|glucose\s*monitor|cgm|continuous glucose monitor)\b/.test(s)) {
+    return "MedicalDevice";
   }
-  walk(root);
-  return files;
+  if (/\b(cpr|angiography|administration|injection|procedure|how to|how-to|first aid|insulin)\b/.test(s)) {
+    return "MedicalProcedure";
+  }
+  if (/\b(fever|dizziness|shortness of breath|breathlessness|palpitation|palpitations|seizure|bleeding|fatigue|headache)\b/.test(s)) {
+    return "MedicalSignOrSymptom";
+  }
+  if (/\b(hub|overview|checklist|emergencies|preventive health|global|equity|policy|guidelines|vaccination overview|vaccination safety)\b/.test(s)) {
+    return null;
+  }
+  if (/\b(vaccine|vaccination|mrna|mandates)\b/.test(s) && !/\b(measles|tetanus|rabies|influenza|hpv)\b/.test(s)) {
+    return null;
+  }
+
+  return "MedicalCondition";
 }
 
-function ensure(obj, key, fallback) {
-  if (obj[key] === undefined) obj[key] = fallback;
-  return obj[key];
+function ensureSchemaFor(data, filePath) {
+  if (!data.schema) data.schema = {};
+
+  if (data.schema.medicalCondition || data.schema.medicalDevice || data.schema.medicalProcedure || data.schema.medicalSignOrSymptom) {
+    return false;
+  }
+
+  const slug = path.basename(filePath, ".md");
+  const title = data.title || slug.replace(/[-_]/g, " ").trim();
+  const chosen = chooseSchemaType(slug, title);
+  if (!chosen) return false;
+
+  const base = {
+    name: title,
+    description: "TODO: Concise clinical definition or summary.",
+    sameAs: [
+      "https://www.who.int/",
+      "https://medlineplus.gov/"
+    ]
+  };
+
+  if (chosen === "MedicalCondition") {
+    data.schema.medicalCondition = {
+      ...base,
+      alternateName: [],
+      riskFactors: ["TODO risk factor #1"],
+      symptoms: ["TODO symptom #1"],
+      possibleComplication: ["TODO complication #1"],
+      contagious: false
+    };
+  } else if (chosen === "MedicalDevice") {
+    data.schema.medicalDevice = {
+      ...base,
+      manufacturer: "TODO",
+      model: "TODO"
+    };
+  } else if (chosen === "MedicalProcedure") {
+    data.schema.medicalProcedure = {
+      ...base,
+      howPerformed: "TODO: Brief description of steps / setting.",
+      preparation: "TODO",
+      followup: "TODO"
+    };
+  } else if (chosen === "MedicalSignOrSymptom") {
+    data.schema.medicalSignOrSymptom = {
+      ...base,
+      possibleTreatment: ["TODO"],
+      identifyingTest: ["TODO"]
+    };
+  }
+
+  return true;
 }
 
 // ---- main ----
-const ROOT = path.resolve(GLOB);
-const inputs = fs.existsSync(ROOT)
-  ? (fs.statSync(ROOT).isDirectory() ? collectMdFiles(ROOT) : [ROOT])
-  : [];
+const inputs = globbySync(GLOB, { expandDirectories: false });
 
 if (!inputs.length) {
-  console.error(`No Markdown files found at: ${GLOB}`);
+  console.error(`No Markdown files found for glob: ${GLOB}`);
   process.exit(1);
 }
 
@@ -77,48 +132,29 @@ for (const file of inputs) {
   const body = fm.content || "";
   let touched = false;
 
-  // Title
+  // Basic metadata
   if (!data.title) {
     data.title = path.basename(file, ".md").replace(/[-_]/g, " ").replace(/\s+/g, " ").trim();
     touched = true;
   }
-
-  // Description
   if (!data.description) { data.description = "TODO: One-sentence factual summary."; touched = true; }
-
-  // Category
   if (!data.category) { data.category = DEFAULT_CATEGORY; touched = true; }
-
-  // Dates
   if (!data.publishDate) { data.publishDate = new Date().toISOString().slice(0, 10); touched = true; }
   else if (!isIsoDate(data.publishDate)) { data.publishDate = toIsoDate(data.publishDate); touched = true; }
-
   if (ADD_UPDATED) { data.updatedDate = toIsoDate(data.updatedDate || data.publishDate); touched = true; }
-
-  // Draft
   if (typeof data.draft !== "boolean") { data.draft = true; touched = true; }
-
-  // Tags
   if (!Array.isArray(data.tags)) { data.tags = []; touched = true; }
 
-  // schema.medicalCondition
-  if (!data.schema || !data.schema.medicalCondition) {
-    const t = data.title || "";
-    ensure(data, "schema", {});
-    data.schema.medicalCondition = {
-      name: t,
-      description: "TODO: Concise clinical definition.",
-      alternateName: [],
-      riskFactors: ["TODO risk factor #1"],
-      symptoms: ["TODO symptom #1"],
-      possibleComplication: ["TODO complication #1"],
-      contagious: false,
-      sameAs: ["https://www.who.int/", "https://medlineplus.gov/"]
-    };
+  // NEW: ensure all guides render with GuideLayout.astro
+  if (!data.layout) {
+    data.layout = "@/layouts/GuideLayout.astro";
     touched = true;
   }
 
-  // faq
+  // Smart schema
+  if (ensureSchemaFor(data, file)) touched = true;
+
+  // Minimal FAQ for JSON-LD
   if (!Array.isArray(data.faq)) {
     const t = (data.title || "").toLowerCase();
     data.faq = [
@@ -147,3 +183,4 @@ if (!WRITE) {
   console.log('\nDry run complete. Re-run with --write to apply changes.');
   console.log('Optional flags: --addUpdated  --defaultCategory "Infectious Diseases"  --glob "src/content/guides/**/*.md"');
 }
+

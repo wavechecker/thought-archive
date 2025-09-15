@@ -1,13 +1,41 @@
 ---
-title: "Bowel Cancer Survivorship — Life After Treatment"
+title: Bowel Cancer Survivorship — Life After Treatment
 slug: bowel-cancer-survivorship
-description: "What to expect after treatment, how follow-up works, and lifestyle changes that support long-term health."
-category: "Cancer"
-publishDate: "2025-08-20"
+description: >-
+  What to expect after treatment, how follow-up works, and lifestyle changes
+  that support long-term health.
+category: Cancer
+publishDate: '2025-08-20'
 draft: false
-tags: ["cancer", "bowel cancer", "survivorship", "long-term care", "patientguide"]
+tags:
+  - cancer
+  - bowel cancer
+  - survivorship
+  - long-term care
+  - patientguide
+updatedDate: '2025-08-20'
+schema:
+  medicalCondition:
+    name: Bowel Cancer Survivorship — Life After Treatment
+    description: 'TODO: Concise clinical definition.'
+    alternateName: []
+    riskFactors:
+      - 'TODO risk factor #1'
+    symptoms:
+      - 'TODO symptom #1'
+    possibleComplication:
+      - 'TODO complication #1'
+    contagious: false
+    sameAs:
+      - 'https://www.who.int/'
+      - 'https://medlineplus.gov/'
+faq:
+  - q: What is bowel cancer survivorship — life after treatment?
+    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: When should I seek emergency care?
+    a: 'TODO: Clear red-flags + call emergency services if present.'
+layout: '@/layouts/GuideLayout.astro'
 ---
-
 # Bowel Cancer Survivorship — Life After Treatment
 
 Completing treatment for bowel cancer is a major milestone. Survivorship is about **life after treatment** — managing side effects, monitoring for recurrence, and building habits that support long-term health.  
