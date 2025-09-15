@@ -1,11 +1,15 @@
 ---
 /**
  * GuideLayout.astro
- * Renders one guide page with SEO + JSON-LD (Article/WebPage, optional MedicalCondition, FAQPage, BreadcrumbList)
+ * Renders one guide page with SEO + JSON-LD:
+ *  - Article/WebPage (always)
+ *  - MedicalCondition (if schema.medicalCondition provided)
+ *  - FAQPage (if faq array provided)
+ *  - BreadcrumbList (Guides → Category → Title)
  */
 import { isValidDate } from "@/lib/date.ts";
 
-// Props expected from guide frontmatter
+// Frontmatter props (passed via [...slug].astro)
 const {
   title,
   description,
@@ -14,14 +18,12 @@ const {
   updatedDate,
   tags = [],
   heroImage = "/images/lada-guide-hero.jpg",
-  // optional extras from frontmatter:
-  faq = [],            // e.g., [{ q: "Question", a: "Answer" }]
-  sameAs = [],         // external canonical refs (NCBI, ADA, etc.)
-  breadcrumbs = [],    // optional override, else built from category + current page
-  // optional control for MedicalCondition LD (lets non-diabetes pages opt-in)
-  medicalConditionName,           // e.g., "Latent Autoimmune Diabetes in Adults"
-  medicalConditionAlternateName,  // e.g., ["LADA","Type 1.5 diabetes"]
-  medicalConditionDescription,    // custom description
+
+  // Optional structured inputs in frontmatter:
+  faq = [],                 // [{ q: string, a: string }]
+  sameAs = [],             // external canonical refs (WHO, MedlinePlus, etc.)
+  breadcrumbs = [],        // optional manual override
+  schema = {}              // { medicalCondition: {...} }
 } = Astro.props;
 
 // Defensive dates
@@ -47,14 +49,16 @@ const bc = breadcrumbs.length
       { name: title ?? "Guide", url: canonicalUrl },
     ];
 
-// JSON-LD 1) Article/WebPage
+/* ------------------------- JSON-LD builders ------------------------- */
+
+// 1) Article/WebPage
 const articleLd = {
   "@context": "https://schema.org",
   "@type": ["Article", "WebPage"],
   "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
   "headline": title,
   "description": description ?? "",
-  "keywords": tags,
+  "keywords": Array.isArray(tags) && tags.length ? tags : undefined,
   "datePublished": pub ?? undefined,
   "dateModified": mod ?? undefined,
   "author": { "@type": "Organization", "name": "patientguide.io", "url": site },
@@ -70,45 +74,45 @@ const articleLd = {
   },
   "inLanguage": "en",
   "image": heroAbs,
-  // Lightweight topical hint; safe to keep
-  "about": (title ? { "@type": "Thing", "name": title, "sameAs": sameAs } : undefined)
+  "about": (title ? { "@type": "Thing", "name": title, "sameAs": sameAs && sameAs.length ? sameAs : undefined } : undefined)
 };
 
-// Should we emit MedicalCondition LD?
-// Emit if either (a) frontmatter provides medicalConditionName, or (b) category is clearly medical (e.g., "Diabetes")
-const shouldEmitCondition =
-  typeof medicalConditionName === "string" && medicalConditionName.trim().length > 0
-  || (category && ["Diabetes","Infectious Diseases","Heart & Circulation","Vaccination","Mental Health","Cancer","Neurology","General Health","Child & Adolescent Health","End of Life"].includes(category));
+// 2) MedicalCondition (only if provided in frontmatter)
+function buildMedicalConditionLD(med) {
+  if (!med || typeof med !== "object") return null;
 
-// JSON-LD 2) MedicalCondition (only if shouldEmitCondition)
-const conditionLd = shouldEmitCondition
-  ? {
-      "@context": "https://schema.org",
-      "@type": "MedicalCondition",
-      "name": medicalConditionName ?? "Latent Autoimmune Diabetes in Adults",
-      "alternateName": medicalConditionAlternateName ?? ["LADA", "Type 1.5 diabetes"],
-      "description": medicalConditionDescription ?? "An adult-onset autoimmune diabetes characterized by positive islet autoantibodies (often GAD) and a slower progression to insulin dependence compared with classic type 1 diabetes.",
-      "signOrSymptom": ["Hyperglycemia","Polydipsia","Polyuria","Unintentional weight loss","Fatigue"],
-      "associatedAnatomy": { "@type": "AnatomicalStructure", "name": "Pancreatic islets (beta cells)" },
-      "cause": "Autoimmune destruction of pancreatic beta cells.",
-      "possibleTreatment": [
-        "Insulin therapy",
-        "DPP-4 inhibitors",
-        "GLP-1 receptor agonists",
-        "Thiazolidinediones",
-        "Lifestyle modification (diet, exercise)"
-      ],
-      "differentialDiagnosis": [
-        "Type 1 diabetes (autoimmune, rapid progression)",
-        "Type 2 diabetes (insulin resistance, antibody negative)"
-      ],
-      "medicalSpecialty": ["Endocrinology", "Diabetology"],
-      "sameAs": sameAs,
-      "url": canonicalUrl
-    }
-  : null;
+  // Map convenience arrays to schema.org structures
+  const riskFactor = Array.isArray(med.riskFactors) && med.riskFactors.length
+    ? med.riskFactors.map((r) => ({ "@type": "MedicalRiskFactor", "name": r }))
+    : undefined;
 
-// JSON-LD 3) FAQPage (only emit if you have Q&A)
+  const signOrSymptom = Array.isArray(med.symptoms) && med.symptoms.length
+    ? med.symptoms.map((s) => ({ "@type": "MedicalSignOrSymptom", "name": s }))
+    : undefined;
+
+  // Optional infectious hint if author sets a boolean `contagious`
+  const infectiousAgentClass = (typeof med.contagious === "boolean")
+    ? (med.contagious ? "Pathogen" : undefined)
+    : undefined;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "name": med.name ?? title,
+    "description": med.description ?? description,
+    "alternateName": Array.isArray(med.alternateName) && med.alternateName.length ? med.alternateName : undefined,
+    "riskFactor": riskFactor,
+    "signOrSymptom": signOrSymptom,
+    "possibleComplication": Array.isArray(med.possibleComplication) && med.possibleComplication.length ? med.possibleComplication : undefined,
+    "infectiousAgentClass": infectiousAgentClass, // only present if contagious === true
+    "sameAs": Array.isArray(med.sameAs) && med.sameAs.length ? med.sameAs : undefined,
+    "url": canonicalUrl
+  };
+}
+
+const conditionLd = buildMedicalConditionLD(schema?.medicalCondition);
+
+// 3) FAQPage
 const faqLd = Array.isArray(faq) && faq.length
   ? {
       "@context": "https://schema.org",
@@ -121,7 +125,7 @@ const faqLd = Array.isArray(faq) && faq.length
     }
   : null;
 
-// JSON-LD 4) BreadcrumbList
+// 4) BreadcrumbList
 const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -158,26 +162,26 @@ const breadcrumbLd = {
     {heroAbs && <meta name="twitter:image" content={heroAbs} />}
     <meta name="twitter:site" content="@patientguide" />
 
-    <!-- JSON-LD 1) Article/WebPage -->
+    <!-- JSON-LD: Article/WebPage -->
     <script type="application/ld+json">
       {JSON.stringify(articleLd)}
     </script>
 
-    <!-- JSON-LD 2) MedicalCondition (conditional) -->
+    <!-- JSON-LD: MedicalCondition (conditional) -->
     {conditionLd && (
       <script type="application/ld+json">
         {JSON.stringify(conditionLd)}
       </script>
     )}
 
-    <!-- JSON-LD 3) FAQPage (conditional) -->
+    <!-- JSON-LD: FAQPage (conditional) -->
     {faqLd && (
       <script type="application/ld+json">
         {JSON.stringify(faqLd)}
       </script>
     )}
 
-    <!-- JSON-LD 4) BreadcrumbList -->
+    <!-- JSON-LD: BreadcrumbList -->
     <script type="application/ld+json">
       {JSON.stringify(breadcrumbLd)}
     </script>
@@ -191,6 +195,7 @@ const breadcrumbLd = {
     </main>
   </body>
 </html>
+
 
 
 

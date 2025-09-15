@@ -8,17 +8,14 @@
     "preview": "astro preview",
     "ops": "code ops-checklist.md",
     "astro": "astro",
-
     "down": "sed -i '1s|# /*   /maintenance.html   200|/*   /maintenance.html   200|' public/_redirects && sed -i \"s|<!-- MAINTENANCE_MODE.*-->|<!-- MAINTENANCE_MODE $(date -u +%Y-%m-%dT%H:%MZ) -->|\" public/maintenance.html && sed -i '/# ==== BEGIN_MAINTENANCE/,/# ==== END_MAINTENANCE/s/^# //' netlify.toml && git add public/_redirects public/maintenance.html netlify.toml && git commit -m \"chore: site down for maintenance\" && git push origin main",
-
     "up": "sed -i '1s|/*   /maintenance.html   200|# /*   /maintenance.html   200|' public/_redirects && sed -i \"s|<!-- MAINTENANCE_MODE .*-->|<!-- MAINTENANCE_MODE -->|\" public/maintenance.html && sed -i '/==== BEGIN_MAINTENANCE/,/==== END_MAINTENANCE/{/BEGIN_MAINTENANCE/!{/END_MAINTENANCE/!s/^/# /}}' netlify.toml && git add public/_redirects public/maintenance.html netlify.toml && git commit -m \"chore: site live again\" && git push origin main",
-
     "status": "curl -sL https://patientguide.io | grep -qi 'MAINTENANCE_MODE' && echo 'MAINTENANCE' || echo 'LIVE'",
-
     "purge": "set -a && source .env && set +a && curl -X POST \"https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache\" -H \"Authorization: Bearer $CF_API_TOKEN\" -H \"Content-Type: application/json\" --data '{\"purge_everything\":true}'",
-
     "down:purge": "npm run down && npm run purge",
-    "up:purge": "npm run up && npm run purge"
+    "up:purge": "npm run up && npm run purge",
+    "new:guide": "node scripts/create-guide.mjs",
+    "migrate:guides": "node scripts/migrate-guides.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -36,9 +33,9 @@
     "autoprefixer": "^10.4.21",
     "globby": "^14.1.0",
     "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
     "netlify-cli": "^23.4.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.12"
   }
 }
-
