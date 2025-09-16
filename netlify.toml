@@ -13,6 +13,26 @@
   status = 410
   force = true
 
+  # Normalize category hub slugs
+[[redirects]]
+  from = "/guides/heart-and-circulation"
+  to = "/guides/heart-circulation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/men-s-health"
+  to = "/guides/mens-health"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/women-s-health"
+  to = "/guides/womens-health"
+  status = 301
+  force = true
+
+
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
 #   from = "/*"
