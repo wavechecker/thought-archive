@@ -38,6 +38,11 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/guides/child-adolescent-health-hub/"
+  to = "/guides/child-and-adolescent-health"
+  status = 301
+  force = true
 
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
