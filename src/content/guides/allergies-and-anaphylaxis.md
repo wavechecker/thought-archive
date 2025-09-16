@@ -34,7 +34,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 Food and environmental allergies are common, but **anaphylaxis** is a severe, life-threatening allergic reaction. It can happen within minutes of exposure to an allergen, and requires **immediate emergency action**. Even a tiny exposure can trigger a reaction in sensitive individuals.

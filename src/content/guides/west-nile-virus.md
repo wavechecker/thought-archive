@@ -1,5 +1,4 @@
 ---
-layout: "@/layouts/GuideLayout.astro"
 title: "West Nile Virus (WNV)"
 description: "What West Nile virus is, how it spreads, how to recognize it, and what you can do to prevent infection."
 category: "Infectious Diseases"

@@ -37,7 +37,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 Monitoring blood glucose isn't busywork — it's what keeps you safe and gives you agency. Two tools dominate: the **finger‑prick meter** and the **continuous glucose monitor (CGM)**. They serve different purposes and, used together, cover each other's blind spots.
 

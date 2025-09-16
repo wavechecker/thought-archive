@@ -33,7 +33,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 Chest pain is one of the most important symptoms in medicine. It may be caused by something minor — like muscle strain or heartburn — or by life-threatening conditions such as a heart attack or blood clot in the lungs. Knowing when to call emergency services can save lives.

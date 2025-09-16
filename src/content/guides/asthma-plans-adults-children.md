@@ -33,7 +33,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 An **Asthma Action Plan** is a personalised written guide that helps you recognise worsening asthma and take the right steps to keep it under control.  
 It's a tool for both **day-to-day management** and **emergency response**.

@@ -36,7 +36,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 # Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment
 

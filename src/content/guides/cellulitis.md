@@ -61,7 +61,6 @@ faq:
     a: >-
       No — you can’t catch cellulitis from someone else, though the bacteria
       that cause it can be spread.
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 Cellulitis is a **bacterial infection of the skin** and soft tissues. It is common, but if untreated can spread quickly and become life-threatening.

@@ -33,7 +33,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 Home blood pressure monitoring is an effective way to track your heart health and manage high blood pressure (hypertension). Done properly, it can help guide treatment decisions and catch problems early. Done incorrectly, it can cause unnecessary worry.

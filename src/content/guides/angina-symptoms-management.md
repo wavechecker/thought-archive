@@ -33,7 +33,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 Angina is chest discomfort caused by reduced blood flow to the heart muscle. It is a warning sign of underlying heart disease and should never be ignored. Recognizing angina and managing it early can help prevent a heart attack.

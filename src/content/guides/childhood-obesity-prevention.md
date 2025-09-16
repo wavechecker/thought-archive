@@ -36,7 +36,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 In 2025, childhood obesity overtook underweight worldwide for the first time. This marked a global tipping point in nutrition: the challenge is no longer just too little food, but too much of the wrong food. Preventing obesity in children is now one of the most urgent public health priorities.

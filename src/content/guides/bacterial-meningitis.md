@@ -63,7 +63,6 @@ faq:
     a: >-
       Yes — vaccines protect against common causes (meningococcal, pneumococcal,
       Hib). Early treatment of infections also lowers risk.
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 Bacterial meningitis is an infection of the **meninges** (membranes covering the brain and spinal cord). It progresses rapidly and can be fatal if not treated immediately.

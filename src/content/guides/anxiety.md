@@ -32,7 +32,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 Anxiety disorders are among the most common mental health conditions worldwide. While occasional anxiety is normal, anxiety disorders involve persistent, excessive fear or worry that interferes with daily life. The good news: anxiety disorders are highly treatable, and many people achieve lasting recovery.

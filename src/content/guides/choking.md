@@ -34,7 +34,6 @@ faq:
     a: 'TODO: Plain-language answer (1–2 sentences).'
   - q: When should I seek emergency care?
     a: 'TODO: Clear red-flags + call emergency services if present.'
-layout: '@/layouts/GuideLayout.astro'
 ---
 ## Intro
 Choking occurs when the airway is blocked by food or an object. Without quick action, choking can lead to unconsciousness and death within minutes. Knowing simple first aid steps can save a life.
