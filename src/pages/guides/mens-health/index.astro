@@ -1,64 +1,65 @@
 ---
-import Layout from @layoutsLayout.astro;
-import { getCollection } from astrocontent;
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-const site = Astro.site.toString().replace(+$, )  httpspatientguide.io;
-const pageUrl = `${site}guidesmens-health`;
+const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
+const pageUrl = `${site}/guides/mens-health`;
 
-const title = Men’s Health — Guides;
+const title = "Men's Health — Guides";
 const description =
-  Screening, prostatetesticular health, cardiovascular risk, sexual health, fertility, mental health, and lifestyle prevention.;
+  "Screening, prostate/testicular health, cardiovascular risk, sexual health, fertility, mental health, and lifestyle prevention.";
 
-const guides = await getCollection(guides, ({ data }) =
-  data.draft !== true && (
-    data.category === Men’s Health   typographic apostrophe
-    data.category === Men's Health   straight apostrophe
-    data.category === Mens Health    no apostrophe
-    data.category === men’s health  
-    data.category === men's health 
-    data.category === mens health
+const guides = await getCollection("guides", ({ data }) =>
+  data?.draft !== true && (
+    data?.category === "Men's Health" ||
+    data?.category === "Men’s Health" ||  // typographic apostrophe
+    data?.category === "Mens Health"  ||
+    data?.category === "men's health" ||
+    data?.category === "men’s health" ||
+    data?.category === "mens health"
   )
 );
 
 const breadcrumbLd = {
-  @context httpsschema.org,
-  @type BreadcrumbList,
-  itemListElement [
-    { @type ListItem, position 1, name Guides, item `${site}guides` },
-    { @type ListItem, position 2, name Men’s Health, item pageUrl }
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Guides", item: `${site}/guides` },
+    { "@type": "ListItem", position: 2, name: "Men's Health", item: pageUrl }
   ]
 };
 
 const collectionPageLd = {
-  @context httpsschema.org,
-  @type CollectionPage,
-  name title,
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
   description,
-  url pageUrl,
-  inLanguage en,
-  isPartOf { @type WebSite, name patientguide.io, url site }
+  url: pageUrl,
+  inLanguage: "en",
+  isPartOf: { "@type": "WebSite", name: "patientguide.io", url: site }
 };
 ---
 
-Layout title={title} description={description}
-  section class=prose max-w-3xl mx-auto py-8
-    h1{title}h1
-    p{description}p
+<Layout title={title} description={description}>
+  <section class="prose max-w-3xl mx-auto py-8">
+    <h1>{title}</h1>
+    <p>{description}</p>
 
-    {guides.length === 0  (
-      pNo guides found yet.p
-    )  (
-      ul class=list-disc list-inside mt-6 space-y-2
-        {guides.map((g) = (
-          li
-            a href={`guides${g.slug}`}{g.data.title  (Untitled)}a
-            {g.data.description && small — {g.data.description}small}
-          li
+    {guides.length === 0 ? (
+      <p>No guides found yet.</p>
+    ) : (
+      <ul class="list-disc list-inside mt-6 space-y-2">
+        {guides.map((g) => (
+          <li>
+            <a href={`/guides/${g.slug}`}>{g.data?.title ?? "(Untitled)"}</a>
+            {g.data?.description && <small> — {g.data.description}</small>}
+          </li>
         ))}
-      ul
+      </ul>
     )}
-  section
+  </section>
 
-  script type=applicationld+json sethtml={JSON.stringify(breadcrumbLd)} 
-  script type=applicationld+json sethtml={JSON.stringify(collectionPageLd)} 
-Layout
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(collectionPageLd)} />
+</Layout>
+
