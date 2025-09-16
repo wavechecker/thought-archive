@@ -30,3 +30,6 @@ nul
 nul
 nul
 .env
+
+# editor backups
+*.bak
