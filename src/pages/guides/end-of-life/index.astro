@@ -3,13 +3,19 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
-const pageUrl = `${site}/guides/general-health`;
+const pageUrl = `${site}/guides/end-of-life`;
 
-const title = "General Health — Guides";
-const description = "Everyday health topics: prevention, lifestyle, screening, and common conditions.";
+const title = "End of Life — Guides";
+const description =
+  "Palliative care, symptom control, advance directives, hospice, caregiver support, and what to expect.";
 
 const guides = await getCollection("guides", ({ data }) =>
-  data?.draft !== true && (data?.category === "General" || data?.category === "General Health" || data?.category === "general health")
+  data?.draft !== true && (
+    data?.category === "End of Life" ||
+    data?.category === "end of life" ||
+    data?.category === "Palliative Care" ||   // include common variant if used
+    data?.category === "Palliative"           // include common variant if used
+  )
 );
 
 const breadcrumbLd = {
@@ -17,7 +23,7 @@ const breadcrumbLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Guides", item: `${site}/guides` },
-    { "@type": "ListItem", position: 2, name: "General Health", item: pageUrl }
+    { "@type": "ListItem", position: 2, name: "End of Life", item: pageUrl }
   ]
 };
 
@@ -54,4 +60,3 @@ const collectionPageLd = {
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(collectionPageLd)} />
 </Layout>
-

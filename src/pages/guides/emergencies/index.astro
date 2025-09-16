@@ -1,10 +1,16 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
 const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
 const pageUrl = `${site}/guides/emergencies`;
+
 const title = "Emergencies — Guides";
-const description = "First aid and urgent care: anaphylaxis, CPR, severe bleeding, stroke, chest pain, sepsis, and more.";
+const description = "First-aid and urgent-care guides: chest pain, choking, anaphylaxis, meningitis, and when to seek help.";
+
+const guides = await getCollection("guides", ({ data }) =>
+  data?.draft !== true && (data?.category === "Emergencies" || data?.category === "emergencies")
+);
 
 const breadcrumbLd = {
   "@context": "https://schema.org",
@@ -18,16 +24,18 @@ const breadcrumbLd = {
 const collectionPageLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: title, description, url: pageUrl, inLanguage: "en",
+  name: title,
+  description,
+  url: pageUrl,
+  inLanguage: "en",
   isPartOf: { "@type": "WebSite", name: "patientguide.io", url: site }
 };
 ---
 
-
-<Layout title={`${PAGE_TITLE} — Guides`} description={pageDesc}>
+<Layout title={title} description={description}>
   <section class="prose max-w-3xl mx-auto py-8">
-    <h1>{PAGE_TITLE}</h1>
-    <p>{pageDesc}</p>
+    <h1>{title}</h1>
+    <p>{description}</p>
 
     {guides.length === 0 ? (
       <p>No guides found yet.</p>
@@ -42,5 +50,7 @@ const collectionPageLd = {
       </ul>
     )}
   </section>
-</Layout>
 
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(collectionPageLd)} />
+</Layout>
