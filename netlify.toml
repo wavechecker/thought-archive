@@ -13,7 +13,7 @@
   status = 410
   force = true
 
-  # Normalize category hub slugs
+# Normalize category hub slugs
 [[redirects]]
   from = "/guides/heart-and-circulation"
   to = "/guides/heart-circulation"
@@ -41,6 +41,19 @@
 [[redirects]]
   from = "/guides/child-adolescent-health-hub/"
   to = "/guides/child-and-adolescent-health"
+  status = 301
+  force = true
+
+# Merge vaccination-overview into vaccination
+[[redirects]]
+  from = "/guides/vaccination-overview"
+  to = "/guides/vaccination"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/vaccination-overview/"
+  to = "/guides/vaccination"
   status = 301
   force = true
 

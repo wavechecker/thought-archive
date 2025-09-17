@@ -1,38 +1,52 @@
 ---
-title: Anxiety Disorders
-slug: anxiety
-description: >-
-  Overview of anxiety disorders, their causes, symptoms, treatments, and
-  long-term outlook.
-category: Mental Health
-publishDate: '2025-09-03'
-tags:
-  - anxiety
-  - mental health
-  - WHO
+title: "Anxiety Disorders"
+slug: "anxiety"
+description: "What anxiety disorders are, common types, symptoms, proven treatments, and when to seek urgent help."
+category: "Mental Health"
+publishDate: "2025-09-03"
+updatedDate: "2025-09-17"
+tags: ["anxiety", "mental health", "CBT", "SSRI"]
 draft: false
-updatedDate: '2025-09-03'
 schema:
+  article:
+    "@type": "Article"
+    headline: "Anxiety Disorders"
+    datePublished: "2025-09-03"
+    dateModified: "2025-09-17"
+    about: ["anxiety disorders", "panic disorder", "phobias", "social anxiety", "GAD"]
+    author: "patientguide.io"
+    isAccessibleForFree: true
   medicalCondition:
-    name: Anxiety Disorders
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
-    riskFactors:
-      - 'TODO risk factor #1'
+    "@type": "MedicalCondition"
+    name: "Anxiety Disorders"
+    description: "A group of conditions marked by excessive fear or worry that is persistent, difficult to control, and interferes with daily functioning."
     symptoms:
-      - 'TODO symptom #1'
+      - "Excessive, hard-to-control worry or fear"
+      - "Restlessness, muscle tension, sleep disturbance"
+      - "Panic attacks (surges of intense fear with physical symptoms)"
+      - "Avoidance of feared situations (e.g., social settings, specific phobias)"
+    riskFactors:
+      - "Family history of anxiety or mood disorders"
+      - "Stressful or traumatic life events"
+      - "Chronic medical conditions or pain"
+      - "Substance use or withdrawal"
+      - "High trait anxiety/perfectionism"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Depression and substance misuse"
+      - "Impaired school/work performance and relationships"
+      - "Reduced quality of life, increased healthcare use"
+    expectedPrognosis: "Favorable with evidence-based therapy; many recover or achieve long-term remission."
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
-faq:
-  - q: What is anxiety disorders?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+      - "https://www.who.int/"
+      - "https://medlineplus.gov/"
+  faq:
+    - q: "What is an anxiety disorder?"
+      a: "Persistent, excessive fear or worry that disrupts daily life—distinct from normal, occasional anxiety."
+    - q: "When should I seek emergency care?"
+      a: "If you have thoughts of self-harm, feel unable to keep yourself safe, or have severe panic with chest pain/breathing difficulty—call emergency services."
 ---
+
 ## Intro
 Anxiety disorders are among the most common mental health conditions worldwide. While occasional anxiety is normal, anxiety disorders involve persistent, excessive fear or worry that interferes with daily life. The good news: anxiety disorders are highly treatable, and many people achieve lasting recovery.
 
