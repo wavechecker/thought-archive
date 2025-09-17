@@ -1,12 +1,41 @@
 ---
 title: "Voluntary Assisted Dying in Australia: What Families Need to Know"
 slug: "vad-australia-families-guide"
-description: "Practical steps for families navigating voluntary assisted dying in Australia, with links to official state bodies and resources."
+description: "Guidance for families on what to expect, how to support loved ones, and the safeguards in place for voluntary assisted dying in Australia."
 category: "End of Life"
-publishDate: "2025-09-02"
+publishDate: "2025-09-17"
+updatedDate: "2025-09-17"
+tags: ["voluntary assisted dying", "VAD", "end of life", "families", "Australia"]
 draft: false
-tags: ["VAD", "Australia", "family", "end of life", "resources"]
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "WebPage"
+    name: "Voluntary Assisted Dying in Australia: What Families Need to Know"
+    description: "PatientGuide resource for families supporting loved ones through voluntary assisted dying in Australia."
+    about: ["Voluntary Assisted Dying", "End of Life", "Australia"]
+    audience:
+      "@type": "Audience"
+      audienceType: "Families and caregivers"
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "How can families support a loved one choosing VAD?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Families can provide emotional support, help navigate paperwork, attend consultations if invited, and ensure the person’s wishes are respected."
+      - "@type": "Question"
+        name: "Are families involved in decision-making?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "The decision is made by the patient and doctors. Families are usually involved in discussions but cannot override the patient’s choice."
+      - "@type": "Question"
+        name: "What safeguards protect patients?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Two doctors must independently assess eligibility. The person must have decision-making capacity, a terminal illness, and make repeated voluntary requests."
 ---
+
 
 # Voluntary Assisted Dying in Australia: What Families Need to Know
 

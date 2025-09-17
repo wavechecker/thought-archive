@@ -1,12 +1,42 @@
 ---
 title: "Voluntary Assisted Dying in Australia — How to Access It"
 slug: "voluntary-assisted-dying-australia-access"
-description: "Who is eligible for voluntary assisted dying in Australia, how the process works, and what differs between states and territories."
+description: "An overview of eligibility, application steps, and safeguards for accessing voluntary assisted dying (VAD) in Australia."
 category: "End of Life"
-publishDate: "2025-09-02"
+publishDate: "2025-09-17"
+updatedDate: "2025-09-17"
+tags: ["voluntary assisted dying", "VAD", "end of life", "Australia", "access"]
 draft: false
-tags: ["VAD", "Australia", "end of life", "eligibility", "law"]
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "WebPage"
+    name: "Voluntary Assisted Dying in Australia — How to Access It"
+    description: "Guide to eligibility, steps, and safeguards for voluntary assisted dying in Australia."
+    about: ["Voluntary Assisted Dying", "Australia", "End of Life Law"]
+    audience:
+      "@type": "Audience"
+      audienceType: "Patients and caregivers"
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "Who is eligible for VAD in Australia?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Eligibility requires being an adult Australian resident with a terminal illness causing unbearable suffering, with life expectancy under 6–12 months (varies by state)."
+      - "@type": "Question"
+        name: "What is the process for accessing VAD?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "The process includes two formal requests to doctors, independent assessments, and a waiting period. The final request must be in writing."
+      - "@type": "Question"
+        name: "Do all states and territories have VAD laws?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "As of 2025, all six states have VAD laws in force. The Northern Territory and ACT are expected to implement laws in coming years."
 ---
+
+
 
 # Voluntary Assisted Dying in Australia — How to Access It
 

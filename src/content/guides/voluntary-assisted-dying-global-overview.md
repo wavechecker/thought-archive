@@ -1,12 +1,41 @@
 ---
-title: "Voluntary Assisted Dying (VAD) — Global Overview"
+title: "Voluntary Assisted Dying — Global Overview"
 slug: "voluntary-assisted-dying-global-overview"
-description: "Where voluntary assisted dying is legal, what the rules are, and the ethical debates shaping its future."
+description: "A look at voluntary assisted dying (VAD, MAiD, assisted dying, euthanasia) laws around the world, including Canada, Europe, the US, and Australia."
 category: "End of Life"
-publishDate: "2025-09-02"
+publishDate: "2025-09-17"
+updatedDate: "2025-09-17"
+tags: ["voluntary assisted dying", "MAiD", "assisted dying", "end of life", "global"]
 draft: false
-tags: ["VAD", "assisted dying", "euthanasia", "end of life", "law", "ethics"]
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "WebPage"
+    name: "Voluntary Assisted Dying — Global Overview"
+    description: "PatientGuide overview of voluntary assisted dying worldwide, with notes on terminology, laws, and uptake in different regions."
+    about: ["Voluntary Assisted Dying", "MAiD", "Euthanasia", "Assisted Dying"]
+    audience:
+      "@type": "Audience"
+      audienceType: "General public"
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "What is voluntary assisted dying called in other countries?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Australia and NZ use VAD, Canada uses MAiD, US states use terms like Death with Dignity or assisted dying, and Europe uses euthanasia or assisted suicide depending on the country."
+      - "@type": "Question"
+        name: "Where is VAD legal worldwide?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "It is legal in Canada, Australia, New Zealand, the Netherlands, Belgium, Luxembourg, Spain, Colombia, Switzerland (assisted suicide), and select US states."
+      - "@type": "Question"
+        name: "How many people use VAD globally?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Uptake varies: ~4% of all deaths in Canada, ~5% in the Netherlands, hundreds annually in NZ, and smaller numbers in US states where legal."
 ---
+
 
 # Voluntary Assisted Dying (VAD) — Global Overview
 

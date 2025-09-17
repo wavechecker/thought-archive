@@ -4,16 +4,58 @@ slug: "vaccination"
 description: "Guides on vaccines: how they work, current recommendations, COVID-19 updates, and addressing myths and misinformation."
 category: "Guide Hubs"
 publishDate: "2025-08-29"
-updatedDate: "2025-09-04"
+updatedDate: "2025-09-17"
 hubKey: "Vaccination"
 draft: false
 tags: ["vaccination", "vaccines", "immunization", "public health", "patientguide", "hub"]
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "CollectionPage"
+    name: "Vaccination — Guide Hub"
+    description: "PatientGuide resources on vaccination, covering science, policy, and disease-specific guides."
+    about: ["Vaccination", "Immunization", "Public Health"]
+    isPartOf:
+      "@type": "WebSite"
+      name: "PatientGuide"
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "What is vaccination?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Vaccination trains the immune system to recognize and fight infections, preventing illness without causing the disease itself."
+      - "@type": "Question"
+        name: "How many lives do vaccines save each year?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "WHO estimates vaccines prevent 4–5 million deaths annually worldwide."
+      - "@type": "Question"
+        name: "Are vaccines safe?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Yes. Vaccines undergo extensive testing and are continuously monitored for safety once in use."
+      - "@type": "Question"
+        name: "Can vaccines eradicate diseases?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Yes. Smallpox was eradicated, and polio is close to elimination through global vaccination campaigns."
 ---
 
 # Vaccination — Guide Hub
 
 Vaccination is one of the most effective tools in preventive health, protecting individuals and communities from infectious disease.  
-This hub connects our guides on individual vaccines, core science, policy, and the debates shaping immunization today.  
+This hub connects our guides on individual vaccines, core science, policy, and the debates shaping immunization today.
+
+---
+
+## Vaccination by the Numbers
+- **4–5 million deaths prevented** annually through vaccination (WHO, 2024).  
+- **86% of the world’s infants** receive basic vaccines (DTP, polio, measles).  
+- **20 million children** each year still miss out on essential vaccines.  
+- **Smallpox eradicated** in 1980 — first disease eliminated by vaccination.  
+- **Polio cases reduced by 99%** since 1988 through global vaccination campaigns.  
+- **COVID-19 vaccines:** Over 13 billion doses delivered worldwide since 2020.  
 
 ---
 
@@ -48,10 +90,10 @@ This hub connects our guides on individual vaccines, core science, policy, and t
 - [Preventive Health — Guide Hub](/guides/preventive-health/)  
 - [Infectious Diseases — Guide Hub](/guides/infectious-diseases/)  
 
-*Last reviewed: September 4, 2025*  
+*Last reviewed: September 17, 2025*  
 
 ---
 
 ## Disclaimer
 This guide is for **educational purposes only** and is **not a substitute for professional medical advice**.  
-Always consult a qualified healthcare provider for diagnosis, treatment, and personal medical advice.  
+Always consult a qualified healthcare provider for diagnosis, treatment, and personal medical advice.
