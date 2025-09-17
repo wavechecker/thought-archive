@@ -67,5 +67,11 @@ We can’t afford to forget why hepatitis B vaccination was one of the greatest 
 
 ---
 
+## Related Guide
+For a full overview of the disease, prevention, and treatment, see our guide:  
+👉 [Hepatitis B: Risks, Prevention, and Treatment](/guides/hepatitis-b)
+
+---
+
 ## Closing
 Hepatitis B vaccination ended childhood liver cancer in Alaska. It could — and should — keep protecting children everywhere. Rolling it back isn’t just risky. It’s reckless.
