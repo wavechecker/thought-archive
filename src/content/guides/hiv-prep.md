@@ -2,7 +2,7 @@
 title: "HIV PrEP — Pre-Exposure Prophylaxis"
 slug: "hiv-prep"
 description: "PrEP is daily or on-demand medication that dramatically reduces the risk of HIV infection in people at higher risk."
-category: "Sexual Health"
+category: "General Health"
 publishDate: "2025-09-17"
 updatedDate: "2025-09-17"
 tags: ["HIV", "PrEP", "sexual health", "HIV prevention", "STI"]

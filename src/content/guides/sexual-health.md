@@ -2,7 +2,7 @@
 title: "Sexual Health — Guide Hub"
 slug: "sexual-health"
 description: "Sexual health covers contraception, STI prevention, HPV vaccination, and safe practices. Explore guides on evidence-based care and protection."
-category: "Sexual Health"
+category: "Guide Hubs"
 publishDate: "2025-08-29"
 updatedDate: "2025-09-17"
 hubKey: "Sexual Health"

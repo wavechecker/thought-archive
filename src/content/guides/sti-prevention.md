@@ -2,7 +2,7 @@
 title: "STI Prevention Basics"
 slug: "sti-prevention"
 description: "Learn how to reduce the risk of sexually transmitted infections (STIs) through safe practices, testing, vaccination, and barrier protection."
-category: "Sexual Health"
+category: "General Health"
 publishDate: "2025-09-17"
 updatedDate: "2025-09-17"
 tags: ["STI prevention", "sexual health", "condoms", "vaccination", "safe sex"]

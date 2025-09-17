@@ -2,7 +2,7 @@
 title: "Contraception Options — Guide"
 slug: "contraception-options"
 description: "An overview of contraception options, including hormonal, barrier, long-acting reversible methods, and emergency contraception."
-category: "Sexual Health"
+category: "General Health"
 publishDate: "2025-09-17"
 updatedDate: "2025-09-17"
 tags: ["contraception", "birth control", "sexual health", "family planning"]
