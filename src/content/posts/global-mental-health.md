@@ -2,10 +2,30 @@
 title: "Global Mental Health: Key Facts and Urgent Needs"
 slug: "global-mental-health"
 description: "WHO reports show over one billion people live with mental health conditions worldwide, with major gaps in care and funding."
-category: "Mental Health"
 publishDate: "2025-09-03"
-tags: ["mental health", "WHO", "public health"]
+updatedDate: "2025-09-17"
+tags: ["opinion", "analysis", "mental health", "public health"]
 draft: false
+related:
+  - /guides/anxiety
+  - /guides/mental-health-crisis
+  - /guides/mental-health
+---
+
+---
+title: "Global Mental Health: Key Facts and Urgent Needs"
+slug: "global-mental-health"
+description: "WHO reports show over one billion people live with mental health conditions worldwide, yet care and funding remain critically inadequate."
+publishDate: "2025-09-03"
+updatedDate: "2025-09-17"
+tags: ["opinion", "analysis", "mental health", "public health"]
+draft: false
+related:
+  - /guides/mental-health
+  - /guides/anxiety
+  - /guides/mental-health-first-aid
+  - /guides/suicide-prevention
+  - /posts/global-mental-health-crisis
 ---
 
 ## Intro
@@ -75,12 +95,18 @@ A: Women (higher rates of anxiety and depression), young people (high suicide ri
 ---
 
 ## Related Guides
-- [Mental Health First Aid](/guides/mental-health-first-aid)  
-- [Depression: Symptoms, Causes, and Treatment](/guides/depression)  
+- [Mental Health Hub](/guides/mental-health)  
 - [Anxiety Disorders](/guides/anxiety)  
+- [Mental Health First Aid](/guides/mental-health-first-aid)  
 - [Suicide Prevention and Support](/guides/suicide-prevention)  
 
 ---
 
 ## Related Posts
-- [One Billion Minds, One Global Emergency](/posts/global-mental-health-crisis)  
+- [Global Mental Health Crisis: What Needs to Change](/posts/global-mental-health-crisis)  
+- [Global Vaccine Equity](/posts/global-vaccine-equity)  
+
+---
+
+## Closing
+Mental health is global health. Without urgent action, the gap between what people need and what they receive will only widen — leaving over a billion minds without the care they deserve.
