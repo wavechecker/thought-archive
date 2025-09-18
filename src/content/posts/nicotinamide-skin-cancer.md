@@ -1,4 +1,3 @@
-# File: src/content/posts/nicotinamide-skin-cancer.md
 ---
 title: "A Vitamin Pill Against Skin Cancer?"
 slug: "nicotinamide-skin-cancer"
