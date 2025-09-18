@@ -28,6 +28,7 @@ const CATEGORY = z.enum([
   "Obesity & Metabolic Health Hub",
   "Men's Health",
   "Guide Hubs",
+  "Respiratory", // ← added
 ]);
 
 // -----------------------------
