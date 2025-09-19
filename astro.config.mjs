@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
+import mdx from "@astrojs/mdx"; // ✅ add MDX integration
 
 export default defineConfig({
   // Canonical site URL (used for <link rel="canonical"> and JSON-LD @id)
@@ -15,6 +16,7 @@ export default defineConfig({
 
   // Integrations
   integrations: [
+    mdx(), // ✅ enable MDX
     sitemap({
       filter: (page) => !page.includes("/draft"), // optional: skip draft pages in sitemap
     }),

@@ -4,9 +4,86 @@ slug: "measles"
 description: "Measles is one of the most contagious viruses known. The measles vaccine is safe, effective, and critical for global public health."
 category: "Vaccination"
 publishDate: "2025-09-05"
+updatedDate: "2025-09-19"
 tags: ["measles", "MMR", "vaccination", "public health"]
 draft: false
+
+# JSON-LD
+jsonLd:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Measles and the Measles Vaccine"
+    description: "Measles is one of the most contagious viruses known. The measles vaccine is safe, effective, and critical for global public health."
+    datePublished: "2025-09-05"
+    dateModified: "2025-09-19"
+    author:
+      "@type": "Organization"
+      name: "PatientGuide.io Editorial Team"
+    publisher:
+      "@type": "Organization"
+      name: "PatientGuide.io"
+      logo:
+        "@type": "ImageObject"
+        url: "https://patientguide.io/logo.png"
+    mainEntityOfPage:
+      "@type": "WebPage"
+      url: "https://patientguide.io/guides/measles/"
+    about:
+      "@type": "MedicalCondition"
+      name: "Measles"
+      alternateName: "Rubeola"
+      associatedAnatomy:
+        "@type": "AnatomicalSystem"
+        name: "Respiratory system"
+      cause:
+        "@type": "InfectiousAgentClass"
+        name: "Morbillivirus (Paramyxoviridae)"
+      transmissionMethod: "Airborne droplets, coughing, sneezing, contact with contaminated surfaces"
+      infectiousAgent: "Measles morbillivirus"
+      typicalTest:
+        "@type": "MedicalTest"
+        name: "Measles IgM antibody test / PCR"
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "Is measles just a childhood rash?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "No. Measles can cause severe illness, including pneumonia, encephalitis, and death."
+      - "@type": "Question"
+        name: "Can adults get measles?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Yes. Adults without immunity remain at risk and should receive two doses of MMR."
+      - "@type": "Question"
+        name: "How many doses are needed for lifelong protection?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Two doses of the MMR vaccine usually provide lifelong immunity."
+      - "@type": "Question"
+        name: "Why do outbreaks still occur?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Because measles is so contagious, even small drops in vaccination coverage can lead to outbreaks."
+  - "@context": "https://schema.org"
+    "@type": "BreadcrumbList"
+    itemListElement:
+      - "@type": "ListItem"
+        position: 1
+        name: "Guides"
+        item: "https://patientguide.io/guides/"
+      - "@type": "ListItem"
+        position: 2
+        name: "Vaccination"
+        item: "https://patientguide.io/guides/vaccination/"
+      - "@type": "ListItem"
+        position: 3
+        name: "Measles"
+        item: "https://patientguide.io/guides/measles/"
 ---
+
+import Aside from "@/components/Aside.astro"
 
 # Measles and the Measles Vaccine
 
@@ -15,6 +92,11 @@ Measles is a highly contagious viral disease that can cause severe complications
 The measles vaccine — usually given as the combined MMR (measles, mumps, rubella) or MMRV (with varicella) — is one of the safest and most effective vaccines ever developed.  
 
 Thanks to immunisation, measles deaths have fallen dramatically, but outbreaks are returning wherever coverage drops.
+
+<Aside title="Important" variant="warning">
+Measles is so contagious that **90% of unvaccinated contacts** will be infected after exposure.  
+Around **95% coverage** is needed for herd immunity to stop outbreaks.
+</Aside>
 
 ## Key Points
 - **Contagious:** Up to 90% of unvaccinated contacts will catch measles after exposure.  
@@ -35,6 +117,12 @@ Thanks to immunisation, measles deaths have fallen dramatically, but outbreaks a
 - **Effectiveness:** One dose ~93%, two doses ~97%.  
 - **Safety:** Common side effects are mild (fever, rash). Rare side effects include febrile seizures; serious reactions are extremely rare.  
 - **Myths:** The 1998 autism claim was fraudulent and has been thoroughly debunked.  
+
+<Aside title="Note on MMRV Policy" variant="info">
+As of September 2025, U.S. vaccine advisors have voted to **stop recommending MMRV** for children under 4 due to a small increase in febrile seizure risk.  
+Children in this age group are advised to receive **separate MMR + varicella shots** instead.  
+MMRV remains available and covered under the **Vaccines for Children** program.
+</Aside>
 
 ## Global Recommendations
 - **WHO:** Two doses for all children, first at 9–12 months, second at 15–18 months.  

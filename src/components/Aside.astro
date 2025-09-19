@@ -1,0 +1,25 @@
+---
+const { title = "Note", variant = "neutral" } = Astro.props;
+/**
+ * Variants: neutral | info | warning | success
+ */
+const tone = {
+  neutral: "border-slate-300 bg-slate-50",
+  info: "border-blue-300 bg-blue-50",
+  warning: "border-amber-300 bg-amber-50",
+  success: "border-emerald-300 bg-emerald-50",
+}[variant] || "border-slate-300 bg-slate-50";
+---
+
+<aside
+  class={`my-6 rounded-2xl border ${tone} p-4 md:p-5 shadow-sm`}
+  role="note"
+  aria-label={title}
+>
+  <div class="mb-2 text-sm font-semibold uppercase tracking-wide opacity-70">
+    {title}
+  </div>
+  <div class="prose prose-sm max-w-none">
+    <slot />
+  </div>
+</aside>
