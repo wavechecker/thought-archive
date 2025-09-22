@@ -10,7 +10,7 @@ draft: false
 import { JsonLd } from "@/components/JsonLd"
 
 <JsonLd>
-{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "MedicalCondition",
   "name": "Osteoporosis",
@@ -53,11 +53,11 @@ import { JsonLd } from "@/components/JsonLd"
       "description": "Drugs such as teriparatide or romosozumab that stimulate new bone growth in severe cases."
     }
   ]
-}
+})}
 </JsonLd>
 
 <JsonLd>
-{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -65,8 +65,9 @@ import { JsonLd } from "@/components/JsonLd"
     { "@type": "ListItem", "position": 2, "name": "Bone Health Hub", "item": "/guides/bone-health/" },
     { "@type": "ListItem", "position": 3, "name": "Osteoporosis", "item": "/guides/osteoporosis" }
   ]
-}
+})}
 </JsonLd>
+
 
 
 ## Intro
