@@ -10,17 +10,17 @@ draft: false
 import { JsonLd } from "@/components/JsonLd"
 
 <JsonLd>
-{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "MedicalGuideline",
   "name": "Bone health basics",
   "description": "An overview of how bones grow, remodel, and stay strong across the lifespan, with tips on prevention of osteoporosis and fractures.",
   "guidelineSubject": { "@type": "AnatomicalSystem", "name": "Skeletal system" }
-}
+})}
 </JsonLd>
 
 <JsonLd>
-{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -28,7 +28,7 @@ import { JsonLd } from "@/components/JsonLd"
     { "@type": "ListItem", "position": 2, "name": "Bone Health Hub", "item": "/guides/bone-health/" },
     { "@type": "ListItem", "position": 3, "name": "Bone Health Basics", "item": "/guides/bone-health-basics" }
   ]
-}
+})}
 </JsonLd>
 
 ## Intro
