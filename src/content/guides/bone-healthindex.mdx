@@ -1,0 +1,85 @@
+---
+title: "Bone Health Hub"
+description: "Learn how to keep bones strong, prevent fractures, and manage osteoporosis. Explore guides on bone basics, osteoporosis, falls, and recovery."
+hubKey: "bone-health"
+category: "General Health"
+tags: ["bone health", "osteoporosis", "fractures", "falls", "prevention"]
+publishDate: "2025-09-22"
+draft: false
+---
+
+import { JsonLd } from "@/components/JsonLd"
+import HubList from "@/components/HubList"
+
+<JsonLd>
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Bone Health Hub",
+  "description": "A collection of guides on bone basics, osteoporosis, fracture prevention, and recovery.",
+  "about": { "@type": "AnatomicalSystem", "name": "Skeletal system" },
+  "isPartOf": { "@type": "WebSite", "name": "patientguide.io" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
+      { "@type": "ListItem", "position": 2, "name": "Bone Health Hub", "item": "/guides/bone-health/" }
+    ]
+  },
+  "hasPart": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": { "@type": "MedicalGuideline", "name": "Bone Health Basics", "url": "/guides/bone-health-basics" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": { "@type": "MedicalCondition", "name": "Osteoporosis", "url": "/guides/osteoporosis" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": { "@type": "MedicalCondition", "name": "Fractures and Falls", "url": "/guides/fractures-and-falls" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": { "@type": "MedicalGuideline", "name": "After a Fracture: Next Steps with Osteoporosis", "url": "/guides/after-a-fracture" }
+      }
+    ]
+  }
+}
+</JsonLd>
+
+## Bone Health Hub
+Bones provide structure, protect organs, store minerals, and allow us to move.  
+As we age, keeping them strong becomes essential to prevent fractures and maintain independence.
+
+This hub brings together key guides on how bones work, what happens when they weaken, and how to prevent and treat problems like osteoporosis.
+
+<HubList hubKey="bone-health" />
+
+---
+
+## Featured Guides
+
+### [Bone Health Basics](/guides/bone-health-basics)
+How bones grow and remodel, and the role of nutrition, exercise, and hormones in keeping them strong.
+
+### [Osteoporosis](/guides/osteoporosis)
+A condition that weakens bones and increases fracture risk. Covers diagnosis, risk factors, and current treatments.
+
+### [Fractures and Falls](/guides/fractures-and-falls)
+Why falls cause fractures, who’s most at risk, and how to prevent them at home and in daily life.
+
+### [After a Fracture](/guides/after-a-fracture)
+What to do after a hip or spine fracture: rehabilitation, fall prevention, and treating underlying osteoporosis to stop the next fracture.
+
+---
+
+## Related Hubs
+- [General Health](/guides)
+- [Women’s Health](/guides/womens-health)

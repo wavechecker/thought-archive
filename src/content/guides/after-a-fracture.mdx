@@ -10,7 +10,7 @@ draft: false
 import { JsonLd } from "@/components/JsonLd"
 
 <JsonLd>
-{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "MedicalGuideline",
   "name": "Secondary prevention after fracture",
@@ -19,11 +19,11 @@ import { JsonLd } from "@/components/JsonLd"
     "@type": "MedicalCondition",
     "name": "Osteoporosis"
   }
-}
+})}
 </JsonLd>
 
 <JsonLd>
-{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -31,7 +31,7 @@ import { JsonLd } from "@/components/JsonLd"
     { "@type": "ListItem", "position": 2, "name": "Bone Health Hub", "item": "/guides/bone-health/" },
     { "@type": "ListItem", "position": 3, "name": "After a Fracture", "item": "/guides/after-a-fracture" }
   ]
-}
+})}
 </JsonLd>
 
 ## Intro
