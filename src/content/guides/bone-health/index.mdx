@@ -12,30 +12,46 @@ import { JsonLd } from "@/components/JsonLd"
 import HubList from "@/components/HubList"
 
 <JsonLd>
-{{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Bone Health Hub",
   "description": "A collection of guides on bone basics, osteoporosis, fracture prevention, and recovery.",
-  "about": {{ "@type": "AnatomicalSystem", "name": "Skeletal system" }},
-  "isPartOf": {{ "@type": "WebSite", "name": "patientguide.io" }},
-  "breadcrumb": {{
+  "about": { "@type": "AnatomicalSystem", "name": "Skeletal system" },
+  "isPartOf": { "@type": "WebSite", "name": "patientguide.io" },
+  "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {{ "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" }},
-      {{ "@type": "ListItem", "position": 2, "name": "Bone Health Hub", "item": "/guides/bone-health/" }}
+      { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
+      { "@type": "ListItem", "position": 2, "name": "Bone Health Hub", "item": "/guides/bone-health/" }
     ]
-  }},
-  "hasPart": {{
+  },
+  "hasPart": {
     "@type": "ItemList",
     "itemListElement": [
-      {{ "@type": "ListItem", "position": 1, "item": {{ "@type": "MedicalGuideline", "name": "Bone Health Basics", "url": "/guides/bone-health-basics" }} }},
-      {{ "@type": "ListItem", "position": 2, "item": {{ "@type": "MedicalCondition", "name": "Osteoporosis", "url": "/guides/osteoporosis" }} }},
-      {{ "@type": "ListItem", "position": 3, "item": {{ "@type": "MedicalCondition", "name": "Fractures and Falls", "url": "/guides/fractures-and-falls" }} }},
-      {{ "@type": "ListItem", "position": 4, "item": {{ "@type": "MedicalGuideline", "name": "After a Fracture: Next Steps with Osteoporosis", "url": "/guides/after-a-fracture" }} }}
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": { "@type": "MedicalGuideline", "name": "Bone Health Basics", "url": "/guides/bone-health-basics" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": { "@type": "MedicalCondition", "name": "Osteoporosis", "url": "/guides/osteoporosis" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": { "@type": "MedicalCondition", "name": "Fractures and Falls", "url": "/guides/fractures-and-falls" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": { "@type": "MedicalGuideline", "name": "After a Fracture: Next Steps with Osteoporosis", "url": "/guides/after-a-fracture" }
+      }
     ]
-  }}
-}}
+  }
+})}
 </JsonLd>
 
 ## Bone Health Hub
