@@ -10,7 +10,7 @@ draft: false
 import { JsonLd } from "@/components/JsonLd"
 
 <JsonLd>
-{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "MedicalCondition",
   "name": "Fractures and Falls",
@@ -36,11 +36,11 @@ import { JsonLd } from "@/components/JsonLd"
       "description": "Balance training, home safety modifications, and medication review."
     }
   ]
-}
+})}
 </JsonLd>
 
 <JsonLd>
-{
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -48,8 +48,9 @@ import { JsonLd } from "@/components/JsonLd"
     { "@type": "ListItem", "position": 2, "name": "Bone Health Hub", "item": "/guides/bone-health/" },
     { "@type": "ListItem", "position": 3, "name": "Fractures and Falls", "item": "/guides/fractures-and-falls" }
   ]
-}
+})}
 </JsonLd>
+
 
 ## Intro
 Falls are a leading cause of injury in older adults. When bones are weakened by osteoporosis, even minor falls can result in serious fractures — especially of the hip, wrist, and spine.
