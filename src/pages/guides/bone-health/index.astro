@@ -1,0 +1,52 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+// If your hubs normally use a different layout, swap to that (e.g., GuideLayout)
+const title = "Bone Health Hub";
+const description = "Learn how to keep bones strong, prevent fractures, and manage osteoporosis. Explore guides on bone basics, osteoporosis, falls, and recovery.";
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Bone Health Hub",
+    "description": "A collection of guides on bone basics, osteoporosis, fracture prevention, and recovery.",
+    "about": { "@type": "AnatomicalSystem", "name": "Skeletal system" },
+    "isPartOf": { "@type": "WebSite", "name": "patientguide.io" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
+        { "@type": "ListItem", "position": 2, "name": "Bone Health Hub", "item": "/guides/bone-health/" }
+      ]
+    },
+    "hasPart": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "MedicalGuideline", "name": "Bone Health Basics", "url": "/guides/bone-health-basics" } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "MedicalCondition", "name": "Osteoporosis", "url": "/guides/osteoporosis" } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "MedicalCondition", "name": "Fractures and Falls", "url": "/guides/fractures-and-falls" } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "MedicalGuideline", "name": "After a Fracture: Next Steps with Osteoporosis", "url": "/guides/after-a-fracture" } }
+      ]
+    }
+  })}
+  </script>
+
+  <h1 class="text-3xl font-semibold mb-4">{title}</h1>
+  <p class="mb-6">{description}</p>
+
+  <h2 class="text-xl font-semibold mb-3">Featured Guides</h2>
+  <ul class="list-disc ml-6 space-y-2">
+    <li><a class="underline hover:no-underline" href="/guides/bone-health-basics">Bone Health Basics</a></li>
+    <li><a class="underline hover:no-underline" href="/guides/osteoporosis">Osteoporosis</a></li>
+    <li><a class="underline hover:no-underline" href="/guides/fractures-and-falls">Fractures and Falls</a></li>
+    <li><a class="underline hover:no-underline" href="/guides/after-a-fracture">After a Fracture: Next Steps with Osteoporosis</a></li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-8 mb-3">Related Hubs</h2>
+  <ul class="list-disc ml-6 space-y-2">
+    <li><a class="underline hover:no-underline" href="/guides">General Health</a></li>
+    <li><a class="underline hover:no-underline" href="/guides/womens-health">Women’s Health</a></li>
+  </ul>
+</Layout>
