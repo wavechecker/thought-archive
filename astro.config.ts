@@ -1,8 +1,8 @@
+// astro.config.ts
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
-import { fileURLToPath } from "node:url"; // alias support
 
 export default defineConfig({
   site: "https://patientguide.io",
@@ -16,10 +16,5 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
-    resolve: {
-      alias: {
-        "@": fileURLToPath(new URL("./src", import.meta.url)),
-      },
-    },
   },
 });

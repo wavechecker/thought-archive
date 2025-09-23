@@ -1,21 +1,12 @@
 ---
 /**
- * Minimal JSON-LD helper.
+ * Minimal JSON-LD component for MDX.
  * Usage in MDX:
- *   <JsonLd>
- *   {JSON.stringify({ "@context": "https://schema.org", ... })}
- *   </JsonLd>
- *
- * Accepts either a string (preferred) or an object/array.
+ *   import JsonLd from "../../components/JsonLd.astro"
+ *   <JsonLd>{JSON.stringify({ "@context": "https://schema.org", ... })}</JsonLd>
  */
-interface Props {
-  children?: any;
-}
-const { children } = Astro.props as Props;
-
-const json =
-  Array.isArray(children) ? children.join("") :
-  typeof children === "string" ? children :
-  JSON.stringify(children);
+const { children } = Astro.props;
+const json = typeof children === "string" ? children : JSON.stringify(children);
 ---
 <script type="application/ld+json" set:html={json}></script>
+
