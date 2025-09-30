@@ -13,7 +13,7 @@
   status = 410
   force = true
 
-  # Normalize category hub slugs
+# Normalize category hub slugs
 [[redirects]]
   from = "/guides/heart-and-circulation"
   to = "/guides/heart-circulation"
@@ -41,6 +41,31 @@
 [[redirects]]
   from = "/guides/child-adolescent-health-hub/"
   to = "/guides/child-and-adolescent-health"
+  status = 301
+  force = true
+
+# Normalize mental health hubs
+[[redirects]]
+  from = "/guides/mental-health-crisis"
+  to = "/guides/mental-health"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/mental-health-crisis/"
+  to = "/guides/mental-health"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/mental-health-guides"
+  to = "/guides/mental-health"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/mental-health-guides/"
+  to = "/guides/mental-health"
   status = 301
   force = true
 
