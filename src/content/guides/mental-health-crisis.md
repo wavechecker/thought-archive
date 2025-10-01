@@ -7,7 +7,7 @@ hubKey: "Mental Health"
 publishDate: "2025-09-03"
 updatedDate: "2025-09-13"
 tags: ["mental health", "crisis", "suicide prevention", "patientguide", "hub"]
-draft: false
+draft: true
 ---
 
 ## Overview

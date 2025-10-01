@@ -1,6 +1,7 @@
 [functions]
   directory = "netlify/functions"
 
+# 410 (Gone) — keep force for hard removals
 [[redirects]]
   from = "/posts/governments-cancel-science"
   to = "/404.html"
@@ -13,36 +14,40 @@
   status = 410
   force = true
 
-  # Normalize category hub slugs
+# ---------- Canonical style: NO trailing slash ----------
+# Normalize category hub slugs (301s should NOT force)
 [[redirects]]
   from = "/guides/heart-and-circulation"
   to = "/guides/heart-circulation"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/guides/men-s-health"
   to = "/guides/mens-health"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/guides/women-s-health"
   to = "/guides/womens-health"
   status = 301
-  force = true
 
+# Use splat rules to cover both with and without slash + any child paths
 [[redirects]]
-  from = "/guides/child-adolescent-health-hub"
+  from = "/guides/child-adolescent-health-hub/*"
   to = "/guides/child-and-adolescent-health"
   status = 301
-  force = true
+
+# ---------- Mental health hub normalization (fix redirect loops) ----------
+# These send ALL variants to the canonical no-slash URL
+[[redirects]]
+  from = "/guides/mental-health-crisis/*"
+  to = "/guides/mental-health"
+  status = 301
 
 [[redirects]]
-  from = "/guides/child-adolescent-health-hub/"
-  to = "/guides/child-and-adolescent-health"
+  from = "/guides/mental-health-guides/*"
+  to = "/guides/mental-health"
   status = 301
-  force = true
 
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
