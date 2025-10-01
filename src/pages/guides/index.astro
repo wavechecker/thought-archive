@@ -16,25 +16,25 @@ if (q) {
 // Load all published guides
 const guides = await getCollection("guides", ({ data }) => data?.draft !== true);
 
-// ---- Featured row (Child & Adolescent Health) ----
+// ---- Featured row (kept as-is, optional) ----
 const FEATURED = [
   {
     slug: "childhood-obesity-prevention",
     title: "Childhood Obesity Prevention",
     blurb:
-      "Childhood obesity has now surpassed underweight globally, driven by ultra-processed foods, sugary drinks, and weak policy protections. This guide explains the causes, risks, and proven strategies for prevention at home, in schools, and through public policy."
+      "Childhood obesity has now surpassed underweight globally. This guide explains causes, risks, and proven strategies for prevention at home, in schools, and via policy."
   },
   {
     slug: "healthy-diets-for-children",
     title: "Healthy Diets for Children",
     blurb:
-      "Balanced nutrition is key to children’s growth, learning, and long-term health. This guide explains the food groups, portion sizes, and simple strategies families can use to build healthier eating habits at home and in schools."
+      "Balanced nutrition is key to children’s growth, learning, and long-term health. Practical strategies for families and schools."
   },
   {
     slug: "diabetes-children",
     title: "Diabetes in Children and Adolescents",
     blurb:
-      "Diabetes is rising among children worldwide, with type 1 remaining common and type 2 increasing rapidly due to obesity. This guide covers symptoms, diagnosis, treatment, and prevention, helping families and schools support affected children."
+      "Type 1 remains common; type 2 is rising. Symptoms, diagnosis, treatment, and prevention — for families and schools."
   }
 ];
 
@@ -69,20 +69,34 @@ const MAX_VISIBLE = 5;
 
 // Optional overrides: point some categories to a hub page
 const overrides: Record<string, string> = {
-  "Mental Health": "/guides/mental-health",
-  // Add more when ready:
-  // "Child & Adolescent Health": "/guides/child-and-adolescent-health",
-  // "Vaccination": "/guides/vaccination",
-  // "Emergencies": "/guides/emergencies",
+  // "Vaccination": "/guides/vaccination-guide-hub",
+  // "Emergencies": "/guides/emergencies-guide-hub",
+  // "Child & Adolescent Health": "/guides/child-adolescent-health-hub",
 };
 ---
 
-<h1>Guides</h1>
-<p>Explore our library of health guides, organized by category. Click a topic to browse detailed guides.</p>
+<!-- Hero featuring the Mental Health Toolkit -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Guides</h1>
+      <p class="tagline">
+        Explore our library of health guides, organized by category.
+        Start with our <strong>Mental Health Toolkit</strong>—evidence-based habits that
+        support mood and resilience alongside therapy or medication.
+      </p>
+
+      <div class="cta-row">
+        <a href="/guides/mental-health-toolkit" class="btn btn-primary">Open Mental Health Toolkit</a>
+        <a href="/guides/mental-health" class="btn btn-ghost">Browse Mental Health Hub</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 {featuredEntries.length > 0 && (
   <>
-    <h2>Featured: Child &amp; Adolescent Health</h2>
+    <h2 class="section-title">Featured: Child &amp; Adolescent Health</h2>
     <div class="cards">
       {featuredEntries.map((f) => (
         <article class="card">
@@ -157,6 +171,48 @@ const overrides: Record<string, string> = {
 </ul>
 
 <style>
+  .hero {
+    margin-block: .25rem 1.25rem;
+  }
+  .hero-inner {
+    border: 1px solid var(--astro-border, #e5e7eb);
+    border-radius: 16px;
+    background: linear-gradient(180deg, #ffffff, #fafafa);
+    padding: 1.25rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 .35rem;
+    font-weight: 700;
+  }
+  .tagline {
+    color: #374151;
+    margin: 0 0 .9rem;
+  }
+  .cta-row {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: .55rem .9rem;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .btn-primary {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+  }
+  .btn-primary:hover { background:#0f172a; border-color:#0f172a; }
+  .btn-ghost:hover { background:#f3f4f6; }
+
+  .section-title { margin: 1.25rem 0 .5rem; font-size: 1.25rem; font-weight: 700; }
+
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -170,16 +226,16 @@ const overrides: Record<string, string> = {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     background: white;
   }
-  .grid { 
-    display:grid; 
-    gap:1rem; 
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+  .grid {
+    display:grid;
+    gap:1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     margin-top: .75rem;
   }
-  .cat-card { 
-    padding:1rem; 
-    border:1px solid var(--astro-border, #e5e7eb); 
-    border-radius:12px; 
+  .cat-card {
+    padding:1rem;
+    border:1px solid var(--astro-border, #e5e7eb);
+    border-radius:12px;
     background: white;
   }
   .mini { margin-top:.5rem; padding-left:1rem; }
