@@ -70,7 +70,14 @@ const categories = Array.from(byCategory.keys()).sort((a, b) => {
 
 const MAX_VISIBLE = 5;
 
-const overrides: Record<string, string> = {};
+// Optional overrides: point some categories to a hub page
+const overrides: Record<string, string> = {
+  "Mental Health": "/guides/mental-health",
+  // Add more when ready:
+  // "Child & Adolescent Health": "/guides/child-and-adolescent-health",
+  // "Vaccination": "/guides/vaccination",
+  // "Emergencies": "/guides/emergencies",
+};
 
 const frontmatter = {
   title: "Health Guides — PatientGuide.io",
@@ -330,13 +337,3 @@ const frontmatter = {
     margin-top: var(--pg-space-3);
   }
 </style>
-
-
-
-
-
-
-
-
-
-
