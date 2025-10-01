@@ -5,7 +5,7 @@ description: "Why friendships and social bonds are vital for resilience and redu
 category: "Mental Health"
 publishDate: "2025-09-30"
 updatedDate: "2025-09-30"
-tags: ["social connection", "mental health", "friendship", "depression prevention"]
+tags: ["sleep", "mental health", "depression", "resilience", "patientguide"]
 draft: false
 jsonld:
   - "@context": "https://schema.org"

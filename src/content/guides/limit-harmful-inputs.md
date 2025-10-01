@@ -5,7 +5,7 @@ description: "How reducing alcohol, smoking, and excessive screen time protects 
 category: "Mental Health"
 publishDate: "2025-09-30"
 updatedDate: "2025-09-30"
-tags: ["alcohol", "smoking", "screen time", "mental health"]
+tags: ["sleep", "mental health", "depression", "resilience", "patientguide"]
 draft: false
 jsonld:
   - "@context": "https://schema.org"

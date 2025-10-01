@@ -5,7 +5,7 @@ description: "Why physical activity is one of the most effective non-drug treatm
 category: "Mental Health"
 publishDate: "2025-09-30"
 updatedDate: "2025-09-30"
-tags: ["exercise", "mental health", "depression", "anxiety"]
+tags: ["sleep", "mental health", "depression", "resilience", "patientguide"]
 draft: false
 jsonld:
   - "@context": "https://schema.org"

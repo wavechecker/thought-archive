@@ -5,7 +5,7 @@ description: "How mindfulness practices can reduce stress, anxiety, and depressi
 category: "Mental Health"
 publishDate: "2025-09-30"
 updatedDate: "2025-09-30"
-tags: ["mindfulness", "stress reduction", "meditation", "mental health"]
+tags: ["sleep", "mental health", "depression", "resilience", "patientguide"]
 draft: false
 jsonld:
   - "@context": "https://schema.org"

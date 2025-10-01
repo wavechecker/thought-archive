@@ -5,7 +5,7 @@ description: "How bright light exposure can help with seasonal depression, mood,
 category: "Mental Health"
 publishDate: "2025-09-30"
 updatedDate: "2025-09-30"
-tags: ["light therapy", "SAD", "circadian rhythm", "mental health"]
+tags: ["sleep", "mental health", "depression", "resilience", "patientguide"]
 draft: false
 jsonld:
   - "@context": "https://schema.org"
