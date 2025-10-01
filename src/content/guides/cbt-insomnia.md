@@ -2,7 +2,7 @@
 title: "Cognitive Behavioral Therapy for Insomnia (CBT-I)"
 slug: "cbt-insomnia"
 description: "CBT-I is the gold standard treatment for chronic insomnia, helping people retrain their sleep without long-term reliance on medication."
-category: "Sleep & Fatigue"
+category: "Mental Health"
 publishDate: "2025-10-01"
 tags: ["insomnia", "sleep therapy", "cognitive behavioral therapy"]
 draft: false
@@ -57,8 +57,8 @@ jsonLd:
         item: "https://patientguide.io/guides"
       - "@type": "ListItem"
         position: 2
-        name: "Sleep & Fatigue"
-        item: "https://patientguide.io/guides/sleep-fatigue"
+        name: "Mental Health"
+        item: "https://patientguide.io/guides/mental-health"
       - "@type": "ListItem"
         position: 3
         name: "Cognitive Behavioral Therapy for Insomnia (CBT-I)"

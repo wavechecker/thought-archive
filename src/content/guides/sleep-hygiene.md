@@ -2,7 +2,7 @@
 title: "Healthy Sleep Hygiene"
 slug: "sleep-hygiene"
 description: "Simple, evidence-informed habits to improve sleep quality: timing, light, caffeine, screens, and bedroom setup."
-category: "Sleep & Fatigue"
+category: "Mental Health"
 publishDate: "2025-10-01"
 tags: ["sleep hygiene", "insomnia prevention", "sleep habits", "circadian rhythm"]
 draft: false
@@ -61,8 +61,8 @@ jsonLd:
         item: "https://patientguide.io/guides"
       - "@type": "ListItem"
         position: 2
-        name: "Sleep & Fatigue"
-        item: "https://patientguide.io/guides/sleep-fatigue"
+        name: "Mental Health"
+        item: "https://patientguide.io/guides/mental-health"
       - "@type": "ListItem"
         position: 3
         name: "Healthy Sleep Hygiene"

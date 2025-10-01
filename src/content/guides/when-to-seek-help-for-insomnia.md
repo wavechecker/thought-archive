@@ -2,7 +2,7 @@
 title: "When to Seek Help for Insomnia"
 slug: "when-to-seek-help-for-insomnia"
 description: "Persistent insomnia can often be improved with cognitive behavioral therapy for insomnia (CBT-I), the gold standard treatment."
-category: "Sleep & Fatigue"
+category: "Mental Health"
 publishDate: "2025-10-01"
 tags: ["insomnia", "sleep disorders", "CBT-I"]
 draft: false
@@ -56,8 +56,8 @@ jsonLd:
         item: "https://patientguide.io/guides"
       - "@type": "ListItem"
         position: 2
-        name: "Sleep & Fatigue"
-        item: "https://patientguide.io/guides/sleep-fatigue"
+        name: "Mental Health"
+        item: "https://patientguide.io/guides/mental-health"
       - "@type": "ListItem"
         position: 3
         name: "When to Seek Help for Insomnia"
