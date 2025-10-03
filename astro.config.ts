@@ -3,7 +3,6 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
-import tsconfigPaths from "vite-tsconfig-paths"; // <-- add
 
 export default defineConfig({
   site: "https://patientguide.io",
@@ -14,9 +13,6 @@ export default defineConfig({
     sitemap({ filter: (page) => !page.includes("/draft") }),
   ],
   vite: {
-    plugins: [
-      tsconfigPaths(),            // <-- add
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
   },
 });
