@@ -34,7 +34,7 @@ The result:
 
 This is unprecedented. In the past, the CDC acted within days. Now, the process has stalled at the worst possible moment.  
 
-{% include "../../content/snippets/shutdown-callout.md" %}
+{% include "../snippets/shutdown-callout.md" %}
 
 ## Your Take
 This isn’t just a bureaucratic delay. It’s a deliberate vacuum, amplified by political reshaping of the CDC and now paralyzed by a government shutdown.  
