@@ -8,68 +8,15 @@ tags: ["opinion", "analysis", "vaccines", "public health", "measles"]
 draft: false
 related:
   - /guides/measles
-jsonLd:
-  - "@context": "https://schema.org"
-    "@type": "Article"
-    headline: "America’s Measles Wake-Up Call (and Why Rolling Back MMR Is Reckless)"
-    description: "With cases at multi-decade highs and coverage slipping, the last thing we should do is undercut MMR."
-    datePublished: "2025-10-05"
-    dateModified: "2025-10-05"
-    author:
-      "@type": "Person"
-      name: "Michael Whitley"
-    publisher:
-      "@type": "Organization"
-      name: "PatientGuide.io"
-      logo:
-        "@type": "ImageObject"
-        url: "https://patientguide.io/logo.png"
-    mainEntityOfPage:
-      "@type": "WebPage"
-      url: "https://patientguide.io/posts/measles-outbreak-2025/"
-    about:
-      "@type": "MedicalCondition"
-      name: "Measles (Rubeola)"
-      alternateName: "Rubeola"
-      associatedAnatomy:
-        "@type": "AnatomicalSystem"
-        name: "Respiratory system"
-      transmissionMethod: "Airborne droplets/aerosols; coughing, sneezing"
-      infectiousAgent: "Measles morbillivirus"
-  - "@context": "https://schema.org"
-    "@type": "FAQPage"
-    mainEntity:
-      - "@type": "Question"
-        name: "Why are measles outbreaks increasing now?"
-        acceptedAnswer:
-          "@type": "Answer"
-          text: "Because vaccination coverage slipped below ~95%, which measles needs to stop spreading."
-      - "@type": "Question"
-        name: "Does the MMR vaccine still work?"
-        acceptedAnswer:
-          "@type": "Answer"
-          text: "Yes. Two doses are ~97% effective and remain the most reliable protection against measles."
-  - "@context": "https://schema.org"
-    "@type": "BreadcrumbList"
-    itemListElement:
-      - "@type": "ListItem"
-        position: 1
-        name: "Posts"
-        item: "https://patientguide.io/posts/"
-      - "@type": "ListItem"
-        position: 2
-        name: "America’s Measles Wake-Up Call"
-        item: "https://patientguide.io/posts/measles-outbreak-2025/"
 ---
 
-import OutbreakTracker from "@/components/OutbreakTracker";
+import OutbreakTracker from "@/components/OutbreakTracker.astro";
 import Aside from "@/components/Aside.astro";
 
 <OutbreakTracker
   title="U.S. Measles 2025"
   region="United States"
   dataUrl="/data/measles-us.json"
-  client:load
 />
 
 ## Hook

@@ -1,0 +1,83 @@
+---
+/* src/components/OutbreakTracker.astro
+   Framework-free tracker: fetches JSON on load and fills fields. */
+
+const {
+  title = "Current Measles Situation",
+  region = "United States",
+  dataUrl = "/data/measles-us.json",
+  cases,
+  statesAffected,
+  hospitalizations,
+  deaths,
+  lastUpdated,
+  sourceName = "CDC",
+  sourceUrl = "https://www.cdc.gov/measles/cases-outbreaks.html",
+} = Astro.props;
+
+const id = `outbreak-${Math.random().toString(36).slice(2)}`;
+---
+
+<div id={id} class="border-l-4 border-red-600 bg-red-50 p-4 rounded-2xl shadow-sm mb-6" data-outbreak>
+  <h3 class="font-semibold text-red-700">
+    {title} — {region}
+  </h3>
+
+  <p class="text-sm mt-1">
+    <strong data-field="cases">{typeof cases === "number" ? cases.toLocaleString() : "—"}</strong> confirmed cases
+    <span>
+      {typeof statesAffected === "number" ? (
+        <> across <strong data-field="statesAffected">{statesAffected}</strong> states</>
+      ) : null}
+    </span>.
+  </p>
+
+  <ul class="text-sm mt-2 list-disc ml-5">
+    {typeof hospitalizations === "number" && (
+      <li>Hospitalizations: <strong data-field="hospitalizations">{hospitalizations.toLocaleString()}</strong></li>
+    )}
+    {typeof deaths === "number" && (
+      <li>Deaths: <strong data-field="deaths">{deaths.toLocaleString()}</strong></li>
+    )}
+  </ul>
+
+  <p class="text-xs text-gray-600 mt-2">
+    <span>Last updated <span data-field="lastUpdated">{lastUpdated ?? "—"}</span></span>
+    {" · "}
+    Source:
+    {sourceUrl ? (
+      <a href={sourceUrl} class="underline" rel="noopener noreferrer">{sourceName}</a>
+    ) : (
+      <span>{sourceName}</span>
+    )}
+  </p>
+
+  <script>
+    (function () {
+      const root = document.getElementById({JSON.stringify(id)});
+      if (!root) return;
+
+      const get = (name) => root.querySelector(`[data-field="${name}"]`);
+
+      async function load() {
+        try {
+          const res = await fetch({JSON.stringify(dataUrl)}, { cache: "no-store" });
+          if (!res.ok) return;
+          const j = await res.json();
+
+          const n = (v) => (typeof v === "number" ? v.toLocaleString() : "—");
+          if (get("cases")) get("cases").textContent = n(j.cases);
+          if (get("statesAffected") && typeof j.statesAffected !== "undefined") get("statesAffected").textContent = j.statesAffected;
+          if (get("hospitalizations") && typeof j.hospitalizations !== "undefined") get("hospitalizations").textContent = n(j.hospitalizations);
+          if (get("deaths") && typeof j.deaths !== "undefined") get("deaths").textContent = n(j.deaths);
+          if (get("lastUpdated") && j.lastUpdated) {
+            const d = new Date(j.lastUpdated);
+            get("lastUpdated").textContent = isNaN(d.getTime()) ? j.lastUpdated : d.toLocaleDateString();
+          }
+        } catch {}
+      }
+
+      load();
+    })();
+  </script>
+</div>

@@ -82,14 +82,13 @@ jsonLd:
         item: "https://patientguide.io/guides/measles/"
 ---
 
-import Aside from "@/components/Aside.astro"
-import OutbreakTracker from "@/components/OutbreakTracker"
+import Aside from "@/components/Aside.astro";
+import OutbreakTracker from "@/components/OutbreakTracker.astro";
 
 <OutbreakTracker
   title="Current Measles Situation"
   region="United States"
   dataUrl="/data/measles-us.json"
-  client:load
 />
 
 # Measles (Rubeola): The Disease and the Vaccine
