@@ -1,21 +1,21 @@
 ---
-title: "Measles and the Measles Vaccine"
+title: "Measles (Rubeola): The Disease and the Vaccine"
 slug: "measles"
-description: "Measles is one of the most contagious viruses known. The measles vaccine is safe, effective, and critical for global public health."
-category: "Vaccination"
-publishDate: "2025-09-05"
-updatedDate: "2025-09-19"
-tags: ["measles", "MMR", "vaccination", "public health"]
+description: "Measles is one of the most contagious viruses known. Two doses of the MMR vaccine provide strong, long-lasting protection."
+category: "Infectious Diseases"
+publishDate: "2025-10-05"
+updatedDate: "2025-10-05"
+tags: ["measles", "MMR", "vaccination", "public health", "outbreak"]
 draft: false
 
 # JSON-LD
 jsonLd:
   - "@context": "https://schema.org"
     "@type": "Article"
-    headline: "Measles and the Measles Vaccine"
-    description: "Measles is one of the most contagious viruses known. The measles vaccine is safe, effective, and critical for global public health."
-    datePublished: "2025-09-05"
-    dateModified: "2025-09-19"
+    headline: "Measles (Rubeola): The Disease and the Vaccine"
+    description: "Measles is one of the most contagious viruses known. Two doses of the MMR vaccine provide strong, long-lasting protection."
+    datePublished: "2025-10-05"
+    dateModified: "2025-10-05"
     author:
       "@type": "Organization"
       name: "PatientGuide.io Editorial Team"
@@ -30,8 +30,7 @@ jsonLd:
       url: "https://patientguide.io/guides/measles/"
     about:
       "@type": "MedicalCondition"
-      name: "Measles"
-      alternateName: "Rubeola"
+      name: "Measles (Rubeola)"
       associatedAnatomy:
         "@type": "AnatomicalSystem"
         name: "Respiratory system"
@@ -75,8 +74,8 @@ jsonLd:
         item: "https://patientguide.io/guides/"
       - "@type": "ListItem"
         position: 2
-        name: "Vaccination"
-        item: "https://patientguide.io/guides/vaccination/"
+        name: "Infectious Diseases"
+        item: "https://patientguide.io/guides/infectious-diseases/"
       - "@type": "ListItem"
         position: 3
         name: "Measles"
@@ -84,79 +83,88 @@ jsonLd:
 ---
 
 import Aside from "@/components/Aside.astro"
+import OutbreakTracker from "@/components/OutbreakTracker"
 
-# Measles and the Measles Vaccine
+<OutbreakTracker
+  title="Current Measles Situation"
+  region="United States"
+  dataUrl="/data/measles-us.json"
+  client:load
+/>
+
+# Measles (Rubeola): The Disease and the Vaccine
 
 ## Intro
-Measles is a highly contagious viral disease that can cause severe complications, including pneumonia, encephalitis, deafness, and death.  
-The measles vaccine — usually given as the combined MMR (measles, mumps, rubella) or MMRV (with varicella) — is one of the safest and most effective vaccines ever developed.  
+**Measles** is one of the most contagious viruses known — capable of infecting up to 9 out of 10 unvaccinated contacts after exposure.  
+It spreads through the air and can remain suspended for up to two hours.  
 
-Thanks to immunisation, measles deaths have fallen dramatically, but outbreaks are returning wherever coverage drops.
+The **measles vaccine** (usually given as MMR: measles, mumps, rubella) is safe, highly effective, and essential to global public health.  
+Thanks to vaccination, measles deaths have fallen dramatically, but outbreaks are returning wherever coverage drops.
 
 <Aside title="Important" variant="warning">
-Measles is so contagious that **90% of unvaccinated contacts** will be infected after exposure.  
-Around **95% coverage** is needed for herd immunity to stop outbreaks.
+To stop measles transmission, **at least 95%** of the population must have two documented doses of MMR.  
+Falling coverage — now ~92–93% among U.S. kindergarteners — is driving current outbreaks.
 </Aside>
 
 ## Key Points
-- **Contagious:** Up to 90% of unvaccinated contacts will catch measles after exposure.  
-- **Herd immunity:** ~95% coverage needed to stop outbreaks.  
+- **Extremely contagious:** One case can infect most unvaccinated contacts nearby.  
 - **Vaccine effectiveness:** ~97% after two doses.  
-- **Impact:** Prevented an estimated 23 million deaths between 2000 and 2018.  
-- **Safety:** Decades of surveillance confirm safety; no link to autism.  
+- **Herd protection threshold:** ~95% coverage needed to stop outbreaks.  
+- **Impact:** Vaccination prevented over 23 million deaths between 2000 and 2018.  
+- **Safety:** Monitored for decades — no link to autism.
 
 ## The Disease
-- **Transmission:** Spread via coughing, sneezing, or breathing; virus can linger in the air up to 2 hours.  
-- **Symptoms:** High fever, cough, runny nose, red eyes, Koplik spots, and a spreading rash.  
-- **Complications:** Pneumonia (most common cause of death), encephalitis (~1 in 1,000), SSPE (rare, fatal brain disorder years later).  
-- **At risk:** Infants, pregnant women, and the immunocompromised.  
+- **Transmission:** Airborne droplets and aerosols; virus survives in air up to 2 hours.  
+- **Symptoms:** High fever, cough, runny nose, red eyes, **Koplik spots**, and a spreading rash from face to body.  
+- **Complications:** Pneumonia (leading cause of death), encephalitis (~1 in 1,000 cases), and SSPE — a rare, fatal brain disorder years later.  
+- **At risk:** Infants, pregnant people, and the immunocompromised.
 
 ## The Vaccine
-- **History:** First licensed in 1963, improved versions soon followed.  
-- **Formulations:** MMR or MMRV.  
-- **Effectiveness:** One dose ~93%, two doses ~97%.  
-- **Safety:** Common side effects are mild (fever, rash). Rare side effects include febrile seizures; serious reactions are extremely rare.  
-- **Myths:** The 1998 autism claim was fraudulent and has been thoroughly debunked.  
+- **History:** Introduced in 1963, refined for higher potency and stability.  
+- **Formulations:** MMR or MMRV (includes varicella).  
+- **Effectiveness:** One dose ~93%; two doses ~97%.  
+- **Safety:** Mild fever or rash are the most common reactions. Severe events are extremely rare.  
+- **Myths:** The discredited 1998 autism paper was fraudulent and retracted.
 
 <Aside title="Note on MMRV Policy" variant="info">
-As of September 2025, U.S. vaccine advisors have voted to **stop recommending MMRV** for children under 4 due to a small increase in febrile seizure risk.  
-Children in this age group are advised to receive **separate MMR + varicella shots** instead.  
+As of **September 2025**, U.S. vaccine advisors recommend **separate MMR + varicella** shots for children under 4, due to a small increased risk of febrile seizures with MMRV.  
 MMRV remains available and covered under the **Vaccines for Children** program.
 </Aside>
 
 ## Global Recommendations
-- **WHO:** Two doses for all children, first at 9–12 months, second at 15–18 months.  
-- **CDC (US):** First dose 12–15 months, second at 4–6 years.  
-- **ATAGI (Australia):** 12 months (MMR), 18 months (MMRV). Catch-up for unvaccinated adults.  
+- **WHO:** Two doses for all children — 9–12 months, then 15–18 months.  
+- **CDC (U.S.):** 12–15 months, then 4–6 years.  
+- **ATAGI (Australia):** 12 months (MMR), 18 months (MMRV).  
+Catch-up vaccination is advised for unvaccinated adults.
 
 ## Recent Outbreaks
-- 2025: Texas outbreak spread to nearby states after local vaccination rates dipped.  
-- Europe and Asia continue to see resurgences linked to vaccine hesitancy and healthcare disruptions.  
-- International travel remains a key driver of imported cases.  
+The **2025 U.S. outbreak** has surpassed 1,500 cases across more than two dozen states — the highest since 2019.  
+Clusters are concentrated in communities with declining vaccination rates.  
+Similar resurgences have occurred in Europe and Asia, often linked to vaccine hesitancy or disrupted health services.
 
-## Risks / Benefits
-- **Benefits:** Prevents a disease with a case fatality rate of ~1–3 per 1,000 in high-income countries (higher in low-resource settings). Protects against severe complications and death.  
-- **Risks:** Very small; overwhelmingly outweighed by benefits.  
+## Risks and Benefits
+- **Benefits:** Prevents a disease that kills 1–3 per 1,000 cases in high-income settings and many more in low-resource areas.  
+- **Risks:** Minor local or fever reactions; serious events are exceedingly rare and outweighed by benefits.
 
 ## FAQ
 **Q: Is measles just a childhood rash?**  
-A: No. It can cause life-threatening illness and long-term complications.  
+A: No. It can cause life-threatening pneumonia or brain inflammation.  
 
 **Q: Can adults get measles?**  
-A: Yes. Adults without immunity remain at risk. Vaccination is recommended.  
+A: Yes. Anyone without immunity remains at risk.  
 
 **Q: How many doses are needed for lifelong protection?**  
-A: Two doses usually provide lifelong immunity.  
+A: Two doses are sufficient for most people.  
 
 **Q: Why do outbreaks still occur?**  
-A: Measles is so contagious that even small drops in coverage allow outbreaks.  
+A: Because measles is so contagious that even small drops in coverage reopen transmission chains.
 
 ## Further Reading
-- [CDC: Measles](https://www.cdc.gov/measles/)  
+- [CDC: Measles — Cases & Outbreaks](https://www.cdc.gov/measles/cases-outbreaks.html)  
 - [WHO: Measles Fact Sheet](https://www.who.int/news-room/fact-sheets/detail/measles)  
-- [PubMed: Measles vaccine effectiveness](https://pubmed.ncbi.nlm.nih.gov/?term=measles+vaccine+effectiveness)  
+- [AAP Red Book: Measles (Clinical Guidance)](https://publications.aap.org/redbook/book/347/chapter/5748821/Measles)
 
 ## Related Guides
 - [How Vaccines Work](/guides/how-vaccines-work)  
 - [Vaccine Hesitancy](/guides/vaccine-hesitancy)  
-- [Vaccines and Autism](/guides/vaccines-and-autism)  
+- [Vaccines and Autism](/guides/vaccines-and-autism)
