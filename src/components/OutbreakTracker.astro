@@ -1,7 +1,5 @@
 ---
-/* src/components/OutbreakTracker.astro
-   Framework-free tracker: fetches JSON on load and fills fields. */
-
+/* Framework-free tracker: fetch JSON on the client and fill fields */
 const {
   title = "Current Measles Situation",
   region = "United States",
@@ -14,21 +12,19 @@ const {
   sourceName = "CDC",
   sourceUrl = "https://www.cdc.gov/measles/cases-outbreaks.html",
 } = Astro.props;
-
-const id = `outbreak-${Math.random().toString(36).slice(2)}`;
 ---
 
-<div id={id} class="border-l-4 border-red-600 bg-red-50 p-4 rounded-2xl shadow-sm mb-6" data-outbreak>
+<div class="border-l-4 border-red-600 bg-red-50 p-4 rounded-2xl shadow-sm mb-6" data-outbreak>
   <h3 class="font-semibold text-red-700">
     {title} — {region}
   </h3>
 
   <p class="text-sm mt-1">
-    <strong data-field="cases">{typeof cases === "number" ? cases.toLocaleString() : "—"}</strong> confirmed cases
-    <span>
-      {typeof statesAffected === "number" ? (
-        <> across <strong data-field="statesAffected">{statesAffected}</strong> states</>
-      ) : null}
+    <strong data-field="cases">
+      {typeof cases === "number" ? cases.toLocaleString() : "—"}
+    </strong> confirmed cases
+    <span data-field="statesLine" style="display:none">
+      across <strong data-field="statesAffected">—</strong> states
     </span>.
   </p>
 
@@ -52,32 +48,54 @@ const id = `outbreak-${Math.random().toString(36).slice(2)}`;
     )}
   </p>
 
-  <script>
+  <!-- Client-only inline script; safe for SSR parsing -->
+  <script is:inline>
     (function () {
-      const root = document.getElementById({JSON.stringify(id)});
+      const script = document.currentScript;
+      const root = script && script.parentElement;
       if (!root) return;
 
-      const get = (name) => root.querySelector(`[data-field="${name}"]`);
+      const DATA_URL = {JSON.stringify(dataUrl)};
+      const $ = (sel) => root.querySelector(sel);
+      const setText = (sel, val) => { const el = $(sel); if (el) el.textContent = val; };
+
+      function fmt(n) {
+        const nn = Number(n);
+        return Number.isFinite(nn) ? nn.toLocaleString() : "—";
+      }
 
       async function load() {
         try {
-          const res = await fetch({JSON.stringify(dataUrl)}, { cache: "no-store" });
+          const res = await fetch(DATA_URL, { cache: "no-store" });
           if (!res.ok) return;
           const j = await res.json();
 
-          const n = (v) => (typeof v === "number" ? v.toLocaleString() : "—");
-          if (get("cases")) get("cases").textContent = n(j.cases);
-          if (get("statesAffected") && typeof j.statesAffected !== "undefined") get("statesAffected").textContent = j.statesAffected;
-          if (get("hospitalizations") && typeof j.hospitalizations !== "undefined") get("hospitalizations").textContent = n(j.hospitalizations);
-          if (get("deaths") && typeof j.deaths !== "undefined") get("deaths").textContent = n(j.deaths);
-          if (get("lastUpdated") && j.lastUpdated) {
-            const d = new Date(j.lastUpdated);
-            get("lastUpdated").textContent = isNaN(d.getTime()) ? j.lastUpdated : d.toLocaleDateString();
+          if (j.cases != null) setText('[data-field="cases"]', fmt(j.cases));
+
+          if (j.statesAffected != null) {
+            setText('[data-field="statesAffected"]', String(j.statesAffected));
+            const line = $('[data-field="statesLine"]');
+            if (line) line.style.display = "";
           }
-        } catch {}
+
+          if (j.hospitalizations != null)
+            setText('[data-field="hospitalizations"]', fmt(j.hospitalizations));
+
+          if (j.deaths != null)
+            setText('[data-field="deaths"]', fmt(j.deaths));
+
+          if (j.lastUpdated) {
+            const d = new Date(j.lastUpdated);
+            setText(
+              '[data-field="lastUpdated"]',
+              isNaN(d.getTime()) ? String(j.lastUpdated) : d.toLocaleDateString()
+            );
+          }
+        } catch { /* ignore */ }
       }
 
       load();
     })();
   </script>
 </div>
+
