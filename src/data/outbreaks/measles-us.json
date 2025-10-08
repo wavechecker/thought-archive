@@ -1,0 +1,14 @@
+{
+  "condition": "Measles",
+  "region": "United States",
+  "series": [
+    {
+      "year": 2025,
+      "confirmedCases": 340,
+      "outbreaksInvestigated": 11,
+      "lastUpdated": "2025-10-01",
+      "sourceName": "CDC",
+      "sourceUrl": "https://www.cdc.gov/measles/index.html"
+    }
+  ]
+}
