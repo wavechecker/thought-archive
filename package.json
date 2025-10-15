@@ -25,7 +25,7 @@
     "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^4.3.5",
+    "@astrojs/mdx": "^4.3.7",
     "@astrojs/netlify": "^6.5.9",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
@@ -38,6 +38,8 @@
     "js-yaml": "^4.1.0",
     "netlify-cli": "^23.4.3",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.12"
+    "remark-include": "^2.0.0",
+    "tailwindcss": "^4.1.12",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

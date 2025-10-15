@@ -1,0 +1,15 @@
+---
+const { title = "Note", variant = "info" } = Astro.props;
+
+const styles = {
+  info: "bg-blue-50 border-blue-300 text-blue-800",
+  success: "bg-green-50 border-green-300 text-green-800",
+  warning: "bg-yellow-50 border-yellow-300 text-yellow-800",
+  danger: "bg-red-50 border-red-300 text-red-800",
+};
+---
+
+<div class={`border-l-4 rounded-xl p-4 my-6 ${styles[variant]}`}>
+  {title && <h3 class="font-semibold text-lg mb-2">{title}</h3>}
+  <slot />
+</div>
