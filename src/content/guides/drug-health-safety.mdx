@@ -1,0 +1,137 @@
+---
+title: "Drug Health & Safety"
+slug: "drug-health-safety"
+description: "How to use prescription and recreational drugs safely, reduce harm, and recognize overdose risks."
+category: "Substance Use & Addiction"
+tags: ["drug safety", "opioids", "fentanyl", "harm reduction"]
+publishDate: "2025-10-19"
+updatedDate: "2025-10-19"
+draft: false
+---
+
+import Callout from "@/components/Callout.astro";
+import StratBox from "@/components/StratBox.astro";
+
+<Callout variant="info" title="Important Safety Tip">
+  Avoid mixing opioids with <strong>alcohol</strong> or <strong>benzodiazepines</strong> — the combination can slow breathing and lead to fatal overdose.
+</Callout>
+
+<StratBox
+  variant="info"
+  title="Common Risk Interactions"
+  stats={[
+    { label: "Fentanyl + Alcohol", value: "↑ Respiratory depression" },
+    { label: "Opioids + Benzodiazepines", value: "↑ Overdose risk" },
+    { label: "Multiple prescriptions (polypharmacy)", value: "↑ Interaction potential" }
+  ]}
+>
+  <p class="text-xs mt-2 italic">
+    Source: CDC, DEA, Harm Reduction Journal
+  </p>
+</StratBox>
+
+## Intro
+Drug health and safety means understanding how substances — prescribed or otherwise — affect the body, how they interact, and how to reduce harm while using them.
+
+## Key Points
+- Mixing substances (like **fentanyl + alcohol**) greatly increases overdose risk.  
+- **Polypharmacy** (multiple prescriptions) is common in older adults and requires regular review.  
+- Harm-reduction measures — such as using **naloxone**, avoiding using alone, and testing drugs — save lives.  
+- Recognizing early signs of toxicity can prevent fatal outcomes.  
+
+## Background
+Even legitimate medications can be risky when combined or misused. Opioids, benzodiazepines, alcohol, and stimulants can all depress or overstimulate the nervous system. Fentanyl’s potency (50–100× morphine) makes it especially dangerous when misused or unknowingly consumed in counterfeit pills.
+
+## Causes or Mechanisms
+Fentanyl depresses the respiratory center in the brain. When combined with alcohol, sedatives, or other opioids, breathing slows further — leading to hypoxia, brain injury, or death.  
+Other interactions (e.g., stimulants + opioids) strain the heart and cause unpredictable physiological effects.
+
+## Prevention & Safe Use
+- **Review medications** regularly with a healthcare provider.  
+- **Avoid combining** sedatives or alcohol with opioids.  
+- **Use drug-checking kits** when possible to test for fentanyl.  
+- **Carry naloxone** if opioids are used or present in the household.  
+- **Never use alone** — have someone who can respond in an emergency.  
+
+## Risks & Prognosis
+Overdose risk increases sharply when:
+- Fentanyl is taken unknowingly in counterfeit pills or mixed substances.  
+- Alcohol, benzodiazepines, or sleep aids are used concurrently.  
+- Respiratory conditions, older age, or poor health are factors.
+
+## FAQ
+**Q: How common is fentanyl contamination?**  
+A: Widely documented in counterfeit pills, heroin, and even cocaine.  
+
+**Q: Can prescription fentanyl be safe?**  
+A: Yes, when used exactly as prescribed under close medical supervision. The risk rises sharply with misuse.  
+
+**Q: Is naloxone safe for everyone?**  
+A: Yes — it has no effect on non-opioid overdoses and is safe to administer if an opioid overdose is suspected.  
+
+## Further Reading
+- [CDC: Opioid Basics](https://www.cdc.gov/opioids/basics/index.html)  
+- [DEA: Facts About Fentanyl](https://www.dea.gov/resources/facts-about-fentanyl)  
+
+## Related Guides
+- [What to Do if Someone Is Overdosing](/guides/opioid-overdose-first-aid)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "HowTo", "FAQPage"],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://patientguide.io/guides/drug-health-safety"
+  },
+  "headline": "Drug Health & Safety",
+  "description": "How to use prescription and recreational drugs safely, reduce harm, and recognize overdose risks.",
+  "datePublished": "2025-10-19",
+  "dateModified": "2025-10-19",
+  "author": {"@type": "Organization", "name": "PatientGuide.io"},
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Opioid Overdose",
+    "alternateName": "Fentanyl Overdose",
+    "description": "Life-threatening respiratory depression due to opioid exposure, often involving fentanyl or poly-substance use.",
+    "signOrSymptom": [
+      {"@type": "MedicalSignOrSymptom", "name": "Slow or stopped breathing"},
+      {"@type": "MedicalSignOrSymptom", "name": "Pinpoint pupils"},
+      {"@type": "MedicalSignOrSymptom", "name": "Unresponsiveness"},
+      {"@type": "MedicalSignOrSymptom", "name": "Blue lips or fingertips"}
+    ],
+    "possibleTreatment": [
+      {"@type": "MedicalTherapy", "name": "Naloxone (opioid antagonist)"},
+      {"@type": "MedicalTherapy", "name": "Rescue breathing and emergency care"}
+    ]
+  },
+  "step": [
+    {"@type": "HowToStep", "name": "Review medications regularly", "text": "Ask a clinician or pharmacist to review all prescriptions and supplements."},
+    {"@type": "HowToStep", "name": "Avoid mixing depressants", "text": "Do not combine opioids with alcohol, benzodiazepines, or sleep aids."},
+    {"@type": "HowToStep", "name": "Test and never use alone", "text": "Use drug-checking when available and avoid using alone so someone can respond in an emergency."},
+    {"@type": "HowToStep", "name": "Carry naloxone", "text": "Keep naloxone accessible and ensure others know how to use it."}
+  ],
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How common is fentanyl contamination?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It is widespread in counterfeit pills, heroin, and even cocaine."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can prescription fentanyl be safe?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, when used exactly as prescribed under medical supervision."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is naloxone safe for everyone?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes — it has no effect on non-opioid overdoses and is safe to use."}
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "PatientGuide.io",
+    "logo": {"@type": "ImageObject", "url": "https://patientguide.io/icon.png"}
+  }
+}
+</script>
