@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
+import path from "path";
 
 export default defineConfig({
   site: "https://patientguide.io",
@@ -14,5 +15,10 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        "@": path.resolve("./src"), // ✅ Enables @/components in MDX + Astro
+      },
+    },
   },
 });
