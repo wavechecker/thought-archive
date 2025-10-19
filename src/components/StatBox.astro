@@ -1,0 +1,9 @@
+---
+/**
+ * Compatibility shim for older content that imports StatBox.astro.
+ * Passes all props through to StratBox.astro.
+ */
+import StratBox from "./StratBox.astro";
+const props = Astro.props;
+---
+<StratBox {...props} />
