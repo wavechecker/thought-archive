@@ -1,0 +1,15 @@
+---
+const { title, date, source, findings = [] } = Astro.props;
+---
+
+<div class="border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-950/40 p-4 my-6 rounded-r-2xl shadow-sm">
+  <h3 class="font-semibold text-blue-800 dark:text-blue-200 mb-1">{title}</h3>
+  {(source || date) && (
+    <p class="text-xs text-gray-600 dark:text-gray-300 mb-2">
+      {source}{source && date ? " — " : ""}{date}
+    </p>
+  )}
+  <ul class="text-sm list-disc ml-4 space-y-1">
+    {findings.map((f) => <li set:html={f} />)}
+  </ul>
+</div>

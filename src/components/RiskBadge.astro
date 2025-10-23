@@ -1,0 +1,11 @@
+---
+const { level = "moderate" } = Astro.props;
+const map = {
+  low:   "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-200",
+  moderate: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-200",
+  high:  "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-200",
+};
+---
+<span class={`px-2 py-0.5 rounded-full text-xs font-medium ${map[level]}`}>
+  {level.charAt(0).toUpperCase() + level.slice(1)} risk
+</span>

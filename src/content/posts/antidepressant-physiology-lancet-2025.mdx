@@ -1,0 +1,154 @@
+---
+title: "The Hidden Weight of Antidepressants"
+slug: "antidepressant-physiology-lancet-2025"
+description: "A 2025 Lancet meta-analysis ranks 30 antidepressants by physiological side-effects — from weight change to heart rate and blood pressure."
+publishDate: "2025-10-23"
+tags: ["opinion", "analysis", "mental-health", "cardiometabolic"]
+draft: false
+related:
+  - /guides/antidepressant-side-effects
+---
+
+import Callout from "@/components/Callout.astro"
+import StatBox from "@/components/StatBox.astro"
+import EvidenceBox from "@/components/EvidenceBox.astro"
+import DrugCompare from "@/components/DrugCompare.astro"
+import RiskBadge from "@/components/RiskBadge.astro"
+
+## Hook
+**“Four kilos, eleven millimetres, twenty beats per minute.”**  
+That’s the physiological distance separating the “lightest” and “heaviest” antidepressants — not in emotion, but in *metabolic load.*
+
+A *Lancet* network meta-analysis (~58,500 participants; 151 RCTs) compared 30 antidepressants for physiological side-effects. The results make one thing clear: these drugs do more than change how we feel — they change how our bodies function.
+
+---
+
+<Callout type="info">
+  <strong>At a glance</strong><br/>
+  Up to <em>4 kg</em> spread in weight change (8 weeks), <em>~20 bpm</em> spread in heart rate, and <em>~11 mmHg</em> spread in systolic BP across agents.
+</Callout>
+
+<div className="my-6 grid gap-3 sm:grid-cols-3">
+  <StatBox value="–2.4 kg" label="Agomelatine (Valdoxan) — weight" />
+  <StatBox value="+13 bpm" label="Nortriptyline (Pamelor) — heart rate" />
+  <StatBox value="+3–5 mmHg" label="SNRIs/TCAs — systolic BP" />
+</div>
+
+<EvidenceBox
+  title="Lancet Network Meta-Analysis — 30 antidepressants, physiological outcomes"
+  date="2025-10-21"
+  source="Pillinger et al."
+  findings={[
+    "SNRIs (venlafaxine, desvenlafaxine, duloxetine, levomilnacipran) <strong>increased cholesterol/BP</strong>; duloxetine also nudged glucose.",
+    "TCAs (amitriptyline, imipramine, maprotiline) <strong>increased HR/BP</strong> and <strong>weight</strong>.",
+    "Agomelatine, fluoxetine, and bupropion showed <strong>more favorable weight</strong> profiles.",
+    "Minimal QTc/sodium signals in short-term RCTs."
+  ]}
+/>
+
+---
+
+## Comparative Highlights
+
+### Weight
+- **Lower / neutral:** **Agomelatine (Valdoxan)** <RiskBadge level="low" />, **Fluoxetine (Prozac)** <RiskBadge level="low" />, **Bupropion (Wellbutrin)** <RiskBadge level="low" />  
+- **Higher:** **Mirtazapine (Remeron)** <RiskBadge level="high" />, **Amitriptyline (Elavil)** <RiskBadge level="high" />, **Maprotiline (Ludiomil)** <RiskBadge level="high" />
+
+### Heart Rate (HR)
+- **↓ HR:** **Fluvoxamine (Luvox)** ≈ –8 bpm  
+- **↑ HR:** **Nortriptyline (Pamelor)** ≈ +13 bpm; **Imipramine (Tofranil)**, **Amitriptyline (Elavil)**
+
+### Blood Pressure (BP)
+- **Systolic BP ↑:** **Levomilnacipran (Fetzima)**, **Venlafaxine (Effexor)**, **Desvenlafaxine (Pristiq)**, **Duloxetine (Cymbalta)**; TCAs like **Amitriptyline**  
+- **Systolic BP ↓:** **Nortriptyline** showed a small decrease in trials
+
+### Lipids & Glucose
+- **Cholesterol ↑:** **Paroxetine (Paxil)**, **Duloxetine (Cymbalta)**, **Venlafaxine (Effexor)**, **Desvenlafaxine (Pristiq)**  
+- **Glucose ↑:** signal with **Duloxetine**  
+<Callout type="note">Some lipid/glucose increases occurred even when bodyweight fell — suggesting weight-independent metabolic effects.</Callout>
+
+---
+
+## Quick Compare
+<DrugCompare
+  drugs={[
+    { name: "Agomelatine", brand: "Valdoxan", level: "low", weight: "↓ ~2.4 kg", cardio: "Neutral", metabolic: "Neutral" },
+    { name: "Fluoxetine", brand: "Prozac", level: "low", weight: "↓ ~0.8 kg", cardio: "Neutral", metabolic: "Neutral" },
+    { name: "Bupropion", brand: "Wellbutrin", level: "low", weight: "↓ / neutral", cardio: "Neutral", metabolic: "Neutral" },
+    { name: "Venlafaxine", brand: "Effexor", level: "moderate", weight: "neutral", cardio: "↑ BP", metabolic: "↑ Cholesterol" },
+    { name: "Duloxetine", brand: "Cymbalta", level: "moderate", weight: "↓ (small)", cardio: "↑ BP", metabolic: "↑ Chol/Glucose" },
+    { name: "Amitriptyline", brand: "Elavil", level: "high", weight: "↑ ~1.5–1.6 kg", cardio: "↑ HR/BP", metabolic: "↑ Lipids" },
+    { name: "Mirtazapine", brand: "Remeron", level: "high", weight: "↑", cardio: "Neutral/↑ HR", metabolic: "↑ Lipids (some data)" }
+  ]}
+/>
+
+---
+
+## Figure
+<figure className="my-6">
+  <img
+    src="/antidepressant-effects-2025.png"
+    alt="Heatmap of antidepressant physiological effects (blue=decrease/neutral, red=increase)"
+    className="rounded-2xl shadow-md w-full max-w-3xl mx-auto"
+  />
+  <figcaption className="text-sm text-gray-500 text-center mt-2">
+    Blue = lower or neutral effect; Red = increased physiological parameter. Data: Pillinger et&nbsp;al., <em>Lancet</em> (2025).
+  </figcaption>
+</figure>
+
+---
+
+## Why this matters
+Small average shifts over weeks can compound if sustained:
+- Each **1 kg** weight increase raises long-term CVD risk.
+- Higher resting **HR** and **BP** correlate with elevated all-cause and cardiovascular mortality.
+
+**Bottom line:** when choosing an antidepressant for someone with obesity, hypertension, dyslipidemia, or diabetes risk, consider the *metabolic profile* alongside efficacy and tolerability.
+
+---
+
+## FAQ
+**Which look most “metabolically gentle”?**  
+Agomelatine, Fluoxetine, Bupropion.
+
+**Which raise flags?**  
+For weight: Mirtazapine, Amitriptyline, Maprotiline.  
+For lipids/BP: Venlafaxine, Desvenlafaxine, Duloxetine; Levomilnacipran for BP.
+
+**Any big QTc or sodium signals in RCTs?**  
+Not in these short-term monotherapy trials; registry data in older, multimorbid populations may differ.
+
+---
+
+## Further Reading
+- Pillinger T, Arumuham A, McCutcheon RA, et al. *Lancet*. 2025; doi:10.1016/S0140-6736(25)01293-0  
+- See our companion guide: [/guides/antidepressant-side-effects](/guides/antidepressant-side-effects)
+
+{/* JSON-LD: BlogPosting + FAQPage */}
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Hidden Weight of Antidepressants",
+  "datePublished": "2025-10-23",
+  "dateModified": "2025-10-23",
+  "description": "A 2025 Lancet meta-analysis ranks 30 antidepressants by physiological side-effects.",
+  "image": ["/antidepressant-effects-2025.png"],
+  "mainEntityOfPage": {"@type":"WebPage","@id": "https://patientguide.io/posts/antidepressant-physiology-lancet-2025"},
+  "author": {"@type": "Organization", "name": "PatientGuide.io"},
+  "publisher": {"@type": "Organization", "name": "PatientGuide.io"},
+  "citation": ["https://doi.org/10.1016/S0140-6736(25)01293-0"]
+})}
+</script>
+
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Which look most metabolically gentle?","acceptedAnswer":{"@type":"Answer","text":"Agomelatine, Fluoxetine, and Bupropion show the most favorable short-term metabolic profiles in RCTs."}},
+    {"@type":"Question","name":"Which raise flags?","acceptedAnswer":{"@type":"Answer","text":"Mirtazapine, Amitriptyline, Maprotiline for weight; Venlafaxine, Desvenlafaxine, Duloxetine (and Levomilnacipran for BP) for cardiometabolic parameters."}},
+    {"@type":"Question","name":"Any big QTc or sodium signals in RCTs?","acceptedAnswer":{"@type":"Answer","text":"Not prominent in short-term monotherapy RCTs; monitor higher-risk patients per clinical judgement."}}
+  ]
+})}
+</script>

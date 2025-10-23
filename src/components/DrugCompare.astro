@@ -1,0 +1,28 @@
+---
+const { drugs = [] } = Astro.props;
+---
+
+<div class="my-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+  {drugs.map((d) => (
+    <div class="border rounded-2xl p-4 shadow-sm bg-white/80 dark:bg-gray-900/70 backdrop-blur">
+      <div class="flex items-center justify-between mb-1">
+        <h4 class="font-semibold text-lg">{d.name}</h4>
+        {d.level && (
+          <span class={`px-2 py-0.5 rounded-full text-xs font-medium ${
+            d.level === "low" ? "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-200"
+            : d.level === "moderate" ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-200"
+            : "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-200"
+          }`}>
+            {d.level.charAt(0).toUpperCase() + d.level.slice(1)} risk
+          </span>
+        )}
+      </div>
+      <p class="text-sm text-gray-500 mb-3">{d.brand}</p>
+      <ul class="text-sm leading-tight space-y-1">
+        <li><strong>Weight:</strong> {d.weight ?? "—"}</li>
+        <li><strong>HR/BP:</strong> {d.cardio ?? "—"}</li>
+        <li><strong>Metabolic:</strong> {d.metabolic ?? "—"}</li>
+      </ul>
+    </div>
+  ))}
+</div>
