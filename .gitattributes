@@ -1,1 +1,6 @@
-*.md text eol=lf
+*.mdx  text eol=lf
+*.md   text eol=lf
+*.astro text eol=lf
+*.mjs  text eol=lf
+*.tsx  text eol=lf
+*.ts   text eol=lf
