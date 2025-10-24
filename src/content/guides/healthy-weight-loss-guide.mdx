@@ -88,8 +88,9 @@ If you miss a meal, have something small — don’t skip entirely.
 
 ---
 
-```json
-{
+<!-- Structured data for crawlers -->
+<script type="application/ld+json">
+{JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Healthy Weight Loss: How to Burn Fat Safely Without Losing Yourself",
@@ -97,15 +98,54 @@ If you miss a meal, have something small — don’t skip entirely.
   "author": { "@type": "Organization", "name": "PatientGuide.io" },
   "publisher": { "@type": "Organization", "name": "PatientGuide.io" },
   "datePublished": "2025-10-24",
-  "articleSection": "Weight Management",
-  "keywords": ["weight loss","nutrition","metabolic health","exercise","insulin sensitivity"],
+  "articleSection": "Obesity & Metabolic Health Hub",
+  "keywords": [
+    "weight loss",
+    "nutrition",
+    "metabolic health",
+    "exercise",
+    "insulin sensitivity"
+  ],
   "mainEntity": {
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Is keto dangerous?", "acceptedAnswer": { "@type": "Answer", "text": "Not inherently, but long-term strict keto can cause nutrient and fiber deficiencies and may impair insulin sensitivity when carbs are reintroduced." } },
-      { "@type": "Question", "name": "How fast should I lose weight?", "acceptedAnswer": { "@type": "Answer", "text": "A steady 0.4–0.7 kg per week preserves muscle and metabolism while encouraging fat loss." } },
-      { "@type": "Question", "name": "Do I need to count every calorie?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Focus on consistent meal structure, protein sufficiency, and avoiding extremes. Tracking can help short-term awareness." } },
-      { "@type": "Question", "name": "What if I binge?", "acceptedAnswer": { "@type": "Answer", "text": "Return to structure at the next meal. Don’t restrict further — stability rebuilds balance faster than punishment." } }
+      {
+        "@type": "Question",
+        "name": "Is keto dangerous?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Not inherently, but long-term strict keto can cause nutrient and fiber deficiencies and may impair insulin sensitivity when carbs are reintroduced."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast should I lose weight?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "A steady 0.4–0.7 kg per week preserves muscle and metabolism while encouraging fat loss."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to count every calorie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Not necessarily. Focus on consistent meal structure, protein sufficiency, and avoiding extremes. Tracking can help short-term awareness."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I binge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Return to structure at the next meal. Don’t restrict further — stability rebuilds balance faster than punishment."
+        }
+      }
     ]
   }
-}
+}, null, 2)}
+</script>
