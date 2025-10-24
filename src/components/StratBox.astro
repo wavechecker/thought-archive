@@ -1,4 +1,10 @@
 ---
+/**
+ * Props:
+ * - title: heading above the stats block
+ * - stats: array of { label: string; value: string | number }
+ * - variant: "neutral" | "info" | "success" | "warning" | "danger"
+ */
 const { stats = [], title = "Key Figures", variant = "neutral" } = Astro.props;
 
 const colors = {
@@ -10,15 +16,29 @@ const colors = {
 };
 ---
 
-<section class={`my-6 border-l-4 rounded-xl p-4 ${colors[variant]}`}>
-  <h3 class="font-semibold text-lg mb-3">{title}</h3>
-  <ul class="grid gap-2">
-    {stats.map(({ label, value }) => (
-      <li class="flex justify-between">
-        <span class="font-medium">{label}</span>
-        <span class="font-semibold">{value}</span>
-      </li>
-    ))}
-  </ul>
+<section
+  class={`my-6 border-l-4 rounded-xl p-4 ${colors[variant]} shadow-sm`}
+  role="region"
+  aria-labelledby={title.replace(/\s+/g, "-").toLowerCase()}
+>
+  <h3
+    id={title.replace(/\s+/g, "-").toLowerCase()}
+    class="font-semibold text-lg mb-3"
+  >
+    {title}
+  </h3>
+
+  {stats.length > 0 && (
+    <ul class="grid gap-2 mb-2">
+      {stats.map(({ label, value }) => (
+        <li class="flex justify-between text-sm sm:text-base">
+          <span class="font-medium">{label}</span>
+          <span class="font-semibold">{value}</span>
+        </li>
+      ))}
+    </ul>
+  )}
+
   <slot />
 </section>
+

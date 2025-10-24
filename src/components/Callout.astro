@@ -1,8 +1,14 @@
 ---
+/**
+ * Props:
+ * - title: optional heading text
+ * - variant: "info" | "success" | "warning" | "danger"
+ * - size: "default" | "compact"
+ */
 const {
   title = "Note",
   variant = "info",
-  size = "default" // new prop: "default" | "compact"
+  size = "default"
 } = Astro.props;
 
 const styles = {
@@ -12,11 +18,23 @@ const styles = {
   danger: "bg-red-50 border-red-300 text-red-800",
 };
 
-const padding = size === "compact" ? "p-2 text-sm" : "p-4";
+const padding = size === "compact" ? "p-3 text-sm" : "p-4";
 const margin = size === "compact" ? "my-3" : "my-6";
 ---
 
-<div class={`border-l-4 rounded-xl ${padding} ${margin} ${styles[variant]}`}>
-  {title && <h3 class={`font-semibold ${size === "compact" ? "text-base mb-1" : "text-lg mb-2"}`}>{title}</h3>}
+<div
+  class={`border-l-4 rounded-xl ${padding} ${margin} ${styles[variant]} shadow-sm`}
+  role="note"
+  aria-label={title || "Note"}
+>
+  {title && (
+    <h3
+      class={`font-semibold ${
+        size === "compact" ? "text-base mb-1" : "text-lg mb-2"
+      }`}
+    >
+      {title}
+    </h3>
+  )}
   <slot />
 </div>
