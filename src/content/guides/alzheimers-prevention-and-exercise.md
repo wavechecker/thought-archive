@@ -1,0 +1,77 @@
+---
+title: "Alzheimer’s Prevention and Exercise"
+slug: "alzheimers-prevention-and-exercise"
+description: "How regular physical activity — even just a few thousand steps a day — can slow or delay Alzheimer’s-related decline."
+category: "Neurology"
+tags: ["Alzheimer’s", "Exercise", "Cognitive Health", "Brain Aging"]
+publishDate: "2025-11-04"
+updatedDate: "2025-11-04"
+draft: false
+layout: "../../layouts/GuideLayout.astro"
+
+schema:
+  "@context": "https://schema.org"
+  "@type": "MedicalWebPage"
+  "name": "Alzheimer’s Prevention and Exercise"
+  "description": "A guide to how moderate daily physical activity can slow or delay Alzheimer’s-related cognitive decline."
+  "datePublished": "2025-11-04"
+  "dateModified": "2025-11-04"
+  "about":
+    "@type": "MedicalCondition"
+    "name": "Alzheimer’s disease"
+    "associatedAnatomy":
+      "@type": "AnatomicalStructure"
+      "name": "Brain"
+    "possibleTreatment":
+      "@type": "LifestyleModification"
+      "name": "Physical exercise and walking"
+  "publisher":
+    "@type": "Organization"
+    "name": "PatientGuide.io"
+    "url": "https://www.patientguide.io"
+  "mainEntityOfPage": "https://www.patientguide.io/guides/alzheimers-prevention-and-exercise"
+---
+
+## Intro
+New research suggests that modest daily movement — such as walking 3,000 to 5,000 steps — can significantly delay cognitive decline in people at risk of Alzheimer’s disease. Exercise appears to slow the progression of early molecular changes in the brain, even before symptoms appear.
+
+## Key Points
+- **3,000–5,000 steps/day** can delay cognitive decline by ~3 years.  
+- **5,000–7,500 steps/day** can delay decline by up to 7 years.  
+- Benefits plateau beyond 7,500 steps.  
+- Effects strongest in those with early Alzheimer’s biomarkers (amyloid-β).  
+- Exercise improves blood flow, reduces inflammation, and promotes brain repair through BDNF.
+
+## Background
+Alzheimer’s disease is a progressive neurodegenerative disorder linked to abnormal buildup of **amyloid-β** and **tau** proteins. These changes start decades before symptoms such as memory loss or confusion appear.
+
+The **Harvard Aging Brain Study** followed 296 adults aged 50–90 for over a decade, tracking brain scans, cognitive tests, and step counts. Participants with higher amyloid levels who walked regularly experienced significantly slower cognitive decline.
+
+## Mechanisms
+Physical activity influences several pathways relevant to Alzheimer’s risk:
+- **Improved cerebral blood flow** enhances nutrient and oxygen delivery.  
+- **Glymphatic clearance** helps remove amyloid and tau proteins.  
+- **Insulin sensitivity** reduces neuroinflammation.  
+- **BDNF release** supports synaptic growth and neuroplasticity.  
+
+Together, these mechanisms help preserve brain volume and delay symptom onset.
+
+## Practical Recommendations
+- Aim for **3,000–7,500 steps/day**, depending on mobility.  
+- Combine walking with **balance and strength exercises** 2–3 times weekly.  
+- Maintain a **regular sleep schedule**, as sleep supports brain clearance systems.  
+- Avoid prolonged sitting — stand or move every hour.  
+
+## Risks and Limitations
+- The protective effect was strongest in individuals **before** cognitive symptoms developed.  
+- Exercise alone cannot reverse established Alzheimer’s, but it supports brain and vascular health.  
+- Excessive exercise without proper recovery may increase oxidative stress in frail individuals.
+
+## Prognosis
+For older adults, steady, moderate physical activity is one of the most accessible and evidence-based strategies for protecting brain health. The gains plateau around 7,500 steps — meaning benefits are achievable without extreme regimens.
+
+## Further Reading
+- [Nature Medicine: Alzheimer’s decline slows with just a few thousand steps a day (2025)](https://www.nature.com/articles/d41586-025-03596-2)  
+- [Harvard Aging Brain Study](https://www.massgeneral.org/research/harvard-aging-brain-study)  
+- [WHO Physical Activity Recommendations for Older Adults](https://www.who.int/news-room/fact-sheets/detail/physical-activity)  
+- [NIH: Exercise and Alzheimer’s Disease Prevention](https://www.nia.nih.gov/health/exercise-physical-activity)
