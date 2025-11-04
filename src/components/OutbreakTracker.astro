@@ -1,49 +1,135 @@
 ---
+/**
+ * OutbreakTracker.astro
+ * Props are authoritative. Optional client fetch only runs when allowFetch=true AND key props are missing.
+ */
 const {
-  title = "Current Measles Situation",
+  // Presentation
+  title = "CDC Measles Outbreak Tracker — United States, 2025",
   region = "United States",
-  dataUrl = "/data/measles-us.json",
-  cases,
-  statesAffected,
-  hospitalizations,
-  deaths,
-  lastUpdated,
+
+  // Data (props win)
+  cases,                       // number
+  statesAffected,              // legacy prop (number)
+  jurisdictions,               // preferred prop (number)
+  outbreaks,                   // number (optional)
+  outbreakAssoc,               // string or number, e.g. "87%" or 87
+  hospitalizations,            // number (optional)
+  deaths,                      // number (optional)
+
+  // Dates
+  asof,                        // display string, e.g., "October 21, 2025"
+  asofIso,                     // ISO date string "2025-10-21"
+  lastUpdated,                 // legacy display string (fallback)
+
+  // Source
   sourceName = "CDC",
-  sourceUrl = "https://www.cdc.gov/measles/cases-outbreaks.html",
+  sourceUrl = "https://www.cdc.gov/measles/data-research/index.html",
+
+  // Optional client fetch behavior
+  dataUrl = "/data/measles-us.json",
+  allowFetch = false,
 } = Astro.props;
+
+/** Helpers **/
+const num = (v: unknown) => (typeof v === "number" ? v.toLocaleString() : "—");
+
+// prefer new prop name
+const jx = typeof jurisdictions === "number" ? jurisdictions : statesAffected;
+
+// normalize % display
+const pct = (v: unknown) => {
+  if (typeof v === "string") return v;
+  if (typeof v === "number" && Number.isFinite(v)) return `${v}%`;
+  return "—";
+};
+
+// Safe date formatting for ISO strings (no locale ambiguity)
+function fmtIso(d?: string) {
+  if (!d) return null;
+  const dt = new Date(d);
+  if (isNaN(dt.getTime())) return null;
+  return dt.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+}
+
+// choose the display date: prefer ISO → asof → lastUpdated
+const asOfDisplay =
+  fmtIso(asofIso) ??
+  (typeof asof === "string" ? asof : undefined) ??
+  (typeof lastUpdated === "string" ? lastUpdated : "—");
+
+// Decide if we should allow client hydration:
+// Only when allowFetch=true AND any essential field is missing.
+const essentialMissing =
+  !(typeof cases === "number") ||
+  !(typeof jx === "number") ||
+  (asOfDisplay === "—" && !asofIso && !asof && !lastUpdated);
+
+const shouldFetch = Boolean(allowFetch && dataUrl && essentialMissing);
+
+// Data attributes used by your client script to hydrate (when shouldFetch)
+const dataAttrs = {
+  "data-outbreak": true,
+  ...(shouldFetch ? { "data-url": dataUrl } : {}),
+};
 ---
 
 <div
   class="border-l-4 border-red-600 bg-red-50 p-4 rounded-2xl shadow-sm mb-6"
-  data-outbreak
-  data-url={dataUrl}
+  {...dataAttrs}
 >
   <h3 class="font-semibold text-red-700">
     {title} — {region}
   </h3>
 
   <p class="text-sm mt-1">
-    <strong data-field="cases">
-      {typeof cases === "number" ? cases.toLocaleString() : "—"}
-    </strong> confirmed cases
-    <span data-field="statesLine" style="display:none">
-      {" "}across <strong data-field="statesAffected">—</strong> states
-    </span>.
+    <strong data-field="cases">{num(cases)}</strong> confirmed cases
+    {typeof jx === "number" ? (
+      <>
+        {" "}across <strong data-field="jurisdictions">{num(jx)}</strong>{" "}
+        {region.toLowerCase() === "united states" ? "states" : "jurisdictions"}
+      </>
+    ) : (
+      <span data-field="statesLine" style="display:none">
+        {" "}across <strong data-field="jurisdictions">—</strong> jurisdictions
+      </span>
+    )}
+    {typeof outbreaks === "number" && (
+      <>
+        {" "}· <strong data-field="outbreaks">{num(outbreaks)}</strong> outbreaks
+      </>
+    )}
+    {typeof outbreakAssoc !== "undefined" && (
+      <>
+        {" "}· <strong data-field="outbreakAssoc">{pct(outbreakAssoc)}</strong> outbreak-associated
+      </>
+    )}
+    .
   </p>
 
-  <ul class="text-sm mt-2 list-disc ml-5">
-    {typeof hospitalizations === "number" && (
-      <li>Hospitalizations: <strong data-field="hospitalizations">{hospitalizations.toLocaleString()}</strong></li>
-    )}
-    {typeof deaths === "number" && (
-      <li>Deaths: <strong data-field="deaths">{deaths.toLocaleString()}</strong></li>
-    )}
-  </ul>
+  {(typeof hospitalizations === "number" || typeof deaths === "number") && (
+    <ul class="text-sm mt-2 list-disc ml-5">
+      {typeof hospitalizations === "number" && (
+        <li>
+          Hospitalizations:{" "}
+          <strong data-field="hospitalizations">{num(hospitalizations)}</strong>
+        </li>
+      )}
+      {typeof deaths === "number" && (
+        <li>
+          Deaths: <strong data-field="deaths">{num(deaths)}</strong>
+        </li>
+      )}
+    </ul>
+  )}
 
   <p class="text-xs text-gray-600 mt-2">
-    <span>Last updated <span data-field="lastUpdated">{lastUpdated ?? "—"}</span></span>
+    <span>
+      Last updated{" "}
+      <span data-field="lastUpdated">{asOfDisplay}</span>
+    </span>
     {" · "}
-    Source:
+    Source:{" "}
     {sourceUrl ? (
       <a href={sourceUrl} class="underline" rel="noopener noreferrer">{sourceName}</a>
     ) : (
@@ -52,5 +138,5 @@ const {
   </p>
 </div>
 
-<!-- Load the external client script once per page; Astro will dedupe identical tags -->
-<script type="module" src="/js/outbreak-tracker.js"></script>
+<!-- Client script only needs to run if we allowed fetch AND core props were missing. Astro will dedupe identical tags. -->
+{shouldFetch && <script type="module" src="/js/outbreak-tracker.js"></script>}
