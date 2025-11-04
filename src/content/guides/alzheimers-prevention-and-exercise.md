@@ -7,7 +7,6 @@ tags: ["Alzheimer’s", "Exercise", "Cognitive Health", "Brain Aging"]
 publishDate: "2025-11-04"
 updatedDate: "2025-11-04"
 draft: false
-layout: "../../layouts/GuideLayout.astro"
 
 schema:
   "@context": "https://schema.org"
