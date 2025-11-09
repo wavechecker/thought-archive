@@ -13,8 +13,7 @@ import SchemaMedical from "@/components/SchemaMedical.astro"
 import SchemaFAQ from "@/components/SchemaFAQ.astro"
 
 {/* 🔹 Breadcrumb JSON-LD */}
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{`{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -22,8 +21,7 @@ import SchemaFAQ from "@/components/SchemaFAQ.astro"
     { "@type": "ListItem", "position": 2, "name": "Obesity & Metabolic Health", "item": "https://patientguide.io/guides/obesity-metabolic-health" },
     { "@type": "ListItem", "position": 3, "name": "Creatine Guide", "item": "https://patientguide.io/guides/creatine-guide" }
   ]
-}
-</script>
+}`}</script>
 
 <SchemaMedical
   type="MedicalTherapy"
