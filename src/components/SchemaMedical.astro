@@ -1,0 +1,69 @@
+---
+/**
+ * SchemaMedical.astro
+ * Minimal JSON-LD emitter for medical/therapy/activity schema.
+ *
+ * Props (all optional except `type` and `name`):
+ * - type: string                // e.g., "MedicalTherapy", "PhysicalActivity"
+ * - name: string
+ * - description: string
+ * - bodyLocation: string
+ * - purpose: string
+ * - associatedAnatomy: string
+ * - studyUrl: string
+ * - alternateName: string
+ * - drugClass: string
+ * - faq: Array<{ question: string; answer: string }>
+ */
+
+const {
+  type = "MedicalTherapy",
+  name,
+  description,
+  bodyLocation,
+  purpose,
+  associatedAnatomy,
+  studyUrl,
+  alternateName,
+  drugClass,
+  faq = [],
+} = Astro.props;
+
+// Build the base medical object
+const medical = {
+  "@context": "https://schema.org",
+  "@type": type,
+  ...(name ? { name } : {}),
+  ...(description ? { description } : {}),
+  ...(bodyLocation ? { bodyLocation } : {}),
+  ...(purpose ? { purpose } : {}),
+  ...(associatedAnatomy ? { associatedAnatomy } : {}),
+  ...(alternateName ? { alternateName } : {}),
+  ...(drugClass ? { drugClass } : {}),
+  ...(studyUrl
+    ? { study: { "@type": "MedicalStudy", url: studyUrl } }
+    : {}),
+};
+
+// If FAQ was passed, emit a separate FAQPage block after the medical block
+const faqJsonLd =
+  faq && faq.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faq.map((q) => ({
+          "@type": "Question",
+          name: q.question,
+          acceptedAnswer: { "@type": "Answer", text: q.answer },
+        })),
+      }
+    : null;
+---
+<script type="application/ld+json">
+  {JSON.stringify(medical, null, 2)}
+</script>
+{faqJsonLd && (
+  <script type="application/ld+json">
+    {JSON.stringify(faqJsonLd, null, 2)}
+  </script>
+)}
