@@ -24,28 +24,48 @@ const {
       aria-label="Stylised world map highlighting regions with higher Lyme disease risk"
       role="img"
     >
-      <rect x="0" y="0" width="800" height="380" class="fill-slate-50" />
+      <!-- Background -->
+      <rect x="0" y="0" width="800" height="380" fill="#f8fafc" />
 
       <!-- Very simplified continents as abstract shapes -->
-      <path d="M90 80 C 150 40, 260 40, 320 90 C 360 120, 360 180, 300 210 C 240 240, 170 230, 120 200 C 80 180, 70 140, 90 80 Z" class="fill-slate-200" />
-      <path d="M340 70 C 410 40, 520 40, 590 80 C 640 110, 650 150, 620 180 C 580 220, 520 230, 470 210 C 420 190, 360 160, 340 120 Z" class="fill-slate-200" />
-      <path d="M560 190 C 620 180, 700 190, 740 220 C 770 250, 770 290, 730 305 C 680 325, 620 320, 590 295 C 560 270, 540 235, 560 190 Z" class="fill-slate-200" />
+      <path
+        d="M90 80 C 150 40, 260 40, 320 90 C 360 120, 360 180, 300 210 C 240 240, 170 230, 120 200 C 80 180, 70 140, 90 80 Z"
+        fill="#e5e7eb"
+      />
+      <path
+        d="M340 70 C 410 40, 520 40, 590 80 C 640 110, 650 150, 620 180 C 580 220, 520 230, 470 210 C 420 190, 360 160, 340 120 Z"
+        fill="#e5e7eb"
+      />
+      <path
+        d="M560 190 C 620 180, 700 190, 740 220 C 770 250, 770 290, 730 305 C 680 325, 620 320, 590 295 C 560 270, 540 235, 560 190 Z"
+        fill="#e5e7eb"
+      />
 
       <!-- Higher-risk regions (North America, Europe, parts of Asia) -->
-      <rect x="150" y="90" width="140" height="80" rx="8" class="fill-emerald-300/70" />
-      <rect x="370" y="80" width="170" height="70" rx="8" class="fill-emerald-300/70" />
-      <rect x="520" y="95" width="120" height="60" rx="8" class="fill-emerald-300/50" />
+      <rect x="150" y="90" width="140" height="80" rx="8" fill="#6ee7b7" fill-opacity="0.8" />
+      <rect x="370" y="80" width="170" height="70" rx="8" fill="#6ee7b7" fill-opacity="0.8" />
+      <rect x="520" y="95" width="120" height="60" rx="8" fill="#6ee7b7" fill-opacity="0.5" />
 
       <!-- Labels -->
-      <text x="160" y="110" class="fill-slate-900 text-[10px] font-semibold">Northeastern &amp; Upper Midwestern USA</text>
-      <text x="380" y="100" class="fill-slate-900 text-[10px] font-semibold">Central &amp; Northern Europe</text>
-      <text x="530" y="115" class="fill-slate-900 text-[10px] font-semibold">Baltic &amp; parts of Russia</text>
+      <text x="160" y="110" font-size="10" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="#0f172a">
+        Northeastern &amp; Upper Midwestern USA
+      </text>
+      <text x="380" y="100" font-size="10" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="#0f172a">
+        Central &amp; Northern Europe
+      </text>
+      <text x="530" y="115" font-size="10" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="#0f172a">
+        Baltics &amp; parts of Russia
+      </text>
 
       <!-- Legend -->
-      <rect x="30" y="300" width="12" height="12" rx="2" class="fill-emerald-300" />
-      <text x="50" y="310" class="fill-slate-900 text-[11px]">Higher documented Lyme incidence</text>
-      <rect x="30" y="320" width="12" height="12" rx="2" class="fill-slate-200" />
-      <text x="50" y="330" class="fill-slate-900 text-[11px]">Lower or uncertain incidence</text>
+      <rect x="30" y="300" width="12" height="12" rx="2" fill="#6ee7b7" />
+      <text x="50" y="310" font-size="11" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="#0f172a">
+        Higher documented Lyme incidence
+      </text>
+      <rect x="30" y="320" width="12" height="12" rx="2" fill="#e5e7eb" />
+      <text x="50" y="330" font-size="11" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="#0f172a">
+        Lower or uncertain incidence
+      </text>
     </svg>
   </div>
 
@@ -57,8 +77,14 @@ const {
 
   <p class="text-[11px] text-slate-500">
     Map is schematic and for educational use only. For regional risk and current surveillance data, see{" "}
-    <a href={sourceUrl} class="underline underline-offset-2 decoration-slate-400 hover:decoration-slate-700" target="_blank" rel="noreferrer">
+    <a
+      href={sourceUrl}
+      class="underline underline-offset-2 decoration-slate-400 hover:decoration-slate-700"
+      target="_blank"
+      rel="noreferrer"
+    >
       {sourceName}
     </a>.
   </p>
 </div>
+
