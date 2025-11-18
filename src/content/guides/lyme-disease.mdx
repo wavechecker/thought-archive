@@ -1,0 +1,191 @@
+---
+title: "Lyme Disease"
+description: "A clear, evidence-based guide to Lyme disease — causes, symptoms, diagnosis, treatment, and long-term outcomes."
+category: "Infections"
+publishDate: "2025-11-18"
+updatedDate: "2025-11-18"
+tags: ["lyme", "tickborne", "infection", "borrelia", "vector-borne"]
+draft: false
+---
+
+import LymeRiskMap from "../../components/LymeRiskMap.astro";
+import TickBiteFlowchart from "../../components/TickBiteFlowchart.astro";
+
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://patientguide.io/guides/lyme-disease#condition",
+      "name": "Lyme disease",
+      "alternateName": "Lyme borreliosis",
+      "description": "Lyme disease is a bacterial infection caused mainly by Borrelia burgdorferi, transmitted through the bite of infected Ixodes ticks. It typically presents with an expanding erythema migrans rash and flu-like symptoms, and can spread to joints, nerves, and the heart if untreated.",
+      "url": "https://patientguide.io/guides/lyme-disease",
+      "cause": {
+        "@type": "InfectiousAgentClass",
+        "name": "Bacteria"
+      },
+      "infectiousAgent": "Borrelia burgdorferi (and in Europe, Borrelia afzelii and Borrelia garinii)",
+      "signOrSymptom": [
+        "Erythema migrans (expanding red rash, often bull’s-eye appearance)",
+        "Fever and chills",
+        "Fatigue",
+        "Headache and neck stiffness",
+        "Muscle and joint aches",
+        "Facial nerve palsy",
+        "Joint swelling (Lyme arthritis)",
+        "Palpitations or Lyme carditis"
+      ],
+      "associatedAnatomy": [
+        "Skin",
+        "Joints",
+        "Peripheral nervous system",
+        "Heart"
+      ],
+      "possibleTreatment": [
+        "Doxycycline",
+        "Amoxicillin",
+        "Cefuroxime",
+        "Intravenous ceftriaxone"
+      ],
+      "epidemiology": "Lyme disease is the most common tick-borne illness in North America and Europe, with higher incidence in wooded and grassy regions where ticks are endemic.",
+      "guideline": {
+        "@type": "MedicalGuideline",
+        "name": "Evidence-based treatment of Lyme disease",
+        "url": "https://www.cdc.gov/lyme"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://patientguide.io/guides/lyme-disease#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you get Lyme disease without seeing a tick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many people never notice the tick because it is small and may attach in hidden areas such as the scalp, groin, or behind the knees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is chronic Lyme disease real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Persistent symptoms after appropriate treatment for Lyme disease are real and recognised as post-treatment Lyme disease syndrome (PTLDS). However, well-conducted studies have not shown ongoing active Borrelia infection in these patients, and prolonged courses of antibiotics have not proven beneficial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Lyme disease tests be negative early on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Antibody tests may be negative in the first few weeks of infection. If clinical suspicion remains high and early tests are negative, repeat testing is recommended after a few weeks."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://patientguide.io/guides/lyme-disease#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://patientguide.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://patientguide.io/guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Lyme Disease",
+          "item": "https://patientguide.io/guides/lyme-disease"
+        }
+      ]
+    }
+  ]
+})}
+</script>
+
+## Intro
+Lyme disease is a bacterial infection caused by *Borrelia burgdorferi* and transmitted through the bite of infected **Ixodes** ticks (black-legged or deer ticks). Early detection and treatment are highly effective. Without treatment, the infection can spread to joints, nerves, and the heart.
+
+## Key Points
+- Caused by *Borrelia burgdorferi* (and in Europe, *B. afzelii* and *B. garinii*).  
+- Spread through **Ixodes** ticks; transmission usually requires ≥36–48 hours of attachment.  
+- Early symptoms include **erythema migrans** (bull’s-eye rash), fever, fatigue, and muscle aches.  
+- Diagnosed with **clinical assessment + two-tier serology**.  
+- Most cases respond well to 10–28 days of antibiotics.  
+- A small group experience persistent symptoms (post-treatment Lyme disease syndrome), but active infection is rarely found.
+
+<LymeRiskMap
+  title="Where Lyme Disease Is Most Common"
+  caption="Lyme disease risk is highest in temperate regions of North America, Europe, and parts of Asia where Ixodes ticks are established. Risk can change over time as tick habitats expand."
+  sourceName="CDC, ECDC and national surveillance reports"
+  sourceUrl="https://www.cdc.gov/lyme"
+/>
+
+## Background
+Lyme disease is the most common tick-borne infection in North America and Europe. Risk is seasonal (spring–autumn) and linked to wooded and grassy areas where ticks feed on small mammals and deer.
+
+## Causes or Mechanisms
+Lyme disease is caused by spirochete bacteria transmitted during a tick blood meal. Once inside the body, *Borrelia* spreads through the skin and bloodstream, causing local inflammation and sometimes disseminating to other organs.
+
+Tick attachment under 24 hours has **very low** transmission risk; the likelihood rises sharply after 36–48 hours.
+
+## Diagnosis / Treatment / Options
+
+### Diagnosis
+Diagnosis uses a combination of:
+- **Clinical signs** (particularly the erythema migrans rash — no test needed)  
+- **Two-tier serology:**  
+  - ELISA screening test  
+  - Western blot confirmation  
+
+PCR is occasionally used for joint fluid but is not standard for blood.
+
+### Treatment
+Standard antibiotic courses (examples):
+- **Doxycycline** 100 mg twice daily for 10–21 days  
+- **Amoxicillin** or **cefuroxime** for those who cannot take doxycycline  
+- **IV ceftriaxone** for some neurological or cardiac cases  
+
+Longer or repeated antibiotic courses are **not proven effective** and carry risks (C. difficile, line infections).
+
+## Risks / Benefits / Prognosis
+- With early treatment, prognosis is excellent.  
+- Joint inflammation (Lyme arthritis) can take months to fully resolve even after the infection is cleared.  
+- **Post-treatment Lyme disease syndrome (PTLDS)** affects a minority (fatigue, pain, brain fog) but **does not imply ongoing infection**.  
+- Cardiac involvement is rare and usually reversible with treatment.
+
+## What To Do After a Tick Bite
+
+<TickBiteFlowchart />
+
+## FAQ
+**Q: Can you get Lyme disease without seeing a tick?**  
+A: Yes. Many people never notice the tick.
+
+**Q: Is chronic Lyme disease real?**  
+A: Persistent symptoms after treatment exist (PTLDS), but prolonged active infection has not been demonstrated in well-controlled studies.
+
+**Q: Can blood tests be negative early on?**  
+A: Yes. Early serology may be negative; repeat testing is recommended if suspicion remains high.
+
+## Further Reading
+- https://www.cdc.gov/lyme  
+- https://www.niaid.nih.gov/diseases-conditions/lyme-disease  
+- https://www.ecdc.europa.eu/en/lyme-disease  
+
+## Related Guides
+- [/guides/post-treatment-lyme-syndrome](/guides/post-treatment-lyme-syndrome)  
+- [/guides/chronic-fatigue](/guides/chronic-fatigue)  
+- [/guides/tick-bite-management](/guides/tick-bite-management)  
+- [/guides/insect-borne-infections](/guides/insect-borne-infections)
