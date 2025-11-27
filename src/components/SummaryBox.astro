@@ -1,0 +1,26 @@
+---
+const {
+  title = "Summary",
+  icon = "ℹ️",
+  ariaLabel = "Summary information",
+} = Astro.props;
+---
+
+<section
+  class="pg-summary"
+  role="note"
+  aria-label={ariaLabel}
+  itemScope
+  itemType="https://schema.org/Note"
+>
+  <header class="pg-summary__header">
+    <span class="pg-summary__icon" aria-hidden="true">{icon}</span>
+    <span class="pg-summary__title" itemProp="name">
+      {title}
+    </span>
+  </header>
+
+  <div class="pg-summary__content" itemProp="text">
+    <slot />
+  </div>
+</section>

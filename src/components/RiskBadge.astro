@@ -1,11 +1,33 @@
 ---
-const { level = "moderate" } = Astro.props;
-const map = {
-  low:   "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-200",
-  moderate: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-200",
-  high:  "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-200",
-};
+const { level = "moderate", ariaLabel } = Astro.props;
+
+// Normalise input (fallback = moderate)
+const normalized =
+  level === "low" || level === "high" || level === "moderate"
+    ? level
+    : "moderate";
+
+const className = `pg-risk-badge pg-risk-badge--${normalized}`;
+
+const computedLabel =
+  ariaLabel ||
+  (normalized === "low"
+    ? "Low risk"
+    : normalized === "high"
+    ? "High risk"
+    : "Moderate risk");
 ---
-<span class={`px-2 py-0.5 rounded-full text-xs font-medium ${map[level]}`}>
-  {level.charAt(0).toUpperCase() + level.slice(1)} risk
+
+<span
+  class={className}
+  role="status"
+  aria-label={computedLabel}
+  itemScope
+  itemType="https://schema.org/MedicalRiskFactor"
+>
+  <span class="pg-risk-badge__dot" aria-hidden="true"></span>
+  <span itemProp="name">
+    <slot />
+  </span>
 </span>
+

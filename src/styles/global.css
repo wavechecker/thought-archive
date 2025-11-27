@@ -19,6 +19,7 @@
   text-decoration: none;
   transition: color 0.2s ease;
 }
+
 .prose a:hover {
   text-decoration: underline;
   color: #1d4ed8; /* hover blue-700 */
@@ -34,4 +35,173 @@
   border-left: 4px solid #e2e8f0;
   padding: 0.75rem 1rem;
   font-style: italic;
+}
+
+/* ===========================
+   PatientGuide UI Tokens
+   =========================== */
+
+:root {
+  /* Base surfaces & text */
+  --pg-surface: #ffffff;
+  --pg-surface-soft: #f9fafb;
+  --pg-border-muted: #e5e7eb;
+  --pg-text: #0f172a;
+  --pg-text-soft: #1f2937;
+
+  /* Summary box */
+  --pg-summary-bg: #eff6ff;
+  --pg-summary-border: #3b82f6;
+  --pg-summary-title: #1d4ed8;
+  --pg-summary-icon: #1d4ed8;
+
+  /* Risk badge – low */
+  --pg-risk-low-bg: #d1fae5;
+  --pg-risk-low-border: #34d399;
+  --pg-risk-low-text: #065f46;
+
+  /* Risk badge – moderate */
+  --pg-risk-moderate-bg: #fef3c7;
+  --pg-risk-moderate-border: #fbbf24;
+  --pg-risk-moderate-text: #92400e;
+
+  /* Risk badge – high */
+  --pg-risk-high-bg: #fee2e2;
+  --pg-risk-high-border: #f87171;
+  --pg-risk-high-text: #991b1b;
+}
+
+/* Dark mode via prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pg-surface: #020617;
+    --pg-surface-soft: #020617;
+    --pg-border-muted: #1f2937;
+    --pg-text: #e5e7eb;
+    --pg-text-soft: #cbd5f5;
+
+    --pg-summary-bg: rgba(30, 64, 175, 0.15);
+    --pg-summary-border: #60a5fa;
+    --pg-summary-title: #bfdbfe;
+    --pg-summary-icon: #bfdbfe;
+
+    --pg-risk-low-bg: rgba(16, 185, 129, 0.15);
+    --pg-risk-low-border: #34d399;
+    --pg-risk-low-text: #a7f3d0;
+
+    --pg-risk-moderate-bg: rgba(245, 158, 11, 0.18);
+    --pg-risk-moderate-border: #fbbf24;
+    --pg-risk-moderate-text: #fed7aa;
+
+    --pg-risk-high-bg: rgba(239, 68, 68, 0.18);
+    --pg-risk-high-border: #f87171;
+    --pg-risk-high-text: #fecaca;
+  }
+}
+
+/* Optional explicit dark theme override */
+html[data-theme="dark"] {
+  --pg-surface: #020617;
+  --pg-surface-soft: #020617;
+  --pg-border-muted: #1f2937;
+  --pg-text: #e5e7eb;
+  --pg-text-soft: #cbd5f5;
+
+  --pg-summary-bg: rgba(30, 64, 175, 0.15);
+  --pg-summary-border: #60a5fa;
+  --pg-summary-title: #bfdbfe;
+  --pg-summary-icon: #bfdbfe;
+
+  --pg-risk-low-bg: rgba(16, 185, 129, 0.15);
+  --pg-risk-low-border: #34d399;
+  --pg-risk-low-text: #a7f3d0;
+
+  --pg-risk-moderate-bg: rgba(245, 158, 11, 0.18);
+  --pg-risk-moderate-border: #fbbf24;
+  --pg-risk-moderate-text: #fed7aa;
+
+  --pg-risk-high-bg: rgba(239, 68, 68, 0.18);
+  --pg-risk-high-border: #f87171;
+  --pg-risk-high-text: #fecaca;
+}
+
+/* ===========================
+   SummaryBox shared styles
+   =========================== */
+
+.pg-summary {
+  border-left: 4px solid var(--pg-summary-border);
+  background: var(--pg-summary-bg);
+  padding: 1rem 1.25rem;
+  border-radius: 0.9rem;
+  margin: 1.25rem 0;
+}
+
+.pg-summary__header {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--pg-summary-title);
+  margin-bottom: 0.5rem;
+}
+
+.pg-summary__icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--pg-summary-icon);
+}
+
+.pg-summary__title {
+  font-size: 0.98rem;
+}
+
+.pg-summary__content {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--pg-text-soft);
+}
+
+/* ===========================
+   RiskBadge shared styles
+   =========================== */
+
+.pg-risk-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.55rem;
+  margin: 0.18rem 0.15rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border-width: 1px;
+  border-style: solid;
+  white-space: nowrap;
+}
+
+/* Levels */
+.pg-risk-badge--low {
+  background: var(--pg-risk-low-bg);
+  border-color: var(--pg-risk-low-border);
+  color: var(--pg-risk-low-text);
+}
+
+.pg-risk-badge--moderate {
+  background: var(--pg-risk-moderate-bg);
+  border-color: var(--pg-risk-moderate-border);
+  color: var(--pg-risk-moderate-text);
+}
+
+.pg-risk-badge--high {
+  background: var(--pg-risk-high-bg);
+  border-color: var(--pg-risk-high-border);
+  color: var(--pg-risk-high-text);
+}
+
+/* Risk badge dot */
+.pg-risk-badge__dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  margin-right: 0.3rem;
+  background: currentColor;
 }
