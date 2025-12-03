@@ -31,14 +31,32 @@
   to = "/guides/womens-health"
   status = 301
 
-# Use splat rules to cover both with and without slash + any child paths
+# Use splat rule to cover both with and without slash + any child paths
 [[redirects]]
   from = "/guides/child-adolescent-health-hub/*"
   to = "/guides/child-and-adolescent-health"
   status = 301
 
-# ---------- Mental health hub normalization (fix redirect loops) ----------
-# These send ALL variants to the canonical no-slash URL
+# ---------- Category listing normalization (stop trailing-slash loop) ----------
+# /guides/category/mental-health/  ->  /guides/category/mental-health
+[[redirects]]
+  from = "/guides/category/:cat/"
+  to = "/guides/category/:cat"
+  status = 301
+
+# Optional: normalize the category root to the main guides index
+[[redirects]]
+  from = "/guides/category"
+  to = "/guides"
+  status = 301
+
+[[redirects]]
+  from = "/guides/category/"
+  to = "/guides"
+  status = 301
+
+# ---------- Mental health hub normalization ----------
+# Send ALL legacy variants to the canonical no-slash URL
 [[redirects]]
   from = "/guides/mental-health-crisis/*"
   to = "/guides/mental-health"
