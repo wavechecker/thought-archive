@@ -1,12 +1,54 @@
 ---
 /**
- * Minimal JSON-LD component for MDX.
- * Usage in MDX:
- *   import JsonLd from "../../components/JsonLd.astro"
- *   <JsonLd>{JSON.stringify({ "@context": "https://schema.org", ... })}</JsonLd>
+ * JSON-LD component (backwards-compatible).
+ *
+ * Recommended new usage:
+ *   <JsonLd data={{ "@context": "https://schema.org", ... }} />
+ *
+ * Legacy usage that still works:
+ *   <JsonLd>{schemaObject}</JsonLd>
+ *   <JsonLd>{JSON.stringify(schemaObject)}</JsonLd>
  */
-const { children } = Astro.props;
-const json = typeof children === "string" ? children : JSON.stringify(children);
+
+interface Props {
+  data?: any;
+  children?: any;
+}
+
+const { data, children } = Astro.props;
+
+let schemaSource: any = data ?? children;
+
+// Nothing passed → render nothing
+if (schemaSource == null) {
+  // In Astro you can just return early from the frontmatter.
+  return;
+}
+
+// If it’s a string (old pattern with JSON.stringify), try to parse it.
+// - Valid JSON string → fine, we parse to an object.
+// - Invalid JSON string → we skip output (prevents GSC “unparsable”).
+if (typeof schemaSource === "string") {
+  try {
+    schemaSource = JSON.parse(schemaSource);
+  } catch (err) {
+    if (import.meta.env.DEV) {
+      console.warn(
+        "JsonLd: received invalid JSON string, skipping JSON-LD output.",
+        err
+      );
+    }
+    return;
+  }
+}
+
+// Now schemaSource is a plain JS value (object/array/etc.)
+const json = JSON.stringify(schemaSource, null, 2);
 ---
-<script type="application/ld+json" set:html={json}></script>
+
+<script type="application/ld+json">
+  {json}
+</script>
+
+
 
