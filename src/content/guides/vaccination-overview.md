@@ -5,15 +5,13 @@ description: "Hub for vaccination-related guides."
 category: "Guide Hubs"
 publishDate: "2025-08-22"
 draft: false
-hubKey: "Vaccination"   # optional, but recommended for counts
+hubKey: "Vaccination"
 ---
-
-
 
 # Vaccination Overview
 
 ## Intro
-Vaccination is one of the most important public health achievements in history. By training the immune system to recognize and fight infections, vaccines have prevented millions of deaths and helped eradicate or control deadly diseases like smallpox, polio, and measles.  
+Vaccination is one of the most important public health achievements in history. By training the immune system to recognize and fight infections, vaccines have prevented millions of deaths and helped eradicate or control deadly diseases like smallpox, polio, and measles.
 
 This section brings together guides on how vaccines work, their safety, and the policies that shape vaccination globally.
 
@@ -31,6 +29,7 @@ This section brings together guides on how vaccines work, their safety, and the 
 - [Adverse Events Monitoring](/guides/adverse-events-monitoring)  
 - [Vaccines and Autism](/guides/vaccines-and-autism)  
 - [Vaccine Hesitancy](/guides/vaccine-hesitancy)  
+- [Vaccination Timeline: Key Milestones](/guides/vaccination-timeline-key-milestones)
 
 ## Disease-Specific Guides
 - [Measles Vaccine](/guides/measles-vaccine)  
