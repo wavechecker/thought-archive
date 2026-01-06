@@ -1,0 +1,50 @@
+---
+/**
+ * Mermaid diagram component for MDX content.
+ *
+ * Usage in MDX:
+ *   import Mermaid from "../../components/Mermaid.astro";
+ *
+ *   <Mermaid
+ *     code={`timeline
+ *       title Example Timeline
+ *       2020 : Something happened
+ *       2024 : Something else happened
+ *     `}
+ *   />
+ */
+
+const { code } = Astro.props;
+---
+
+<div class="mermaid">
+  {code}
+</div>
+
+<script is:inline>
+  import mermaid from "mermaid";
+
+  // Prevent double-initialisation on client-side navigation
+  if (!window.__MERMAID_INITIALISED__) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "default",
+      securityLevel: "strict",
+      timeline: {
+        showTitle: true
+      }
+    });
+
+    window.__MERMAID_INITIALISED__ = true;
+  } else {
+    // Re-render any new diagrams injected by client navigation
+    mermaid.run();
+  }
+</script>
+
+<style>
+  .mermaid {
+    margin: 2rem 0;
+    overflow-x: auto;
+  }
+</style>
