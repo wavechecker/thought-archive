@@ -1,0 +1,56 @@
+---
+/**
+ * RiskBox.astro
+ * Simple callout box for risks / cautions.
+ *
+ * Usage:
+ * <RiskBox title="..." risks={["...", "..."]} />
+ */
+
+export interface Props {
+  title?: string;
+  risks?: string[];
+}
+
+const { title = "Risks", risks = [] } = Astro.props as Props;
+---
+
+<section class="riskbox" aria-label={title}>
+  <div class="riskbox__inner">
+    <h3 class="riskbox__title">{title}</h3>
+
+    {risks?.length ? (
+      <ul class="riskbox__list">
+        {risks.map((r) => <li>{r}</li>)}
+      </ul>
+    ) : (
+      <p class="riskbox__empty">No risks listed.</p>
+    )}
+  </div>
+</section>
+
+<style>
+  .riskbox {
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 16px;
+    padding: 14px;
+    margin: 18px 0;
+  }
+  .riskbox__inner {
+    display: grid;
+    gap: 10px;
+  }
+  .riskbox__title {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+  .riskbox__list {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .riskbox__empty {
+    margin: 0;
+    opacity: 0.75;
+  }
+</style>
