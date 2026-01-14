@@ -17,7 +17,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
     resolve: {
       alias: {
-        "@": path.resolve("./src"), // ✅ Enables @/components in MDX + Astro
+        "@": path.resolve("./src"),
       },
     },
   },

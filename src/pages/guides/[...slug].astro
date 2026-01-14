@@ -2,6 +2,11 @@
 import { getCollection, getEntryBySlug } from "astro:content";
 import { isValidDate } from "@/lib/date";
 
+// ✅ MDX Components available to ALL guides (retroactive + future)
+// Update/extend this list once, and every MDX guide can use these components.
+import StratBox from "@/components/StratBox.astro";
+import EvidenceBox from "@/components/EvidenceBox.astro";
+
 // Static paths from collection (skip drafts)
 export const prerender = true;
 export async function getStaticPaths() {
@@ -18,7 +23,10 @@ if (!slug) return Astro.redirect("/404");
 const entry = await getEntryBySlug("guides", slug);
 if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
 
-const { Content } = await entry.render();
+// ✅ Provide MDX component map here (this is the key fix)
+const mdxComponents = { StratBox, EvidenceBox };
+const { Content } = await entry.render({ components: mdxComponents });
+
 const data = entry.data;
 
 // Canonical + site
@@ -44,35 +52,35 @@ const breadcrumbs = [
 const articleLd = {
   "@context": "https://schema.org",
   "@type": ["Article", "WebPage"],
-  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
-  "headline": data.title,
-  "description": data.description ?? "",
-  "keywords": Array.isArray(data.tags) && data.tags.length ? data.tags : undefined,
-  "datePublished": pub ?? undefined,
-  "dateModified": mod ?? undefined,
-  "author": { "@type": "Organization", "name": "patientguide.io", "url": site },
-  "publisher": {
+  mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+  headline: data.title,
+  description: data.description ?? "",
+  keywords: Array.isArray(data.tags) && data.tags.length ? data.tags : undefined,
+  datePublished: pub ?? undefined,
+  dateModified: mod ?? undefined,
+  author: { "@type": "Organization", name: "patientguide.io", url: site },
+  publisher: {
     "@type": "Organization",
-    "name": "patientguide.io",
-    "logo": { "@type": "ImageObject", "url": `${site}/logo.png` }
+    name: "patientguide.io",
+    logo: { "@type": "ImageObject", url: `${site}/logo.png` }
   },
-  "isPartOf": {
+  isPartOf: {
     "@type": "Collection",
-    "name": `${data?.category ?? "Guides"} Guides`,
-    "url": `${site}/guides?category=${encodeURIComponent(data?.category ?? "General")}`
+    name: `${data?.category ?? "Guides"} Guides`,
+    url: `${site}/guides?category=${encodeURIComponent(data?.category ?? "General")}`
   },
-  "inLanguage": "en",
-  "image": heroAbs,
-  "about": (data.title ? { "@type": "Thing", "name": data.title, "sameAs": data?.sameAs } : undefined)
+  inLanguage: "en",
+  image: heroAbs,
+  about: (data.title ? { "@type": "Thing", name: data.title, sameAs: data?.sameAs } : undefined)
 };
 
 // Map schema.* if present
-function buildConditionLD(med) {
+function buildConditionLD(med: any) {
   if (!med) return null;
   const rf = Array.isArray(med.riskFactors) && med.riskFactors.length
-    ? med.riskFactors.map((r) => ({ "@type": "MedicalRiskFactor", name: r })) : undefined;
+    ? med.riskFactors.map((r: string) => ({ "@type": "MedicalRiskFactor", name: r })) : undefined;
   const ss = Array.isArray(med.symptoms) && med.symptoms.length
-    ? med.symptoms.map((s) => ({ "@type": "MedicalSignOrSymptom", name: s })) : undefined;
+    ? med.symptoms.map((s: string) => ({ "@type": "MedicalSignOrSymptom", name: s })) : undefined;
   return {
     "@context": "https://schema.org",
     "@type": "MedicalCondition",
@@ -87,7 +95,8 @@ function buildConditionLD(med) {
     url: canonicalUrl
   };
 }
-function buildDeviceLD(d) {
+
+function buildDeviceLD(d: any) {
   if (!d) return null;
   return {
     "@context": "https://schema.org",
@@ -100,7 +109,8 @@ function buildDeviceLD(d) {
     url: canonicalUrl
   };
 }
-function buildProcedureLD(p) {
+
+function buildProcedureLD(p: any) {
   if (!p) return null;
   return {
     "@context": "https://schema.org",
@@ -114,7 +124,8 @@ function buildProcedureLD(p) {
     url: canonicalUrl
   };
 }
-function buildSignOrSymptomLD(s) {
+
+function buildSignOrSymptomLD(s: any) {
   if (!s) return null;
   return {
     "@context": "https://schema.org",
@@ -137,16 +148,13 @@ const medicalSignOrSymptomLd = buildSignOrSymptomLD(data?.schema?.medicalSignOrS
 const faqArray = Array.isArray(data?.faq) && data.faq.length
   ? data.faq
   : [
-      {
-        q: `What is ${data?.title ?? "this condition"}?`,
-        a: data?.description ?? "A brief overview of this topic."
-      }
+      { q: `What is ${data?.title ?? "this condition"}?`, a: data?.description ?? "A brief overview of this topic." }
     ];
 
 const faqLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": faqArray.map((item) => ({
+  mainEntity: faqArray.map((item: any) => ({
     "@type": "Question",
     name: item.q,
     acceptedAnswer: { "@type": "Answer", text: item.a }
@@ -156,7 +164,7 @@ const faqLd = {
 const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": breadcrumbs.map((b, i) => ({
+  itemListElement: breadcrumbs.map((b, i) => ({
     "@type": "ListItem",
     position: i + 1,
     name: b.name,
@@ -188,7 +196,7 @@ const breadcrumbLd = {
   <meta name="twitter:image" content={heroAbs} />
   <meta name="twitter:site" content="@patientguide" />
 
-  <!-- JSON-LD blocks (self-closing with set:html so they’re truly inline JSON) -->
+  <!-- JSON-LD blocks -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleLd)} />
   {medicalConditionLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(medicalConditionLd)} />}
   {medicalDeviceLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(medicalDeviceLd)} />}
@@ -209,7 +217,12 @@ const breadcrumbLd = {
             {pub}{mod && pub !== mod ? ` • Updated ${mod}` : ""}
           </p>
         )}
-        <img src={heroLocal} alt={data?.title ?? "Hero"} class="mt-4 aspect-[1200/630] w-full rounded-xl object-cover" loading="lazy" />
+        <img
+          src={heroLocal}
+          alt={data?.title ?? "Hero"}
+          class="mt-4 aspect-[1200/630] w-full rounded-xl object-cover"
+          loading="lazy"
+        />
       </header>
 
       <Content />
@@ -224,8 +237,5 @@ const breadcrumbLd = {
     </article>
   </main>
 </body>
-
-
-
 
 
