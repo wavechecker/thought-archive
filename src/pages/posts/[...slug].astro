@@ -2,9 +2,8 @@
 import { getCollection, getEntryBySlug } from "astro:content";
 import { isValidDate } from "@/lib/date";
 
-// ✅ MDX Components available to ALL posts (retroactive + future)
-import StratBox from "@/components/StratBox.astro";
-import EvidenceBox from "@/components/EvidenceBox.astro";
+import StratBox from "../../components/StratBox.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
 
 export const prerender = true;
 
@@ -20,32 +19,26 @@ if (!slug) return Astro.redirect("/404");
 const entry = await getEntryBySlug("posts", slug);
 if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
 
-// ✅ Provide MDX components to post content
 const { Content } = await entry.render({
   components: { StratBox, EvidenceBox },
 });
 
 const data = entry.data;
 
-// Canonical + site
 const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
 const canonicalUrl = `${site}/posts/${entry.slug}`;
 
-// Dates
 const pub = isValidDate?.(data.publishDate) ? data.publishDate : undefined;
 const mod = isValidDate?.(data.updatedDate) ? data.updatedDate : pub;
 
-// Hero image absolute
 const heroLocal = data?.image ?? data?.heroImage ?? "/og-default.png";
 const heroAbs = heroLocal.startsWith("http") ? heroLocal : `${site}${heroLocal}`;
 
-// Breadcrumbs
 const breadcrumbs = [
   { name: "Posts", url: `${site}/posts` },
   { name: data?.title ?? "Post", url: canonicalUrl },
 ];
 
-// JSON-LD
 const articleLd = {
   "@context": "https://schema.org",
   "@type": ["Article", "WebPage"],
@@ -110,7 +103,6 @@ const breadcrumbLd = {
   <meta name="twitter:title" content={data.title} />
   <meta name="twitter:description" content={data.description ?? ""} />
   <meta name="twitter:image" content={heroAbs} />
-  <meta name="twitter:site" content="@patientguide" />
 
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleLd)} />
   {faqLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />}
@@ -148,3 +140,4 @@ const breadcrumbLd = {
     </article>
   </main>
 </body>
+
