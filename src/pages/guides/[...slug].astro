@@ -2,163 +2,73 @@
 import { getCollection, getEntryBySlug } from "astro:content";
 import { isValidDate } from "@/lib/date";
 
-// ✅ MDX Components available to ALL guides (retroactive + future)
-// Update/extend this list once, and every MDX guide can use these components.
+// ✅ MDX components (retroactive for ALL guides)
 import StratBox from "@/components/StratBox.astro";
 import EvidenceBox from "@/components/EvidenceBox.astro";
 
-// Static paths from collection (skip drafts)
 export const prerender = true;
+
+// Static paths from collection (skip drafts)
 export async function getStaticPaths() {
   const entries = await getCollection("guides", ({ data }) => data?.draft !== true);
   return entries.map((e) => ({ params: { slug: e.slug } }));
 }
 
-// Resolve slug param to "a/b/c"
+// Resolve slug param
 const slugParam = Astro.params.slug;
 const slug = Array.isArray(slugParam) ? slugParam.join("/") : (slugParam ?? "");
-
 if (!slug) return Astro.redirect("/404");
 
 const entry = await getEntryBySlug("guides", slug);
 if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
 
-// ✅ Provide MDX component map here (this is the key fix)
+// ✅ Provide MDX components here (THIS WAS MISSING)
 const mdxComponents = { StratBox, EvidenceBox };
 const { Content } = await entry.render({ components: mdxComponents });
 
 const data = entry.data;
 
-// Canonical + site
+// Site + canonical
 const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
 const canonicalUrl = `${site}/guides/${entry.slug}`;
 
-// Dates (ISO yyyy-mm-dd)
+// Dates
 const pub = isValidDate?.(data.publishDate) ? data.publishDate : undefined;
 const mod = isValidDate?.(data.updatedDate) ? data.updatedDate : pub;
 
-// Hero image absolute
+// Images
 const heroLocal = data?.image ?? data?.heroImage ?? "/og-default.png";
 const heroAbs = heroLocal.startsWith("http") ? heroLocal : `${site}${heroLocal}`;
 
 // Breadcrumbs
 const breadcrumbs = [
   { name: "Guides", url: `${site}/guides` },
-  { name: data?.category ?? "General", url: `${site}/guides?category=${encodeURIComponent(data?.category ?? "General")}` },
+  {
+    name: data?.category ?? "General",
+    url: `${site}/guides/category/${encodeURIComponent(
+      (data?.category ?? "general").toLowerCase().replace(/\s+/g, "-")
+    )}`
+  },
   { name: data?.title ?? "Guide", url: canonicalUrl }
 ];
 
-// ---------- JSON-LD builders ----------
+// ---------- JSON-LD ----------
 const articleLd = {
   "@context": "https://schema.org",
   "@type": ["Article", "WebPage"],
   mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
   headline: data.title,
   description: data.description ?? "",
-  keywords: Array.isArray(data.tags) && data.tags.length ? data.tags : undefined,
-  datePublished: pub ?? undefined,
-  dateModified: mod ?? undefined,
+  datePublished: pub,
+  dateModified: mod,
   author: { "@type": "Organization", name: "patientguide.io", url: site },
   publisher: {
     "@type": "Organization",
     name: "patientguide.io",
     logo: { "@type": "ImageObject", url: `${site}/logo.png` }
   },
-  isPartOf: {
-    "@type": "Collection",
-    name: `${data?.category ?? "Guides"} Guides`,
-    url: `${site}/guides?category=${encodeURIComponent(data?.category ?? "General")}`
-  },
-  inLanguage: "en",
   image: heroAbs,
-  about: (data.title ? { "@type": "Thing", name: data.title, sameAs: data?.sameAs } : undefined)
-};
-
-// Map schema.* if present
-function buildConditionLD(med: any) {
-  if (!med) return null;
-  const rf = Array.isArray(med.riskFactors) && med.riskFactors.length
-    ? med.riskFactors.map((r: string) => ({ "@type": "MedicalRiskFactor", name: r })) : undefined;
-  const ss = Array.isArray(med.symptoms) && med.symptoms.length
-    ? med.symptoms.map((s: string) => ({ "@type": "MedicalSignOrSymptom", name: s })) : undefined;
-  return {
-    "@context": "https://schema.org",
-    "@type": "MedicalCondition",
-    name: med.name ?? data.title,
-    description: med.description ?? data.description,
-    alternateName: med.alternateName && med.alternateName.length ? med.alternateName : undefined,
-    riskFactor: rf,
-    signOrSymptom: ss,
-    possibleComplication: med.possibleComplication && med.possibleComplication.length ? med.possibleComplication : undefined,
-    infectiousAgentClass: typeof med.contagious === "boolean" ? (med.contagious ? "Pathogen" : undefined) : undefined,
-    sameAs: med.sameAs && med.sameAs.length ? med.sameAs : undefined,
-    url: canonicalUrl
-  };
-}
-
-function buildDeviceLD(d: any) {
-  if (!d) return null;
-  return {
-    "@context": "https://schema.org",
-    "@type": "MedicalDevice",
-    name: d.name ?? data.title,
-    description: d.description ?? data.description,
-    manufacturer: d.manufacturer ? { "@type": "Organization", name: d.manufacturer } : undefined,
-    model: d.model,
-    sameAs: d.sameAs && d.sameAs.length ? d.sameAs : undefined,
-    url: canonicalUrl
-  };
-}
-
-function buildProcedureLD(p: any) {
-  if (!p) return null;
-  return {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    name: p.name ?? data.title,
-    description: p.description ?? data.description,
-    howPerformed: p.howPerformed,
-    preparation: p.preparation,
-    followup: p.followup,
-    sameAs: p.sameAs && p.sameAs.length ? p.sameAs : undefined,
-    url: canonicalUrl
-  };
-}
-
-function buildSignOrSymptomLD(s: any) {
-  if (!s) return null;
-  return {
-    "@context": "https://schema.org",
-    "@type": "MedicalSignOrSymptom",
-    name: s.name ?? data.title,
-    description: s.description ?? data.description,
-    possibleTreatment: s.possibleTreatment && s.possibleTreatment.length ? s.possibleTreatment : undefined,
-    identifyingTest: s.identifyingTest && s.identifyingTest.length ? s.identifyingTest : undefined,
-    sameAs: s.sameAs && s.sameAs.length ? s.sameAs : undefined,
-    url: canonicalUrl
-  };
-}
-
-const medicalConditionLd = buildConditionLD(data?.schema?.medicalCondition);
-const medicalDeviceLd = buildDeviceLD(data?.schema?.medicalDevice);
-const medicalProcedureLd = buildProcedureLD(data?.schema?.medicalProcedure);
-const medicalSignOrSymptomLd = buildSignOrSymptomLD(data?.schema?.medicalSignOrSymptom);
-
-// Always provide a FAQPage (fallback if missing)
-const faqArray = Array.isArray(data?.faq) && data.faq.length
-  ? data.faq
-  : [
-      { q: `What is ${data?.title ?? "this condition"}?`, a: data?.description ?? "A brief overview of this topic." }
-    ];
-
-const faqLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqArray.map((item: any) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: item.a }
-  }))
+  inLanguage: "en"
 };
 
 const breadcrumbLd = {
@@ -179,30 +89,12 @@ const breadcrumbLd = {
   <meta name="description" content={data.description ?? ""} />
   <link rel="canonical" href={canonicalUrl} />
 
-  <!-- OpenGraph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content={data.title} />
   <meta property="og:description" content={data.description ?? ""} />
-  <meta property="og:url" content={canonicalUrl} />
-  <meta property="og:site_name" content="patientguide.io" />
   <meta property="og:image" content={heroAbs} />
-  {pub && <meta property="article:published_time" content={pub} />}
-  {mod && <meta property="article:modified_time" content={mod} />}
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={data.title} />
-  <meta name="twitter:description" content={data.description ?? ""} />
-  <meta name="twitter:image" content={heroAbs} />
-  <meta name="twitter:site" content="@patientguide" />
-
-  <!-- JSON-LD blocks -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleLd)} />
-  {medicalConditionLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(medicalConditionLd)} />}
-  {medicalDeviceLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(medicalDeviceLd)} />}
-  {medicalProcedureLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(medicalProcedureLd)} />}
-  {medicalSignOrSymptomLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(medicalSignOrSymptomLd)} />}
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
 </head>
 
@@ -210,8 +102,10 @@ const breadcrumbLd = {
   <main class="container mx-auto px-4 py-8">
     <article class="prose lg:prose-lg max-w-none">
       <header class="mb-6">
-        <p class="text-xs uppercase tracking-wide text-slate-500">{data?.category ?? "Guide"}</p>
-        <h1 class="mt-1 text-3xl/tight font-semibold tracking-tight">{data?.title ?? "Untitled"}</h1>
+        <p class="text-xs uppercase tracking-wide text-slate-500">
+          {data?.category ?? "Guide"}
+        </p>
+        <h1 class="mt-1 text-3xl font-semibold">{data?.title}</h1>
         {(pub || mod) && (
           <p class="mt-2 text-sm text-slate-500">
             {pub}{mod && pub !== mod ? ` • Updated ${mod}` : ""}
@@ -219,23 +113,13 @@ const breadcrumbLd = {
         )}
         <img
           src={heroLocal}
-          alt={data?.title ?? "Hero"}
+          alt={data?.title}
           class="mt-4 aspect-[1200/630] w-full rounded-xl object-cover"
           loading="lazy"
         />
       </header>
 
       <Content />
-
-      {Array.isArray(data?.tags) && data.tags.length > 0 && (
-        <ul class="mt-6 flex flex-wrap gap-2">
-          {data.tags.map((t) => (
-            <li class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">#{t}</li>
-          ))}
-        </ul>
-      )}
     </article>
   </main>
 </body>
-
-
