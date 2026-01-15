@@ -4,37 +4,27 @@ import { getCollection } from "astro:content";
 // MDX components used inside guides
 import StratBox from "../../components/StratBox.astro";
 import EvidenceBox from "../../components/EvidenceBox.astro";
-import MdxNull from "../../components/MdxNull.astro";
+
+// Optional: keep your StatBox backwards-compat working
+// (in case older guides use <StatBox />)
+const mdxComponents = {
+  StratBox,
+  EvidenceBox,
+  StatBox: StratBox,
+};
 
 export async function getStaticPaths() {
   const guides = await getCollection("guides");
-
   return guides.map((entry) => ({
-    // Astro expects a STRING for [...slug]
-    // If entry.slug contains "foo/bar", Astro treats it as the catchall path.
-    params: { slug: entry.slug },
+    params: { slug: entry.slug }, // IMPORTANT: string for [...slug]
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
 
-// Astro v5+ content rendering
-const { Content, headings } = await entry.render();
-
-// Safe fallback: unknown MDX tags become <MdxNull />
-const mdxComponents = new Proxy(
-  {
-    StratBox,
-    EvidenceBox,
-  },
-  {
-    get(target, prop) {
-      if (typeof prop === "string" && prop in target) return target[prop];
-      return MdxNull;
-    },
-  }
-);
+// This is the key: use entry.render() (not render() import)
+const { Content } = await entry.render();
 ---
 
 <html lang="en">
@@ -50,15 +40,12 @@ const mdxComponents = new Proxy(
       <h1>{entry.data.title}</h1>
 
       {entry.data.publishDate && (
-        <p class="text-sm text-gray-500">Published: {entry.data.publishDate}</p>
+        <p class="text-sm text-gray-500">
+          Published: {entry.data.publishDate}
+        </p>
       )}
 
       <Content components={mdxComponents} />
-
-      {/*
-        Optional: debugging
-        <pre>{JSON.stringify(headings, null, 2)}</pre>
-      */}
     </main>
   </body>
 </html>
