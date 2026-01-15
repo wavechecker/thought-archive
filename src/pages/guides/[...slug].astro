@@ -1,142 +1,74 @@
 ---
-import { getCollection, getEntryBySlug } from "astro:content";
-import { isValidDate } from "@/lib/date";
+import { getCollection } from "astro:content";
+import { render } from "astro:content";
 
-// ✅ MDX Components available to ALL guides (retroactive + future)
-import StratBox from "@/components/StratBox.astro";
-import EvidenceBox from "@/components/EvidenceBox.astro";
-import StatBox from "@/components/StatBox.astro";
+// These are your MDX components (real or shim).
+// Make sure these files exist at these paths.
+import StratBox from "../../components/StratBox.astro";
+import EvidenceBox from "../../components/EvidenceBox.astro";
+import MdxNull from "../../components/MdxNull.astro";
 
-export const prerender = true;
+// If you have other MDX components used in guides, add them here.
+// import OutbreakTracker from "../../components/OutbreakTracker.astro";
+// import RiskBox from "../../components/RiskBox.astro";
+// etc.
 
-// Static paths from collection (skip drafts)
 export async function getStaticPaths() {
-  const entries = await getCollection("guides", ({ data }) => data?.draft !== true);
-  return entries.map((e) => ({ params: { slug: e.slug.split("/") } }));
+  const guides = await getCollection("guides");
+
+  return guides.map((entry) => ({
+    // IMPORTANT: For [...slug], Astro wants a STRING, not an array.
+    // If entry.slug is "foo/bar", this still works.
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
-// Resolve [...slug] to "a/b/c"
-const slugParam = Astro.params.slug;
-const slug = Array.isArray(slugParam) ? slugParam.join("/") : (slugParam ?? "");
+const { entry } = Astro.props;
 
-if (!slug) return Astro.redirect("/404");
+// Handle runtime safety if Astro.params.slug ever arrives as array in some contexts
+const rawSlug = Astro.params.slug;
+const slug = Array.isArray(rawSlug) ? rawSlug.join("/") : rawSlug;
 
-const entry = await getEntryBySlug("guides", slug);
-if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
+const { Content, headings } = await render(entry);
 
-// ✅ Provide MDX component map here
-const mdxComponents = { StratBox, EvidenceBox, StatBox };
-const { Content } = await entry.render({ components: mdxComponents });
-
-const data = entry.data;
-
-// Canonical + site
-const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
-const canonicalUrl = `${site}/guides/${entry.slug}`;
-
-// Dates (ISO yyyy-mm-dd)
-const pub = isValidDate?.(data.publishDate) ? data.publishDate : undefined;
-const mod = isValidDate?.(data.updatedDate) ? data.updatedDate : pub;
-
-// Hero image absolute (guides may not have image; fall back)
-const heroLocal = data?.image ?? data?.heroImage ?? "/og-default.png";
-const heroAbs = heroLocal.startsWith("http") ? heroLocal : `${site}${heroLocal}`;
-
-// Breadcrumbs
-const breadcrumbs = [
-  { name: "Guides", url: `${site}/guides` },
-  { name: data?.category ?? "Guide", url: data?.category ? `${site}/guides/category/${String(data.category).toLowerCase().replace(/\s+/g, "-")}` : `${site}/guides` },
-  { name: data?.title ?? "Guide", url: canonicalUrl },
-];
-
-// ---------- JSON-LD builders ----------
-const articleLd = {
-  "@context": "https://schema.org",
-  "@type": ["MedicalWebPage", "WebPage"],
-  mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
-  name: data.title,
-  description: data.description ?? "",
-  keywords: Array.isArray(data.tags) && data.tags.length ? data.tags : undefined,
-  datePublished: pub ?? undefined,
-  dateModified: mod ?? undefined,
-  inLanguage: "en",
-  image: heroAbs,
-  about: data?.category ? { "@type": "Thing", name: data.category } : undefined,
-  author: { "@type": "Organization", name: "patientguide.io", url: site },
-  publisher: {
-    "@type": "Organization",
-    name: "patientguide.io",
-    logo: { "@type": "ImageObject", url: `${site}/logo.png` },
+// Prospective + retrospective safety:
+// Any unknown MDX component name will render as <MdxNull /> instead of crashing the build.
+const mdxComponents = new Proxy(
+  {
+    StratBox,
+    EvidenceBox,
+    // OutbreakTracker,
+    // RiskBox,
   },
-};
-
-const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: breadcrumbs.map((b, i) => ({
-    "@type": "ListItem",
-    position: i + 1,
-    name: b.name,
-    item: b.url,
-  })),
-};
+  {
+    get(target, prop) {
+      if (typeof prop === "string" && prop in target) return target[prop];
+      return MdxNull;
+    },
+  }
+);
 ---
 
-<head>
-  <meta charset="utf-8" />
-  <title>{data.title} | patientguide.io</title>
-  <meta name="description" content={data.description ?? ""} />
-  <link rel="canonical" href={canonicalUrl} />
+<html lang="en">
+  <head>
+    <title>{entry.data.title}</title>
+    {entry.data.description && <meta name="description" content={entry.data.description} />}
+  </head>
+  <body>
+    <main class="prose dark:prose-invert max-w-3xl mx-auto px-4 py-10">
+      <h1>{entry.data.title}</h1>
 
-  <!-- OpenGraph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content={data.title} />
-  <meta property="og:description" content={data.description ?? ""} />
-  <meta property="og:url" content={canonicalUrl} />
-  <meta property="og:site_name" content="patientguide.io" />
-  <meta property="og:image" content={heroAbs} />
-  {pub && <meta property="article:published_time" content={pub} />}
-  {mod && <meta property="article:modified_time" content={mod} />}
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={data.title} />
-  <meta name="twitter:description" content={data.description ?? ""} />
-  <meta name="twitter:image" content={heroAbs} />
-
-  <!-- JSON-LD blocks -->
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleLd)} />
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
-</head>
-
-<body class="min-h-screen">
-  <main class="container mx-auto px-4 py-8">
-    <article class="prose lg:prose-lg max-w-none">
-      <header class="mb-6">
-        <p class="text-xs uppercase tracking-wide text-slate-500">Guide</p>
-        <h1 class="mt-1 text-3xl/tight font-semibold tracking-tight">{data?.title ?? "Untitled"}</h1>
-        {(pub || mod) && (
-          <p class="mt-2 text-sm text-slate-500">
-            {pub}{mod && pub !== mod ? ` • Updated ${mod}` : ""}
-          </p>
-        )}
-        <img
-          src={heroLocal}
-          alt={data?.title ?? "Hero"}
-          class="mt-4 aspect-[1200/630] w-full rounded-xl object-cover"
-          loading="lazy"
-        />
-      </header>
-
-      <Content />
-
-      {Array.isArray(data?.tags) && data.tags.length > 0 && (
-        <ul class="mt-6 flex flex-wrap gap-2">
-          {data.tags.map((t) => (
-            <li class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">#{t}</li>
-          ))}
-        </ul>
+      {entry.data.publishDate && (
+        <p class="text-sm text-gray-500">
+          Published: {entry.data.publishDate}
+        </p>
       )}
-    </article>
-  </main>
-</body>
+
+      <Content components={mdxComponents} />
+
+      {/* If you use headings/TOC, keep it; otherwise remove. */}
+      {/* <pre>{JSON.stringify(headings, null, 2)}</pre> */}
+    </main>
+  </body>
+</html>

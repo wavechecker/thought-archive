@@ -1,8 +1,7 @@
 ---
 /**
- * Used as a safe fallback when older MDX references a component
- * that isn't available in the current build.
+ * Null render component used as a safe fallback for missing MDX components.
+ * Prevents build crashes when legacy MDX contains unknown components.
  */
 ---
-<span style="display:none" aria-hidden="true"></span>
-
+<Fragment />
