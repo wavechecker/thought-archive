@@ -1,24 +1,17 @@
 ---
 import { getCollection } from "astro:content";
-import { render } from "astro:content";
 
-// These are your MDX components (real or shim).
-// Make sure these files exist at these paths.
+// MDX components used inside guides
 import StratBox from "../../components/StratBox.astro";
 import EvidenceBox from "../../components/EvidenceBox.astro";
 import MdxNull from "../../components/MdxNull.astro";
-
-// If you have other MDX components used in guides, add them here.
-// import OutbreakTracker from "../../components/OutbreakTracker.astro";
-// import RiskBox from "../../components/RiskBox.astro";
-// etc.
 
 export async function getStaticPaths() {
   const guides = await getCollection("guides");
 
   return guides.map((entry) => ({
-    // IMPORTANT: For [...slug], Astro wants a STRING, not an array.
-    // If entry.slug is "foo/bar", this still works.
+    // Astro expects a STRING for [...slug]
+    // If entry.slug contains "foo/bar", Astro treats it as the catchall path.
     params: { slug: entry.slug },
     props: { entry },
   }));
@@ -26,20 +19,14 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 
-// Handle runtime safety if Astro.params.slug ever arrives as array in some contexts
-const rawSlug = Astro.params.slug;
-const slug = Array.isArray(rawSlug) ? rawSlug.join("/") : rawSlug;
+// Astro v5+ content rendering
+const { Content, headings } = await entry.render();
 
-const { Content, headings } = await render(entry);
-
-// Prospective + retrospective safety:
-// Any unknown MDX component name will render as <MdxNull /> instead of crashing the build.
+// Safe fallback: unknown MDX tags become <MdxNull />
 const mdxComponents = new Proxy(
   {
     StratBox,
     EvidenceBox,
-    // OutbreakTracker,
-    // RiskBox,
   },
   {
     get(target, prop) {
@@ -53,22 +40,25 @@ const mdxComponents = new Proxy(
 <html lang="en">
   <head>
     <title>{entry.data.title}</title>
-    {entry.data.description && <meta name="description" content={entry.data.description} />}
+    {entry.data.description && (
+      <meta name="description" content={entry.data.description} />
+    )}
   </head>
+
   <body>
     <main class="prose dark:prose-invert max-w-3xl mx-auto px-4 py-10">
       <h1>{entry.data.title}</h1>
 
       {entry.data.publishDate && (
-        <p class="text-sm text-gray-500">
-          Published: {entry.data.publishDate}
-        </p>
+        <p class="text-sm text-gray-500">Published: {entry.data.publishDate}</p>
       )}
 
       <Content components={mdxComponents} />
 
-      {/* If you use headings/TOC, keep it; otherwise remove. */}
-      {/* <pre>{JSON.stringify(headings, null, 2)}</pre> */}
+      {/*
+        Optional: debugging
+        <pre>{JSON.stringify(headings, null, 2)}</pre>
+      */}
     </main>
   </body>
 </html>
