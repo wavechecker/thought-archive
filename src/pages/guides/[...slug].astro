@@ -1,15 +1,17 @@
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
 import { isValidDate } from "@/lib/date";
-
-import StratBox from "../../components/StratBox.astro";
-import EvidenceBox from "../../components/EvidenceBox.astro";
+import { mdxComponents } from "@/lib/mdx-components";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
   const entries = await getCollection("guides", ({ data }) => data?.draft !== true);
-  return entries.map((e) => ({ params: { slug: e.slug } }));
+
+  // [...slug] expects an array of path segments
+  return entries.map((e) => ({
+    params: { slug: e.slug.split("/") },
+  }));
 }
 
 const slugParam = Astro.params.slug;
@@ -19,8 +21,9 @@ if (!slug) return Astro.redirect("/404");
 const entry = await getEntryBySlug("guides", slug);
 if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
 
+// ✅ This is the fix: provide MDX components so <EvidenceBox /> etc can render
 const { Content } = await entry.render({
-  components: { StratBox, EvidenceBox },
+  components: mdxComponents,
 });
 
 const data = entry.data;
@@ -34,29 +37,18 @@ const mod = isValidDate?.(data.updatedDate) ? data.updatedDate : pub;
 const heroLocal = data?.image ?? data?.heroImage ?? "/og-default.png";
 const heroAbs = heroLocal.startsWith("http") ? heroLocal : `${site}${heroLocal}`;
 
-// Breadcrumbs (simple + safe)
 const breadcrumbs = [
   { name: "Guides", url: `${site}/guides` },
-  {
-    name: data?.category ?? "General Health",
-    url: `${site}/guides/category/${encodeURIComponent(
-      String(data?.category ?? "General Health")
-        .toLowerCase()
-        .replace(/&/g, "and")
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "")
-    )}`,
-  },
+  { name: data?.category ?? "Category", url: `${site}/guides/category/${(data?.category ?? "").toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and").replace(/'/g, "")}/` },
   { name: data?.title ?? "Guide", url: canonicalUrl },
 ];
 
 const articleLd = {
   "@context": "https://schema.org",
-  "@type": ["Article", "WebPage"],
+  "@type": ["MedicalWebPage", "WebPage"],
   mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
   headline: data.title,
   description: data.description ?? "",
-  keywords: Array.isArray(data.tags) && data.tags.length ? data.tags : undefined,
   datePublished: pub ?? undefined,
   dateModified: mod ?? undefined,
   author: { "@type": "Organization", name: "patientguide.io", url: site },
@@ -124,7 +116,7 @@ const breadcrumbLd = {
   <main class="container mx-auto px-4 py-8">
     <article class="prose lg:prose-lg max-w-none">
       <header class="mb-6">
-        <p class="text-xs uppercase tracking-wide text-slate-500">{data?.category ?? "Guide"}</p>
+        <p class="text-xs uppercase tracking-wide text-slate-500">Guide</p>
         <h1 class="mt-1 text-3xl/tight font-semibold tracking-tight">{data?.title ?? "Untitled"}</h1>
         {(pub || mod) && (
           <p class="mt-2 text-sm text-slate-500">

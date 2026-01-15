@@ -1,127 +1,159 @@
 ---
-import Layout from "@/layouts/Layout.astro";
 import { getCollection, getEntryBySlug } from "astro:content";
-import { isValidDate, fmt } from "@/lib/date";
+import { isValidDate } from "@/lib/date";
+
+// ✅ MDX Components available to ALL posts (retroactive + future)
+import StratBox from "@/components/StratBox.astro";
+import EvidenceBox from "@/components/EvidenceBox.astro";
 
 export const prerender = true;
 
-// Build only published posts (draft !== true)
+// Static paths from collection (skip drafts)
 export async function getStaticPaths() {
   const entries = await getCollection("posts", ({ data }) => data?.draft !== true);
   return entries.map((e) => ({ params: { slug: e.slug } }));
 }
 
-const { slug } = Astro.params;
+// Resolve slug param to "a/b/c"
+const slugParam = Astro.params.slug;
+const slug = Array.isArray(slugParam) ? slugParam.join("/") : (slugParam ?? "");
 
-// Hard guard: if slug is missing or bad, 404 (never 500)
-if (!slug || typeof slug !== "string") {
-  return Astro.redirect("/404");
-}
+if (!slug) return Astro.redirect("/404");
 
 const entry = await getEntryBySlug("posts", slug);
+if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
 
-// If somehow a stale path sneaks in (old cache, bot, etc.)
-if (!entry || entry.data?.draft === true) {
-  return Astro.redirect("/404");
-}
+// ✅ Provide MDX component map here
+const mdxComponents = { StratBox, EvidenceBox };
+const { Content } = await entry.render({ components: mdxComponents });
 
-// Render MD content + frontmatter
-const { Content } = await entry.render();
 const data = entry.data;
 
-// Site + canonical
+// Canonical + site
 const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
-const url = `${site}/posts/${entry.slug}`;
+const canonicalUrl = `${site}/posts/${entry.slug}`;
 
-// Hero image (frontmatter override or fallback) + absolute URL for sharing/LD
-const hero = data?.image ?? "/og-default.png";
-const heroAbs = hero.startsWith("http") ? hero : `${site}${hero}`;
-
-// Dates
+// Dates (ISO yyyy-mm-dd)
 const pub = isValidDate?.(data.publishDate) ? data.publishDate : undefined;
 const mod = isValidDate?.(data.updatedDate) ? data.updatedDate : pub;
 
-// ---------- JSON-LD (BlogPosting) ----------
-const blogLd = {
+// Hero image absolute (posts may not have image; fall back)
+const heroLocal = data?.image ?? data?.heroImage ?? "/og-default.png";
+const heroAbs = heroLocal.startsWith("http") ? heroLocal : `${site}${heroLocal}`;
+
+// Breadcrumbs
+const breadcrumbs = [
+  { name: "Posts", url: `${site}/posts` },
+  { name: data?.title ?? "Post", url: canonicalUrl }
+];
+
+// ---------- JSON-LD builders ----------
+const articleLd = {
   "@context": "https://schema.org",
-  "@type": ["BlogPosting", "Article"],
-  "mainEntityOfPage": { "@type": "WebPage", "@id": url },
-  "headline": data.title,
-  "description": data.description ?? "",
-  "image": heroAbs,
-  "datePublished": pub,
-  "dateModified": mod,
-  "author": { "@type": "Person", "name": data.author ?? "patientguide.io" },
-  "publisher": {
+  "@type": ["Article", "WebPage"],
+  mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+  headline: data.title,
+  description: data.description ?? "",
+  keywords: Array.isArray(data.tags) && data.tags.length ? data.tags : undefined,
+  datePublished: pub ?? undefined,
+  dateModified: mod ?? undefined,
+  author: { "@type": "Organization", name: "patientguide.io", url: site },
+  publisher: {
     "@type": "Organization",
-    "name": "patientguide.io",
-    "logo": { "@type": "ImageObject", "url": `${site}/logo.png` }
+    name: "patientguide.io",
+    logo: { "@type": "ImageObject", url: `${site}/logo.png` }
   },
-  "inLanguage": "en",
-  "url": url,
-  "keywords": Array.isArray(data.tags) && data.tags.length ? data.tags : undefined
+  inLanguage: "en",
+  image: heroAbs,
+  about: (data.title ? { "@type": "Thing", name: data.title, sameAs: data?.sameAs } : undefined)
+};
+
+// Optional FAQ for posts (only if present)
+const faqArray = Array.isArray((data as any)?.faq) && (data as any).faq.length
+  ? (data as any).faq
+  : null;
+
+const faqLd = faqArray
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqArray.map((item: any) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a }
+      }))
+    }
+  : null;
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbs.map((b, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: b.name,
+    item: b.url
+  }))
 };
 ---
 
-<Layout frontmatter={data}>
-  <!-- Put meta + JSON-LD into the layout head -->
-  <Fragment slot="head">
-    <link rel="canonical" href={url} />
+<head>
+  <meta charset="utf-8" />
+  <title>{data.title} | patientguide.io</title>
+  <meta name="description" content={data.description ?? ""} />
+  <link rel="canonical" href={canonicalUrl} />
 
-    <!-- OpenGraph -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={data.title} />
-    <meta property="og:description" content={data.description ?? ""} />
-    <meta property="og:url" content={url} />
-    <meta property="og:site_name" content="patientguide.io" />
-    <meta property="og:image" content={heroAbs} />
-    {pub && <meta property="article:published_time" content={pub} />}
-    {mod && <meta property="article:modified_time" content={mod} />}
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={data.title} />
+  <meta property="og:description" content={data.description ?? ""} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:site_name" content="patientguide.io" />
+  <meta property="og:image" content={heroAbs} />
+  {pub && <meta property="article:published_time" content={pub} />}
+  {mod && <meta property="article:modified_time" content={mod} />}
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={data.title} />
-    <meta name="twitter:description" content={data.description ?? ""} />
-    <meta name="twitter:image" content={heroAbs} />
-    <meta name="twitter:site" content="@patientguide" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={data.title} />
+  <meta name="twitter:description" content={data.description ?? ""} />
+  <meta name="twitter:image" content={heroAbs} />
+  <meta name="twitter:site" content="@patientguide" />
 
-    <!-- JSON-LD -->
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(blogLd)} />
-  </Fragment>
+  <!-- JSON-LD blocks -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleLd)} />
+  {faqLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />}
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+</head>
 
-  <article class="mx-auto max-w-3xl">
-    <header class="mb-6">
-      <h1 class="text-3xl/tight font-semibold tracking-tight">
-        {data?.title ?? "Untitled"}
-      </h1>
+<body class="min-h-screen">
+  <main class="container mx-auto px-4 py-8">
+    <article class="prose lg:prose-lg max-w-none">
+      <header class="mb-6">
+        <p class="text-xs uppercase tracking-wide text-slate-500">Post</p>
+        <h1 class="mt-1 text-3xl/tight font-semibold tracking-tight">{data?.title ?? "Untitled"}</h1>
+        {(pub || mod) && (
+          <p class="mt-2 text-sm text-slate-500">
+            {pub}{mod && pub !== mod ? ` • Updated ${mod}` : ""}
+          </p>
+        )}
+        <img
+          src={heroLocal}
+          alt={data?.title ?? "Hero"}
+          class="mt-4 aspect-[1200/630] w-full rounded-xl object-cover"
+          loading="lazy"
+        />
+      </header>
 
-      <p class="mt-2 text-sm text-slate-500">
-        {pub ? fmt(pub) : ""}
-        {mod && pub !== mod ? ` • Updated ${fmt(mod)}` : ""}
-      </p>
-
-      <img
-        src={hero}
-        alt={data?.title ?? "Hero image"}
-        class="mt-4 aspect-[1200/630] w-full rounded-xl object-cover"
-        loading="lazy"
-      />
-    </header>
-
-    <div class="prose prose-slate max-w-none">
       <Content />
-    </div>
 
-    {data?.tags?.length > 0 && (
-      <ul class="mt-6 flex flex-wrap gap-2">
-        {data.tags.map((t) => (
-          <li class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
-            #{t}
-          </li>
-        ))}
-      </ul>
-    )}
-  </article>
-</Layout>
-
-
+      {Array.isArray(data?.tags) && data.tags.length > 0 && (
+        <ul class="mt-6 flex flex-wrap gap-2">
+          {data.tags.map((t) => (
+            <li class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">#{t}</li>
+          ))}
+        </ul>
+      )}
+    </article>
+  </main>
+</body>
