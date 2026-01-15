@@ -1,7 +1,8 @@
 ---
 /**
- * Safe fallback for missing MDX components.
- * Renders nothing.
+ * Used as a safe fallback when older MDX references a component
+ * that isn't available in the current build.
  */
 ---
-<span style="display:none"></span>
+<span style="display:none" aria-hidden="true"></span>
+

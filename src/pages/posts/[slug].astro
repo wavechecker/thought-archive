@@ -2,52 +2,63 @@
 import { getCollection, getEntryBySlug } from "astro:content";
 import { isValidDate } from "@/lib/date";
 
-// ✅ MDX Components available to ALL posts (retroactive + future)
+import MdxNull from "@/components/MdxNull.astro";
+
 import StratBox from "@/components/StratBox.astro";
 import EvidenceBox from "@/components/EvidenceBox.astro";
+import Callout from "@/components/Callout.astro";
+import StatBox from "@/components/StatBox.astro";
+import DrugCompare from "@/components/DrugCompare.astro";
+import RiskBadge from "@/components/RiskBadge.astro";
 
 export const prerender = true;
 
-// Static paths from collection (skip drafts)
 export async function getStaticPaths() {
   const entries = await getCollection("posts", ({ data }) => data?.draft !== true);
   return entries.map((e) => ({ params: { slug: e.slug } }));
 }
 
-// Resolve slug param to "a/b/c"
 const slugParam = Astro.params.slug;
 const slug = Array.isArray(slugParam) ? slugParam.join("/") : (slugParam ?? "");
-
 if (!slug) return Astro.redirect("/404");
 
 const entry = await getEntryBySlug("posts", slug);
 if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
 
-// ✅ Provide MDX component map here
-const mdxComponents = { StratBox, EvidenceBox };
+const baseComponents = {
+  StratBox,
+  EvidenceBox,
+  Callout,
+  StatBox,
+  DrugCompare,
+  RiskBadge,
+};
+
+const mdxComponents = new Proxy(baseComponents, {
+  get(target, prop) {
+    if (typeof prop === "symbol") return (target as any)[prop];
+    return (target as any)[prop] ?? MdxNull;
+  },
+});
+
 const { Content } = await entry.render({ components: mdxComponents });
 
 const data = entry.data;
 
-// Canonical + site
 const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
 const canonicalUrl = `${site}/posts/${entry.slug}`;
 
-// Dates (ISO yyyy-mm-dd)
 const pub = isValidDate?.(data.publishDate) ? data.publishDate : undefined;
 const mod = isValidDate?.(data.updatedDate) ? data.updatedDate : pub;
 
-// Hero image absolute (posts may not have image; fall back)
 const heroLocal = data?.image ?? data?.heroImage ?? "/og-default.png";
 const heroAbs = heroLocal.startsWith("http") ? heroLocal : `${site}${heroLocal}`;
 
-// Breadcrumbs
 const breadcrumbs = [
   { name: "Posts", url: `${site}/posts` },
-  { name: data?.title ?? "Post", url: canonicalUrl }
+  { name: data?.title ?? "Post", url: canonicalUrl },
 ];
 
-// ---------- JSON-LD builders ----------
 const articleLd = {
   "@context": "https://schema.org",
   "@type": ["Article", "WebPage"],
@@ -61,29 +72,11 @@ const articleLd = {
   publisher: {
     "@type": "Organization",
     name: "patientguide.io",
-    logo: { "@type": "ImageObject", url: `${site}/logo.png` }
+    logo: { "@type": "ImageObject", url: `${site}/logo.png` },
   },
   inLanguage: "en",
   image: heroAbs,
-  about: (data.title ? { "@type": "Thing", name: data.title, sameAs: data?.sameAs } : undefined)
 };
-
-// Optional FAQ for posts (only if present)
-const faqArray = Array.isArray((data as any)?.faq) && (data as any).faq.length
-  ? (data as any).faq
-  : null;
-
-const faqLd = faqArray
-  ? {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqArray.map((item: any) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: { "@type": "Answer", text: item.a }
-      }))
-    }
-  : null;
 
 const breadcrumbLd = {
   "@context": "https://schema.org",
@@ -92,8 +85,8 @@ const breadcrumbLd = {
     "@type": "ListItem",
     position: i + 1,
     name: b.name,
-    item: b.url
-  }))
+    item: b.url,
+  })),
 };
 ---
 
@@ -103,7 +96,6 @@ const breadcrumbLd = {
   <meta name="description" content={data.description ?? ""} />
   <link rel="canonical" href={canonicalUrl} />
 
-  <!-- OpenGraph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content={data.title} />
   <meta property="og:description" content={data.description ?? ""} />
@@ -113,16 +105,12 @@ const breadcrumbLd = {
   {pub && <meta property="article:published_time" content={pub} />}
   {mod && <meta property="article:modified_time" content={mod} />}
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.title} />
   <meta name="twitter:description" content={data.description ?? ""} />
   <meta name="twitter:image" content={heroAbs} />
-  <meta name="twitter:site" content="@patientguide" />
 
-  <!-- JSON-LD blocks -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleLd)} />
-  {faqLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />}
   <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
 </head>
 
