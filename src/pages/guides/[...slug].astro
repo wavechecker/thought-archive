@@ -1,15 +1,17 @@
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
-import { mdxComponents } from "@/lib/mdx-components";
-import MdxNull from "@/components/MdxNull.astro";
+
+// IMPORTANT: use RELATIVE imports (no @/ aliases) to remove build/env ambiguity
+import EvidenceBox from "../../components/EvidenceBox.astro";
+import StratBox from "../../components/StratBox.astro";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
   const entries = await getCollection("guides", ({ data }) => data?.draft !== true);
 
-  // IMPORTANT: params.slug must be a primitive string/number
   return entries.map((e) => ({
+    // Force primitive string to satisfy Astro validator
     params: { slug: String(e.slug) },
   }));
 }
@@ -20,17 +22,13 @@ if (!slug) return Astro.redirect("/404");
 const entry = await getEntryBySlug("guides", slug);
 if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
 
-// ✅ CRITICAL FIX:
-// Provide known MDX components + a fallback for any unknown component tag.
-// This prevents `_missingMdxReference` from crashing your build.
-const components = new Proxy(mdxComponents as Record<string, any>, {
-  get(target, prop) {
-    if (typeof prop === "string" && prop in target) return target[prop];
-    return MdxNull;
+// ✅ PASS COMPONENTS DIRECTLY (no shared file, no proxy)
+const { Content } = await entry.render({
+  components: {
+    EvidenceBox,
+    StratBox,
   },
 });
-
-const { Content } = await entry.render({ components });
 
 const data = entry.data;
 ---
