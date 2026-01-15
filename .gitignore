@@ -33,3 +33,4 @@ nul
 
 # editor backups
 *.bak
+build.log
