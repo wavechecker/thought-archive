@@ -1,154 +1,155 @@
 ---
 title: "Antidepressant Side-Effects: Cardiometabolic & Physiological Guide"
-# slug: "antidepressant-side-effects"
-description: "How common antidepressants differ on weight, blood pressure, heart rate, cholesterol/glucose, liver enzymes, electrolytes, and QTc — plus monitoring and safer choices by risk profile."
+description: "How common antidepressants differ on weight, blood pressure, heart rate, cholesterol, glucose, liver enzymes, electrolytes, and QTc — plus monitoring and safer choices by risk profile."
 category: "Mental Health"
 publishDate: "2025-10-23"
 tags: ["antidepressants", "side-effects", "cardiometabolic", "metabolic-health"]
 draft: false
 ---
 
-import Callout from "@/components/Callout.astro"
-import StatBox from "@/components/StatBox.astro"
-import EvidenceBox from "@/components/EvidenceBox.astro"
-import DrugCompare from "@/components/DrugCompare.astro"
-import RiskBadge from "@/components/RiskBadge.astro"
-
 ## Intro
-Antidepressants can shift **weight**, **blood pressure (BP)**, **heart rate (HR)**, **lipids/glucose**, and **liver enzymes** — and the pattern differs by drug/class. Short-term RCTs show meaningful spreads in these parameters across agents, which matters for people with **obesity, hypertension, diabetes risk, or dyslipidemia**.
+
+Antidepressants can meaningfully affect **weight**, **blood pressure (BP)**, **heart rate (HR)**, **lipids**, **glucose**, and **liver enzymes**. These effects vary substantially by drug and class, and matter most for people with **obesity, hypertension, diabetes risk, dyslipidemia, or cardiovascular disease**.
+
+Short-term randomized trials consistently show **wide physiological spreads between agents**, even when antidepressant efficacy is similar.
 
 ---
 
 ## Key Points
-- Expect **≈4 kg** spread in short-term weight change, **~20 bpm** spread in HR, **~11 mmHg** spread in systolic BP across agents.  
-- **SNRIs** (venlafaxine, desvenlafaxine, duloxetine, levomilnacipran): ↑ **BP** and **cholesterol**; duloxetine → ↑ **glucose** and small ↑ **AST/ALT**.  
-- **TCAs** (amitriptyline, imipramine, maprotiline): ↑ **HR/BP** and **weight**.  
-- **Agomelatine**, **fluoxetine**, **bupropion**: more favorable **weight** profiles short-term.  
-- Minimal QTc/sodium signal in RCTs; real-world risk rises in **older, multimorbid** adults.
 
-<Callout type="info">
-  <strong>At a glance:</strong> Choose by both <em>brain</em> and <em>body</em> profile — not just symptom efficacy — to reduce discontinuation and downstream cardiovascular risk.
-</Callout>
+- Short-term trials show approximately **4 kg spread in weight change**, **~20 bpm spread in heart rate**, and **~11 mmHg spread in systolic BP** across antidepressants  
+- **SNRIs** (venlafaxine, desvenlafaxine, duloxetine, levomilnacipran) increase **BP** and **cholesterol**; duloxetine also shows small increases in **glucose** and **AST/ALT**  
+- **TCAs** (amitriptyline, imipramine, maprotiline) increase **heart rate**, **blood pressure**, and **weight**  
+- **Agomelatine**, **fluoxetine**, and **bupropion** show more favorable **short-term weight profiles**  
+- QTc prolongation and hyponatremia are uncommon in trials but rise in **older, multimorbid, real-world populations**
 
-<div className="my-6 grid gap-3 sm:grid-cols-3">
-  <StatBox value="–2.4 kg" label="Agomelatine — short-term weight" />
-  <StatBox value="+13 bpm" label="Nortriptyline — heart rate" />
-  <StatBox value="+3–5 mmHg" label="SNRIs/TCAs — systolic BP" />
-</div>
+---
 
-<EvidenceBox
-  title="Key Evidence — Network Meta-Analysis"
-  date="2025-10-21"
-  source="Pillinger et al., The Lancet"
-  findings={[
-    "151 RCTs; ~58,500 participants; 30 antidepressants compared for physiological outcomes.",
-    "SNRIs: ↑ cholesterol and BP; duloxetine: ↑ glucose and LFTs (small).",
-    "TCAs: ↑ HR/BP and weight; agomelatine/fluoxetine/bupropion: favorable weight.",
-    "Short-term RCTs show minimal QTc/sodium signal."
-  ]}
-/>
+## Evidence Summary (Network Meta-Analysis)
+
+**Source:** Pillinger et al., *The Lancet* (2025)  
+**Data:** 151 randomized controlled trials · ~58,500 participants · 30 antidepressants
+
+**Key findings:**
+
+- SNRIs increase blood pressure and cholesterol  
+- Duloxetine shows small increases in glucose and liver enzymes  
+- TCAs increase heart rate, blood pressure, and weight  
+- Agomelatine, fluoxetine, and bupropion show less weight gain or modest weight loss short-term  
+- Short-term trials show minimal QTc and sodium signal, likely underestimating real-world risk
 
 ---
 
 ## Options by Clinical Profile
-- **Metabolic risk (obesity, T2D, dyslipidemia):** prefer **Agomelatine**, **Fluoxetine**, **Bupropion**.  
-- **Hypertension/CVD:** avoid agents with BP/HR rises (**Venlafaxine / Desvenlafaxine / Duloxetine**, **Levomilnacipran**, many **TCAs**).  
-- **Weight gain concern:** avoid **Mirtazapine**, **Amitriptyline**, **Maprotiline**.  
-- **Older adults/polypharmacy:** start low, go slow; consider **Na⁺** and **QTc** monitoring even if RCT signal is minimal.
 
-<DrugCompare
-  drugs={[
-    { name: "Agomelatine", brand: "Valdoxan", level: "low", weight: "↓ ~2.4 kg", cardio: "Neutral", metabolic: "Neutral" },
-    { name: "Fluoxetine", brand: "Prozac", level: "low", weight: "↓ ~0.8 kg", cardio: "Neutral", metabolic: "Neutral" },
-    { name: "Bupropion", brand: "Wellbutrin", level: "low", weight: "↓ / neutral", cardio: "Neutral", metabolic: "Neutral" },
-    { name: "Venlafaxine", brand: "Effexor", level: "moderate", weight: "neutral", cardio: "↑ BP", metabolic: "↑ Cholesterol" },
-    { name: "Desvenlafaxine", brand: "Pristiq", level: "moderate", weight: "neutral", cardio: "↑ BP", metabolic: "↑ Cholesterol" },
-    { name: "Duloxetine", brand: "Cymbalta", level: "moderate", weight: "↓ (small)", cardio: "↑ BP", metabolic: "↑ Chol/Glucose" },
-    { name: "Levomilnacipran", brand: "Fetzima", level: "moderate", weight: "neutral", cardio: "↑ BP", metabolic: "↑ LFTs (small)" },
-    { name: "Amitriptyline", brand: "Elavil", level: "high", weight: "↑ ~1.5–1.6 kg", cardio: "↑ HR/BP", metabolic: "↑ Lipids" },
-    { name: "Mirtazapine", brand: "Remeron", level: "high", weight: "↑", cardio: "Neutral/↑ HR", metabolic: "↑ Lipids (some data)" },
-    { name: "Maprotiline", brand: "Ludiomil", level: "high", weight: "↑ ~1.8 kg", cardio: "↑ HR/BP", metabolic: "↑ Lipids" }
-  ]}
-/>
+### Metabolic risk (obesity, type 2 diabetes, dyslipidemia)
+
+Prefer:
+- Agomelatine
+- Fluoxetine
+- Bupropion
+
+Avoid when possible:
+- Mirtazapine
+- TCAs
+- High-dose SNRIs
 
 ---
 
-## Monitoring (first 8–12 weeks)
-- **Baseline → week 4 → week 8:** weight/waist, BP, HR.  
-- **Labs:** fasting **lipids & glucose** (SNRIs or metabolic risk); **LFTs** (duloxetine/desvenlafaxine/levomilnacipran or hepatic history).  
-- **Electrolytes (Na⁺)** and **ECG (QTc)** for older adults or those on QT-prolongers/diuretics.
+### Hypertension or cardiovascular disease
+
+Avoid or monitor closely:
+- Venlafaxine
+- Desvenlafaxine
+- Duloxetine
+- Levomilnacipran
+- TCAs
 
 ---
 
-## Generic → Trade names (quick map)
-**SSRIs:** Fluoxetine (*Prozac*), Sertraline (*Zoloft*), Paroxetine (*Paxil*), Citalopram (*Celexa*), Escitalopram (*Lexapro*), Fluvoxamine (*Luvox*)  
-**SNRIs:** Venlafaxine (*Effexor*), Desvenlafaxine (*Pristiq*), Duloxetine (*Cymbalta*), Levomilnacipran (*Fetzima*)  
-**Atypical:** Bupropion (*Wellbutrin*), Agomelatine (*Valdoxan*), Mirtazapine (*Remeron*)  
-**TCAs:** Amitriptyline (*Elavil*), Nortriptyline (*Pamelor*), Imipramine (*Tofranil*), Doxepin (*Sinequan*), Maprotiline (*Ludiomil*)
+### Weight-gain sensitivity
+
+Higher risk:
+- Mirtazapine
+- Amitriptyline
+- Maprotiline
+
+Lower risk:
+- Bupropion
+- Fluoxetine
+- Agomelatine
+
+---
+
+### Older adults or polypharmacy
+
+- Start low and titrate slowly  
+- Consider baseline and follow-up **sodium** and **QTc** monitoring
+
+---
+
+## Monitoring (First 8–12 Weeks)
+
+- **Baseline → Week 4 → Week 8:** weight, waist circumference, BP, HR  
+- **Labs when indicated:**
+  - Fasting lipids and glucose (especially with SNRIs)
+  - Liver enzymes (duloxetine, desvenlafaxine, levomilnacipran)
+- **Electrolytes (Na⁺)** and **ECG (QTc)** for older adults or those on diuretics or QT-prolonging drugs
+
+---
+
+## Generic → Trade Names
+
+**SSRIs:**  
+Fluoxetine (Prozac), Sertraline (Zoloft), Paroxetine (Paxil),  
+Citalopram (Celexa), Escitalopram (Lexapro), Fluvoxamine (Luvox)
+
+**SNRIs:**  
+Venlafaxine (Effexor), Desvenlafaxine (Pristiq),  
+Duloxetine (Cymbalta), Levomilnacipran (Fetzima)
+
+**Atypical:**  
+Bupropion (Wellbutrin), Agomelatine (Valdoxan), Mirtazapine (Remeron)
+
+**TCAs:**  
+Amitriptyline (Elavil), Nortriptyline (Pamelor),  
+Imipramine (Tofranil), Doxepin (Sinequan), Maprotiline (Ludiomil)
 
 ---
 
 ## FAQ
-**Do SSRIs behave the same?**  
-No. **Paroxetine** shows more lipid impact; **fluoxetine/sertraline/escitalopram** look more neutral short-term.
+
+**Do SSRIs behave the same physiologically?**  
+No. Paroxetine shows more lipid and weight effects; fluoxetine, sertraline, and escitalopram are more neutral short-term.
 
 **If weight falls early, will it stay down?**  
-Not guaranteed. Longer observational cohorts often show net gain with chronic use.
+Not reliably. Longer observational cohorts often show net weight gain with chronic use.
 
-**Any big QTc/sodium issues?**  
-Not in these RCTs; registry data in older, sicker patients still flags **hyponatremia** and **QT** concerns, so monitor when indicated.
+**Are QTc or sodium problems common?**  
+Not in short-term trials, but registry data in older or multimorbid patients shows increased risk. Monitor when indicated.
 
 ---
 
 ## Further Reading
-- Pillinger T, Arumuham A, McCutcheon RA, et al. *Lancet* (2025). doi:10.1016/S0140-6736(25)01293-0  
-- NICE. Depression in adults: treatment and management.
 
-{/* ====================== JSON-LD ====================== */}
+- Pillinger T et al. *The Lancet* (2025). doi:10.1016/S0140-6736(25)01293-0  
+- NICE. *Depression in adults: treatment and management.*
+
 <script type="application/ld+json">
 {JSON.stringify({
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Antidepressant Side-Effects: Cardiometabolic & Physiological Guide",
-  "description": "Comparative cardiometabolic and physiological side-effects of common antidepressants with monitoring guidance.",
+  "description": "Comparative cardiometabolic and physiological side-effects of antidepressants with monitoring guidance.",
   "datePublished": "2025-10-23",
   "dateModified": "2025-10-23",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://patientguide.io/"},
-      {"@type":"ListItem","position":2,"name":"Guides","item":"https://patientguide.io/guides/"},
-      {"@type":"ListItem","position":3,"name":"Antidepressant Side-Effects"}
+      { "@type": "ListItem", "position": 1, "name": "Guides", "item": "https://patientguide.io/guides" },
+      { "@type": "ListItem", "position": 2, "name": "Mental Health", "item": "https://patientguide.io/guides/category/mental-health/" },
+      { "@type": "ListItem", "position": 3, "name": "Antidepressant Side-Effects", "item": "https://patientguide.io/guides/antidepressant-side-effects/" }
     ]
-  },
-  "hasPart": {
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"Do SSRIs behave the same?","acceptedAnswer":{"@type":"Answer","text":"No. Paroxetine shows more lipid impact; fluoxetine, sertraline, and escitalopram appear more neutral in short-term RCTs."}},
-      {"@type":"Question","name":"If weight falls early, will it stay down?","acceptedAnswer":{"@type":"Answer","text":"Not guaranteed. Longer observational cohorts often show net gain with chronic use; monitor and match by risk profile."}},
-      {"@type":"Question","name":"Any big QTc or sodium issues?","acceptedAnswer":{"@type":"Answer","text":"Short-term RCTs show minimal signal; registry studies in older, multimorbid adults still flag hyponatremia and QT concerns."}}
-    ]
-  },
-  "mentions": [
-    {"@type":"Drug","name":"Fluoxetine","brand":"Prozac","drugClass":"SSRI"},
-    {"@type":"Drug","name":"Sertraline","brand":"Zoloft","drugClass":"SSRI"},
-    {"@type":"Drug","name":"Paroxetine","brand":"Paxil","drugClass":"SSRI"},
-    {"@type":"Drug","name":"Citalopram","brand":"Celexa","drugClass":"SSRI"},
-    {"@type":"Drug","name":"Escitalopram","brand":"Lexapro","drugClass":"SSRI"},
-    {"@type":"Drug","name":"Fluvoxamine","brand":"Luvox","drugClass":"SSRI"},
-    {"@type":"Drug","name":"Venlafaxine","brand":"Effexor","drugClass":"SNRI"},
-    {"@type":"Drug","name":"Desvenlafaxine","brand":"Pristiq","drugClass":"SNRI"},
-    {"@type":"Drug","name":"Duloxetine","brand":"Cymbalta","drugClass":"SNRI"},
-    {"@type":"Drug","name":"Levomilnacipran","brand":"Fetzima","drugClass":"SNRI"},
-    {"@type":"Drug","name":"Bupropion","brand":"Wellbutrin","drugClass":"Atypical"},
-    {"@type":"Drug","name":"Agomelatine","brand":"Valdoxan","drugClass":"Atypical"},
-    {"@type":"Drug","name":"Mirtazapine","brand":"Remeron","drugClass":"Atypical"},
-    {"@type":"Drug","name":"Amitriptyline","brand":"Elavil","drugClass":"TCA"},
-    {"@type":"Drug","name":"Nortriptyline","brand":"Pamelor","drugClass":"TCA"},
-    {"@type":"Drug","name":"Imipramine","brand":"Tofranil","drugClass":"TCA"},
-    {"@type":"Drug","name":"Doxepin","brand":"Sinequan","drugClass":"TCA"},
-    {"@type":"Drug","name":"Maprotiline","brand":"Ludiomil","drugClass":"TCA"}
-  ],
-  "citation": ["https://doi.org/10.1016/S0140-6736(25)01293-0"]
+  }
 })}
 </script>
