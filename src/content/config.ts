@@ -29,7 +29,7 @@ const CATEGORY = z.enum([
   "Men's Health",
   "Guide Hubs",
   "Respiratory",
-  "Infections", // ← added
+  "Infections",
 ]);
 
 // -----------------------------
@@ -45,17 +45,17 @@ const POST_CATEGORY = z.enum([
 ]);
 
 // -----------------------------
-// Common fields
+// Common fields (for full content types)
 // -----------------------------
 const base = {
-  title: z.string(),
+  title: z.string(), // required by default
   description: z.string().optional(),
   publishDate: isoDate.optional(),
   updatedDate: isoDate.optional(),
   draft: z.boolean().default(false),
   tags: z.array(z.string()).default([]),
   image: z.string().optional(),
-  slug: z.string().optional(), // optional: for custom routing
+  slug: z.string().optional(),
 };
 
 // -----------------------------
@@ -91,7 +91,7 @@ const resources = defineCollection({
   type: "content",
   schema: z.object({
     ...base,
-    publishDate: isoDate,        // required for consistency
+    publishDate: isoDate,        // required
     category: CATEGORY.optional(),
   }),
 });
@@ -121,6 +121,25 @@ const pages = defineCollection({
 });
 
 // -----------------------------
+// Snippets (small reusable content blocks)
+// NOTE: title intentionally OPTIONAL here
+// -----------------------------
+const snippets = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string().optional(),
+    description: z.string().optional(),
+    publishDate: isoDate.optional(),
+    updatedDate: isoDate.optional(),
+    draft: z.boolean().default(false),
+    tags: z.array(z.string()).default([]),
+    image: z.string().optional(),
+    slug: z.string().optional(),
+    category: CATEGORY.optional(),
+  }),
+});
+
+// -----------------------------
 // Export all collections
 // -----------------------------
 export const collections = {
@@ -129,9 +148,5 @@ export const collections = {
   resources,
   taxonomy,
   pages,
+  snippets,
 };
-
-
-
-
-
