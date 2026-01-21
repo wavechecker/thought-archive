@@ -7,72 +7,14 @@ publishDate: "2026-01-21"
 updatedDate: "2026-01-22"
 tags: ["measles", "pregnancy", "MMR", "miscarriage", "preterm birth", "infection"]
 draft: false
+faq:
+  - q: "Is measles dangerous during early pregnancy?"
+    a: "Yes. Measles infection in early pregnancy is associated with increased risk of miscarriage and severe maternal illness, particularly due to high fever and systemic inflammation."
+  - q: "Can measles cause birth defects?"
+    a: "Measles is not classically associated with a specific congenital syndrome, but infection during pregnancy increases the risk of pregnancy loss, preterm birth, and fetal complications."
+  - q: "Can I get the MMR vaccine during pregnancy?"
+    a: "No. MMR is a live attenuated vaccine and is generally avoided during pregnancy. Immunity should be confirmed before conception."
 ---
-
-import Aside from "@/components/Aside.astro";
-import StratBox from "@/components/StratBox.astro";
-import JsonLd from "@/components/JsonLd.astro";
-
-<JsonLd
-  type="BreadcrumbList"
-  data={{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Guides", "item": "https://patientguide.io/guides" },
-      { "@type": "ListItem", "position": 2, "name": "Infectious Diseases", "item": "https://patientguide.io/guides/infectious-diseases" },
-      { "@type": "ListItem", "position": 3, "name": "Measles and Pregnancy", "item": "https://patientguide.io/guides/measles-pregnancy" }
-    ]
-  }}
-/>
-
-<JsonLd
-  type="MedicalWebPage"
-  data={{
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "Measles and Pregnancy",
-    "about": {
-      "@type": "MedicalCondition",
-      "name": "Measles (Rubeola)"
-    },
-    "description": "Trimester-specific risks of measles during pregnancy, including miscarriage, preterm birth, and maternal complications."
-  }}
-/>
-
-<JsonLd
-  type="FAQPage"
-  data={{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is measles dangerous during early pregnancy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Measles infection in early pregnancy is associated with increased risk of miscarriage and severe maternal illness, particularly due to high fever and systemic inflammation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can measles cause birth defects?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Measles is not classically associated with a specific congenital syndrome, but infection during pregnancy increases the risk of pregnancy loss, preterm birth, and fetal complications."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I get the MMR vaccine during pregnancy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. MMR is a live attenuated vaccine and is generally avoided during pregnancy. Immunity should be confirmed before conception."
-        }
-      }
-    ]
-  }}
-/>
 
 # Measles and Pregnancy
 
@@ -95,16 +37,17 @@ For general disease information, see **[Measles (Rubeola)](/guides/measles)**.
 ---
 
 ## Pregnancy Risk Stratification
-<StratBox
-  title="Pregnancy Risk Overview"
-  items={[
-    { label: "Unvaccinated or no proof of immunity", level: "high" },
-    { label: "Exposure during outbreak", level: "high" },
-    { label: "First trimester infection", level: "high" },
-    { label: "One documented MMR dose", level: "medium" },
-    { label: "Two documented MMR doses / proven immunity", level: "low" }
-  ]}
-/>
+
+**High risk:**
+- Unvaccinated or no proof of immunity
+- Exposure during outbreak
+- First trimester infection
+
+**Medium risk:**
+- One documented MMR dose
+
+**Low risk:**
+- Two documented MMR doses / proven immunity
 
 ---
 
@@ -127,9 +70,10 @@ Associated risks include:
 - Severe maternal fever contributing to fetal loss
 - Dehydration and systemic illness affecting placental support
 
-<Aside title="Critical window" variant="warning">
-Infection during weeks **5–10** carries the greatest risk of pregnancy loss due to fever, hypoxia, and systemic inflammation.
-</Aside>
+<aside class="explainer-box">
+  <h3>Critical window</h3>
+  <p>Infection during weeks <strong>5–10</strong> carries the greatest risk of pregnancy loss due to fever, hypoxia, and systemic inflammation.</p>
+</aside>
 
 Measles does **not** reliably cause structural birth defects, but early pregnancy loss risk is clearly elevated.
 
@@ -170,9 +114,10 @@ If pregnancy is planned or possible:
 - If records are unclear, discuss serologic testing or vaccination
 - If MMR is given, follow local guidance on the recommended waiting period before conception
 
-<Aside title="Prevention matters" variant="info">
-Because MMR is avoided during pregnancy, immunity gaps should be addressed **before conception whenever possible**.
-</Aside>
+<aside class="explainer-box">
+  <h3>Prevention matters</h3>
+  <p>Because MMR is avoided during pregnancy, immunity gaps should be addressed <strong>before conception whenever possible</strong>.</p>
+</aside>
 
 ---
 
@@ -196,48 +141,30 @@ During outbreaks:
    - Symptom monitoring
    - Isolation if symptoms develop
 
-<Aside title="Do not wait" variant="warning">
-Post-exposure interventions are time-dependent. Seek advice even if you feel well.
-</Aside>
-
----
-
-## Symptoms Requiring Urgent Review
-- High or persistent fever
-- Cough with shortness of breath
-- Rash with systemic illness
-- Reduced fetal movements (later pregnancy)
-
----
-
-## Breastfeeding and Postpartum Considerations
-After delivery:
-- Non-immune individuals can usually receive MMR postpartum
-- Breastfeeding is not a contraindication to vaccination
-- Newborn protection depends on maternal immunity and community coverage
+<aside class="explainer-box">
+  <h3>Do not wait</h3>
+  <p>Post-exposure interventions are time-dependent. Seek advice even if you feel well.</p>
+</aside>
 
 ---
 
 ## FAQ
-**Q: Does measles cause birth defects like rubella?**  
-A: No. Measles does not cause a classic congenital syndrome, but it significantly increases the risk of miscarriage and preterm birth.
+**Q: What if my immunity is unclear during pregnancy?**
+A: Discuss serologic testing with your clinician. If confirmed non-immune, focus on minimizing exposure risk and knowing your action plan after exposure.
 
-**Q: What if I was vaccinated years ago?**  
-A: Two documented doses usually provide long-lasting protection. If unsure, a clinician can advise on testing or risk assessment.
+**Q: Can I be around people recently vaccinated with MMR?**
+A: Yes. MMR vaccine virus is generally not spread from vaccinated individuals to others.
 
-**Q: Can measles be transmitted to the newborn?**  
-A: Yes, particularly if maternal infection occurs close to delivery.
-
----
-
-## Further Reading
-- World Health Organization — measles and pregnancy
-- CDC — measles clinical guidance
-- National obstetric infection guidelines
+**Q: Does measles infection guarantee problems for the baby?**
+A: Not all pregnancies with measles result in adverse outcomes, but the risks are elevated compared to uninfected pregnancies. The highest risks occur with infection in early pregnancy.
 
 ---
 
 ## Related Guides
-- [Measles (Rubeola)](/guides/measles)
-- [Measles Vaccine (MMR/MMRV)](/guides/measles-vaccine)
-- [Measles and International Travel](/guides/measles-travel)
+- [Measles (Rubeola)](/guides/measles/)
+- [Measles Vaccine (MMR)](/guides/measles-vaccine/)
+- [Measles and International Travel](/guides/measles-travel/)
+
+---
+
+*Educational only; not a substitute for professional medical advice.*
