@@ -35,3 +35,9 @@ nul
 *.bak
 build.log
 build.log
+
+# Local Claude workspace
+.claude/
+
+# Local Claude workspace
+.claude/
