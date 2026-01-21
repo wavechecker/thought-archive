@@ -34,5 +34,6 @@ nul
 # editor backups
 *.bak
 build.log
-build.log
-.claude/settings.local.json
+
+# Local Claude workspace
+.claude/
