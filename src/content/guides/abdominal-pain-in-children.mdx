@@ -1,0 +1,178 @@
+---
+title: "Abdominal Pain in Children: When to Worry and When to Wait"
+description: "A practical, pattern-based guide to abdominal pain in children, using red flags, timelines, and a traffic-light approach to separate reassurance from urgent causes like appendicitis."
+category: "Paediatrics"
+publishDate: "2026-01-22"
+updatedDate: "2026-01-22"
+tags: ["abdominal pain", "children", "appendicitis", "constipation", "anxiety"]
+draft: false
+---
+
+import JsonLd from "@/components/JsonLd.astro";
+import StratBox from "@/components/StratBox.astro";
+import Mermaid from "@/components/Mermaid.astro";
+import { isValidDate, fmt } from "@/lib/date";
+
+export const publishDate = "2026-01-22";
+export const updatedDate = "2026-01-22";
+
+<JsonLd
+  data={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://patientguide.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://patientguide.io/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "Abdominal Pain in Children", "item": "https://patientguide.io/guides/abdominal-pain-in-children/" }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "name": "Abdominal Pain in Children: When to Worry and When to Wait",
+        "url": "https://patientguide.io/guides/abdominal-pain-in-children/",
+        "datePublished": "2026-01-22",
+        "dateModified": "2026-01-22",
+        "about": [
+          { "@type": "MedicalSymptom", "name": "Abdominal pain" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can anxiety really cause abdominal pain in children?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Functional abdominal pain is common in children and driven by gut–brain signalling. The pain is real, but red flags should still be respected."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does appendicitis usually start?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Appendicitis often begins with vague central abdominal pain that progressively worsens and may move to the right lower abdomen."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Monitor Abdominal Pain in Children at Home",
+        "description": "A safety-focused, step-by-step approach to monitoring abdominal pain in children and recognising when to seek urgent care.",
+        "totalTime": "PT24H",
+        "step": [
+          { "@type": "HowToStep", "name": "Observe behaviour", "text": "Assess whether the child is alert, interactive, and distractible." },
+          { "@type": "HowToStep", "name": "Track progression", "text": "Note if pain improves, stays the same, or worsens over 6–12 hours." },
+          { "@type": "HowToStep", "name": "Check localisation", "text": "Pain becoming localised, especially to the right lower abdomen, is concerning." },
+          { "@type": "HowToStep", "name": "Assess movement", "text": "Pain with walking, jumping, or coughing is a red flag." },
+          { "@type": "HowToStep", "name": "Watch for red flags", "text": "Seek urgent care for persistent vomiting, fever with pain, bilious or bloody vomiting, or testicular/pelvic pain." }
+        ]
+      },
+      {
+        "@type": "MedicalGuideline",
+        "name": "Triage guidance for abdominal pain in children",
+        "category": "Triage",
+        "audience": [
+          { "@type": "Audience", "audienceType": "Clinicians" },
+          { "@type": "Audience", "audienceType": "Parents" }
+        ],
+        "guideline": [
+          {
+            "@type": "MedicalGuidelineRecommendation",
+            "name": "Urgent referral for red flags",
+            "recommendationStrength": "Strong",
+            "description": "Immediate assessment for worsening, localising pain, pain with movement, persistent vomiting, or signs of obstruction or torsion."
+          },
+          {
+            "@type": "MedicalGuidelineRecommendation",
+            "name": "Short home monitoring when low risk",
+            "recommendationStrength": "Conditional",
+            "description": "Home observation may be reasonable when the child is well-appearing, hydrated, and pain is not progressing."
+          }
+        ]
+      }
+    ]
+  }}
+/>
+
+# Abdominal Pain in Children: When to Worry and When to Wait
+
+<p class="text-sm opacity-80">
+  Published: {isValidDate(publishDate) ? fmt(publishDate) : "—"}
+  {updatedDate ? <> · Updated: {isValidDate(updatedDate) ? fmt(updatedDate) : "—"}</> : null}
+</p>
+
+## Intro
+
+Abdominal pain is one of the most common — and most anxiety-provoking — symptoms in children.
+
+Most cases are benign. A minority are time-sensitive.  
+The difference is **pattern, progression, and behaviour**, not pain intensity alone.
+
+---
+
+## Traffic Light Triage
+
+<StratBox
+  title="Abdominal pain in children: traffic-light triage"
+  variant="traffic-light"
+  items={[
+    {
+      tone: "green",
+      heading: "GREEN — Monitor at home",
+      bullets: [
+        "Child is alert, playful, distractible",
+        "Pain is not worsening or localising",
+        "No persistent vomiting",
+        "Hydration is normal"
+      ]
+    },
+    {
+      tone: "amber",
+      heading: "AMBER — Same-day medical review",
+      bullets: [
+        "Pain persists >6–12 hours",
+        "Recurrent episodes affecting school/sleep",
+        "Vomiting or fever with pain",
+        "Emerging localisation"
+      ]
+    },
+    {
+      tone: "red",
+      heading: "RED — Urgent assessment",
+      bullets: [
+        "Worsening, localised pain",
+        "Pain with walking/jumping",
+        "Persistent or bilious vomiting",
+        "Testicular or pelvic pain"
+      ]
+    }
+  ]}
+/>
+
+## Decision Tree
+
+<Mermaid
+  code={String.raw`
+flowchart TD
+  A[Abdominal pain] --> B{Child looks very unwell?}
+  B -->|Yes| R[Urgent care]
+  B -->|No| C{Red flags present?}
+  C -->|Yes| R
+  C -->|No| D{Constipation likely?}
+  D -->|Yes| E[Constipation pathway]
+  D -->|No| F{Stress-related pattern?}
+  F -->|Yes| G[Functional pain support]
+  F -->|No| H[Same-day review]
+`}
+/>
+
+## Related Guides
+
+- [Constipation in Children](/guides/constipation-in-children)
+- [Appendicitis Explained Simply](/guides/appendicitis-explained)
+- [When Anxiety Causes Abdominal Pain](/guides/childhood-anxiety-abdominal-pain)

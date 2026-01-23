@@ -1,0 +1,312 @@
+// FILE: src/content/guides/childhood-anxiety-abdominal-pain.mdx
+---
+title: "When Anxiety Causes Abdominal Pain in Children"
+description: "Anxiety-related (functional) abdominal pain is common in children and can be distressing. Learn the typical patterns, why the pain is real, how to support a child safely, and when to reassess."
+category: "Paediatrics"
+publishDate: "2026-01-22"
+updatedDate: "2026-01-22"
+tags: ["anxiety", "functional abdominal pain", "children", "abdominal pain", "gut-brain"]
+draft: false
+---
+
+import JsonLd from "@/components/JsonLd.astro";
+import Mermaid from "@/components/Mermaid.astro";
+import { isValidDate, fmt } from "@/lib/date";
+
+export const publishDate = "2026-01-22";
+export const updatedDate = "2026-01-22";
+
+<JsonLd
+  data={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://patientguide.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://patientguide.io/guides/" },
+          { "@type": "ListItem", "position": 3, "name": "Anxiety & Abdominal Pain", "item": "https://patientguide.io/guides/childhood-anxiety-abdominal-pain/" }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "name": "When Anxiety Causes Abdominal Pain in Children",
+        "description": "Anxiety-related (functional) abdominal pain is common in children and can cause real distress. This guide explains typical patterns, reassurance signs, and when reassessment is needed.",
+        "url": "https://patientguide.io/guides/childhood-anxiety-abdominal-pain/",
+        "inLanguage": "en",
+        "datePublished": "2026-01-22",
+        "dateModified": "2026-01-22",
+        "about": [
+          { "@type": "MedicalCondition", "name": "Anxiety disorder" },
+          { "@type": "MedicalSymptom", "name": "Abdominal pain" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can anxiety really cause significant abdominal pain in children?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Anxiety and stress can trigger real abdominal pain in children through gut–brain signalling. The pain is genuine, even though there is no structural disease."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can parents tell anxiety-related pain from something serious?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Anxiety-related pain tends to be recurrent, non-progressive, often linked to stressors, and improves with reassurance or distraction. Pain that worsens, localises, or limits movement needs reassessment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should children with anxiety-related abdominal pain still see a doctor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Initial medical assessment is important to rule out organic causes. Ongoing review is needed if the pattern changes or red flags appear."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://patientguide.io/guides/childhood-anxiety-abdominal-pain/#howto",
+        "name": "How to Support a Child with Anxiety-Related Abdominal Pain",
+        "description": "Safe, supportive steps parents can take to help a child experiencing anxiety-related abdominal pain while recognising when medical review is needed.",
+        "totalTime": "P7D",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Acknowledge the pain as real",
+            "text": "Let the child know the pain is real and taken seriously, even when tests are normal. Avoid phrases that dismiss or minimise symptoms."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Look for predictable triggers",
+            "text": "Notice whether pain occurs before school, social events, tests, or separation from caregivers."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Maintain routines",
+            "text": "Encourage school attendance and normal activities when safe. Avoid reinforcing avoidance behaviours."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Use reassurance and distraction",
+            "text": "Calm reassurance, gentle distraction, and predictable routines often reduce symptoms."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Monitor for red flags",
+            "text": "Seek reassessment if pain worsens, localises, causes night waking, vomiting, fever, or affects growth or appetite."
+          }
+        ]
+      },
+      {
+        "@type": "MedicalGuideline",
+        "@id": "https://patientguide.io/guides/childhood-anxiety-abdominal-pain/#guideline",
+        "name": "Educational guidance: anxiety-related abdominal pain in children",
+        "description": "Pattern-based educational guidance for recognising anxiety-related abdominal pain, providing reassurance, and identifying features that require medical reassessment.",
+        "url": "https://patientguide.io/guides/childhood-anxiety-abdominal-pain/",
+        "datePublished": "2026-01-22",
+        "dateModified": "2026-01-22",
+        "inLanguage": "en",
+        "guidelineSubject": [
+          { "@type": "MedicalCondition", "name": "Anxiety disorder" },
+          { "@type": "MedicalSymptom", "name": "Abdominal pain" }
+        ],
+        "evidenceLevel": "Consensus-based educational guidance",
+        "category": "Paediatrics",
+        "audience": [
+          { "@type": "Audience", "audienceType": "Parents" },
+          { "@type": "Audience", "audienceType": "Clinicians" }
+        ],
+        "recognizingAuthority": {
+          "@type": "Organization",
+          "name": "PatientGuide.io"
+        },
+        "guideline": [
+          {
+            "@type": "MedicalGuidelineRecommendation",
+            "name": "Reassure when the pattern is stable and non-progressive",
+            "recommendationStrength": "Moderate",
+            "description": "Reassurance and supportive management are appropriate when abdominal pain is recurrent, non-localising, improves with distraction, and is not associated with red flags.",
+            "reason": "Functional abdominal pain is common in children and rarely associated with serious disease when red flags are absent."
+          },
+          {
+            "@type": "MedicalGuidelineRecommendation",
+            "name": "Reassess if the pattern changes",
+            "recommendationStrength": "Strong",
+            "description": "Medical reassessment is recommended if pain becomes progressive, localised, disrupts sleep, limits movement, or is associated with vomiting, fever, weight loss, or poor growth.",
+            "reason": "Changes in pain pattern increase the likelihood of organic pathology."
+          }
+        ]
+      }
+    ]
+  }}
+/>
+
+# When Anxiety Causes Abdominal Pain in Children
+
+<p class="text-sm opacity-80">
+  Published: {isValidDate(publishDate) ? fmt(publishDate) : "—"}
+  {updatedDate ? <> · Updated: {isValidDate(updatedDate) ? fmt(updatedDate) : "—"}</> : null}
+</p>
+
+## Intro
+
+Abdominal pain linked to anxiety — often called **functional abdominal pain** — is one of the most common causes of recurrent pain in children.
+
+It can be intense, frightening, and disruptive.  
+And crucially:
+
+> **The pain is real, even when tests are normal.**
+
+Understanding the *pattern* of anxiety-related pain helps families support children confidently without missing serious illness.
+
+---
+
+## Why Anxiety Can Cause Real Pain
+
+The gut and brain are tightly connected through the **gut–brain axis**.
+
+In children:
+- Stress increases gut sensitivity
+- Normal bowel movements can feel painful
+- Gut motility may speed up or slow down
+- Pain signals are amplified
+
+There is **no tissue damage**, but the pain experience is genuine.
+
+---
+
+## Typical Pattern of Anxiety-Related Abdominal Pain
+
+Common features include:
+
+- Pain around the **belly button**
+- Recurrent episodes over weeks or months
+- Pain before:
+  - school
+  - exams
+  - social events
+  - separation from caregivers
+- Improvement on weekends or holidays
+- Normal appetite and energy between episodes
+- Normal physical exams and tests
+
+---
+
+## Behavioural Clues That Reassure
+
+Often more useful than pain descriptions:
+
+| Observation | Suggests |
+|------------|---------|
+| Distractible pain | Functional |
+| Plays when engaged | Low risk |
+| Pain settles with reassurance | Functional |
+| Normal growth | Reassuring |
+| Stable pattern | Functional |
+
+---
+
+## What Anxiety Pain Is *Not*
+
+Anxiety-related pain usually **does not**:
+
+- Progressively worsen over hours
+- Localise to one spot
+- Wake a child from sleep
+- Cause persistent vomiting
+- Stop a child from walking or moving
+- Cause weight loss or poor growth
+
+If these occur, reassessment is needed.
+
+---
+
+## Supporting a Child Safely
+
+Key principles:
+
+- Validate the pain — don’t dismiss it
+- Avoid excessive testing once serious causes are excluded
+- Maintain routines and school attendance when safe
+- Avoid reinforcing avoidance or sick-role behaviours
+- Address underlying stressors gradually
+
+Psychological strategies (e.g. CBT) can be very effective when needed.
+
+---
+
+## When to Re-evaluate
+
+Seek medical review if:
+
+- Pain pattern changes
+- Pain worsens or localises
+- Pain wakes the child from sleep
+- Vomiting, fever, or blood in stool appears
+- Appetite or growth declines
+- Movement becomes painful
+
+---
+
+## Anxiety vs Appendicitis vs Constipation (quick contrast)
+
+| Feature | Anxiety-related | Appendicitis | Constipation |
+|------|----------------|--------------|--------------|
+| Time course | Recurrent, stable | Progressive | Chronic/recurrent |
+| Localisation | Central | Often right-sided | Diffuse/lower |
+| Movement pain | No | Yes | Usually mild |
+| Appetite | Usually normal | Drops off | Variable |
+| Response to reassurance | Improves | No | Sometimes |
+
+---
+
+## Decision Pathway
+
+<Mermaid
+  code={String.raw`
+flowchart TD
+    A[Child with abdominal pain] --> B{Progressive or localising pain?}
+    B -->|Yes| C[Medical reassessment]
+    B -->|No| D{Red flags present?\nVomiting, fever, night waking,\nmovement pain, weight loss}
+    D -->|Yes| C
+    D -->|No| E{Predictable stress-related pattern?}
+    E -->|Yes| F[Likely anxiety-related\nSupport + routines + monitor]
+    E -->|No| G[Consider other causes\nConstipation / UTI / review]
+`}
+ />
+
+---
+
+## FAQ
+
+**Q: Can anxiety really cause severe pain?**  
+A: Yes. The pain experience is real, even without disease.
+
+**Q: Will this cause long-term damage?**  
+A: No. Functional abdominal pain does not damage organs.
+
+**Q: Should school be avoided?**  
+A: Usually no. Maintaining routines helps recovery unless red flags are present.
+
+---
+
+## Further Reading
+
+- Rome IV criteria for functional abdominal pain disorders  
+- Royal Children’s Hospital: Functional abdominal pain guideline  
+- American Academy of Pediatrics: Recurrent abdominal pain
+
+---
+
+## Related Guides
+
+- [Abdominal Pain in Children: When to Worry and When to Wait](/guides/abdominal-pain-in-children)
+- [Constipation in Children: The Hidden Cause of Abdominal Pain](/guides/constipation-in-children)
+- [Appendicitis Explained Simply](/guides/appendicitis-explained)
