@@ -9,6 +9,16 @@ const isoDate = z.string().refine((d) => !Number.isNaN(Date.parse(d)), {
 });
 
 // -----------------------------
+// Featured content fields (OPTIONAL)
+// Used for homepage hero rotator and featured grids
+// -----------------------------
+const featuredFields = {
+  featured: z.boolean().optional(),
+  featureTier: z.enum(["hero", "secondary"]).optional(),
+  rotationWeight: z.number().optional(),
+};
+
+// -----------------------------
 // Canonical categories
 // NOTE: ASCII apostrophe in "Women's Health" (avoid smart-quote drift)
 // -----------------------------
@@ -65,6 +75,7 @@ const guides = defineCollection({
   type: "content",
   schema: z.object({
     ...base,
+    ...featuredFields,
     publishDate: isoDate, // required
     category: CATEGORY,   // required + enum-locked
     hubKey: z.string().optional(),
@@ -78,6 +89,7 @@ const posts = defineCollection({
   type: "content",
   schema: z.object({
     ...base,
+    ...featuredFields,
     publishDate: isoDate,               // required
     category: POST_CATEGORY.optional(), // optional grouping
     related: z.array(z.string()).optional(),

@@ -1,0 +1,104 @@
+---
+/**
+ * ContentCard.astro
+ *
+ * Reusable card component for displaying posts and guides.
+ * - Renders without image if image prop is missing
+ * - Handles missing optional fields gracefully
+ * - Safe defaults for all display values
+ */
+import type { CollectionEntry } from "astro:content";
+import { fmt } from "@/lib/date";
+
+interface Props {
+  entry: CollectionEntry<"posts"> | CollectionEntry<"guides">;
+  type: "post" | "guide";
+}
+
+const { entry, type } = Astro.props;
+
+// Safe extraction with defaults
+const title = entry.data.title ?? "(Untitled)";
+const description = entry.data.description ?? "";
+const category = entry.data.category ?? null;
+const image = entry.data.image ?? null;
+const tags = entry.data.tags ?? [];
+
+// Date handling with fallbacks
+const publishDate = entry.data.publishDate ?? null;
+const updatedDate = entry.data.updatedDate ?? null;
+const displayDate = updatedDate ?? publishDate;
+const dateLabel = updatedDate ? "Updated" : "";
+
+// Build link path
+const slug = entry.data.slug ?? entry.slug;
+const linkPath = type === "post" ? `/posts/${slug}` : `/guides/${slug}`;
+---
+
+<article class="content-card bg-white rounded-2xl shadow hover:shadow-md transition-shadow overflow-hidden">
+  <a href={linkPath} class="block">
+    {/* Optional image - only renders if present */}
+    {image && (
+      <div class="card-image aspect-video bg-gray-100 overflow-hidden">
+        <img
+          src={image}
+          alt=""
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    )}
+
+    <div class="p-5">
+      {/* Type badge and category */}
+      <div class="flex items-center gap-2 mb-2 flex-wrap">
+        <span class:list={[
+          "text-xs font-semibold uppercase px-2 py-0.5 rounded-full",
+          type === "post" ? "bg-blue-100 text-blue-700" : "bg-green-100 text-green-700"
+        ]}>
+          {type === "post" ? "Post" : "Guide"}
+        </span>
+        {category && (
+          <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">
+            {category}
+          </span>
+        )}
+      </div>
+
+      {/* Title */}
+      <h3 class="text-lg font-medium hover:underline mb-1">{title}</h3>
+
+      {/* Description - truncated to 2 lines */}
+      {description && (
+        <p class="text-sm text-gray-600 line-clamp-2 mb-2">{description}</p>
+      )}
+
+      {/* Meta: date and tags */}
+      <div class="flex items-center gap-2 text-xs text-gray-500 mt-2 flex-wrap">
+        {displayDate && (
+          <span>{dateLabel} {fmt(displayDate)}</span>
+        )}
+        {tags.length > 0 && (
+          <div class="flex gap-1 flex-wrap">
+            {tags.slice(0, 2).map((tag: string) => (
+              <span class="px-1.5 py-0.5 bg-gray-50 rounded text-gray-500">{tag}</span>
+            ))}
+            {tags.length > 2 && (
+              <span class="px-1.5 py-0.5 text-gray-400">+{tags.length - 2}</span>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  </a>
+</article>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
