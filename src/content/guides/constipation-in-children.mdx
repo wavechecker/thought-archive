@@ -9,12 +9,7 @@ draft: false
 ---
 
 import JsonLd from "@/components/JsonLd.astro";
-import StratBox from "@/components/StratBox.astro";
 import Mermaid from "@/components/Mermaid.astro";
-import { isValidDate, fmt } from "@/lib/date";
-
-export const publishDate = "2026-01-22";
-export const updatedDate = "2026-01-22";
 
 <JsonLd
   data={{
@@ -82,15 +77,12 @@ export const updatedDate = "2026-01-22";
         "@type": "HowTo",
         "@id": "https://patientguide.io/guides/constipation-in-children/#howto",
         "name": "How to Support Constipation in Children at Home (Safe Basics)",
-        "description": "Safety-focused, general steps parents can use to support constipation in children while recognising when medical review is needed.",
+        "description": "Safety-focused, general steps families can use to support constipation in children while recognising when medical review is needed.",
         "totalTime": "P7D",
         "supply": [
           { "@type": "HowToSupply", "name": "Water or age-appropriate fluids" },
           { "@type": "HowToSupply", "name": "Fibre foods (introduced gradually)" },
           { "@type": "HowToSupply", "name": "Notes app or notebook for tracking stool pattern" }
-        ],
-        "tool": [
-          { "@type": "HowToTool", "name": "Stool chart (optional)" }
         ],
         "step": [
           {
@@ -136,7 +128,7 @@ export const updatedDate = "2026-01-22";
         "inLanguage": "en",
         "guidelineSubject": [{ "@type": "MedicalCondition", "name": "Constipation" }],
         "evidenceLevel": "Consensus-based educational guidance",
-        "category": "Paediatrics",
+        "category": "Child & Adolescent Health",
         "audience": [
           { "@type": "Audience", "audienceType": "Parents" },
           { "@type": "Audience", "audienceType": "Clinicians" }
@@ -147,35 +139,25 @@ export const updatedDate = "2026-01-22";
             "@type": "MedicalGuidelineRecommendation",
             "name": "Consider constipation in recurrent abdominal pain",
             "recommendationStrength": "Moderate",
-            "description": "In children with recurrent or chronic abdominal pain, constipation should be considered even when stools are still occurring, particularly if stools are painful, large, or withholding behaviour is present.",
-            "reason": "Stool retention can persist despite intermittent stooling and is a frequent, under-recognised driver of paediatric abdominal pain."
+            "description": "In children with recurrent or chronic abdominal pain, constipation should be considered even when stools are still occurring, particularly if stools are painful, large, or withholding behaviour is present."
           },
           {
             "@type": "MedicalGuidelineRecommendation",
             "name": "Use routine-based toileting and avoid punishment",
             "recommendationStrength": "Moderate",
-            "description": "Support routine toileting (often after meals) and avoid punishment or pressure, which can worsen withholding and fear of stooling.",
-            "reason": "Withholding behaviour reinforces stool retention and pain, sustaining the constipation cycle."
+            "description": "Support routine toileting (often after meals) and avoid punishment or pressure, which can worsen withholding and fear of stooling."
           },
           {
             "@type": "MedicalGuidelineRecommendation",
             "name": "Escalate care for red flags",
             "recommendationStrength": "Strong",
-            "description": "Urgent medical review is recommended when constipation is associated with severe abdominal distension, persistent vomiting, dehydration, blood in stool with significant pain, systemic illness, or constipation beginning in infancy.",
-            "reason": "These features raise concern for complications or alternative diagnoses requiring prompt assessment."
+            "description": "Urgent medical review is recommended when constipation is associated with severe abdominal distension, persistent vomiting, dehydration, blood in stool with significant pain, systemic illness, or constipation beginning in infancy."
           }
         ]
       }
     ]
   }}
 />
-
-# Constipation in Children: The Hidden Cause of Abdominal Pain
-
-<p class="text-sm opacity-80">
-  Published: {isValidDate(publishDate) ? fmt(publishDate) : "—"}
-  {updatedDate ? <> · Updated: {isValidDate(updatedDate) ? fmt(updatedDate) : "—"}</> : null}
-</p>
 
 ## Intro
 
@@ -303,32 +285,9 @@ flowchart TD
 
 ---
 
-## FAQ
-
-**Q: Can constipation really cause severe abdominal pain?**  
-A: Yes. Constipation can cause significant abdominal pain, bloating, nausea, and even vomiting in children.
-
-**Q: How long can constipation last in children?**  
-A: Without treatment, constipation can persist for weeks or months and often becomes recurrent.
-
-**Q: Is soiling (skid marks) a sign of constipation?**  
-A: Often, yes. Soiling can occur when softer stool leaks around retained hard stool. It commonly indicates constipation rather than ruling it out.
-
-**Q: When should a child with constipation be seen urgently?**  
-A: Seek urgent medical review for severe abdominal distension, persistent vomiting, dehydration, blood in stool with significant pain, or if a child is very unwell.
-
----
-
-## Further Reading
-
-- Royal Children’s Hospital (Melbourne): Constipation guideline
-- NICE: Constipation in children and young people
-- American Academy of Pediatrics: Constipation overview
-
----
-
 ## Related Guides
 
 - [Abdominal Pain in Children: When to Worry and When to Wait](/guides/abdominal-pain-in-children)
-- [Appendicitis Explained Simply](/guides/appendicitis-explained)
+- [Appendicitis Explained Simply: Early Signs Parents Miss](/guides/appendicitis-explained)
 - [When Anxiety Causes Abdominal Pain in Children](/guides/childhood-anxiety-abdominal-pain)
+
