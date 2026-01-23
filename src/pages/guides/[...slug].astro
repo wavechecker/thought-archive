@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { isValidDate, fmt } from "@/lib/date";
 
 // MDX components used inside guides
 import StratBox from "../../components/StratBox.astro";
@@ -25,27 +27,23 @@ const { entry } = Astro.props;
 
 // This is the key: use entry.render() (not render() import)
 const { Content } = await entry.render();
+
+const { title, description, publishDate, updatedDate } = entry.data;
 ---
 
-<html lang="en">
-  <head>
-    <title>{entry.data.title}</title>
-    {entry.data.description && (
-      <meta name="description" content={entry.data.description} />
+<Base title={title} description={description}>
+  <article class="prose dark:prose-invert max-w-3xl mx-auto">
+    <h1>{title}</h1>
+
+    {publishDate && (
+      <p class="text-sm opacity-70">
+        Published: {isValidDate(publishDate) ? fmt(publishDate) : publishDate}
+        {updatedDate && updatedDate !== publishDate && (
+          <> · Updated: {isValidDate(updatedDate) ? fmt(updatedDate) : updatedDate}</>
+        )}
+      </p>
     )}
-  </head>
 
-  <body>
-    <main class="prose dark:prose-invert max-w-3xl mx-auto px-4 py-10">
-      <h1>{entry.data.title}</h1>
-
-      {entry.data.publishDate && (
-        <p class="text-sm text-gray-500">
-          Published: {entry.data.publishDate}
-        </p>
-      )}
-
-      <Content components={mdxComponents} />
-    </main>
-  </body>
-</html>
+    <Content components={mdxComponents} />
+  </article>
+</Base>

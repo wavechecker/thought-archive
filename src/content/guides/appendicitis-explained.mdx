@@ -10,10 +10,6 @@ draft: false
 
 import JsonLd from "@/components/JsonLd.astro";
 import Mermaid from "@/components/Mermaid.astro";
-import { isValidDate, fmt } from "@/lib/date";
-
-export const publishDate = "2026-01-22";
-export const updatedDate = "2026-01-22";
 
 <JsonLd
   data={{
@@ -143,13 +139,6 @@ export const updatedDate = "2026-01-22";
     ]
   }}
 />
-
-# Appendicitis Explained Simply: Early Signs Parents Miss
-
-<p class="text-sm opacity-80">
-  Published: {isValidDate(publishDate) ? fmt(publishDate) : "—"}
-  {updatedDate ? <> · Updated: {isValidDate(updatedDate) ? fmt(updatedDate) : "—"}</> : null}
-</p>
 
 ## Intro
 
