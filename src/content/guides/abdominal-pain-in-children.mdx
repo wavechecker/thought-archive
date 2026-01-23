@@ -1,15 +1,15 @@
 ---
 title: "Abdominal Pain in Children: When to Worry and When to Wait"
-description: "A practical, pattern-based guide to abdominal pain in children—how to use timelines, behaviour, and red flags to separate reassurance from urgent causes like appendicitis."
+description: "A parent-focused guide to tummy pain in children — with red flags, traffic-light triage, common causes, home care, and when to seek urgent help."
 category: "Child & Adolescent Health"
-publishDate: "2026-01-22"
-updatedDate: "2026-01-22"
-tags: ["abdominal pain", "children", "appendicitis", "constipation", "anxiety", "triage"]
+publishDate: "2026-01-23"
+updatedDate: "2026-01-23"
+tags: ["abdominal pain", "children", "tummy pain", "constipation", "appendicitis", "gastroenteritis", "triage", "parent guide"]
 draft: false
 ---
 
-import JsonLd from "@/components/JsonLd.astro";
-import Mermaid from "@/components/Mermaid.astro";
+import JsonLd from "../../components/JsonLd.astro";
+import Mermaid from "../../components/Mermaid.astro";
 
 <JsonLd
   data={{
@@ -20,21 +20,21 @@ import Mermaid from "@/components/Mermaid.astro";
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://patientguide.io/" },
           { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://patientguide.io/guides/" },
-          { "@type": "ListItem", "position": 3, "name": "Abdominal Pain in Children", "item": "https://patientguide.io/guides/abdominal-pain-in-children/" }
+          { "@type": "ListItem", "position": 3, "name": "Child & Adolescent Health", "item": "https://patientguide.io/guides/child-and-adolescent-health/" },
+          { "@type": "ListItem", "position": 4, "name": "Abdominal Pain in Children", "item": "https://patientguide.io/guides/abdominal-pain-in-children/" }
         ]
       },
       {
-        "@type": "MedicalWebPage",
-        "name": "Abdominal Pain in Children: When to Worry and When to Wait",
-        "description": "Pattern-based triage guidance for abdominal pain in children, highlighting red flags, progression, and when urgent assessment is required.",
-        "url": "https://patientguide.io/guides/abdominal-pain-in-children/",
-        "inLanguage": "en",
-        "datePublished": "2026-01-22",
-        "dateModified": "2026-01-22",
-        "about": [
+        "@type": "MedicalCondition",
+        "name": "Abdominal pain in children",
+        "alternateName": ["Tummy pain in children", "Stomach ache in children"],
+        "description": "Abdominal pain is common in children and is often caused by constipation, viral illness, or functional abdominal pain. A smaller number of cases are urgent, especially when pain is worsening or accompanied by red flags.",
+        "signOrSymptom": [
           { "@type": "MedicalSymptom", "name": "Abdominal pain" },
-          { "@type": "MedicalCondition", "name": "Appendicitis" },
-          { "@type": "MedicalCondition", "name": "Constipation" }
+          { "@type": "MedicalSymptom", "name": "Nausea or vomiting" },
+          { "@type": "MedicalSymptom", "name": "Fever" },
+          { "@type": "MedicalSymptom", "name": "Diarrhea" },
+          { "@type": "MedicalSymptom", "name": "Poor appetite" }
         ]
       },
       {
@@ -42,42 +42,36 @@ import Mermaid from "@/components/Mermaid.astro";
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What are the most important red flags for abdominal pain in children?",
+            "name": "When is tummy pain in a child an emergency?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Worsening or localised pain (especially right-sided), pain with walking or jumping, persistent vomiting, bilious (green) vomiting, blood in vomit or stool with significant pain, dehydration, marked lethargy, abdominal rigidity or swelling, and sudden testicular or pelvic pain."
+              "text": "Seek urgent care if your child looks very unwell, is hard to wake, has severe worsening pain, green (bilious) vomiting, blood in vomit or stool, a rigid abdomen, pain that worsens with walking/jumping, or signs of dehydration."
             }
           },
           {
             "@type": "Question",
-            "name": "Can anxiety really cause abdominal pain in children?",
+            "name": "How can I tell constipation from something more serious?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Functional abdominal pain is common in children and driven by gut–brain signalling. The pain is real, but red flags should still trigger reassessment."
+              "text": "Constipation often causes crampy pain, bloating, and relief after passing stool or gas. Red flags include persistent worsening pain, fever, repeated vomiting, localized right-lower pain, or a child who looks unwell."
             }
           },
           {
             "@type": "Question",
-            "name": "How does appendicitis usually start?",
+            "name": "What should I do at home first?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Appendicitis often begins with vague central abdominal pain that progressively worsens over hours and may move to the right lower abdomen. Appetite loss and pain with movement are important clues."
+              "text": "If there are no red flags, focus on fluids, rest, gentle foods, and monitoring. Consider constipation support if stools are hard or infrequent. Re-check frequently for worsening pain, fever, persistent vomiting, or reduced urination."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can anxiety cause abdominal pain in children?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Functional abdominal pain is common, especially in school-aged children. It often follows a pattern (e.g., mornings/school days) and the child appears well between episodes. New or severe symptoms still need medical review."
             }
           }
-        ]
-      },
-      {
-        "@type": "HowTo",
-        "@id": "https://patientguide.io/guides/abdominal-pain-in-children/#howto",
-        "name": "How to Monitor Abdominal Pain in Children at Home",
-        "description": "A safety-focused approach to monitoring abdominal pain in children and recognising when to seek urgent medical care.",
-        "totalTime": "PT24H",
-        "step": [
-          { "@type": "HowToStep", "name": "Observe behaviour", "text": "Check if the child is alert, interactive, and distractible. Unusual stillness or lethargy is concerning." },
-          { "@type": "HowToStep", "name": "Track progression", "text": "Note whether pain is improving, stable, or worsening over 6–12 hours." },
-          { "@type": "HowToStep", "name": "Check localisation", "text": "Pain that becomes focused in one area (especially right lower abdomen) needs assessment." },
-          { "@type": "HowToStep", "name": "Assess movement and vomiting", "text": "Pain with walking/jumping/coughing and persistent vomiting are warning signs." },
-          { "@type": "HowToStep", "name": "Escalate for red flags", "text": "Seek urgent care for persistent vomiting, bilious vomiting, blood in stool/vomit with significant pain, dehydration, or testicular/pelvic pain." }
         ]
       }
     ]
@@ -86,125 +80,212 @@ import Mermaid from "@/components/Mermaid.astro";
 
 ## Intro
 
-Abdominal pain is one of the most common — and most anxiety-provoking — symptoms in children.
+Abdominal pain is one of the most common reasons children feel unwell — and one of the hardest symptoms for parents to interpret.
 
-Most cases are benign (constipation, viral illness, functional pain). A smaller number are **time-sensitive** (appendicitis, torsion, obstruction). The difference is usually **pattern, progression, and behaviour**, not how dramatic the pain sounds.
+Most cases settle on their own (constipation, a viral bug, gas, or stress-related pain). A smaller number need urgent medical assessment. The key difference is usually **how your child looks and behaves**, **how the pain is changing**, and **what symptoms come with it** — not pain intensity alone.
 
----
+If you’re unsure and your child seems “not themselves,” trust that instinct and seek advice.
 
-## Key Principles (How clinicians think about this)
+## Key Points
 
-- **Progression beats severity:** pain that steadily worsens is more concerning than pain that sounds severe but improves.
-- **Movement matters:** pain with walking, jumping, or coughing suggests peritoneal irritation.
-- **Localisation matters:** pain that becomes focused in one spot is more concerning than diffuse pain.
-- **Behaviour is a vital sign:** a very still, withdrawn child is more concerning than a distractible one.
-- **Constipation is common and underestimated**, even when a child still passes stool.
-
----
-
-## Traffic-Light Triage
-
-### 🟢 GREEN — Monitor at home (with safety-net)
-
-Typical pattern:
-- Child is **alert, interactive, distractible**
-- Pain is **not steadily worsening** and **not localising**
-- Vomiting is absent or mild and fluids are tolerated
-- Normal urine output
-
-What to do:
-- Encourage fluids
-- Light diet as tolerated
-- Rest
-- Reassess every **2–4 hours**
-- Escalate if the pattern changes
+- **Most tummy pain in children is not dangerous**, especially if your child is playing, drinking, and improving.
+- **Urgent assessment is needed** when pain is rapidly worsening, your child looks very unwell, or there are red flags (below).
+- **Constipation is a top cause** — even when a child is still passing some stool.
+- **Appendicitis matters** because it often starts vaguely, then becomes more localised and progressive.
+- If symptoms persist beyond **24–48 hours**, recur frequently, or disrupt sleep/school, organise a review.
 
 ---
 
-### 🟠 AMBER — Same-day medical review
+## Traffic Light Triage
 
-Arrange same-day review if:
-- Pain persists **>6–12 hours** without improvement
-- Recurrent episodes affect school or sleep
-- Vomiting or fever accompanies pain
-- Emerging localisation (especially right-sided)
-- Urinary symptoms or “something feels off”
+### Red: seek urgent care now
+
+Go to urgent care / emergency (or call local urgent services) if your child has **any** of the following:
+
+- **Looks very unwell**: very drowsy, floppy, confused, or hard to wake
+- **Severe, worsening pain**, especially pain that escalates over hours
+- **Green vomiting** (bilious) or repeated vomiting that won’t settle
+- **Blood** in vomit, black/tarry stool, or significant blood in stool
+- **Rigid belly**, severe tenderness, or pain with even light movement
+- **Pain that worsens with walking, jumping, or bumps** (classic “peritonism” concern)
+- **Testicular pain** (in boys) with abdominal pain
+- **Dehydration signs**: very dry mouth, no tears, minimal urine, sunken eyes, lethargy
+
+### Amber: same-day review
+
+Seek a same-day GP/urgent clinic review if:
+
+- Pain lasts **more than 24 hours** without clear improvement
+- Pain **wakes your child** from sleep
+- Fever + abdominal pain (especially persistent or rising fever)
+- Ongoing diarrhoea or vomiting (even if not severe)
+- Urinary symptoms (pain with urination, frequent urination) or flank/back pain
+- Your child is refusing fluids, eating very little, or seems significantly reduced in activity
+- Recurrent pain that is increasing in frequency or severity
+
+### Green: watch and wait (with active monitoring)
+
+Home care and observation is reasonable when:
+
+- Your child is **generally well between waves** of pain
+- No fever, no persistent vomiting, and your child is **drinking**
+- Pain is mild–moderate, intermittent, and not rapidly worsening
+- Pain improves with rest, passing gas/stool, or after a bowel movement
 
 ---
 
-### 🔴 RED — Urgent assessment now
-
-Seek urgent care if any are present:
-- Worsening, localised pain (especially right lower abdomen)
-- Pain with walking/jumping/coughing or child lies very still
-- Persistent vomiting or inability to keep fluids down
-- **Bilious (green) vomiting**
-- Blood in vomit or stool with significant pain
-- Marked lethargy or dehydration
-- Abdominal swelling or rigidity
-- **Sudden testicular pain** or severe pelvic pain
-
----
-
-## Decision Tree (pattern-based)
+## Decision Tree
 
 <Mermaid
-  code={String.raw`
-flowchart TD
-  A[Child with abdominal pain] --> B{Child looks very unwell?}
-  B -->|Yes| R[RED: Urgent care / ED now]
-  B -->|No| C{Any RED flags present?}
+  code={`flowchart TD
+  A[Abdominal pain] --> B{Child looks very unwell?}
+  B -->|Yes| R[Urgent care now]
+  B -->|No| C{Any red flags?}
   C -->|Yes| R
   C -->|No| D{Constipation likely?}
-  D -->|Yes| E[Constipation pathway\nFluids + toileting routine\nReassess 12–24h]
-  D -->|No| F{Stress-linked pattern + normal behaviour between episodes?}
-  F -->|Yes| G[Likely functional/anxiety-related\nSupport routines + monitor]
-  F -->|No| H[AMBER: Same-day review\nConsider UTI / viral / other]
+  D -->|Yes| E[Constipation support + monitor]
+  D -->|No| F{Vomiting/diarrhoea pattern?}
+  F -->|Yes| G[Likely gastroenteritis support + hydration plan]
+  F -->|No| H{Recurrent pattern with stress/school?}
+  H -->|Yes| I[Functional pain support + GP review if persistent]
+  H -->|No| J[Same-day review if ongoing or worsening]
 `}
 />
 
 ---
 
-## Common Causes by Pattern
+## Common Causes by Age
 
-### Usually low-risk
-- Constipation  
-- Viral illness / gastroenteritis  
-- Gas or indigestion  
-- Functional (anxiety-related) abdominal pain  
+### Toddlers and preschoolers (roughly <5)
+Common:
+- Constipation
+- Viral gastroenteritis
+- Urinary tract infection
+- Swallowed air/gas, food intolerance
 
-### Needs clinician review
-- Urinary tract infection  
-- Strep throat (can present as belly pain)  
-- Food intolerance  
-- Reflux  
+Higher caution:
+- Intussusception (episodic severe pain, pallor, vomiting)
+- Incarcerated hernia (groin swelling + distress)
+- Appendicitis (can still occur, may present atypically)
 
-### Time-sensitive “don’t miss”
-- **Appendicitis**
-- **Testicular torsion**
-- Intussusception (younger children)
-- Ovarian torsion (adolescents)
-- Diabetic ketoacidosis (thirst, frequent urination, vomiting)
-- Pneumonia (referred abdominal pain)
+### School-aged children
+Common:
+- Constipation
+- Gastroenteritis
+- Functional abdominal pain
+- Appendicitis
+
+### Adolescents
+Common:
+- Constipation, gastroenteritis, functional pain
+- Menstrual-related pain (period cramps, ovulation pain)
+- Urinary infections
+
+Higher caution:
+- Appendicitis
+- Ovarian/testicular torsion (time-critical)
+
+---
+
+## The Big “Don’t Miss” Patterns
+
+### Appendicitis (progressive pattern)
+Often starts as vague pain near the belly button, then:
+- Pain **moves to the lower right** abdomen (not always)
+- Becomes **steadily worse**
+- Appetite drops; nausea/vomiting may develop
+- Walking, hopping, or bumps worsen pain
+
+If your child has a pattern of **progressive pain + reduced appetite + movement pain**, get assessed.
+
+### Gastroenteritis (viral “stomach bug”)
+More likely when:
+- Vomiting and/or diarrhoea are prominent
+- Others at home/school are unwell
+- Cramps come in waves
+
+Main risk is **dehydration**, especially in younger children.
+
+### Constipation (the most underestimated cause)
+Consider constipation if:
+- Hard stools, pain with stooling, or infrequent stools
+- “Rabbit pellet” stools or large painful bowel movements
+- Bloating, gassiness, reduced appetite
+- Pain improves after passing stool or gas
+
+Constipation can cause significant pain — and can coexist with other illness.
+
+### Functional abdominal pain (stress-related pattern)
+More likely when:
+- Recurrent pain with normal exam/tests
+- Child appears well between episodes
+- Pattern fits school mornings, social stress, or anxiety
+- No red flags, normal growth, no persistent fever/vomiting
+
+This is real pain — the goal is symptom support and addressing triggers, not dismissing it.
 
 ---
 
-## What to Expect if You Seek Care
+## What You Can Do at Home
 
-Assessment often includes:
-- Vital signs and hydration check
-- Abdominal exam (sometimes repeated)
-- Urine testing
-- Blood tests if indicated
-- Ultrasound if appendicitis or torsion suspected
-- Clear safety-net instructions if discharged
+If there are **no red flags**:
 
-*A normal early test does not always exclude appendicitis — reassessment matters.*
+### Fluids first
+- Offer small, frequent sips of water or oral rehydration solution if vomiting/diarrhoea
+- Aim for regular urination (a practical hydration marker)
+
+### Gentle food
+- Don’t force eating.
+- Bland foods are okay if hungry (toast, rice, soup, banana), but hydration matters more.
+
+### Comfort and monitoring
+- Rest, warmth, and distraction can help.
+- Re-check every few hours for worsening pain, new fever, vomiting, or reduced urination.
+
+### Constipation support (if likely)
+- Encourage fluids and fibre (as tolerated).
+- If your local guidance supports a stool softener/laxative regimen, follow it — and see the dedicated constipation guide for a structured plan.
+
+> Avoid giving new medicines (including anti-diarrhoeals) without guidance if your child is very young or unwell.
 
 ---
+
+## When to Seek Medical Review Even If It’s Not “Emergency”
+
+Arrange a review if:
+- Pain persists beyond **48 hours**
+- Pain recurs frequently (especially weekly or more)
+- Weight loss, poor growth, persistent fatigue, or ongoing diarrhoea
+- Blood in stool (even small amounts) or persistent vomiting
+- Pain consistently wakes your child at night
+
+---
+
+## FAQ
+
+**Q: My child says it’s “10/10” pain — is that automatically an emergency?**  
+A: Not always. Children may describe intense pain from constipation or cramps. What matters most is **progression**, **associated symptoms**, and whether your child looks very unwell or cannot move comfortably.
+
+**Q: What’s the single most important warning sign?**  
+A: A child who looks very unwell (drowsy, pale, floppy) or pain that is **rapidly worsening** with vomiting/fever.
+
+**Q: Can constipation still be the cause if my child is pooping daily?**  
+A: Yes. Some children pass small stools while still being constipated (retained stool). Hard/painful stools, straining, and bloating are clues.
+
+**Q: If it’s anxiety-related, should I still see a doctor?**  
+A: Yes if the pattern is persistent, disrupting school/life, or if you’re unsure. Functional pain is common, but red flags always override pattern-based assumptions.
+
+---
+
+## Further Reading
+
+- Constipation in Children (guide)
+- Appendicitis Explained Simply (guide)
+- When Anxiety Causes Abdominal Pain (guide)
+- Gastroenteritis / dehydration guidance (guide, if available)
 
 ## Related Guides
 
-- [Constipation in Children: The Hidden Cause of Abdominal Pain](/guides/constipation-in-children)
-- [Appendicitis Explained Simply: Early Signs Parents Miss](/guides/appendicitis-explained)
-- [When Anxiety Causes Abdominal Pain in Children](/guides/childhood-anxiety-abdominal-pain)
+- [Constipation in Children](/guides/constipation-in-children/)
+- [Appendicitis Explained Simply](/guides/appendicitis-explained-simply/)
+- [When Anxiety Causes Abdominal Pain](/guides/when-anxiety-causes-abdominal-pain/)
