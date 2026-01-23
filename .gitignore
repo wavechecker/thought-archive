@@ -35,3 +35,4 @@ nul
 *.bak
 build.log
 build.log
+.claude/settings.local.json
