@@ -3,18 +3,28 @@ import "@/styles/global.css";
 
 const { frontmatter = {} } = Astro.props;
 const {
-  title = "Thought Archive",
+  title = "PatientGuide.io",
   description = "",
   image = "/og-default.png",
-  canonical, // optional in frontmatter
+  canonical,
 } = frontmatter;
 
-// Build canonical URL: prefer frontmatter, else fallback to self
 const selfUrl = new URL(Astro.url).href;
 const canonicalUrl = canonical ?? selfUrl;
-
-// Detect print mode from query param
 const printMode = Astro.url.searchParams.get("print") === "1";
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/guides/", label: "Guides" },
+  { href: "/posts/", label: "Posts" },
+  { href: "/contact/", label: "Contact" },
+];
+
+const isActive = (href: string) => {
+  if (href === "/") return currentPath === "/";
+  return currentPath.startsWith(href);
+};
 ---
 
 <!DOCTYPE html>
@@ -25,10 +35,8 @@ const printMode = Astro.url.searchParams.get("print") === "1";
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
 
-    <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
@@ -36,33 +44,423 @@ const printMode = Astro.url.searchParams.get("print") === "1";
     <meta property="og:image" content={image} />
 
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script is:inline>
+      (function() {
+        try {
+          const saved = localStorage.getItem("pg-theme");
+          if (saved === "dark" || saved === "light") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch {}
+      })();
+    </script>
 
     <style>
       @media print {
-        header, footer { display: none !important; }
-        main { padding: 0 !important; }
+        .pg-header, .pg-footer { display: none !important; }
+        .pg-main { padding: 0 !important; }
       }
     </style>
   </head>
-  <body class="min-h-screen bg-white text-slate-900 antialiased">
+
+  <body>
     {!printMode && (
-      <header class="w-full border-b border-slate-200">
-        <div class="mx-auto max-w-3xl px-4 py-4">
-          <a href="/" class="font-semibold">Thought Archive</a>
+      <header class="pg-header">
+        <div class="pg-header__inner">
+          <a href="/" class="pg-header__logo">
+            <span class="pg-header__logo-icon">+</span>
+            <span class="pg-header__logo-text">PatientGuide</span>
+          </a>
+
+          <nav class="pg-nav" aria-label="Main navigation">
+            {navLinks.map((link) => (
+              <a
+                href={link.href}
+                class:list={["pg-nav__link", { "pg-nav__link--active": isActive(link.href) }]}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <button
+            type="button"
+            class="pg-theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <span class="pg-theme-toggle__icon" id="theme-icon">
+              <svg class="pg-theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="pg-theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="pg-mobile-menu-btn"
+            id="mobile-menu-btn"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
+
+        <nav class="pg-mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+          {navLinks.map((link) => (
+            <a
+              href={link.href}
+              class:list={["pg-mobile-nav__link", { "pg-mobile-nav__link--active": isActive(link.href) }]}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
       </header>
     )}
 
-    <main class="mx-auto max-w-3xl px-4 py-8">
+    <main class="pg-main">
       <slot />
     </main>
 
     {!printMode && (
-      <footer class="w-full border-t border-slate-200">
-        <div class="mx-auto max-w-3xl px-4 py-6 text-sm text-slate-500">
-          © {new Date().getFullYear()} Thought Archive
+      <footer class="pg-footer">
+        <div class="pg-footer__inner">
+          <div class="pg-footer__brand">
+            <a href="/" class="pg-footer__logo">
+              <span class="pg-footer__logo-icon">+</span>
+              <span>PatientGuide.io</span>
+            </a>
+            <p class="pg-footer__tagline">Clear, practical health guides — no fluff.</p>
+          </div>
+
+          <nav class="pg-footer__nav">
+            <div class="pg-footer__col">
+              <h4 class="pg-footer__heading">Content</h4>
+              <a href="/guides/">All Guides</a>
+              <a href="/posts/">Posts</a>
+            </div>
+            <div class="pg-footer__col">
+              <h4 class="pg-footer__heading">About</h4>
+              <a href="/contact/">Contact</a>
+            </div>
+          </nav>
+
+          <div class="pg-footer__bottom">
+            <p>&copy; {new Date().getFullYear()} PatientGuide.io. For informational purposes only.</p>
+          </div>
         </div>
       </footer>
     )}
+
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      // Theme toggle
+      if (toggle) {
+        const getTheme = () => document.documentElement.getAttribute("data-theme") || "light";
+        const setTheme = (theme: string) => {
+          document.documentElement.setAttribute("data-theme", theme);
+          try { localStorage.setItem("pg-theme", theme); } catch {}
+        };
+
+        toggle.addEventListener("click", () => {
+          const current = getTheme();
+          setTheme(current === "dark" ? "light" : "dark");
+        });
+      }
+
+      // Mobile menu
+      if (mobileBtn && mobileNav) {
+        mobileBtn.addEventListener("click", () => {
+          const isOpen = mobileNav.classList.toggle("pg-mobile-nav--open");
+          mobileBtn.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+    </script>
+
+    <style>
+      /* Header */
+      .pg-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--pg-nav-bg);
+        border-bottom: 1px solid var(--pg-nav-border);
+        backdrop-filter: blur(8px);
+      }
+
+      .pg-header__inner {
+        display: flex;
+        align-items: center;
+        gap: var(--pg-space-4);
+        max-width: var(--pg-max-width-wide);
+        margin: 0 auto;
+        padding: var(--pg-space-4) var(--pg-gutter);
+      }
+
+      .pg-header__logo {
+        display: flex;
+        align-items: center;
+        gap: var(--pg-space-2);
+        font-weight: 600;
+        font-size: var(--pg-text-lg);
+        color: var(--pg-text);
+        text-decoration: none;
+      }
+
+      .pg-header__logo:hover {
+        color: var(--pg-text);
+        text-decoration: none;
+      }
+
+      .pg-header__logo-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        background: var(--pg-link);
+        color: white;
+        border-radius: var(--pg-radius-md);
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+
+      /* Nav */
+      .pg-nav {
+        display: none;
+        align-items: center;
+        gap: var(--pg-space-1);
+        margin-left: auto;
+      }
+
+      @media (min-width: 640px) {
+        .pg-nav { display: flex; }
+      }
+
+      .pg-nav__link {
+        padding: var(--pg-space-2) var(--pg-space-3);
+        font-size: var(--pg-text-sm);
+        font-weight: 500;
+        color: var(--pg-text-soft);
+        border-radius: var(--pg-radius-md);
+        transition: color var(--pg-transition-fast), background var(--pg-transition-fast);
+      }
+
+      .pg-nav__link:hover {
+        color: var(--pg-text);
+        background: var(--pg-surface-soft);
+        text-decoration: none;
+      }
+
+      .pg-nav__link--active {
+        color: var(--pg-text);
+        background: var(--pg-surface-soft);
+      }
+
+      /* Theme toggle */
+      .pg-theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        padding: 0;
+        background: transparent;
+        border: 1px solid var(--pg-border);
+        border-radius: var(--pg-radius-md);
+        color: var(--pg-text-soft);
+        cursor: pointer;
+        transition: all var(--pg-transition-fast);
+      }
+
+      .pg-theme-toggle:hover {
+        background: var(--pg-surface-soft);
+        color: var(--pg-text);
+        border-color: var(--pg-border-muted);
+      }
+
+      .pg-theme-toggle__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pg-theme-toggle__sun { display: block; }
+      .pg-theme-toggle__moon { display: none; }
+
+      html[data-theme="dark"] .pg-theme-toggle__sun { display: none; }
+      html[data-theme="dark"] .pg-theme-toggle__moon { display: block; }
+
+      /* Mobile menu button */
+      .pg-mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        color: var(--pg-text-soft);
+        cursor: pointer;
+        margin-left: auto;
+      }
+
+      @media (min-width: 640px) {
+        .pg-mobile-menu-btn { display: none; }
+      }
+
+      .pg-mobile-menu-btn:hover {
+        color: var(--pg-text);
+      }
+
+      /* Mobile nav */
+      .pg-mobile-nav {
+        display: none;
+        flex-direction: column;
+        padding: var(--pg-space-2) var(--pg-gutter) var(--pg-space-4);
+        border-top: 1px solid var(--pg-border);
+      }
+
+      .pg-mobile-nav--open {
+        display: flex;
+      }
+
+      @media (min-width: 640px) {
+        .pg-mobile-nav { display: none !important; }
+      }
+
+      .pg-mobile-nav__link {
+        padding: var(--pg-space-3) var(--pg-space-4);
+        font-size: var(--pg-text-base);
+        font-weight: 500;
+        color: var(--pg-text-soft);
+        border-radius: var(--pg-radius-md);
+      }
+
+      .pg-mobile-nav__link:hover,
+      .pg-mobile-nav__link--active {
+        color: var(--pg-text);
+        background: var(--pg-surface-soft);
+        text-decoration: none;
+      }
+
+      /* Main */
+      .pg-main {
+        max-width: var(--pg-max-width-content);
+        margin: 0 auto;
+        padding: var(--pg-space-8) var(--pg-gutter);
+        min-height: calc(100vh - 200px);
+      }
+
+      /* Footer */
+      .pg-footer {
+        background: var(--pg-surface-soft);
+        border-top: 1px solid var(--pg-border);
+        margin-top: var(--pg-space-16);
+      }
+
+      .pg-footer__inner {
+        max-width: var(--pg-max-width-wide);
+        margin: 0 auto;
+        padding: var(--pg-space-10) var(--pg-gutter);
+      }
+
+      .pg-footer__brand {
+        margin-bottom: var(--pg-space-6);
+      }
+
+      .pg-footer__logo {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--pg-space-2);
+        font-weight: 600;
+        color: var(--pg-text);
+        text-decoration: none;
+      }
+
+      .pg-footer__logo-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: var(--pg-link);
+        color: white;
+        border-radius: var(--pg-radius-sm);
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .pg-footer__tagline {
+        margin: var(--pg-space-2) 0 0;
+        font-size: var(--pg-text-sm);
+        color: var(--pg-text-muted);
+      }
+
+      .pg-footer__nav {
+        display: flex;
+        gap: var(--pg-space-10);
+        margin-bottom: var(--pg-space-8);
+      }
+
+      .pg-footer__col {
+        display: flex;
+        flex-direction: column;
+        gap: var(--pg-space-2);
+      }
+
+      .pg-footer__heading {
+        font-size: var(--pg-text-sm);
+        font-weight: 600;
+        color: var(--pg-text);
+        margin: 0 0 var(--pg-space-2);
+      }
+
+      .pg-footer__col a {
+        font-size: var(--pg-text-sm);
+        color: var(--pg-text-muted);
+      }
+
+      .pg-footer__col a:hover {
+        color: var(--pg-text);
+      }
+
+      .pg-footer__bottom {
+        padding-top: var(--pg-space-6);
+        border-top: 1px solid var(--pg-border);
+      }
+
+      .pg-footer__bottom p {
+        margin: 0;
+        font-size: var(--pg-text-sm);
+        color: var(--pg-text-muted);
+      }
+    </style>
   </body>
 </html>
