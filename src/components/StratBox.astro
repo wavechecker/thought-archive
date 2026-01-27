@@ -6,39 +6,108 @@
  * - variant: "neutral" | "info" | "success" | "warning" | "danger"
  */
 const { stats = [], title = "Key Figures", variant = "neutral" } = Astro.props;
-
-const colors = {
-  neutral: "bg-gray-50 border-gray-300 text-gray-800",
-  info: "bg-blue-50 border-blue-300 text-blue-800",
-  success: "bg-green-50 border-green-300 text-green-800",
-  warning: "bg-yellow-50 border-yellow-300 text-yellow-800",
-  danger: "bg-red-50 border-red-300 text-red-800",
-};
+const headingId = title.replace(/\s+/g, "-").toLowerCase();
 ---
 
 <section
-  class={`my-6 border-l-4 rounded-xl p-4 ${colors[variant]} shadow-sm`}
+  class={`pg-stat-box pg-stat-box--${variant}`}
   role="region"
-  aria-labelledby={title.replace(/\s+/g, "-").toLowerCase()}
+  aria-labelledby={headingId}
 >
-  <h3
-    id={title.replace(/\s+/g, "-").toLowerCase()}
-    class="font-semibold text-lg mb-3"
-  >
-    {title}
-  </h3>
+  <h4 id={headingId} class="pg-stat-box__title">{title}</h4>
 
   {stats.length > 0 && (
-    <ul class="grid gap-2 mb-2">
+    <ul class="pg-stat-box__list">
       {stats.map(({ label, value }) => (
-        <li class="flex justify-between text-sm sm:text-base">
-          <span class="font-medium">{label}</span>
-          <span class="font-semibold">{value}</span>
+        <li class="pg-stat-box__item">
+          <span class="pg-stat-box__label">{label}</span>
+          <span class="pg-stat-box__value">{value}</span>
         </li>
       ))}
     </ul>
   )}
 
-  <slot />
+  <div class="pg-stat-box__content">
+    <slot />
+  </div>
 </section>
+
+<style>
+  .pg-stat-box {
+    border-left: 4px solid var(--pg-border);
+    border-radius: 0 var(--pg-radius-lg) var(--pg-radius-lg) 0;
+    padding: var(--pg-space-4) var(--pg-space-5);
+    margin: var(--pg-space-6) 0;
+    background: var(--pg-surface-soft);
+  }
+
+  /* Variants */
+  .pg-stat-box--neutral {
+    border-color: var(--pg-border-muted);
+    background: var(--pg-surface-soft);
+  }
+
+  .pg-stat-box--info {
+    border-color: var(--pg-summary-border);
+    background: var(--pg-summary-bg);
+  }
+
+  .pg-stat-box--success {
+    border-color: var(--pg-risk-low-border);
+    background: var(--pg-risk-low-bg);
+  }
+
+  .pg-stat-box--warning {
+    border-color: var(--pg-risk-moderate-border);
+    background: var(--pg-risk-moderate-bg);
+  }
+
+  .pg-stat-box--danger {
+    border-color: var(--pg-risk-high-border);
+    background: var(--pg-risk-high-bg);
+  }
+
+  .pg-stat-box__title {
+    font-size: var(--pg-text-lg);
+    font-weight: 600;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-3);
+  }
+
+  .pg-stat-box__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-2);
+    margin: 0 0 var(--pg-space-3);
+    padding: 0;
+    list-style: none;
+  }
+
+  .pg-stat-box__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--pg-space-4);
+    font-size: var(--pg-text-sm);
+  }
+
+  .pg-stat-box__label {
+    color: var(--pg-text-soft);
+  }
+
+  .pg-stat-box__value {
+    font-weight: 600;
+    color: var(--pg-text);
+  }
+
+  .pg-stat-box__content {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  .pg-stat-box__content:empty {
+    display: none;
+  }
+</style>
 

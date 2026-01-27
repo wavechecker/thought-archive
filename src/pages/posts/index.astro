@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import { isValidDate, fmt } from "@/lib/date";
 
 const posts = await getCollection("posts");
 
@@ -10,20 +11,131 @@ posts.sort((a, b) => {
   const db = new Date(b.data.publishDate || 0).getTime();
   return db - da;
 });
+
+const frontmatter = {
+  title: "Posts — PatientGuide.io",
+  description: "Latest posts and updates from PatientGuide.io",
+};
 ---
 
-<Layout title="Posts">
-  <h1 class="text-3xl font-semibold mb-6">Posts</h1>
-  <ul class="space-y-3">
-    {posts.map((p) => (
-      <li>
-        <a href={`/posts/${p.slug}/`} class="underline hover:no-underline">
-          {p.data.title ?? p.slug}
-        </a>
-        {p.data.publishDate ? (
-          <span class="text-sm text-gray-500"> — {p.data.publishDate}</span>
-        ) : null}
-      </li>
-    ))}
-  </ul>
+<Layout {frontmatter}>
+  <div class="pg-page-header">
+    <h1 class="pg-page-header__title">Posts</h1>
+    <p class="pg-page-header__subtitle">Latest updates and insights</p>
+  </div>
+
+  {posts.length === 0 ? (
+    <p class="pg-empty">No posts yet.</p>
+  ) : (
+    <div class="pg-list">
+      {posts.map((p) => {
+        const date = isValidDate(p.data.publishDate) ? fmt(p.data.publishDate) : null;
+        const desc = p.data.description ?? "";
+        return (
+          <article class="pg-list__item">
+            <div class="pg-list__content">
+              <h2 class="pg-list__title">
+                <a href={`/posts/${p.slug}/`}>{p.data.title ?? p.slug}</a>
+              </h2>
+              {desc && <p class="pg-list__description">{desc}</p>}
+            </div>
+            {date && <time class="pg-list__date">{date}</time>}
+          </article>
+        );
+      })}
+    </div>
+  )}
 </Layout>
+
+<style>
+  .pg-page-header {
+    margin-bottom: var(--pg-space-8);
+  }
+
+  .pg-page-header__title {
+    font-size: var(--pg-text-3xl);
+    font-weight: 700;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-2);
+  }
+
+  .pg-page-header__subtitle {
+    font-size: var(--pg-text-lg);
+    color: var(--pg-text-muted);
+    margin: 0;
+  }
+
+  .pg-empty {
+    color: var(--pg-text-muted);
+    font-style: italic;
+  }
+
+  .pg-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-1);
+  }
+
+  .pg-list__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--pg-space-4);
+    padding: var(--pg-space-4) var(--pg-space-5);
+    background: var(--pg-surface);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-lg);
+    transition: border-color var(--pg-transition-fast), box-shadow var(--pg-transition-fast);
+  }
+
+  .pg-list__item:hover {
+    border-color: var(--pg-border-muted);
+    box-shadow: var(--pg-shadow-sm);
+  }
+
+  .pg-list__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .pg-list__title {
+    font-size: var(--pg-text-lg);
+    font-weight: 600;
+    margin: 0 0 var(--pg-space-1);
+    line-height: var(--pg-leading-snug);
+  }
+
+  .pg-list__title a {
+    color: var(--pg-text);
+    text-decoration: none;
+  }
+
+  .pg-list__title a:hover {
+    color: var(--pg-link);
+    text-decoration: underline;
+  }
+
+  .pg-list__description {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    margin: 0;
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  .pg-list__date {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .pg-list__item {
+      flex-direction: column;
+      gap: var(--pg-space-2);
+    }
+    .pg-list__date {
+      order: -1;
+    }
+  }
+</style>

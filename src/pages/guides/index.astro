@@ -1,4 +1,5 @@
 ---
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { fmt, isValidDate } from "@/lib/date.ts";
 import {
@@ -16,25 +17,22 @@ if (q) {
 // Load all published guides
 const guides = await getCollection("guides", ({ data }) => data?.draft !== true);
 
-// ---- Featured row (Child & Adolescent Health) ----
+// Featured guides
 const FEATURED = [
   {
     slug: "childhood-obesity-prevention",
     title: "Childhood Obesity Prevention",
-    blurb:
-      "Childhood obesity has now surpassed underweight globally, driven by ultra-processed foods, sugary drinks, and weak policy protections. This guide explains the causes, risks, and proven strategies for prevention at home, in schools, and through public policy."
+    blurb: "Causes, risks, and proven strategies for prevention at home, in schools, and through public policy."
   },
   {
     slug: "healthy-diets-for-children",
     title: "Healthy Diets for Children",
-    blurb:
-      "Balanced nutrition is key to children’s growth, learning, and long-term health. This guide explains the food groups, portion sizes, and simple strategies families can use to build healthier eating habits at home and in schools."
+    blurb: "Food groups, portion sizes, and simple strategies families can use to build healthier eating habits."
   },
   {
     slug: "diabetes-children",
-    title: "Diabetes in Children and Adolescents",
-    blurb:
-      "Diabetes is rising among children worldwide, with type 1 remaining common and type 2 increasing rapidly due to obesity. This guide covers symptoms, diagnosis, treatment, and prevention, helping families and schools support affected children."
+    title: "Diabetes in Children",
+    blurb: "Symptoms, diagnosis, treatment, and prevention — helping families and schools support affected children."
   }
 ];
 
@@ -47,7 +45,7 @@ const featuredEntries = FEATURED
   })
   .filter(Boolean);
 
-// ---- Build map: category -> guides ----
+// Build map: category -> guides
 const byCategory = new Map<string, typeof guides>();
 for (const e of guides) {
   const cat = (e.data.category ?? "General Health").trim();
@@ -67,125 +65,265 @@ const categories = Array.from(byCategory.keys()).sort((a, b) => {
 
 const MAX_VISIBLE = 5;
 
-// Optional overrides: point some categories to a hub page
-const overrides: Record<string, string> = {
-  // "Vaccination": "/guides/vaccination-guide-hub",
-  // "Emergencies": "/guides/emergencies-guide-hub",
-  // If you created the hub page we discussed:
-  // "Child & Adolescent Health": "/guides/child-adolescent-health-hub",
+const overrides: Record<string, string> = {};
+
+const frontmatter = {
+  title: "Health Guides — PatientGuide.io",
+  description: "Browse our library of evidence-based health guides organized by category.",
 };
 ---
 
-<h1>Guides</h1>
-<p>Explore our library of health guides, organized by category. Click a topic to browse detailed guides.</p>
+<Layout {frontmatter}>
+  <div class="pg-page-header">
+    <h1 class="pg-page-header__title">Health Guides</h1>
+    <p class="pg-page-header__subtitle">
+      Explore our library of evidence-based guides, organized by category.
+    </p>
+  </div>
 
-{featuredEntries.length > 0 && (
-  <>
-    <h2>Featured: Child &amp; Adolescent Health</h2>
-    <div class="cards">
-      {featuredEntries.map((f) => (
-        <article class="card">
-          <h3><a href={f!.href}>{f!.title}</a></h3>
-          <p>{f!.blurb}</p>
-        </article>
-      ))}
+  {featuredEntries.length > 0 && (
+    <section class="pg-section">
+      <div class="pg-section__header">
+        <h2 class="pg-section__title">Featured: Child & Adolescent Health</h2>
+      </div>
+      <div class="pg-card-grid">
+        {featuredEntries.map((f) => (
+          <article class="pg-card pg-card--interactive">
+            <h3 class="pg-card__title">
+              <a href={f!.href} class="pg-card__link">{f!.title}</a>
+            </h3>
+            <p class="pg-card__description">{f!.blurb}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="pg-section">
+    <div class="pg-section__header">
+      <h2 class="pg-section__title">Browse by Category</h2>
     </div>
-  </>
-)}
 
-<ul class="grid">
-  {categories.map((cat) => {
-    const list = byCategory.get(cat)!;
-    const count = list.length;
+    <div class="pg-category-grid">
+      {categories.map((cat) => {
+        const list = byCategory.get(cat)!;
+        const count = list.length;
 
-    const defaultHref = `/guides/category/${slugifyCategory(cat)}`;
-    const catHref = overrides[cat] ?? defaultHref;
+        const defaultHref = `/guides/category/${slugifyCategory(cat)}`;
+        const catHref = overrides[cat] ?? defaultHref;
 
-    const sorted = list
-      .slice()
-      .sort(
-        (a, b) =>
-          +new Date((b.data.updatedDate ?? b.data.publishDate) as any) -
-          +new Date((a.data.updatedDate ?? a.data.publishDate) as any)
-      );
+        const sorted = list
+          .slice()
+          .sort(
+            (a, b) =>
+              +new Date((b.data.updatedDate ?? b.data.publishDate) as any) -
+              +new Date((a.data.updatedDate ?? a.data.publishDate) as any)
+          );
 
-    const visible = sorted.slice(0, MAX_VISIBLE);
-    const hidden = sorted.slice(MAX_VISIBLE);
+        const visible = sorted.slice(0, MAX_VISIBLE);
+        const hidden = sorted.slice(MAX_VISIBLE);
 
-    return (
-      <li class="cat-card">
-        <h3><a href={catHref}>{cat}</a></h3>
-        <p>{CATEGORY_DESCRIPTIONS[cat] ?? "Browse guides in this topic."}</p>
-        <small>{count} guide{count === 1 ? "" : "s"}</small>
+        return (
+          <article class="pg-category-card">
+            <div class="pg-category-card__header">
+              <h3 class="pg-category-card__title">
+                <a href={catHref}>{cat}</a>
+              </h3>
+              <span class="pg-category-card__count">{count} guide{count === 1 ? "" : "s"}</span>
+            </div>
+            <p class="pg-category-card__description">
+              {CATEGORY_DESCRIPTIONS[cat] ?? "Browse guides in this topic."}
+            </p>
 
-        <ul class="mini">
-          {visible.map((e) => {
-            const href = `/guides/${e.slug}`;
-            const title = e.data.title ?? "(Untitled)";
-            const d = e.data.updatedDate ?? e.data.publishDate;
-            return (
-              <li>
-                <a href={href}>{title}</a>
-                {isValidDate(d) && <span class="date"> {fmt(d)}</span>}
-              </li>
-            );
-          })}
-        </ul>
-
-        {hidden.length > 0 && (
-          <details class="more">
-            <summary>Show {hidden.length} more</summary>
-            <ul class="mini">
-              {hidden.map((e) => {
+            <ul class="pg-category-card__list">
+              {visible.map((e) => {
                 const href = `/guides/${e.slug}`;
                 const title = e.data.title ?? "(Untitled)";
                 const d = e.data.updatedDate ?? e.data.publishDate;
                 return (
                   <li>
                     <a href={href}>{title}</a>
-                    {isValidDate(d) && <span class="date"> {fmt(d)}</span>}
+                    {isValidDate(d) && <time class="pg-category-card__date">{fmt(d)}</time>}
                   </li>
                 );
               })}
             </ul>
-          </details>
-        )}
-      </li>
-    );
-  })}
-</ul>
+
+            {hidden.length > 0 && (
+              <details class="pg-category-card__more">
+                <summary>Show {hidden.length} more</summary>
+                <ul class="pg-category-card__list">
+                  {hidden.map((e) => {
+                    const href = `/guides/${e.slug}`;
+                    const title = e.data.title ?? "(Untitled)";
+                    const d = e.data.updatedDate ?? e.data.publishDate;
+                    return (
+                      <li>
+                        <a href={href}>{title}</a>
+                        {isValidDate(d) && <time class="pg-category-card__date">{fmt(d)}</time>}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </details>
+            )}
+          </article>
+        );
+      })}
+    </div>
+  </section>
+</Layout>
 
 <style>
-  .cards {
+  .pg-page-header {
+    margin-bottom: var(--pg-space-8);
+  }
+
+  .pg-page-header__title {
+    font-size: var(--pg-text-3xl);
+    font-weight: 700;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-2);
+  }
+
+  .pg-page-header__subtitle {
+    font-size: var(--pg-text-lg);
+    color: var(--pg-text-muted);
+    margin: 0;
+  }
+
+  .pg-section {
+    margin-top: var(--pg-space-10);
+  }
+
+  .pg-section__header {
+    margin-bottom: var(--pg-space-5);
+  }
+
+  .pg-section__title {
+    font-size: var(--pg-text-xl);
+    font-weight: 600;
+    color: var(--pg-text);
+    margin: 0;
+  }
+
+  /* Card grid for featured */
+  .pg-card-grid {
     display: grid;
+    gap: var(--pg-space-4);
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
-    margin-block: .5rem 1.5rem;
   }
-  .card {
-    padding: 1rem;
-    border: 1px solid var(--astro-border, #e5e7eb);
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    background: white;
+
+  .pg-card__link {
+    color: inherit;
+    text-decoration: none;
   }
-  .grid { 
-    display:grid; 
-    gap:1rem; 
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
-    margin-top: .75rem;
+
+  .pg-card__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
   }
-  .cat-card { 
-    padding:1rem; 
-    border:1px solid var(--astro-border, #e5e7eb); 
-    border-radius:12px; 
-    background: white;
+
+  .pg-card {
+    position: relative;
   }
-  .mini { margin-top:.5rem; padding-left:1rem; }
-  .mini li { list-style: disc; }
-  .date { color:#6b7280; font-size:.85em; margin-left:.35rem; }
-  details.more { margin-top:.5rem; }
-  details.more summary { cursor:pointer; text-decoration: underline; }
+
+  /* Category grid */
+  .pg-category-grid {
+    display: grid;
+    gap: var(--pg-space-4);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .pg-category-card {
+    background: var(--pg-surface);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-xl);
+    padding: var(--pg-space-5);
+    transition: border-color var(--pg-transition-fast), box-shadow var(--pg-transition-fast);
+  }
+
+  .pg-category-card:hover {
+    border-color: var(--pg-border-muted);
+    box-shadow: var(--pg-shadow-sm);
+  }
+
+  .pg-category-card__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--pg-space-2);
+    margin-bottom: var(--pg-space-2);
+  }
+
+  .pg-category-card__title {
+    font-size: var(--pg-text-lg);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .pg-category-card__title a {
+    color: var(--pg-text);
+    text-decoration: none;
+  }
+
+  .pg-category-card__title a:hover {
+    color: var(--pg-link);
+    text-decoration: underline;
+  }
+
+  .pg-category-card__count {
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+    white-space: nowrap;
+  }
+
+  .pg-category-card__description {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    margin: 0 0 var(--pg-space-4);
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  .pg-category-card__list {
+    margin: 0;
+    padding-left: var(--pg-space-5);
+    font-size: var(--pg-text-sm);
+  }
+
+  .pg-category-card__list li {
+    margin-bottom: var(--pg-space-2);
+    line-height: var(--pg-leading-snug);
+  }
+
+  .pg-category-card__list a {
+    color: var(--pg-link);
+  }
+
+  .pg-category-card__date {
+    color: var(--pg-text-muted);
+    font-size: var(--pg-text-xs);
+    margin-left: var(--pg-space-2);
+  }
+
+  .pg-category-card__more {
+    margin-top: var(--pg-space-3);
+  }
+
+  .pg-category-card__more summary {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-link);
+    cursor: pointer;
+  }
+
+  .pg-category-card__more summary:hover {
+    text-decoration: underline;
+  }
+
+  .pg-category-card__more .pg-category-card__list {
+    margin-top: var(--pg-space-3);
+  }
 </style>
 
 
