@@ -1,16 +1,14 @@
 ---
 import * as datasets from "@/data/outbreaks/index.ts";
-// If you already have these helpers, use them; otherwise the fallbacks below handle formatting.
-let fmt = (d: Date, locale = "en-US") =>
+
+// Defensive date formatting
+const fmtDate = (d: Date, locale = "en-US") =>
   d.toLocaleDateString(locale, { year: "numeric", month: "long", day: "numeric" });
-let isValidDate = (d: Date) => !isNaN(d.getTime());
+const isValidDate = (d: Date) => !isNaN(d.getTime());
 
 type Props = {
-  /** Which dataset to use, e.g. "measlesUS" exported from /src/data/outbreaks/index.ts */
   dataKey: keyof typeof datasets;
-  /** Optional: filter for a specific year (defaults to max year) */
   year?: number;
-  /** Optional: override display locale for date formatting */
   locale?: string;
 };
 
@@ -19,32 +17,117 @@ const data = (datasets as any)[dataKey] as import("@/data/outbreaks/index.ts").O
 
 if (!data) throw new Error(`OutbreakBox: dataset "${String(dataKey)}" not found.`);
 
-// pick the row for the requested year, or the latest year
 const rows = data.series.slice().sort((a, b) => a.year - b.year);
 const selected = year ? rows.find(r => r.year === year) : rows[rows.length - 1];
 
 if (!selected) throw new Error(`OutbreakBox: no data available for ${year ?? "latest year"}.`);
 
 const last = new Date(selected.lastUpdated);
-const safeLast =
-  isValidDate(last) ? fmt(last, locale) : selected.lastUpdated;
+const safeLast = isValidDate(last) ? fmtDate(last, locale) : selected.lastUpdated;
 
 const hasOutbreaks = typeof selected.outbreaksInvestigated === "number";
 ---
 
-<div class="border-l-4 border-red-600 bg-red-50 p-4 my-6 rounded-lg shadow-sm text-sm">
-  <p class="font-semibold text-red-700">
-    {data.condition} {selected.year} — {data.region}
-  </p>
-  <ul class="mt-1 text-gray-800">
-    <li><strong>Confirmed cases:</strong> {selected.confirmedCases}</li>
-    {hasOutbreaks && <li><strong>Outbreaks under investigation:</strong> {selected.outbreaksInvestigated}</li>}
-    <li><strong>Last updated:</strong> {safeLast}</li>
-    <li class="italic text-gray-600">
+<aside class="pg-outbreak-box" role="alert">
+  <div class="pg-outbreak-box__icon" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+      <line x1="12" y1="9" x2="12" y2="13"></line>
+      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+    </svg>
+  </div>
+  <div class="pg-outbreak-box__content">
+    <h4 class="pg-outbreak-box__title">
+      {data.condition} {selected.year} — {data.region}
+    </h4>
+    <ul class="pg-outbreak-box__stats">
+      <li>
+        <span class="pg-outbreak-box__label">Confirmed cases</span>
+        <span class="pg-outbreak-box__value">{selected.confirmedCases.toLocaleString()}</span>
+      </li>
+      {hasOutbreaks && (
+        <li>
+          <span class="pg-outbreak-box__label">Outbreaks investigated</span>
+          <span class="pg-outbreak-box__value">{selected.outbreaksInvestigated}</span>
+        </li>
+      )}
+      <li>
+        <span class="pg-outbreak-box__label">Last updated</span>
+        <span class="pg-outbreak-box__value">{safeLast}</span>
+      </li>
+    </ul>
+    <p class="pg-outbreak-box__source">
       Source: {selected.sourceUrl
-        ? <a href={selected.sourceUrl} target="_blank" rel="noopener noreferrer" class="underline">{selected.sourceName}</a>
+        ? <a href={selected.sourceUrl} target="_blank" rel="noopener noreferrer">{selected.sourceName}</a>
         : data.series[0]?.sourceName}
-    </li>
-  </ul>
-</div>
+    </p>
+  </div>
+</aside>
+
+<style>
+  .pg-outbreak-box {
+    display: flex;
+    gap: var(--pg-space-4);
+    background: var(--pg-risk-high-bg);
+    border-left: 4px solid var(--pg-risk-high-border);
+    border-radius: 0 var(--pg-radius-lg) var(--pg-radius-lg) 0;
+    padding: var(--pg-space-4) var(--pg-space-5);
+    margin: var(--pg-space-6) 0;
+  }
+
+  .pg-outbreak-box__icon {
+    flex-shrink: 0;
+    color: var(--pg-risk-high-text);
+    margin-top: 2px;
+  }
+
+  .pg-outbreak-box__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .pg-outbreak-box__title {
+    font-size: var(--pg-text-base);
+    font-weight: 600;
+    color: var(--pg-risk-high-text);
+    margin: 0 0 var(--pg-space-3);
+  }
+
+  .pg-outbreak-box__stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-2);
+    margin: 0 0 var(--pg-space-3);
+    padding: 0;
+    list-style: none;
+  }
+
+  .pg-outbreak-box__stats li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--pg-space-4);
+    font-size: var(--pg-text-sm);
+  }
+
+  .pg-outbreak-box__label {
+    color: var(--pg-text-soft);
+  }
+
+  .pg-outbreak-box__value {
+    font-weight: 600;
+    color: var(--pg-text);
+  }
+
+  .pg-outbreak-box__source {
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .pg-outbreak-box__source a {
+    color: var(--pg-link);
+  }
+</style>
 
