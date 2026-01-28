@@ -45,6 +45,20 @@ const POST_CATEGORY = z.enum([
 ]);
 
 // -----------------------------
+// FAQ schema for structured data
+// Accepts both question/answer (legacy) and q/a (shorthand)
+// -----------------------------
+const faqItem = z.object({
+  question: z.string().optional(),
+  answer: z.string().optional(),
+  q: z.string().optional(),
+  a: z.string().optional(),
+}).refine(
+  (data) => (data.question && data.answer) || (data.q && data.a),
+  { message: "FAQ item must have either question/answer or q/a pair" }
+);
+
+// -----------------------------
 // Common fields (for full content types)
 // -----------------------------
 const base = {
@@ -56,6 +70,7 @@ const base = {
   tags: z.array(z.string()).default([]),
   image: z.string().optional(),
   slug: z.string().optional(),
+  faq: z.array(faqItem).optional(), // Optional FAQ for JSON-LD
 };
 
 // -----------------------------
