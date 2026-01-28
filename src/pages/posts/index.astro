@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { isValidDate, fmt } from "@/lib/date";
 
-const posts = await getCollection("posts");
+const posts = await getCollection("posts", ({ data }) => data?.draft !== true);
 
 // Sort newest first (by publishDate)
 posts.sort((a, b) => {
@@ -12,130 +12,356 @@ posts.sort((a, b) => {
   return db - da;
 });
 
+// Helper to get slug from entry id
+const getSlugFromId = (id: string) => id.replace(/\.(md|mdx)$/, '');
+
+// Group posts by year for optional year headers
+const postsByYear = posts.reduce((acc, post) => {
+  const year = new Date(post.data.publishDate).getFullYear();
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(post);
+  return acc;
+}, {} as Record<number, typeof posts>);
+
+const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
+
 const frontmatter = {
   title: "Posts — PatientGuide.io",
-  description: "Latest posts and updates from PatientGuide.io",
+  description: "Latest posts, opinions, and analysis from PatientGuide.io",
 };
 ---
 
 <Layout {frontmatter}>
-  <div class="pg-page-header">
-    <h1 class="pg-page-header__title">Posts</h1>
-    <p class="pg-page-header__subtitle">Latest updates and insights</p>
-  </div>
+  <div class="pg-posts-page">
+    <header class="pg-posts-header">
+      <h1 class="pg-posts-header__title">Posts</h1>
+      <p class="pg-posts-header__subtitle">
+        Thoughts, analysis, and opinions on health, medicine, and AI
+      </p>
+      <div class="pg-posts-header__stats">
+        <span class="pg-posts-stat">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+          {posts.length} posts
+        </span>
+      </div>
+    </header>
 
-  {posts.length === 0 ? (
-    <p class="pg-empty">No posts yet.</p>
-  ) : (
-    <div class="pg-list">
-      {posts.map((p) => {
-        const date = isValidDate(p.data.publishDate) ? fmt(p.data.publishDate) : null;
-        const desc = p.data.description ?? "";
-        return (
-          <article class="pg-list__item">
-            <div class="pg-list__content">
-              <h2 class="pg-list__title">
-                <a href={`/posts/${p.slug}/`}>{p.data.title ?? p.slug}</a>
-              </h2>
-              {desc && <p class="pg-list__description">{desc}</p>}
-            </div>
-            {date && <time class="pg-list__date">{date}</time>}
-          </article>
-        );
-      })}
-    </div>
-  )}
+    {posts.length === 0 ? (
+      <div class="pg-empty-state">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+        </svg>
+        <p>No posts yet. Check back soon!</p>
+      </div>
+    ) : (
+      <div class="pg-posts-grid">
+        {posts.map((post, index) => {
+          const date = isValidDate(post.data.publishDate) ? fmt(post.data.publishDate) : null;
+          const desc = post.data.description ?? "";
+          const tags = post.data.tags ?? [];
+          const category = post.data.category ?? null;
+          const slug = getSlugFromId(post.id);
+          const isFeatured = index === 0;
+
+          return (
+            <article class={`pg-post-card ${isFeatured ? 'pg-post-card--featured' : ''}`}>
+              <a href={`/posts/${slug}/`} class="pg-post-card__link">
+                <div class="pg-post-card__content">
+                  <div class="pg-post-card__meta">
+                    {category && (
+                      <span class="pg-post-card__category">{category}</span>
+                    )}
+                    {date && (
+                      <time class="pg-post-card__date" datetime={post.data.publishDate}>
+                        {date}
+                      </time>
+                    )}
+                  </div>
+
+                  <h2 class="pg-post-card__title">{post.data.title ?? slug}</h2>
+
+                  {desc && (
+                    <p class="pg-post-card__description">{desc}</p>
+                  )}
+
+                  {tags.length > 0 && (
+                    <div class="pg-post-card__tags">
+                      {tags.slice(0, 3).map((tag: string) => (
+                        <span class="pg-post-card__tag">{tag}</span>
+                      ))}
+                      {tags.length > 3 && (
+                        <span class="pg-post-card__tag pg-post-card__tag--more">+{tags.length - 3}</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                <div class="pg-post-card__arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </a>
+            </article>
+          );
+        })}
+      </div>
+    )}
+  </div>
 </Layout>
 
 <style>
-  .pg-page-header {
-    margin-bottom: var(--pg-space-8);
+  .pg-posts-page {
+    max-width: var(--pg-max-width-content);
+    margin: 0 auto;
   }
 
-  .pg-page-header__title {
-    font-size: var(--pg-text-3xl);
-    font-weight: 700;
+  /* Header */
+  .pg-posts-header {
+    margin-bottom: var(--pg-space-10);
+    padding-bottom: var(--pg-space-8);
+    border-bottom: 1px solid var(--pg-border);
+  }
+
+  .pg-posts-header__title {
+    font-size: var(--pg-text-4xl);
+    font-weight: 800;
     color: var(--pg-text);
-    margin: 0 0 var(--pg-space-2);
+    margin: 0 0 var(--pg-space-3);
+    letter-spacing: -0.02em;
   }
 
-  .pg-page-header__subtitle {
+  .pg-posts-header__subtitle {
     font-size: var(--pg-text-lg);
+    color: var(--pg-text-soft);
+    margin: 0 0 var(--pg-space-4);
+    max-width: 48ch;
+  }
+
+  .pg-posts-header__stats {
+    display: flex;
+    gap: var(--pg-space-4);
+  }
+
+  .pg-posts-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--pg-space-2);
+    font-size: var(--pg-text-sm);
     color: var(--pg-text-muted);
+  }
+
+  .pg-posts-stat svg {
+    opacity: 0.6;
+  }
+
+  /* Empty state */
+  .pg-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--pg-space-16) var(--pg-space-8);
+    text-align: center;
+    color: var(--pg-text-muted);
+  }
+
+  .pg-empty-state svg {
+    margin-bottom: var(--pg-space-4);
+    opacity: 0.4;
+  }
+
+  .pg-empty-state p {
+    font-size: var(--pg-text-lg);
     margin: 0;
   }
 
-  .pg-empty {
-    color: var(--pg-text-muted);
-    font-style: italic;
+  /* Posts grid */
+  .pg-posts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--pg-space-4);
   }
 
-  .pg-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--pg-space-1);
+  /* Post card */
+  .pg-post-card {
+    position: relative;
+    background: var(--pg-surface);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-xl);
+    transition: all var(--pg-transition-base);
+    overflow: hidden;
   }
 
-  .pg-list__item {
+  .pg-post-card:hover {
+    border-color: var(--pg-border-muted);
+    box-shadow: var(--pg-shadow-card-hover);
+  }
+
+  .pg-post-card--featured {
+    background: linear-gradient(135deg, var(--pg-surface-soft) 0%, var(--pg-surface) 100%);
+    border-color: var(--pg-border-muted);
+  }
+
+  .pg-post-card__link {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: var(--pg-space-4);
-    padding: var(--pg-space-4) var(--pg-space-5);
-    background: var(--pg-surface);
-    border: 1px solid var(--pg-border);
-    border-radius: var(--pg-radius-lg);
-    transition: border-color var(--pg-transition-fast), box-shadow var(--pg-transition-fast);
+    padding: var(--pg-space-6);
+    text-decoration: none;
+    color: inherit;
   }
 
-  .pg-list__item:hover {
-    border-color: var(--pg-border-muted);
-    box-shadow: var(--pg-shadow-sm);
+  .pg-post-card__link:hover {
+    text-decoration: none;
   }
 
-  .pg-list__content {
+  .pg-post-card__content {
     flex: 1;
     min-width: 0;
   }
 
-  .pg-list__title {
-    font-size: var(--pg-text-lg);
+  .pg-post-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--pg-space-3);
+    margin-bottom: var(--pg-space-3);
+  }
+
+  .pg-post-card__category {
+    font-size: var(--pg-text-xs);
     font-weight: 600;
-    margin: 0 0 var(--pg-space-1);
-    line-height: var(--pg-leading-snug);
-  }
-
-  .pg-list__title a {
-    color: var(--pg-text);
-    text-decoration: none;
-  }
-
-  .pg-list__title a:hover {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: var(--pg-link);
-    text-decoration: underline;
   }
 
-  .pg-list__description {
-    font-size: var(--pg-text-sm);
-    color: var(--pg-text-soft);
-    margin: 0;
-    line-height: var(--pg-leading-relaxed);
-  }
-
-  .pg-list__date {
+  .pg-post-card__date {
     font-size: var(--pg-text-sm);
     color: var(--pg-text-muted);
-    white-space: nowrap;
+  }
+
+  .pg-post-card__title {
+    font-size: var(--pg-text-xl);
+    font-weight: 700;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-2);
+    line-height: var(--pg-leading-snug);
+    transition: color var(--pg-transition-fast);
+  }
+
+  .pg-post-card:hover .pg-post-card__title {
+    color: var(--pg-link);
+  }
+
+  .pg-post-card--featured .pg-post-card__title {
+    font-size: var(--pg-text-2xl);
+  }
+
+  .pg-post-card__description {
+    font-size: var(--pg-text-base);
+    color: var(--pg-text-soft);
+    margin: 0 0 var(--pg-space-4);
+    line-height: var(--pg-leading-relaxed);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .pg-post-card--featured .pg-post-card__description {
+    -webkit-line-clamp: 3;
+  }
+
+  .pg-post-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pg-space-2);
+  }
+
+  .pg-post-card__tag {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--pg-space-1) var(--pg-space-2);
+    font-size: var(--pg-text-xs);
+    font-weight: 500;
+    color: var(--pg-text-muted);
+    background: var(--pg-surface-muted);
+    border-radius: var(--pg-radius-sm);
+  }
+
+  .pg-post-card__tag--more {
+    background: transparent;
+    color: var(--pg-text-muted);
+  }
+
+  .pg-post-card__arrow {
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--pg-text-muted);
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all var(--pg-transition-fast);
+  }
+
+  .pg-post-card:hover .pg-post-card__arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--pg-link);
+  }
+
+  /* Responsive */
+  @media (min-width: 640px) {
+    .pg-posts-grid {
+      gap: var(--pg-space-5);
+    }
+
+    .pg-post-card__link {
+      padding: var(--pg-space-8);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .pg-post-card--featured {
+      grid-column: span 1;
+    }
   }
 
   @media (max-width: 640px) {
-    .pg-list__item {
-      flex-direction: column;
-      gap: var(--pg-space-2);
+    .pg-posts-header__title {
+      font-size: var(--pg-text-3xl);
     }
-    .pg-list__date {
-      order: -1;
+
+    .pg-post-card__link {
+      padding: var(--pg-space-5);
+    }
+
+    .pg-post-card__title {
+      font-size: var(--pg-text-lg);
+    }
+
+    .pg-post-card--featured .pg-post-card__title {
+      font-size: var(--pg-text-xl);
+    }
+
+    .pg-post-card__description {
+      font-size: var(--pg-text-sm);
+    }
+
+    .pg-post-card__arrow {
+      display: none;
     }
   }
 </style>

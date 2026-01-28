@@ -1,7 +1,8 @@
 ---
-import { getCollection, getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 import { isValidDate, fmt } from "@/lib/date";
 import Layout from "@/layouts/Layout.astro";
+import SchemaBlogPost from "@/components/SchemaBlogPost.astro";
 
 import StratBox from "@/components/StratBox.astro";
 import EvidenceBox from "@/components/EvidenceBox.astro";
@@ -12,23 +13,31 @@ const mdxComponents = { StratBox, EvidenceBox };
 
 export async function getStaticPaths() {
   const entries = await getCollection("posts", ({ data }) => data?.draft !== true);
-  return entries.map((e) => ({ params: { slug: String(e.slug) } }));
+  return entries.map((entry) => ({
+    params: { slug: entry.id.replace(/\.(md|mdx)$/, '') }
+  }));
 }
 
 const slugParam = Astro.params.slug;
 const slug = Array.isArray(slugParam) ? slugParam.join("/") : (slugParam ?? "");
 if (!slug) return Astro.redirect("/404");
 
-const entry = await getEntryBySlug("posts", slug);
+const allEntries = await getCollection("posts", ({ data }) => data?.draft !== true);
+const entry = allEntries.find((e) => {
+  const entrySlug = e.id.replace(/\.(md|mdx)$/, '');
+  return entrySlug === slug;
+});
 if (!entry || entry.data?.draft === true) return Astro.redirect("/404");
 
-const { Content } = await entry.render({ components: mdxComponents });
+const { Content, headings } = await entry.render({ components: mdxComponents });
 
 const data = entry.data;
 
 // Defensive date rendering
 const pubDate = isValidDate(data.publishDate) ? fmt(data.publishDate) : null;
+const pubDateISO = isValidDate(data.publishDate) ? new Date(data.publishDate).toISOString() : null;
 const modDate = isValidDate(data.updatedDate) ? fmt(data.updatedDate) : null;
+const modDateISO = isValidDate(data.updatedDate) ? new Date(data.updatedDate).toISOString() : null;
 const showUpdated = modDate && modDate !== pubDate;
 
 // Reading time estimate
@@ -36,155 +45,736 @@ const wordCount = entry.body?.split(/\s+/).length ?? 0;
 const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 
 const heroLocal = data?.image ?? data?.heroImage ?? null;
+const tags = data?.tags ?? [];
+const category = data?.category ?? null;
+const relatedSlugs = data?.related ?? [];
+
+// Get related posts if specified in frontmatter
+const allPosts = await getCollection("posts", ({ data }) => data?.draft !== true);
+let relatedPosts: typeof allPosts = [];
+
+// Helper to get slug from entry id (removes .md/.mdx extension)
+const getSlugFromId = (id: string) => id.replace(/\.(md|mdx)$/, '');
+
+// First, try to get posts from the related frontmatter field
+if (relatedSlugs.length > 0) {
+  relatedPosts = allPosts.filter(p => {
+    const pSlug = getSlugFromId(p.id);
+    return relatedSlugs.some((r: string) => r.includes(pSlug) || pSlug.includes(r.replace('/posts/', '').replace('/', '')));
+  }).slice(0, 4);
+}
+
+// If no related posts found, fallback to same tags or latest
+if (relatedPosts.length < 2 && tags.length > 0) {
+  const tagMatches = allPosts
+    .filter(p => getSlugFromId(p.id) !== slug && p.data.tags?.some((t: string) => tags.includes(t)))
+    .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+    .slice(0, 4 - relatedPosts.length);
+  relatedPosts = [...relatedPosts, ...tagMatches.filter(p => !relatedPosts.includes(p))].slice(0, 4);
+}
+
+// Still not enough? Get latest posts
+if (relatedPosts.length < 2) {
+  const latest = allPosts
+    .filter(p => getSlugFromId(p.id) !== slug && !relatedPosts.includes(p))
+    .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+    .slice(0, 4 - relatedPosts.length);
+  relatedPosts = [...relatedPosts, ...latest].slice(0, 4);
+}
+
+// Filter headings for TOC (h2 and h3 only)
+const tocHeadings = headings?.filter(h => h.depth === 2 || h.depth === 3) ?? [];
 
 const frontmatter = {
   title: `${data.title} — PatientGuide.io`,
   description: data.description ?? "",
 };
+
+const currentUrl = Astro.url.href;
 ---
 
 <Layout {frontmatter}>
-  <article class="pg-article">
-    <header class="pg-article__header">
-      <span class="pg-article__label">Post</span>
-      <h1 class="pg-article__title">{data?.title ?? "Untitled"}</h1>
-      {data.description && <p class="pg-article__description">{data.description}</p>}
+  <SchemaBlogPost
+    title={data.title}
+    description={data.description}
+    publishDate={pubDateISO ?? undefined}
+    updatedDate={modDateISO ?? pubDateISO ?? undefined}
+    section={category ?? "Posts"}
+    tags={tags}
+  />
 
-      <div class="pg-article__meta">
-        {pubDate && (
-          <span class="pg-article__date">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
+  <!-- Breadcrumbs -->
+  <nav class="pg-breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/posts/">Posts</a></li>
+      <li aria-current="page">{data.title}</li>
+    </ol>
+  </nav>
+
+  <div class="pg-post-layout">
+    <article class="pg-post">
+      <header class="pg-post__header">
+        {category && (
+          <span class="pg-post__category">{category}</span>
+        )}
+        {!category && (
+          <span class="pg-post__category">Post</span>
+        )}
+
+        <h1 class="pg-post__title">{data?.title ?? "Untitled"}</h1>
+
+        {data.description && (
+          <p class="pg-post__dek">{data.description}</p>
+        )}
+
+        <div class="pg-post__meta">
+          <div class="pg-post__meta-left">
+            {pubDate && (
+              <span class="pg-post__date">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <time datetime={pubDateISO ?? undefined}>{pubDate}</time>
+              </span>
+            )}
+            {showUpdated && (
+              <span class="pg-post__updated">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M1 4v6h6"></path>
+                  <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                </svg>
+                <time datetime={modDateISO ?? undefined}>{modDate}</time>
+              </span>
+            )}
+            <span class="pg-post__reading-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              {readingTime} min read
+            </span>
+          </div>
+
+          <div class="pg-post__meta-right">
+            <button
+              type="button"
+              class="pg-post__share-btn"
+              id="share-btn"
+              aria-label="Copy link to clipboard"
+              data-url={currentUrl}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+              <span class="pg-post__share-text">Copy link</span>
+            </button>
+          </div>
+        </div>
+
+        {tags.length > 0 && (
+          <div class="pg-post__tags">
+            {tags.map((tag: string) => (
+              <a href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}/`} class="pg-tag">{tag}</a>
+            ))}
+          </div>
+        )}
+
+        {heroLocal && (
+          <figure class="pg-post__hero">
+            <img
+              src={heroLocal}
+              alt={data?.title ?? "Post hero image"}
+              loading="eager"
+            />
+          </figure>
+        )}
+      </header>
+
+      <!-- Mobile TOC -->
+      {tocHeadings.length > 2 && (
+        <details class="pg-toc-mobile">
+          <summary class="pg-toc-mobile__trigger">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="15" y2="12"></line>
+              <line x1="3" y1="18" x2="18" y2="18"></line>
             </svg>
-            <time datetime={data.publishDate?.toString()}>{pubDate}</time>
-          </span>
-        )}
-        {showUpdated && (
-          <span class="pg-article__updated">
-            Updated: <time datetime={data.updatedDate?.toString()}>{modDate}</time>
-          </span>
-        )}
-        <span class="pg-article__reading-time">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-          {readingTime} min read
-        </span>
+            <span>On this page</span>
+            <svg class="pg-toc-mobile__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <nav class="pg-toc-mobile__nav" aria-label="Table of contents">
+            <ul>
+              {tocHeadings.map((heading) => (
+                <li class={`pg-toc__item pg-toc__item--${heading.depth}`}>
+                  <a href={`#${heading.slug}`}>{heading.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </details>
+      )}
+
+      <div class="pg-post__content prose">
+        <Content components={mdxComponents} />
       </div>
 
-      {heroLocal && (
-        <img
-          src={heroLocal}
-          alt={data?.title ?? "Post hero image"}
-          class="pg-article__hero"
-          loading="lazy"
-        />
-      )}
-    </header>
+      <!-- End of post section -->
+      <footer class="pg-post__footer">
+        {relatedPosts.length > 0 && (
+          <section class="pg-related-posts">
+            <h2 class="pg-related-posts__title">Related Posts</h2>
+            <div class="pg-related-posts__grid">
+              {relatedPosts.map((post) => {
+                const postDate = isValidDate(post.data.publishDate) ? fmt(post.data.publishDate) : null;
+                const postSlug = getSlugFromId(post.id);
+                return (
+                  <a href={`/posts/${postSlug}/`} class="pg-related-card">
+                    <h3 class="pg-related-card__title">{post.data.title}</h3>
+                    {post.data.description && (
+                      <p class="pg-related-card__description">{post.data.description}</p>
+                    )}
+                    {postDate && (
+                      <span class="pg-related-card__date">{postDate}</span>
+                    )}
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
-    <div class="pg-article__content prose">
-      <Content components={mdxComponents} />
-    </div>
+        <div class="pg-post__nav">
+          <a href="/posts/" class="pg-btn pg-btn--secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            All Posts
+          </a>
+        </div>
+      </footer>
+    </article>
 
-    <footer class="pg-article__footer">
-      <a href="/posts/" class="pg-btn pg-btn--secondary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
-        Back to Posts
-      </a>
-    </footer>
-  </article>
+    <!-- Desktop sidebar -->
+    {tocHeadings.length > 2 && (
+      <aside class="pg-sidebar">
+        <div class="pg-sidebar__sticky">
+          <nav class="pg-toc" aria-label="Table of contents">
+            <h2 class="pg-toc__title">On this page</h2>
+            <ul class="pg-toc__list">
+              {tocHeadings.map((heading) => (
+                <li class={`pg-toc__item pg-toc__item--${heading.depth}`}>
+                  <a href={`#${heading.slug}`} class="pg-toc__link">{heading.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    )}
+  </div>
 </Layout>
 
+<script>
+  // Share button functionality
+  const shareBtn = document.getElementById('share-btn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      const url = shareBtn.getAttribute('data-url') ?? window.location.href;
+      const textEl = shareBtn.querySelector('.pg-post__share-text');
+
+      try {
+        await navigator.clipboard.writeText(url);
+        if (textEl) {
+          const original = textEl.textContent;
+          textEl.textContent = 'Copied!';
+          setTimeout(() => {
+            textEl.textContent = original;
+          }, 2000);
+        }
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    });
+  }
+
+  // TOC active state tracking
+  const tocLinks = document.querySelectorAll('.pg-toc__link');
+  const headings = document.querySelectorAll('.pg-post__content h2[id], .pg-post__content h3[id]');
+
+  if (tocLinks.length > 0 && headings.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach((link) => link.classList.remove('pg-toc__link--active'));
+            const activeLink = document.querySelector(`.pg-toc__link[href="#${entry.target.id}"]`);
+            activeLink?.classList.add('pg-toc__link--active');
+          }
+        });
+      },
+      { rootMargin: '-80px 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach((heading) => observer.observe(heading));
+  }
+</script>
+
 <style>
-  .pg-article {
-    max-width: var(--pg-max-width-prose);
+  /* Breadcrumbs */
+  .pg-breadcrumbs {
+    margin-bottom: var(--pg-space-6);
+  }
+
+  .pg-breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--pg-space-2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-muted);
+  }
+
+  .pg-breadcrumbs li:not(:last-child)::after {
+    content: "/";
+    margin-left: var(--pg-space-2);
+    color: var(--pg-text-muted);
+    opacity: 0.5;
+  }
+
+  .pg-breadcrumbs a {
+    color: var(--pg-text-muted);
+    text-decoration: none;
+  }
+
+  .pg-breadcrumbs a:hover {
+    color: var(--pg-link);
+    text-decoration: underline;
+  }
+
+  .pg-breadcrumbs [aria-current="page"] {
+    color: var(--pg-text-soft);
+    font-weight: 500;
+  }
+
+  /* Post layout with sidebar */
+  .pg-post-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--pg-space-8);
+    max-width: var(--pg-max-width-wide);
     margin: 0 auto;
   }
 
-  .pg-article__header {
-    margin-bottom: var(--pg-space-8);
-    padding-bottom: var(--pg-space-6);
-    border-bottom: 1px solid var(--pg-border);
+  @media (min-width: 1024px) {
+    .pg-post-layout {
+      grid-template-columns: 1fr 260px;
+      align-items: start;
+    }
   }
 
-  .pg-article__label {
+  /* Main post article */
+  .pg-post {
+    max-width: var(--pg-max-width-prose);
+    min-width: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .pg-post {
+      max-width: none;
+    }
+  }
+
+  /* Header */
+  .pg-post__header {
+    margin-bottom: var(--pg-space-10);
+  }
+
+  .pg-post__category {
     display: inline-block;
     font-size: var(--pg-text-xs);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--pg-text-muted);
-    margin-bottom: var(--pg-space-2);
+    letter-spacing: 0.08em;
+    color: var(--pg-link);
+    margin-bottom: var(--pg-space-3);
   }
 
-  .pg-article__title {
+  .pg-post__title {
     font-size: var(--pg-text-3xl);
-    font-weight: 700;
+    font-weight: 800;
     line-height: var(--pg-leading-tight);
     color: var(--pg-text);
     margin: 0 0 var(--pg-space-4);
+    letter-spacing: -0.02em;
   }
 
   @media (min-width: 640px) {
-    .pg-article__title {
+    .pg-post__title {
       font-size: var(--pg-text-4xl);
     }
   }
 
-  .pg-article__description {
-    font-size: var(--pg-text-lg);
+  .pg-post__dek {
+    font-size: var(--pg-text-xl);
     color: var(--pg-text-soft);
     line-height: var(--pg-leading-relaxed);
-    margin: 0 0 var(--pg-space-4);
+    margin: 0 0 var(--pg-space-6);
+    font-weight: 400;
   }
 
-  .pg-article__meta {
+  @media (min-width: 640px) {
+    .pg-post__dek {
+      font-size: 1.375rem;
+    }
+  }
+
+  /* Meta row */
+  .pg-post__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--pg-space-4);
+    padding: var(--pg-space-4) 0;
+    border-top: 1px solid var(--pg-border);
+    border-bottom: 1px solid var(--pg-border);
+    margin-bottom: var(--pg-space-4);
+  }
+
+  .pg-post__meta-left {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: var(--pg-space-4);
     font-size: var(--pg-text-sm);
     color: var(--pg-text-muted);
-    margin-bottom: var(--pg-space-6);
   }
 
-  .pg-article__date,
-  .pg-article__reading-time {
+  .pg-post__date,
+  .pg-post__updated,
+  .pg-post__reading-time {
     display: inline-flex;
     align-items: center;
     gap: var(--pg-space-2);
   }
 
-  .pg-article__date svg,
-  .pg-article__reading-time svg {
+  .pg-post__date svg,
+  .pg-post__updated svg,
+  .pg-post__reading-time svg {
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+
+  /* Share button */
+  .pg-post__share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--pg-space-2);
+    padding: var(--pg-space-2) var(--pg-space-3);
+    font-size: var(--pg-text-sm);
+    font-weight: 500;
+    color: var(--pg-text-muted);
+    background: var(--pg-surface);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-md);
+    cursor: pointer;
+    transition: all var(--pg-transition-fast);
+  }
+
+  .pg-post__share-btn:hover {
+    color: var(--pg-text);
+    border-color: var(--pg-border-muted);
+    background: var(--pg-surface-soft);
+  }
+
+  .pg-post__share-btn svg {
     opacity: 0.7;
   }
 
-  .pg-article__updated {
-    color: var(--pg-text-muted);
+  /* Tags */
+  .pg-post__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pg-space-2);
+    margin-bottom: var(--pg-space-6);
   }
 
-  .pg-article__hero {
+  .pg-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--pg-space-1) var(--pg-space-3);
+    font-size: var(--pg-text-xs);
+    font-weight: 500;
+    color: var(--pg-text-soft);
+    background: var(--pg-surface-muted);
+    border-radius: var(--pg-radius-full);
+    text-decoration: none;
+    transition: all var(--pg-transition-fast);
+  }
+
+  .pg-tag:hover {
+    color: var(--pg-text);
+    background: var(--pg-surface-soft);
+    text-decoration: none;
+  }
+
+  /* Hero image */
+  .pg-post__hero {
+    margin: var(--pg-space-6) 0 0;
+  }
+
+  .pg-post__hero img {
     width: 100%;
-    aspect-ratio: 1200 / 630;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: var(--pg-radius-xl);
-    margin-top: var(--pg-space-4);
   }
 
-  .pg-article__content {
+  /* Mobile TOC */
+  .pg-toc-mobile {
+    display: block;
+    margin-bottom: var(--pg-space-8);
+    background: var(--pg-surface-soft);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-lg);
+  }
+
+  @media (min-width: 1024px) {
+    .pg-toc-mobile {
+      display: none;
+    }
+  }
+
+  .pg-toc-mobile__trigger {
+    display: flex;
+    align-items: center;
+    gap: var(--pg-space-2);
+    width: 100%;
+    padding: var(--pg-space-4);
+    font-size: var(--pg-text-sm);
+    font-weight: 600;
+    color: var(--pg-text);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .pg-toc-mobile__trigger::-webkit-details-marker {
+    display: none;
+  }
+
+  .pg-toc-mobile__trigger span {
+    flex: 1;
+    text-align: left;
+  }
+
+  .pg-toc-mobile__chevron {
+    transition: transform var(--pg-transition-fast);
+  }
+
+  .pg-toc-mobile[open] .pg-toc-mobile__chevron {
+    transform: rotate(180deg);
+  }
+
+  .pg-toc-mobile__nav {
+    padding: 0 var(--pg-space-4) var(--pg-space-4);
+  }
+
+  .pg-toc-mobile__nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pg-toc-mobile__nav li {
+    margin: 0;
+  }
+
+  .pg-toc-mobile__nav a {
+    display: block;
+    padding: var(--pg-space-2) var(--pg-space-3);
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    text-decoration: none;
+    border-radius: var(--pg-radius-md);
+    transition: all var(--pg-transition-fast);
+  }
+
+  .pg-toc-mobile__nav a:hover {
+    color: var(--pg-text);
+    background: var(--pg-surface);
+  }
+
+  .pg-toc-mobile__nav .pg-toc__item--3 a {
+    padding-left: var(--pg-space-6);
+    font-size: var(--pg-text-xs);
+  }
+
+  /* Content area */
+  .pg-post__content {
     line-height: var(--pg-leading-loose);
   }
 
-  .pg-article__footer {
-    margin-top: var(--pg-space-12);
-    padding-top: var(--pg-space-6);
+  /* Post footer */
+  .pg-post__footer {
+    margin-top: var(--pg-space-16);
+    padding-top: var(--pg-space-10);
     border-top: 1px solid var(--pg-border);
+  }
+
+  .pg-post__nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: var(--pg-space-8);
+  }
+
+  /* Related posts */
+  .pg-related-posts {
+    margin-bottom: var(--pg-space-8);
+  }
+
+  .pg-related-posts__title {
+    font-size: var(--pg-text-xl);
+    font-weight: 700;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-6);
+  }
+
+  .pg-related-posts__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--pg-space-4);
+  }
+
+  @media (min-width: 640px) {
+    .pg-related-posts__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .pg-related-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--pg-space-5);
+    background: var(--pg-surface);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-lg);
+    text-decoration: none;
+    transition: all var(--pg-transition-fast);
+  }
+
+  .pg-related-card:hover {
+    border-color: var(--pg-border-muted);
+    box-shadow: var(--pg-shadow-md);
+    text-decoration: none;
+  }
+
+  .pg-related-card__title {
+    font-size: var(--pg-text-base);
+    font-weight: 600;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-2);
+    line-height: var(--pg-leading-snug);
+  }
+
+  .pg-related-card:hover .pg-related-card__title {
+    color: var(--pg-link);
+  }
+
+  .pg-related-card__description {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    margin: 0 0 var(--pg-space-3);
+    line-height: var(--pg-leading-relaxed);
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .pg-related-card__date {
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+  }
+
+  /* Desktop sidebar */
+  .pg-sidebar {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .pg-sidebar {
+      display: block;
+    }
+  }
+
+  .pg-sidebar__sticky {
+    position: sticky;
+    top: calc(var(--pg-space-8) + 60px);
+  }
+
+  /* Desktop TOC */
+  .pg-toc {
+    padding: var(--pg-space-5);
+    background: var(--pg-surface-soft);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-lg);
+  }
+
+  .pg-toc__title {
+    font-size: var(--pg-text-sm);
+    font-weight: 600;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-4);
+    padding-bottom: var(--pg-space-3);
+    border-bottom: 1px solid var(--pg-border);
+  }
+
+  .pg-toc__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pg-toc__item {
+    margin: 0;
+  }
+
+  .pg-toc__link {
+    display: block;
+    padding: var(--pg-space-2) 0;
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding-left: var(--pg-space-3);
+    margin-left: calc(-1 * var(--pg-space-3));
+    transition: all var(--pg-transition-fast);
+  }
+
+  .pg-toc__link:hover {
+    color: var(--pg-text);
+  }
+
+  .pg-toc__link--active {
+    color: var(--pg-link);
+    border-left-color: var(--pg-link);
+    font-weight: 500;
+  }
+
+  .pg-toc__item--3 .pg-toc__link {
+    font-size: var(--pg-text-xs);
+    padding-left: var(--pg-space-5);
+    margin-left: calc(-1 * var(--pg-space-3));
   }
 </style>
