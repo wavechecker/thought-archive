@@ -16,16 +16,24 @@
 
   "faq": [
     {
-      "question": "When is shortness of breath an emergency?",
-      "answer": "If it comes on suddenly, is severe, or is accompanied by chest pain, fainting, or blue lips — call emergency services immediately."
+      "q": "When is shortness of breath an emergency?",
+      "a": "If it comes on suddenly, is severe, or is accompanied by chest pain, fainting, or blue lips — call emergency services immediately."
     },
     {
-      "question": "Can anxiety cause breathlessness?",
-      "answer": "Yes. Panic attacks can cause shortness of breath, but it should never be assumed to be the cause until serious problems are ruled out."
+      "q": "Can anxiety cause breathlessness?",
+      "a": "Yes. Panic attacks can cause shortness of breath, but it should never be assumed to be the cause until serious problems are ruled out."
     },
     {
-      "question": "What tests might a doctor order?",
-      "answer": "ECG, chest X-ray, blood tests, lung function testing, or CT scan depending on the suspected cause."
+      "q": "What tests might a doctor order?",
+      "a": "ECG, chest X-ray, blood tests, lung function testing, or CT scan depending on the suspected cause."
+    },
+    {
+      "q": "What does blue lips or fingertips mean?",
+      "a": "Blue discoloration suggests low oxygen levels in your blood and is a medical emergency requiring immediate care."
+    },
+    {
+      "q": "Should I worry if I get breathless climbing stairs?",
+      "a": "Breathlessness with exertion that limits daily activities or is new and worsening should be evaluated by a doctor."
     }
   ],
 

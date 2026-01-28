@@ -7,6 +7,17 @@ publishDate: "2025-08-13"
 updatedDate: "2025-09-13"
 tags: ["stroke", "neurology", "emergency", "FAST test", "brain health"]
 draft: false
+faq:
+  - q: "What does FAST stand for in stroke recognition?"
+    a: "FAST stands for Face drooping, Arm weakness, Speech difficulty, and Time to call emergency services immediately."
+  - q: "Can strokes happen in younger people?"
+    a: "Yes, strokes can occur at any age, especially in people with risk factors like high blood pressure, diabetes, or smoking."
+  - q: "How quickly should I act if I suspect a stroke?"
+    a: "Call emergency services immediately — stroke treatments are most effective within the first 3–4.5 hours of symptom onset."
+  - q: "What is a TIA or mini-stroke?"
+    a: "A TIA (transient ischemic attack) causes stroke-like symptoms that resolve quickly, but it signals high risk for a major stroke and requires urgent medical evaluation."
+  - q: "Should I give aspirin to someone having a stroke?"
+    a: "Do not give aspirin unless instructed by emergency services, as it can be dangerous if the stroke is caused by bleeding in the brain."
 ---
 
 ## Intro

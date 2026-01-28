@@ -9,6 +9,17 @@ draft: false
 tags: ["chest pain", "emergency", "patientguide"]
 related:
   - /guides/early-warning-signs-of-a-heart-attack
+faq:
+  - q: "When should I call emergency services for chest pain?"
+    a: "Call immediately if chest pain lasts more than 5–10 minutes, spreads to your arm, jaw, or back, or comes with shortness of breath, sweating, or nausea."
+  - q: "Is heart pain always severe?"
+    a: "No — many heart attacks feel like pressure or tightness rather than sharp, stabbing pain."
+  - q: "What should I do while waiting for emergency help?"
+    a: "Rest and do not drive yourself. If not allergic, chew one adult aspirin (300–325 mg) and keep a list of your medications ready."
+  - q: "Can chest pain that goes away quickly still be serious?"
+    a: "Chest pain that improves may still need medical evaluation, as heart symptoms can come and go."
+  - q: "What causes chest pain besides heart problems?"
+    a: "Chest pain can also come from lung issues, heartburn, muscle strain, or anxiety, but heart causes should always be ruled out first."
 ---
 ---
 

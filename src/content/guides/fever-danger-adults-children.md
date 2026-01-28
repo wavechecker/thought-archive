@@ -5,6 +5,17 @@ category: "Emergencies"
 publishDate: "2025-08-30"
 draft: false
 tags: ["fever", "temperature", "children", "adults", "emergency", "patientguide"]
+faq:
+  - q: "What temperature counts as a fever?"
+    a: "A fever is typically 38.0°C (100.4°F) or higher when measured orally, in the ear, or at the temple."
+  - q: "Is the fever number itself dangerous?"
+    a: "Usually no — fever is part of the immune response. The cause and associated red-flag symptoms determine urgency."
+  - q: "When should I worry about a baby's fever?"
+    a: "In babies under 3 months, any fever of 38.0°C (100.4°F) or higher requires same-day medical review."
+  - q: "Can teething cause a high fever?"
+    a: "Teething may cause slight warmth but not high fever. Look for other causes if your child has a significant temperature."
+  - q: "Should I alternate paracetamol and ibuprofen?"
+    a: "Only if advised by a clinician. Start with one correctly dosed medicine first and focus on comfort rather than chasing a normal number."
 ---
 
 ## Intro
