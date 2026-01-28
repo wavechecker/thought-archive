@@ -6,24 +6,12 @@
   border-radius: 0.5rem;
 }
 
-.explainer-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.explainer-header h3 {
-  margin: 0;
+.explainer-box h3 {
+  margin-top: 0;
   font-size: 1rem;
   font-weight: 600;
 }
 
-.explainer-icon {
-  font-size: 1.1rem;
-}
-
-.explainer-content {
-  font-size: 0.95rem;
-  line-height: 1.6;
+.explainer-box ul {
+  margin-left: 1.25rem;
 }
