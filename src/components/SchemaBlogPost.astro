@@ -29,4 +29,4 @@ const json = {
 };
 const jsonStr = JSON.stringify(json);
 ---
-<script type="application/ld+json">{jsonStr}</script>
+<script type="application/ld+json" set:html={jsonStr} />

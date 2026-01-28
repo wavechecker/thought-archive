@@ -524,3 +524,288 @@ textarea:focus-visible {
   margin-right: 0.3rem;
   background: currentColor;
 }
+
+/* ===========================
+   Enhanced Post Typography
+   =========================== */
+
+/* Better heading anchor offset for sticky header */
+.pg-post__content h2[id],
+.pg-post__content h3[id],
+.pg-post__content h4[id] {
+  scroll-margin-top: 100px;
+}
+
+/* Stronger heading hierarchy */
+.pg-post__content h2 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--pg-text);
+  margin-top: var(--pg-space-12);
+  margin-bottom: var(--pg-space-5);
+  padding-bottom: var(--pg-space-3);
+  border-bottom: 1px solid var(--pg-border);
+  letter-spacing: -0.01em;
+}
+
+.pg-post__content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--pg-text);
+  margin-top: var(--pg-space-8);
+  margin-bottom: var(--pg-space-4);
+}
+
+.pg-post__content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--pg-text);
+  margin-top: var(--pg-space-6);
+  margin-bottom: var(--pg-space-3);
+}
+
+/* Comfortable reading rhythm */
+.pg-post__content p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  margin-bottom: var(--pg-space-5);
+  color: var(--pg-text);
+}
+
+/* Enhanced blockquotes */
+.pg-post__content blockquote {
+  position: relative;
+  background: linear-gradient(to right, var(--pg-surface-soft), transparent);
+  border-left: 4px solid var(--pg-link);
+  padding: var(--pg-space-5) var(--pg-space-6);
+  margin: var(--pg-space-8) 0;
+  border-radius: 0 var(--pg-radius-lg) var(--pg-radius-lg) 0;
+  font-style: normal;
+}
+
+.pg-post__content blockquote p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--pg-text-soft);
+  margin-bottom: 0;
+}
+
+.pg-post__content blockquote p:not(:last-child) {
+  margin-bottom: var(--pg-space-4);
+}
+
+/* Inline code */
+.pg-post__content code:not(pre code) {
+  background: var(--pg-surface-muted);
+  color: var(--pg-text);
+  padding: 0.2em 0.4em;
+  border-radius: var(--pg-radius-sm);
+  font-family: var(--pg-font-mono);
+  font-size: 0.875em;
+  font-weight: 500;
+}
+
+/* Code blocks */
+.pg-post__content pre {
+  background: var(--pg-surface-soft);
+  border: 1px solid var(--pg-border);
+  border-radius: var(--pg-radius-lg);
+  padding: var(--pg-space-5);
+  margin: var(--pg-space-6) 0;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.pg-post__content pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* Enhanced lists */
+.pg-post__content ul,
+.pg-post__content ol {
+  padding-left: var(--pg-space-6);
+  margin: var(--pg-space-5) 0;
+}
+
+.pg-post__content li {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-bottom: var(--pg-space-3);
+  color: var(--pg-text);
+}
+
+.pg-post__content li::marker {
+  color: var(--pg-text-muted);
+}
+
+/* Nested lists */
+.pg-post__content li ul,
+.pg-post__content li ol {
+  margin-top: var(--pg-space-2);
+  margin-bottom: var(--pg-space-2);
+}
+
+/* Images and figures */
+.pg-post__content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--pg-radius-lg);
+  margin: var(--pg-space-8) auto;
+  display: block;
+}
+
+.pg-post__content figure {
+  margin: var(--pg-space-8) 0;
+}
+
+.pg-post__content figure img {
+  margin: 0 auto var(--pg-space-3);
+}
+
+.pg-post__content figcaption {
+  text-align: center;
+  font-size: var(--pg-text-sm);
+  color: var(--pg-text-muted);
+  font-style: italic;
+}
+
+/* Tables - mobile scroll */
+.pg-post__content .table-wrapper {
+  overflow-x: auto;
+  margin: var(--pg-space-6) 0;
+  border-radius: var(--pg-radius-lg);
+  border: 1px solid var(--pg-border);
+}
+
+.pg-post__content table {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+  font-size: var(--pg-text-sm);
+  margin: 0;
+}
+
+.pg-post__content th,
+.pg-post__content td {
+  padding: var(--pg-space-3) var(--pg-space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--pg-border);
+}
+
+.pg-post__content th {
+  background: var(--pg-surface-soft);
+  font-weight: 600;
+  color: var(--pg-text);
+  white-space: nowrap;
+}
+
+.pg-post__content tr:last-child td {
+  border-bottom: none;
+}
+
+.pg-post__content tr:hover td {
+  background: var(--pg-surface-soft);
+}
+
+/* Horizontal rules */
+.pg-post__content hr {
+  border: none;
+  border-top: 1px solid var(--pg-border);
+  margin: var(--pg-space-10) 0;
+}
+
+/* Strong/emphasis */
+.pg-post__content strong {
+  font-weight: 600;
+  color: var(--pg-text);
+}
+
+.pg-post__content em {
+  font-style: italic;
+}
+
+/* Links in content */
+.pg-post__content a {
+  color: var(--pg-link);
+  text-decoration: underline;
+  text-decoration-color: rgba(37, 99, 235, 0.3);
+  text-underline-offset: 3px;
+  transition: all var(--pg-transition-fast);
+}
+
+.pg-post__content a:hover {
+  text-decoration-color: var(--pg-link);
+}
+
+/* Callout boxes (info, warning, etc.) */
+.pg-post__content .callout,
+.pg-post__content aside {
+  background: var(--pg-surface-soft);
+  border: 1px solid var(--pg-border);
+  border-radius: var(--pg-radius-lg);
+  padding: var(--pg-space-5);
+  margin: var(--pg-space-6) 0;
+}
+
+.pg-post__content .callout-info,
+.pg-post__content aside.info {
+  background: var(--pg-summary-bg);
+  border-color: var(--pg-summary-border);
+}
+
+.pg-post__content .callout-warning {
+  background: var(--pg-risk-moderate-bg);
+  border-color: var(--pg-risk-moderate-border);
+}
+
+.pg-post__content .callout-danger {
+  background: var(--pg-risk-high-bg);
+  border-color: var(--pg-risk-high-border);
+}
+
+/* Embedded content spacing */
+.pg-post__content iframe {
+  max-width: 100%;
+  margin: var(--pg-space-8) auto;
+  display: block;
+  border-radius: var(--pg-radius-lg);
+}
+
+/* First paragraph drop cap effect (optional, subtle) */
+.pg-post__content > p:first-of-type::first-letter {
+  font-size: 3.25em;
+  font-weight: 700;
+  float: left;
+  line-height: 0.85;
+  margin-right: 0.1em;
+  margin-top: 0.05em;
+  color: var(--pg-text);
+}
+
+@media (max-width: 640px) {
+  .pg-post__content > p:first-of-type::first-letter {
+    font-size: 2.75em;
+  }
+
+  .pg-post__content h2 {
+    font-size: 1.375rem;
+    margin-top: var(--pg-space-10);
+  }
+
+  .pg-post__content h3 {
+    font-size: 1.125rem;
+  }
+
+  .pg-post__content p,
+  .pg-post__content li {
+    font-size: 1rem;
+  }
+
+  .pg-post__content blockquote p {
+    font-size: 1rem;
+  }
+}
