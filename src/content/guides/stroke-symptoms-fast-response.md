@@ -7,6 +7,17 @@ tags: ["stroke", "neurology", "emergency", "FAST response", "brain health"]
 publishDate: "2025-08-14"
 updatedDate: "2025-08-21"
 draft: false
+faq:
+  - q: "What is a transient ischemic attack (TIA)?"
+    a: "A TIA is a temporary episode where stroke symptoms appear but resolve within minutes to hours — it's a serious warning sign that a major stroke may follow."
+  - q: "If symptoms go away, do I still need emergency care?"
+    a: "Yes — even if symptoms resolve, a TIA signals high stroke risk and requires immediate medical evaluation."
+  - q: "What symptoms can a TIA cause?"
+    a: "TIAs can cause sudden face drooping, arm weakness, slurred speech, vision changes, confusion, numbness, or balance problems."
+  - q: "What should I do while waiting for help?"
+    a: "Stay calm, note the time symptoms started, do not eat or drink, and wait for emergency services to arrive."
+  - q: "Can young people have TIAs?"
+    a: "Yes — TIAs and strokes can occur at any age, especially in those with risk factors like high blood pressure, diabetes, or smoking."
 ---
 
 
