@@ -1,0 +1,17 @@
+.explainer-box {
+  border-left: 4px solid var(--accent, #2563eb);
+  background: #f8fafc;
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.explainer-box h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.explainer-box ul {
+  margin-left: 1.25rem;
+}
