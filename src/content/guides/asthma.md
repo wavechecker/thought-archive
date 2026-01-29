@@ -1,121 +1,28 @@
 ---
-{
-  "title": "Asthma — Symptoms, Triggers, and Treatment",
-  "slug": "asthma",
-  "description": "A guide to asthma — what it is, common symptoms, triggers, diagnosis, and how it is treated.",
-  "category": "Respiratory",
-  "tags": ["asthma", "respiratory", "lungs", "breathing", "wheezing"],
-  "publishDate": "2025-09-18",
-  "updatedDate": "2025-09-18",
-  "draft": false,
-  "related": [
-    "/guides/copd",
-    "/guides/sleep-apnoea",
-    "/guides/shortness-of-breath"
-  ],
-
-  "faq": [
-    {
-      "question": "What is asthma?",
-      "answer": "Asthma is a long-term condition that inflames and narrows the airways, causing wheezing, coughing, chest tightness, and shortness of breath."
-    },
-    {
-      "question": "What triggers asthma attacks?",
-      "answer": "Common triggers include allergens (dust mites, pollen, pets), respiratory infections, exercise, cold air, smoke, and stress."
-    },
-    {
-      "question": "How is asthma diagnosed?",
-      "answer": "Doctors use medical history, symptom review, and lung function tests like spirometry or peak flow monitoring."
-    },
-    {
-      "question": "How is asthma treated?",
-      "answer": "Treatment usually involves inhalers — preventers (steroids), relievers (bronchodilators), and sometimes combination therapy."
-    },
-    {
-      "question": "Can asthma be cured?",
-      "answer": "No, but with good management, most people live full, active lives and keep symptoms under control."
-    }
-  ],
-
-  "jsonLd": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Asthma — Symptoms, Triggers, and Treatment",
-      "description": "A guide to asthma — what it is, common symptoms, triggers, diagnosis, and how it is treated.",
-      "datePublished": "2025-09-18",
-      "dateModified": "2025-09-18",
-      "url": "/guides/asthma",
-      "inLanguage": "en",
-      "author": { "@type": "Organization", "name": "patientguide.io" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "patientguide.io",
-        "logo": { "@type": "ImageObject", "url": "/logo.png" }
-      },
-      "about": [
-        { "@type": "MedicalCondition", "name": "Asthma" },
-        { "@type": "MedicalCondition", "name": "Allergic asthma" },
-        { "@type": "MedicalCondition", "name": "Exercise-induced asthma" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is asthma?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Asthma is a long-term condition that inflames and narrows the airways, causing wheezing, coughing, chest tightness, and shortness of breath."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What triggers asthma attacks?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Common triggers include allergens (dust mites, pollen, pets), respiratory infections, exercise, cold air, smoke, and stress."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is asthma diagnosed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Doctors use medical history, symptom review, and lung function tests like spirometry or peak flow monitoring."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is asthma treated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Treatment usually involves inhalers — preventers (steroids), relievers (bronchodilators), and sometimes combination therapy."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can asthma be cured?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, but with good management, most people live full, active lives and keep symptoms under control."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
-        { "@type": "ListItem", "position": 2, "name": "Respiratory", "item": "/guides/respiratory" },
-        { "@type": "ListItem", "position": 3, "name": "Asthma — Symptoms, Triggers, and Treatment", "item": "/guides/asthma" }
-      ]
-    }
-  ]
-}
+title: "Asthma — Symptoms, Triggers, and Treatment"
+slug: asthma
+description: "A guide to asthma — what it is, common symptoms, triggers, diagnosis, and how it is treated."
+category: Respiratory
+tags:
+  - asthma
+  - respiratory
+  - lungs
+  - breathing
+  - wheezing
+publishDate: '2025-09-18'
+updatedDate: '2025-09-18'
+draft: false
+faq:
+  - q: "What is asthma?"
+    a: "Asthma is a long-term condition that inflames and narrows the airways, causing wheezing, coughing, chest tightness, and shortness of breath."
+  - q: "What triggers asthma attacks?"
+    a: "Common triggers include allergens (dust mites, pollen, pets), respiratory infections, exercise, cold air, smoke, and stress."
+  - q: "How is asthma diagnosed?"
+    a: "Doctors use medical history, symptom review, and lung function tests like spirometry or peak flow monitoring."
+  - q: "How is asthma treated?"
+    a: "Treatment usually involves inhalers — preventers (steroids), relievers (bronchodilators), and sometimes combination therapy."
+  - q: "Can asthma be cured?"
+    a: "No, but with good management, most people live full, active lives and keep symptoms under control."
 ---
 
 ## Intro

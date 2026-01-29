@@ -1,110 +1,26 @@
 ---
-{
-  "title": "Chest Pain Symptoms — When to Call 911",
-  "slug": "chest-pain-symptoms",
-  "description": "Learn when chest pain is an emergency, common causes, and what tests doctors may use to find the cause.",
-  "category": "Heart & Circulation",
-  "tags": ["chest pain", "emergency", "heart attack", "angina", "cardiology"],
-  "publishDate": "2025-09-18",
-  "updatedDate": "2025-09-18",
-  "draft": false,
-  "related": [
-    "/guides/shortness-of-breath",
-    "/guides/heart-palpitations-when-to-worry",
-    "/guides/atrial-fibrillation"
-  ],
-
-  "faq": [
-    {
-      "question": "When is chest pain a medical emergency?",
-      "answer": "If chest pain is sudden, severe, crushing, or associated with shortness of breath, fainting, nausea, or sweating — call emergency services immediately."
-    },
-    {
-      "question": "What are common non-cardiac causes of chest pain?",
-      "answer": "Heartburn, anxiety, muscle strain, lung infections, and even shingles can mimic chest pain."
-    },
-    {
-      "question": "What tests might be done in the ER?",
-      "answer": "Doctors may order an ECG, blood tests (troponin), chest X-ray, or CT scan depending on the suspected cause."
-    },
-    {
-      "question": "Can younger adults have serious chest pain?",
-      "answer": "Yes. While heart disease is more common with age, conditions like spontaneous coronary artery dissection (SCAD) or pulmonary embolism can occur in younger patients."
-    }
-  ],
-
-  "jsonLd": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Chest Pain Symptoms — When to Call 911",
-      "description": "Learn when chest pain is an emergency, common causes, and what tests doctors may use to find the cause.",
-      "datePublished": "2025-09-18",
-      "dateModified": "2025-09-18",
-      "url": "/guides/chest-pain-symptoms",
-      "inLanguage": "en",
-      "author": { "@type": "Organization", "name": "patientguide.io" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "patientguide.io",
-        "logo": { "@type": "ImageObject", "url": "/logo.png" }
-      },
-      "about": [
-        { "@type": "MedicalCondition", "name": "Chest pain" },
-        { "@type": "MedicalCondition", "name": "Heart attack" },
-        { "@type": "MedicalCondition", "name": "Angina" },
-        { "@type": "MedicalCondition", "name": "Pulmonary embolism" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "When is chest pain a medical emergency?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If chest pain is sudden, severe, crushing, or associated with shortness of breath, fainting, nausea, or sweating — call emergency services immediately."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are common non-cardiac causes of chest pain?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Heartburn, anxiety, muscle strain, lung infections, and even shingles can mimic chest pain."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What tests might be done in the ER?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Doctors may order an ECG, blood tests (troponin), chest X-ray, or CT scan depending on the suspected cause."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can younger adults have serious chest pain?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. While heart disease is more common with age, conditions like spontaneous coronary artery dissection (SCAD) or pulmonary embolism can occur in younger patients."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
-        { "@type": "ListItem", "position": 2, "name": "Heart & Circulation", "item": "/guides/heart-circulation" },
-        { "@type": "ListItem", "position": 3, "name": "Chest Pain Symptoms — When to Call 911", "item": "/guides/chest-pain-symptoms" }
-      ]
-    }
-  ]
-}
+title: "Chest Pain Symptoms — When to Call 911"
+slug: chest-pain-symptoms
+description: "Learn when chest pain is an emergency, common causes, and what tests doctors may use to find the cause."
+category: Heart & Circulation
+tags:
+  - chest pain
+  - emergency
+  - heart attack
+  - angina
+  - cardiology
+publishDate: '2025-09-18'
+updatedDate: '2025-09-18'
+draft: false
+faq:
+  - q: "When is chest pain a medical emergency?"
+    a: "If chest pain is sudden, severe, crushing, or associated with shortness of breath, fainting, nausea, or sweating — call emergency services immediately."
+  - q: "What are common non-cardiac causes of chest pain?"
+    a: "Heartburn, anxiety, muscle strain, lung infections, and even shingles can mimic chest pain."
+  - q: "What tests might be done in the ER?"
+    a: "Doctors may order an ECG, blood tests (troponin), chest X-ray, or CT scan depending on the suspected cause."
+  - q: "Can younger adults have serious chest pain?"
+    a: "Yes. While heart disease is more common with age, conditions like spontaneous coronary artery dissection (SCAD) or pulmonary embolism can occur in younger patients."
 ---
 
 ## Intro

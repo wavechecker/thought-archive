@@ -1,120 +1,28 @@
 ---
-{
-  "title": "Heart Palpitations: When to Worry",
-  "slug": "heart-palpitations-when-to-worry",
-  "description": "A guide to understanding heart palpitations — common causes, when to seek help, and what tests may be done.",
-  "category": "Heart & Circulation",
-  "tags": ["heart palpitations", "arrhythmia", "cardiology", "chest symptoms", "EKG"],
-  "publishDate": "2025-09-08",
-  "updatedDate": "2025-09-18",
-  "draft": false,
-  "related": [
-    "/guides/chest-pain-symptoms",
-    "/guides/shortness-of-breath",
-    "/guides/atrial-fibrillation"
-  ],
-
-  "faq": [
-    {
-      "question": "Should I see a doctor if my heart races during exercise?",
-      "answer": "A faster heartbeat during exertion is normal. If it feels irregular, causes chest pain, or makes you faint, see a doctor."
-    },
-    {
-      "question": "Can anxiety really cause palpitations?",
-      "answer": "Yes. Stress hormones trigger the heart to beat faster and stronger. This is one of the most common causes."
-    },
-    {
-      "question": "What tests should I expect?",
-      "answer": "Usually an ECG first, sometimes a Holter monitor, blood tests, and rarely an echocardiogram."
-    },
-    {
-      "question": "Are palpitations dangerous in young healthy people?",
-      "answer": "Usually not. They are often due to lifestyle triggers and resolve with reassurance and lifestyle changes."
-    },
-    {
-      "question": "When are palpitations a medical emergency?",
-      "answer": "If they come with chest pain, fainting, severe shortness of breath, or last more than a few minutes, call emergency services."
-    }
-  ],
-
-  "jsonLd": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Heart Palpitations: When to Worry",
-      "description": "A guide to understanding heart palpitations — common causes, when to seek help, and what tests may be done.",
-      "datePublished": "2025-09-08",
-      "dateModified": "2025-09-18",
-      "url": "/guides/heart-palpitations-when-to-worry",
-      "inLanguage": "en",
-      "author": { "@type": "Organization", "name": "patientguide.io" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "patientguide.io",
-        "logo": { "@type": "ImageObject", "url": "/logo.png" }
-      },
-      "about": [
-        { "@type": "MedicalCondition", "name": "Palpitations" },
-        { "@type": "MedicalCondition", "name": "Arrhythmia" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Should I see a doctor if my heart races during exercise?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A faster heartbeat during exertion is normal. If it feels irregular, causes chest pain, or makes you faint, see a doctor."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can anxiety really cause palpitations?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Stress hormones trigger the heart to beat faster and stronger. This is one of the most common causes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What tests should I expect?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually an ECG first, sometimes a Holter monitor, blood tests, and rarely an echocardiogram."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are palpitations dangerous in young healthy people?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually not. They are often due to lifestyle triggers and resolve with reassurance and lifestyle changes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When are palpitations a medical emergency?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If they come with chest pain, fainting, severe shortness of breath, or last more than a few minutes, call emergency services."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
-        { "@type": "ListItem", "position": 2, "name": "Heart & Circulation", "item": "/guides/heart-circulation" },
-        { "@type": "ListItem", "position": 3, "name": "Heart Palpitations: When to Worry", "item": "/guides/heart-palpitations-when-to-worry" }
-      ]
-    }
-  ]
-}
+title: "Heart Palpitations: When to Worry"
+slug: heart-palpitations
+description: "A guide to understanding heart palpitations — common causes, when to seek help, and what tests may be done."
+category: Heart & Circulation
+tags:
+  - heart palpitations
+  - arrhythmia
+  - cardiology
+  - chest symptoms
+  - EKG
+publishDate: '2025-09-08'
+updatedDate: '2025-09-18'
+draft: false
+faq:
+  - q: "Should I see a doctor if my heart races during exercise?"
+    a: "A faster heartbeat during exertion is normal. If it feels irregular, causes chest pain, or makes you faint, see a doctor."
+  - q: "Can anxiety really cause palpitations?"
+    a: "Yes. Stress hormones trigger the heart to beat faster and stronger. This is one of the most common causes."
+  - q: "What tests should I expect?"
+    a: "Usually an ECG first, sometimes a Holter monitor, blood tests, and rarely an echocardiogram."
+  - q: "Are palpitations dangerous in young healthy people?"
+    a: "Usually not. They are often due to lifestyle triggers and resolve with reassurance and lifestyle changes."
+  - q: "When are palpitations a medical emergency?"
+    a: "If they come with chest pain, fainting, severe shortness of breath, or last more than a few minutes, call emergency services."
 ---
 
 ## Intro

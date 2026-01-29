@@ -1,120 +1,28 @@
 ---
-{
-  "title": "Shortness of Breath — When to Seek Urgent Help",
-  "slug": "shortness-of-breath",
-  "description": "Red flags for breathlessness that warrant medical review, and when to seek emergency care.",
-  "category": "Respiratory",
-  "tags": ["respiratory", "shortness of breath", "emergency", "heart", "lungs"],
-  "publishDate": "2025-08-20",
-  "updatedDate": "2025-09-18",
-  "draft": false,
-  "related": [
-    "/guides/asthma",
-    "/guides/copd",
-    "/guides/sleep-apnoea"
-  ],
-
-  "faq": [
-    {
-      "q": "When is shortness of breath an emergency?",
-      "a": "If it comes on suddenly, is severe, or is accompanied by chest pain, fainting, or blue lips — call emergency services immediately."
-    },
-    {
-      "q": "Can anxiety cause breathlessness?",
-      "a": "Yes. Panic attacks can cause shortness of breath, but it should never be assumed to be the cause until serious problems are ruled out."
-    },
-    {
-      "q": "What tests might a doctor order?",
-      "a": "ECG, chest X-ray, blood tests, lung function testing, or CT scan depending on the suspected cause."
-    },
-    {
-      "q": "What does blue lips or fingertips mean?",
-      "a": "Blue discoloration suggests low oxygen levels in your blood and is a medical emergency requiring immediate care."
-    },
-    {
-      "q": "Should I worry if I get breathless climbing stairs?",
-      "a": "Breathlessness with exertion that limits daily activities or is new and worsening should be evaluated by a doctor."
-    }
-  ],
-
-  "jsonLd": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Shortness of Breath — When to Seek Urgent Help",
-      "description": "Red flags for breathlessness that warrant medical review, and when to seek emergency care.",
-      "datePublished": "2025-08-20",
-      "dateModified": "2025-09-18",
-      "url": "/guides/shortness-of-breath",
-      "inLanguage": "en",
-      "author": { "@type": "Organization", "name": "patientguide.io" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "patientguide.io",
-        "logo": { "@type": "ImageObject", "url": "/logo.png" }
-      },
-      "about": [
-        { "@type": "MedicalCondition", "name": "Dyspnea (Shortness of breath)" },
-        { "@type": "MedicalCondition", "name": "Asthma" },
-        { "@type": "MedicalCondition", "name": "Chronic Obstructive Pulmonary Disease (COPD)" },
-        { "@type": "MedicalCondition", "name": "Sleep apnoea" },
-        { "@type": "MedicalCondition", "name": "Heart failure" },
-        { "@type": "MedicalCondition", "name": "Pulmonary embolism" }
-      ],
-      "citation": [
-        {
-          "@type": "ScholarlyArticle",
-          "name": "An official American Thoracic Society statement: Update on the mechanisms, assessment, and management of dyspnea.",
-          "datePublished": "2012",
-          "identifier": "https://doi.org/10.1164/rccm.201111-2042ST",
-          "isPartOf": {
-            "@type": "Periodical",
-            "name": "American Journal of Respiratory and Critical Care Medicine"
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "When is shortness of breath an emergency?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If it comes on suddenly, is severe, or is accompanied by chest pain, fainting, or blue lips — call emergency services immediately."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can anxiety cause breathlessness?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Panic attacks can cause shortness of breath, but it should never be assumed to be the cause until serious problems are ruled out."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What tests might a doctor order?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ECG, chest X-ray, blood tests, lung function testing, or CT scan depending on the suspected cause."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
-        { "@type": "ListItem", "position": 2, "name": "Respiratory", "item": "/guides/respiratory" },
-        { "@type": "ListItem", "position": 3, "name": "Shortness of Breath — When to Seek Urgent Help", "item": "/guides/shortness-of-breath" }
-      ]
-    }
-  ]
-}
+title: "Shortness of Breath — When to Seek Urgent Help"
+slug: shortness-of-breath
+description: "Red flags for breathlessness that warrant medical review, and when to seek emergency care."
+category: Respiratory
+tags:
+  - respiratory
+  - shortness of breath
+  - emergency
+  - heart
+  - lungs
+publishDate: '2025-08-20'
+updatedDate: '2025-09-18'
+draft: false
+faq:
+  - q: "When is shortness of breath an emergency?"
+    a: "If it comes on suddenly, is severe, or is accompanied by chest pain, fainting, or blue lips — call emergency services immediately."
+  - q: "Can anxiety cause breathlessness?"
+    a: "Yes. Panic attacks can cause shortness of breath, but it should never be assumed to be the cause until serious problems are ruled out."
+  - q: "What tests might a doctor order?"
+    a: "ECG, chest X-ray, blood tests, lung function testing, or CT scan depending on the suspected cause."
+  - q: "What does blue lips or fingertips mean?"
+    a: "Blue discoloration suggests low oxygen levels in your blood and is a medical emergency requiring immediate care."
+  - q: "Should I worry if I get breathless climbing stairs?"
+    a: "Breathlessness with exertion that limits daily activities or is new and worsening should be evaluated by a doctor."
 ---
 
 ## Intro
