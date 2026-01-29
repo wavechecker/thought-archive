@@ -1,121 +1,28 @@
 ---
-{
-  "title": "Chronic Obstructive Pulmonary Disease (COPD) — Causes, Symptoms, and Treatment",
-  "slug": "copd",
-  "description": "A comprehensive guide to COPD — what it is, causes, symptoms, risks, and current treatments.",
-  "category": "Respiratory",
-  "tags": ["copd", "respiratory", "lungs", "breathing", "smoking"],
-  "publishDate": "2025-09-18",
-  "updatedDate": "2025-09-18",
-  "draft": false,
-  "related": [
-    "/guides/asthma",
-    "/guides/sleep-apnoea",
-    "/guides/shortness-of-breath"
-  ],
-
-  "faq": [
-    {
-      "question": "What is COPD?",
-      "answer": "COPD (chronic obstructive pulmonary disease) is a long-term lung condition that makes it hard to breathe due to narrowed airways and damage to lung tissue."
-    },
-    {
-      "question": "What are the main symptoms of COPD?",
-      "answer": "Common symptoms include chronic cough, mucus production, wheezing, shortness of breath (especially on exertion), and frequent chest infections."
-    },
-    {
-      "question": "What causes COPD?",
-      "answer": "The main cause is long-term exposure to irritants, especially cigarette smoking. Air pollution, workplace dust, and genetic conditions like alpha-1 antitrypsin deficiency also play a role."
-    },
-    {
-      "question": "How is COPD diagnosed?",
-      "answer": "Diagnosis is based on symptoms, a physical exam, and lung function tests (spirometry). Chest X-rays or CT scans may also be used."
-    },
-    {
-      "question": "What treatments are available for COPD?",
-      "answer": "There is no cure, but treatments include quitting smoking, inhalers (bronchodilators, steroids), pulmonary rehab, oxygen therapy, and in severe cases surgery or lung transplant."
-    }
-  ],
-
-  "jsonLd": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Chronic Obstructive Pulmonary Disease (COPD) — Causes, Symptoms, and Treatment",
-      "description": "A comprehensive guide to COPD — what it is, causes, symptoms, risks, and current treatments.",
-      "datePublished": "2025-09-18",
-      "dateModified": "2025-09-18",
-      "url": "/guides/copd",
-      "inLanguage": "en",
-      "author": { "@type": "Organization", "name": "patientguide.io" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "patientguide.io",
-        "logo": { "@type": "ImageObject", "url": "/logo.png" }
-      },
-      "about": [
-        { "@type": "MedicalCondition", "name": "Chronic Obstructive Pulmonary Disease" },
-        { "@type": "MedicalCondition", "name": "Chronic bronchitis" },
-        { "@type": "MedicalCondition", "name": "Emphysema" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is COPD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "COPD (chronic obstructive pulmonary disease) is a long-term lung condition that makes it hard to breathe due to narrowed airways and damage to lung tissue."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the main symptoms of COPD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Common symptoms include chronic cough, mucus production, wheezing, shortness of breath (especially on exertion), and frequent chest infections."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What causes COPD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The main cause is long-term exposure to irritants, especially cigarette smoking. Air pollution, workplace dust, and genetic conditions like alpha-1 antitrypsin deficiency also play a role."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is COPD diagnosed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Diagnosis is based on symptoms, a physical exam, and lung function tests (spirometry). Chest X-rays or CT scans may also be used."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What treatments are available for COPD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "There is no cure, but treatments include quitting smoking, inhalers (bronchodilators, steroids), pulmonary rehab, oxygen therapy, and in severe cases surgery or lung transplant."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
-        { "@type": "ListItem", "position": 2, "name": "Respiratory", "item": "/guides/respiratory" },
-        { "@type": "ListItem", "position": 3, "name": "Chronic Obstructive Pulmonary Disease (COPD)", "item": "/guides/copd" }
-      ]
-    }
-  ]
-}
+title: "Chronic Obstructive Pulmonary Disease (COPD) — Causes, Symptoms, and Treatment"
+slug: copd
+description: "A comprehensive guide to COPD — what it is, causes, symptoms, risks, and current treatments."
+category: Respiratory
+tags:
+  - copd
+  - respiratory
+  - lungs
+  - breathing
+  - smoking
+publishDate: '2025-09-18'
+updatedDate: '2025-09-18'
+draft: false
+faq:
+  - q: "What is COPD?"
+    a: "COPD (chronic obstructive pulmonary disease) is a long-term lung condition that makes it hard to breathe due to narrowed airways and damage to lung tissue."
+  - q: "What are the main symptoms of COPD?"
+    a: "Common symptoms include chronic cough, mucus production, wheezing, shortness of breath (especially on exertion), and frequent chest infections."
+  - q: "What causes COPD?"
+    a: "The main cause is long-term exposure to irritants, especially cigarette smoking. Air pollution, workplace dust, and genetic conditions like alpha-1 antitrypsin deficiency also play a role."
+  - q: "How is COPD diagnosed?"
+    a: "Diagnosis is based on symptoms, a physical exam, and lung function tests (spirometry). Chest X-rays or CT scans may also be used."
+  - q: "What treatments are available for COPD?"
+    a: "There is no cure, but treatments include quitting smoking, inhalers (bronchodilators, steroids), pulmonary rehab, oxygen therapy, and in severe cases surgery or lung transplant."
 ---
 
 ## Intro

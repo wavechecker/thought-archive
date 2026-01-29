@@ -1,97 +1,24 @@
 ---
-{
-  "title": "Wheezing & Night-time Breathlessness — What It Means",
-  "slug": "wheezing-night-time-breathlessness",
-  "description": "A symptom guide on wheezing and breathlessness at night — how to tell if it's asthma, sleep apnoea, or something else.",
-  "category": "Respiratory",
-  "tags": ["wheezing", "shortness of breath", "asthma", "sleep apnoea", "respiratory"],
-  "publishDate": "2025-09-18",
-  "updatedDate": "2025-09-18",
-  "draft": false,
-  "related": [
-    "/guides/asthma",
-    "/guides/sleep-apnoea",
-    "/guides/shortness-of-breath"
-  ],
-
-  "faq": [
-    {
-      "question": "Is wheezing at night always asthma?",
-      "answer": "Not always. While asthma commonly causes night-time wheezing, sleep apnoea, heart failure, and other conditions can also lead to night-time breathlessness."
-    },
-    {
-      "question": "How can I tell if it's asthma or sleep apnoea?",
-      "answer": "Asthma often presents with wheezing, cough, and chest tightness that improve with inhalers. Sleep apnoea typically causes loud snoring, witnessed pauses in breathing, and unrefreshing sleep."
-    },
-    {
-      "question": "When should I seek urgent help?",
-      "answer": "If night-time breathlessness is sudden, severe, or accompanied by chest pain, blue lips, or fainting, seek emergency care immediately."
-    }
-  ],
-
-  "jsonLd": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Wheezing & Night-time Breathlessness — What It Means",
-      "description": "A symptom guide on wheezing and breathlessness at night — how to tell if it's asthma, sleep apnoea, or something else.",
-      "datePublished": "2025-09-18",
-      "dateModified": "2025-09-18",
-      "url": "/guides/wheezing-night-time-breathlessness",
-      "inLanguage": "en",
-      "author": { "@type": "Organization", "name": "patientguide.io" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "patientguide.io",
-        "logo": { "@type": "ImageObject", "url": "/logo.png" }
-      },
-      "about": [
-        { "@type": "MedicalCondition", "name": "Asthma" },
-        { "@type": "MedicalCondition", "name": "Sleep apnoea" },
-        { "@type": "MedicalCondition", "name": "Dyspnea (shortness of breath)" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is wheezing at night always asthma?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not always. While asthma commonly causes night-time wheezing, sleep apnoea, heart failure, and other conditions can also lead to night-time breathlessness."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I tell if it's asthma or sleep apnoea?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Asthma often presents with wheezing, cough, and chest tightness that improve with inhalers. Sleep apnoea typically causes loud snoring, witnessed pauses in breathing, and unrefreshing sleep."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When should I seek urgent help?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If night-time breathlessness is sudden, severe, or accompanied by chest pain, blue lips, or fainting, seek emergency care immediately."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
-        { "@type": "ListItem", "position": 2, "name": "Respiratory", "item": "/guides/respiratory" },
-        { "@type": "ListItem", "position": 3, "name": "Wheezing & Night-time Breathlessness", "item": "/guides/wheezing-night-time-breathlessness" }
-      ]
-    }
-  ]
-}
+title: "Wheezing & Night-time Breathlessness — What It Means"
+slug: wheezing-night-time-breathlessness
+description: "A symptom guide on wheezing and breathlessness at night — how to tell if it's asthma, sleep apnoea, or something else."
+category: Respiratory
+tags:
+  - wheezing
+  - shortness of breath
+  - asthma
+  - sleep apnoea
+  - respiratory
+publishDate: '2025-09-18'
+updatedDate: '2025-09-18'
+draft: false
+faq:
+  - q: "Is wheezing at night always asthma?"
+    a: "Not always. While asthma commonly causes night-time wheezing, sleep apnoea, heart failure, and other conditions can also lead to night-time breathlessness."
+  - q: "How can I tell if it's asthma or sleep apnoea?"
+    a: "Asthma often presents with wheezing, cough, and chest tightness that improve with inhalers. Sleep apnoea typically causes loud snoring, witnessed pauses in breathing, and unrefreshing sleep."
+  - q: "When should I seek urgent help?"
+    a: "If night-time breathlessness is sudden, severe, or accompanied by chest pain, blue lips, or fainting, seek emergency care immediately."
 ---
 
 ## Intro

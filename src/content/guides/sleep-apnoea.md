@@ -1,122 +1,28 @@
 ---
-{
-  "title": "Sleep Apnoea — Causes, Risks, and Treatment",
-  "slug": "sleep-apnoea",
-  "description": "A guide to understanding sleep apnoea, its symptoms, health risks, and available treatments.",
-  "category": "Respiratory",
-  "tags": ["sleep apnoea", "snoring", "sleep disorders", "CPAP", "respiratory"],
-  "publishDate": "2025-09-18",
-  "updatedDate": "2025-09-18",
-  "draft": false,
-  "related": [
-    "/guides/shortness-of-breath",
-    "/guides/asthma",
-    "/guides/copd"
-  ],
-
-  "faq": [
-    {
-      "question": "What is sleep apnoea?",
-      "answer": "Sleep apnoea is a condition where breathing repeatedly stops and starts during sleep, often due to airway blockage or brain signalling problems."
-    },
-    {
-      "question": "What are the main symptoms?",
-      "answer": "Loud snoring, daytime sleepiness, waking up gasping, morning headaches, and poor concentration are common signs."
-    },
-    {
-      "question": "Why is sleep apnoea dangerous?",
-      "answer": "It increases the risk of high blood pressure, heart disease, stroke, diabetes, and accidents due to daytime sleepiness."
-    },
-    {
-      "question": "How is sleep apnoea diagnosed?",
-      "answer": "Through a sleep study (polysomnography) in a clinic or at home, which measures breathing, oxygen levels, and sleep patterns."
-    },
-    {
-      "question": "What treatments are available?",
-      "answer": "Lifestyle changes (weight loss, reducing alcohol), CPAP machines, oral appliances, and in some cases surgery."
-    }
-  ],
-
-  "jsonLd": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Sleep Apnoea — Causes, Risks, and Treatment",
-      "description": "A guide to understanding sleep apnoea, its symptoms, health risks, and available treatments.",
-      "datePublished": "2025-09-18",
-      "dateModified": "2025-09-18",
-      "url": "/guides/sleep-apnoea",
-      "inLanguage": "en",
-      "author": { "@type": "Organization", "name": "patientguide.io" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "patientguide.io",
-        "logo": { "@type": "ImageObject", "url": "/logo.png" }
-      },
-      "about": [
-        { "@type": "MedicalCondition", "name": "Sleep apnoea" },
-        { "@type": "MedicalCondition", "name": "Obstructive sleep apnoea" },
-        { "@type": "MedicalCondition", "name": "Central sleep apnoea" },
-        { "@type": "MedicalCondition", "name": "Hypertension" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is sleep apnoea?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sleep apnoea is a condition where breathing repeatedly stops and starts during sleep, often due to airway blockage or brain signalling problems."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the main symptoms?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Loud snoring, daytime sleepiness, waking up gasping, morning headaches, and poor concentration are common signs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is sleep apnoea dangerous?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It increases the risk of high blood pressure, heart disease, stroke, diabetes, and accidents due to daytime sleepiness."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is sleep apnoea diagnosed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Through a sleep study (polysomnography) in a clinic or at home, which measures breathing, oxygen levels, and sleep patterns."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What treatments are available?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Lifestyle changes (weight loss, reducing alcohol), CPAP machines, oral appliances, and in some cases surgery."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
-        { "@type": "ListItem", "position": 2, "name": "Respiratory", "item": "/guides/respiratory" },
-        { "@type": "ListItem", "position": 3, "name": "Sleep Apnoea — Causes, Risks, and Treatment", "item": "/guides/sleep-apnoea" }
-      ]
-    }
-  ]
-}
+title: "Sleep Apnoea — Causes, Risks, and Treatment"
+slug: sleep-apnoea
+description: "A guide to understanding sleep apnoea, its symptoms, health risks, and available treatments."
+category: Respiratory
+tags:
+  - sleep apnoea
+  - snoring
+  - sleep disorders
+  - CPAP
+  - respiratory
+publishDate: '2025-09-18'
+updatedDate: '2025-09-18'
+draft: false
+faq:
+  - q: "What is sleep apnoea?"
+    a: "Sleep apnoea is a condition where breathing repeatedly stops and starts during sleep, often due to airway blockage or brain signalling problems."
+  - q: "What are the main symptoms?"
+    a: "Loud snoring, daytime sleepiness, waking up gasping, morning headaches, and poor concentration are common signs."
+  - q: "Why is sleep apnoea dangerous?"
+    a: "It increases the risk of high blood pressure, heart disease, stroke, diabetes, and accidents due to daytime sleepiness."
+  - q: "How is sleep apnoea diagnosed?"
+    a: "Through a sleep study (polysomnography) in a clinic or at home, which measures breathing, oxygen levels, and sleep patterns."
+  - q: "What treatments are available?"
+    a: "Lifestyle changes (weight loss, reducing alcohol), CPAP machines, oral appliances, and in some cases surgery."
 ---
 
 ## Intro
