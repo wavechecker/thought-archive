@@ -35,12 +35,16 @@ schema:
       - 'https://www.who.int/'
       - 'https://medlineplus.gov/'
 faq:
-  - q: >-
-      What is new 2025 high blood pressure guideline: prevention, early
-      treatment, and brain health?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What is new in the 2025 blood pressure guidelines?"
+    a: "The 2025 guidelines emphasize earlier treatment, brain health protection, improved pregnancy care, and a new risk calculator to personalize treatment."
+  - q: "When should I seek emergency care for high blood pressure?"
+    a: "Seek emergency care if you have severely elevated blood pressure with symptoms like chest pain, severe headache, vision changes, confusion, or shortness of breath."
+  - q: "Can high blood pressure affect my brain?"
+    a: "Yes — uncontrolled hypertension can accelerate memory decline and increase the risk of dementia over time."
+  - q: "What blood pressure medications are typically recommended?"
+    a: "Common first-line medications include ACE inhibitors, ARBs, thiazide diuretics, and calcium channel blockers, chosen based on your individual health profile."
+  - q: "Why is blood pressure control important during pregnancy?"
+    a: "Proper blood pressure management before, during, and after pregnancy helps reduce the risk of preeclampsia and long-term heart complications for mothers."
 ---
 # New 2025 High Blood Pressure Guideline: Prevention, Early Treatment, and Brain Health  
 

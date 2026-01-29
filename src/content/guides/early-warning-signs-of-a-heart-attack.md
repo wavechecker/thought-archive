@@ -9,6 +9,17 @@ draft: false
 tags: ["heart", "cardiac", "emergency", "patientguide"]
 related:
   - /guides/when-to-seek-emergency-help-for-chest-pain
+faq:
+  - q: "Do heart attacks always start with sudden chest pain?"
+    a: "No — subtle symptoms like fatigue, mild chest discomfort, or shortness of breath can appear hours or days before a heart attack."
+  - q: "What are the early warning signs of a heart attack?"
+    a: "Early signs may include chest pressure that comes and goes, pain in the arms, back, neck or jaw, unusual fatigue, shortness of breath, nausea, or cold sweats."
+  - q: "Are heart attack symptoms different in women?"
+    a: "Women may be more likely to experience unusual fatigue, nausea, or back pain rather than classic chest pain."
+  - q: "What should I do if I think I'm having a heart attack?"
+    a: "Call emergency services immediately, chew aspirin if not allergic, and stay calm and still while waiting for help."
+  - q: "Should I wait to see if symptoms go away?"
+    a: "No — do not wait. Early recognition and treatment can save your life and reduce heart damage."
 ---
 ---
 
