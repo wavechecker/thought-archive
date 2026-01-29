@@ -1,110 +1,28 @@
 ---
-{
-  "title": "Heart Attacks in Younger Adults: Hidden Causes (Especially in Women)",
-  "slug": "heart-attacks-younger-adults-causes",
-  "description": "In adults ≤65—especially women—many heart attacks stem from causes beyond plaque blockage, including SCAD, embolism, spasm, and supply–demand mismatch.",
-  "category": "Heart & Circulation",
-  "tags": ["heart attack", "SCAD", "women's heart health", "cardiology", "MINOCA"],
-  "publishDate": "2025-09-18",
-  "updatedDate": "2025-09-18",
-  "draft": false,
-
-  "faq": [
-    {
-      "question": "What is SCAD and who gets it?",
-      "answer": "Spontaneous coronary artery dissection (SCAD) is a tear in a heart artery wall that reduces blood flow. It most often affects younger, otherwise healthy women and is frequently misdiagnosed as a typical plaque heart attack."
-    },
-    {
-      "question": "How do causes differ by sex?",
-      "answer": "Atherosclerosis is still the top cause overall, but it accounted for roughly three-quarters of men’s MIs vs. under half in women in this study. Non-atherosclerotic causes (SCAD, embolism, spasm, and others) were far more common in women."
-    },
-    {
-      "question": "Why does the exact cause matter?",
-      "answer": "Treatments differ. For example, routine stenting can be unnecessary or risky in some SCAD cases, whereas plaque-related MIs usually benefit from rapid artery opening and antithrombotic therapy."
-    },
-    {
-      "question": "What should a younger patient ask in the ER?",
-      "answer": "Ask whether the angiogram/imaging suggests SCAD or another non-plaque cause, and whether advanced imaging (OCT/IVUS) or conservative management is appropriate."
-    },
-    {
-      "question": "Are stress-related triggers real?",
-      "answer": "Yes. Severe anemia, infections, or other systemic stressors can precipitate an MI even without major plaque. Identifying and treating the trigger is essential."
-    }
-  ],
-
-  "jsonLd": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Heart Attacks in Younger Adults: Hidden Causes (Especially in Women)",
-      "description": "In adults ≤65—especially women—many heart attacks stem from causes beyond plaque blockage, including SCAD, embolism, spasm, and supply–demand mismatch.",
-      "datePublished": "2025-09-18",
-      "dateModified": "2025-09-18",
-      "url": "/guides/heart-attacks-younger-adults-causes",
-      "inLanguage": "en",
-      "author": { "@type": "Organization", "name": "patientguide.io" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "patientguide.io",
-        "logo": { "@type": "ImageObject", "url": "/logo.png" }
-      },
-      "about": [
-        { "@type": "MedicalCondition", "name": "Myocardial infarction (heart attack)" },
-        { "@type": "MedicalEntity", "name": "Spontaneous Coronary Artery Dissection (SCAD)" },
-        { "@type": "MedicalEntity", "name": "Atherosclerosis" }
-      ],
-      "citation": [
-        {
-          "@type": "ScholarlyArticle",
-          "name": "Causes of Myocardial Infarction in Younger Patients",
-          "datePublished": "2025-09-15",
-          "identifier": "https://doi.org/10.1016/j.jacc.2025.07.012",
-          "isPartOf": { "@type": "Periodical", "name": "Journal of the American College of Cardiology" }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is SCAD and who gets it?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Spontaneous coronary artery dissection (SCAD) is a tear in a heart artery wall that reduces blood flow. It most often affects younger, otherwise healthy women and is frequently misdiagnosed as a typical plaque heart attack." }
-        },
-        {
-          "@type": "Question",
-          "name": "How do causes differ by sex?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Atherosclerosis is still the top cause overall, but it accounted for roughly three-quarters of men’s MIs vs. under half in women in this study. Non-atherosclerotic causes (SCAD, embolism, spasm, and others) were far more common in women." }
-        },
-        {
-          "@type": "Question",
-          "name": "Why does the exact cause matter?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Treatments differ. For example, routine stenting can be unnecessary or risky in some SCAD cases, whereas plaque-related MIs usually benefit from rapid artery opening and antithrombotic therapy." }
-        },
-        {
-          "@type": "Question",
-          "name": "What should a younger patient ask in the ER?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ask whether the angiogram/imaging suggests SCAD or another non-plaque cause, and whether advanced imaging (OCT/IVUS) or conservative management is appropriate." }
-        },
-        {
-          "@type": "Question",
-          "name": "Are stress-related triggers real?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Severe anemia, infections, or other systemic stressors can precipitate an MI even without major plaque. Identifying and treating the trigger is essential." }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Guides", "item": "/guides" },
-        { "@type": "ListItem", "position": 2, "name": "Heart & Circulation", "item": "/guides/heart-circulation" },
-        { "@type": "ListItem", "position": 3, "name": "Heart Attacks in Younger Adults: Hidden Causes (Especially in Women)", "item": "/guides/heart-attacks-younger-adults-causes" }
-      ]
-    }
-  ]
-}
+title: "Heart Attacks in Younger Adults: Hidden Causes (Especially in Women)"
+slug: heart-attacks-younger-adults-causes
+description: "In adults ≤65—especially women—many heart attacks stem from causes beyond plaque blockage, including SCAD, embolism, spasm, and supply–demand mismatch."
+category: Heart & Circulation
+tags:
+  - heart attack
+  - SCAD
+  - women's heart health
+  - cardiology
+  - MINOCA
+publishDate: '2025-09-18'
+updatedDate: '2025-09-18'
+draft: false
+faq:
+  - q: "What is SCAD and who gets it?"
+    a: "Spontaneous coronary artery dissection (SCAD) is a tear in a heart artery wall that reduces blood flow. It most often affects younger, otherwise healthy women and is frequently misdiagnosed as a typical plaque heart attack."
+  - q: "How do causes differ by sex?"
+    a: "Atherosclerosis is still the top cause overall, but it accounted for roughly three-quarters of men's MIs vs. under half in women in this study. Non-atherosclerotic causes (SCAD, embolism, spasm, and others) were far more common in women."
+  - q: "Why does the exact cause matter?"
+    a: "Treatments differ. For example, routine stenting can be unnecessary or risky in some SCAD cases, whereas plaque-related MIs usually benefit from rapid artery opening and antithrombotic therapy."
+  - q: "What should a younger patient ask in the ER?"
+    a: "Ask whether the angiogram/imaging suggests SCAD or another non-plaque cause, and whether advanced imaging (OCT/IVUS) or conservative management is appropriate."
+  - q: "Are stress-related triggers real?"
+    a: "Yes. Severe anemia, infections, or other systemic stressors can precipitate an MI even without major plaque. Identifying and treating the trigger is essential."
 ---
 
 ## Intro
