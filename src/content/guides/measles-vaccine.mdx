@@ -7,134 +7,83 @@ publishDate: "2026-01-21"
 updatedDate: "2026-01-21"
 tags: ["measles", "MMR", "MMRV", "vaccination", "catch-up", "outbreak"]
 draft: false
+faq:
+  - q: "How effective is the measles vaccine?"
+    a: "Protection is strong: around 93% after one dose and around 97% after two doses of MMR."
+  - q: "Do adults need an MMR booster?"
+    a: "Many adults do not need a booster if they have evidence of immunity (two documented doses, lab evidence, or prior infection). Some situations (outbreaks, travel, healthcare work) may require updated proof or vaccination."
+  - q: "Does MMR cause autism?"
+    a: "No. Large studies show no link between MMR and autism. The original claim was fraudulent and retracted."
 ---
-
-import Aside from "@/components/Aside.astro";
-import StratBox from "@/components/StratBox.astro";
-import JsonLd from "@/components/JsonLd.astro";
-
-<JsonLd
-  type="BreadcrumbList"
-  data={{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Guides", "item": "https://patientguide.io/guides" },
-      { "@type": "ListItem", "position": 2, "name": "Infectious Diseases", "item": "https://patientguide.io/guides/infectious-diseases" },
-      { "@type": "ListItem", "position": 3, "name": "Measles Vaccine", "item": "https://patientguide.io/guides/measles-vaccine" }
-    ]
-  }}
-/>
-
-<JsonLd
-  type="WebPage"
-  data={{
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "Measles Vaccine (MMR/MMRV)",
-    "about": { "@type": "MedicalCondition", "name": "Measles (Rubeola)" },
-    "description": "Practical guidance on MMR/MMRV vaccination: schedule, catch-up, effectiveness, safety, and outbreak scenarios."
-  }}
-/>
-
-<JsonLd
-  type="FAQPage"
-  data={{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How effective is the measles vaccine?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Protection is strong: around 93% after one dose and around 97% after two doses of MMR."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do adults need an MMR booster?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Many adults do not need a booster if they have evidence of immunity (two documented doses, lab evidence, or prior infection). Some situations (outbreaks, travel, healthcare work) may require updated proof or vaccination."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does MMR cause autism?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Large studies show no link between MMR and autism. The original claim was fraudulent and retracted."
-        }
-      }
-    ]
-  }}
-/>
 
 # Measles Vaccine (MMR/MMRV)
 
 ## Intro
-The measles vaccine is usually given as **MMR** (measles, mumps, rubella) or **MMRV** (MMR + varicella). It’s a core tool for preventing measles outbreaks.
+The measles vaccine is usually given as **MMR** (measles, mumps, rubella) or **MMRV** (MMR + varicella). It's a core tool for preventing measles outbreaks.
 
 For the broader illness overview, see **[Measles (Rubeola)](/guides/measles)**.
 
 ## Key Points
-- **Two doses** provide strong protection for most people  
-- Communities typically need **~95% two-dose coverage** to prevent sustained outbreaks  
-- Catch-up vaccination is common and usually straightforward  
-- Serious vaccine reactions are **rare**  
+- **Two doses** provide strong protection for most people
+- Communities typically need **~95% two-dose coverage** to prevent sustained outbreaks
+- Catch-up vaccination is common and usually straightforward
+- Serious vaccine reactions are **rare**
 
 ## Risk Stratification
-<StratBox
-  title="Who Should Review Their MMR Status Now"
-  items={[
-    { label: "Unvaccinated or unknown vaccine status", level: "high" },
-    { label: "International travel planned", level: "high" },
-    { label: "Healthcare / childcare / crowded settings", level: "medium" },
-    { label: "Only one documented dose", level: "medium" },
-    { label: "Two documented MMR doses", level: "low" }
-  ]}
-/>
+
+**Who Should Review Their MMR Status Now:**
+
+**High priority:**
+- Unvaccinated or unknown vaccine status
+- International travel planned
+
+**Medium priority:**
+- Healthcare / childcare / crowded settings
+- Only one documented dose
+
+**Low priority (but stay informed):**
+- Two documented MMR doses
 
 ## What the Vaccine Prevents
 MMR protects against:
-- **Measles** (rubeola) — highly contagious; can cause pneumonia/encephalitis  
-- **Mumps** — salivary gland swelling; complications can occur  
-- **Rubella** — mild in many, but dangerous in pregnancy  
+- **Measles** (rubeola) — highly contagious; can cause pneumonia/encephalitis
+- **Mumps** — salivary gland swelling; complications can occur
+- **Rubella** — mild in many, but dangerous in pregnancy
 
 ## Routine Schedule
 Schedules vary by country, but commonly include:
-- **Dose 1** in early childhood  
+- **Dose 1** in early childhood
 - **Dose 2** later in childhood (often before school)
 
-<Aside title="Local schedules differ" variant="info">
-Use your country’s official immunization schedule for exact ages and catch-up intervals. The key concept is **2 documented doses** for most people.
-</Aside>
+<aside class="explainer-box">
+  <h3>Local schedules differ</h3>
+  <p>Use your country's official immunization schedule for exact ages and catch-up intervals. The key concept is <strong>2 documented doses</strong> for most people.</p>
+</aside>
 
 ## Catch-Up Vaccination
 Consider catch-up if:
-- You never received MMR  
-- You received only one dose  
-- You can’t find records and don’t have proof of immunity  
+- You never received MMR
+- You received only one dose
+- You can't find records and don't have proof of immunity
 
-In many settings, clinicians treat “no records” as “not vaccinated” and proceed with catch-up vaccination.
+In many settings, clinicians treat "no records" as "not vaccinated" and proceed with catch-up vaccination.
 
 ## Outbreak Situations
 During outbreaks, public health advice may include:
-- Accelerating second doses for eligible children  
-- Vaccinating susceptible adults  
-- Targeted vaccination in schools, shelters, or high-risk communities  
+- Accelerating second doses for eligible children
+- Vaccinating susceptible adults
+- Targeted vaccination in schools, shelters, or high-risk communities
 
 ## Effectiveness
 Typical effectiveness estimates:
-- **~93%** after one dose  
-- **~97%** after two doses  
+- **~93%** after one dose
+- **~97%** after two doses
 
 Breakthrough cases tend to be **milder** and less likely to spread.
 
 ## Safety and Side Effects
 Common short-term effects:
-- Sore arm, mild fever, mild rash  
+- Sore arm, mild fever, mild rash
 Less common:
 - Temporary joint aches (more common in adults)
 
@@ -142,25 +91,29 @@ Serious reactions are rare. If you have a history of severe allergy to a vaccine
 
 ## Who Should NOT Get MMR
 MMR is a **live attenuated vaccine**, so it is usually avoided in:
-- **Pregnancy**  
+- **Pregnancy**
 - **Severe immunocompromise** (case-by-case)
 
 ## FAQ
-**Q: If I had measles as a child, do I still need MMR?**  
+**Q: If I had measles as a child, do I still need MMR?**
 A: Natural infection usually provides strong immunity, but documentation can be unclear. A clinician can advise based on records and local guidance.
 
-**Q: Can I get MMR if I’m not sure I had it?**  
+**Q: Can I get MMR if I'm not sure I had it?**
 A: Often yes — when in doubt and there are no contraindications, vaccination may be recommended.
 
-**Q: Is it safe to get an extra dose?**  
+**Q: Is it safe to get an extra dose?**
 A: In many cases, an additional dose is acceptable when documentation is missing, but confirm with a clinician.
 
 ## Further Reading
-- World Health Organization (WHO) — measles and immunization resources  
-- CDC — MMR vaccine information and measles guidance  
-- European Centre for Disease Prevention and Control (ECDC) — measles surveillance/outbreak info  
+- World Health Organization (WHO) — measles and immunization resources
+- CDC — MMR vaccine information and measles guidance
+- European Centre for Disease Prevention and Control (ECDC) — measles surveillance/outbreak info
 
 ## Related Guides
-- [Measles (Rubeola)](/guides/measles)  
-- [Measles and Pregnancy](/guides/measles-pregnancy)  
-- [Measles and International Travel](/guides/measles-travel)
+- [Measles (Rubeola)](/guides/measles/)
+- [Measles and Pregnancy](/guides/measles-pregnancy/)
+- [Measles and International Travel](/guides/measles-travel/)
+
+---
+
+*Educational only; not a substitute for professional medical advice.*
