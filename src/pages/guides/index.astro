@@ -17,22 +17,25 @@ if (q) {
 // Load all published guides
 const guides = await getCollection("guides", ({ data }) => data?.draft !== true);
 
-// Featured guides
+// ---- Featured row (kept as-is, optional) ----
 const FEATURED = [
   {
     slug: "childhood-obesity-prevention",
     title: "Childhood Obesity Prevention",
-    blurb: "Causes, risks, and proven strategies for prevention at home, in schools, and through public policy."
+    blurb:
+      "Childhood obesity has now surpassed underweight globally. This guide explains causes, risks, and proven strategies for prevention at home, in schools, and via policy."
   },
   {
     slug: "healthy-diets-for-children",
     title: "Healthy Diets for Children",
-    blurb: "Food groups, portion sizes, and simple strategies families can use to build healthier eating habits."
+    blurb:
+      "Balanced nutrition is key to children's growth, learning, and long-term health. Practical strategies for families and schools."
   },
   {
     slug: "diabetes-children",
-    title: "Diabetes in Children",
-    blurb: "Symptoms, diagnosis, treatment, and prevention — helping families and schools support affected children."
+    title: "Diabetes in Children and Adolescents",
+    blurb:
+      "Type 1 remains common; type 2 is rising. Symptoms, diagnosis, treatment, and prevention — for families and schools."
   }
 ];
 
@@ -86,25 +89,33 @@ const frontmatter = {
 ---
 
 <Layout {frontmatter}>
-  <div class="pg-page-header">
-    <h1 class="pg-page-header__title">Health Guides</h1>
-    <p class="pg-page-header__subtitle">
-      Explore our library of evidence-based guides, organized by category.
-    </p>
-  </div>
+  <!-- Hero featuring the Mental Health Toolkit -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Guides</h1>
+        <p class="tagline">
+          Explore our library of health guides, organized by category.
+          Start with our <strong>Mental Health Toolkit</strong>—evidence-based habits that
+          support mood and resilience alongside therapy or medication.
+        </p>
+
+        <div class="cta-row">
+          <a href="/guides/mental-health-toolkit" class="btn btn-primary">Open Mental Health Toolkit</a>
+          <a href="/guides/mental-health" class="btn btn-ghost">Browse Mental Health Hub</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   {featuredEntries.length > 0 && (
     <section class="pg-section">
-      <div class="pg-section__header">
-        <h2 class="pg-section__title">Featured: Child & Adolescent Health</h2>
-      </div>
-      <div class="pg-card-grid">
+      <h2 class="section-title">Featured: Child & Adolescent Health</h2>
+      <div class="cards">
         {featuredEntries.map((f) => (
-          <article class="pg-card pg-card--interactive">
-            <h3 class="pg-card__title">
-              <a href={f!.href} class="pg-card__link">{f!.title}</a>
-            </h3>
-            <p class="pg-card__description">{f!.blurb}</p>
+          <article class="card">
+            <h3><a href={f!.href}>{f!.title}</a></h3>
+            <p>{f!.blurb}</p>
           </article>
         ))}
       </div>
@@ -187,23 +198,48 @@ const frontmatter = {
 </Layout>
 
 <style>
-  .pg-page-header {
-    margin-bottom: var(--pg-space-8);
+  /* Hero banner styles */
+  .hero {
+    margin-block: .25rem 1.25rem;
   }
-
-  .pg-page-header__title {
-    font-size: var(--pg-text-3xl);
+  .hero-inner {
+    border: 1px solid var(--astro-border, #e5e7eb);
+    border-radius: 16px;
+    background: linear-gradient(180deg, #ffffff, #fafafa);
+    padding: 1.25rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 .35rem;
     font-weight: 700;
-    color: var(--pg-text);
-    margin: 0 0 var(--pg-space-2);
   }
-
-  .pg-page-header__subtitle {
-    font-size: var(--pg-text-lg);
-    color: var(--pg-text-muted);
-    margin: 0;
+  .tagline {
+    color: #374151;
+    margin: 0 0 .9rem;
   }
+  .cta-row {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: .55rem .9rem;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .btn-primary {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+  }
+  .btn-primary:hover { background:#0f172a; border-color:#0f172a; }
+  .btn-ghost:hover { background:#f3f4f6; }
 
+  /* Section and featured styles */
   .pg-section {
     margin-top: var(--pg-space-10);
   }
@@ -219,26 +255,27 @@ const frontmatter = {
     margin: 0;
   }
 
-  /* Card grid for featured */
-  .pg-card-grid {
+  .section-title {
+    margin: 1.25rem 0 .5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .cards {
     display: grid;
     gap: var(--pg-space-4);
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 
-  .pg-card__link {
-    color: inherit;
-    text-decoration: none;
+  .card {
+    padding: 1rem;
+    border: 1px solid var(--astro-border, #e5e7eb);
+    border-radius: 12px;
+    background: white;
   }
 
-  .pg-card__link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-  }
-
-  .pg-card {
-    position: relative;
+  .card h3 {
+    margin-top: 0;
   }
 
   /* Category grid */
