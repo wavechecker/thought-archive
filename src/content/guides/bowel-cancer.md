@@ -2,7 +2,7 @@
 title: "Bowel Cancer — Guide Hub"
 slug: "bowel-cancer"
 description: "Guides on risks, screening, treatment, living well, and family risk for bowel cancer."
-category: "Cancer"
+category: "Guide Hubs"
 publishDate: "2025-08-20"
 updatedDate: "2025-09-17"
 hubKey: "Bowel Cancer"

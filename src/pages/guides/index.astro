@@ -46,8 +46,13 @@ const featuredEntries = FEATURED
   .filter(Boolean);
 
 // Build map: category -> guides
+// Exclude hub/overview pages (category "Guide Hubs") from counts
 const byCategory = new Map<string, typeof guides>();
 for (const e of guides) {
+  // Skip hub pages to avoid inflating category counts
+  if (typeof e.data?.category === "string" && e.data.category.trim() === "Guide Hubs") {
+    continue;
+  }
   const cat = (e.data.category ?? "General Health").trim();
   if (!byCategory.has(cat)) byCategory.set(cat, []);
   byCategory.get(cat)!.push(e);

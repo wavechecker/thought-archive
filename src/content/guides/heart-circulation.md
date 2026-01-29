@@ -2,7 +2,7 @@
 title: "Heart & Circulation — Guide Hub"
 slug: "heart-circulation"
 description: "Guides on common heart conditions, treatments, medications, and prevention — from angiography to atrial fibrillation and cardiac rehab."
-category: "Heart & Circulation"
+category: "Guide Hubs"
 publishDate: "2025-08-20"
 updatedDate: "2025-09-17"
 hubKey: "Heart & Circulation"
