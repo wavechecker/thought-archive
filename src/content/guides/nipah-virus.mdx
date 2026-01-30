@@ -9,14 +9,7 @@ draft: false
 
 import OutbreakBox from "../../components/OutbreakBox.astro";
 
-<OutbreakBox
-  disease="Nipah virus"
-  status="Sporadic outbreaks"
-  severity="High"
-  fatality="40–75%"
-  regions={["Bangladesh", "India", "Malaysia"]}
-  lastReviewed="2026-01-30"
-/>
+<OutbreakBox dataKey="nipahVirus" />
 
 ## Intro
 **Nipah virus (NiV)** is a rare but extremely dangerous zoonotic virus that causes severe brain inflammation (encephalitis) and respiratory illness in humans. It is classified as a biosafety level-4 pathogen and is associated with some of the highest case-fatality rates of any known infectious disease.
@@ -101,99 +94,99 @@ Even with modern intensive care, mortality remains high. Some survivors develop:
 
 ## FAQ
 
-**Q: Is Nipah virus airborne?**  
+**Q: Is Nipah virus airborne?**
 A: There is no evidence of long-range airborne transmission. Spread occurs through close contact and exposure to bodily fluids.
 
-**Q: Why is Nipah virus closely monitored?**  
+**Q: Why is Nipah virus closely monitored?**
 A: Because of its high lethality, ability to spread between humans, and lack of vaccines or curative treatments.
 
 ---
 
 ## Further Reading
-- World Health Organization — Nipah Virus Fact Sheet  
-- CDC — Nipah Virus Overview  
-- Lancet Infectious Diseases — Henipavirus Reviews  
+- World Health Organization — Nipah Virus Fact Sheet
+- CDC — Nipah Virus Overview
+- Lancet Infectious Diseases — Henipavirus Reviews
 
 ---
 
 ## Related Guides
-- Viral Encephalitis  
-- Zoonotic Disease Spillover  
+- Viral Encephalitis
+- Zoonotic Disease Spillover
 
-<!-- ================= JSON-LD: MedicalCondition ================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalCondition",
-  "name": "Nipah Virus Infection",
-  "alternateName": ["Nipah virus", "NiV infection"],
-  "description": "Nipah virus infection is a rare but severe zoonotic disease causing acute encephalitis and respiratory illness, with high mortality rates and no approved curative treatment.",
-  "cause": {
-    "@type": "MedicalCause",
-    "name": "Nipah virus (Henipavirus)"
-  },
-  "transmissionMethod": [
-    "Animal-to-human transmission",
-    "Human-to-human transmission via bodily fluids",
-    "Foodborne exposure to contaminated products"
-  ],
-  "primaryPrevention": [
-    "Avoidance of contaminated food sources",
-    "Infection control in healthcare settings",
-    "Rapid isolation and contact tracing"
-  ],
-  "possibleTreatment": {
-    "@type": "MedicalTherapy",
-    "name": "Supportive care"
-  },
-  "riskFactor": [
-    "Close contact with infected individuals",
-    "Exposure to fruit bats or intermediate hosts",
-    "Healthcare exposure without adequate protective equipment"
-  ],
-  "signOrSymptom": [
-    "Fever",
-    "Headache",
-    "Vomiting",
-    "Encephalitis",
-    "Seizures",
-    "Respiratory distress"
-  ],
-  "epidemiology": "Sporadic outbreaks primarily in South and Southeast Asia with reported case fatality rates commonly between 40 and 75 percent.",
-  "associatedAnatomy": {
-    "@type": "AnatomicalSystem",
-    "name": "Central nervous system"
-  },
-  "url": "https://patientguide.io/guides/nipah-virus",
-  "datePublished": "2026-01-30",
-  "inLanguage": "en"
-}
-</script>
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    name: "Nipah Virus Infection",
+    alternateName: ["Nipah virus", "NiV infection"],
+    description: "Nipah virus infection is a rare but severe zoonotic disease causing acute encephalitis and respiratory illness, with high mortality rates and no approved curative treatment.",
+    cause: {
+      "@type": "MedicalCause",
+      name: "Nipah virus (Henipavirus)"
+    },
+    transmissionMethod: [
+      "Animal-to-human transmission",
+      "Human-to-human transmission via bodily fluids",
+      "Foodborne exposure to contaminated products"
+    ],
+    primaryPrevention: [
+      "Avoidance of contaminated food sources",
+      "Infection control in healthcare settings",
+      "Rapid isolation and contact tracing"
+    ],
+    possibleTreatment: {
+      "@type": "MedicalTherapy",
+      name: "Supportive care"
+    },
+    riskFactor: [
+      "Close contact with infected individuals",
+      "Exposure to fruit bats or intermediate hosts",
+      "Healthcare exposure without adequate protective equipment"
+    ],
+    signOrSymptom: [
+      "Fever",
+      "Headache",
+      "Vomiting",
+      "Encephalitis",
+      "Seizures",
+      "Respiratory distress"
+    ],
+    epidemiology: "Sporadic outbreaks primarily in South and Southeast Asia with reported case fatality rates commonly between 40 and 75 percent.",
+    associatedAnatomy: {
+      "@type": "AnatomicalSystem",
+      name: "Central nervous system"
+    },
+    url: "https://patientguide.io/guides/nipah-virus",
+    datePublished: "2026-01-30",
+    inLanguage: "en"
+  })}
+/>
 
-<!-- ================= JSON-LD: Breadcrumbs ================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Guides",
-      "item": "https://patientguide.io/guides"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Infectious Diseases",
-      "item": "https://patientguide.io/guides/infectious-diseases"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Nipah Virus",
-      "item": "https://patientguide.io/guides/nipah-virus"
-    }
-  ]
-}
-</script>
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Guides",
+        item: "https://patientguide.io/guides"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Infectious Diseases",
+        item: "https://patientguide.io/guides/infectious-diseases"
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Nipah Virus",
+        item: "https://patientguide.io/guides/nipah-virus"
+      }
+    ]
+  })}
+/>
