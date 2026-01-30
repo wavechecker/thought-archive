@@ -1,4 +1,5 @@
 export { default as measlesUS } from "./measles-us.json";
+export { default as nipahVirus } from "./nipah-virus.json";
 export type OutbreakPoint = {
   year: number;
   confirmedCases: number;
