@@ -1,0 +1,14 @@
+{
+  "condition": "Nipah virus",
+  "region": "South & Southeast Asia",
+  "series": [
+    {
+      "year": 2026,
+      "confirmedCases": 0,
+      "lastUpdated": "2026-01-30",
+      "sourceName": "WHO / national public health reporting",
+      "sourceUrl": "https://www.who.int/news-room/fact-sheets/detail/nipah-virus"
+    }
+  ]
+}
+

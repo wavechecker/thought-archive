@@ -1,4 +1,6 @@
 export { default as measlesUS } from "./measles-us.json";
+export { default as nipahVirus } from "./nipah-virus.json";
+
 export type OutbreakPoint = {
   year: number;
   confirmedCases: number;
@@ -7,9 +9,11 @@ export type OutbreakPoint = {
   sourceName: string;
   sourceUrl?: string;
 };
+
 export type OutbreakDataset = {
   condition: string;
   region: string;
   series: OutbreakPoint[];
 };
+
 export type DatasetMap = Record<string, OutbreakDataset>;
