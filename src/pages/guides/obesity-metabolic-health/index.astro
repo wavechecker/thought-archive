@@ -1,0 +1,9 @@
+---
+import HeroPage from "@/components/HeroPage.astro";
+import { getHeroPageConfig } from "@/lib/hero-pages";
+
+const config = getHeroPageConfig("obesity-metabolic-health");
+if (!config) throw new Error("Hero page config not found: obesity-metabolic-health");
+---
+
+<HeroPage config={config} />

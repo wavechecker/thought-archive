@@ -13,6 +13,7 @@
 # Canonicalize Vaccinations → Vaccination (singular)
 /guides/vaccinations                   /guides/vaccination/              301!
 /guides/vaccinations/                  /guides/vaccination/              301!
+/guides/vaccinations/*                 /guides/vaccination/:splat        301!
 
 # Category route: "Vaccinations" → "vaccination"
 /guides/category/Vaccinations          /guides/category/vaccination/     301!
@@ -32,6 +33,11 @@
 # Legionnaires typo → correct slug
 /guides/legionairres-disease           /guides/legionnaires-disease      301!
 /guides/legionairres-disease/          /guides/legionnaires-disease      301!
+
+# COPD filename typo redirect
+/guides/cpod                           /guides/copd                      301!
+/guides/cpod/                          /guides/copd                      301!
+/guides/cpod/*                         /guides/copd/:splat               301!
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Gone for good

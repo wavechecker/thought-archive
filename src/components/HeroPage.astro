@@ -1,0 +1,331 @@
+---
+// src/components/HeroPage.astro
+// Reusable component for category hero pages
+
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { HeroPageConfig, FeaturedCluster, GuideGroup } from "@/lib/hero-pages";
+
+interface Props {
+  config: HeroPageConfig;
+}
+
+const { config } = Astro.props;
+
+const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
+const pageUrl = `${site}/guides/${config.slug}`;
+
+// Build category matching function
+const matchesCategory = (entry: any) => {
+  const cat = entry.data?.category;
+  if (cat === config.categoryKey) return true;
+  if (config.categoryAliases?.includes(cat)) return true;
+  return false;
+};
+
+// Fetch guides for this category
+const allGuides = await getCollection("guides", ({ data }) =>
+  data?.draft !== true && matchesCategory({ data })
+);
+
+// Sort by updated date (newest first)
+const sortedGuides = allGuides.sort((a, b) => {
+  const da = new Date(a.data?.updatedDate ?? a.data?.publishDate ?? 0).valueOf();
+  const db = new Date(b.data?.updatedDate ?? b.data?.publishDate ?? 0).valueOf();
+  return db - da;
+});
+
+// JSON-LD structured data
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Guides", item: `${site}/guides` },
+    { "@type": "ListItem", position: 2, name: config.title, item: pageUrl }
+  ]
+};
+
+const collectionPageLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: `${config.title} — Guides`,
+  description: config.description,
+  url: pageUrl,
+  inLanguage: "en",
+  isPartOf: { "@type": "WebSite", name: "PatientGuide.io", url: site }
+};
+
+const frontmatter = {
+  title: `${config.title} — Guides`,
+  description: config.description,
+};
+---
+
+<Layout {frontmatter}>
+  <article class="hero-page">
+    <!-- Header -->
+    <header class="hero-page__header">
+      <nav class="hero-page__breadcrumb" aria-label="Breadcrumb">
+        <a href="/guides">Guides</a>
+        <span aria-hidden="true">/</span>
+        <span>{config.title}</span>
+      </nav>
+      <h1 class="hero-page__title">{config.title}</h1>
+      <p class="hero-page__description">{config.description}</p>
+    </header>
+
+    <!-- What This Covers -->
+    <section class="hero-page__section">
+      <h2 class="hero-page__section-title">What This Covers</h2>
+      <ul class="hero-page__scope-list">
+        {config.whatThisCovers.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Featured Clusters -->
+    {config.featuredClusters.length > 0 && (
+      <section class="hero-page__section">
+        <h2 class="hero-page__section-title">Featured Guides</h2>
+        <div class="hero-page__clusters">
+          {config.featuredClusters.map((cluster: FeaturedCluster) => (
+            <a href={cluster.href} class="hero-page__cluster-card">
+              <h3 class="hero-page__cluster-title">{cluster.title}</h3>
+              <p class="hero-page__cluster-desc">{cluster.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Guide Groups (if defined) -->
+    {config.guideGroups && config.guideGroups.length > 0 && (
+      <section class="hero-page__section">
+        <h2 class="hero-page__section-title">Browse by Topic</h2>
+        {config.guideGroups.map((group: GuideGroup) => (
+          <div class="hero-page__group">
+            <h3 class="hero-page__group-title">{group.name}</h3>
+            <ul class="hero-page__guide-list">
+              {group.guides.map((guide) => (
+                <li>
+                  <a href={guide.href}>{guide.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    )}
+
+    <!-- All Guides Index -->
+    <section class="hero-page__section">
+      <h2 class="hero-page__section-title">All {config.title} Guides</h2>
+      <p class="hero-page__guide-count">{sortedGuides.length} guide{sortedGuides.length === 1 ? "" : "s"}</p>
+
+      {sortedGuides.length === 0 ? (
+        <p class="hero-page__empty">No guides found yet.</p>
+      ) : (
+        <ul class="hero-page__guide-list hero-page__guide-list--full">
+          {sortedGuides.map((guide) => (
+            <li>
+              <a href={`/guides/${guide.slug}`}>{guide.data?.title ?? "(Untitled)"}</a>
+              {guide.data?.description && (
+                <span class="hero-page__guide-desc"> — {guide.data.description}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+
+    <!-- What This Page Is Not (optional) -->
+    {config.whatThisIsNot && config.whatThisIsNot.length > 0 && (
+      <section class="hero-page__section hero-page__section--muted">
+        <h2 class="hero-page__section-title">What This Page Is Not</h2>
+        <ul class="hero-page__scope-list">
+          {config.whatThisIsNot.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(collectionPageLd)} />
+</Layout>
+
+<style>
+  .hero-page {
+    max-width: var(--pg-max-width-content, 48rem);
+    margin: 0 auto;
+  }
+
+  .hero-page__header {
+    margin-bottom: var(--pg-space-8, 2rem);
+  }
+
+  .hero-page__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--pg-space-2, 0.5rem);
+    font-size: var(--pg-text-sm, 0.875rem);
+    color: var(--pg-text-muted, #6b7280);
+    margin-bottom: var(--pg-space-4, 1rem);
+  }
+
+  .hero-page__breadcrumb a {
+    color: var(--pg-link, #2563eb);
+  }
+
+  .hero-page__breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .hero-page__title {
+    font-size: var(--pg-text-3xl, 1.875rem);
+    font-weight: 700;
+    color: var(--pg-text, #111827);
+    margin: 0 0 var(--pg-space-3, 0.75rem);
+    line-height: 1.2;
+  }
+
+  .hero-page__description {
+    font-size: var(--pg-text-lg, 1.125rem);
+    color: var(--pg-text-soft, #374151);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .hero-page__section {
+    margin-bottom: var(--pg-space-10, 2.5rem);
+  }
+
+  .hero-page__section--muted {
+    padding: var(--pg-space-6, 1.5rem);
+    background: var(--pg-surface-soft, #f9fafb);
+    border-radius: var(--pg-radius-lg, 0.75rem);
+    border: 1px solid var(--pg-border, #e5e7eb);
+  }
+
+  .hero-page__section-title {
+    font-size: var(--pg-text-xl, 1.25rem);
+    font-weight: 600;
+    color: var(--pg-text, #111827);
+    margin: 0 0 var(--pg-space-4, 1rem);
+  }
+
+  .hero-page__scope-list {
+    margin: 0;
+    padding-left: var(--pg-space-6, 1.5rem);
+    color: var(--pg-text-soft, #374151);
+    line-height: 1.8;
+  }
+
+  .hero-page__scope-list li {
+    margin-bottom: var(--pg-space-2, 0.5rem);
+  }
+
+  .hero-page__clusters {
+    display: grid;
+    gap: var(--pg-space-4, 1rem);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .hero-page__cluster-card {
+    display: block;
+    padding: var(--pg-space-5, 1.25rem);
+    background: var(--pg-surface, #ffffff);
+    border: 1px solid var(--pg-border, #e5e7eb);
+    border-radius: var(--pg-radius-lg, 0.75rem);
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .hero-page__cluster-card:hover {
+    border-color: var(--pg-link, #2563eb);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+  }
+
+  .hero-page__cluster-title {
+    font-size: var(--pg-text-base, 1rem);
+    font-weight: 600;
+    color: var(--pg-text, #111827);
+    margin: 0 0 var(--pg-space-2, 0.5rem);
+  }
+
+  .hero-page__cluster-card:hover .hero-page__cluster-title {
+    color: var(--pg-link, #2563eb);
+  }
+
+  .hero-page__cluster-desc {
+    font-size: var(--pg-text-sm, 0.875rem);
+    color: var(--pg-text-muted, #6b7280);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .hero-page__group {
+    margin-bottom: var(--pg-space-6, 1.5rem);
+  }
+
+  .hero-page__group:last-child {
+    margin-bottom: 0;
+  }
+
+  .hero-page__group-title {
+    font-size: var(--pg-text-base, 1rem);
+    font-weight: 600;
+    color: var(--pg-text, #111827);
+    margin: 0 0 var(--pg-space-3, 0.75rem);
+    padding-bottom: var(--pg-space-2, 0.5rem);
+    border-bottom: 1px solid var(--pg-border, #e5e7eb);
+  }
+
+  .hero-page__guide-list {
+    margin: 0;
+    padding-left: var(--pg-space-5, 1.25rem);
+    line-height: 1.8;
+  }
+
+  .hero-page__guide-list li {
+    margin-bottom: var(--pg-space-2, 0.5rem);
+  }
+
+  .hero-page__guide-list a {
+    color: var(--pg-link, #2563eb);
+  }
+
+  .hero-page__guide-list a:hover {
+    text-decoration: underline;
+  }
+
+  .hero-page__guide-list--full {
+    column-count: 1;
+  }
+
+  @media (min-width: 640px) {
+    .hero-page__guide-list--full {
+      column-count: 2;
+      column-gap: var(--pg-space-8, 2rem);
+    }
+  }
+
+  .hero-page__guide-desc {
+    color: var(--pg-text-muted, #6b7280);
+    font-size: var(--pg-text-sm, 0.875rem);
+  }
+
+  .hero-page__guide-count {
+    font-size: var(--pg-text-sm, 0.875rem);
+    color: var(--pg-text-muted, #6b7280);
+    margin: 0 0 var(--pg-space-4, 1rem);
+  }
+
+  .hero-page__empty {
+    color: var(--pg-text-muted, #6b7280);
+    font-style: italic;
+  }
+</style>
