@@ -230,7 +230,13 @@ const frontmatter = {
   .hero-page__clusters {
     display: grid;
     gap: var(--pg-space-4, 1rem);
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .hero-page__clusters {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .hero-page__cluster-card {

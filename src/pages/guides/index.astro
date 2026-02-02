@@ -7,6 +7,7 @@ import {
   CATEGORY_ORDER,
   CATEGORY_DESCRIPTIONS,
 } from "@/lib/slug.ts";
+import { HERO_PAGES } from "@/lib/hero-pages.ts";
 
 // Redirect legacy links like /guides/?category=Emergencies → /guides/category/emergencies
 const q = Astro.url.searchParams.get("category");
@@ -17,36 +18,13 @@ if (q) {
 // Load all published guides
 const guides = await getCollection("guides", ({ data }) => data?.draft !== true);
 
-// ---- Featured row (kept as-is, optional) ----
-const FEATURED = [
-  {
-    slug: "childhood-obesity-prevention",
-    title: "Childhood Obesity Prevention",
-    blurb:
-      "Childhood obesity has now surpassed underweight globally. This guide explains causes, risks, and proven strategies for prevention at home, in schools, and via policy."
-  },
-  {
-    slug: "healthy-diets-for-children",
-    title: "Healthy Diets for Children",
-    blurb:
-      "Balanced nutrition is key to children's growth, learning, and long-term health. Practical strategies for families and schools."
-  },
-  {
-    slug: "diabetes-children",
-    title: "Diabetes in Children and Adolescents",
-    blurb:
-      "Type 1 remains common; type 2 is rising. Symptoms, diagnosis, treatment, and prevention — for families and schools."
-  }
-];
-
-// Map: slug -> entry (only if present)
-const bySlug = new Map(guides.map((e) => [e.slug, e]));
-const featuredEntries = FEATURED
-  .map((f) => {
-    const entry = bySlug.get(f.slug);
-    return entry ? { ...f, href: `/guides/${entry.slug}` } : null;
-  })
-  .filter(Boolean);
+// ---- Featured row: sourced from hero-pages.ts ----
+const childHealthConfig = HERO_PAGES["child-and-adolescent-health"];
+const featuredEntries = childHealthConfig.featuredClusters.map((f) => ({
+  title: f.title,
+  blurb: f.description,
+  href: f.href,
+}));
 
 // Build map: category -> guides
 // Exclude hub/overview pages (category "Guide Hubs") from counts
@@ -264,7 +242,13 @@ const frontmatter = {
   .cards {
     display: grid;
     gap: var(--pg-space-4);
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .card {
