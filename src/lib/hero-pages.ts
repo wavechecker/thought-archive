@@ -133,6 +133,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         description: "CGMs, finger-prick testing, and understanding your numbers.",
         href: "/guides/blood-glucose-testing",
       },
+      {
+        title: "Type 1 vs Type 2",
+        description: "Key differences, causes, and management approaches.",
+        href: "/guides/type-1-vs-type-2-diabetes",
+      },
     ],
   },
 
@@ -165,6 +170,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         description: "Global burden, symptoms, diagnosis, and treatment.",
         href: "/guides/tuberculosis",
       },
+      {
+        title: "Antibiotic Resistance",
+        description: "Understanding the crisis and protecting antibiotic effectiveness.",
+        href: "/guides/antibiotic-resistance",
+      },
     ],
   },
 
@@ -195,6 +205,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         title: "Sleep & Insomnia",
         description: "CBT-I, sleep hygiene, and when to seek help.",
         href: "/guides/cbt-insomnia",
+      },
+      {
+        title: "Anxiety",
+        description: "Symptoms, triggers, and evidence-based treatments.",
+        href: "/guides/anxiety",
       },
     ],
   },
@@ -227,6 +242,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         description: "HPV, screening, and prevention.",
         href: "/guides/cervical-cancer-guide",
       },
+      {
+        title: "Breast Cancer",
+        description: "Risk factors, screening, diagnosis, and treatment.",
+        href: "/guides/breast-cancer",
+      },
     ],
   },
 
@@ -257,6 +277,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         title: "Menopause & HRT",
         description: "Symptoms, hormone therapy, and long-term health.",
         href: "/guides/hormone-therapy-menopause",
+      },
+      {
+        title: "Screening by Age",
+        description: "Cervical screening recommendations at every life stage.",
+        href: "/guides/cervical-screening-by-age",
       },
     ],
   },
@@ -289,6 +314,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         description: "Home monitoring and the 2025 guidelines.",
         href: "/guides/blood-pressure-at-home",
       },
+      {
+        title: "Atrial Fibrillation",
+        description: "Irregular heartbeat, risks, and management options.",
+        href: "/guides/atrial-fibrillation",
+      },
     ],
   },
 
@@ -319,6 +349,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         title: "Severe Allergic Reactions",
         description: "Recognising and responding to anaphylaxis.",
         href: "/guides/first-aid-for-severe-allergic-reactions",
+      },
+      {
+        title: "Severe Bleeding",
+        description: "Stopping blood loss and when to seek emergency help.",
+        href: "/guides/severe-bleeding",
       },
     ],
   },
@@ -351,6 +386,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         description: "Symptoms, diagnosis, and CPAP therapy.",
         href: "/guides/sleep-apnoea",
       },
+      {
+        title: "COPD",
+        description: "Chronic lung disease management and treatment.",
+        href: "/guides/copd",
+      },
     ],
   },
 
@@ -368,9 +408,9 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
     ],
     featuredClusters: [
       {
-        title: "Stroke & TIA",
-        description: "Recognition, response, and recovery.",
-        href: "/guides/stroke",
+        title: "TIA Warning Signs",
+        description: "Mini-strokes: why they matter and what to do.",
+        href: "/guides/tia-warning-signs",
       },
       {
         title: "Alzheimer's Prevention",
@@ -381,6 +421,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         title: "Huntington's Disease",
         description: "Genetics, symptoms, and emerging therapies.",
         href: "/guides/huntingtons-disease",
+      },
+      {
+        title: "Seizures & Epilepsy",
+        description: "Types, triggers, and first aid response.",
+        href: "/guides/seizures",
       },
     ],
   },
@@ -413,6 +458,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         description: "Type 1 and rising Type 2 in young people.",
         href: "/guides/diabetes-children-adolescents",
       },
+      {
+        title: "Fever in Children",
+        description: "When to worry and how to manage childhood fevers.",
+        href: "/guides/fever-adults-children",
+      },
     ],
   },
 
@@ -444,6 +494,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         description: "Causes, evaluation, and treatment.",
         href: "/guides/erectile-dysfunction",
       },
+      {
+        title: "Testosterone Replacement",
+        description: "TRT: benefits, risks, and monitoring.",
+        href: "/guides/testosterone-replacement-therapy",
+      },
     ],
   },
 
@@ -469,6 +524,16 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         title: "Voluntary Assisted Dying (Australia)",
         description: "Eligibility, process, and family guidance.",
         href: "/guides/voluntary-assisted-dying",
+      },
+      {
+        title: "VAD: Guide for Families",
+        description: "Supporting loved ones through the process.",
+        href: "/guides/vad-australia-families-guide",
+      },
+      {
+        title: "VAD Access in Australia",
+        description: "State-by-state eligibility and access information.",
+        href: "/guides/voluntary-assisted-dying-australia-access",
       },
     ],
   },
@@ -501,6 +566,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         description: "Critical thinking in the age of AI and misinformation.",
         href: "/guides/how-to-evaluate-medical-claims-age-of-ai",
       },
+      {
+        title: "Sleep & Rest",
+        description: "Why sleep matters and how to improve it.",
+        href: "/guides/sleep",
+      },
     ],
   },
 
@@ -531,6 +601,11 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         title: "Muscle Preservation",
         description: "Protecting lean mass during weight loss.",
         href: "/guides/muscle-preservation",
+      },
+      {
+        title: "Healthy Weight Loss",
+        description: "Evidence-based approaches to sustainable weight management.",
+        href: "/guides/healthy-weight-loss-guide",
       },
     ],
     guideGroups: [
@@ -593,6 +668,16 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         title: "Fractures & Falls",
         description: "Prevention and recovery guidance.",
         href: "/guides/fractures-and-falls",
+      },
+      {
+        title: "Bone Health Basics",
+        description: "Building and maintaining strong bones at any age.",
+        href: "/guides/bone-health-basics",
+      },
+      {
+        title: "After a Fracture",
+        description: "Recovery, rehabilitation, and preventing future fractures.",
+        href: "/guides/after-a-fracture",
       },
     ],
   },
