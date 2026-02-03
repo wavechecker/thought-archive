@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { isValidDate, fmt } from "@/lib/date";
+import { getWeeklyFeaturedHubs } from "@/lib/featuredHubs";
 
 // Helpers with defensive date rendering
 const safeDate = (d: unknown) => (isValidDate(d) ? fmt(d) : null);
@@ -33,27 +34,8 @@ const frontmatter = {
   description: "Evidence-based health guides on metabolic health, chronic disease, and everyday decisions. No fluff.",
 };
 
-// Featured guides
-const featuredGuides = [
-  {
-    href: "/guides/ozempic-cautions",
-    title: "Ozempic & GLP-1 Cautions Guide",
-    category: "Metabolic Health",
-    description: "GLP-1 medications carry risks including muscle loss, GI issues, and rebound weight gain. Learn safe use and how to protect lean muscle."
-  },
-  {
-    href: "/guides/ozempic-glp1-guide",
-    title: "Understanding GLP-1 Medications",
-    category: "Metabolic Health",
-    description: "A clear breakdown of semaglutide, tirzepatide, and other GLP-1 agonists: how they work, expected results, and comparisons."
-  },
-  {
-    href: "/guides/muscle-preservation",
-    title: "Muscle Protection During Weight Loss",
-    category: "Metabolic Health",
-    description: "Essential nutrition and strength strategies to preserve or build lean mass while losing fat, especially during GLP-1 therapy."
-  }
-];
+// Featured guide hubs (rotates weekly)
+const featuredHubs = getWeeklyFeaturedHubs(4);
 ---
 
 <Layout {frontmatter}>
@@ -71,21 +53,20 @@ const featuredGuides = [
     </a>
   </section>
 
-  <!-- Featured Guides -->
+  <!-- Featured Guide Hubs -->
   <section class="pg-section">
     <div class="pg-section__header">
-      <h2 class="pg-section__title">Featured Guides</h2>
-      <p class="pg-section__subtitle">Popular guides on metabolic health and weight-loss medicines</p>
+      <h2 class="pg-section__title">Featured Guide Hubs</h2>
+      <p class="pg-section__subtitle">Curated topic hubs — rotates weekly</p>
     </div>
 
     <div class="pg-card-grid">
-      {featuredGuides.map((guide) => (
+      {featuredHubs.map((hub) => (
         <article class="pg-card pg-card--interactive">
-          <span class="pg-badge">{guide.category}</span>
           <h3 class="pg-card__title">
-            <a href={guide.href} class="pg-card__link">{guide.title}</a>
+            <a href={hub.href} class="pg-card__link">{hub.title}</a>
           </h3>
-          <p class="pg-card__description">{guide.description}</p>
+          <p class="pg-card__description">{hub.description}</p>
         </article>
       ))}
     </div>

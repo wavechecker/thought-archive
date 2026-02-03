@@ -1,15 +1,14 @@
 ---
+/* ✅ CHANGE THIS import to match src/pages/guides/mental-health/index.astro */
+import Layout from "../../../layouts/Layout.astro";
+
 const title = "Aging & Longevity";
 const description =
   "Guides and analysis on aging biology, lifespan heritability, and the difference between intrinsic and extrinsic mortality.";
 const canonical = "https://patientguide.io/guides/aging-longevity";
 ---
 
-<head>
-  <title>{title} | PatientGuide.io</title>
-  <meta name="description" content={description} />
-  <link rel="canonical" href={canonical} />
-
+<Layout title={title} description={description} canonical={canonical}>
   <!-- JSON-LD: Breadcrumbs -->
   <script type="application/ld+json" is:inline>
     {JSON.stringify({
@@ -51,142 +50,58 @@ const canonical = "https://patientguide.io/guides/aging-longevity";
       ]
     })}
   </script>
-</head>
 
-<main class="hub">
-  <header class="hub-hero">
-    <h1>{title}</h1>
-    <p>{description}</p>
-  </header>
+  <main class="page">
+    <header class="hub-hero">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </header>
 
-  <section class="hub-section">
-    <h2>Start here</h2>
-    <ol class="reading-order">
-      <li>
-        <a href="/guides/intrinsic-vs-extrinsic-mortality">
-          Intrinsic vs Extrinsic Mortality
-        </a>
-        <p>
-          The key distinction that clarifies most debates about aging,
-          genetics, and longevity.
-        </p>
-      </li>
+    <section class="hub-section">
+      <h2>Start here</h2>
+      <ol class="reading-order">
+        <li>
+          <a href="/guides/intrinsic-vs-extrinsic-mortality">Intrinsic vs Extrinsic Mortality</a>
+          <p>The key distinction that clarifies most debates about aging, genetics, and longevity.</p>
+        </li>
+        <li>
+          <a href="/posts/longevity-genetics-rehabilitated">Longevity Genetics Just Got Rehabilitated</a>
+          <p>New evidence suggesting intrinsic human lifespan may be ~50–55% heritable once confounding deaths are removed.</p>
+        </li>
+        <li>
+          <a href="/posts/lifestyle-over-genes-dogma">How “Lifestyle Over Genes” Became Medical Dogma</a>
+          <p>Why aging genetics were sidelined — and why that story is now collapsing.</p>
+        </li>
+      </ol>
+    </section>
 
-      <li>
-        <a href="/posts/longevity-genetics-rehabilitated">
-          Longevity Genetics Just Got Rehabilitated
-        </a>
-        <p>
-          New evidence suggesting intrinsic human lifespan may be ~50–55%
-          heritable once confounding deaths are removed.
-        </p>
-      </li>
+    <section class="hub-section">
+      <h2>Latest additions</h2>
+      <ul>
+        <li><a href="/posts/longevity-genetics-rehabilitated">Longevity Genetics Just Got Rehabilitated</a></li>
+        <li><a href="/posts/lifestyle-over-genes-dogma">How “Lifestyle Over Genes” Became Medical Dogma</a></li>
+        <li><a href="/guides/intrinsic-vs-extrinsic-mortality">Intrinsic vs Extrinsic Mortality</a></li>
+      </ul>
+    </section>
 
-      <li>
-        <a href="/posts/lifestyle-over-genes-dogma">
-          How “Lifestyle Over Genes” Became Medical Dogma
-        </a>
-        <p>
-          Why aging genetics were sidelined — and why that story is now
-          collapsing.
-        </p>
-      </li>
-    </ol>
-  </section>
+    <section class="hub-section">
+      <h2>Coming next</h2>
+      <ul>
+        <li><strong>Aging & Longevity Basics</strong></li>
+        <li><strong>Lifespan vs Healthspan</strong></li>
+        <li><strong>Longevity Interventions: What Has Evidence?</strong></li>
+        <li><strong>Epigenetics and Aging</strong></li>
+        <li><strong>GLP-1 Drugs and Aging</strong></li>
+      </ul>
+    </section>
 
-  <section class="hub-section">
-    <h2>Latest additions</h2>
-    <ul>
-      <li><a href="/posts/longevity-genetics-rehabilitated">Longevity Genetics Just Got Rehabilitated</a></li>
-      <li><a href="/posts/lifestyle-over-genes-dogma">How “Lifestyle Over Genes” Became Medical Dogma</a></li>
-      <li><a href="/guides/intrinsic-vs-extrinsic-mortality">Intrinsic vs Extrinsic Mortality</a></li>
-    </ul>
-  </section>
-
-  <section class="hub-section">
-    <h2>Coming next</h2>
-    <ul>
-      <li><strong>Aging & Longevity Basics</strong></li>
-      <li><strong>Lifespan vs Healthspan</strong></li>
-      <li><strong>Longevity Interventions: What Has Evidence?</strong></li>
-      <li><strong>Epigenetics and Aging</strong></li>
-      <li><strong>GLP-1 Drugs and Aging</strong></li>
-    </ul>
-  </section>
-
-  <section class="hub-section">
-    <h2>In progress (drafts)</h2>
-    <p>
-      These posts already exist in the repository but are not yet published.
-      Titles and structure may still change.
-    </p>
-    <ul class="draft-list">
-      <li>
-        <strong>Longevity Genetics Just Got Rehabilitated</strong>
-        <span class="draft-note">Post · Draft</span>
-      </li>
-      <li>
-        <strong>How “Lifestyle Over Genes” Became Medical Dogma</strong>
-        <span class="draft-note">Post · Draft</span>
-      </li>
-    </ul>
-  </section>
-</main>
-
-<style>
-  .hub {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1.25rem;
-  }
-
-  .hub-hero h1 {
-    font-size: 2.2rem;
-    margin: 0 0 0.5rem;
-  }
-
-  .hub-hero p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0;
-    opacity: 0.9;
-  }
-
-  .hub-section {
-    margin-top: 2.5rem;
-  }
-
-  .hub-section h2 {
-    font-size: 1.35rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .reading-order {
-    padding-left: 1.25rem;
-  }
-
-  .reading-order li {
-    margin-bottom: 1.25rem;
-  }
-
-  .reading-order p {
-    margin: 0.35rem 0 0;
-    opacity: 0.9;
-  }
-
-  ul {
-    padding-left: 1.25rem;
-    line-height: 1.6;
-  }
-
-  /* Draft styling */
-  .draft-list {
-    opacity: 0.75;
-  }
-
-  .draft-note {
-    font-size: 0.85rem;
-    margin-left: 0.5rem;
-    opacity: 0.7;
-  }
-</style>
+    <section class="hub-section">
+      <h2>In progress (drafts)</h2>
+      <p>These posts already exist in the repository but are not yet published. Titles and structure may still change.</p>
+      <ul class="draft-list">
+        <li><strong>Longevity Genetics Just Got Rehabilitated</strong> <span class="draft-note">Post · Draft</span></li>
+        <li><strong>How “Lifestyle Over Genes” Became Medical Dogma</strong> <span class="draft-note">Post · Draft</span></li>
+      </ul>
+    </section>
+  </main>
+</Layout>

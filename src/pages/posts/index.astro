@@ -92,11 +92,11 @@ const frontmatter = {
 
                   {tags.length > 0 && (
                     <div class="pg-post-card__tags">
-                      {tags.slice(0, 3).map((tag: string) => (
+                      {tags.slice(0, 4).map((tag: string) => (
                         <span class="pg-post-card__tag">{tag}</span>
                       ))}
-                      {tags.length > 3 && (
-                        <span class="pg-post-card__tag pg-post-card__tag--more">+{tags.length - 3}</span>
+                      {tags.length > 4 && (
+                        <span class="pg-post-card__tag pg-post-card__tag--more">+{tags.length - 4}</span>
                       )}
                     </div>
                   )}
