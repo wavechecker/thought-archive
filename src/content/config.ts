@@ -27,6 +27,7 @@ const CATEGORY = z.enum([
   "Child & Adolescent Health",
   "Obesity & Metabolic Health Hub",
   "Men's Health",
+  "Aging & Longevity",
   "Guide Hubs",
   "Respiratory",
   "Infections",
