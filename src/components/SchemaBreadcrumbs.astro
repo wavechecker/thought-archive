@@ -1,0 +1,39 @@
+---
+/**
+ * SchemaBreadcrumbs.astro
+ * Renders BreadcrumbList JSON-LD.
+ *
+ * Usage:
+ * <SchemaBreadcrumbs items={[{ name: "Home", url: "https://..." }, ...]} />
+ */
+
+type Crumb = { name: string; url: string };
+
+const { items } = Astro.props as { items: Crumb[] };
+
+const safeItems = Array.isArray(items)
+  ? items
+      .filter((x) => x && typeof x.name === "string" && typeof x.url === "string")
+      .map((x, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: x.name.trim(),
+        item: x.url.trim(),
+      }))
+  : [];
+
+const jsonLd =
+  safeItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: safeItems,
+      }
+    : null;
+---
+
+{jsonLd && (
+  <script type="application/ld+json">
+    {JSON.stringify(jsonLd)}
+  </script>
+)}
