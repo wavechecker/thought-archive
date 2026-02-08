@@ -1,0 +1,146 @@
+---
+title: "AI in Healthcare: What Patients Should Know"
+description: "A clear, evidence-based guide to how artificial intelligence is used in modern healthcare — benefits, limits, and risks."
+category: "AI in Health"
+publishDate: "2026-02-06"
+updatedDate: "2026-02-06"
+tags: ["ai", "machine-learning", "clinical-ai"]
+draft: false
+---
+
+import SchemaBreadcrumbs from "../../components/SchemaBreadcrumbs.astro";
+import SchemaArticle from "../../components/SchemaArticle.astro";
+import AIExplainerBox from "../../components/AIExplainerBox.astro";
+
+<SchemaBreadcrumbs items={[
+  { name: "Guides", url: "/guides" },
+  { name: "AI in Health", url: "/guides/ai-in-health" },
+  { name: "AI in Healthcare: What Patients Should Know" }
+]} />
+
+<SchemaArticle
+  type="guide"
+  headline="AI in Healthcare: What Patients Should Know"
+  description="A clear, evidence-based guide to how artificial intelligence is used in modern healthcare — benefits, limits, and risks."
+  category="AI in Health"
+  publishDate="2026-02-06"
+  updatedDate="2026-02-06"
+  canonicalPath="/guides/ai-in-healthcare"
+/>
+
+## Intro
+
+Artificial intelligence is already part of modern healthcare. It assists with reading medical images, flagging potential drug interactions, triaging messages, and more. Yet most patients have never been told when or how AI is involved in their care.
+
+This guide explains what AI does in clinical settings today, where it helps, where it falls short, and what questions you can ask your care team.
+
+## Key Points
+
+- AI in healthcare is a tool used alongside clinicians — it does not replace them
+- Most clinical AI systems are narrow: trained for a single, specific task
+- AI can improve speed and consistency in areas like imaging and triage
+- Errors and biases in AI are real and well-documented
+- Patients have the right to ask whether AI was involved in their care
+- Regulation is evolving; not all AI tools undergo the same level of scrutiny
+
+---
+
+## Background
+
+The term "artificial intelligence" covers a broad range of technologies. In healthcare, it most commonly refers to **machine-learning models** — software trained on large datasets to detect patterns that humans may miss or take longer to find.
+
+AI is not new in medicine. Rule-based clinical decision support systems have existed since the 1970s. What has changed is the scale of data available and the sophistication of the models processing it.
+
+Regulatory bodies such as the U.S. Food and Drug Administration (FDA) have authorised hundreds of AI-enabled medical devices, mostly in radiology and cardiology. However, authorisation does not always mean the tool has been validated across all patient populations.
+
+## How AI Is Used Today
+
+AI applications in healthcare generally fall into several categories:
+
+- **Medical imaging** — detecting abnormalities in X-rays, CT scans, mammograms, retinal scans, and pathology slides
+- **Clinical decision support** — alerting clinicians to potential diagnoses, drug interactions, or deteriorating patient status
+- **Administrative tasks** — automating scheduling, coding, documentation, and prior authorisation
+- **Drug discovery** — identifying candidate molecules and predicting drug behaviour in preclinical research
+- **Remote monitoring** — analysing data from wearable devices to flag changes in heart rhythm, blood glucose, or activity patterns
+- **Triage and routing** — sorting patient messages or emergency presentations by urgency
+
+<AIExplainerBox title="What is clinical decision support?">
+
+Clinical decision support (CDS) refers to any tool that helps a clinician make a care decision at the point of care. Traditional CDS systems use predefined rules — for example, alerting a pharmacist when two prescribed drugs interact.
+
+AI-powered CDS goes further: it can analyse a patient's full medical record to suggest possible diagnoses, flag missed screenings, or predict risk of complications. However, the clinician always makes the final decision. AI-powered CDS is an aid, not an authority.
+
+</AIExplainerBox>
+
+## Benefits
+
+When applied well and validated rigorously, AI in healthcare can:
+
+- **Improve early detection** — AI models have shown strong performance in identifying early-stage cancers in mammography and lung CT screening
+- **Reduce clinician workload** — automating routine documentation and triage frees time for direct patient care
+- **Increase consistency** — unlike humans, algorithms do not tire or lose focus after long shifts, though they can still be wrong in systematic ways
+- **Expand access** — AI-assisted tools can extend specialist-level screening to underserved or remote areas where specialists are scarce
+- **Accelerate research** — AI can analyse clinical trial data and genomic datasets at speeds no human team can match
+
+These benefits depend on the quality of the training data, the rigour of validation, and the context of use.
+
+## Risks and Limits
+
+AI in healthcare carries real risks that patients and clinicians should understand:
+
+- **Bias** — if training data overrepresents certain demographics, the model may perform poorly for others. This has been documented in dermatology AI (less accurate on darker skin tones) and in risk-prediction tools that underestimated illness severity in Black patients
+- **Opacity** — many AI models, especially deep-learning systems, cannot easily explain *why* they reached a particular conclusion. This makes it harder for clinicians to verify or override the output
+- **Overfitting** — a model may perform well on the data it was trained on but fail when applied to a different hospital, population, or clinical workflow
+- **Automation bias** — clinicians may defer to AI output even when their own judgment disagrees, particularly under time pressure
+- **Data privacy** — AI systems often require large volumes of patient data for training, raising questions about consent, de-identification, and data security
+- **Regulatory gaps** — some AI tools are updated continuously after deployment. Current regulatory frameworks were not designed for software that changes over time
+
+<AIExplainerBox title="What are foundation models?">
+
+A foundation model is a very large AI system trained on broad, general-purpose data — such as text from the internet, medical literature, or millions of medical images — before being adapted for a specific task. Examples include large language models (like GPT or Claude) and vision models used in radiology research.
+
+Foundation models are powerful because they can be fine-tuned for many different tasks. But their size and generality also make them harder to audit, explain, and validate for safety in any single clinical scenario. Their use in direct patient care is still largely experimental.
+
+</AIExplainerBox>
+
+## Practical Questions to Ask Your Clinician
+
+If you want to understand whether AI played a role in your care, consider asking:
+
+- "Was any AI or computer-assisted tool used in interpreting my test results?"
+- "Has this tool been validated for patients like me (age, sex, ethnicity, condition)?"
+- "Does a human clinician review the AI's output before it affects my care plan?"
+- "How would my care differ if the AI tool were not available?"
+- "Where can I learn more about how this tool works?"
+
+You are not expected to understand the technical details. But you have every right to ask, and your care team should be able to answer in plain language.
+
+## FAQ
+
+**Q: Is AI making decisions about my health without my knowledge?**
+A: In most healthcare systems, AI assists clinicians rather than making independent decisions. However, disclosure practices vary. If you are concerned, ask your care team directly.
+
+**Q: Can AI misdiagnose me?**
+A: Yes. Like any diagnostic tool, AI can produce false positives (flagging something that is not there) and false negatives (missing something that is). Clinical AI is designed to work alongside — not replace — a trained clinician's judgment.
+
+**Q: Is my health data being used to train AI?**
+A: It depends on your healthcare provider and local regulations. In many jurisdictions, data used for AI training must be de-identified. Some institutions require explicit consent; others operate under broader research exemptions. Ask your provider about their data-use policies.
+
+**Q: Are AI health tools regulated?**
+A: Some are. In the U.S., the FDA has authorised hundreds of AI-enabled devices, primarily in imaging. In the EU, the AI Act and Medical Device Regulation apply. However, many AI tools — especially those embedded in electronic health records or used for administrative tasks — may not undergo the same level of review.
+
+**Q: Should I trust an AI chatbot for medical advice?**
+A: General-purpose AI chatbots are not medical devices and are not validated for clinical use. They can provide useful background information, but they should never replace a consultation with a qualified clinician for personal health decisions.
+
+## Further Reading
+
+- [WHO — Artificial Intelligence in Health](https://www.who.int/health-topics/artificial-intelligence)
+- [U.S. FDA — Artificial Intelligence and Machine Learning in Software as a Medical Device](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device)
+- [NIH — Artificial Intelligence in Biomedical Research](https://datascience.nih.gov/artificial-intelligence)
+- [NIST — AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework)
+
+## Related Guides
+
+- [MRI Explained](/guides/mri-explained)
+- [Stroke Symptoms](/guides/stroke-symptoms)
+- [Medical Tests: How to Interpret](/guides/medical-tests-how-to-interpret)
