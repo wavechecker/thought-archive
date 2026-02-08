@@ -1,0 +1,80 @@
+---
+/**
+ * SchemaArticle.astro
+ * Emits Article / MedicalWebPage JSON-LD for guide and post pages.
+ *
+ * Usage:
+ *   <SchemaArticle
+ *     type="guide"
+ *     headline="Page Title"
+ *     description="Short description."
+ *     category="AI in Health"
+ *     publishDate="2026-02-06"
+ *     updatedDate="2026-02-06"
+ *     canonicalPath="/guides/ai-in-healthcare"
+ *   />
+ */
+
+export interface Props {
+  type?: "guide" | "post";
+  headline: string;
+  description?: string;
+  category?: string;
+  publishDate?: string;
+  updatedDate?: string;
+  canonicalPath?: string;
+}
+
+const {
+  type = "guide",
+  headline,
+  description,
+  category,
+  publishDate,
+  updatedDate,
+  canonicalPath,
+} = Astro.props as Props;
+
+const site =
+  Astro.site?.toString().replace(/\/+$/, "") ?? "https://patientguide.io";
+
+const canonicalUrl = canonicalPath
+  ? `${site}${canonicalPath.startsWith("/") ? "" : "/"}${canonicalPath}`
+  : undefined;
+
+const schemaType =
+  type === "guide" ? ["Article", "MedicalWebPage"] : "Article";
+
+const jsonLd: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": schemaType,
+  headline,
+};
+
+if (description) jsonLd.description = description;
+if (category) jsonLd.articleSection = category;
+
+if (canonicalUrl) {
+  jsonLd.mainEntityOfPage = { "@type": "WebPage", "@id": canonicalUrl };
+}
+
+if (publishDate) jsonLd.datePublished = publishDate;
+if (updatedDate) jsonLd.dateModified = updatedDate;
+else if (publishDate) jsonLd.dateModified = publishDate;
+
+jsonLd.author = {
+  "@type": "Organization",
+  name: "patientguide.io",
+  url: site,
+};
+
+jsonLd.publisher = {
+  "@type": "Organization",
+  name: "patientguide.io",
+  logo: { "@type": "ImageObject", url: `${site}/logo.png` },
+};
+---
+
+<script type="application/ld+json">
+  {JSON.stringify(jsonLd)}
+</script>
