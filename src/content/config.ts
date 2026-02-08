@@ -31,6 +31,7 @@ const CATEGORY = z.enum([
   "Guide Hubs",
   "Respiratory",
   "Infections",
+  "AI in Health",
 ]);
 
 // -----------------------------

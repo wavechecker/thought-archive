@@ -1,0 +1,85 @@
+---
+title: "AI Is Becoming Clinical Infrastructure — Radiology Is Just the Start"
+description: "A major Nature study shows how health-system–scale AI is reshaping radiology, burnout, and access to care."
+publishDate: "2026-02-06"
+updatedDate: "2026-02-06"
+tags: ["ai", "clinical-ai", "radiology", "medical-imaging"]
+related:
+  - /guides/ai-in-healthcare
+draft: false
+---
+
+import SchemaArticle from "../../components/SchemaArticle.astro";
+
+<SchemaArticle
+  type="post"
+  headline="AI Is Becoming Clinical Infrastructure — Radiology Is Just the Start"
+  description="A major Nature study shows how health-system–scale AI is reshaping radiology, burnout, and access to care."
+  publishDate="2026-02-06"
+  updatedDate="2026-02-06"
+  canonicalPath="/posts/ai-foundation-models-radiology"
+/>
+
+## Hook
+
+We've been told for years that AI is "coming" to medicine. That it will "transform" diagnostics. That it's "just around the corner."
+
+Well, it's not around the corner anymore. **It's in the reading room.**
+
+A major study published in *Nature Biomedical Engineering* describes what happens when you deploy a general-purpose AI foundation model — not in a research lab, not on a curated dataset — but across an entire health system's radiology workflow. Millions of real clinical images. Real radiologists. Real patients.
+
+This isn't a proof of concept. It's a proof of deployment.
+
+## Context
+
+Most clinical AI tools to date have been narrow. One model for one task: detect a lung nodule, flag a fracture, screen a mammogram. They work. Some work well. But each one is siloed — trained on a specific imaging type, validated on a limited dataset, and bolted onto the workflow as a standalone tool.
+
+What makes the Nature study different is scope. The researchers describe a foundation model — a single, large-scale AI system trained on health-system–scale imaging data — capable of handling a broad range of radiology tasks rather than just one. We're talking about a model that ingests diverse imaging modalities and clinical contexts, and that was developed using data drawn from routine hospital operations, not cherry-picked research archives.
+
+This is a meaningful shift. Instead of fifty separate tools for fifty tasks, you get one system trained on the messy, heterogeneous reality of a working hospital.
+
+## What's Actually New Here
+
+Three things stand out.
+
+**First, the data is real-world at scale.** The model was trained and evaluated on imaging data from actual clinical operations — the kind of data that includes the noise, variability, and imperfection that research datasets often filter out. That matters, because a model that performs well on clean benchmarks but stumbles in routine practice is not clinically useful.
+
+**Second, it's a foundation model, not a single-task classifier.** This is the same architectural approach behind large language models, applied to medical imaging. The idea is that a model trained broadly can then be adapted to many downstream tasks — triage, detection, reporting support — without being retrained from scratch each time.
+
+**Third, the study addresses deployment, not just performance.** It doesn't just ask "can the model read a scan?" It asks how the model fits into the workflow. How radiologists interact with it. Whether it actually changes throughput, turnaround time, or decision quality in practice.
+
+That last point is where most AI research in medicine falls short. Performance on a test set is not the same as performance in a hospital.
+
+## Why This Matters for Patients
+
+You may never see this model. You may never know it was involved in your care. But if it works as described, the effects are real:
+
+- **Faster reads.** Radiology departments everywhere are drowning in volume. AI that pre-screens, prioritises, or pre-populates reports can reduce the time between your scan and your results.
+
+- **Fewer missed findings.** A second set of eyes — even algorithmic ones — catches things that fatigued humans miss. Particularly in overnight reads, emergency departments, and rural hospitals where specialist cover is thin.
+
+- **Reduced burnout.** Radiologist burnout is not a soft problem. It's a patient-safety problem. If AI absorbs the lowest-value cognitive work, clinicians can focus on the cases that actually need them.
+
+- **Wider access.** Health systems that can't recruit enough radiologists — which is most of them — can use AI to extend specialist-level screening to underserved populations. Not as a replacement, but as a bridge.
+
+None of this is guaranteed. But the study provides evidence that these outcomes are achievable at scale, not just in theory.
+
+## The Risk If This Goes Wrong
+
+Let's be honest about the other side.
+
+**Bias doesn't vanish at scale — it can scale too.** If the training data reflects existing disparities in who gets imaged, how they're imaged, and how their results are interpreted, the model will inherit those biases. At health-system scale, that's not a small risk.
+
+**Opacity is still a problem.** Foundation models are notoriously difficult to interrogate. When a narrow model flags a nodule, you can at least see the heatmap. When a foundation model makes a nuanced judgment across a complex case, the reasoning may be far less transparent. Clinicians need to be able to challenge AI — and that requires understanding what it's doing.
+
+**Workflow dependency is a trap.** Once radiology departments restructure around AI-assisted reads, removing the tool — for safety, regulatory, or technical reasons — becomes enormously disruptive. That's a form of lock-in that hospitals need to plan for.
+
+**Regulation hasn't caught up.** The FDA has authorised hundreds of AI-enabled devices, but the regulatory framework was designed for static software. A foundation model that is continuously updated or fine-tuned for new tasks doesn't sit neatly within existing approval pathways. The governance question is wide open.
+
+The worst outcome isn't that AI fails. It's that AI works just well enough to be trusted — but not well enough to be safe in the cases where it matters most.
+
+## Read Next
+
+This post covers a single — albeit significant — study. If you want broader context on how AI is being used in healthcare today, where it helps, where it falls short, and what questions you should be asking your care team, the companion guide covers all of it.
+
+[AI in Healthcare: What Patients Should Know](/guides/ai-in-healthcare)
