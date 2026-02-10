@@ -3,12 +3,20 @@
   "region": "United States",
   "series": [
     {
-      "year": 2025,
-      "confirmedCases": 340,
-      "outbreaksInvestigated": 11,
-      "lastUpdated": "2025-10-01",
+      "year": 2026,
+      "confirmedCases": 733,
+      "outbreaksInvestigated": 2,
+      "lastUpdated": "2026-02-06",
       "sourceName": "CDC",
-      "sourceUrl": "https://www.cdc.gov/measles/index.html"
+      "sourceUrl": "https://www.cdc.gov/measles/data-research/index.html"
+    },
+    {
+      "year": 2025,
+      "confirmedCases": 2276,
+      "outbreaksInvestigated": 49,
+      "lastUpdated": "2026-02-06",
+      "sourceName": "CDC",
+      "sourceUrl": "https://www.cdc.gov/measles/data-research/index.html"
     }
   ]
 }

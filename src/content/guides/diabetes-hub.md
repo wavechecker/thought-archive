@@ -1,7 +1,6 @@
 ---
 category: "Diabetes"
 title: "Diabetes Hub"
-slug: "diabetes-hub"
 description: "A central hub for understanding diabetes: type 1, type 2, and prediabetes — symptoms, management, prevention, and resources."
 publishDate: "2025-09-13"
 updatedDate: "2025-09-14"
