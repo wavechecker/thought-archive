@@ -31,6 +31,18 @@
   to = "/guides/womens-health"
   status = 301
 
+[[redirects]]
+  from = "/guides/measles-vaccine"
+  to = "/guides/measles-vaccination"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/measles-vaccine/"
+  to = "/guides/measles-vaccination"
+  status = 301
+  force = true
+
 # Use splat rule to cover both with and without slash + any child paths
 [[redirects]]
   from = "/guides/child-adolescent-health-hub/*"

@@ -33,7 +33,7 @@ This section brings together guides on how vaccines work, their safety, and the 
 - [Vaccination Timeline: Key Milestones](/guides/vaccination-timeline-key-milestones)
 
 ## Disease-Specific Guides
-- [Measles Vaccine](/guides/measles-vaccine)  
+- [Measles Vaccine](/guides/measles-vaccination)
 - [HPV Vaccine](/guides/hpv-vaccine)  
 - [Influenza Vaccines](/guides/influenza-vaccines)  
 - [COVID-19 Vaccines](/guides/covid-19-vaccines)  

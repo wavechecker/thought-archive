@@ -78,4 +78,4 @@ A: Not always. Some prevent severe illness and transmission even if mild infecti
 - [Aluminum in Vaccines](/guides/aluminum-in-vaccines)  
 - [mRNA Vaccines](/guides/mrna-vaccines)  
 - [Influenza Vaccines](/guides/influenza-vaccines)  
-- [Measles Vaccine](/guides/measles-vaccine)  
+- [Measles Vaccine](/guides/measles-vaccination)
