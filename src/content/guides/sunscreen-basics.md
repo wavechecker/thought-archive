@@ -73,5 +73,5 @@ A: Yes. Regular daily use of SPF 30+ significantly lowers the risk of melanoma a
 
 ## Related Guides
 - [Skin Cancer — Prevention](/guides/skin-cancer-prevention)  
-- [Skin Cancer — Warning Signs](/guides/skin-cancer-signs)  
+- [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)
 - [Cancer — Guide Hub](/guides/cancer/)  

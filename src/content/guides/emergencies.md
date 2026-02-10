@@ -17,7 +17,7 @@ This hub pulls together guides on urgent conditions such as heart attack, stroke
 ## Core Guides
 - [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/when-to-seek-emergency-help-for-chest-pain)  
 - [Recognizing a Stroke FAST — A Practical Guide](/guides/recognizing-stroke)  
-- [Allergies and Anaphylaxis — Symptoms and Emergency Response](/guides/allergies-and-anaphylaxis)  
+- [Allergies and Anaphylaxis — Symptoms and Emergency Response](/guides/anaphylaxis)
 - [Choking — First Aid Steps](/guides/choking-first-aid)  
 - [Seizures — First Aid and Safety](/guides/seizures-first-aid)  
 - [Shortness of Breath — 5 Signs to See a Doctor](/guides/shortness-of-breath-see-a-doctor)  

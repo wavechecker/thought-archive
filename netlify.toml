@@ -79,6 +79,108 @@
   to = "/guides/mental-health"
   status = 301
 
+# ---------- Consolidated guide redirects (2026-02-10 cleanup) ----------
+# Skin cancer: superseded by combined guides
+[[redirects]]
+  from = "/guides/skin-cancer-diagnosis"
+  to = "/guides/skin-cancer-diagnosis-treatment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/skin-cancer-diagnosis/"
+  to = "/guides/skin-cancer-diagnosis-treatment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/skin-cancer-signs"
+  to = "/guides/skin-cancer-signs-prevention"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/skin-cancer-signs/"
+  to = "/guides/skin-cancer-signs-prevention"
+  status = 301
+  force = true
+
+# UTI: plural → singular
+[[redirects]]
+  from = "/guides/urinary-tract-infections"
+  to = "/guides/urinary-tract-infection"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/urinary-tract-infections/"
+  to = "/guides/urinary-tract-infection"
+  status = 301
+  force = true
+
+# T1D sick day: legacy word-order variant
+[[redirects]]
+  from = "/guides/sick-day-type-1-diabetes"
+  to = "/guides/type-1-diabetes-sick-day-management"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/sick-day-type-1-diabetes/"
+  to = "/guides/type-1-diabetes-sick-day-management"
+  status = 301
+  force = true
+
+# Hep B birth dose: legacy guide variant
+[[redirects]]
+  from = "/guides/hepatitis-b-birth-dose-guide"
+  to = "/guides/hepatitis-b-birth-dose-explained"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/hepatitis-b-birth-dose-guide/"
+  to = "/guides/hepatitis-b-birth-dose-explained"
+  status = 301
+  force = true
+
+# GLP-1 hyphenation: glp1 → glp-1
+[[redirects]]
+  from = "/guides/glp1-drugs-and-aging"
+  to = "/guides/glp-1-drugs-and-aging"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/glp1-drugs-and-aging/"
+  to = "/guides/glp-1-drugs-and-aging"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/ozempic-glp1-guide"
+  to = "/guides/ozempic-glp-1-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/ozempic-glp1-guide/"
+  to = "/guides/ozempic-glp-1-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/muscle-preservation-glp1"
+  to = "/guides/muscle-preservation-glp-1"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/muscle-preservation-glp1/"
+  to = "/guides/muscle-preservation-glp-1"
+  status = 301
+  force = true
+
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
 #   from = "/*"

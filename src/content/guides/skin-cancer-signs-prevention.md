@@ -128,6 +128,6 @@ A: Research suggests nicotinamide may reduce risk, but it’s not a substitute f
 - [JAMA Dermatology — Nicotinamide Chemoprevention Study](https://doi.org/10.1001/jamadermatol.2025.3238)  
 
 ## Related Guides
-- [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis)  
+- [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis-treatment)
 - [Skin Cancer Treatment Options](/guides/skin-cancer-treatment)  
 - [Sun Safety & UV Protection](/guides/sun-safety)  

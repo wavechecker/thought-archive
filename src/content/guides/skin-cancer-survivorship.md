@@ -100,5 +100,5 @@ A: Yes. Survivorship is both physical and emotional. Support groups and counseli
 ## Related Guides
 - [Skin Cancer — Guide Hub](/guides/skin-cancer)  
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)  
-- [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis)  
+- [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis-treatment)
 - [Skin Cancer Treatment Options](/guides/skin-cancer-treatment)  

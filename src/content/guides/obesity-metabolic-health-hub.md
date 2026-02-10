@@ -21,11 +21,11 @@ While BMI has long been the standard measure, newer research highlights the impo
 - [Metabolic Syndrome](/guides/metabolic-syndrome)  
 
 ## Related Guides
-- [Ozempic and GLP-1 Weight Loss Drugs](/guides/ozempic-glp1-guide)
+- [Ozempic and GLP-1 Weight Loss Drugs](/guides/ozempic-glp-1-guide)
 - [GLP-1 Side Effects: Evidence vs Myth](/guides/glp-1-side-effects-evidence-vs-myth)
 - [GLP-1 vs Bariatric Surgery](/guides/glp-1-vs-bariatric-surgery)
 - [GLP-1 Use in Non-Obese Adults](/guides/glp-1-non-obese-use)
-- [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp1)
+- [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp-1)
 
 ## Why It Matters
 Metabolic health isn’t only about weight. Waist size, fat distribution, and inflammatory markers tell a much richer story than BMI alone. By understanding these measures, patients and clinicians can better predict risk — and take action earlier.  

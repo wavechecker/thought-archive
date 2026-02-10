@@ -52,6 +52,6 @@ A: Yes, most can. For babies under 6 months, focus on shade and clothing first.
 - [WHO — UV safety](https://www.who.int/news-room/fact-sheets/detail/ultraviolet-(uv)-radiation)  
 
 ## Related Guides
-- [Skin Cancer — Warning Signs](/guides/skin-cancer-signs)  
+- [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)
 - [Sunscreen Basics](/guides/sunscreen-basics)  
 - [Cancer — Guide Hub](/guides/cancer/)  

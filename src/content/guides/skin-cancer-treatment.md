@@ -88,4 +88,4 @@ A: For patients who can’t have surgery or for advanced/recurrent cases.
 ## Related Guides
 - [Skin Cancer — Guide Hub](/guides/skin-cancer)  
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)  
-- [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis)  
+- [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis-treatment)

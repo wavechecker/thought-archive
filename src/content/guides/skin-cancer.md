@@ -27,7 +27,7 @@ jsonld:
             name: "Skin Cancer — Warning Signs and Prevention"
           - "@type": "ListItem"
             position: 2
-            url: "/guides/skin-cancer-diagnosis"
+            url: "/guides/skin-cancer-diagnosis-treatment"
             name: "Skin Cancer Diagnosis and Staging"
           - "@type": "ListItem"
             position: 3
@@ -83,7 +83,7 @@ This hub connects our condition-specific guides, covering prevention, diagnosis,
 
 ## Core Guides
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)  
-- [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis)  
+- [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis-treatment)
 - [Skin Cancer Treatment Options](/guides/skin-cancer-treatment)  
 
 ---
