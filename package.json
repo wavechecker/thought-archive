@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "rm -rf .astro",
+    "prebuild": "rm -rf .astro node_modules/.astro/data-store.json",
     "build": "astro build",
     "preview": "astro preview",
     "ops": "code ops-checklist.md",
