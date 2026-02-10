@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "rm -rf .astro",
     "build": "astro build",
     "preview": "astro preview",
     "ops": "code ops-checklist.md",
