@@ -1,0 +1,307 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const site = Astro.site?.toString().replace(/\/+$/, "") || "https://patientguide.io";
+const pageUrl = `${site}/guides/ai-in-health`;
+
+const title = "AI in Health";
+const description =
+  "AI tools are entering clinical practice — from diagnostic imaging to triage chatbots. The evidence is developing fast, but so are the risks. This hub collects our evidence-first guides on clinical AI.";
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Guides", item: `${site}/guides` },
+    { "@type": "ListItem", position: 2, name: title, item: pageUrl },
+  ],
+};
+
+const collectionPageLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: `${title} — Guides`,
+  description,
+  url: pageUrl,
+  inLanguage: "en",
+  isPartOf: { "@type": "WebSite", name: "PatientGuide.io", url: site },
+};
+
+const frontmatter = { title: `${title} — Guides`, description };
+
+const featured = [
+  {
+    title: "AI in Medicine: Evidence Standards",
+    description: "How to evaluate claims about AI diagnostic tools using established evidence frameworks.",
+    href: "/guides/ai-in-medicine-evidence-standards",
+  },
+  {
+    title: "Automation Bias in Clinical Practice",
+    description: "When clinicians over-rely on algorithmic suggestions — and how to guard against it.",
+    href: "/guides/automation-bias-in-clinical-practice",
+  },
+  {
+    title: "Algorithmic Bias in Healthcare",
+    description: "How biased training data can produce AI systems that widen health disparities.",
+    href: "/guides/algorithmic-bias-healthcare",
+  },
+  {
+    title: "AI in Radiology: Hype vs Evidence",
+    description: "What the evidence actually shows about AI-assisted imaging in real clinical settings.",
+    href: "/guides/ai-in-radiology-evidence",
+  },
+];
+
+const allGuides = [
+  { title: "AI in Medicine: Evidence Standards", href: "/guides/ai-in-medicine-evidence-standards" },
+  { title: "Automation Bias in Clinical Practice", href: "/guides/automation-bias-in-clinical-practice" },
+  { title: "Algorithmic Bias in Healthcare", href: "/guides/algorithmic-bias-healthcare" },
+  { title: "AI in Radiology: Hype vs Evidence", href: "/guides/ai-in-radiology-evidence" },
+  { title: "Large Language Models in Medicine", href: "/guides/large-language-models-in-medicine" },
+  { title: "AI in Healthcare: What Patients Should Know", href: "/guides/ai-in-healthcare" },
+];
+---
+
+<Layout {frontmatter}>
+  <article class="hero-page">
+    <!-- Header -->
+    <header class="hero-page__header">
+      <nav class="hero-page__breadcrumb" aria-label="Breadcrumb">
+        <a href="/guides">Guides</a>
+        <span aria-hidden="true">/</span>
+        <span>{title}</span>
+      </nav>
+      <h1 class="hero-page__title">{title}</h1>
+      <p class="hero-page__description">{description}</p>
+    </header>
+
+    <!-- Intro -->
+    <section class="hero-page__section">
+      <p class="hero-page__intro">
+        This hub is for patients and clinicians who want to understand AI in
+        healthcare through the lens of evidence quality — not hype. Each guide
+        examines a specific aspect of clinical AI, from how tools are validated
+        to the cognitive and social risks they introduce.
+      </p>
+    </section>
+
+    <!-- What This Covers -->
+    <section class="hero-page__section">
+      <h2 class="hero-page__section-title">What This Covers</h2>
+      <ul class="hero-page__scope-list">
+        <li><strong>Evidence standards</strong> — how to judge whether a clinical AI tool actually works</li>
+        <li><strong>Cognitive risks</strong> — automation bias and the danger of uncritical trust in algorithms</li>
+        <li><strong>Fairness</strong> — algorithmic bias and who gets left behind when training data isn't representative</li>
+        <li><strong>Real-world impact</strong> — why lab performance metrics don't always translate to better patient outcomes</li>
+      </ul>
+      <p class="hero-page__closing">
+        We've moved beyond Dr&nbsp;Google. This is the Dr&nbsp;AI Era — and the
+        grey zone is where the most important questions live.
+      </p>
+    </section>
+
+    <!-- Featured Guides -->
+    <section class="hero-page__section">
+      <h2 class="hero-page__section-title">Featured Guides</h2>
+      <div class="hero-page__clusters">
+        {featured.map((item) => (
+          <a href={item.href} class="hero-page__cluster-card">
+            <h3 class="hero-page__cluster-title">{item.title}</h3>
+            <p class="hero-page__cluster-desc">{item.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- All Guides -->
+    <section class="hero-page__section">
+      <h2 class="hero-page__section-title">All {title} Guides</h2>
+      <p class="hero-page__guide-count">{allGuides.length} guides</p>
+      <ul class="hero-page__guide-list hero-page__guide-list--full">
+        {allGuides.map((guide) => (
+          <li><a href={guide.href}>{guide.title}</a></li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- What This Page Is Not -->
+    <section class="hero-page__section hero-page__section--muted">
+      <h2 class="hero-page__section-title">What This Page Is Not</h2>
+      <ul class="hero-page__scope-list">
+        <li>A product review or endorsement of any AI tool</li>
+        <li>Clinical advice — always consult your healthcare provider</li>
+        <li>An exhaustive technical overview of machine learning</li>
+      </ul>
+    </section>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(collectionPageLd)} />
+</Layout>
+
+<style>
+  .hero-page {
+    max-width: var(--pg-max-width-content, 48rem);
+    margin: 0 auto;
+  }
+
+  .hero-page__header {
+    margin-bottom: var(--pg-space-8, 2rem);
+  }
+
+  .hero-page__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--pg-space-2, 0.5rem);
+    font-size: var(--pg-text-sm, 0.875rem);
+    color: var(--pg-text-muted, #6b7280);
+    margin-bottom: var(--pg-space-4, 1rem);
+  }
+
+  .hero-page__breadcrumb a {
+    color: var(--pg-link, #2563eb);
+  }
+
+  .hero-page__breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .hero-page__title {
+    font-size: var(--pg-text-3xl, 1.875rem);
+    font-weight: 700;
+    color: var(--pg-text, #111827);
+    margin: 0 0 var(--pg-space-3, 0.75rem);
+    line-height: 1.2;
+  }
+
+  .hero-page__description {
+    font-size: var(--pg-text-lg, 1.125rem);
+    color: var(--pg-text-soft, #374151);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .hero-page__section {
+    margin-bottom: var(--pg-space-10, 2.5rem);
+  }
+
+  .hero-page__section--muted {
+    padding: var(--pg-space-6, 1.5rem);
+    background: var(--pg-surface-soft, #f9fafb);
+    border-radius: var(--pg-radius-lg, 0.75rem);
+    border: 1px solid var(--pg-border, #e5e7eb);
+  }
+
+  .hero-page__section-title {
+    font-size: var(--pg-text-xl, 1.25rem);
+    font-weight: 600;
+    color: var(--pg-text, #111827);
+    margin: 0 0 var(--pg-space-4, 1rem);
+  }
+
+  .hero-page__intro {
+    font-size: var(--pg-text-base, 1rem);
+    color: var(--pg-text-soft, #374151);
+    line-height: var(--pg-leading-relaxed, 1.625);
+    margin: 0;
+  }
+
+  .hero-page__scope-list {
+    margin: 0;
+    padding-left: var(--pg-space-6, 1.5rem);
+    color: var(--pg-text-soft, #374151);
+    line-height: 1.8;
+  }
+
+  .hero-page__scope-list li {
+    margin-bottom: var(--pg-space-2, 0.5rem);
+  }
+
+  .hero-page__closing {
+    margin: var(--pg-space-6, 1.5rem) 0 0;
+    font-style: italic;
+    color: var(--pg-text-muted, #64748b);
+    line-height: var(--pg-leading-relaxed, 1.625);
+  }
+
+  .hero-page__clusters {
+    display: grid;
+    gap: var(--pg-space-4, 1rem);
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .hero-page__clusters {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .hero-page__cluster-card {
+    display: block;
+    padding: var(--pg-space-5, 1.25rem);
+    background: var(--pg-surface, #ffffff);
+    border: 1px solid var(--pg-border, #e5e7eb);
+    border-radius: var(--pg-radius-lg, 0.75rem);
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .hero-page__cluster-card:hover {
+    border-color: var(--pg-link, #2563eb);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+  }
+
+  .hero-page__cluster-title {
+    font-size: var(--pg-text-base, 1rem);
+    font-weight: 600;
+    color: var(--pg-text, #111827);
+    margin: 0 0 var(--pg-space-2, 0.5rem);
+  }
+
+  .hero-page__cluster-card:hover .hero-page__cluster-title {
+    color: var(--pg-link, #2563eb);
+  }
+
+  .hero-page__cluster-desc {
+    font-size: var(--pg-text-sm, 0.875rem);
+    color: var(--pg-text-muted, #6b7280);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .hero-page__guide-list {
+    margin: 0;
+    padding-left: var(--pg-space-5, 1.25rem);
+    line-height: 1.8;
+  }
+
+  .hero-page__guide-list li {
+    margin-bottom: var(--pg-space-2, 0.5rem);
+  }
+
+  .hero-page__guide-list a {
+    color: var(--pg-link, #2563eb);
+  }
+
+  .hero-page__guide-list a:hover {
+    text-decoration: underline;
+  }
+
+  .hero-page__guide-list--full {
+    column-count: 1;
+  }
+
+  @media (min-width: 640px) {
+    .hero-page__guide-list--full {
+      column-count: 2;
+      column-gap: var(--pg-space-8, 2rem);
+    }
+  }
+
+  .hero-page__guide-count {
+    font-size: var(--pg-text-sm, 0.875rem);
+    color: var(--pg-text-muted, #6b7280);
+    margin: 0 0 var(--pg-space-4, 1rem);
+  }
+</style>
