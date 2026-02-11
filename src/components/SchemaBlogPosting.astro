@@ -1,0 +1,9 @@
+---
+/**
+ * Alias for SchemaBlogPost — some guides import under this name.
+ */
+export { Props } from "./SchemaBlogPost.astro";
+import SchemaBlogPost from "./SchemaBlogPost.astro";
+const props = Astro.props;
+---
+<SchemaBlogPost {...props} />
