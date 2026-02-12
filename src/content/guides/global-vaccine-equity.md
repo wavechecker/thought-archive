@@ -58,5 +58,6 @@ A: Strengthening health systems, building regional manufacturing, and ensuring f
 - [PubMed: Global vaccine equity reviews](https://pubmed.ncbi.nlm.nih.gov/?term=vaccine+equity)  
 
 ## Related Guides
-- /guides/vaccine-hesitancy  
-- /guides/vaccination-overview
+
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)
+- [Vaccination Overview](/guides/vaccination-overview)

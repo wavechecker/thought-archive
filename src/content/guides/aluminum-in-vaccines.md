@@ -112,6 +112,7 @@ A: For some antigens, adjuvants are **necessary** for effective, durable protect
 
 
 ## Related Guides
-- /guides/how-vaccines-work  
-- /guides/adverse-events-monitoring  
-- /guides/vaccines-and-autism
+
+- [How Vaccines Work](/guides/how-vaccines-work)
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring)
+- [Vaccines and Autism](/guides/vaccines-and-autism)

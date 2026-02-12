@@ -60,6 +60,7 @@ A: Emotional narratives, distrust of authorities, and the rapid spread of misinf
 
 
 ## Related Guides
-- /guides/aluminum-in-vaccines  
-- /guides/how-vaccines-work  
-- /guides/vaccine-hesitancy
+
+- [Aluminum in Vaccines](/guides/aluminum-in-vaccines)
+- [How Vaccines Work](/guides/how-vaccines-work)
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)

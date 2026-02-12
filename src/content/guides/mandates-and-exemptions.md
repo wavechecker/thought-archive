@@ -51,5 +51,6 @@ A: No. They account for a very small proportion of exemptions. Most exemptions a
 - [PubMed: Reviews on vaccine mandates](https://pubmed.ncbi.nlm.nih.gov/?term=vaccine+mandates)  
 
 ## Related Guides
-- /guides/vaccine-hesitancy  
-- /guides/vaccination-overview
+
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)
+- [Vaccination Overview](/guides/vaccination-overview)

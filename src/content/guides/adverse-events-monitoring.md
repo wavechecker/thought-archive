@@ -105,5 +105,6 @@ A: Trials are too small to detect extremely rare events. Post-marketing surveill
 
 
 ## Related Guides
-- /guides/vaccines-and-autism  
-- /guides/aluminum-in-vaccines
+
+- [Vaccines and Autism](/guides/vaccines-and-autism)
+- [Aluminum in Vaccines](/guides/aluminum-in-vaccines)
