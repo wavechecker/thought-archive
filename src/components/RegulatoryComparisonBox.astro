@@ -2,7 +2,7 @@
 ---
 
 <section class="explainer-box">
-  <h3>🧠 How Is Medical AI Regulated?</h3>
+  <h3>How Is Medical AI Regulated?</h3>
 
   <p>
     Artificial intelligence tools in healthcare are typically regulated based on their <strong>intended clinical use</strong>.
@@ -61,15 +61,19 @@
 
 <style>
   .explainer-box {
-    border-left: 4px solid #2563eb;
-    background: #f8fafc;
+    --accent: var(--pg-link);
+    border-left: 4px solid var(--accent);
+    background: var(--pg-surface-soft);
+    color: var(--pg-text);
     padding: 1.25rem;
     margin: 2rem 0;
     border-radius: 6px;
+    overflow-x: auto;
   }
 
   .explainer-box h3 {
     margin-top: 0;
+    color: var(--pg-text);
   }
 
   .explainer-box table {
@@ -81,12 +85,13 @@
 
   .explainer-box th,
   .explainer-box td {
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--pg-border);
     padding: 0.5rem;
     text-align: left;
   }
 
   .explainer-box th {
-    background: #e2e8f0;
+    background: var(--pg-surface-muted);
+    font-weight: 600;
   }
 </style>

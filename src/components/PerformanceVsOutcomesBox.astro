@@ -1,11 +1,11 @@
 ---
 ---
 
-<section class="explainer-box">
-  <h3>📊 Performance Metrics vs Clinical Outcomes</h3>
+<section class="explainer-box explainer-box--purple">
+  <h3>Performance Metrics vs Clinical Outcomes</h3>
 
   <p>
-    Many AI studies report strong <strong>performance metrics</strong>.  
+    Many AI studies report strong <strong>performance metrics</strong>.
     These measure how well an algorithm detects patterns.
   </p>
 
@@ -44,7 +44,7 @@
   </p>
 
   <blockquote>
-    “Does the algorithm detect patterns well?”
+    "Does the algorithm detect patterns well?"
   </blockquote>
 
   <p>
@@ -52,37 +52,41 @@
   </p>
 
   <blockquote>
-    “Does its use improve patient outcomes safely and consistently?”
+    "Does its use improve patient outcomes safely and consistently?"
   </blockquote>
 </section>
 
 <style>
-  .explainer-box {
-    border-left: 4px solid #7c3aed;
-    background: #faf5ff;
+  .explainer-box--purple {
+    --accent: var(--pg-link-visited);
+    border-left: 4px solid var(--accent);
+    background: var(--pg-surface-soft);
+    color: var(--pg-text);
     padding: 1.25rem;
     margin: 2rem 0;
     border-radius: 6px;
   }
 
-  .explainer-box h3 {
+  .explainer-box--purple h3 {
     margin-top: 0;
+    color: var(--pg-text);
   }
 
-  .explainer-box ul {
+  .explainer-box--purple ul {
     margin-left: 1.25rem;
   }
 
-  .explainer-box blockquote {
+  .explainer-box--purple blockquote {
     margin: 0.75rem 0;
     padding-left: 1rem;
-    border-left: 3px solid #c4b5fd;
+    border-left: 3px solid var(--pg-border);
     font-style: italic;
+    color: var(--pg-text-soft);
   }
 
-  .explainer-box hr {
+  .explainer-box--purple hr {
     border: none;
-    border-top: 1px solid #e9d5ff;
+    border-top: 1px solid var(--pg-border);
     margin: 1rem 0;
   }
 </style>

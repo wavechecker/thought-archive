@@ -1,17 +1,47 @@
 .explainer-box {
-  border-left: 4px solid var(--accent, #2563eb);
-  background: #f8fafc;
+  border-left: 4px solid var(--accent, var(--pg-link));
+  background: var(--pg-surface-soft);
+  color: var(--pg-text);
   padding: 1rem 1.25rem;
   margin: 2rem 0;
   border-radius: 0.5rem;
+  overflow-x: auto;
 }
 
 .explainer-box h3 {
   margin-top: 0;
   font-size: 1rem;
   font-weight: 600;
+  color: var(--pg-text);
 }
 
 .explainer-box ul {
   margin-left: 1.25rem;
+}
+
+.explainer-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.explainer-box th,
+.explainer-box td {
+  border: 1px solid var(--pg-border);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.explainer-box th {
+  background: var(--pg-surface-muted);
+  font-weight: 600;
+}
+
+.explainer-box blockquote {
+  color: var(--pg-text-soft);
+  border-left-color: var(--pg-border);
+}
+
+.explainer-box hr {
+  border-color: var(--pg-border);
 }
