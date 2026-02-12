@@ -1,9 +1,11 @@
 ---
 /**
- * Alias for SchemaBlogPost — some guides import under this name.
+ * Alias for SchemaBlogPost — lets posts import SchemaBlogPosting while keeping one schema source of truth.
  */
 export { Props } from "./SchemaBlogPost.astro";
 import SchemaBlogPost from "./SchemaBlogPost.astro";
+
 const props = Astro.props;
 ---
+
 <SchemaBlogPost {...props} />

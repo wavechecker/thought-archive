@@ -1,0 +1,49 @@
+---
+type Variant = "neutral" | "warning" | "danger";
+
+export interface Props {
+  title?: string;
+  variant?: Variant;
+  items?: string[];
+  footer?: string;
+}
+
+const {
+  title = "Red flags: get urgent help",
+  variant = "danger",
+  items = [
+    "Chest pain, severe shortness of breath, or blue lips",
+    "Sudden weakness, facial droop, confusion, or trouble speaking",
+    "Fainting, collapse, or seizures",
+    "Severe allergic reaction (swelling of face/throat, wheeze)",
+    "Severe bleeding or black/tarry stools",
+    "Sudden ‘worst headache of life’ or neck stiffness + fever",
+  ],
+  footer = "If any red flag applies, seek urgent care now. Don’t use a chatbot to ‘wait and see.’",
+} = Astro.props;
+
+const stylesByVariant: Record<Variant, { border: string; bg: string; label: string }> = {
+  neutral: { border: "border-slate-300", bg: "bg-slate-50", label: "Note" },
+  warning: { border: "border-amber-400", bg: "bg-amber-50", label: "Warning" },
+  danger: { border: "border-red-400", bg: "bg-red-50", label: "Red flags" },
+};
+
+const v = stylesByVariant[variant];
+---
+
+<aside class={`rounded-2xl border ${v.border} ${v.bg} p-4 sm:p-5 my-6 shadow-sm`}>
+  <div class="text-xs font-semibold uppercase tracking-wide text-slate-600">{v.label}</div>
+  <h3 class="mt-1 text-base sm:text-lg font-semibold text-slate-900">{title}</h3>
+
+  {items?.length ? (
+    <ul class="mt-3 space-y-2 text-sm sm:text-[0.95rem] text-slate-800">
+      {items.map((it) => <li class="leading-relaxed">• {it}</li>)}
+    </ul>
+  ) : null}
+
+  {footer ? (
+    <p class="mt-4 text-sm text-slate-700 leading-relaxed">
+      <strong class="text-slate-900">Bottom line:</strong> {footer}
+    </p>
+  ) : null}
+</aside>

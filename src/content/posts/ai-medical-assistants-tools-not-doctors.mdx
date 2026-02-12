@@ -1,0 +1,191 @@
+---
+title: "AI Can Ace the Medical Exam. It Still Fails With Real Patients."
+description: "A Nature Medicine study shows LLMs perform brilliantly alone — and falter when used by the public. The problem isn’t intelligence. It’s interaction."
+publishDate: "2026-02-11"
+updatedDate: "2026-02-11"
+tags: ["ai", "analysis", "healthcare", "policy"]
+related:
+  - /guides/how-to-use-ai-for-health-questions
+draft: false
+---
+
+import AISafetyBox from "@/components/AISafetyBox.astro";
+import SchemaBreadcrumbs from "@/components/SchemaBreadcrumbs.astro";
+import SchemaBlogPosting from "@/components/SchemaBlogPosting.astro";
+
+<SchemaBreadcrumbs
+  items={[
+    { name: "Home", item: "https://patientguide.io/" },
+    { name: "Posts", item: "https://patientguide.io/posts" },
+    { name: "AI Can Ace the Medical Exam. It Still Fails With Real Patients.", item: "https://patientguide.io/posts/ai-medical-assistants-tools-not-doctors" },
+  ]}
+/>
+
+<SchemaBlogPosting
+  title="AI Can Ace the Medical Exam. It Still Fails With Real Patients."
+  description="A Nature Medicine study shows LLMs perform brilliantly alone — and falter when used by the public. The problem isn’t intelligence. It’s interaction."
+  publishDate="2026-02-11"
+  updatedDate="2026-02-11"
+  authorName="Patientguide.io"
+  section="AI in Health"
+  tags={["ai", "analysis", "healthcare", "policy"]}
+  sameAs={[
+    "https://www.nature.com/articles/s41591-025-04074-y"
+  ]}
+/>
+
+<AISafetyBox
+  variant="caution"
+  title="AI is a tool — not a triage authority"
+  bullets={[
+    "LLMs can miss red flags if your input is incomplete or poorly structured.",
+    "They often generate multiple plausible conditions; non-experts may choose the wrong one.",
+    "Do not rely on AI alone for emergency decisions.",
+  ]}
+  footer="Use AI to improve thinking — not to replace real medical care."
+/>
+
+## Hook
+
+Large language models can identify the correct condition in ~95% of structured medical test scenarios.
+
+Put them in the hands of real people?
+
+Performance drops below 35%.
+
+That’s not a glitch.
+
+That’s a systems warning.
+
+## Context
+
+A 2026 *Nature Medicine* randomized study tested 1,298 UK adults using GPT-4o, Llama 3, and Command R+ for medical self-assessment.
+
+When evaluated alone, the models performed strongly.
+
+When used by real participants:
+
+- Relevant conditions were identified in fewer than about one-third of cases  
+- Correct triage decisions hovered around ~43%  
+- Performance was no better than standard internet search  
+
+The failure wasn’t medical knowledge.
+
+It was human–AI interaction.
+
+Paper: https://www.nature.com/articles/s41591-025-04074-y
+
+## The Wrong Question
+
+We keep asking:
+
+> “Is AI as smart as a doctor?”
+
+That’s the wrong question.
+
+The right question is:
+
+> Can ordinary people use this tool safely under uncertainty?
+
+Medicine isn’t a multiple-choice exam.
+
+It’s incomplete information.
+Stress.
+Ambiguity.
+Risk filtering.
+
+And that’s where the breakdown occurred.
+
+## What Actually Failed
+
+The study exposed three consistent failure points:
+
+### 1) Incomplete information
+
+Users didn’t provide all relevant details (onset, severity, associated symptoms, risk factors).
+
+### 2) Differential overload
+
+Models generated multiple plausible causes.  
+Users struggled to identify which one was dangerous.
+
+### 3) Interpretation error
+
+Even when a correct condition appeared in the conversation, users didn’t consistently act on it.
+
+The models passed the exam.
+
+The interaction failed.
+
+## Tools, Not Doctors
+
+LLMs are cognitive amplifiers.
+
+In informed hands, they:
+
+- Generate differential diagnoses  
+- Surface red flags  
+- Help structure thinking  
+- Improve preparation for clinician visits  
+
+In untrained or emotionally distressed hands, they:
+
+- Create false reassurance  
+- Encourage premature closure  
+- Inflate trivial explanations  
+- Produce misplaced confidence  
+
+A chainsaw is powerful.
+
+In trained hands, it builds.
+In careless hands, it injures.
+
+LLMs belong in that category.
+
+## Why This Matters for Policy
+
+Developers and regulators often rely on:
+
+- Medical licensing exam benchmarks  
+- Simulated patient interactions  
+- Controlled test performance  
+
+This study showed those methods do **not** reliably predict real-world safety.
+
+If AI is going to be deployed as a “front door” to healthcare, it must be evaluated:
+
+- With real users  
+- Under incomplete information  
+- Under uncertainty  
+- Measuring under-triage (false reassurance) as a core safety outcome  
+
+Exam scores are not safety evidence.
+
+## The Responsible Path Forward
+
+The answer is not abandonment.
+
+It’s maturity.
+
+AI in healthcare must be:
+
+- Structured  
+- Constrained  
+- Explicit about risk  
+- Designed to highlight red flags first  
+- Tested with real humans before scaling  
+
+AI is a tool.
+
+And tools require skill.
+
+## Closing
+
+The models passed the medical exam.
+
+The public failed the interaction.
+
+That gap — between capability and safe use —  
+is where healthcare AI will either mature responsibly…
+
+or cause harm through overconfidence.
