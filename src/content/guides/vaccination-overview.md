@@ -5,7 +5,7 @@ description: "Hub for vaccination-related guides."
 category: "Guide Hubs"
 publishDate: "2025-08-22"
 tags: ["overview", "vaccination", "public health"]
-draft: false
+draft: true
 hubKey: "Vaccination"
 ---
 
