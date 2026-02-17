@@ -1,0 +1,58 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = {
+  title: "About PatientGuide.io",
+  description:
+    "Who we are, what we do, and how we approach health information.",
+};
+---
+
+<Layout frontmatter={frontmatter}>
+  <article class="prose">
+    <h1>About PatientGuide.io</h1>
+
+    <h2>Our mission</h2>
+    <p>
+      PatientGuide.io exists to make medical information clearer, calmer, and
+      more useful. We translate clinical evidence into plain-language guides so
+      patients can better understand their health and have more informed
+      conversations with their clinicians.
+    </p>
+
+    <h2>What we aim to do</h2>
+    <ul>
+      <li>Explain conditions, tests, treatments, and health concepts in straightforward language</li>
+      <li>Present evidence honestly — including what is uncertain or debated</li>
+      <li>Help readers know what questions to ask and what to expect</li>
+      <li>Organize information into structured, easy-to-navigate guides</li>
+    </ul>
+
+    <h2>What we do not do</h2>
+    <p>
+      PatientGuide.io is not a substitute for professional medical advice,
+      diagnosis, or treatment. We do not:
+    </p>
+    <ul>
+      <li>Provide personal medical recommendations</li>
+      <li>Tell you what treatment to choose</li>
+      <li>Replace the judgment of a qualified clinician who knows your history</li>
+    </ul>
+    <p>
+      If you have a medical concern, please consult a healthcare professional.
+    </p>
+
+    <h2>Editorial independence</h2>
+    <p>
+      Our content is written and reviewed independently. We do not accept
+      industry funding that could influence what we publish or how we frame it.
+      If that ever changes, we will disclose it clearly on every affected page.
+    </p>
+
+    <h2>Learn more</h2>
+    <ul>
+      <li><a href="/editorial-standards">Editorial Standards</a> — how we write, review, and maintain content</li>
+      <li><a href="/how-we-review-evidence">How We Review Evidence</a> — our approach to evaluating medical research</li>
+    </ul>
+  </article>
+</Layout>
