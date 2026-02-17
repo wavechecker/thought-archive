@@ -30,7 +30,6 @@ const CATEGORY = z.enum([
   "Aging & Longevity",
   "Guide Hubs",
   "Respiratory",
-  "Infections",
   "AI in Health",
 ]);
 
