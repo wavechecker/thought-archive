@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import Search from "@/components/Search.astro";
 
 const { frontmatter = {} } = Astro.props;
 const {
@@ -86,6 +87,8 @@ const isActive = (href: string) => {
               </a>
             ))}
           </nav>
+
+          <Search />
 
           <button
             type="button"
