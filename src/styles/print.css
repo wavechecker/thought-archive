@@ -1,0 +1,85 @@
+/* ===========================
+   Print-friendly styles
+   =========================== */
+
+@media print {
+  /* Hide non-content elements */
+  nav,
+  header,
+  footer,
+  .pg-header,
+  .pg-footer,
+  .pg-search-overlay,
+  .pg-theme-toggle,
+  .pg-mobile-menu-btn,
+  .pg-mobile-nav,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Clean white background and black text */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Comfortable content width */
+  .pg-main {
+    max-width: 750px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* Show URL after links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #555;
+  }
+
+  /* Don't show URL for anchor links or javascript */
+  a[href^="#"]:after,
+  a[href^="javascript"]:after {
+    content: "";
+  }
+
+  /* Remove shadows and decorative borders */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .pg-card {
+    border: 1px solid #ccc !important;
+  }
+
+  /* Avoid page-breaks inside headings and key elements */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Keep headings with their content */
+  h1, h2, h3, h4, h5, h6,
+  img, figure, blockquote {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Ensure images fit the page */
+  img {
+    max-width: 100% !important;
+  }
+
+  /* Reset prose and content colors for print */
+  .prose, .prose *, .pg-post__content, .pg-post__content * {
+    color: black !important;
+  }
+
+  .prose a, .pg-post__content a {
+    color: black !important;
+    text-decoration: underline;
+  }
+}
