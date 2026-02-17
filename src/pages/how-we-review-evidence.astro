@@ -1,0 +1,101 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = {
+  title: "How We Review Evidence",
+  description:
+    "How PatientGuide.io evaluates medical research, uncertainty, and changing guidance.",
+};
+---
+
+<Layout frontmatter={frontmatter}>
+  <article class="prose">
+    <h1>How We Review Evidence</h1>
+
+    <h2>The goal</h2>
+    <p>
+      Medicine changes because evidence changes. Our job is to translate medical
+      research into understandable, cautious explanations — without overstating
+      certainty.
+    </p>
+
+    <h2>What we look for first</h2>
+    <p>When evaluating a topic, we typically start with:</p>
+    <ul>
+      <li>Clinical practice guidelines (and who authored them)</li>
+      <li>Systematic reviews and meta-analyses</li>
+      <li>High-quality trials and replication</li>
+      <li>Large, well-designed observational studies where trials aren't feasible</li>
+    </ul>
+
+    <h2>Types of evidence (and what they're good for)</h2>
+
+    <h3>Randomized controlled trials (RCTs)</h3>
+    <p>
+      Good for testing whether an intervention <em>causes</em> an outcome — but
+      still limited by who was studied, how long, and what outcomes were
+      measured.
+    </p>
+
+    <h3>Observational studies</h3>
+    <p>
+      Useful for real-world patterns and long-term outcomes, but vulnerable to
+      confounding (people who do X may differ from people who don't).
+    </p>
+
+    <h3>Systematic reviews and meta-analyses</h3>
+    <p>
+      Often strongest overall — if the included studies are high quality and
+      comparable. A meta-analysis can amplify bias if it combines biased studies.
+    </p>
+
+    <h3>Mechanistic / early research</h3>
+    <p>
+      Helpful for understanding "how it might work," but rarely enough to
+      justify confident claims about real-world outcomes.
+    </p>
+
+    <h2>Common interpretation pitfalls</h2>
+    <p>We try to protect readers from:</p>
+    <ul>
+      <li><strong>Relative risk without absolute risk</strong> ("doubles risk" can still be tiny)</li>
+      <li><strong>Surrogate outcomes</strong> (a lab marker improves but patient outcomes don't)</li>
+      <li><strong>Short follow-up</strong> (benefits and harms can change over time)</li>
+      <li><strong>Subgroup over-interpretation</strong> (small slices of data are noisy)</li>
+      <li><strong>Single-study hype</strong> (replication matters)</li>
+    </ul>
+
+    <h2>How we communicate uncertainty</h2>
+    <p>We use language intentionally:</p>
+    <ul>
+      <li><strong>May</strong> = plausible but uncertain</li>
+      <li><strong>Likely</strong> = evidence leans this way, but not definitive</li>
+      <li><strong>Strong evidence</strong> = consistent results across high-quality studies</li>
+      <li><strong>Unclear / mixed</strong> = meaningful disagreement or inconsistent findings</li>
+    </ul>
+
+    <h2>What triggers an update</h2>
+    <p>We revisit pages when:</p>
+    <ul>
+      <li>Major guidelines change</li>
+      <li>Strong new evidence emerges (especially replicated)</li>
+      <li>Safety signals become clearer</li>
+      <li>Readers flag issues that reveal ambiguity or error</li>
+    </ul>
+
+    <h2>A practical checklist for readers</h2>
+    <p>When you see a health claim, ask:</p>
+    <ul>
+      <li>What is the outcome — a lab marker or a real patient outcome?</li>
+      <li>How big is the absolute risk change?</li>
+      <li>Who was studied — does it apply to me?</li>
+      <li>Was it replicated?</li>
+      <li>Does guidance agree across credible bodies?</li>
+    </ul>
+
+    <h2>Related</h2>
+    <p>
+      <a href="/editorial-standards">Editorial Standards</a>
+    </p>
+  </article>
+</Layout>

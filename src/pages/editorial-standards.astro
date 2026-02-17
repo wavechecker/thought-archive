@@ -1,0 +1,101 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Editorial Standards",
+  description:
+    "How PatientGuide.io creates, reviews, and maintains medical information.",
+};
+---
+
+<Layout frontmatter={frontmatter}>
+  <article class="prose">
+    <h1>Editorial Standards</h1>
+
+    <h2>What PatientGuide.io is</h2>
+    <p>
+      PatientGuide.io is an educational health information site. We explain
+      medical concepts in plain language, with an emphasis on clarity,
+      uncertainty, and practical interpretation — not medical directives.
+    </p>
+
+    <h2>What we publish</h2>
+    <p>We publish:</p>
+    <ul>
+      <li>Guides that explain conditions, tests, treatments, and health concepts</li>
+      <li>Hubs that organize guides into coherent learning paths</li>
+      <li>Posts that explore concepts, evidence interpretation, and health literacy topics</li>
+    </ul>
+
+    <p>We avoid:</p>
+    <ul>
+      <li>Personalized medical advice</li>
+      <li>"Miracle cure" claims</li>
+      <li>Alarmist framing</li>
+      <li>Content designed to drive clicks rather than understanding</li>
+    </ul>
+
+    <h2>How we write</h2>
+    <p>Our default style is:</p>
+    <ul>
+      <li>Clear, structured, and conservative</li>
+      <li>Transparent about what is known vs uncertain</li>
+      <li>Focused on what patients typically need to understand to have better conversations with clinicians</li>
+    </ul>
+
+    <p>
+      When clinical decisions depend on individual context (age, pregnancy,
+      comorbidities, medications, or risk factors), we explicitly say so.
+    </p>
+
+    <h2>Evidence standards</h2>
+    <p>We prioritize evidence in roughly this order:</p>
+    <ol>
+      <li>High-quality clinical guidelines and consensus statements</li>
+      <li>Systematic reviews and meta-analyses</li>
+      <li>Randomized controlled trials (where applicable)</li>
+      <li>Large observational studies (with careful interpretation)</li>
+      <li>Mechanistic or early-stage research (clearly labeled as preliminary)</li>
+    </ol>
+
+    <p>We try to state:</p>
+    <ul>
+      <li>What the evidence shows</li>
+      <li>How strong the evidence is</li>
+      <li>What remains uncertain or debated</li>
+    </ul>
+
+    <h2>Medical review and updates</h2>
+    <p>
+      We aim to keep pages current. Some pages may be updated more frequently
+      than others, especially when guidance changes or major new research
+      appears.
+    </p>
+
+    <p>When a page is reviewed or updated, we may indicate:</p>
+    <ul>
+      <li><strong>Publish date</strong></li>
+      <li><strong>Updated date</strong> (when changes are meaningful)</li>
+      <li><strong>Last reviewed</strong> (editorial review without major changes)</li>
+    </ul>
+
+    <h2>Conflicts of interest and funding</h2>
+    <p>
+      If we ever publish sponsored content or have financial relationships
+      relevant to a topic, we will disclose them clearly on the page.
+    </p>
+
+    <h2>Corrections policy</h2>
+    <p>If you believe something is incorrect, unclear, or misleading:</p>
+    <ul>
+      <li>We take that seriously.</li>
+      <li>We will review the issue and update the page if needed.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+      Feedback and corrections can be sent to the site contact address listed on
+      the <a href="/contact">Contact page</a>.
+    </p>
+  </article>
+</Layout>
