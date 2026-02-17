@@ -1,0 +1,71 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t mt-20 py-12 text-sm text-gray-600 bg-white no-print">
+  <div class="max-w-6xl mx-auto px-6">
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Editorial Column -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Editorial</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="/editorial-standards" class="hover:underline">
+              Editorial Standards
+            </a>
+          </li>
+          <li>
+            <a href="/how-we-review-evidence" class="hover:underline">
+              How We Review Evidence
+            </a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:underline">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Explore Column -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Explore</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="/guides/vaccination-overview" class="hover:underline">
+              Vaccination
+            </a>
+          </li>
+          <li>
+            <a href="/guides/aging-and-longevity" class="hover:underline">
+              Aging & Longevity
+            </a>
+          </li>
+          <li>
+            <a href="/guides/ai-in-health" class="hover:underline">
+              AI in Health
+            </a>
+          </li>
+          <li>
+            <a href="/guides/testing-and-screening" class="hover:underline">
+              Testing & Screening
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Legal</h3>
+        <p class="mb-3 leading-relaxed">
+          PatientGuide.io provides educational information only and does not replace medical advice from a qualified clinician.
+        </p>
+        <p>© {year} PatientGuide.io</p>
+      </div>
+
+    </div>
+
+  </div>
+</footer>

@@ -2,6 +2,7 @@
 import "@/styles/global.css";
 import "@/styles/print.css";
 import Search from "@/components/Search.astro";
+import Footer from "@/components/Footer.astro";
 
 const { frontmatter = {} } = Astro.props;
 const {
@@ -142,33 +143,7 @@ const isActive = (href: string) => {
     </main>
 
     {!printMode && (
-      <footer class="pg-footer">
-        <div class="pg-footer__inner">
-          <div class="pg-footer__brand">
-            <a href="/" class="pg-footer__logo">
-              <span class="pg-footer__logo-icon">+</span>
-              <span>PatientGuide.io</span>
-            </a>
-            <p class="pg-footer__tagline">Clear, practical health guides — no fluff.</p>
-          </div>
-
-          <nav class="pg-footer__nav">
-            <div class="pg-footer__col">
-              <h4 class="pg-footer__heading">Content</h4>
-              <a href="/guides/">All Guides</a>
-              <a href="/posts/">Posts</a>
-            </div>
-            <div class="pg-footer__col">
-              <h4 class="pg-footer__heading">About</h4>
-              <a href="/contact/">Contact</a>
-            </div>
-          </nav>
-
-          <div class="pg-footer__bottom">
-            <p>&copy; {new Date().getFullYear()} PatientGuide.io. For informational purposes only.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     )}
 
     <script>
