@@ -47,14 +47,20 @@
         link.href = "/pagefind/pagefind-ui.css";
         document.head.appendChild(link);
 
-        // Load Pagefind UI JS
-        import("/pagefind/pagefind-ui.js").then(function (mod) {
-          new mod.PagefindUI({
-            element: "#search-container",
-            showSubResults: true,
-            showImages: false,
-          });
-        });
+        // Load Pagefind UI JS (IIFE assigns to window.PagefindUI)
+        import("/pagefind/pagefind-ui.js")
+          .then(function () {
+            if (!window.PagefindUI) {
+              console.error("PagefindUI not found on window after loading /pagefind/pagefind-ui.js");
+              return;
+            }
+            new window.PagefindUI({
+              element: "#search-container",
+              showSubResults: true,
+              showImages: false,
+            });
+          })
+          .catch(function (err) { console.error("Failed to load Pagefind UI:", err); });
       }
 
       // Focus the input after a brief delay
