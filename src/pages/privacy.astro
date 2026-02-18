@@ -1,0 +1,57 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Privacy Policy",
+  description:
+    "How PatientGuide.io handles visitor data and protects your privacy.",
+};
+---
+
+<Layout frontmatter={frontmatter}>
+  <article class="prose">
+    <h1>Privacy Policy</h1>
+
+    <h2>Overview</h2>
+    <p>
+      PatientGuide.io is designed to respect your privacy. We collect as little
+      data as possible and do not track you across the web.
+    </p>
+
+    <h2>Analytics</h2>
+    <p>
+      We use <a href="https://www.goatcounter.com">GoatCounter</a>, a
+      privacy-friendly analytics tool. GoatCounter does not use cookies, does
+      not collect personal data, and does not track you across sites. It records
+      basic, anonymous page-view data (such as page URL, referrer, browser type,
+      and screen size) to help us understand how the site is used.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      PatientGuide.io does not set tracking cookies. A small local-storage entry
+      may be used to remember your theme preference (light or dark mode). This
+      data stays on your device and is never sent to a server.
+    </p>
+
+    <h2>Medical data</h2>
+    <p>
+      We do not collect, store, or process any personal health or medical
+      information. PatientGuide.io is an educational resource — there are no
+      user accounts, health profiles, or diagnostic tools that capture your data.
+    </p>
+
+    <h2>Third-party services</h2>
+    <p>
+      The site loads fonts from Google Fonts, which may log standard web request
+      data (IP address, browser type) under Google's own privacy policy. No
+      other third-party services are used to track visitors.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      If you have questions or concerns about privacy, please reach out via the
+      <a href="/contact">Contact page</a>.
+    </p>
+  </article>
+</Layout>
