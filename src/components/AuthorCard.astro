@@ -1,0 +1,27 @@
+---
+export interface Props {
+  name: string;
+  href: string;
+  role?: string;
+  note?: string;
+  updatedDate?: string;
+}
+
+const { name, href, role, note, updatedDate } = Astro.props;
+---
+
+<section class="mt-10 border-t pt-6">
+  <div class="not-prose flex flex-col gap-2">
+    <div class="text-sm">
+      <span class="font-semibold">Written by:</span>
+      <a class="underline" href={href}>{name}</a>
+      {role ? <span class="opacity-80"> — {role}</span> : null}
+    </div>
+
+    {updatedDate ? (
+      <div class="text-xs opacity-70">Last updated: {updatedDate}</div>
+    ) : null}
+
+    {note ? <div class="text-xs opacity-70">{note}</div> : null}
+  </div>
+</section>
