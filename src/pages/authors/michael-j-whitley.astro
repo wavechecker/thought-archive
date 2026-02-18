@@ -1,0 +1,53 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SchemaPerson from "@/components/SchemaPerson.astro";
+
+const frontmatter = {
+  title: "Michael J Whitley — Editor, PatientGuide",
+  description:
+    "Michael J Whitley is the editor of PatientGuide.io, focusing on AI in healthcare, evidence literacy, and preventive health.",
+};
+---
+
+<Layout frontmatter={frontmatter}>
+  <SchemaPerson
+    name="Michael J Whitley"
+    jobTitle="Editor"
+    description="Editor of PatientGuide.io, focusing on AI in healthcare, evidence literacy, and preventive health."
+    url="https://patientguide.io/authors/michael-j-whitley"
+    sameAs={[]}
+  />
+
+  <article class="prose">
+    <h1>Michael J Whitley</h1>
+    <p class="text-lg text-gray-600">Editor, PatientGuide</p>
+
+    <h2>About</h2>
+    <p>
+      Michael J Whitley is the editor of PatientGuide.io. He oversees the
+      site's editorial direction and works to ensure that every guide is clear,
+      evidence-based, and useful for patients navigating real health decisions.
+    </p>
+
+    <h2>Focus areas</h2>
+    <ul>
+      <li><strong>AI in healthcare</strong> — how language models and decision-support tools are changing medicine, and what patients should understand about them</li>
+      <li><strong>Evidence literacy</strong> — helping readers interpret clinical research, distinguish strong evidence from weak, and understand uncertainty</li>
+      <li><strong>Preventive health</strong> — screening, vaccination, lifestyle interventions, and the evidence behind them</li>
+    </ul>
+
+    <h2>Editorial approach</h2>
+    <p>
+      PatientGuide.io is built on the principle that patients deserve
+      straightforward, honest health information — without hype, without
+      alarmism, and without pretending certainty where none exists. You can
+      read more about how the site operates:
+    </p>
+    <ul>
+      <li><a href="/editorial-standards">Editorial Standards</a></li>
+      <li><a href="/how-we-review-evidence">How We Review Evidence</a></li>
+      <li><a href="/about">About PatientGuide.io</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </article>
+</Layout>
