@@ -72,6 +72,14 @@ const base = {
   image: z.string().optional(),
   slug: z.string().optional(),
   faq: z.array(faqItem).optional(), // Optional FAQ for JSON-LD
+  author: z.union([
+    z.object({
+      name: z.string(),
+      href: z.string(),
+      role: z.string().optional(),
+    }),
+    z.string(),
+  ]).optional(),
 };
 
 // -----------------------------

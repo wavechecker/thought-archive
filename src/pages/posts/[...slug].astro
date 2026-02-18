@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { isValidDate, fmt } from "@/lib/date";
 import Layout from "@/layouts/Layout.astro";
 import SchemaBlogPost from "@/components/SchemaBlogPost.astro";
+import AuthorCard from "@/components/AuthorCard.astro";
 
 import StratBox from "@/components/StratBox.astro";
 import EvidenceBox from "@/components/EvidenceBox.astro";
@@ -261,6 +262,16 @@ const faqLd = faq && faq.length > 0 ? {
       <div class="pg-post__content prose">
         <Content components={mdxComponents} />
       </div>
+
+      {data.author && typeof data.author === "object" && (
+        <AuthorCard
+          name={data.author.name}
+          href={data.author.href}
+          role={data.author.role}
+          updatedDate={modDate ?? undefined}
+          note="This content is informational and not medical advice."
+        />
+      )}
 
       <!-- End of post section -->
       <footer class="pg-post__footer">

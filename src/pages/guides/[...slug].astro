@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { isValidDate, fmt } from "@/lib/date";
+import AuthorCard from "@/components/AuthorCard.astro";
 
 // MDX components used inside guides
 import StratBox from "../../components/StratBox.astro";
@@ -117,6 +118,16 @@ const faqLd = faq && faq.length > 0 ? {
     <div class="pg-article__content prose">
       <Content components={mdxComponents} />
     </div>
+
+    {entry.data.author && typeof entry.data.author === "object" && (
+      <AuthorCard
+        name={entry.data.author.name}
+        href={entry.data.author.href}
+        role={entry.data.author.role}
+        updatedDate={modDate ?? undefined}
+        note="This content is informational and not medical advice."
+      />
+    )}
 
     <!-- Article footer -->
     <footer class="pg-article__footer">
