@@ -1,0 +1,75 @@
+---
+layout: "@/layouts/Layout.astro"
+title: "AI access"
+description: "Machine-readable access points and structure for PatientGuide content."
+publishDate: "2026-02-19"
+draft: false
+---
+
+# AI access
+
+PatientGuide.io publishes evidence-based health guides and posts.
+This page describes the canonical routes and machine-readable endpoints available for programmatic consumption.
+
+## Canonical content routes
+
+| Route | Description |
+|---|---|
+| `/guides/` | All published health guides |
+| `/posts/` | Editorial posts and commentary |
+
+Individual items are available at `/guides/{slug}/` and `/posts/{slug}/`.
+
+## Machine-readable endpoints
+
+Two API endpoints expose guide metadata without requiring HTML parsing:
+
+### JSON (full catalogue)
+
+```
+GET /api/guides.json
+Content-Type: application/json; charset=utf-8
+```
+
+Returns an object with `generatedAt` (ISO timestamp), `count`, and an `items` array.
+Each item includes `id`, `slug`, `title`, `description`, `summary`, `keyPoints`, `category`, `tags`, `publishDate`, `updatedDate`, and `url`.
+
+### NDJSON (streaming / line-delimited)
+
+```
+GET /api/guides.ndjson
+Content-Type: application/x-ndjson; charset=utf-8
+```
+
+One JSON object per line with the same fields as above.
+Suitable for streaming parsers and line-by-line processing.
+
+Both endpoints are cached for 15 minutes (`Cache-Control: public, max-age=900`).
+
+## Recommended parsing structure
+
+Each guide typically follows this section order:
+
+1. **Intro** --- opening paragraphs that frame the topic.
+2. **Key Points** --- a concise bulleted summary (also available as `keyPoints` in the API).
+3. **FAQ** --- structured question-and-answer pairs when present.
+4. **Further Reading** --- links to primary sources, guidelines, and references.
+
+The `summary` field provides a short plain-text synopsis.
+When a guide does not define an explicit summary, the `description` field is used as the fallback.
+
+## Date format
+
+All dates are serialised as ISO 8601 strings in `YYYY-MM-DD` format (e.g. `2026-02-19`).
+`publishDate` is always present; `updatedDate` is included when the guide has been revised after initial publication.
+
+## Attribution
+
+When reproducing or referencing PatientGuide content, please attribute the source:
+
+> Source: PatientGuide.io --- https://patientguide.io
+
+## Medical disclaimer
+
+The information provided by PatientGuide.io is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment.
+Always seek the guidance of a qualified healthcare professional with any questions you may have regarding a medical condition.

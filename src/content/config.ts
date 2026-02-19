@@ -91,6 +91,8 @@ const guides = defineCollection({
     ...base,
     publishDate: isoDate, // required
     category: CATEGORY,   // required + enum-locked
+    summary: z.string().optional(),
+    keyPoints: z.array(z.string()).optional(),
     hubKey: z.string().optional(),
   }),
 });
