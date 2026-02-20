@@ -1,0 +1,138 @@
+---
+type Props = {
+  title?: string;
+  /** Optional short label shown above title, e.g. "Explainer" */
+  kicker?: string;
+  /** Optional: adds a smaller footprint */
+  compact?: boolean;
+  /** Optional: set to true to hide the "Practical use today" section */
+  hidePracticalUse?: boolean;
+};
+
+const {
+  title = "Disease Clocks: Biomarkers as Time",
+  kicker = "Explainer",
+  compact = false,
+  hidePracticalUse = false
+} = Astro.props;
+---
+
+<section class={`pg-box ${compact ? "pg-box--compact" : ""}`} aria-label={title}>
+  <header class="pg-box__header">
+    {kicker ? <div class="pg-box__kicker">{kicker}</div> : null}
+    <h2 class="pg-box__title">{title}</h2>
+  </header>
+
+  <div class="pg-box__body">
+    <p class="pg-box__lead">
+      A <strong>disease clock</strong> is a way of translating a biomarker level into an estimate of
+      <em>where someone is on a disease timeline</em>—for example, “years since biomarker positivity,”
+      rather than just “positive vs negative.”
+    </p>
+
+    <div class="pg-box__grid">
+      <div class="pg-box__card">
+        <h3 class="pg-box__h3">What it does</h3>
+        <ul class="pg-box__list">
+          <li>Anchors people to a biological event (like crossing a biomarker threshold).</li>
+          <li>Aligns trajectories so individuals can be compared in “disease time.”</li>
+          <li>Supports forecasting of clinical transitions (like symptom onset) at the group level.</li>
+        </ul>
+      </div>
+
+      <div class="pg-box__card">
+        <h3 class="pg-box__h3">Why it’s useful</h3>
+        <ul class="pg-box__list">
+          <li>Reduces noise created by relying on chronological age alone.</li>
+          <li>Helps identify who is likely to convert within a trial window (e.g., 3–5 years).</li>
+          <li>Makes staging intuitive: “years since positivity” is easier to reason about than raw units.</li>
+        </ul>
+      </div>
+
+      <div class="pg-box__card">
+        <h3 class="pg-box__h3">Alzheimer’s example</h3>
+        <p class="pg-box__p">
+          In Alzheimer’s research, plasma <strong>%p-tau217</strong> can be modeled longitudinally to estimate
+          the age a person likely became biomarker-positive. That estimated “positivity age” can then be
+          used to model the expected age of symptom onset (with meaningful error margins).
+        </p>
+      </div>
+
+      <div class="pg-box__card">
+        <h3 class="pg-box__h3">Key limitation</h3>
+        <p class="pg-box__p">
+          A clock is <strong>not</strong> a personal countdown timer. Prediction error, co-pathologies, and
+          population differences can be large—especially when applied to individuals rather than cohorts.
+        </p>
+      </div>
+    </div>
+
+    {!hidePracticalUse && (
+      <div class="pg-box__note" role="note" aria-label="Practical use today">
+        <strong>Practical use today:</strong> Most value is in <em>clinical trials</em> (enrolling people likely to
+        convert within the study period), not in personal forecasting for asymptomatic individuals.
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .pg-box {
+    border: 1px solid var(--pg-border, rgba(0,0,0,0.12));
+    border-radius: 16px;
+    padding: 18px;
+    background: var(--pg-surface, rgba(0,0,0,0.02));
+    margin: 24px 0;
+  }
+
+  .pg-box--compact { padding: 14px; }
+
+  .pg-box__header { margin-bottom: 10px; }
+  .pg-box__kicker {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 4px;
+  }
+  .pg-box__title {
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .pg-box__lead { margin: 10px 0 14px 0; }
+  .pg-box__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .pg-box__card {
+    border: 1px solid var(--pg-border, rgba(0,0,0,0.10));
+    border-radius: 14px;
+    padding: 12px;
+    background: var(--pg-card, rgba(255,255,255,0.65));
+  }
+
+  .pg-box__h3 {
+    font-size: 14px;
+    margin: 0 0 8px 0;
+  }
+
+  .pg-box__p { margin: 0; }
+  .pg-box__list { margin: 0; padding-left: 18px; }
+  .pg-box__list li { margin: 6px 0; }
+
+  .pg-box__note {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-left: 4px solid var(--pg-accent, rgba(0,0,0,0.35));
+    background: var(--pg-note, rgba(0,0,0,0.04));
+    border-radius: 10px;
+  }
+
+  @media (max-width: 720px) {
+    .pg-box__grid { grid-template-columns: 1fr; }
+  }
+</style>

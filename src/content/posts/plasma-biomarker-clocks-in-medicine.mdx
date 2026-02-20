@@ -1,0 +1,141 @@
+---
+title: "Biomarker Clocks in Medicine: Turning Blood Tests into Time Predictions"
+description: "How 'disease clocks' convert biomarker levels into timelines, why Alzheimer's p-tau217 is a strong fit, and where this paradigm breaks down."
+category: "AI & Society"
+publishDate: "2026-02-20"
+updatedDate: "2026-02-20"
+tags: ["ai in health", "biomarkers", "alzheimers disease", "p-tau217", "clinical trials", "prediction models"]
+draft: false
+faq:
+  - q: "Is a biomarker clock the same as an AI model?"
+    a: "Not necessarily. A biomarker clock is a prediction approach that maps biomarker values to an inferred disease timeline using statistical or mathematical modeling. It can be implemented with or without machine learning."
+  - q: "Why are biomarker clocks useful in clinical trials?"
+    a: "Trials often need participants likely to reach a clinical endpoint within a fixed window (e.g., 3–5 years). Clocks can help enrich trials with people closer to conversion, reducing sample size and time."
+  - q: "Could this work for fast diseases like ALS?"
+    a: "Sometimes, but the goal is different. In ALS, biomarkers often reflect active injury and are used to estimate rate of decline or near-term outcomes rather than long-range onset timing."
+---
+
+import ClockTheoryBox from '@/components/ClockTheoryBox.astro';
+
+## The shift: from "positive/negative" to "where are you on the timeline?"
+
+Most biomarker conversations collapse into a binary:
+**positive** (pathology present) or **negative** (not detected).
+
+But clinicians and trialists often need a different answer:
+
+> "How far along is this person — and what is the likely time window to a clinical transition?"
+
+That's where **disease clocks** come in.
+
+A recent *Nature Medicine* study built plasma %p-tau217 clocks to estimate the age of biomarker positivity and model the likely onset of symptomatic Alzheimer's disease.
+**Primary source:** https://www.nature.com/articles/s41591-026-04206-y
+
+<ClockTheoryBox />
+
+## What a "disease clock" really is
+
+A disease clock is a **mapping**:
+
+**biomarker level → inferred disease time**
+
+Instead of staging people by chronological age, clocks stage them by **time since a biological event** (for example, crossing a biomarker positivity threshold).
+
+This gives you a "disease-time coordinate system" that often looks like:
+- years before positivity (negative time)
+- year 0 (positivity)
+- years after positivity (positive time)
+
+When the biology supports it, this alignment can reduce heterogeneity and improve forecasting.
+
+## Why p-tau217 is a strong candidate for clock modeling
+
+Alzheimer's disease is unusually "clockable" because:
+- pathology unfolds over many years
+- biomarker trajectories show relative consistency once initiated
+- there is a meaningful sequence of biological changes
+
+In the study, %p-tau217 was used because it tracks Alzheimer's biology across the preclinical and early symptomatic phases and correlates with amyloid and tau PET.
+
+## The key finding most people miss: age changes the conversion window
+
+A headline like "predicts symptom onset within ~3–4 years" is attention-grabbing, but the deeper point is this:
+
+> The time from biomarker positivity to symptom onset appears shorter in older individuals.
+
+That means a biomarker value does not translate to a single universal "time-to-symptoms." The system context (age, co-pathology burden, resilience) changes what the same biology means clinically.
+
+This is also why simplistic "plaque = dementia" interpretations fail. Pathology matters, but **clinical onset is a systems outcome**.
+
+## Where this fits in AI in Health
+
+Even without deep learning, this is a core AI-style maneuver:
+
+1. Learn progression dynamics from longitudinal data
+2. Convert a raw measurement into an inferred latent coordinate ("disease time")
+3. Predict an outcome using the coordinate system rather than raw features alone
+
+This is a pattern you'll see across predictive medicine:
+- sepsis trajectories
+- kidney function decline modeling
+- oncology progression curves
+- neurodegeneration staging
+
+## Limits: when clocks break
+
+Clocks don't generalize automatically.
+
+They work best when:
+- biomarker change is consistent across individuals within a usable range
+- training data spans enough time to learn dynamics
+- the clinical transition is well-defined
+
+They break down when:
+- biology is highly heterogeneous
+- preclinical windows are short
+- biomarkers reflect *current damage* more than a long, staged accumulation
+
+## Could this work for ALS?
+
+In principle, yes — but with a different goal.
+
+ALS often has:
+- shorter presymptomatic windows
+- greater heterogeneity in onset and progression
+- biomarkers that behave more like "injury meters"
+
+So the useful model in ALS tends to be:
+- **trajectory prediction** (rate of decline)
+- **near-term milestone prediction**
+rather than a long-range "when will symptoms start" clock.
+
+## Why this matters (now): trial design
+
+The near-term, high-confidence impact of clocks is not personal forecasting.
+
+It's **trial enrichment**:
+- enrolling people likely to convert within the study window
+- increasing power
+- shortening timelines
+
+That's how you move from "biomarkers are interesting" to "biomarkers change the economics of prevention trials."
+
+## FAQ
+
+### Is a biomarker clock the same as an AI model?
+
+Not necessarily. A biomarker clock can be built using statistical or mathematical modeling without machine learning. The AI-relevant idea is the transformation of raw measurements into an inferred disease-time coordinate.
+
+### Why are biomarker clocks useful in clinical trials?
+
+Trials often need endpoints within a fixed window. Clocks can enrich enrollment with people closer to conversion, improving efficiency.
+
+### Could this work for fast diseases like ALS?
+
+Sometimes, but ALS clocks are usually about decline rate and near-term outcomes, not decades-ahead onset timing.
+
+## Related reading
+
+- /guides/blood-test-predict-alzheimers-symptom-onset
+- /guides/alzheimers-disease-overview
+- /guides/amyloid-vs-tau
