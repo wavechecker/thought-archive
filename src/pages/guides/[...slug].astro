@@ -67,11 +67,28 @@ const faqLd = faq && faq.length > 0 ? {
     },
   })),
 } : null;
+
+// MedicalWebPage JSON-LD (always emitted for guide pages)
+const medicalWebPageLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": title,
+  "description": description ?? "",
+  "url": canonicalUrl,
+  "datePublished": publishDate ? String(publishDate).slice(0, 10) : undefined,
+  "dateModified": String(updatedDate ?? publishDate ?? "").slice(0, 10) || undefined,
+  "inLanguage": "en",
+  "isPartOf": { "@type": "WebSite", "name": "PatientGuide", "url": site },
+  "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" },
+};
 ---
 
 <Layout {frontmatter}>
   <!-- JSON-LD: Breadcrumbs -->
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <!-- JSON-LD: MedicalWebPage -->
+  <script type="application/ld+json" set:html={JSON.stringify(medicalWebPageLd)} />
 
   {/* JSON-LD: FAQ (only if data exists) */}
   {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
