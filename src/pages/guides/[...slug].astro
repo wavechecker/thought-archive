@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-const { title, description, publishDate, updatedDate, category, faq } = entry.data;
+const { title, description, publishDate, updatedDate, category, faq, tags } = entry.data;
 
 // Defensive date rendering
 const pubDate = isValidDate(publishDate) ? fmt(publishDate) : null;
@@ -42,15 +42,27 @@ const frontmatter = { title, description };
 const site = Astro.site?.toString().replace(/\/+$/, "") ?? "https://patientguide.io";
 const canonicalUrl = `${site}${Astro.url.pathname.replace(/\/+$/, "")}`;
 
-// Breadcrumb JSON-LD
+// Inline category slugifier
+function slugifyCategory(cat: string): string {
+  return cat.trim().toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+}
+
+// Breadcrumb JSON-LD — 4-item when category present, 3-item fallback
+const categorySlug = category ? slugifyCategory(category) : "";
+const breadcrumbItems: object[] = [
+  { "@type": "ListItem", "position": 1, "name": "Home", "item": `${site}/` },
+  { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${site}/guides/` },
+];
+if (categorySlug) {
+  breadcrumbItems.push({ "@type": "ListItem", "position": 3, "name": category, "item": `${site}/guides/${categorySlug}/` });
+  breadcrumbItems.push({ "@type": "ListItem", "position": 4, "name": title, "item": canonicalUrl });
+} else {
+  breadcrumbItems.push({ "@type": "ListItem", "position": 3, "name": title, "item": canonicalUrl });
+}
 const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": `${site}/` },
-    { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${site}/guides/` },
-    { "@type": "ListItem", "position": 3, "name": title, "item": canonicalUrl },
-  ],
+  "itemListElement": breadcrumbItems,
 };
 
 // FAQ JSON-LD (only if faq data exists)
@@ -67,11 +79,51 @@ const faqLd = faq && faq.length > 0 ? {
     },
   })),
 } : null;
+
+// Conservative tag → MedicalCondition mapping
+const CONDITION_TAG_MAP: Array<{ match: string[]; name: string }> = [
+  { match: ["alzheimers disease", "alzheimer's disease"], name: "Alzheimer's disease" },
+  { match: ["parkinsons disease"], name: "Parkinson's disease" },
+  { match: ["diabetes"], name: "Diabetes mellitus" },
+];
+const tagsLower = (Array.isArray(tags) ? tags : []).map((t: string) => t.toLowerCase().trim());
+const matchedCondition = CONDITION_TAG_MAP.find(({ match }) =>
+  match.some((m) => tagsLower.includes(m))
+)?.name ?? null;
+
+// Build about field: one object, array of two, or absent
+const aboutEntries: object[] = [
+  ...(category ? [{ "@type": "MedicalSpecialty", "name": category }] : []),
+  ...(matchedCondition ? [{ "@type": "MedicalCondition", "name": matchedCondition }] : []),
+];
+const aboutField = aboutEntries.length === 0
+  ? {}
+  : aboutEntries.length === 1
+    ? { "about": aboutEntries[0] }
+    : { "about": aboutEntries };
+
+// MedicalWebPage JSON-LD (always emitted for guide pages)
+const medicalWebPageLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": title,
+  "description": description ?? "",
+  "url": canonicalUrl,
+  "datePublished": publishDate ? String(publishDate).slice(0, 10) : undefined,
+  "dateModified": String(updatedDate ?? publishDate ?? "").slice(0, 10) || undefined,
+  "inLanguage": "en",
+  "isPartOf": { "@type": "WebSite", "name": "PatientGuide", "url": site },
+  "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" },
+  ...aboutField,
+};
 ---
 
 <Layout {frontmatter}>
   <!-- JSON-LD: Breadcrumbs -->
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <!-- JSON-LD: MedicalWebPage -->
+  <script type="application/ld+json" set:html={JSON.stringify(medicalWebPageLd)} />
 
   {/* JSON-LD: FAQ (only if data exists) */}
   {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
