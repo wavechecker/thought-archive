@@ -181,6 +181,12 @@
   status = 301
   force = true
 
+# Deprecated GPT-5 bubble post → 2026 AI market update
+[[redirects]]
+  from = "/posts/gpt5-cold-reality-bubble"
+  to = "/posts/ai-bubble-2026-reality-check"
+  status = 301
+
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
 #   from = "/*"
