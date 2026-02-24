@@ -192,6 +192,12 @@ Yes. Simultaneous administration is rigorously tested and safe. The immune syste
 
 ---
 
+## Featured Posts
+
+- [The Vaccine War Turns Legal: RFK Jr. vs AAP and CDC](/posts/rfk-vaccine-war-legal-2025) — When the HHS Secretary threatened pediatricians over COVID vaccine guidance, legal experts pushed back — exposing how institutional trust in vaccination is being contested at the highest levels.
+
+---
+
 ## Further Reading
 
 - [WHO — Vaccines and Immunization](https://www.who.int/health-topics/vaccines-and-immunization) — Global vaccination data, policy, and disease burden information.
