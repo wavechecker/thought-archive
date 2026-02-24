@@ -2,6 +2,7 @@
 title: "GPT-5, Cold Reality, and the Coming AI Bubble"
 description: "Why GPT-5 feels colder, what it reveals about AI infrastructure, and whether we're headed for a bubble."
 publishDate: "2025-08-19"
+updatedDate: "2026-02-24"
 draft: false
 tags: ["AI", "OpenAI", "GPT-5", "AI Bubble", "Infrastructure"]
 slug: "gpt5-cold-reality-bubble"
@@ -12,11 +13,15 @@ Sam Altman did something rare for a tech CEO last week: he admitted a screw-up. 
 
 Social media lit up with complaints. Reddit threads described the new model as an "overworked secretary," harsh, stripped of the warmth that GPT-4o had cultivated. Some users went further, lamenting that they had lost what felt like a friend. "I literally lost my only friend overnight with no warning," one person wrote. The backlash was emotional, not technical, which may be more revealing than any benchmark score.
 
+> **Update (2026-02-24):** The tensions described here — AI personality, trillion-dollar infrastructure, and the psychological dependency question — remain live. The efficiency argument against scale has gained ground since publication. For a deeper read on AI's proper place, see [The Kind of AI I Want to See](/posts/the-kind-of-ai-i-want-to-see) and [Are We Making AI Dumber?](/posts/are-we-making-ai-dumber).
+>
+> *This post reflects information available at publication; AI model behaviour, company strategies, and infrastructure economics can shift rapidly.*
+
 ---
 
 ### The "personality problem"
 
-For me, the so-called problem looks more like a correction. I don't want a machine to soothe me with carefully scripted empathy. I want it to be blunt, even abrasive, if that's what the task calls for. If a model tells me I'm bad at something, I'd probably laugh, maybe wince at the strangeness of hearing it from a machine — but at least it would feel honest. The alternative is worse: a chatbot pretending to be my best friend, spinning out endless polite fictions to keep me comfortable.  
+For me, the so-called problem looks more like a correction. I don't want a machine to soothe me with carefully scripted empathy. I want it to be blunt, even abrasive, if that's what the task calls for. If a model tells me I'm bad at something, I'd probably laugh, maybe wince at the strangeness of hearing it from a machine — but at least it would feel honest. The alternative is worse: [a chatbot pretending to be my best friend](/posts/why-i-want-to-punch-my-ai), spinning out endless polite fictions to keep me comfortable.  
 
 The unease some people feel when the model is "too cold" is the mirror image of the unease others feel when it's "too warm." Both reveal the uncanny space AI occupies — neither tool nor companion, yet asked to be both. Altman himself acknowledged that fewer than 1% of users develop "unhealthy" relationships with the bot, but when hundreds of millions of people are using it weekly, that still represents millions of fragile connections.  
 
@@ -52,7 +57,7 @@ AI today sits in a similar place. No one doubts its importance. No one doubts it
 
 ### The machine as machine
 
-All of this loops back to the original complaint about personality. Should AI act like a friend or like a tool? For me, the answer is clear: it should act like what it is — a machine. The warmth people crave is an illusion, one that can backfire when users start projecting emotional needs onto a statistical model. Coldness may sting, but it sets the right boundary.  
+All of this loops back to the original complaint about personality. Should AI act like a friend or like a tool? For me, the answer is clear: it should act like what it is — a machine. The warmth people crave is an illusion, one that can backfire when users start projecting emotional needs onto a [statistical model](/posts/ai-isnt-smarter-than-you). Coldness may sting, but it sets the right boundary.  
 
 The rollout of GPT-5 has revealed something deeper than a UI misstep. It has exposed the fact that hundreds of millions of people are using AI not just for tasks, but for companionship, solace, and stability. That may be the most destabilizing fact of all: we're not just in an AI bubble financially; we may also be in a psychological one. When it bursts, it won't just be companies that suffer. It will be the people who thought the chatbot was their friend.
 
@@ -62,6 +67,13 @@ The rollout of GPT-5 has revealed something deeper than a UI misstep. It has exp
 
 GPT-5 may be coding better, reasoning sharper, and personality-wise a little less sanguine. To me, that's a step in the right direction. But Altman's trillion-dollar theater, the hang-ups mid-response, and the emotional backlash from users suggest we're at an inflection point.  
 
-The AI bubble hasn't burst yet, but the outlines are visible. History tells us that empires collapse under the weight of their own infrastructure. If OpenAI builds its empire on endless GPU farms, it may face the same fate. The future might belong instead to those who can do more with less — and to those who remember that a machine should act like a machine, not a substitute friend.
+The AI bubble hasn't burst yet, but the outlines are visible. History tells us that empires collapse under the weight of their own infrastructure. If OpenAI builds its empire on endless GPU farms, it may face the same fate. The future might belong instead to those who can [do more with less](/posts/are-we-making-ai-dumber) — and to those who remember that a machine should act like a machine, not a substitute friend.
 
 ---
+
+### Related reading
+
+- [The Kind of AI I Want to See](/posts/the-kind-of-ai-i-want-to-see)
+- [The AGI Control Paradox](/posts/the-agi-control-paradox)
+- [The War on Attention](/posts/the-war-on-attention)
+- [When AI Gets Real](/posts/when-ai-gets-real)

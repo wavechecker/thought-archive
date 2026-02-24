@@ -174,6 +174,12 @@ Immediately for severe chest pain, chest pain with arm or jaw pain, sudden breat
 
 ---
 
+## Featured Posts
+
+- [High Blood Pressure in 2025: More Than Just Numbers](/posts/high-blood-pressure-in-2025) — How the 2025 AHA/ACC guideline reframes hypertension as a brain health issue, and why earlier treatment and personalised risk tools are changing the conversation.
+
+---
+
 ## Further Reading
 
 - [NHS — Heart and circulatory diseases](https://www.nhs.uk/conditions/cardiovascular-disease/) — UK patient information on heart disease prevention and conditions.
