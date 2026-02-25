@@ -1,0 +1,114 @@
+---
+const sources = [
+  {
+    label: "Nature Medicine (2026): ChatGPT Health triage stress test (Ramaswamy et al.)",
+    url: "https://doi.org/10.1038/s41591-026-04297-7",
+  },
+  {
+    label: "JAMA Network Open (2023): ESI v4 mistriage in US EDs (Sax et al.)",
+    url: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2802556",
+  },
+  {
+    label: "BMJ Open (2019): Triage systems performance meta-analysis (Zachariasse et al.)",
+    url: "https://bmjopen.bmj.com/content/9/5/e026471",
+  },
+];
+---
+
+<div class="triage-box" role="note" aria-label="Human vs AI triage comparison box">
+  <div class="triage-box__header">
+    <h3>Human vs AI Emergency Under-Triage: Contextual Comparison</h3>
+    <p class="triage-box__sub">
+      A quick benchmark view. Definitions vary across studies; treat these as context, not a head-to-head.
+    </p>
+  </div>
+
+  <div class="triage-box__grid">
+    <section>
+      <h4>Published Human ED Triage Benchmarks</h4>
+      <ul>
+        <li><strong>Under-triage:</strong> often reported in the low single digits to low-teens depending on definition and proxy outcomes</li>
+        <li><strong>Over-triage:</strong> commonly higher, reflecting an intentionally conservative bias</li>
+      </ul>
+      <p>
+        Human triage systems are designed to tolerate inefficiency (over-triage) to reduce catastrophic misses (under-triage).
+      </p>
+    </section>
+
+    <section>
+      <h4>Telephone / Remote Triage</h4>
+      <ul>
+        <li>Misclassification can be meaningfully higher when vitals and examination are unavailable</li>
+        <li>Safety depends heavily on escalation rules and “red flag” capture</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>AI Triage (Nature Medicine 2026 Stress Test)</h4>
+      <ul>
+        <li><strong>52% under-triage</strong> among gold-standard emergency cases in structured vignette testing</li>
+      </ul>
+      <p>
+        <strong>Sharpened takeaway:</strong> methodologies differ, but the magnitude gap is substantial and suggests escalation threshold calibration
+        remains a central safety issue for consumer AI triage.
+      </p>
+    </section>
+  </div>
+
+  <div class="triage-box__refs">
+    <h5>Sources</h5>
+    <ol>
+      {sources.map((s) => (
+        <li>
+          <a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a>
+        </li>
+      ))}
+    </ol>
+  </div>
+</div>
+
+<style>
+  .triage-box {
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin: 2rem 0;
+  }
+  .triage-box__header h3 {
+    margin: 0 0 0.25rem 0;
+  }
+  .triage-box__sub {
+    margin: 0 0 1rem 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+  .triage-box__grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .triage-box__grid h4 {
+    margin: 0 0 0.5rem 0;
+  }
+  .triage-box__grid p {
+    margin: 0.5rem 0 0 0;
+    color: #374151;
+  }
+  .triage-box__refs {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+  .triage-box__refs h5 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  .triage-box__refs ol {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .triage-box__refs a {
+    text-decoration: underline;
+  }
+</style>
