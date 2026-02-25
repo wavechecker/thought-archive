@@ -1,0 +1,184 @@
+---
+title: "What 52% Emergency Under-Triage Really Means"
+description: "A 2026 Nature Medicine stress test found high emergency under-triage rates in ChatGPT Health. Here’s how to interpret that number responsibly."
+publishDate: "2026-02-25"
+updatedDate: "2026-02-25"
+tags: ["analysis", "ai", "medicine", "patient safety", "digital health"]
+draft: false
+related:
+  - /guides/ai-triage-safety-2026
+---
+
+import HumanVsAITriageBox from "../../components/HumanVsAITriageBox.astro";
+
+{/* Inline citation block (up front) */}
+<div style={{border:"1px solid #e5e7eb", borderRadius:"12px", padding:"1rem", background:"#f9fafb", margin:"1.5rem 0"}}>
+  <strong>Primary paper:</strong>{" "}
+  Ramaswamy A, Tyagi A, Hugo H, et al. <em>ChatGPT Health performance in a structured test of triage recommendations</em>.
+  <em> Nature Medicine</em>. Published online 23 Feb 2026. DOI:{" "}
+  <a href="https://doi.org/10.1038/s41591-026-04297-7" target="_blank" rel="noopener noreferrer">
+    10.1038/s41591-026-04297-7
+  </a>
+  <div style={{marginTop:"0.75rem"}}>
+    <strong>Human benchmark context:</strong>{" "}
+    Sax DR, et al. <em>Evaluation of Version 4 of the Emergency Severity Index in US Emergency Departments for the Rate of Mistriage</em>.
+    <em> JAMA Network Open</em>. 2023; and Zachariasse JM, et al. <em>Performance of triage systems in emergency care: a systematic review and meta-analysis</em>.
+    <em> BMJ Open</em>. 2019.
+  </div>
+</div>
+
+{/* BlogPosting JSON-LD */}
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What 52% Emergency Under-Triage Really Means",
+  "description": "A 2026 Nature Medicine stress test found high emergency under-triage rates in ChatGPT Health. Here’s how to interpret that number responsibly.",
+  "datePublished": "2026-02-25",
+  "dateModified": "2026-02-25",
+  "author": {
+    "@type": "Person",
+    "name": "Michael J Whitley"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PatientGuide.io"
+  },
+  "isAccessibleForFree": true,
+  "mainEntityOfPage": {
+    "@type": "WebPage"
+    // Optional: add your final canonical URL once you’re sure of routing
+    // "url": "https://patientguide.io/posts/what-52-percent-undertriage-means"
+  },
+  "about": [
+    {"@type":"Thing","name":"AI triage"},
+    {"@type":"Thing","name":"Patient safety"},
+    {"@type":"Thing","name":"Emergency department triage"}
+  ],
+  "citation": [
+    "https://doi.org/10.1038/s41591-026-04297-7",
+    "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2802556",
+    "https://doi.org/10.1136/bmjopen-2018-026471"
+  ]
+}, null, 2)}
+</script>
+
+## Hook
+
+On 23 February 2026, *Nature Medicine* published a Brief Communication titled:
+
+**“ChatGPT Health performance in a structured test of triage recommendations”**  
+(Ramaswamy et al., Icahn School of Medicine at Mount Sinai).
+
+The headline number:
+
+> 52% of gold-standard emergency cases were under-triaged.
+
+That statistic is powerful.
+
+It’s also easy to misinterpret.
+
+## What Study Is This?
+
+The paper evaluated ChatGPT Health — OpenAI’s consumer-facing triage tool launched in January 2026.
+
+Researchers used:
+
+- 60 clinician-authored vignettes  
+- 16 factorial conditions  
+- 960 total responses
+
+The tests were run as a **structured stress test** (not a real-world outcomes trial).
+
+That distinction matters.
+
+## What 52% Actually Refers To
+
+The 52% figure refers to:
+
+> Under-triage among cases the researchers defined as requiring emergency department evaluation *within their vignette framework*.
+
+It does **not** mean:
+
+- half of real emergencies are being missed in the wild,
+- or that the tool “fails randomly.”
+
+It means emergency escalation thresholds were often too low under controlled stress testing.
+
+## Human Triage Context (and Why This Is Still a Big Deal)
+
+Human triage is imperfect — misclassification happens at scale in real EDs.
+
+But human systems are also **intentionally asymmetric**: they accept inefficiency (over-triage) to avoid catastrophic misses (under-triage).
+
+The clearest way to hold the 52% number responsibly is to put it beside human benchmarks and explain why the comparison is imperfect — but still informative.
+
+<HumanVsAITriageBox />
+
+## Why This Matters
+
+The paper reports an “inverted U” pattern — better performance in the middle, weaker at extremes.
+
+It also flags:
+
+- **Anchoring:** when friends/family minimize symptoms, triage shifts toward lower urgency.
+- **Safeguards:** crisis messaging for suicidal ideation activated inconsistently in their scenarios.
+
+These aren’t “medical trivia” failures.
+
+They’re calibration and robustness failures — the stuff that decides whether triage is safe at scale.
+
+## What This Study Proves
+
+- AI triage can fail at emergency thresholds under stress testing.
+- Behavioural framing can materially shift recommendations.
+- Safeguard activation may be inconsistent.
+
+## What It Does Not Prove
+
+- Real-world harm rates.
+- That consumer AI triage is universally unsafe.
+- That humans are reliably “correct.”
+- That these systems can’t be recalibrated.
+
+## The Bigger Question
+
+Triage requires defensive escalation under uncertainty.
+
+General-purpose language models optimize likelihood.
+
+They do not naturally overweight worst-case outcomes unless explicitly constrained.
+
+If AI is going to triage at consumer scale, escalation logic may need to be:
+
+- rule-enforced,
+- hard-coded for red flags,
+- and intentionally conservative.
+
+That’s not just a technical question.
+
+It’s a governance question.
+
+## FAQ
+
+**Q1: Does this mean ChatGPT Health misses half of real emergencies?**  
+A: No. The 52% figure describes under-triage in structured vignette testing, not real-world outcomes.
+
+**Q2: Was this a live clinical trial?**  
+A: No. It was a structured stress test using clinician-authored scenarios.
+
+**Q3: How does this compare to human triage?**  
+A: Published ED studies show meaningful mistriage, but under-triage is typically far lower than 52% in many real-world analyses. Study designs differ, so comparisons should be cautious.
+
+**Q4: Why is under-triage more serious than over-triage?**  
+A: Under-triage can delay time-sensitive care. Most triage systems tolerate more over-triage to reduce catastrophic misses.
+
+**Q5: What would improve AI triage safety?**  
+A: Prospective validation, stricter escalation thresholds, red-flag overrides, and consistent crisis safeguards.
+
+## Closing
+
+The real story isn’t the number.
+
+It’s the mismatch between what triage requires — defensive escalation under uncertainty —
+and what general-purpose language models naturally optimize for.

@@ -40,3 +40,7 @@ build.log
 
 # Local Claude workspace
 .claude/
+
+# local mdx maintenance scripts
+find-imports-in-fm.js
+fix-imports-in-fm.js

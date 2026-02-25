@@ -1,0 +1,75 @@
+---
+type Props = {
+  title?: string;
+  rating: string;
+  strengths?: string[];
+  limitations?: string[];
+};
+
+const {
+  title = "Evidence quality",
+  rating,
+  strengths = [],
+  limitations = [],
+} = Astro.props as Props;
+---
+
+<div class="eqb" role="note" aria-label="Evidence quality rating">
+  <div class="eqb__top">
+    <h3>{title}</h3>
+    <p class="eqb__rating"><strong>Rating:</strong> {rating}</p>
+  </div>
+
+  <div class="eqb__grid">
+    <section>
+      <h4>Strengths</h4>
+      {strengths.length ? (
+        <ul>
+          {strengths.map((s) => <li>{s}</li>)}
+        </ul>
+      ) : (
+        <p class="eqb__muted">No strengths listed.</p>
+      )}
+    </section>
+
+    <section>
+      <h4>Limitations</h4>
+      {limitations.length ? (
+        <ul>
+          {limitations.map((l) => <li>{l}</li>)}
+        </ul>
+      ) : (
+        <p class="eqb__muted">No limitations listed.</p>
+      )}
+    </section>
+  </div>
+</div>
+
+<style>
+  .eqb {
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin: 1.75rem 0;
+  }
+  .eqb__top h3 {
+    margin: 0 0 0.25rem 0;
+  }
+  .eqb__rating {
+    margin: 0;
+    color: #374151;
+  }
+  .eqb__grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .eqb__grid h4 {
+    margin: 0 0 0.5rem 0;
+  }
+  .eqb__muted {
+    margin: 0;
+    color: #6b7280;
+  }
+</style>

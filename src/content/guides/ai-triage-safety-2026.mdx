@@ -1,0 +1,91 @@
+---
+title: "AI Triage Safety: What the 2026 ChatGPT Health Study Found"
+slug: "ai-triage-safety"
+description: "A structured review of the 2026 Nature Medicine evaluation of ChatGPT Health triage recommendations."
+category: "AI in Health"
+publishDate: "2026-02-25"
+updatedDate: "2026-02-25"
+tags: ["ai triage", "chatgpt health", "patient safety"]
+draft: false
+---
+
+import HumanVsAITriageBox from "../../components/HumanVsAITriageBox.astro";
+import EvidenceQualityBox from "../../components/EvidenceQualityBox.astro";
+
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "AI Triage Safety",
+  "datePublished": "2026-02-25",
+  "author": { "@type": "Person", "name": "Michael J Whitley" }
+}, null, 2)}
+</script>
+
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "AI in Health",
+      "item": "https://patientguide.io/guides/ai-in-health"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Triage Safety",
+      "item": "https://patientguide.io/guides/ai-triage-safety"
+    }
+  ]
+}, null, 2)}
+</script>
+
+## Intro
+
+In February 2026, *Nature Medicine* published a structured evaluation of ChatGPT Health’s triage recommendations.
+
+The study reported 52% under-triage among gold-standard emergency cases in structured vignette testing.
+
+<EvidenceQualityBox
+  rating="Moderate (stress test) • Low (real-world outcomes)"
+  strengths={[
+    "Peer-reviewed publication",
+    "Structured factorial testing",
+    "Focused on escalation safety"
+  ]}
+  limitations={[
+    "Vignette-based, not real-world",
+    "Gold-standard assignment dependent on study definitions"
+  ]}
+/>
+
+## Human Comparison
+
+<HumanVsAITriageBox />
+
+## FAQ
+
+**Q1: Does 52% reflect real-world harm?**  
+A: No. It reflects structured stress testing results.
+
+**Q2: Was this a clinical trial?**  
+A: No.
+
+**Q3: Why is under-triage critical?**  
+A: It may delay life-saving treatment.
+
+**Q4: Can thresholds be improved?**  
+A: Likely yes, with rule-based escalation.
+
+**Q5: Is AI triage unsafe?**  
+A: It shows calibration risks but not proven real-world harm.
+
+---
+
+## Related Guides
+
+- /guides/ai-in-health  
+- /guides/automation-bias-in-clinical-practice   
