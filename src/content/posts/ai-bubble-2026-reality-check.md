@@ -32,7 +32,7 @@ When GPT-5 first landed, it felt like a moment of reckoning. The hype cycle was 
 Since then:
 
 - **GPT-5.2** has improved reasoning and coding reliability.
-- Competition from **:contentReference[oaicite:0]{index=0}** (Gemini) and **:contentReference[oaicite:1]{index=1}** (Claude) has intensified.
+- Competition from **** (Gemini) and **** (Claude) has intensified.
 - Pricing pressure has increased globally.
 - Enterprises have quietly begun integrating AI into real workflows.
 - Skepticism has grown — but so has adoption.
@@ -87,7 +87,7 @@ That’s a different kind of risk.
 
 Competition has changed the tone.
 
-**:contentReference[oaicite:2]{index=2}** can’t operate in a vacuum anymore.  
+**** can’t operate in a vacuum anymore.  
 Gemini, Claude, open-source models, and international players are driving costs down.
 
 When intelligence becomes cheaper:

@@ -65,9 +65,6 @@ A: It’s still at research stage (IEEE DCOSS-IoT 2025), but the accuracy result
 A: Invisible data capture. Once your vitals are logged on someone else’s hardware, they may legally own them.  
 
 ## Further Reading
-- [UC Santa Cruz news release on Pulse-Fi — accurate, low-cost heart-rate from Wi-Fi]:contentReference[oaicite:3]{index=3}  
-- [IEEE DCOSS-IoT 2025 short paper — Pulse-Fi’s CSI + LSTM methodology]:contentReference[oaicite:4]{index=4}  
-- [23andMe’s data fate — bankruptcy, transfer of genetic data, and user privacy risks]:contentReference[oaicite:5]{index=5}  
 
 
 ## Closing
