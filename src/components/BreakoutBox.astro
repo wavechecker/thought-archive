@@ -1,0 +1,92 @@
+---
+/**
+ * BreakoutBox.astro
+ * Simple, reusable callout box for guides/posts.
+ *
+ * Usage:
+ * <BreakoutBox variant="dont-delay" title="Don’t Delay If…">...</BreakoutBox>
+ *
+ * Variants:
+ * - note (default)
+ * - info
+ * - warning
+ * - dont-delay
+ * - evidence
+ */
+
+export type BreakoutVariant = "note" | "info" | "warning" | "dont-delay" | "evidence";
+
+interface Props {
+  variant?: BreakoutVariant;
+  title?: string;
+  icon?: string; // emoji or short text icon
+  compact?: boolean;
+}
+
+const {
+  variant = "note",
+  title,
+  icon,
+  compact = false,
+} = Astro.props as Props;
+
+const stylesByVariant: Record<BreakoutVariant, { border: string; bg: string; title: string; defaultTitle: string; defaultIcon: string }> = {
+  note: {
+    border: "border-slate-200",
+    bg: "bg-slate-50",
+    title: "text-slate-900",
+    defaultTitle: "Note",
+    defaultIcon: "📝",
+  },
+  info: {
+    border: "border-blue-200",
+    bg: "bg-blue-50",
+    title: "text-blue-950",
+    defaultTitle: "Info",
+    defaultIcon: "ℹ️",
+  },
+  warning: {
+    border: "border-amber-200",
+    bg: "bg-amber-50",
+    title: "text-amber-950",
+    defaultTitle: "Important",
+    defaultIcon: "⚠️",
+  },
+  "dont-delay": {
+    border: "border-rose-200",
+    bg: "bg-rose-50",
+    title: "text-rose-950",
+    defaultTitle: "Don’t Delay If…",
+    defaultIcon: "🚨",
+  },
+  evidence: {
+    border: "border-emerald-200",
+    bg: "bg-emerald-50",
+    title: "text-emerald-950",
+    defaultTitle: "Evidence Snapshot",
+    defaultIcon: "📊",
+  },
+};
+
+const v = stylesByVariant[variant];
+const computedTitle = title ?? v.defaultTitle;
+const computedIcon = icon ?? v.defaultIcon;
+
+// Spacing knobs
+const pad = compact ? "p-3" : "p-4";
+const bodySpacing = compact ? "mt-2" : "mt-3";
+
+// NOTE: Uses utility classes (Tailwind). If Tailwind isn't enabled, tell me and I’ll convert to scoped CSS.
+---
+
+<aside class={`my-6 rounded-2xl border ${v.border} ${v.bg} ${pad} shadow-sm`}>
+  <div class="flex items-start gap-3">
+    <div class="text-lg leading-none" aria-hidden="true">{computedIcon}</div>
+    <div class="min-w-0">
+      <div class={`font-semibold ${v.title}`}>{computedTitle}</div>
+      <div class={`${bodySpacing} prose prose-slate max-w-none`}>
+        <slot />
+      </div>
+    </div>
+  </div>
+</aside>
