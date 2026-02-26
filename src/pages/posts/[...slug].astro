@@ -108,21 +108,61 @@ const breadcrumbLd = {
   ],
 };
 
-// FAQ JSON-LD (only if faq data exists)
-// Supports both question/answer and q/a formats
-const faq = data.faq;
-const faqLd = faq && faq.length > 0 ? {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faq.map((item: { question?: string; answer?: string; q?: string; a?: string }) => ({
-    "@type": "Question",
-    "name": item.question || item.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": item.answer || item.a,
-    },
-  })),
-} : null;
+// ---- FAQ JSON-LD (AUTO from body) -------------------------------------------
+// Convention in MD/MDX content:
+//
+// ## FAQ
+//
+// **Q: Question?**
+// A: Answer.
+//
+// We extract from entry.body so authors only write FAQ once.
+type FAQPair = { question: string; answer: string };
+
+function extractFaqFromBody(body: string | undefined): FAQPair[] {
+  if (!body) return [];
+  const faqBlockMatch = body.match(/(^|\n)##\s+FAQ\s*\n([\s\S]*?)(\n#{1,2}\s+|\n---\s*$|(?![\s\S]))/m);
+  if (!faqBlockMatch) return [];
+  const block = faqBlockMatch[2] ?? "";
+  const pairs: FAQPair[] = [];
+  const re = /\*\*Q[:\.]\s*([\s\S]*?)\*\*\s*\n\s*A:\s*([\s\S]*?)(?=\n\s*\*\*Q[:\.]|\n#{1,6}\s+|(?![\s\S]))/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(block)) !== null) {
+    const q = (m[1] ?? "").replace(/\s+/g, " ").trim();
+    const a = (m[2] ?? "").trim();
+    if (!q || !a) continue;
+    pairs.push({ question: q, answer: a.replace(/\n{3,}/g, "\n\n").trim() });
+  }
+  return pairs;
+}
+
+const faqPairsFromBody = extractFaqFromBody(entry.body);
+
+// Back-compat: frontmatter faq: arrays still work as fallback
+const rawFaq = (data as any).faq as Array<{ question?: string; answer?: string; q?: string; a?: string }> | undefined;
+const faqPairsFromFrontmatter: FAQPair[] = Array.isArray(rawFaq)
+  ? rawFaq
+      .map((item) => ({
+        question: String(item.question ?? item.q ?? "").trim(),
+        answer: String(item.answer ?? item.a ?? "").trim(),
+      }))
+      .filter((x) => x.question && x.answer)
+  : [];
+
+const faqPairs = faqPairsFromBody.length ? faqPairsFromBody : faqPairsFromFrontmatter;
+
+const faqLd = faqPairs.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqPairs.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    }
+  : null;
+// ---------------------------------------------------------------------------
 ---
 
 <Layout {frontmatter}>

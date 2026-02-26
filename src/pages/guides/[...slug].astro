@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-const { title, description, publishDate, updatedDate, category, faq, tags } = entry.data;
+const { title, description, publishDate, updatedDate, category, tags } = entry.data;
 
 // Defensive date rendering
 const pubDate = isValidDate(publishDate) ? fmt(publishDate) : null;
@@ -65,20 +65,82 @@ const breadcrumbLd = {
   "itemListElement": breadcrumbItems,
 };
 
-// FAQ JSON-LD (only if faq data exists)
-// Supports both question/answer and q/a formats
-const faqLd = faq && faq.length > 0 ? {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faq.map((item: { question?: string; answer?: string; q?: string; a?: string }) => ({
-    "@type": "Question",
-    "name": item.question || item.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": item.answer || item.a,
-    },
-  })),
-} : null;
+// ---- FAQ JSON-LD (AUTO from body) -------------------------------------------
+// Convention in MDX content:
+//
+// ## FAQ
+//
+// **Q: Question?**
+// A: Answer.
+//
+// **Q: Question 2?**
+// A: Answer 2.
+//
+// We extract from entry.body so authors only write FAQ once.
+type FAQPair = { question: string; answer: string };
+
+function extractFaqFromBody(body: string | undefined): FAQPair[] {
+  if (!body) return [];
+
+  // Find "## FAQ" heading and capture until next heading of same/higher level
+  const faqBlockMatch = body.match(/(^|\n)##\s+FAQ\s*\n([\s\S]*?)(\n#{1,2}\s+|\n---\s*$|(?![\s\S]))/m);
+  if (!faqBlockMatch) return [];
+
+  const block = faqBlockMatch[2] ?? "";
+
+  // Parse repeated patterns:
+  // **Q: ...** (or **Q. ...**) followed by A: ...
+  const pairs: FAQPair[] = [];
+  const re = /\*\*Q[:\.]\s*([\s\S]*?)\*\*\s*\n\s*A:\s*([\s\S]*?)(?=\n\s*\*\*Q[:\.]|\n#{1,6}\s+|(?![\s\S]))/g;
+
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(block)) !== null) {
+    const q = (m[1] ?? "").replace(/\s+/g, " ").trim();
+    const a = (m[2] ?? "").trim();
+
+    if (!q || !a) continue;
+
+    // Light cleanup: collapse whitespace; keep punctuation
+    const answerClean = a.replace(/\n{3,}/g, "\n\n").trim();
+
+    pairs.push({ question: q, answer: answerClean });
+  }
+
+  return pairs;
+}
+
+const faqPairsFromBody = extractFaqFromBody(entry.body);
+
+// Back-compat: if you have old frontmatter faq arrays, keep them working
+const rawFaq = (entry.data as any).faq as Array<{ question?: string; answer?: string; q?: string; a?: string }> | undefined;
+const faqPairsFromFrontmatter: FAQPair[] =
+  Array.isArray(rawFaq)
+    ? rawFaq
+        .map((item) => ({
+          question: String(item.question ?? item.q ?? "").trim(),
+          answer: String(item.answer ?? item.a ?? "").trim(),
+        }))
+        .filter((x) => x.question && x.answer)
+    : [];
+
+// Prefer body FAQ; fallback to frontmatter FAQ
+const faqPairs = faqPairsFromBody.length ? faqPairsFromBody : faqPairsFromFrontmatter;
+
+const faqLd = faqPairs.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqPairs.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    }
+  : null;
+// ---------------------------------------------------------------------------
 
 // Conservative tag → MedicalCondition mapping
 const CONDITION_TAG_MAP: Array<{ match: string[]; name: string }> = [
@@ -87,33 +149,33 @@ const CONDITION_TAG_MAP: Array<{ match: string[]; name: string }> = [
   { match: ["diabetes"], name: "Diabetes mellitus" },
 ];
 const tagsLower = (Array.isArray(tags) ? tags : []).map((t: string) => t.toLowerCase().trim());
-const matchedCondition = CONDITION_TAG_MAP.find(({ match }) =>
-  match.some((m) => tagsLower.includes(m))
-)?.name ?? null;
+const matchedCondition =
+  CONDITION_TAG_MAP.find(({ match }) => match.some((m) => tagsLower.includes(m)))?.name ?? null;
 
 // Build about field: one object, array of two, or absent
 const aboutEntries: object[] = [
-  ...(category ? [{ "@type": "MedicalSpecialty", "name": category }] : []),
-  ...(matchedCondition ? [{ "@type": "MedicalCondition", "name": matchedCondition }] : []),
+  ...(category ? [{ "@type": "MedicalSpecialty", name: category }] : []),
+  ...(matchedCondition ? [{ "@type": "MedicalCondition", name: matchedCondition }] : []),
 ];
-const aboutField = aboutEntries.length === 0
-  ? {}
-  : aboutEntries.length === 1
-    ? { "about": aboutEntries[0] }
-    : { "about": aboutEntries };
+const aboutField =
+  aboutEntries.length === 0
+    ? {}
+    : aboutEntries.length === 1
+      ? { about: aboutEntries[0] }
+      : { about: aboutEntries };
 
 // MedicalWebPage JSON-LD (always emitted for guide pages)
 const medicalWebPageLd = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": title,
-  "description": description ?? "",
-  "url": canonicalUrl,
-  "datePublished": publishDate ? String(publishDate).slice(0, 10) : undefined,
-  "dateModified": String(updatedDate ?? publishDate ?? "").slice(0, 10) || undefined,
-  "inLanguage": "en",
-  "isPartOf": { "@type": "WebSite", "name": "PatientGuide", "url": site },
-  "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" },
+  name: title,
+  description: description ?? "",
+  url: canonicalUrl,
+  datePublished: publishDate ? String(publishDate).slice(0, 10) : undefined,
+  dateModified: String(updatedDate ?? publishDate ?? "").slice(0, 10) || undefined,
+  inLanguage: "en",
+  isPartOf: { "@type": "WebSite", name: "PatientGuide", url: site },
+  medicalAudience: { "@type": "MedicalAudience", audienceType: "Patient" },
   ...aboutField,
 };
 ---
@@ -125,14 +187,14 @@ const medicalWebPageLd = {
   <!-- JSON-LD: MedicalWebPage -->
   <script type="application/ld+json" set:html={JSON.stringify(medicalWebPageLd)} />
 
-  {/* JSON-LD: FAQ (only if data exists) */}
+  {/* JSON-LD: FAQ (auto from body, fallback to frontmatter) */}
   {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
 
   <article class="pg-article">
     <!-- Article header -->
     <header class="pg-article__header">
       {category && (
-        <a href={`/guides/category/${category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`} class="pg-article__category">
+        <a href={`/guides/category/${category.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`} class="pg-article__category">
           {category}
         </a>
       )}
@@ -185,7 +247,7 @@ const medicalWebPageLd = {
     <footer class="pg-article__footer">
       <a href="/guides/" class="pg-btn pg-btn--secondary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
+          <path d="M19 12H5M12 19l-7-7 7-7" />
         </svg>
         Back to Guides
       </a>
