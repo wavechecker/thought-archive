@@ -1,14 +1,15 @@
 ---
 /**
  * OutbreakTracker.astro
- * Props are authoritative. Optional client fetch only runs when allowFetch=true AND key props are missing.
+ * Props are authoritative for initial render. Optional client fetch runs when allowFetch=true.
+ * Client hydration updates values from dataUrl (e.g. /data/measles-us.json).
  */
 const {
   // Presentation
   title = "CDC Measles Outbreak Tracker — United States, 2025",
   region = "United States",
 
-  // Data (props win)
+  // Data (props render immediately; client fetch may overwrite)
   cases,                       // number
   statesAffected,              // legacy prop (number)
   jurisdictions,               // preferred prop (number)
@@ -58,14 +59,8 @@ const asOfDisplay =
   (typeof asof === "string" ? asof : undefined) ??
   (typeof lastUpdated === "string" ? lastUpdated : "—");
 
-// Decide if we should allow client hydration:
-// Only when allowFetch=true AND any essential field is missing.
-const essentialMissing =
-  !(typeof cases === "number") ||
-  !(typeof jx === "number") ||
-  (asOfDisplay === "—" && !asofIso && !asof && !lastUpdated);
-
-const shouldFetch = Boolean(allowFetch && dataUrl && essentialMissing);
+// OPTION B: Always fetch when allowFetch=true (props are just initial values)
+const shouldFetch = Boolean(allowFetch && dataUrl);
 
 // Data attributes used by your client script to hydrate (when shouldFetch)
 const dataAttrs = {
@@ -131,12 +126,14 @@ const dataAttrs = {
     {" · "}
     Source:{" "}
     {sourceUrl ? (
-      <a href={sourceUrl} class="underline" rel="noopener noreferrer">{sourceName}</a>
+      <a data-field="sourceLink" href={sourceUrl} class="underline" rel="noopener noreferrer">
+        <span data-field="sourceName">{sourceName}</span>
+      </a>
     ) : (
-      <span>{sourceName}</span>
+      <span data-field="sourceName">{sourceName}</span>
     )}
   </p>
 </div>
 
-<!-- Client script only needs to run if we allowed fetch AND core props were missing. Astro will dedupe identical tags. -->
+<!-- Client script runs when allowFetch=true. Astro will dedupe identical script tags. -->
 {shouldFetch && <script type="module" src="/js/outbreak-tracker.js"></script>}

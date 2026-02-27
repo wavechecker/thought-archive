@@ -1,56 +1,56 @@
-// Public, cache-busted by Netlify. Safe with strict CSP (no inline).
-function fmt(n) {
-  const nn = Number(n);
-  return Number.isFinite(nn) ? nn.toLocaleString() : "—";
-}
-function setText(root, sel, val) {
-  const el = root.querySelector(sel);
-  if (el) el.textContent = val;
-}
+document.addEventListener("DOMContentLoaded", async () => {
+  const trackers = document.querySelectorAll("[data-outbreak][data-url]");
 
-async function hydrateBox(root) {
-  const urlAttr = root.getAttribute("data-url") || "/data/measles-us.json";
-  // Resolve against origin to handle base paths or relative quirks
-  const url = new URL(urlAttr, location.origin).toString();
+  for (const el of trackers) {
+    const url = el.getAttribute("data-url");
+    if (!url) continue;
 
-  try {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const j = await res.json();
+    try {
+      // Cache-busting query to avoid stale JSON
+      const res = await fetch(`${url}?t=${Date.now()}`, {
+        cache: "no-store",
+      });
 
-    if (j.cases != null) setText(root, '[data-field="cases"]', fmt(j.cases));
+      if (!res.ok) throw new Error("Failed to fetch outbreak data");
 
-    if (j.statesAffected != null) {
-      setText(root, '[data-field="statesAffected"]', String(j.statesAffected));
-      const line = root.querySelector('[data-field="statesLine"]');
-      if (line) line.style.display = "";
-    }
+      const data = await res.json();
 
-    if (j.hospitalizations != null) {
-      setText(root, '[data-field="hospitalizations"]', fmt(j.hospitalizations));
-    }
-    if (j.deaths != null) {
-      setText(root, '[data-field="deaths"]', fmt(j.deaths));
-    }
-    if (j.lastUpdated) {
-      const d = new Date(j.lastUpdated);
-      setText(
-        root,
-        '[data-field="lastUpdated"]',
-        isNaN(d.getTime()) ? String(j.lastUpdated) : d.toLocaleDateString()
+      if (!data.series || !Array.isArray(data.series)) return;
+
+      // Select latest year automatically
+      const latest = data.series.reduce((a, b) =>
+        b.year > a.year ? b : a
       );
-    }
-  } catch (err) {
-    // Optional: add a tiny error note for debugging (remove once stable)
-    root.setAttribute("data-error", String(err));
-  }
-}
 
-function init() {
-  document.querySelectorAll('[data-outbreak][data-url]').forEach(hydrateBox);
-}
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", init);
-} else {
-  init();
-}
+      // Update fields
+      const set = (field, value) => {
+        const node = el.querySelector(`[data-field="${field}"]`);
+        if (node) node.textContent = value;
+      };
+
+      set("cases", latest.confirmedCases?.toLocaleString() ?? "—");
+      set("outbreaks", latest.outbreaksInvestigated ?? "—");
+
+      if (latest.lastUpdated) {
+        const date = new Date(latest.lastUpdated);
+        set(
+          "lastUpdated",
+          date.toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        );
+      }
+
+      // Update source link
+      const sourceLink = el.querySelector("a");
+      if (sourceLink && latest.sourceUrl) {
+        sourceLink.href = latest.sourceUrl;
+        sourceLink.textContent = latest.sourceName || "CDC";
+      }
+    } catch (err) {
+      console.error("Outbreak tracker update failed:", err);
+    }
+  }
+});
