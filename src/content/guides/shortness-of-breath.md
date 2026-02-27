@@ -108,10 +108,10 @@ A: Mild breathlessness is common in pregnancy. Sudden, severe, or rapidly worsen
 
 ## Further Reading
 
-- TODO: American Lung Association — Shortness of Breath (lung.org)
-- TODO: NHS — Shortness of Breath (nhs.uk)
-- TODO: American Heart Association — Symptoms of Heart Disease (heart.org)
-- TODO: American Thoracic Society — Official Statement on Dyspnoea (thoracic.org)
+- [TODO: American Lung Association — Shortness of Breath](https://www.lung.org/)
+- [TODO: NHS — Shortness of Breath](https://www.nhs.uk/)
+- TODO: TODO: American Heart Association — Symptoms of Heart Disease (heart.org)
+- [TODO: American Thoracic Society — Official Statement on Dyspnoea](https://www.thoracic.org/)
 
 ## Related Guides
 

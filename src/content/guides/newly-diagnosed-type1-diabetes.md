@@ -166,10 +166,10 @@ A: Use technology where available (CGMs, pumps), keep hypo supplies with you, an
 
 ## Further Reading
 
-- TODO: Diabetes Australia — Type 1 Diabetes (diabetesaustralia.com.au)
-- TODO: Beyond Type 1 (beyondtype1.org)
-- TODO: JDRF — Type 1 Diabetes Research and Support (jdrf.org.au)
-- TODO: NHS — Type 1 Diabetes (nhs.uk)
+- [TODO: Diabetes Australia — Type 1 Diabetes](https://www.diabetesaustralia.com.au/)
+- [TODO: Beyond Type 1](https://beyondtype1.org/)
+- [TODO: JDRF — Type 1 Diabetes Research and Support](https://www.jdrf.org/)
+- [TODO: NHS — Type 1 Diabetes](https://www.nhs.uk/)
 
 ## Related Guides
 

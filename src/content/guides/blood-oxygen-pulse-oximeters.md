@@ -167,8 +167,8 @@ Sit upright, stay calm, and avoid exertion. If you have been prescribed suppleme
 ## Further Reading
 
 - World Health Organization — pulse oximetry training manual
-- TODO: NHS — oxygen saturation monitoring at home (nhs.uk)
-- TODO: US FDA — pulse oximeter guidance for consumers (fda.gov)
+- [TODO: NHS — oxygen saturation monitoring at home](https://www.nhs.uk/)
+- [TODO: US FDA — pulse oximeter guidance for consumers](https://www.fda.gov/)
 - Centers for Disease Control and Prevention — home pulse oximeter use
 
 ## Related Guides

@@ -3,6 +3,38 @@
     { "match": "Australian Immunisation Handbook", "url": "https://immunisationhandbook.health.gov.au/" },
     { "match": "CDC Shingles Overview", "url": "https://www.cdc.gov/shingles/" },
     { "match": "CDC Shingles", "url": "https://www.cdc.gov/shingles/" },
-    { "match": "ATAGI", "url": "https://www.health.gov.au/committees-and-groups/australian-technical-advisory-group-on-immunisation-atagi" }
+    { "match": "ATAGI", "url": "https://www.health.gov.au/committees-and-groups/australian-technical-advisory-group-on-immunisation-atagi" },
+
+    { "match": "NHS", "url": "https://www.nhs.uk/" },
+
+    { "match": "FDA", "url": "https://www.fda.gov/" },
+    { "match": "NEJM", "url": "https://www.nejm.org/" },
+
+    { "match": "American Lung Association", "url": "https://www.lung.org/" },
+    { "match": "lung.org", "url": "https://www.lung.org/" },
+
+    { "match": "American Stroke Association", "url": "https://www.stroke.org/" },
+    { "match": "stroke.org", "url": "https://www.stroke.org/" },
+
+    { "match": "NINDS", "url": "https://www.ninds.nih.gov/" },
+    { "match": "ninds.nih.gov", "url": "https://www.ninds.nih.gov/" },
+
+    { "match": "American Thoracic Society", "url": "https://www.thoracic.org/" },
+    { "match": "thoracic.org", "url": "https://www.thoracic.org/" },
+
+    { "match": "Diabetes Australia", "url": "https://www.diabetesaustralia.com.au/" },
+    { "match": "diabetesaustralia", "url": "https://www.diabetesaustralia.com.au/" },
+
+    { "match": "Beyond Type 1", "url": "https://beyondtype1.org/" },
+    { "match": "beyondtype1", "url": "https://beyondtype1.org/" },
+
+    { "match": "JDRF", "url": "https://www.jdrf.org/" },
+    { "match": "jdrf.org.au", "url": "https://jdrf.org.au/" },
+
+    { "match": "IMF", "url": "https://www.imf.org/" },
+    { "match": "imf.org", "url": "https://www.imf.org/" },
+
+    { "match": "BIS", "url": "https://www.bis.org/" },
+    { "match": "bis.org", "url": "https://www.bis.org/" }
   ]
 }

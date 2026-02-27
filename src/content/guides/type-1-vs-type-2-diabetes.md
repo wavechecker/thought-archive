@@ -175,7 +175,7 @@ A: Yes — especially for Type 2, where lifestyle can drive remission. For Type 
 
 - American Diabetes Association — Standards of Medical Care in Diabetes
 - World Health Organization — Diabetes overview
-- TODO: NHS — Type 1 diabetes; Type 2 diabetes (nhs.uk)
+- [TODO: NHS — Type 1 diabetes; Type 2 diabetes](https://www.nhs.uk/)
 
 ## Related Guides
 
