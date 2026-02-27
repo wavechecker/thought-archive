@@ -1,0 +1,8 @@
+{
+  "contains": [
+    { "match": "Australian Immunisation Handbook", "url": "https://immunisationhandbook.health.gov.au/" },
+    { "match": "CDC Shingles Overview", "url": "https://www.cdc.gov/shingles/" },
+    { "match": "CDC Shingles", "url": "https://www.cdc.gov/shingles/" },
+    { "match": "ATAGI", "url": "https://www.health.gov.au/committees-and-groups/australian-technical-advisory-group-on-immunisation-atagi" }
+  ]
+}

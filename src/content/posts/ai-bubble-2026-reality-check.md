@@ -193,8 +193,8 @@ A: Margin compression and over-reliance on centralised model providers.
 ## Further Reading
 
 - [Large Language Models in Medicine](/guides/large-language-models-in-medicine)  
-- https://www.imf.org  
-- https://www.bis.org  
+- TODO: https://www.imf.org  
+- TODO: https://www.bis.org  
 
 ---
 
