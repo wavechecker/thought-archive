@@ -2,7 +2,8 @@
 title: "Vaccination Overview"
 description: "A clear introduction to vaccines — what they are, how immunity works, schedule logic, benefits and risks, and common misconceptions."
 publishDate: "2026-02-17"
-category: "Vaccination"
+updatedDate: "2026-02-26"
+category: "Infectious Diseases"
 tags: ["vaccination", "vaccines", "immunization", "immunity", "vaccine schedule", "public health", "herd immunity", "boosters"]
 draft: false
 author:
@@ -10,26 +11,6 @@ author:
   href: "/authors/michael-j-whitley"
   role: "Editor, PatientGuide"
 ---
-
-import SchemaMedical from "../../components/SchemaMedical.astro";
-import SchemaBreadcrumbs from "../../components/SchemaBreadcrumbs.astro";
-
-export const pageUrl = "https://patientguide.io/guides/vaccination-overview";
-
-<SchemaMedical
-  type="MedicalWebPage"
-  name="Vaccination Overview"
-  description="A clear introduction to vaccines — what they are, how immunity works, schedule logic, benefits and risks, and common misconceptions."
-/>
-
-<SchemaBreadcrumbs
-  items={[
-    { name: "Home", url: "https://patientguide.io" },
-    { name: "Guides", url: "https://patientguide.io/guides" },
-    { name: "Vaccination", url: "https://patientguide.io/guides/vaccination" },
-    { name: "Vaccination Overview", url: pageUrl }
-  ]}
-/>
 
 ## Intro
 
@@ -46,8 +27,8 @@ A **vaccine** is a biological preparation that trains the immune system to recog
 
 Vaccines introduce a harmless version of a pathogen — a weakened or inactivated form, a protein fragment, or genetic instructions (as in mRNA vaccines). The immune system responds by:
 
-1. Recognising the foreign material (antigen).
-2. Activating B cells (which produce antibodies) and T cells (which coordinate defence and destroy infected cells).
+1. Recognising the foreign material (antigen).  
+2. Activating B cells (which produce antibodies) and T cells (which coordinate defence and destroy infected cells).  
 3. Forming **memory cells** that persist long after vaccination, ready to respond rapidly on future exposure.
 
 This is the same mechanism the body uses after natural infection, but vaccines achieve it without the risks of the actual disease.
@@ -74,17 +55,19 @@ For the routine childhood schedule in detail, see [Childhood Immunization Schedu
 ## Benefits vs Risks
 
 ### Benefits
-- Prevents serious illness, complications, disability, and death.
-- Reduces community transmission, protecting vulnerable people who cannot be vaccinated.
-- Can lead to disease elimination or eradication (smallpox was eradicated; polio is close).
+
+- Prevents serious illness, complications, disability, and death.  
+- Reduces community transmission, protecting vulnerable people who cannot be vaccinated.  
+- Can lead to disease elimination or eradication (smallpox was eradicated; polio is close).  
 - Reduces healthcare burden and supports economic stability.
 
 ### Risks
-- **Common, mild reactions:** soreness at the injection site, low-grade fever, fatigue. These typically resolve within a day or two and are signs the immune system is responding.
-- **Serious reactions:** extremely rare. Severe allergic reactions (anaphylaxis) occur in roughly 1–2 per million doses and are treatable.
-- **Ongoing monitoring:** safety surveillance systems worldwide (such as VAERS, EudraVigilance, and AusVaxSafety) continuously track adverse events after vaccines are approved.
 
-The risk of harm from vaccine-preventable diseases is far greater than the risk from vaccines themselves. This balance is not a matter of opinion — it is supported by decades of data across billions of doses.
+- **Common, mild reactions:** soreness at the injection site, low-grade fever, fatigue. These typically resolve within a day or two and are signs the immune system is responding.  
+- **Serious reactions:** extremely rare. Severe allergic reactions (anaphylaxis) occur in roughly 1–2 per million doses and are treatable.  
+- **Ongoing monitoring:** safety surveillance systems worldwide continuously track adverse events after vaccines are approved.
+
+The risk of harm from vaccine-preventable diseases is far greater than the risk from vaccines themselves. This balance is supported by decades of data across billions of doses.
 
 For more on safety monitoring, see [Adverse Events Monitoring](/guides/adverse-events-monitoring).
 
@@ -94,14 +77,28 @@ For more on safety monitoring, see [Adverse Events Monitoring](/guides/adverse-e
 
 It is common to notice that different countries recommend slightly different vaccine schedules. This is not a sign of disagreement — it reflects **local optimisation** based on:
 
-- **Disease burden:** Countries where a disease is more common may vaccinate earlier or more broadly.
-- **Health system capacity:** Centralised systems with reliable follow-up can use different spacing than fragmented systems.
-- **Cost-effectiveness analysis:** Public programs weigh benefits per dollar spent, which varies by setting.
-- **Available products:** Specific vaccine brands and combinations differ by region.
+- **Disease burden**  
+- **Health system capacity**  
+- **Cost-effectiveness analysis**  
+- **Available products**
 
 The core principle is the same everywhere: protect as many people as effectively and equitably as possible.
 
 For a detailed explanation, see [Why Childhood Vaccine Schedules Differ by Country](/guides/why-vaccine-schedules-differ-by-country).
+
+---
+
+## Adult Vaccination Strategy
+
+Vaccination is not just for childhood. As people age:
+
+- Immunity from some vaccines wanes.
+- Risk of complications from certain infections increases.
+- Timing decisions become more strategic.
+
+For example, the risk of shingles increases after age 50, and vaccination timing can be aligned with peak complication risk later in life. See [Shingles Vaccine in Adults](/guides/shingles-vaccine-adults).
+
+Adult vaccination decisions are best framed as targeted risk reduction rather than automatic repetition of childhood schedules.
 
 ---
 
@@ -110,11 +107,27 @@ For a detailed explanation, see [Why Childhood Vaccine Schedules Differ by Count
 - **"Vaccines cause autism."** This claim originated from a single 1998 study that was retracted for fraud. Multiple large-scale studies involving over a million children have found no link between vaccines and autism.
 - **"Natural immunity is always better than vaccination."** Natural infection can provide immunity, but it comes with the risk of severe disease, complications, and death. Vaccines provide similar or stronger protection without those risks.
 - **"Too many vaccines overwhelm the immune system."** A baby's immune system encounters thousands of antigens daily. The total antigen load from all routine vaccines combined is a tiny fraction of that natural exposure.
-- **"Vaccines contain dangerous toxins."** Ingredients like aluminum adjuvants are present in very small, safe amounts — less than what is naturally consumed through food and water. Modern childhood vaccines no longer contain thimerosal.
-- **"If most people are vaccinated, I don't need to be."** Herd immunity only works when coverage stays high. Gaps in vaccination allow outbreaks to return, as seen with measles resurgences when coverage drops below ~95%.
-- **"Vaccine side effects are covered up."** Adverse event reporting systems are publicly accessible. Safety signals are investigated transparently, and vaccines have been withdrawn or modified when evidence warranted it.
+- **"Vaccines contain dangerous toxins."** Ingredients like aluminum adjuvants are present in very small, safe amounts — less than what is naturally consumed through food and water.
+- **"If most people are vaccinated, I don't need to be."** Herd immunity only works when coverage stays high. Gaps in vaccination allow outbreaks to return.
+- **"Vaccine side effects are covered up."** Adverse event reporting systems are publicly accessible. Safety signals are investigated transparently.
 
 For a full breakdown, see [Vaccine Myths and Facts](/guides/vaccine-myths-and-facts).
+
+---
+
+## FAQ
+
+**Q: Do vaccines wear off?**  
+A: Some vaccines provide lifelong immunity, while others require boosters. Immunity can decline over time, and pathogens can evolve. Booster doses restore protection when needed.
+
+**Q: Why do adults still need vaccines?**  
+A: Immunity can wane, new risk factors develop with age, and some vaccines were not available in childhood. Adult vaccination focuses on preventing severe outcomes during higher-risk years.
+
+**Q: Are serious vaccine reactions common?**  
+A: Serious adverse reactions are rare. Most side effects are mild and short-lived. Safety monitoring systems continuously evaluate vaccine safety after approval.
+
+**Q: Why do different countries have different vaccine schedules?**  
+A: Schedules reflect local disease burden, cost-effectiveness analysis, healthcare infrastructure, and product availability — not fundamental scientific disagreement.
 
 ---
 
@@ -126,3 +139,4 @@ For a full breakdown, see [Vaccine Myths and Facts](/guides/vaccine-myths-and-fa
 - [Vaccine Myths and Facts](/guides/vaccine-myths-and-facts)
 - [Adverse Events Monitoring](/guides/adverse-events-monitoring)
 - [Vaccine Hesitancy](/guides/vaccine-hesitancy)
+- [Shingles Vaccine in Adults](/guides/shingles-vaccine-adults)
