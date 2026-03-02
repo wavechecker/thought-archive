@@ -111,6 +111,8 @@ Your clinician can help you weigh the benefits and limitations of any test in yo
 - [Preventive Health — Guide Hub](/guides/preventive-health)
 - [Cancer — Guide Hub](/guides/cancer)
 
+For a practical primer on how to read a study — including the five questions that help identify when evidence is being weaponised rather than genuinely evaluated — see [How Studies Get Weaponized](/posts/rfk-danish-vaccine-study).
+
 ---
 
 ## Disclaimer

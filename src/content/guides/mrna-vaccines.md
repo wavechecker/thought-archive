@@ -85,6 +85,8 @@ A: Not entirely. While flexible, some diseases may still be better served by oth
 - [ATAGI Guidance: COVID-19 mRNA vaccines](https://www.health.gov.au/topics/immunisation/covid-19-vaccine)  
 
 ## Related Guides
-- [How Vaccines Work](/guides/how-vaccines-work)  
-- [Adverse Events Monitoring](/guides/adverse-events-monitoring)  
-- [Vaccine Hesitancy](/guides/vaccine-hesitancy)  
+- [How Vaccines Work](/guides/how-vaccines-work)
+- [Adverse Events Monitoring](/guides/adverse-events-monitoring)
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)
+
+For a clinician's perspective on how trust — not just immunology — determines whether patients accept vaccines, see [Vaccines, Trust, and the Line Between Medicine and Power](/posts/vaccines-trust-medicine-power).

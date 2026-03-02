@@ -74,8 +74,11 @@ A: Not always. Some prevent severe illness and transmission even if mild infecti
 - [PubMed: Immunology of vaccination reviews](https://pubmed.ncbi.nlm.nih.gov/?term=immunology+of+vaccination)  
 
 ## Related Guides
-- [Vaccination Overview](/guides/vaccination-overview)  
-- [Aluminum in Vaccines](/guides/aluminum-in-vaccines)  
-- [mRNA Vaccines](/guides/mrna-vaccines)  
-- [Influenza Vaccines](/guides/influenza-vaccines)  
+- [Vaccination Overview](/guides/vaccination-overview)
+- [Aluminum in Vaccines](/guides/aluminum-in-vaccines)
+- [mRNA Vaccines](/guides/mrna-vaccines)
+- [Influenza Vaccines](/guides/influenza-vaccines)
 - [Measles Vaccine](/guides/measles-vaccination)
+
+## Wider Context
+For a practical guide to evaluating vaccine studies — including how to spot when a study is being weaponised rather than genuinely critiqued — see [How Studies Get Weaponized](/posts/rfk-danish-vaccine-study). For the clinical conversation side — how to discuss vaccination with hesitant patients — see [Vaccines, Trust, and the Line Between Medicine and Power](/posts/vaccines-trust-medicine-power).
