@@ -107,28 +107,28 @@ If symptoms resolve quickly (within 1–2 minutes, especially with rest), the ur
 ## FAQ
 
 **Is heart pain always severe?**
-No. Many heart attacks feel like pressure, tightness, or heaviness — not sharp, stabbing pain. Mild or vague discomfort that lasts more than a few minutes should not be dismissed.
+No. Many heart attacks feel like pressure, tightness, or heaviness — not sharp, stabbing pain. Mild or vague discomfort that lasts more than a few minutes should not be dismissed. See [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack) for the full range of presentations.
 
 **If symptoms improve, can I skip care?**
-No. Chest pain that resolves may indicate unstable angina — a direct warning sign of an impending heart attack. Get checked the same day even if you feel completely better.
+No. Chest pain that resolves may indicate unstable angina — a direct warning sign of an impending heart attack. Get checked the same day even if you feel completely better. See [Heart & Circulation — Guide Hub](/guides/heart-circulation) for more on angina and its management.
 
 **What is the difference between a heart attack and angina?**
-Angina is chest pain from temporarily reduced blood flow to the heart, usually relieved by rest or medication within minutes. A heart attack involves a more severe or prolonged blockage that does not fully resolve with rest. If pain persists, treat it as a heart attack.
+Angina is chest pain from temporarily reduced blood flow to the heart, usually relieved by rest or medication within minutes. A heart attack involves a more severe or prolonged blockage that does not fully resolve with rest. If pain persists, treat it as a heart attack. The [Heart & Circulation hub](/guides/heart-circulation) covers both conditions in depth.
 
 **Should I take aspirin before the ambulance arrives?**
 Chew (do not swallow whole) one adult aspirin (300–325 mg) if you are not allergic and have no contraindications. Do not substitute ibuprofen — aspirin has a specific anti-clotting action that ibuprofen does not replicate.
 
 **Is chest pain in women different?**
-Women may experience less typical symptoms — jaw pain, back pain, nausea, or fatigue — without prominent chest pain. These presentations are just as serious and warrant the same urgency.
+Women may experience less typical symptoms — jaw pain, back pain, nausea, or fatigue — without prominent chest pain. These presentations are just as serious and warrant the same urgency. See [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack) for atypical presentations in women and younger adults.
 
 **What if I'm not sure it's serious?**
-Call emergency services and describe your symptoms. Let professionals decide. A false alarm is always preferable to a delayed response to a real emergency.
+Call emergency services and describe your symptoms. Let professionals decide. A false alarm is always preferable to a delayed response to a real emergency. See [Emergencies — Guide Hub](/guides/emergencies) for broader guidance on recognising urgent situations.
 
 **Can anxiety cause chest pain?**
 Yes — but cardiac and other serious causes must be ruled out first. Anxiety-related chest pain tends to occur alongside tingling, a sense of panic, and breathlessness, and often improves with calm breathing. This is not a reliable enough distinction to skip medical evaluation.
 
 **What is a pulmonary embolism and how does it differ from a heart attack?**
-A pulmonary embolism (PE) is a blood clot in the lung arteries. It typically causes sudden sharp chest pain that worsens when breathing in, accompanied by breathlessness and sometimes a fast heart rate. Unlike a heart attack, it may not produce the classic squeezing pressure. Both are emergencies requiring immediate care.
+A pulmonary embolism (PE) is a blood clot in the lung arteries. It typically causes sudden sharp chest pain that worsens when breathing in, accompanied by breathlessness and sometimes a fast heart rate. Unlike a heart attack, it may not produce the classic squeezing pressure. Both are emergencies requiring immediate care. Sudden breathlessness is also covered in [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath).
 
 ## Further Reading
 

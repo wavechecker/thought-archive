@@ -8,17 +8,72 @@ updatedDate: "2026-02-26"
 hubKey: "InfectiousDiseases"
 draft: false
 tags: ["infectious diseases", "infection", "vaccination", "patientguide", "hub"]
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "CollectionPage"
+    "name": "Infectious Diseases — Guide Hub"
+    "description": "A comprehensive hub for infectious disease guides covering bacterial, viral, and emerging infections, vaccine-preventable diseases, and when to seek urgent care."
+    "about":
+      - { "@type": "Thing", "name": "Infectious disease" }
+      - { "@type": "Thing", "name": "Vaccination" }
+      - { "@type": "Thing", "name": "Bacterial infection" }
+      - { "@type": "Thing", "name": "Viral infection" }
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    "mainEntity":
+      - "@type": "Question"
+        "name": "What is an infectious disease?"
+        "acceptedAnswer":
+          "@type": "Answer"
+          "text": "A disease caused by microorganisms — bacteria, viruses, fungi, or parasites — that can spread between people, from animals, through food and water, or from the environment. Most infections are self-limiting; some are life-threatening."
+      - "@type": "Question"
+        "name": "How do infections spread?"
+        "acceptedAnswer":
+          "@type": "Answer"
+          "text": "Infectious agents spread through respiratory droplets or aerosols (influenza, measles, COVID-19), direct contact (cellulitis, STIs), contaminated food or water (gastroenteritis, typhoid), blood and body fluids (hepatitis B, HIV), insect bites (Lyme disease, West Nile virus), or vertical transmission from mother to child (hepatitis B, HIV, rubella)."
+      - "@type": "Question"
+        "name": "What is antibiotic resistance and why does it matter?"
+        "acceptedAnswer":
+          "@type": "Answer"
+          "text": "Antibiotic resistance occurs when bacteria evolve to survive antibiotic treatment, making infections harder — and sometimes impossible — to cure with available drugs. The WHO considers it one of the greatest threats to global health. Key drivers include overuse and misuse of antibiotics in humans and agriculture. Resistant infections already cause over 1.27 million deaths annually worldwide."
+      - "@type": "Question"
+        "name": "When should I seek emergency care for an infection?"
+        "acceptedAnswer":
+          "@type": "Answer"
+          "text": "Seek emergency care immediately for: high fever with stiff neck or severe headache (possible meningitis); rapidly spreading, painful red rash; signs of sepsis (confusion, very high or low temperature, rapid breathing, mottled skin); difficulty breathing not explained by a known condition; loss of consciousness or seizures; or suspected anaphylaxis."
+      - "@type": "Question"
+        "name": "How do I protect myself when travelling to high-risk areas?"
+        "acceptedAnswer":
+          "@type": "Answer"
+          "text": "Key measures include: verifying your routine vaccinations are up to date; getting destination-specific vaccines (typhoid, yellow fever, hepatitis A, meningococcal) at least 4–6 weeks before travel; taking antimalarial medication where appropriate; using insect repellent and protective clothing in vector-risk areas; practising food and water safety; and carrying a travel health kit. See the Measles Travel guide for measles-specific considerations."
+      - "@type": "Question"
+        "name": "What is the difference between viral and bacterial infections, and does it affect treatment?"
+        "acceptedAnswer":
+          "@type": "Answer"
+          "text": "Bacterial infections (caused by bacteria like Streptococcus, E. coli, Mycobacterium tuberculosis) can often be treated with antibiotics. Viral infections (influenza, COVID-19, measles, hepatitis B) cannot be treated with antibiotics — antivirals exist for some, but many require only supportive care. Taking antibiotics for a viral infection does not help and contributes to resistance. A doctor can determine — through examination and sometimes tests — which type of infection you have."
 ---
 
 # Infectious Diseases — Guide Hub
 
-Infectious diseases are caused by bacteria, viruses, fungi, or parasites. They can spread between people, from animals, through food and water, or from the environment.
+Infectious diseases are caused by bacteria, viruses, fungi, or parasites. They can spread between people, from animals, through food and water, or from the environment. Every human life is repeatedly shaped by infection — from the childhood illnesses that our vaccines now prevent to the respiratory viruses that circulate every winter, to the emerging pathogens that remind us our relationship with the microbial world is never fully settled.
 
-Most infections are mild and self-limiting. Some, however, are life-threatening — including bacterial meningitis, sepsis, tuberculosis, and severe pneumonia. Globally, infectious diseases remain among the leading causes of death, particularly in children and in low-income settings.
+Most infections are mild and self-limiting. Some, however, are life-threatening — including bacterial meningitis, sepsis, tuberculosis, and severe pneumonia. Globally, infectious diseases remain among the leading causes of death: lower respiratory infections, tuberculosis, HIV/AIDS, and diarrhoeal diseases kill millions every year, predominantly in low-income settings and among children under five. Antibiotic-resistant infections now cause over **1.27 million deaths annually worldwide** — and the number is rising.
 
-Vaccination, hygiene, clean water, antimicrobial stewardship, and early treatment remain the most powerful tools for prevention and control.
+Vaccination, hygiene, clean water, antimicrobial stewardship, and early treatment remain the most powerful tools for prevention and control. This hub connects all the major infectious disease guides on PatientGuide.
 
-This hub connects the most important infectious disease guides on PatientGuide.
+---
+
+## How This Cluster Fits Together
+
+The Infectious Diseases cluster spans three closely related hubs:
+
+**This hub** (Infectious Diseases) is the disease-oriented starting point — organised by pathogen type and clinical presentation. Use it to find guides on specific conditions, understand when symptoms are serious, and access emergency guidance.
+
+**The [Vaccination hub](/guides/vaccination/)** is the intervention-oriented counterpart — organised by vaccine and vaccination policy. If your question is "should I get this vaccine?" or "how do vaccines work?", start there.
+
+**The [Respiratory hub](/guides/respiratory-hub/)** covers the subset of infectious diseases that primarily affect the lungs and airways — asthma, COPD, pneumonia, and respiratory infections — with a clinical focus on breathlessness and chronic disease.
+
+Within this hub, the guides are grouped by pathogen type, clinical urgency, and vaccine-preventability — the most useful framings for navigation.
 
 ---
 
@@ -26,8 +81,8 @@ This hub connects the most important infectious disease guides on PatientGuide.
 
 If you are:
 
-- Looking for vaccine information → start with **Vaccination — Guide Hub**
-- Worried about a severe infection → see **Emergency Guidance**
+- Looking for vaccine information → start with the **[Vaccination Hub](/guides/vaccination/)**
+- Worried about a severe infection → see **Emergency Guidance** below
 - Researching a specific disease → use the sections below
 - Unsure whether symptoms are serious → review the red flag section
 
@@ -35,7 +90,7 @@ If you are:
 
 ## Common Symptoms & When to Seek Urgent Help
 
-### Seek emergency care immediately for:
+### Seek Emergency Care Immediately For:
 
 - High fever with stiff neck or severe headache (possible meningitis)
 - Rapidly spreading, painful red rash
@@ -44,10 +99,10 @@ If you are:
 - Loss of consciousness or seizures
 - Suspected anaphylaxis after vaccination or medication
 
-See also:  
-[Bacterial Meningitis](/guides/bacterial-meningitis/) |  
-[Sepsis](/guides/sepsis/) |  
-[Anaphylaxis](/guides/anaphylaxis/) |  
+See also:
+[Bacterial Meningitis](/guides/bacterial-meningitis/) |
+[Sepsis](/guides/sepsis/) |
+[Anaphylaxis](/guides/anaphylaxis/) |
 [Emergencies — Guide Hub](/guides/emergencies/)
 
 ---
@@ -55,6 +110,9 @@ See also:
 ## Key Guide Sections
 
 ### Vaccine-Preventable Diseases
+
+These conditions are largely or entirely preventable through vaccination. Where vaccination rates fall, they return.
+
 - [Whooping Cough (Pertussis)](/guides/whooping-cough/)
 - [Measles](/guides/measles/)
 - [COVID-19 Vaccines](/guides/covid-19-vaccines/)
@@ -67,15 +125,18 @@ See also:
 ---
 
 ### Understanding Vaccines
+
 - [Vaccination Overview](/guides/vaccination-overview/)
 - [How Vaccines Work](/guides/how-vaccines-work/)
 - [mRNA Vaccines](/guides/mrna-vaccines/)
-- [Childhood Immunization Schedule](/guides/childhood-immunization-schedule/)
+- [Childhood Immunisation Schedule](/guides/childhood-immunization-schedule/)
 - [Why Vaccine Schedules Differ by Country](/guides/why-vaccine-schedules-differ-by-country/)
+- [Why Combination Vaccines Exist](/guides/why-combination-vaccines-exist/)
 
 ---
 
 ### Vaccine Safety & Hesitancy
+
 - [Vaccination Safety Overview](/guides/vaccination-safety-overview/)
 - [Vaccine Hesitancy](/guides/vaccine-hesitancy/)
 - [Vaccines and Autism](/guides/vaccines-and-autism/)
@@ -87,25 +148,48 @@ See also:
 ---
 
 ### Bacterial Infections
+
+Bacterial infections can usually be treated with antibiotics, but rising resistance is narrowing the options for some organisms. Treatment decisions should always involve a clinician.
+
 - [Tuberculosis](/guides/tuberculosis/)
 - [Bacterial Meningitis](/guides/bacterial-meningitis/)
 - [Pneumonia](/guides/pneumonia/)
 - [Cellulitis](/guides/cellulitis/)
 - [Legionnaires' Disease](/guides/legionnaires-disease/)
 - [Antibiotic Resistance](/guides/antibiotic-resistance/)
+- [Sepsis](/guides/sepsis/)
+- [Tetanus](/guides/tetanus/)
 
 ---
 
 ### Viral Infections
+
+Viruses require antiviral treatment (where available) or supportive care. Antibiotics do not work against viruses.
+
 - [Hepatitis B](/guides/hepatitis-b/)
 - [HIV PrEP](/guides/hiv-prep/)
-- [Flu vs Cold](/guides/flu-vs-cold-differences/)
-- [Gastroenteritis](/guides/gastroenteritis-preventing-spread/)
+- [Flu vs Cold — What's the Difference?](/guides/flu-vs-cold-differences/)
+- [Gastroenteritis — Preventing Spread](/guides/gastroenteritis-preventing-spread/)
+- [Nipah Virus](/guides/nipah-virus/)
+- [Rabies](/guides/rabies/)
+- [West Nile Virus](/guides/west-nile-virus/)
+
+---
+
+### Fungal Infections
+
+Fungal infections are a growing public health concern, particularly in immunocompromised individuals and healthcare settings.
+
+- [Candida auris — The Drug-Resistant Superbug Fungus](/guides/candida-auris-guide/)
 
 ---
 
 ### Emerging & Travel-Related Infections
+
+Infections that have expanded their range, are emerging in new populations, or pose particular risks to travellers.
+
 - [Lyme Disease](/guides/lyme-disease/)
+- [Post-Treatment Lyme Syndrome](/guides/post-treatment-lyme-syndrome/)
 - [Tick Bite Management](/guides/tick-bite-management/)
 - [Insect-Borne Infections](/guides/insect-borne-infections/)
 - [West Nile Virus](/guides/west-nile-virus/)
@@ -117,31 +201,37 @@ See also:
 
 ## Measles in Focus
 
-Measles re-emerges when vaccination rates fall below ~95% — the level needed for herd immunity.
+Measles re-emerges when vaccination rates fall below ~95% — the level needed for herd immunity. It is not a mild illness. Measles can cause encephalitis, blindness, and death. It also causes immune amnesia — wiping out immune memory built up over years — leaving survivors more vulnerable to other infections for months or years after recovery.
 
-It is not a mild illness. Measles can cause encephalitis, blindness, and death. It can also suppress immune memory for months or years.
+Current outbreaks in the United States and globally reflect falling vaccination confidence more than any change in the virus itself.
 
-See:
 - [Why Measles Comes Back First](/guides/why-measles-comes-back-first/)
 - [Measles Vaccination](/guides/measles-vaccination/)
 - [Measles — Pregnancy](/guides/measles-pregnancy/)
 - [Measles — Travel](/guides/measles-travel/)
+- [Measles Elimination Explained](/guides/measles-elimination-explained/)
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: What is an infectious disease?**  
-A disease caused by microorganisms — bacteria, viruses, fungi, or parasites — that can spread between people or from the environment.
+**What is an infectious disease?**
+A disease caused by microorganisms — bacteria, viruses, fungi, or parasites — that can spread between people or from the environment. Most infections are mild and self-limiting; some are life-threatening. The distinction between bacterial, viral, and fungal infections matters clinically because it determines what treatment works.
 
-**Q: How do infections spread?**  
-Through respiratory droplets, contact, food or water, blood and body fluids, insect bites, or vertical transmission from mother to child.
+**How do infections spread?**
+Through respiratory droplets or aerosols (influenza, measles, COVID-19), direct contact (cellulitis, STIs), contaminated food or water (gastroenteritis, typhoid), blood and body fluids (hepatitis B, HIV), insect bites (Lyme disease, West Nile virus), or vertical transmission from mother to child (hepatitis B, rubella).
 
-**Q: What is antibiotic resistance?**  
-When bacteria evolve to survive antibiotic treatment, making infections harder to cure.
+**What is antibiotic resistance and why does it matter?**
+Antibiotic resistance occurs when bacteria evolve to survive antibiotic treatment. Resistant infections already cause over 1.27 million deaths annually worldwide and are projected to become one of the leading causes of death by 2050 if trends continue. Key drivers include overuse in humans and agriculture. See [Antibiotic Resistance](/guides/antibiotic-resistance/).
 
-**Q: When should I seek emergency care?**  
-For stiff neck with fever, rapidly spreading rash, breathing difficulty, confusion, signs of sepsis, or loss of consciousness.
+**When should I seek emergency care for an infection?**
+Seek emergency care immediately for high fever with stiff neck or severe headache, rapidly spreading painful rash, signs of sepsis (confusion, rapid breathing, mottled skin), difficulty breathing, or loss of consciousness. These are potential medical emergencies. See [Bacterial Meningitis](/guides/bacterial-meningitis/) and [Sepsis](/guides/sepsis/).
+
+**How do I protect myself when travelling to high-risk areas?**
+Verify routine vaccinations are current; get destination-specific vaccines at least 4–6 weeks before travel; take antimalarials where appropriate; use insect repellent in vector-risk areas; practise food and water safety. See [Measles — Travel](/guides/measles-travel/) for measles-specific guidance.
+
+**What is the difference between viral and bacterial infections — and does it affect treatment?**
+Bacterial infections can often be treated with antibiotics. Viral infections cannot — antivirals exist for some (influenza, HIV, hepatitis B), but many require supportive care only. Taking antibiotics for a viral infection does not help and contributes to resistance. A clinician can determine which type of infection you have through examination and, where needed, testing.
 
 ---
 
@@ -153,10 +243,11 @@ For stiff neck with fever, rapidly spreading rash, breathing difficulty, confusi
 
 ## Further Reading
 
-- WHO — Vaccines and Immunization  
-- CDC — Vaccines & Immunizations  
-- NHS — Vaccinations  
-- ECDC — Immunisation & Surveillance  
+- [WHO — Vaccines and Immunisation](https://www.who.int/health-topics/vaccines-and-immunization)
+- [CDC — Vaccines & Immunizations](https://www.cdc.gov/vaccines/index.html)
+- [NHS — Vaccinations](https://www.nhs.uk/conditions/vaccinations/)
+- [ECDC — Immunisation & Surveillance](https://www.ecdc.europa.eu/en/immunisation-vaccines)
+- [WHO — Antimicrobial Resistance](https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance)
 
 ---
 

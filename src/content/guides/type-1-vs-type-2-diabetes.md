@@ -145,31 +145,31 @@ Symptom resolution with treatment does not mean the condition has resolved — e
 ## FAQ
 
 **Q: Can Type 2 diabetes turn into Type 1?**
-A: No. They are different conditions. Some people with Type 2 eventually need insulin, which can cause confusion, but the underlying disease is different.
+A: No. They are different conditions with distinct underlying causes. [Type 1](/guides/type-1-diabetes) is an autoimmune condition; [Type 2](/guides/type-2-diabetes) is driven by insulin resistance. Some people with Type 2 eventually need insulin, which can cause confusion, but the underlying disease remains different.
 
 **Q: Which type needs insulin from the start?**
-A: People with Type 1 always need insulin from diagnosis. People with Type 2 may manage with lifestyle and tablets initially.
+A: People with [Type 1 diabetes](/guides/type-1-diabetes) always need insulin from diagnosis — the pancreas produces none. People with [Type 2](/guides/type-2-diabetes) may manage with lifestyle and tablets initially; some will need insulin later if other treatments become insufficient.
 
 **Q: Can children develop Type 2 diabetes?**
-A: Yes — while Type 1 is more common in children, Type 2 is increasingly seen in younger people with obesity-related risk factors.
+A: Yes — while Type 1 is more common in children, Type 2 is increasingly seen in younger people with obesity-related risk factors. See [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents) for more on both types in young people.
 
 **Q: Is one type more serious?**
-A: Both are serious. Type 1 carries immediate risks if insulin is missed; Type 2 raises long-term cardiovascular and organ risks.
+A: Both are serious. [Type 1](/guides/type-1-diabetes) carries immediate risks if insulin is missed, including diabetic ketoacidosis; [Type 2](/guides/type-2-diabetes) raises long-term cardiovascular and organ risks. Good management substantially reduces complications in both types.
 
 **Q: Can diabetes be cured?**
-A: No cure exists for either type. Some people with Type 2 achieve remission with significant weight loss, but this is not a permanent cure.
+A: No cure exists for either type. Some people with [Type 2 diabetes](/guides/type-2-diabetes) achieve remission — blood sugar returning to normal without medication — with significant weight loss and lifestyle change. This is not a permanent cure and may not last, but it is a meaningful clinical outcome.
 
 **Q: What is the difference between remission and control?**
-A: Remission means normal blood sugar without medication (possible in Type 2). Control means keeping blood sugar at target with treatment (relevant to both types).
+A: Remission means normal blood sugar without medication (possible in Type 2 through significant weight loss). Control means keeping blood sugar within target using medicines, insulin, or lifestyle — relevant to both types. Monitoring [HbA1c](/guides/understanding-hba1c) is central to tracking control in either case.
 
 **Q: What happens if diabetes is not managed?**
-A: Serious complications including heart disease, kidney failure, vision loss, and nerve damage.
+A: Serious complications including [heart disease](/guides/heart-circulation), kidney failure, vision loss, and nerve damage. Both types are affected, and risk is significantly reduced with good ongoing management.
 
 **Q: How often should I get checked?**
-A: Every 3–6 months for HbA1c; annually for eyes, kidneys, feet, and blood pressure.
+A: Every 3–6 months for [HbA1c](/guides/understanding-hba1c) and routine blood tests; annually for eyes, kidneys, feet, and blood pressure. Frequency depends on your diabetes type, treatment, and current control.
 
 **Q: Can lifestyle changes really make a difference?**
-A: Yes — especially for Type 2, where lifestyle can drive remission. For Type 1, lifestyle helps optimise control alongside insulin.
+A: Yes — especially for [Type 2](/guides/type-2-diabetes), where diet, exercise, and weight management are core treatments and can sometimes lead to remission. For [Type 1](/guides/type-1-diabetes), lifestyle supports better glucose control and reduces long-term complication risk alongside insulin therapy.
 
 ## Further Reading
 
