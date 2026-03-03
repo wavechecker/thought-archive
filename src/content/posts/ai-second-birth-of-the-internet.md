@@ -29,10 +29,17 @@ That’s the part the “dead internet” pessimists miss. Yes, AI will flood pl
 
 In that sense, AI is not suffocating the internet — it’s rewilding it. Instead of a curated feed dominated by a handful of experts and corporations, we get a messy, noisy, exhilarating landscape where anyone can step onto the pitch. It’s unpredictable, sometimes chaotic, but it’s also full of life.  
 
-We shouldn’t confuse surface polish with depth, or clarity of grammar with truth. Fact-checking and filters will still matter, maybe more than ever. But beneath the noise, I believe we’ll see a flowering of new ideas, perspectives, and connections.  
+We shouldn’t confuse surface polish with depth, or clarity of grammar with truth. Fact-checking and filters will still matter, maybe more than ever — particularly in health, where [using AI tools safely for medical questions](/guides/how-to-use-ai-for-health-questions) requires exactly this kind of critical lens. But beneath the noise, I believe we’ll see a flowering of new ideas, perspectives, and connections.  
 
 This doesn’t feel like the end of the internet. It feels like its reset button has been pressed.  
 
 And when the room fills with millions of new voices — some ordinary, some extraordinary — the odds of humanity leaping forward in a “quantum sense” go way up.  
 
-**Let a million paisleys bloom. Welcome to the second birth of the internet.**  
+**Let a million paisleys bloom. Welcome to the second birth of the internet.**
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)

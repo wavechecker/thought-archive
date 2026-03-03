@@ -30,7 +30,7 @@ Whether it's applying for a visa, handling tax residency, or registering a busin
 
 Most people freeze. They don't know where to start. They avoid it. They get angry. Or they do what I used to do — take a blind stab and hope for the best.
 
-But when you've got an AI that's been *trained to parse systems*, cross-check regulations, format letters, anticipate next steps, and even suggest alternatives — it doesn't just save time. It saves *sanity*.
+But when you've got an AI that's been *trained to parse systems*, cross-check regulations, format letters, anticipate next steps, and even suggest alternatives — it doesn't just save time. It saves *sanity*. In health especially, our guide on [how to use AI tools safely for health questions](/guides/how-to-use-ai-for-health-questions) shows how to apply that same methodical approach.
 
 No panic. No vague reassurance. Just:
 
@@ -127,5 +127,13 @@ We just need it to *hold the line* when we can't.
 
 In a world that's fraying at the edges — where systems are buckling and institutions gaslight you into thinking *you're the problem* — that quiet, steady hand is more than a convenience.
 
-It's a weapon.  
+It's a weapon.
 And used right, it's one hell of an ally.
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [How to Use AI Tools Safely for Health Questions](/guides/how-to-use-ai-for-health-questions)
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)

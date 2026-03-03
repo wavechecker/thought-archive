@@ -51,7 +51,7 @@ While the **American Academy of Pediatrics (AAP)** now recommends vaccination fo
 - **AAP (U.S.)**: Recommends vaccination for all children 6–23 months.  
 - **ATAGI (Australia)**: Advises against vaccination for healthy children under 18.  
 
-This divergence highlights a growing global reality: there is **no longer a unified consensus** on how to handle pediatric COVID-19 vaccination.
+This divergence highlights a growing global reality: there is **no longer a unified consensus** on how to handle pediatric COVID-19 vaccination. For a deeper look at the underlying vaccine science, our guide on [COVID-19 vaccines — what we know and what we don't](/guides/covid-19-vaccines) provides useful context.
 
 ---
 
@@ -62,3 +62,11 @@ This divergence highlights a growing global reality: there is **no longer a unif
 - [NCIRS March 2025 Update](https://ncirs.org.au/sites/default/files/2025-04/COVID-19_March%202025_0.pdf)  
 - [SEMPHN: COVID-19 Vaccine Recommendations 2025](https://www.semphn.org.au/important-updates-to-the-covid-19-vaccine%20recommendations-for-2025)  
 - [The Australian: Vaccination Rates and Trust Decline](https://www.theaustralian.com.au/inquirer/australian-vaccination-rates-and-trust-slide-after-covid/news-story/5654f426d3198e1573749eed72b5ce7b)
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [COVID-19 Vaccines: What We Know, What We Don't](/guides/covid-19-vaccines)
+- [Vaccination Overview](/guides/vaccination-overview)

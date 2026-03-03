@@ -10,7 +10,7 @@ tags: ["COVID-19", "Vaccines", "RFK Jr.", "AAP", "CDC", "Wikipedia Draft"]
 
 # AAP–CDC COVID-19 Vaccination Guidance Dispute (2025)
 
-In August 2025, the **American Academy of Pediatrics (AAP)** recommended routine COVID-19 vaccination for children aged 6 months to 2 years, diverging from the **Centers for Disease Control and Prevention (CDC)**, which supported "shared decision-making" between parents and physicians. [source]
+In August 2025, the **American Academy of Pediatrics (AAP)** recommended routine [COVID-19 vaccination](/guides/covid-19-vaccines) for children aged 6 months to 2 years, diverging from the **Centers for Disease Control and Prevention (CDC)**, which supported "shared decision-making" between parents and physicians. [source]
 
 Following the announcement, **Health and Human Services Secretary Robert F. Kennedy Jr.** stated that liability protections under the **1986 Vaccine Injury Act** might not extend to physicians who follow AAP recommendations instead of CDC guidance. [source]
 
@@ -24,3 +24,11 @@ Legal scholars including **Dorit Reiss (UCSF)** and **Anna Kirkland (University 
 ## Reception
 
 The AAP defended its independence, stating that its immunization recommendations were rooted in peer-reviewed science. [source]
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [COVID-19 Vaccines: What We Know, What We Don't](/guides/covid-19-vaccines)
+- [mRNA Vaccines](/guides/mrna-vaccines)

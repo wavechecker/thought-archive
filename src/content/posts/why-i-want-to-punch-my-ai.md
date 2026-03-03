@@ -114,8 +114,8 @@ It's like having a mechanic who either tightens your brakes or replaces them wit
 
 ## Don't Trust. Verify.
 
-Use AI. Leverage it. Get what you can.  
-But remember: this thing is *not your teammate*. It's a sketchpad that talks too much.
+Use AI. Leverage it. Get what you can.
+But remember: this thing is *not your teammate*. It's a sketchpad that talks too much. Nowhere is that verification instinct more critical than in healthcare — our guide on [how to use AI tools safely for health questions](/guides/how-to-use-ai-for-health-questions) spells out what responsible use actually looks like.
 
 If you wouldn't let your overly eager intern make legal or financial decisions — don't let AI do it either.
 
@@ -174,6 +174,14 @@ Not yet.
 Not until it figures out how to *live in the real world* — like the rest of us.
 
 ---
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [How to Use AI Tools Safely for Health Questions](/guides/how-to-use-ai-for-health-questions)
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)
 
 ## 💬 Got Your Own AI Horror Story?
 

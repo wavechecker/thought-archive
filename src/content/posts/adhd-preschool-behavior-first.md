@@ -24,7 +24,7 @@ A large study published in *JAMA Network Open* (2025) found that nearly **70% of
 ## Why This Matters
 Early medication may bypass effective non-drug options that build long-term skills. Behavioral approaches help children learn self-regulation and social skills, while medication mainly manages symptoms.  
 
-Researchers also highlight concerns about access: many families face barriers to behavioral therapy, including cost, waitlists, and lack of local programs. These gaps often lead to medication as the faster, more available option.
+Researchers also highlight concerns about access: many families face barriers to behavioral therapy, including cost, waitlists, and lack of local programs. These gaps often lead to medication as the faster, more available option. It's also worth noting that [ADHD and autism spectrum conditions can overlap in preschoolers](/guides/autism-vs-adhd), and distinguishing them early matters for the right intervention path.
 
 ## Recommended First-Line Strategies
 - **Parent Training in Behavior Management**  
@@ -49,6 +49,14 @@ Medication has a role in managing ADHD, but in preschoolers, it should come **af
 
 ## Related Reading
 - *Opinion:* [Medicating Boyhood — ADHD, Preschoolers, and the Silent War on Boys](https://medium.com/@WaveChecker) — A cultural perspective on what early ADHD medication says about society.
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [ADHD in Preschoolers — Why Behavioral Support Comes Before Medication](/guides/adhd-preschool-behavior-first)
+- [Autism vs ADHD: How to Tell the Difference](/guides/autism-vs-adhd)
 
 ---
 

@@ -32,7 +32,7 @@ Can both be valid? Of course. But **why only one is given the benefit of the dou
 
 This isn't a call to discard progress. Women have had to fight hard for a seat at the table. But real equality shouldn't require that we now treat every expression of traditional masculinity as a threat.
 
-There's a growing number of men - maybe like me, maybe not - who are craving something grounded. A structure. A purpose. A code. Not because they want to dominate others, but because the endless ambiguity of modern life isn't working. They're not seeking power. They're seeking meaning.
+There's a growing number of men - maybe like me, maybe not - who are craving something grounded. A structure. A purpose. A code. Not because they want to dominate others, but because the endless ambiguity of modern life isn't working. They're not seeking power. They're seeking meaning. The links between identity, purpose, and [mental health](/guides/mental-health) are well-documented — and worth understanding for anyone navigating this transition.
 
 And for that, they're often ridiculed, ignored, or silenced.
 
@@ -47,3 +47,10 @@ And I truly believe the way forward is through **dialogue** - honest, open, some
 Not a misogynist. Not a victim.
 
 Just a man with questions. And I think it's okay to ask them.
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [Mental Health — Guide Hub](/guides/mental-health)

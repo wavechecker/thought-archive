@@ -70,14 +70,14 @@ You don't need to move to a monastery. But you do need to build friction into yo
 - Unfollow anyone who's just shouting into the void.  
 - And for the love of whatever god you believe in, turn off notifications.
 
-**Most importantly?**  
-Learn to do nothing again.  
-Sit. Breathe. Think.  
-Be bored long enough for your real thoughts to bubble up.
+**Most importantly?**
+Learn to do nothing again.
+Sit. Breathe. Think.
+Be bored long enough for your real thoughts to bubble up. The evidence behind [mindfulness and stress reduction](/guides/mindfulness) shows these aren't just lifestyle tips — they're measurable interventions for attention and cognitive recovery.
 
 Because here's the truth:
 
-> You're not addicted to distraction.  
+> You're not addicted to distraction.
 > You're disconnected from purpose.
 
 ---
@@ -92,5 +92,13 @@ But you can't automate meaning.
 You can't outsource clarity.  
 You can't hack your way back into presence.
 
-That part? That's yours.  
+That part? That's yours.
 You have to earn it back, one undistracted moment at a time.
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [Mindfulness and Stress Reduction](/guides/mindfulness)
+- [Sleep and Mental Health](/guides/sleep)

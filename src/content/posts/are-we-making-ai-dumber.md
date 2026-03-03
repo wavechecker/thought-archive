@@ -46,7 +46,7 @@ The other trick is harder: get better at asking. Which means *I* need to learn m
 ### Why this matters for the future of AI (and us)  
 I suspect the real story of AI's future—its success, failure, or world domination—won't be just about the technology. It'll be about the synergy between humans and machines.  
 
-If we learn to work together well, freeing the human mind from lower-level tasks so it can focus on higher-order thinking, there's a chance for something remarkable: a leap in human achievement unlike anything in history.  
+If we learn to work together well, freeing the human mind from lower-level tasks so it can focus on higher-order thinking, there's a chance for something remarkable: a leap in human achievement unlike anything in history. In health especially, knowing [how to evaluate medical claims in the age of AI](/guides/how-to-evaluate-medical-claims-age-of-ai) is already a critical skill — and one that demands sharper human judgment, not less.
 
 But if we keep asking badly-formed questions and accepting mediocre answers, we might just train our own tools into mediocrity. Worse still, we might train *ourselves* into relying on mediocrity.  
 
@@ -68,5 +68,13 @@ It's a strange thought: we could be feeding it an endless buffet of low-quality 
 The most exciting—and maybe the scariest—prospect is this:  
 The quality of AI will mirror the quality of the humans using it.  
 
-So maybe the real question isn't: *Is AI getting dumber?*  
-It's: *Are we getting smarter with it?*  
+So maybe the real question isn't: *Is AI getting dumber?*
+It's: *Are we getting smarter with it?*
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)
+- [How to Evaluate Medical Claims in the Age of AI](/guides/how-to-evaluate-medical-claims-age-of-ai)

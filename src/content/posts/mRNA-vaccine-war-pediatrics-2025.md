@@ -20,7 +20,7 @@ It doesn't sound like much, but in practice it's a split between two of the most
 ## Why the AAP is pushing
 
 - **Burden of disease:** Infants have consistently had the highest COVID-19 hospitalization rates of any pediatric age group. Kids 6–23 months are still more likely to end up in hospital than school-age children.  
-- **Updated formulation:** The 2025–26 vaccines are tuned to the JN.1 lineage, which has dominated circulation. The argument is that a better-matched shot will mean better protection.  
+- **Updated formulation:** The 2025–26 vaccines are tuned to the JN.1 lineage, which has dominated circulation. The argument is that a better-matched shot will mean better protection. For a primer on how [mRNA vaccines](/guides/mrna-vaccines) work and what the evidence shows, our guide covers the key points clearly.
 - **Safety data:** In the youngest age bands, post-vaccine myocarditis has been virtually absent in U.S. surveillance data, while hospitalizations from COVID itself remain real. For teenagers, the myocarditis question still lingers, but not so for toddlers.  
 
 ---
@@ -52,3 +52,11 @@ If you are weighing a dose for your child this fall, you are stuck between two t
 2. The risk of serious vaccine side-effects in that age band is **even lower, but data are thinner**.  
 
 That's the uncomfortable balance. What's new is that the institutions telling you what to do no longer agree with each other.
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [mRNA Vaccines](/guides/mrna-vaccines)
+- [COVID-19 Vaccines: What We Know, What We Don't](/guides/covid-19-vaccines)

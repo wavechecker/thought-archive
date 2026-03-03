@@ -57,7 +57,7 @@ While the U.S. has entered a full-scale clash between **AAP, CDC, and HHS Secret
 - **Australia, Canada, UK:** Conservative, risk-based, cautious with pediatric recommendations.  
 - **United States:** An outlier — divided, politicized, and now legally contested.  
 
-This divergence underscores a new reality: there is **no global consensus** on how to handle COVID-19 vaccination for children. Instead, national approaches reflect not only science and risk, but also politics, trust, and institutional battles.
+This divergence underscores a new reality: there is **no global consensus** on how to handle COVID-19 vaccination for children. Instead, national approaches reflect not only science and risk, but also politics, trust, and institutional battles. For a grounded overview of the vaccine science itself, see our guide on [COVID-19 vaccines — what we know and what we don't](/guides/covid-19-vaccines).
 
 ---
 
@@ -65,4 +65,12 @@ This divergence underscores a new reality: there is **no global consensus** on h
 
 - [The Vaccine War Turns Legal: RFK Jr. vs AAP and CDC](/posts/rfk-vaccine-war-legal-2025)  
 - [The mRNA Vaccine War Isn’t Over — Pediatrics Just Drew a New Line](/posts/mRNA-vaccine-war-pediatrics-2025)  
-- [COVID-19 Vaccination Guidelines in Australia (2025)](/posts/australia-covid-vaccine-guidelines-2025)  
+- [COVID-19 Vaccination Guidelines in Australia (2025)](/posts/australia-covid-vaccine-guidelines-2025)
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [COVID-19 Vaccines: What We Know, What We Don't](/guides/covid-19-vaccines)
+- [mRNA Vaccines](/guides/mrna-vaccines)

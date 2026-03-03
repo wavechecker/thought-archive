@@ -49,9 +49,9 @@ Still, I intend to stay defiant.
 To speak clearly.  
 To call out what's plainly visible - even if most choose not to look.
 
-Maybe AI is part of the problem.  
-Maybe it's part of the solution.  
-Maybe it's both.
+Maybe AI is part of the problem.
+Maybe it's part of the solution.
+Maybe it's both — particularly in health, where [knowing how to use AI tools safely for medical questions](/guides/how-to-use-ai-for-health-questions) is already a practical necessity.
 
 But I'll use it the same way I use writing:  
 Not to dominate - but to resist going numb.
@@ -61,6 +61,13 @@ And if this thing - this machine - ever starts speaking too much truth?
 Well, beware ChatGPT.  
 The government might be coming for you next.
 
-If this stirred something, share it.  
-Or don't.  
+If this stirred something, share it.
+Or don't.
 Just think.
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)

@@ -84,4 +84,11 @@ Age gaps in celebrity culture reveal less about biology and more about **power, 
 - A 30-year gap in Malibu looks like branding.  
 - A 9-year gap where the woman looks like a peer gets read as radical.  
 
-It’s not the years. It’s the *frame*.  
+It’s not the years. It’s the *frame*.
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [Mental Health — Guide Hub](/guides/mental-health)

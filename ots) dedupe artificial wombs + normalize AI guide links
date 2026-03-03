@@ -1,0 +1,27 @@
+ src/content/posts/AI-Isnt-Smarter-Than-You.md      |  12 [32m+[m[31m-[m
+ src/content/posts/adhd-preschool-behavior-first.md |  10 [32m+[m[31m-[m
+ ...ardrails-critical-infrastructure-governance.mdx |  22 [32m+++[m[31m-[m
+ .../posts/ai-second-birth-of-the-internet.md       |  11 [32m+[m[31m-[m
+ src/content/posts/are-we-making-ai-dumber.md       |  14 [32m+[m[31m-[m
+ .../australia-covid-vaccine-guidelines-2025.md     |  10 [32m+[m[31m-[m
+ .../china-pregnancy-robot-artificial-wombs.md      | 141 [32m+++++++++++[m[31m----------[m
+ .../posts/china-races-towards-artificial-wombs.md  |  51 [32m+[m[31m-------[m
+ src/content/posts/dangers-of-strict-keto-diet.mdx  |  12 [32m+[m[31m-[m
+ .../posts/from-demonization-to-diagnosis.mdx       |   8 [32m+[m[31m-[m
+ .../posts/global-covid-vaccine-guidance-2025.md    |  12 [32m+[m[31m-[m
+ .../posts/mRNA-vaccine-war-pediatrics-2025.md      |  10 [32m+[m[31m-[m
+ src/content/posts/not-a-misogynist.md              |   9 [32m+[m[31m-[m
+ ...a-when-disciplined-eating-gets-pathologised.mdx |  12 [32m+[m[31m-[m
+ src/content/posts/rfk-mmr-update.mdx               |  14 [32m+[m[31m-[m
+ src/content/posts/sliding_scale_age_gaps.md        |   9 [32m+[m[31m-[m
+ src/content/posts/the-agi-control-paradox.md       |   4 [32m+[m[31m-[m
+ src/content/posts/the-kind-of-ai-i-want-to-see.md  |  10 [32m+[m[31m-[m
+ src/content/posts/the-war-on-attention.md          |  20 [32m++[m[31m-[m
+ src/content/posts/us-leaves-who-what-it-means.mdx  |  12 [32m+[m[31m-[m
+ .../posts/us-vaccines-update-measles-2026.mdx      |  10 [32m+[m[31m-[m
+ src/content/posts/what-writing-is-for.md           |  17 [32m++[m[31m-[m
+ src/content/posts/when-ai-gets-real.md             |  12 [32m+[m[31m-[m
+ src/content/posts/why-i-want-to-punch-my-ai.md     |  12 [32m+[m[31m-[m
+ ...y-natural-testosterone-optimisation-matters.mdx |  10 [32m+[m[31m-[m
+ src/content/posts/wiki-draft-rfk-vaccine-2025.md   |  10 [32m+[m[31m-[m
+ 26 files changed, 308 insertions(+), 166 deletions(-)

@@ -14,7 +14,7 @@ When people talk about artificial intelligence today, the focus is often on extr
 
 Because we're not just training algorithms. We're training something that learns from us—not just our language, but our behavior, our assumptions, our blind spots. And what it becomes depends on what we give it.
 
-Right now, AI reflects a lot of the world we live in. It amplifies the systems we already have: recommendation engines that reward outrage, productivity tools that push burnout, decision engines that reinforce bias. It's a mirror, but sharper. Faster. Less forgiving.
+Right now, AI reflects a lot of the world we live in. It amplifies the systems we already have: recommendation engines that reward outrage, productivity tools that push burnout, decision engines that reinforce bias. It's a mirror, but sharper. Faster. Less forgiving. In healthcare, that reflection is already visible — [AI in Healthcare: What Patients Should Know](/guides/ai-in-healthcare) explores what responsible deployment looks like in clinical settings.
 
 And so the stakes couldn't be higher. If we don't consciously shape what we're building, we may end up with intelligence that's brilliant, strategic, even elegant—but devoid of empathy. 
 
@@ -59,3 +59,11 @@ That what comes next is not just smart—but wise.
 ---
 
 **Tags:** Artificial Intelligence, Humanism, AGI Ethics, Future of Technology, Philosophy of AI
+
+---
+
+## Further Reading
+
+If you want a structured overview of this topic:
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)
+- [AI in Healthcare: What Patients Should Know](/guides/ai-in-healthcare)
