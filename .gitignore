@@ -44,3 +44,6 @@ build.log
 # local mdx maintenance scripts
 find-imports-in-fm.js
 fix-imports-in-fm.js
+
+# Orchestrator runtime state
+tools/orchestrator/state/

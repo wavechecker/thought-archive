@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/Layout.astro"
 title: "Sick-Day Checklist for Type 1 Diabetes"
 slug: "sick-day-checklist-type1-diabetes"
 description: "A quick-reference checklist for managing Type 1 diabetes during illness, including core rules, fluids, insulin adjustments, and red flags."

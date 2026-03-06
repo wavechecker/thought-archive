@@ -1,0 +1,9 @@
+{
+  "repo_path": "C:/Users/kxcon/thought-archive",
+  "branch": "main",
+  "build_command": "npm run build",
+  "deploy_mode": "build_hook",
+  "netlify_build_hook_url": "",
+  "claude_command": "C:/Users/kxcon/AppData/Roaming/npm/claude.cmd",
+  "require_user_approval_for_deploy": true
+}
