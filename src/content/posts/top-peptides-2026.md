@@ -7,9 +7,8 @@ publishDate: "2026-03-09"
 updatedDate: "2026-03-09"
 tags: ["analysis", "longevity", "biotech", "metabolism"]
 related:
-
-* /guides/peptide-therapy
-  draft: false
+  - /guides/peptide-therapy
+draft: false
 
 ---
 
