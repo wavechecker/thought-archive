@@ -60,7 +60,7 @@ Clinical trials have shown substantial weight reduction in many patients.
 
 ---
 
-### Tirzepatide
+### [Tirzepatide](/guides/tirzepatide/)
 
 Tirzepatide activates both **GLP-1 and GIP receptors**.
 
@@ -145,5 +145,5 @@ A: They represent one of the first treatments that can produce significant, sust
 
 ## Related Guides
 
-* [/guides/peptide-therapy](/guides/peptide-therapy)
-* [/guides/muscle-preservation-glp-1](/guides/muscle-preservation-glp-1)
+* [Peptide Therapy](/guides/peptide-therapy/)
+* [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp-1/)

@@ -23,7 +23,7 @@ Some peptides are fully approved medications used by millions of patients. Other
 Understanding the difference between these compounds is increasingly important.
 
 For a full overview, see our guide:
-→ **[/guides/peptide-therapy](/guides/peptide-therapy)**
+→ **[Peptide Therapy: What It Is, How It Works, and Safety Considerations](/guides/peptide-therapy/)**
 
 Here are ten peptides driving the biggest conversations in 2026.
 
@@ -38,7 +38,7 @@ It mimics the hormone **GLP-1**, which regulates appetite, insulin secretion, an
 Originally developed for diabetes, semaglutide has transformed obesity treatment and sparked huge interest in peptide-based drugs.
 
 Learn more:
-→ **[/guides/glp-1-weight-loss-drugs](/guides/glp-1-weight-loss-drugs)**
+→ **[GLP-1 Weight Loss Drugs: Benefits, Risks, and What to Know](/guides/glp-1-weight-loss-drugs/)**
 
 ---
 
@@ -50,6 +50,9 @@ It activates both **GLP-1 and GIP receptors**, improving blood sugar control and
 
 These dual-action peptide drugs may represent the future of metabolic medicine.
 
+Learn more:
+→ **[Tirzepatide: How It Works, Approved Uses, and What the Evidence Shows](/guides/tirzepatide/)**
+
 ---
 
 ## 3. Tesamorelin
@@ -60,8 +63,8 @@ It is approved for treating **HIV-associated lipodystrophy**, a condition involv
 
 Some longevity clinics also study its effects on **visceral fat and metabolic health**.
 
-Future guide:
-→ **/guides/tesamorelin**
+Read more:
+→ **[Tesamorelin](/guides/tesamorelin/)**
 
 ---
 
@@ -71,8 +74,8 @@ Sermorelin stimulates the natural release of growth hormone from the pituitary g
 
 Some clinics promote it as a **more physiologic alternative to growth hormone injections**, although evidence and regulatory status vary by country.
 
-Future guide:
-→ **/guides/sermorelin**
+Read more:
+→ **[Sermorelin](/guides/sermorelin/)**
 
 ---
 
@@ -84,8 +87,8 @@ These peptides stimulate growth hormone release through a different pathway than
 
 Researchers are studying potential roles in metabolism and muscle preservation.
 
-Future guide:
-→ **/guides/ipamorelin**
+Read more:
+→ **[Ipamorelin: Uses, Mechanism, and What the Evidence Shows](/guides/ipamorelin/)**
 
 ---
 
@@ -98,7 +101,7 @@ It is frequently promoted for **tissue repair, injury recovery, and gut healing*
 However, strong clinical trials in humans remain limited, and regulatory approval is lacking in many countries.
 
 Learn more:
-→ **/guides/bpc-157**
+→ **[BPC-157](/guides/bpc-157/)**
 
 ---
 
@@ -114,6 +117,9 @@ Researchers are investigating whether it could help with:
 
 Clinical research is ongoing.
 
+Read more:
+→ **[Thymosin Beta-4: What It Is and What the Evidence Shows](/guides/thymosin-beta-4/)**
+
 ---
 
 ## 8. CJC-1295
@@ -123,6 +129,9 @@ CJC-1295 is a synthetic peptide designed to stimulate growth hormone release ove
 It is sometimes combined with other peptides in experimental hormone-optimization protocols.
 
 Evidence remains limited outside research contexts.
+
+Read more:
+→ **[CJC-1295: Uses, Mechanism, and What the Evidence Shows](/guides/cjc-1295/)**
 
 ---
 
@@ -240,7 +249,7 @@ A: Many researchers believe peptide drugs will play an increasingly important ro
 
 ## Further Reading
 
-* [/guides/peptide-therapy](/guides/peptide-therapy)
+* [Peptide Therapy: What It Is, How It Works, and Safety Considerations](/guides/peptide-therapy/)
 * https://www.fda.gov/drugs
 * https://www.nature.com/subjects/peptides
 

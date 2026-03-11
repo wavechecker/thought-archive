@@ -22,6 +22,23 @@ Understanding how peptide therapies work — and how they are regulated — is i
 
 ---
 
+## Browse Peptide Guides
+
+Detailed guides are available for specific peptide therapies:
+
+- [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs/)
+- [Tirzepatide](/guides/tirzepatide/)
+- [Sermorelin](/guides/sermorelin/)
+- [Tesamorelin](/guides/tesamorelin/)
+- [BPC-157](/guides/bpc-157/)
+- [CJC-1295](/guides/cjc-1295/)
+- [Ipamorelin](/guides/ipamorelin/)
+- [Thymosin Beta-4](/guides/thymosin-beta-4/)
+
+Additional peptide guides are being added over time.
+
+---
+
 ## Key Points
 
 * Peptides are **short chains of amino acids** that act as signaling molecules in the body.
@@ -75,8 +92,9 @@ Some peptides stimulate the body to release growth hormone.
 
 Examples include:
 
-* sermorelin
-* tesamorelin
+* [Sermorelin](/guides/sermorelin/)
+* [Tesamorelin](/guides/tesamorelin/)
+* [Ipamorelin](/guides/ipamorelin/)
 
 These peptides influence metabolism, body composition, and hormone signaling.
 
@@ -88,8 +106,8 @@ Some peptides are still being studied and may be discussed in sports medicine or
 
 Examples include:
 
-* BPC-157
-* thymosin beta-4
+* [BPC-157](/guides/bpc-157/)
+* [Thymosin Beta-4](/guides/thymosin-beta-4/)
 
 Clinical evidence for many experimental peptides remains limited.
 
@@ -179,6 +197,10 @@ A: Peptide drugs are used for conditions including diabetes, hormone deficiencie
 
 ## Related Guides
 
-* [/guides/bpc-157](/guides/bpc-157)
-* [/guides/sermorelin](/guides/sermorelin)
-* [/guides/tesamorelin](/guides/tesamorelin)
+* [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs/)
+* [Sermorelin](/guides/sermorelin/)
+* [Tesamorelin](/guides/tesamorelin/)
+* [BPC-157: Benefits, Risks, and What the Evidence Shows](/guides/bpc-157/)
+* [CJC-1295](/guides/cjc-1295/)
+* [Ipamorelin](/guides/ipamorelin/)
+* [Thymosin Beta-4](/guides/thymosin-beta-4/)
