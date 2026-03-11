@@ -29,6 +29,18 @@ Here are ten peptides driving the biggest conversations in 2026.
 
 ---
 
+## How These Peptides Are Used in Medicine and Research
+
+Peptide drugs fall into several broad categories, and the compounds below span all of them.
+
+**Metabolic and weight-management peptides** are the most established, with several holding regulatory approval for diabetes and obesity. **Growth hormone–related peptides** include approved drugs alongside experimental compounds used in longevity and hormone-optimization contexts. **Experimental and research peptides** are compounds where clinical evidence is limited, regulatory approval is absent in most countries, and use is largely confined to research settings, compounding pharmacies, or peptide clinics.
+
+Evidence levels vary significantly across these categories. The entries below reflect that range.
+
+---
+
+### Metabolic Peptide Drugs
+
 ## 1. Semaglutide
 
 Semaglutide became globally famous as a weight-loss medication.
@@ -54,6 +66,8 @@ Learn more:
 → **[Tirzepatide: How It Works, Approved Uses, and What the Evidence Shows](/guides/tirzepatide/)**
 
 ---
+
+### Growth Hormone–Related Peptides
 
 ## 3. Tesamorelin
 
@@ -91,6 +105,8 @@ Read more:
 → **[Ipamorelin: Uses, Mechanism, and What the Evidence Shows](/guides/ipamorelin/)**
 
 ---
+
+### Experimental / Research Peptides
 
 ## 6. BPC-157
 
@@ -152,20 +168,13 @@ Learn more:
 
 ---
 
-## 10. Oxytocin
+## 10. AOD-9604
 
-Oxytocin is best known as the **“bonding hormone.”**
+AOD-9604 is a **modified fragment of human growth hormone** that has been studied for its potential effects on fat metabolism.
 
-It plays roles in:
+Early research suggested it might influence **lipolysis** — the breakdown of stored fat — without triggering the broader hormonal effects associated with full growth hormone administration.
 
-* childbirth
-* social bonding
-* emotional regulation
-
-Researchers are also investigating whether oxytocin may influence **mental health, metabolism, and stress responses**.
-
-Learn more:
-→ **[Oxytocin: Established Uses and Evolving Research](/guides/oxytocin/)**
+It has attracted attention in **weight-loss and peptide-therapy discussions**, but clinical evidence remains limited and regulatory approval is lacking in most jurisdictions.
 
 ---
 
