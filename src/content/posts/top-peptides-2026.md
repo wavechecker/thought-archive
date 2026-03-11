@@ -147,6 +147,9 @@ Scientists are studying whether it may influence:
 
 Mitochondrial peptides could represent a new frontier in metabolic medicine.
 
+Learn more:
+→ **[MOTS-c: What It Is and What the Evidence Shows](/guides/mots-c/)**
+
 ---
 
 ## 10. Oxytocin
@@ -160,6 +163,9 @@ It plays roles in:
 * emotional regulation
 
 Researchers are also investigating whether oxytocin may influence **mental health, metabolism, and stress responses**.
+
+Learn more:
+→ **[Oxytocin: Established Uses and Evolving Research](/guides/oxytocin/)**
 
 ---
 
