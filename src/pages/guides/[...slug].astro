@@ -142,7 +142,7 @@ const faqLd = faqPairs.length
   : null;
 // ---------------------------------------------------------------------------
 
-// Conservative tag → MedicalCondition mapping
+// Conservative tag → MedicalCondition mapping (fallback for guides without frontmatter schema)
 const CONDITION_TAG_MAP: Array<{ match: string[]; name: string }> = [
   { match: ["alzheimers disease", "alzheimer's disease"], name: "Alzheimer's disease" },
   { match: ["parkinsons disease"], name: "Parkinson's disease" },
@@ -152,10 +152,31 @@ const tagsLower = (Array.isArray(tags) ? tags : []).map((t: string) => t.toLower
 const matchedCondition =
   CONDITION_TAG_MAP.find(({ match }) => match.some((m) => tagsLower.includes(m)))?.name ?? null;
 
+// Prefer rich frontmatter schema.medicalCondition; fall back to tag-based name lookup
+const rawMedicalCondition = entry.data.schema?.medicalCondition;
+const medicalConditionEntry: object | null = rawMedicalCondition?.name
+  ? {
+      "@type": "MedicalCondition",
+      name: rawMedicalCondition.name,
+      ...(rawMedicalCondition.description ? { description: rawMedicalCondition.description } : {}),
+      ...(rawMedicalCondition.alternateName?.length ? { alternateName: rawMedicalCondition.alternateName } : {}),
+      ...(rawMedicalCondition.riskFactors?.length
+        ? { riskFactor: rawMedicalCondition.riskFactors.map((r) => ({ "@type": "MedicalRiskFactor", name: r })) }
+        : {}),
+      ...(rawMedicalCondition.symptoms?.length
+        ? { signOrSymptom: rawMedicalCondition.symptoms.map((s) => ({ "@type": "MedicalSymptom", name: s })) }
+        : {}),
+      ...(rawMedicalCondition.possibleComplication?.length ? { possibleComplication: rawMedicalCondition.possibleComplication } : {}),
+      ...(rawMedicalCondition.sameAs?.length ? { sameAs: rawMedicalCondition.sameAs } : {}),
+    }
+  : matchedCondition
+  ? { "@type": "MedicalCondition", name: matchedCondition }
+  : null;
+
 // Build about field: one object, array of two, or absent
 const aboutEntries: object[] = [
   ...(category ? [{ "@type": "MedicalSpecialty", name: category }] : []),
-  ...(matchedCondition ? [{ "@type": "MedicalCondition", name: matchedCondition }] : []),
+  ...(medicalConditionEntry ? [medicalConditionEntry] : []),
 ];
 const aboutField =
   aboutEntries.length === 0

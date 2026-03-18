@@ -4,6 +4,7 @@ import type { MDXComponents } from "mdx/types";
 // Real components you have
 import StratBox from "@/components/StratBox.astro";
 import EvidenceBox from "@/components/EvidenceBox.astro";
+import BreakoutBox from "@/components/BreakoutBox.astro";
 
 // Optional/legacy / used in some guides
 import Callout from "@/components/Callout.astro";
@@ -25,6 +26,7 @@ export const mdxComponents: MDXComponents = {
   // common
   StratBox,
   EvidenceBox,
+  BreakoutBox,
 
   // used in some older/newer guides
   Callout,

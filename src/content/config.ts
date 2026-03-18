@@ -46,6 +46,25 @@ const POST_CATEGORY = z.enum([
 ]);
 
 // -----------------------------
+// Structured data supplement (schema.org frontmatter)
+// Only MedicalCondition is used today; extend as needed.
+// -----------------------------
+const medicalConditionSchema = z.object({
+  name: z.string(),
+  description: z.string().optional(),
+  alternateName: z.array(z.string()).optional(),
+  riskFactors: z.array(z.string()).optional(),
+  symptoms: z.array(z.string()).optional(),
+  possibleComplication: z.array(z.string()).optional(),
+  contagious: z.boolean().optional(),
+  sameAs: z.array(z.string()).optional(),
+});
+
+const pageSchemaField = z
+  .object({ medicalCondition: medicalConditionSchema.optional() })
+  .optional();
+
+// -----------------------------
 // FAQ schema for structured data
 // Accepts both question/answer (legacy) and q/a (shorthand)
 // -----------------------------
@@ -94,6 +113,7 @@ const guides = defineCollection({
     summary: z.string().optional(),
     keyPoints: z.array(z.string()).optional(),
     hubKey: z.string().optional(),
+    schema: pageSchemaField,
   }),
 });
 
@@ -107,6 +127,7 @@ const posts = defineCollection({
     publishDate: isoDate,               // required
     category: POST_CATEGORY.optional(), // optional grouping
     related: z.array(z.string()).optional(),
+    schema: pageSchemaField,
   }),
 });
 
