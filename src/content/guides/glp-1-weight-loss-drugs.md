@@ -145,5 +145,6 @@ A: They represent one of the first treatments that can produce significant, sust
 
 ## Related Guides
 
+* [Ozempic and GLP-1 Weight Loss Drugs](/guides/ozempic-glp-1-guide/)
 * [Peptide Therapy](/guides/peptide-therapy/)
 * [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp-1/)
