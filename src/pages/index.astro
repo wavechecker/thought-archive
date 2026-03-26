@@ -81,7 +81,7 @@ const featuredHubs = getWeeklyFeaturedHubs(4);
 
       <div class="pg-list">
         {posts.map((p) => {
-          const href = `/posts/${safeSlug(p.slug)}`;
+          const href = `/posts/${safeSlug(p.slug)}/`;
           const title = p.data?.title ?? "(Untitled)";
           const desc = p.data?.description ?? "";
           const date = safeDate(p.data?.updatedDate ?? p.data?.publishDate);
