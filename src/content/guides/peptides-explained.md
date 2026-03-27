@@ -31,19 +31,19 @@ This guide breaks them down in plain English — what they do, how they work, an
 
 ## At a Glance: Common Peptides Explained
 
-| Peptide | What it does (simple) | Main use | Evidence level |
-|--------|----------------------|---------|---------------|
-| **GLP-1 (semaglutide, tirzepatide)** | Reduces appetite, improves blood sugar | Weight loss, diabetes | ✅ Strong |
-| **BPC-157** | May support tissue and gut healing | Injury, recovery | ⚠️ Limited human data |
-| **TB-500 (Thymosin Beta-4)** | Promotes cell repair and regeneration | Muscle recovery | ⚠️ Limited |
-| **CJC-1295** | Stimulates growth hormone release | Body composition | ⚠️ Limited |
-| **Ipamorelin** | Triggers growth hormone pulses | Recovery, anti-aging | ⚠️ Limited |
-| **MOTS-c** | Regulates cellular energy (mitochondria) | Metabolism, longevity | ⚠️ Early-stage |
-| **Epitalon** | Linked to aging/telomere research | Longevity | ⚠️ Very limited |
-| **Semax** | Affects brain signaling and focus | Cognitive enhancement | ⚠️ Limited |
-| **Selank** | May influence anxiety pathways | Mood, anxiety | ⚠️ Limited |
-| **Kisspeptin-10** | Regulates reproductive hormones | Fertility research | ⚠️ Limited |
-| **Melanotan II** | Stimulates skin pigmentation | Tanning | ❌ Safety concerns |
+| Peptide | Full Name | What it does | Use | Evidence |
+|--------|----------|--------------|-----|----------|
+| GLP-1 | Glucagon-Like Peptide-1 | Appetite + glucose control | Weight loss | Strong |
+| BPC-157 | Body Protection Compound-157 | Tissue healing | Injury | Limited |
+| TB-500 | Thymosin Beta-4 (fragment) | Cell repair | Recovery | Limited |
+| CJC-1295 | Growth Hormone Releasing Hormone analogue | GH release | Body comp | Limited |
+| Ipamorelin | Ghrelin receptor agonist peptide | GH pulses | Recovery | Limited |
+| MOTS-c | Mitochondrial Open Reading Frame of the 12S rRNA-c | Energy metabolism | Longevity | Early |
+| Epitalon | Ala-Glu-Asp-Gly peptide (synthetic tetrapeptide) | Aging research | Longevity | Very limited |
+| Semax | ACTH(4–10) analogue | Brain signaling | Focus | Limited |
+| Selank | Tuftsin analogue peptide | Anxiety modulation | Mood | Limited |
+| Kisspeptin-10 | Kisspeptin fragment (KISS1 gene product) | Reproductive hormones | Fertility | Limited |
+| Melanotan II | Synthetic melanocortin analogue | Pigmentation | Tanning | Risk |
 
 ---
 
