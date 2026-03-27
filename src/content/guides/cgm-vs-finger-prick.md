@@ -199,10 +199,10 @@ A: Yes. Tracking glucose responses to different meals, exercise, sleep, and stre
 ---
 
 ## Related Guides
-- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)
-- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration/)
-- [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions/)
-- [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c/)
+- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing)
+- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration)
+- [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions)
+- [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c)
 - [Prediabetes: Early Warning Signs and Prevention](/guides/prediabetes)
 - [Testing & Screening — Guide Hub](/guides/testing-and-screening)
 - [Diabetes — Guide Hub](/guides/diabetes-hub)

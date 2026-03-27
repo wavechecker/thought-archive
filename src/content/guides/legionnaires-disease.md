@@ -37,4 +37,4 @@ Legionnaires' disease is a **severe pneumonia** caused by *Legionella* bacteria.
 > This guide is for general information and isn't a substitute for professional medical advice. Seek emergency care for severe breathing difficulty, confusion, or chest pain.
 
 **Related Guides**
-- [Flu vs. Common Cold — How to Tell the Difference](/guides/flu-vs-cold-differences/)
+- [Flu vs. Common Cold — How to Tell the Difference](/guides/flu-vs-cold-differences)

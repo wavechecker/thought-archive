@@ -60,14 +60,14 @@ A: Gaps in maternal vaccination and unhygienic birth practices.
 - [ATAGI — Tetanus Recommendations](https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus)  
 
 ## Related Guides
-- [How Vaccines Work](/guides/how-vaccines-work/)  
-- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring/)  
-- [Vaccine Hesitancy](/guides/vaccine-hesitancy/)  
+- [How Vaccines Work](/guides/how-vaccines-work)  
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring)  
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)  
 
 ---
 
 ## Related Hub
-- [Vaccination — Guide Hub](/guides/vaccination/)  
+- [Vaccination — Guide Hub](/guides/vaccination)  
 
 *Last reviewed: August 29, 2025*
 

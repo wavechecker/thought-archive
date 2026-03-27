@@ -123,7 +123,7 @@ A: Growth hormone influences metabolic processes, but clinical outcomes vary and
 
 ## Related Guides
 
-- [Peptide Therapy](/guides/peptide-therapy/)
-- [CJC-1295](/guides/cjc-1295/)
-- [Tesamorelin](/guides/tesamorelin/)
-- [Ipamorelin](/guides/ipamorelin/)
+- [Peptide Therapy](/guides/peptide-therapy)
+- [CJC-1295](/guides/cjc-1295)
+- [Tesamorelin](/guides/tesamorelin)
+- [Ipamorelin](/guides/ipamorelin)

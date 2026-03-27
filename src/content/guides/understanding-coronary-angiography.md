@@ -65,9 +65,9 @@ Doctors may recommend angiography if you have:
 
 ## Related Guides
 
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)  
-- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications/)  
-- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease/)  
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)  
+- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)  
 
 ---
 

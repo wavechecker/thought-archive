@@ -65,14 +65,14 @@ A: Even in mismatch years, vaccination reduces severity, hospitalization, and co
 - [PubMed: Influenza vaccine effectiveness studies](https://pubmed.ncbi.nlm.nih.gov/?term=influenza+vaccine+effectiveness)  
 
 ## Related Guides
-- [How Vaccines Work](/guides/how-vaccines-work/)  
-- [Vaccine Hesitancy](/guides/vaccine-hesitancy/)  
-- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring/)  
+- [How Vaccines Work](/guides/how-vaccines-work)  
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)  
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring)  
 
 ---
 
 ## Related Hub
-- [Vaccination — Guide Hub](/guides/vaccination/)  
+- [Vaccination — Guide Hub](/guides/vaccination)  
 
 *Last reviewed: August 29, 2025*
 

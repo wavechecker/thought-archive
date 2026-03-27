@@ -21,7 +21,7 @@ But the market is changing.
 As peptide demand has exploded, U.S. regulators have begun tightening oversight — especially around compounded GLP-1 drugs, unapproved products marketed online, and clinic claims that blur the line between medicine and hype.
 
 For the broader medical overview, see:  
-→ **[Peptide Therapy: What It Is, How It Works, and Safety Considerations](/guides/peptide-therapy/)**
+→ **[Peptide Therapy: What It Is, How It Works, and Safety Considerations](/guides/peptide-therapy)**
 
 ---
 
@@ -199,8 +199,8 @@ A: No. Approved peptide medicines will remain important. What may change is acce
 
 ## Further Reading
 
-- [Peptide Therapy: What It Is, How It Works, and Safety Considerations](/guides/peptide-therapy/)
-- [10 Peptides Everyone Is Talking About in 2026](/posts/top-peptides-2026/)
+- [Peptide Therapy: What It Is, How It Works, and Safety Considerations](/guides/peptide-therapy)
+- [10 Peptides Everyone Is Talking About in 2026](/posts/top-peptides-2026)
 - https://www.fda.gov/drugs/human-drug-compounding
 - https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss
 

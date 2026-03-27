@@ -94,8 +94,8 @@ A: It’s **not prescribed** for primary prevention. Timing matters for risk; di
 - WHO: Menopause facts & healthy aging
 
 ## Related Guides
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)  
-- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/)  
-- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing/)
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography)  
+- [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing)
 
 _Last updated: 25 August 2025_

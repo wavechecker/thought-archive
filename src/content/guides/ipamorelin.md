@@ -37,9 +37,9 @@ Ipamorelin is a member of the **growth hormone releasing peptide (GHRP)** family
 
 Other peptides in this family include GHRP-2 and GHRP-6. Ipamorelin is considered more selective than these compounds because it stimulates growth hormone release with less effect on other hormones such as cortisol and prolactin.
 
-Ipamorelin is structurally distinct from [Sermorelin](/guides/sermorelin/) and [Tesamorelin](/guides/tesamorelin/), which mimic **growth hormone–releasing hormone (GHRH)**. Ipamorelin works through a different pathway — the ghrelin receptor — and the two mechanisms are sometimes combined in compounding pharmacy products.
+Ipamorelin is structurally distinct from [Sermorelin](/guides/sermorelin) and [Tesamorelin](/guides/tesamorelin), which mimic **growth hormone–releasing hormone (GHRH)**. Ipamorelin works through a different pathway — the ghrelin receptor — and the two mechanisms are sometimes combined in compounding pharmacy products.
 
-For a broader overview of peptide drug classes, see [Peptide Therapy](/guides/peptide-therapy/).
+For a broader overview of peptide drug classes, see [Peptide Therapy](/guides/peptide-therapy).
 
 ---
 
@@ -157,7 +157,7 @@ A: Products sold as research chemicals are not subject to the same manufacturing
 ---
 
 **Q: Can ipamorelin be combined with other peptides?**
-A: Some compounding pharmacies have combined ipamorelin with GHRH analogues such as [CJC-1295](/guides/cjc-1295/). However, combination products carry the same regulatory and evidence uncertainties as ipamorelin alone.
+A: Some compounding pharmacies have combined ipamorelin with GHRH analogues such as [CJC-1295](/guides/cjc-1295). However, combination products carry the same regulatory and evidence uncertainties as ipamorelin alone.
 
 ---
 
@@ -170,7 +170,7 @@ A: Some compounding pharmacies have combined ipamorelin with GHRH analogues such
 
 ## Related Guides
 
-- [Peptide Therapy](/guides/peptide-therapy/)
-- [CJC-1295](/guides/cjc-1295/)
-- [Sermorelin](/guides/sermorelin/)
-- [Tesamorelin](/guides/tesamorelin/)
+- [Peptide Therapy](/guides/peptide-therapy)
+- [CJC-1295](/guides/cjc-1295)
+- [Sermorelin](/guides/sermorelin)
+- [Tesamorelin](/guides/tesamorelin)

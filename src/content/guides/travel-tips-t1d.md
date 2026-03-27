@@ -80,7 +80,7 @@ Often not for short flights. For long-haul/time-zone shifts, follow your persona
 - Airline medical assistance pages for carrying sharps/meds
 
 ## Related Guides
-- [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise/)  
-- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia/)  
-- [Recognising Highs and Lows](/guides/recognising-highs-and-lows/)  
+- [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise)  
+- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia)  
+- [Recognising Highs and Lows](/guides/recognising-highs-and-lows)  
 

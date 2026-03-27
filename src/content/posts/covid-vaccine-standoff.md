@@ -56,6 +56,6 @@ And if patient safety keeps getting sidelined, the real casualty will be trust i
 In Leone’s films, someone always fires. The dust clears, and one figure walks away while the others lie in the plaza. For COVID, the question is: when the smoke lifts, will it be science, politics, or patient safety left standing? And what will that say about the world we’ve built?
 
 ## Further Reading
-- [/guides/evidence-first-covid-vaccine-policy](/guides/evidence-first-covid-vaccine-policy)  
+- [Evidence-First COVID Vaccine Policy](/guides/evidence-first-covid-vaccine-policy)  
 - [Trump and RFK Jr. to Ban COVID-19 Vaccine 'Within Months' — *Daily Beast*](https://www.thedailybeast.com/donald-trump-and-robert-f-kennedy-junior-to-ban-covid-19-vaccine-within-months)  
 - [America's leading physician groups are now openly defying RFK Jr. — *Vox*](https://www.vox.com/health/459226/rfk-jr-trump-covid-vaccine-ban)

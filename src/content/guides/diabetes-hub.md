@@ -68,13 +68,13 @@ This hub explains what separates the main types of diabetes, defines the core te
 
 The Diabetes cluster on PatientGuide is structured in three tiers:
 
-**1. Foundation Guides** — The two main diabetes types each have a comprehensive guide ([Type 1 Diabetes](/guides/type-1-diabetes/), [Type 2 Diabetes](/guides/type-2-diabetes/)) that covers biology, diagnosis, treatment, complications, and daily management. These are the definitive starting points for each condition.
+**1. Foundation Guides** — The two main diabetes types each have a comprehensive guide ([Type 1 Diabetes](/guides/type-1-diabetes), [Type 2 Diabetes](/guides/type-2-diabetes)) that covers biology, diagnosis, treatment, complications, and daily management. These are the definitive starting points for each condition.
 
 **2. Condition-Specific Detail** — A set of focused guides covers the clinical and practical sub-topics that matter most: blood glucose testing, HbA1c, insulin types, CGM, hypoglycaemia management, sick-day rules, exercise, school management, and travel. Each guide links back to the relevant type hub.
 
-**3. Adjacent Conditions** — [Prediabetes](/guides/prediabetes/), [Latent Autoimmune Diabetes (LADA)](/guides/latent-autoimmune-diabetes/), and [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents/) are covered in dedicated guides for those who fall outside the two main categories.
+**3. Adjacent Conditions** — [Prediabetes](/guides/prediabetes), [Latent Autoimmune Diabetes (LADA)](/guides/latent-autoimmune-diabetes), and [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents) are covered in dedicated guides for those who fall outside the two main categories.
 
-The hub also connects to the [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub/) for guides on GLP-1 drugs, muscle preservation, and the metabolic context of Type 2 diabetes.
+The hub also connects to the [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub) for guides on GLP-1 drugs, muscle preservation, and the metabolic context of Type 2 diabetes.
 
 ---
 
@@ -91,7 +91,7 @@ Type 1 and Type 2 diabetes are often discussed as though they sit on the same sp
 | **Can it be prevented?** | No known prevention | Risk can be substantially reduced through lifestyle changes |
 | **Proportion of cases** | ~5–10% of all diabetes | ~90–95% of all diabetes |
 
-Other forms of diabetes also exist, including gestational diabetes (during pregnancy), [LADA](/guides/latent-autoimmune-diabetes/) (latent autoimmune diabetes in adults, sometimes called Type 1.5), and rarer monogenic forms. Each has its own characteristics, but Type 1 and Type 2 account for the vast majority of diagnoses.
+Other forms of diabetes also exist, including gestational diabetes (during pregnancy), [LADA](/guides/latent-autoimmune-diabetes) (latent autoimmune diabetes in adults, sometimes called Type 1.5), and rarer monogenic forms. Each has its own characteristics, but Type 1 and Type 2 account for the vast majority of diagnoses.
 
 ---
 
@@ -115,65 +115,65 @@ Several concepts come up in both Type 1 and Type 2 diabetes. The brief definitio
 
 Blood glucose testing measures the concentration of glucose (sugar) in the blood at a given moment. It is a core part of diabetes self-management, used to inform decisions about food, activity, and medication. Testing methods include finger-prick capillary checks and continuous sensor-based monitoring.
 
-Learn more in the [Type 1 Diabetes](/guides/type-1-diabetes/) and [Type 2 Diabetes](/guides/type-2-diabetes/) guides.
+Learn more in the [Type 1 Diabetes](/guides/type-1-diabetes) and [Type 2 Diabetes](/guides/type-2-diabetes) guides.
 
 ### HbA1c
 
 HbA1c (glycated haemoglobin) is a blood test that reflects average blood glucose levels over the preceding two to three months. It is used both to diagnose diabetes and to monitor how well blood glucose is being managed over time. Unlike a single glucose reading, HbA1c provides a longer-term picture.
 
-Learn more: [Understanding HbA1c](/guides/understanding-hba1c/)
+Learn more: [Understanding HbA1c](/guides/understanding-hba1c)
 
 ### Hypoglycaemia and Hyperglycaemia
 
 Hypoglycaemia (low blood glucose) and hyperglycaemia (high blood glucose) are the two directions in which blood sugar can move outside a safe range. Hypoglycaemia is most commonly associated with insulin use and can cause immediate symptoms such as shakiness, confusion, and loss of consciousness. Hyperglycaemia develops when there is not enough insulin activity and, if sustained, contributes to long-term complications.
 
-Learn more: [Hypoglycaemia Treatment](/guides/hypoglycaemia-treatment/) | [Recognising Highs and Lows](/guides/recognising-highs-and-lows/)
+Learn more: [Hypoglycaemia Treatment](/guides/hypoglycaemia-treatment) | [Recognising Highs and Lows](/guides/recognising-highs-and-lows)
 
 ### Insulin
 
 Insulin is a hormone produced by the pancreas that allows cells to take up glucose from the bloodstream. In Type 1 diabetes, insulin must be replaced externally because the body no longer produces it. In Type 2 diabetes, the body still produces insulin but either not enough or not effectively enough; external insulin may be added later in the course of the condition if other treatments are insufficient.
 
-Learn more: [Insulin Types Explained](/guides/insulin-types-explained/) | [Insulin Administration](/guides/insulin-administration/)
+Learn more: [Insulin Types Explained](/guides/insulin-types-explained) | [Insulin Administration](/guides/insulin-administration)
 
 ### Continuous Glucose Monitoring (CGM)
 
 A continuous glucose monitor is a small wearable sensor that measures glucose levels in the interstitial fluid throughout the day and night, providing a near-real-time stream of data. CGMs reduce the need for routine finger-prick tests and can alert the wearer to rising or falling glucose trends before they become dangerous.
 
-Learn more: [CGM vs Finger Prick](/guides/cgm-vs-finger-prick/) | [Continuous Glucose Monitors](/guides/continuous-glucose-monitors/)
+Learn more: [CGM vs Finger Prick](/guides/cgm-vs-finger-prick) | [Continuous Glucose Monitors](/guides/continuous-glucose-monitors)
 
 ---
 
 ## Explore the Guides
 
 ### Type 1 Diabetes
-- **[Type 1 Diabetes](/guides/type-1-diabetes/)** — autoimmune diabetes, insulin therapy, technology, and daily management.
-- [Newly Diagnosed with Type 1 Diabetes](/guides/newly-diagnosed-type1-diabetes/)
-- [Hypoglycaemia Treatment](/guides/hypoglycaemia-treatment/)
-- [Night-Time Hypoglycaemia](/guides/night-time-hypoglycaemia/)
-- [Type 1 Diabetes: Managing Hypoglycaemia](/guides/type-1-diabetes-managing-hypoglycaemia/)
-- [Type 1 Diabetes: Sick-Day Management](/guides/type-1-diabetes-sick-day-management/)
-- [DKA Quick Reference](/guides/type-1-diabetes-dka-quick-reference/)
-- [Recognising Highs and Lows](/guides/recognising-highs-and-lows/)
-- [Managing T1D Exercise](/guides/managing-t1d-exercise/)
-- [T1D at School](/guides/school-and-t1d/)
-- [Travel Tips for T1D](/guides/travel-tips-t1d/)
-- [Exercise and Type 1](/guides/exercise-and-type1/)
+- **[Type 1 Diabetes](/guides/type-1-diabetes)** — autoimmune diabetes, insulin therapy, technology, and daily management.
+- [Newly Diagnosed with Type 1 Diabetes](/guides/newly-diagnosed-type1-diabetes)
+- [Hypoglycaemia Treatment](/guides/hypoglycaemia-treatment)
+- [Night-Time Hypoglycaemia](/guides/night-time-hypoglycaemia)
+- [Type 1 Diabetes: Managing Hypoglycaemia](/guides/type-1-diabetes-managing-hypoglycaemia)
+- [Type 1 Diabetes: Sick-Day Management](/guides/type-1-diabetes-sick-day-management)
+- [DKA Quick Reference](/guides/type-1-diabetes-dka-quick-reference)
+- [Recognising Highs and Lows](/guides/recognising-highs-and-lows)
+- [Managing T1D Exercise](/guides/managing-t1d-exercise)
+- [T1D at School](/guides/school-and-t1d)
+- [Travel Tips for T1D](/guides/travel-tips-t1d)
+- [Exercise and Type 1](/guides/exercise-and-type1)
 
 ### Type 2 Diabetes
-- **[Type 2 Diabetes](/guides/type-2-diabetes/)** — insulin resistance, screening, medication options, and cardiometabolic risk.
-- [Prediabetes](/guides/prediabetes/) — the warning stage before Type 2 diabetes.
-- [Understanding HbA1c](/guides/understanding-hba1c/)
-- [Blood Glucose Testing](/guides/blood-glucose-testing/)
-- [CGM vs Finger Prick](/guides/cgm-vs-finger-prick/)
+- **[Type 2 Diabetes](/guides/type-2-diabetes)** — insulin resistance, screening, medication options, and cardiometabolic risk.
+- [Prediabetes](/guides/prediabetes) — the warning stage before Type 2 diabetes.
+- [Understanding HbA1c](/guides/understanding-hba1c)
+- [Blood Glucose Testing](/guides/blood-glucose-testing)
+- [CGM vs Finger Prick](/guides/cgm-vs-finger-prick)
 
 ### Both Types
-- [Difference Between Type 1 and Type 2 Diabetes](/guides/type-1-vs-type-2-diabetes/)
-- [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents/)
-- [Carbohydrate Counting](/guides/carbohydrate-counting/)
-- [Insulin Types Explained](/guides/insulin-types-explained/)
-- [Insulin Administration](/guides/insulin-administration/)
-- [Latent Autoimmune Diabetes (LADA)](/guides/latent-autoimmune-diabetes/)
-- [Diabetes Hormones](/guides/diabetes-hormones/)
+- [Difference Between Type 1 and Type 2 Diabetes](/guides/type-1-vs-type-2-diabetes)
+- [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents)
+- [Carbohydrate Counting](/guides/carbohydrate-counting)
+- [Insulin Types Explained](/guides/insulin-types-explained)
+- [Insulin Administration](/guides/insulin-administration)
+- [Latent Autoimmune Diabetes (LADA)](/guides/latent-autoimmune-diabetes)
+- [Diabetes Hormones](/guides/diabetes-hormones)
 
 ---
 
@@ -218,9 +218,9 @@ Yes. With modern insulin therapy, continuous glucose monitoring, and good self-m
 ---
 
 ## Related Hubs
-- [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub/)
-- [Obesity & Metabolic Health Hub](/guides/obesity-metabolic-health-hub/)
-- [Preventive Health Hub](/guides/preventive-health/)
+- [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub)
+- [Obesity & Metabolic Health Hub](/guides/obesity-metabolic-health-hub)
+- [Preventive Health Hub](/guides/preventive-health)
 
 ---
 

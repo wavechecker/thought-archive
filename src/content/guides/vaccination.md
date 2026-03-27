@@ -74,7 +74,7 @@ The vaccination cluster on PatientGuide is structured across four categories:
 
 **4. Misinformation & Hesitancy** — Evidence-based guides that address the most common vaccine myths, the history and psychology of vaccine hesitancy, and the specific claims most often circulated online. For readers who want to help others or evaluate claims critically.
 
-This hub also connects closely to the [Infectious Diseases hub](/guides/infectious-diseases/), which covers vaccine-preventable diseases from the disease perspective rather than the vaccine perspective.
+This hub also connects closely to the [Infectious Diseases hub](/guides/infectious-diseases), which covers vaccine-preventable diseases from the disease perspective rather than the vaccine perspective.
 
 ---
 
@@ -98,39 +98,39 @@ This hub also connects closely to the [Infectious Diseases hub](/guides/infectio
 - [Understanding Measles: Risks, Prevention, and Outbreaks](/guides/measles)
 - [COVID-19 Vaccines: What We Know, What We Don't](/guides/covid-19-vaccines)
 - [Hepatitis B: Risks, Prevention, and Treatment](/guides/hepatitis-b)
-- [HPV Vaccine](/guides/hpv-vaccine/)
-- [Influenza Vaccines](/guides/influenza-vaccines/)
-- [Tetanus — When to Get a Booster](/guides/tetanus/)
-- [Shingles Vaccine in Adults](/guides/shingles-vaccine-adults/)
-- [Hepatitis B Birth Dose — What Parents Need to Know](/guides/hepatitis-b-birth-dose-explained/)
+- [HPV Vaccine](/guides/hpv-vaccine)
+- [Influenza Vaccines](/guides/influenza-vaccines)
+- [Tetanus — When to Get a Booster](/guides/tetanus)
+- [Shingles Vaccine in Adults](/guides/shingles-vaccine-adults)
+- [Hepatitis B Birth Dose — What Parents Need to Know](/guides/hepatitis-b-birth-dose-explained)
 
 ### Vaccine Science & Policy
 
-- [How Vaccines Work](/guides/how-vaccines-work/)
-- [mRNA Vaccines](/guides/mrna-vaccines/)
-- [Childhood Immunisation Schedule](/guides/childhood-immunization-schedule/)
-- [Why Vaccine Schedules Differ by Country](/guides/why-vaccine-schedules-differ-by-country/)
-- [Why Combination Vaccines Exist](/guides/why-combination-vaccines-exist/)
-- [Evidence-First COVID Vaccine Policy](/guides/evidence-first-covid-vaccine-policy/)
-- [COVID-19 Vaccination Guidelines — United States (August 2025)](/guides/us-covid-vaccine-guidelines-aug-2025/)
-- [Mandates and Exemptions — Understanding Vaccine Policy](/guides/mandates-and-exemptions/)
-- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring/)
-- [Aluminum in Vaccines: Safety Evidence and Controversy](/guides/aluminum-in-vaccines/)
-- [Global Vaccine Equity](/guides/global-vaccine-equity/)
+- [How Vaccines Work](/guides/how-vaccines-work)
+- [mRNA Vaccines](/guides/mrna-vaccines)
+- [Childhood Immunisation Schedule](/guides/childhood-immunization-schedule)
+- [Why Vaccine Schedules Differ by Country](/guides/why-vaccine-schedules-differ-by-country)
+- [Why Combination Vaccines Exist](/guides/why-combination-vaccines-exist)
+- [Evidence-First COVID Vaccine Policy](/guides/evidence-first-covid-vaccine-policy)
+- [COVID-19 Vaccination Guidelines — United States (August 2025)](/guides/us-covid-vaccine-guidelines-aug-2025)
+- [Mandates and Exemptions — Understanding Vaccine Policy](/guides/mandates-and-exemptions)
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring)
+- [Aluminum in Vaccines: Safety Evidence and Controversy](/guides/aluminum-in-vaccines)
+- [Global Vaccine Equity](/guides/global-vaccine-equity)
 
 ### Addressing Vaccine Hesitancy & Misinformation
 
-- [Vaccine Hesitancy](/guides/vaccine-hesitancy/)
-- [Vaccine Myths and Facts](/guides/vaccine-myths-and-facts/)
-- [Vaccines and Autism: The Evidence](/guides/vaccines-and-autism/)
-- [Vaccination Safety Overview](/guides/vaccination-safety-overview/)
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)
+- [Vaccine Myths and Facts](/guides/vaccine-myths-and-facts)
+- [Vaccines and Autism: The Evidence](/guides/vaccines-and-autism)
+- [Vaccination Safety Overview](/guides/vaccination-safety-overview)
 
 ---
 
 ## Frequently Asked Questions
 
 **Why do children need so many vaccines?**
-Children receive multiple vaccines because they are most vulnerable to serious complications from infectious diseases early in life, before natural immunity has developed. Each vaccine targets a different pathogen. Combination vaccines (MMR, DTaP) reduce injections while providing protection against multiple diseases in one visit. The [Childhood Immunisation Schedule guide](/guides/childhood-immunization-schedule/) explains the timing and rationale.
+Children receive multiple vaccines because they are most vulnerable to serious complications from infectious diseases early in life, before natural immunity has developed. Each vaccine targets a different pathogen. Combination vaccines (MMR, DTaP) reduce injections while providing protection against multiple diseases in one visit. The [Childhood Immunisation Schedule guide](/guides/childhood-immunization-schedule) explains the timing and rationale.
 
 **Can vaccines cause the disease they protect against?**
 No. No vaccine on a standard schedule contains live, replicating pathogen capable of causing the disease. Some vaccines contain weakened (attenuated) virus — such as the MMR — but these cannot cause the disease in immunocompetent individuals. The rare exceptions are documented, mild, and far outweighed by protection from serious infection.
@@ -142,7 +142,7 @@ Most vaccination schedules can be resumed without restarting the series. If you 
 Yes. Many adults are under-vaccinated. Commonly missed adult vaccines include annual influenza, shingles (from age 50), HPV (up to age 45 in some guidelines), pneumococcal vaccines (from age 65), and COVID-19 boosters. Tetanus and diphtheria boosters are recommended every 10 years. Travel vaccines depend on destination.
 
 **How are vaccines monitored for safety after approval?**
-After approval, vaccines are monitored through post-market surveillance systems including VAERS (US), the Yellow Card scheme (UK), and the WHO's VigiBase globally. These systems detect rare adverse events that may not have appeared in clinical trials and trigger safety reviews when signals emerge. See [Adverse Events Monitoring](/guides/adverse-events-monitoring/) for the full detail.
+After approval, vaccines are monitored through post-market surveillance systems including VAERS (US), the Yellow Card scheme (UK), and the WHO's VigiBase globally. These systems detect rare adverse events that may not have appeared in clinical trials and trigger safety reviews when signals emerge. See [Adverse Events Monitoring](/guides/adverse-events-monitoring) for the full detail.
 
 **What is herd immunity and why does it matter?**
 Herd immunity (or community immunity) occurs when enough people in a population are immune to an infection — through vaccination or prior illness — that spread slows or stops, protecting those who cannot be vaccinated (infants too young, immunocompromised individuals). The threshold varies by disease: measles requires ~95% immunity; polio ~80–85%. Falling below the threshold allows outbreaks to re-emerge.
@@ -154,8 +154,8 @@ Herd immunity (or community immunity) occurs when enough people in a population 
 ---
 
 ## Related Hubs
-- [Preventive Health — Guide Hub](/guides/preventive-health/)
-- [Infectious Diseases — Guide Hub](/guides/infectious-diseases/)
+- [Preventive Health — Guide Hub](/guides/preventive-health)
+- [Infectious Diseases — Guide Hub](/guides/infectious-diseases)
 
 *Last reviewed: September 17, 2025*
 

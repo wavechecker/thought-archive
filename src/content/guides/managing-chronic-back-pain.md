@@ -65,7 +65,7 @@ Yes. Stress, low mood, and poor sleep amplify pain signals; managing them helps 
 - [NHS — Back Pain](https://www.nhs.uk/conditions/back-pain/)  
 
 ## Related Guides
-- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children/)  
-- [Angina — Symptoms & Management](/guides/angina-symptoms-management/)  
-- [Coronary Angiography — What to Expect](/guides/coronary-angiography/)  
+- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children)  
+- [Angina — Symptoms & Management](/guides/angina-symptoms-management)  
+- [Coronary Angiography — What to Expect](/guides/coronary-angiography)  
 

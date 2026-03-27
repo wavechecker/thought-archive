@@ -54,4 +54,4 @@ A: Yes, most can. For babies under 6 months, focus on shade and clothing first.
 ## Related Guides
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)
 - [Sunscreen Basics](/guides/sunscreen-basics)  
-- [Cancer — Guide Hub](/guides/cancer/)  
+- [Cancer — Guide Hub](/guides/cancer)  

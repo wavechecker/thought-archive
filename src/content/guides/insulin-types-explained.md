@@ -71,6 +71,6 @@ Yes, biosimilars undergo rigorous testing and are equally effective.
 - [NHS — Insulin](https://www.nhs.uk/conditions/insulin/)  
 
 ## Related Guides
-- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children/)  
-- [Angina — Symptoms & Management](/guides/angina-symptoms-management/)  
-- [Coronary Angiography — What to Expect](/guides/coronary-angiography/)  
+- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children)  
+- [Angina — Symptoms & Management](/guides/angina-symptoms-management)  
+- [Coronary Angiography — What to Expect](/guides/coronary-angiography)  

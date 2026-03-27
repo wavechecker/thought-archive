@@ -79,6 +79,6 @@ A: No. Angina is temporary chest discomfort from reduced blood flow. A heart att
 - [Mayo Clinic: Angina Overview](https://www.mayoclinic.org/diseases-conditions/angina)  
 
 ## Related Guides
-- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain/)  
-- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/)  
-- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications-and-their-side-effects/)  
+- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain)  
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography)  
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications-and-their-side-effects)  

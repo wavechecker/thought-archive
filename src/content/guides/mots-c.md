@@ -38,7 +38,7 @@ This origin is unusual. The vast majority of human peptides and proteins are enc
 
 MOTS-c naturally circulates in human blood. In observational studies, levels appear to decline with age and increase with exercise — observations that have contributed to interest in its possible role in metabolic regulation.
 
-For background on how synthetic peptides are studied and used in medicine more broadly, see [Peptide Therapy](/guides/peptide-therapy/).
+For background on how synthetic peptides are studied and used in medicine more broadly, see [Peptide Therapy](/guides/peptide-therapy).
 
 ---
 
@@ -114,7 +114,7 @@ Concerns with research-grade peptide products include:
 
 Regulatory agencies have expressed concern about the broader market for unapproved peptide products. Products obtained outside a regulated pharmaceutical supply chain may not match the compounds used in published research settings.
 
-For a broader discussion of regulatory and quality issues affecting peptide markets, see [Peptide Therapy](/guides/peptide-therapy/).
+For a broader discussion of regulatory and quality issues affecting peptide markets, see [Peptide Therapy](/guides/peptide-therapy).
 
 ---
 
@@ -156,7 +156,7 @@ A: The long-term safety of externally administered MOTS-c has not been establish
 ---
 
 **Q: How is MOTS-c different from other experimental peptides like BPC-157 or thymosin beta-4?**
-A: MOTS-c is a mitochondrially derived metabolic signaling peptide, which is biologically distinct from compounds like [BPC-157](/guides/bpc-157/) (a synthetic tissue-repair compound) or [Thymosin Beta-4](/guides/thymosin-beta-4/) (a naturally occurring actin-regulating peptide). All three share the characteristic of having limited human clinical evidence and no approved therapeutic use for most discussed applications.
+A: MOTS-c is a mitochondrially derived metabolic signaling peptide, which is biologically distinct from compounds like [BPC-157](/guides/bpc-157) (a synthetic tissue-repair compound) or [Thymosin Beta-4](/guides/thymosin-beta-4) (a naturally occurring actin-regulating peptide). All three share the characteristic of having limited human clinical evidence and no approved therapeutic use for most discussed applications.
 
 ---
 
@@ -169,5 +169,5 @@ A: MOTS-c is a mitochondrially derived metabolic signaling peptide, which is bio
 
 ## Related Guides
 
-- [Peptide Therapy](/guides/peptide-therapy/)
-- [Thymosin Beta-4](/guides/thymosin-beta-4/)
+- [Peptide Therapy](/guides/peptide-therapy)
+- [Thymosin Beta-4](/guides/thymosin-beta-4)

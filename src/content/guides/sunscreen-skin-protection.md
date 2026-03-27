@@ -57,8 +57,8 @@ A: They can be convenient, but inhalation risk means lotion is safer.
 - [TGA — Sunscreen recalls and safety updates](https://www.tga.gov.au)
 
 ## Related Hubs
-- [Cancer — Guide Hub](/guides/cancer/)  
-- [Preventive Health — Guide Hub](/guides/preventive-health/)
+- [Cancer — Guide Hub](/guides/cancer)  
+- [Preventive Health — Guide Hub](/guides/preventive-health)
 
 *Last reviewed: August 29, 2025*
 
