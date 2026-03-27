@@ -1,18 +1,17 @@
 #!/usr/bin/env node
 /**
- * create-guide.mjs
- * Scaffold a new guide from the canonical template.
+ * create-post.mjs
+ * Scaffold a new post from the canonical template.
  *
  * Usage:
- *   node scripts/create-guide.mjs "Title" [lang] [slug] [--category "Cat"] [--tags a,b] [--draft false] [--updateDate] [--force]
+ *   node scripts/create-post.mjs "Title" [slug] [--category "Opinion"] [--tags a,b] [--draft false] [--updateDate] [--force]
  *
- *   lang defaults to "en" — output is {slug}.md for English, {slug}.{lang}.md otherwise.
  *   slug defaults to slugified title.
  *
  * Examples:
- *   node scripts/create-guide.mjs "Sepsis"
- *   node scripts/create-guide.mjs "Sepsis" en --category "Infectious Diseases" --tags sepsis,infection
- *   npm run new:guide -- "Sepsis" --category "Emergencies"
+ *   node scripts/create-post.mjs "The Real Cost of GLP-1 Dropout"
+ *   node scripts/create-post.mjs "The Real Cost of GLP-1 Dropout" --category "Health & Policy" --tags glp-1,adherence
+ *   npm run new:post -- "The Real Cost of GLP-1 Dropout" --category "Opinion"
  */
 
 import fs from "node:fs";
@@ -23,27 +22,15 @@ import { spawnSync } from "node:child_process";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 // ---------------------------------------------------------------------------
-// Category enum — must match src/content/config.ts exactly
+// Category enum — must match POST_CATEGORY in src/content/config.ts exactly
 // ---------------------------------------------------------------------------
 const VALID_CATEGORIES = [
-  "Emergencies",
-  "Infectious Diseases",
-  "Vaccination",
-  "Heart & Circulation",
-  "Women's Health",
-  "Diabetes",
-  "Cancer",
-  "Neurology",
-  "Mental Health",
-  "General Health",
-  "End of Life",
-  "Child & Adolescent Health",
-  "Obesity & Metabolic Health Hub",
-  "Men's Health",
-  "Aging & Longevity",
-  "Guide Hubs",
-  "Respiratory",
-  "AI in Health",
+  "AI & Society",
+  "Health & Policy",
+  "Opinion",
+  "Posts",
+  "Public Health",
+  "Relationships",
 ];
 
 // ---------------------------------------------------------------------------
@@ -53,37 +40,32 @@ const [, , titleArg, ...argv] = process.argv;
 
 if (!titleArg || titleArg.startsWith("--")) {
   console.error(
-    'Usage: node scripts/create-guide.mjs "Title" [lang] [slug] [--category "Cat"] [--tags a,b] [--draft false] [--updateDate] [--force]'
+    'Usage: node scripts/create-post.mjs "Title" [slug] [--category "Cat"] [--tags a,b] [--draft false] [--updateDate] [--force]'
   );
   process.exit(1);
 }
 
-// Pull optional positional lang and slug before any flags start
-const positionals = [];
-let i = 0;
-while (i < argv.length && !argv[i].startsWith("--") && positionals.length < 2) {
-  positionals.push(argv[i++]);
+// Pull optional positional slug before flags start
+let explicitSlug = null;
+let flagStart = 0;
+if (argv[0] && !argv[0].startsWith("--")) {
+  explicitSlug = argv[0];
+  flagStart = 1;
 }
-const rest = argv.slice(i); // everything from first flag onward
+const rest = argv.slice(flagStart);
 
 const flags = {};
-for (let j = 0; j < rest.length; j++) {
-  const v = rest[j];
+for (let i = 0; i < rest.length; i++) {
+  const v = rest[i];
   if (v?.startsWith("--")) {
     const key = v.replace(/^--/, "");
-    const next = rest[j + 1];
-    if (next && !next.startsWith("--")) { flags[key] = next; j++; }
+    const next = rest[i + 1];
+    if (next && !next.startsWith("--")) { flags[key] = next; i++; }
     else flags[key] = true;
   }
 }
 
 const title = titleArg.trim();
-
-// positionals: optional [lang] [slug]
-const rawLang = positionals[0] && ["en", "es"].includes(positionals[0].toLowerCase())
-  ? positionals[0] : null;
-const lang    = rawLang ? rawLang.toLowerCase() : "en";
-const slugArg = rawLang ? positionals[1] : positionals[0]; // slug is after lang if lang present
 
 const slugify = (s) =>
   s.normalize("NFKD")
@@ -93,13 +75,13 @@ const slugify = (s) =>
     .replace(/^-+|-+$/g, "")
     .slice(0, 80);
 
-const slug  = slugArg ? slugify(slugArg) : slugify(title);
+const slug  = explicitSlug ? slugify(explicitSlug) : slugify(title);
 const today = new Date().toISOString().slice(0, 10);
 
-let category = typeof flags.category === "string" ? flags.category : "General Health";
-if (!VALID_CATEGORIES.includes(category)) {
+const category = typeof flags.category === "string" ? flags.category.trim() : null;
+if (category && !VALID_CATEGORIES.includes(category)) {
   console.error(`\x1b[31mInvalid category:\x1b[0m "${category}"
-Allowed categories:
+Allowed post categories:
 ${VALID_CATEGORIES.map((c) => `  - ${c}`).join("\n")}`);
   process.exit(1);
 }
@@ -114,9 +96,8 @@ const force          = !!flags.force;
 // ---------------------------------------------------------------------------
 // File path
 // ---------------------------------------------------------------------------
-const dir   = path.join("src", "content", "guides");
-const fname = lang === "en" ? `${slug}.md` : `${slug}.${lang}.md`;
-const file  = path.join(dir, fname);
+const dir  = path.join("src", "content", "posts");
+const file = path.join(dir, `${slug}.md`);
 
 if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 if (fs.existsSync(file) && !force) {
@@ -127,7 +108,7 @@ if (fs.existsSync(file) && !force) {
 // ---------------------------------------------------------------------------
 // Build content from canonical template
 // ---------------------------------------------------------------------------
-const TEMPLATE = path.join(__dirname, "templates", "guide.template.md");
+const TEMPLATE = path.join(__dirname, "templates", "post.template.md");
 if (!fs.existsSync(TEMPLATE)) {
   console.error(`Template not found: ${TEMPLATE}`);
   process.exit(1);
@@ -145,17 +126,20 @@ content = content.replace(
 
 // Substitute frontmatter placeholders
 content = content
-  .replace('title: "Your Guide Title"',          `title: "${safeTitle}"`)
-  .replace('category: "General Health"',          `category: "${category}"`)
-  .replace('publishDate: "YYYY-MM-DD"',           `publishDate: "${today}"`)
-  .replace(/^draft: true$/m,                      `draft: ${draft}`)
-  .replace('tags: []',                            tags.length > 0
+  .replace('title: "Post Title"',       `title: "${safeTitle}"`)
+  .replace('publishDate: "YYYY-MM-DD"', `publishDate: "${today}"`)
+  .replace(/^draft: true$/m,            `draft: ${draft}`)
+  .replace('tags: []',                  tags.length > 0
     ? `tags: [${tags.map((t) => `"${t}"`).join(", ")}]`
-    : "tags: []")
-  // schema.medicalCondition.name
-  .replace('    name: "Your Guide Title"',        `    name: "${safeTitle}"`)
-  // Uncomment slug
-  .replace(/^# slug: your-guide-slug.*$/m,        `slug: ${slug}`);
+    : "tags: []");
+
+// category: optional — uncomment and set the field + remove the helper comment lines
+if (category) {
+  content = content.replace(
+    /^# category: "Opinion"\s+# Optional\. One of:\n(?:# \s+[^\n]*\n)+/m,
+    `category: "${category}"\n`
+  );
+}
 
 // updatedDate: uncomment if --updateDate flag passed
 if (includeUpdated) {
@@ -171,7 +155,7 @@ if (includeUpdated) {
 fs.writeFileSync(file, content, "utf8");
 console.log(`\n✅  Created: ${file}`);
 console.log(`   Title:    ${title}`);
-console.log(`   Category: ${category}`);
+if (category) console.log(`   Category: ${category}`);
 console.log(`   Date:     ${today}`);
 console.log(`   Draft:    ${draft}\n`);
 
