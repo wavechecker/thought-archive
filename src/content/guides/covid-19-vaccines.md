@@ -78,10 +78,10 @@ A: To date, no unexpected long-term risks have emerged. Global safety monitoring
 - [WHO — COVID-19 Vaccine advice](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccines)  
 
 ## Related Guides
-- [mRNA Vaccines](/guides/mrna-vaccines/)  
-- [How Vaccines Work](/guides/how-vaccines-work/)  
-- [Evidence-First COVID Vaccine Policy](/guides/evidence-first-covid-vaccine-policy/)  
-- [Vaccine Hesitancy](/guides/vaccine-hesitancy/)  
+- [mRNA Vaccines](/guides/mrna-vaccines)  
+- [How Vaccines Work](/guides/how-vaccines-work)  
+- [Evidence-First COVID Vaccine Policy](/guides/evidence-first-covid-vaccine-policy)  
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)  
 
 ---
 

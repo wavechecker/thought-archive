@@ -70,7 +70,7 @@ Yes, especially in older adults or those on certain medications—but it’s les
 - [CDC — Influenza (Flu)](https://www.cdc.gov/flu/)  
 
 ## Related Guides
-- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children/)  
-- [Angina — Symptoms & Management](/guides/angina-symptoms-management/)  
-- [Coronary Angiography — What to Expect](/guides/coronary-angiography/)  
+- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children)  
+- [Angina — Symptoms & Management](/guides/angina-symptoms-management)  
+- [Coronary Angiography — What to Expect](/guides/coronary-angiography)  
 

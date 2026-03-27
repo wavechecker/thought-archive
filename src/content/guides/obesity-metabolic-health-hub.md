@@ -57,7 +57,7 @@ Obesity is one of the most significant and visible drivers of poor metabolic hea
 
 Obesity now affects over **1 billion people worldwide** — a figure that has more than tripled since 1975 and now includes more people than those living with undernutrition in many regions. Yet BMI, the most widely used measure, captures only weight relative to height and cannot distinguish fat from muscle, or dangerous visceral fat from relatively benign subcutaneous fat. **Where fat is stored matters as much as how much is carried** — and measures like waist circumference and waist-to-hip ratio are increasingly recognised as stronger predictors of individual metabolic risk than BMI alone.
 
-This hub focuses on obesity as a condition: how it is measured, how fat distribution affects risk, and why metabolic syndrome matters as a clinical concept. For a broader view of metabolic health — including GLP-1 medications, muscle preservation, and lifestyle foundations — see the [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub/).
+This hub focuses on obesity as a condition: how it is measured, how fat distribution affects risk, and why metabolic syndrome matters as a clinical concept. For a broader view of metabolic health — including GLP-1 medications, muscle preservation, and lifestyle foundations — see the [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub).
 
 ---
 
@@ -67,8 +67,8 @@ This hub covers the **conceptual and diagnostic layer** of metabolic health — 
 
 It connects to two adjacent hubs:
 
-- **[Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub/)** — covers treatment: GLP-1 medications, bariatric surgery comparisons, muscle preservation, and the broader lifestyle framework for managing metabolic dysfunction.
-- **[Diabetes Hub](/guides/diabetes-hub/)** — covers the downstream condition: what happens when metabolic dysfunction progresses to Type 2 diabetes, and how it is managed.
+- **[Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub)** — covers treatment: GLP-1 medications, bariatric surgery comparisons, muscle preservation, and the broader lifestyle framework for managing metabolic dysfunction.
+- **[Diabetes Hub](/guides/diabetes-hub)** — covers the downstream condition: what happens when metabolic dysfunction progresses to Type 2 diabetes, and how it is managed.
 
 The three hubs together form the complete metabolic health pathway: understanding → measurement → diagnosis → management.
 
@@ -150,9 +150,9 @@ Even 5–7% of body weight produces clinically meaningful improvements in blood 
 ---
 
 ## Related Hubs
-- [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub/)
-- [Diabetes Hub](/guides/diabetes-hub/)
-- [Heart & Circulation Hub](/guides/heart-circulation/)
+- [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub)
+- [Diabetes Hub](/guides/diabetes-hub)
+- [Heart & Circulation Hub](/guides/heart-circulation)
 
 ---
 

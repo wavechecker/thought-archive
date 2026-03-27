@@ -63,15 +63,15 @@ A: WHO and many countries now recommend a **single dose** for adolescents, thoug
 - [PubMed: Systematic reviews on HPV vaccine impact](https://pubmed.ncbi.nlm.nih.gov/?term=hpv+vaccine+impact)  
 
 ## Related Guides
-- [How Vaccines Work](/guides/how-vaccines-work/)  
-- [Vaccine Hesitancy](/guides/vaccine-hesitancy/)  
-- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring/)  
+- [How Vaccines Work](/guides/how-vaccines-work)  
+- [Vaccine Hesitancy](/guides/vaccine-hesitancy)  
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring)  
 
 ---
 
 ## Related Hubs
-- [Vaccination — Guide Hub](/guides/vaccination/)  
-- [Sexual Health — Guide Hub](/guides/sexual-health/)  
+- [Vaccination — Guide Hub](/guides/vaccination)  
+- [Sexual Health — Guide Hub](/guides/sexual-health)  
 
 *Last reviewed: August 29, 2025*
 

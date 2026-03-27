@@ -175,9 +175,9 @@ Sit upright, stay calm, and avoid exertion. If you have been prescribed suppleme
 
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
 - [Stroke — Symptoms, Emergency Response, and Treatment](/guides/stroke-symptoms-fast-response)
-- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications/)
-- [What is Angina? Symptoms and Management](/guides/what-is-angina-symptoms-and-management/)
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/)
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
+- [What is Angina? Symptoms and Management](/guides/what-is-angina-symptoms-and-management)
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)
 
 ---
 

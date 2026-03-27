@@ -59,14 +59,14 @@ If you are experiencing chest pain, sudden shortness of breath, or symptoms that
 
 The most important guides for anyone dealing with a heart condition:
 
-- [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/) — Recognise the symptoms, including atypical presentations in women and younger adults.
-- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain/) — A decision guide for chest pain — what's urgent and what can wait.
-- [Heart Attack Treatment — What to Expect](/guides/heart-attack-treatment/) — What happens in hospital and in the days after a heart attack.
-- [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation/) — The most common arrhythmia: what it is, stroke risk, and treatment options.
-- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease/) — The evidence-based steps that most reduce risk.
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/) — Why cardiac rehab matters and what it involves.
-- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications/) — Plain-language guide to statins, ACE inhibitors, beta-blockers, and more.
-- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/) — What the procedure involves, how to prepare, and what the results mean.
+- [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack) — Recognise the symptoms, including atypical presentations in women and younger adults.
+- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain) — A decision guide for chest pain — what's urgent and what can wait.
+- [Heart Attack Treatment — What to Expect](/guides/heart-attack-treatment) — What happens in hospital and in the days after a heart attack.
+- [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation) — The most common arrhythmia: what it is, stroke risk, and treatment options.
+- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — The evidence-based steps that most reduce risk.
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation) — Why cardiac rehab matters and what it involves.
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications) — Plain-language guide to statins, ACE inhibitors, beta-blockers, and more.
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography) — What the procedure involves, how to prepare, and what the results mean.
 
 ---
 
@@ -88,44 +88,44 @@ The most important guides for anyone dealing with a heart condition:
 - Sudden one-sided weakness, face drooping, or slurred speech (stroke)
 - Any sudden collapse
 
-See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/) | [Recognizing a Stroke FAST](/guides/recognizing-stroke/) | [CPR — Basic Life Support](/guides/cpr/)
+See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack) | [Recognizing a Stroke FAST](/guides/recognizing-stroke) | [CPR — Basic Life Support](/guides/cpr)
 
 ---
 
 ## Key Guides
 
 ### Recognising Emergencies
-- [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack/) — Classic and atypical symptoms, including presentations in women and people with diabetes.
-- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain/) — A practical decision guide to chest pain severity.
-- [Recognizing a Stroke FAST — A Practical Guide](/guides/recognizing-stroke/) — Face drooping, arm weakness, speech difficulty, and time to call.
-- [TIA: Warning Signs You Shouldn't Ignore](/guides/tia-warning-signs/) — Transient ischemic attacks are warning strokes requiring urgent evaluation.
-- [CPR — Basic Life Support](/guides/cpr/) — What to do if someone collapses.
+- [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack) — Classic and atypical symptoms, including presentations in women and people with diabetes.
+- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain) — A practical decision guide to chest pain severity.
+- [Recognizing a Stroke FAST — A Practical Guide](/guides/recognizing-stroke) — Face drooping, arm weakness, speech difficulty, and time to call.
+- [TIA: Warning Signs You Shouldn't Ignore](/guides/tia-warning-signs) — Transient ischemic attacks are warning strokes requiring urgent evaluation.
+- [CPR — Basic Life Support](/guides/cpr) — What to do if someone collapses.
 
 ### Understanding Heart Conditions
-- [Heart & Circulation Overview](/guides/heart-circulation-overview/) — A broad introduction to how the heart and circulation work and what can go wrong.
-- [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation/) — The most common arrhythmia: causes, stroke risk, rate vs rhythm control, and anticoagulation.
-- [Angina — Symptoms & Management](/guides/angina-symptoms-management/) — Stable angina, unstable angina, and how each is managed.
-- [Heart Palpitations: When to Worry](/guides/heart-palpitations/) — Which palpitations are benign and which need investigation.
-- [Heart Attacks in Younger Adults: Hidden Causes](/guides/heart-attacks-younger-adults-causes/) — Why heart attacks happen in people under 50, especially women.
+- [Heart & Circulation Overview](/guides/heart-circulation-overview) — A broad introduction to how the heart and circulation work and what can go wrong.
+- [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation) — The most common arrhythmia: causes, stroke risk, rate vs rhythm control, and anticoagulation.
+- [Angina — Symptoms & Management](/guides/angina-symptoms-management) — Stable angina, unstable angina, and how each is managed.
+- [Heart Palpitations: When to Worry](/guides/heart-palpitations) — Which palpitations are benign and which need investigation.
+- [Heart Attacks in Younger Adults: Hidden Causes](/guides/heart-attacks-younger-adults-causes) — Why heart attacks happen in people under 50, especially women.
 
 ### Diagnosis and Procedures
-- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography/) — How cardiac catheterisation works, what to expect on the day, and interpreting results.
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography) — How cardiac catheterisation works, what to expect on the day, and interpreting results.
 
 ### Treatment and Medications
-- [Heart Attack Treatment — What to Expect](/guides/heart-attack-treatment/) — Angioplasty, stenting, clot-busting drugs, and in-hospital care.
-- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications/) — Statins, ACE inhibitors, beta-blockers, blood thinners, and diuretics explained.
-- [Aspirin vs Clopidogrel — Which Is Better for Heart Disease?](/guides/aspirin-vs-clopidogrel/) — Comparing antiplatelet options and when combination therapy is used.
-- [Statin Side Effects: What the Evidence Actually Shows](/guides/statin-side-effects-evidence/) — Separating myth from fact on statin muscle pain and other concerns.
+- [Heart Attack Treatment — What to Expect](/guides/heart-attack-treatment) — Angioplasty, stenting, clot-busting drugs, and in-hospital care.
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications) — Statins, ACE inhibitors, beta-blockers, blood thinners, and diuretics explained.
+- [Aspirin vs Clopidogrel — Which Is Better for Heart Disease?](/guides/aspirin-vs-clopidogrel) — Comparing antiplatelet options and when combination therapy is used.
+- [Statin Side Effects: What the Evidence Actually Shows](/guides/statin-side-effects-evidence) — Separating myth from fact on statin muscle pain and other concerns.
 
 ### Blood Pressure
-- [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home/) — Technique, timing, and what the numbers mean.
-- [2025 High Blood Pressure Guideline — Key Updates](/guides/2025-high-blood-pressure-guideline/) — What changed in the latest hypertension management guidance.
+- [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home) — Technique, timing, and what the numbers mean.
+- [2025 High Blood Pressure Guideline — Key Updates](/guides/2025-high-blood-pressure-guideline) — What changed in the latest hypertension management guidance.
 
 ### Prevention
-- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease/) — Diet, exercise, smoking cessation, cholesterol control, and screening checks.
+- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — Diet, exercise, smoking cessation, cholesterol control, and screening checks.
 
 ### Recovery and Rehabilitation
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation/) — Exercise, education, and psychological support after heart attack or surgery.
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation) — Exercise, education, and psychological support after heart attack or surgery.
 
 ---
 
@@ -191,10 +191,10 @@ Immediately for severe chest pain, chest pain with arm or jaw pain, sudden breat
 
 ## Related Guides
 
-- [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response/)
-- [Emergencies — Guide Hub](/guides/emergencies/)
-- [Cancer — Guide Hub](/guides/cancer/) — Some cancers affect the heart; cardiac toxicity from cancer treatment is an important shared topic.
-- [Preventive Health — Guide Hub](/guides/preventive-health/)
+- [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)
+- [Emergencies — Guide Hub](/guides/emergencies)
+- [Cancer — Guide Hub](/guides/cancer) — Some cancers affect the heart; cardiac toxicity from cancer treatment is an important shared topic.
+- [Preventive Health — Guide Hub](/guides/preventive-health)
 
 ---
 

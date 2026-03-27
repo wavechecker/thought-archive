@@ -56,13 +56,13 @@ Use the "Start Here" links if you are new, or jump directly to a specific cancer
 
 Essential guides for anyone navigating a cancer diagnosis or wanting to understand cancer:
 
-- [Bowel Cancer — Guide Hub](/guides/bowel-cancer/) — Colorectal cancer: risks, screening, treatment, and survivorship.
-- [Breast Cancer — Guide Hub](/guides/breast-cancer/) — Breast cancer: detection, diagnosis, treatment, and life after treatment.
-- [Prostate Cancer — Guide Hub](/guides/prostate-cancer/) — Prostate cancer: PSA testing, treatment decisions, and side effect management.
-- [Skin Cancer — Guide Hub](/guides/skin-cancer/) — Skin cancer types, prevention, diagnosis, and treatment.
-- [Liver Cancer — Guide Hub](/guides/liver-cancer/) — Liver cancer: risk factors, detection, and treatment options.
-- [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide/) — A comprehensive guide to cervical cancer prevention and care.
-- [Palliative Care — Guide Hub](/guides/palliative-care/) — Supportive and comfort-focused care for people living with serious illness.
+- [Bowel Cancer — Guide Hub](/guides/bowel-cancer) — Colorectal cancer: risks, screening, treatment, and survivorship.
+- [Breast Cancer — Guide Hub](/guides/breast-cancer) — Breast cancer: detection, diagnosis, treatment, and life after treatment.
+- [Prostate Cancer — Guide Hub](/guides/prostate-cancer) — Prostate cancer: PSA testing, treatment decisions, and side effect management.
+- [Skin Cancer — Guide Hub](/guides/skin-cancer) — Skin cancer types, prevention, diagnosis, and treatment.
+- [Liver Cancer — Guide Hub](/guides/liver-cancer) — Liver cancer: risk factors, detection, and treatment options.
+- [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide) — A comprehensive guide to cervical cancer prevention and care.
+- [Palliative Care — Guide Hub](/guides/palliative-care) — Supportive and comfort-focused care for people living with serious illness.
 
 ---
 
@@ -85,35 +85,35 @@ Essential guides for anyone navigating a cancer diagnosis or wanting to understa
 - Confusion, seizures, or sudden neurological change
 - Signs of anaphylaxis after treatment
 
-See also: [Emergencies — Guide Hub](/guides/emergencies/) | [Sepsis](/guides/sepsis/) | [Anaphylaxis](/guides/anaphylaxis/)
+See also: [Emergencies — Guide Hub](/guides/emergencies) | [Sepsis](/guides/sepsis) | [Anaphylaxis](/guides/anaphylaxis)
 
 ---
 
 ## Key Guides
 
 ### Cancer Type Hubs
-- [Bowel Cancer — Guide Hub](/guides/bowel-cancer/) — Colorectal cancer: screening (FIT, colonoscopy), surgery, chemo, genetics, and survivorship.
-- [Breast Cancer — Guide Hub](/guides/breast-cancer/) — Mammography, surgical options, hormone therapy, targeted therapy, and recovery.
-- [Prostate Cancer — Guide Hub](/guides/prostate-cancer/) — PSA, active surveillance, surgery vs radiotherapy, and hormonal treatment.
-- [Skin Cancer — Guide Hub](/guides/skin-cancer/) — Melanoma and non-melanoma: detection, prevention, and treatment.
-- [Liver Cancer — Guide Hub](/guides/liver-cancer/) — Hepatocellular carcinoma: risk factors (hepatitis B/C, cirrhosis), detection, and treatment.
+- [Bowel Cancer — Guide Hub](/guides/bowel-cancer) — Colorectal cancer: screening (FIT, colonoscopy), surgery, chemo, genetics, and survivorship.
+- [Breast Cancer — Guide Hub](/guides/breast-cancer) — Mammography, surgical options, hormone therapy, targeted therapy, and recovery.
+- [Prostate Cancer — Guide Hub](/guides/prostate-cancer) — PSA, active surveillance, surgery vs radiotherapy, and hormonal treatment.
+- [Skin Cancer — Guide Hub](/guides/skin-cancer) — Melanoma and non-melanoma: detection, prevention, and treatment.
+- [Liver Cancer — Guide Hub](/guides/liver-cancer) — Hepatocellular carcinoma: risk factors (hepatitis B/C, cirrhosis), detection, and treatment.
 
 ### Cervical and Skin Cancer Guides
-- [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide/) — HPV's role, Pap smears vs HPV testing, and treatment by stage.
-- [Cervical Cancer Screening Explained: HPV Testing, Self-Collection, and What's Changed](/guides/cervical-cancer-screening-hpv-self-testing/) — How modern cervical screening programs work.
-- [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention/) — How to recognise melanoma and non-melanoma skin cancers.
-- [Skin Cancer: Diagnosis and Treatment](/guides/skin-cancer-diagnosis-treatment/) — What happens after an abnormal skin finding.
-- [Nicotinamide and Skin Cancer Prevention](/guides/nicotinamide-skin-cancer-prevention/) — Evidence on vitamin B3 supplementation for high-risk patients.
+- [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide) — HPV's role, Pap smears vs HPV testing, and treatment by stage.
+- [Cervical Cancer Screening Explained: HPV Testing, Self-Collection, and What's Changed](/guides/cervical-cancer-screening-hpv-self-testing) — How modern cervical screening programs work.
+- [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention) — How to recognise melanoma and non-melanoma skin cancers.
+- [Skin Cancer: Diagnosis and Treatment](/guides/skin-cancer-diagnosis-treatment) — What happens after an abnormal skin finding.
+- [Nicotinamide and Skin Cancer Prevention](/guides/nicotinamide-skin-cancer-prevention) — Evidence on vitamin B3 supplementation for high-risk patients.
 
 ### Screening and Prevention
-- [Skin Cancer — Prevention](/guides/skin-cancer-prevention/) — Sun protection, sunscreen, and reducing UV exposure.
-- [HPV Vaccine](/guides/hpv-vaccine/) — How HPV vaccination protects against cervical, anal, and other cancers.
-- [Hepatitis B: Risks, Prevention, and Treatment](/guides/hepatitis-b/) — Why hepatitis B infection is a major liver cancer risk factor.
+- [Skin Cancer — Prevention](/guides/skin-cancer-prevention) — Sun protection, sunscreen, and reducing UV exposure.
+- [HPV Vaccine](/guides/hpv-vaccine) — How HPV vaccination protects against cervical, anal, and other cancers.
+- [Hepatitis B: Risks, Prevention, and Treatment](/guides/hepatitis-b) — Why hepatitis B infection is a major liver cancer risk factor.
 
 ### Survivorship and Palliative Care
-- [Bowel Cancer Survivorship](/guides/bowel-cancer-survivorship/) — Follow-up, late effects, and living well after colorectal cancer.
-- [Life After Skin Cancer: Survivorship and Support](/guides/skin-cancer-survivorship/) — Monitoring, emotional impact, and ongoing skin checks.
-- [Palliative Care — Guide Hub](/guides/palliative-care/) — Symptom management, comfort care, and advance care planning.
+- [Bowel Cancer Survivorship](/guides/bowel-cancer-survivorship) — Follow-up, late effects, and living well after colorectal cancer.
+- [Life After Skin Cancer: Survivorship and Support](/guides/skin-cancer-survivorship) — Monitoring, emotional impact, and ongoing skin checks.
+- [Palliative Care — Guide Hub](/guides/palliative-care) — Symptom management, comfort care, and advance care planning.
 
 ---
 
@@ -173,13 +173,13 @@ Seek emergency care for severe bleeding, sudden breathlessness or chest pain, hi
 
 ## Related Guides
 
-- [Bowel Cancer — Guide Hub](/guides/bowel-cancer/)
-- [Breast Cancer — Guide Hub](/guides/breast-cancer/)
-- [Prostate Cancer — Guide Hub](/guides/prostate-cancer/)
-- [Skin Cancer — Guide Hub](/guides/skin-cancer/)
-- [Infectious Diseases — Guide Hub](/guides/infectious-diseases/) — Infections that increase cancer risk (HPV, hepatitis B/C, H. pylori).
-- [Palliative Care — Guide Hub](/guides/palliative-care/)
-- [Emergencies — Guide Hub](/guides/emergencies/)
+- [Bowel Cancer — Guide Hub](/guides/bowel-cancer)
+- [Breast Cancer — Guide Hub](/guides/breast-cancer)
+- [Prostate Cancer — Guide Hub](/guides/prostate-cancer)
+- [Skin Cancer — Guide Hub](/guides/skin-cancer)
+- [Infectious Diseases — Guide Hub](/guides/infectious-diseases) — Infections that increase cancer risk (HPV, hepatitis B/C, H. pylori).
+- [Palliative Care — Guide Hub](/guides/palliative-care)
+- [Emergencies — Guide Hub](/guides/emergencies)
 
 ---
 

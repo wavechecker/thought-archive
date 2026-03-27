@@ -69,6 +69,6 @@ Yes. Poorly controlled asthma increases risk for severe reactions; ensure asthma
 - [AAAAI — Anaphylaxis overview](https://www.aaaai.org/tools-for-the-public/conditions-library/allergies/anaphylaxis)  
 
 ## Related Guides
-- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children/)
-- [Angina — Symptoms & Management](/guides/angina-symptoms-management/)
-- [Coronary Angiography — What to Expect](/guides/coronary-angiography/)
+- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children)
+- [Angina — Symptoms & Management](/guides/angina-symptoms-management)
+- [Coronary Angiography — What to Expect](/guides/coronary-angiography)

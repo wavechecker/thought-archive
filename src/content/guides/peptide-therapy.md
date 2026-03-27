@@ -26,16 +26,16 @@ Understanding how peptide therapies work — and how they are regulated — is i
 
 Detailed guides are available for specific peptide therapies:
 
-- [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs/)
-- [Tirzepatide](/guides/tirzepatide/)
-- [Sermorelin](/guides/sermorelin/)
-- [Tesamorelin](/guides/tesamorelin/)
-- [BPC-157](/guides/bpc-157/)
-- [CJC-1295](/guides/cjc-1295/)
-- [Ipamorelin](/guides/ipamorelin/)
-- [Thymosin Beta-4](/guides/thymosin-beta-4/)
-- [MOTS-c](/guides/mots-c/)
-- [Oxytocin](/guides/oxytocin/)
+- [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs)
+- [Tirzepatide](/guides/tirzepatide)
+- [Sermorelin](/guides/sermorelin)
+- [Tesamorelin](/guides/tesamorelin)
+- [BPC-157](/guides/bpc-157)
+- [CJC-1295](/guides/cjc-1295)
+- [Ipamorelin](/guides/ipamorelin)
+- [Thymosin Beta-4](/guides/thymosin-beta-4)
+- [MOTS-c](/guides/mots-c)
+- [Oxytocin](/guides/oxytocin)
 
 Additional peptide guides are being added over time.
 
@@ -94,9 +94,9 @@ Some peptides stimulate the body to release growth hormone.
 
 Examples include:
 
-* [Sermorelin](/guides/sermorelin/)
-* [Tesamorelin](/guides/tesamorelin/)
-* [Ipamorelin](/guides/ipamorelin/)
+* [Sermorelin](/guides/sermorelin)
+* [Tesamorelin](/guides/tesamorelin)
+* [Ipamorelin](/guides/ipamorelin)
 
 These peptides influence metabolism, body composition, and hormone signaling.
 
@@ -108,9 +108,9 @@ Some peptides are still being studied and may be discussed in sports medicine or
 
 Examples include:
 
-* [BPC-157](/guides/bpc-157/)
-* [Thymosin Beta-4](/guides/thymosin-beta-4/)
-* [MOTS-c](/guides/mots-c/)
+* [BPC-157](/guides/bpc-157)
+* [Thymosin Beta-4](/guides/thymosin-beta-4)
+* [MOTS-c](/guides/mots-c)
 
 Clinical evidence for many experimental peptides remains limited.
 
@@ -200,13 +200,13 @@ A: Peptide drugs are used for conditions including diabetes, hormone deficiencie
 
 ## Related Guides
 
-* [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs/)
-* [Tirzepatide](/guides/tirzepatide/)
-* [Sermorelin](/guides/sermorelin/)
-* [Tesamorelin](/guides/tesamorelin/)
-* [BPC-157: Benefits, Risks, and What the Evidence Shows](/guides/bpc-157/)
-* [CJC-1295](/guides/cjc-1295/)
-* [Ipamorelin](/guides/ipamorelin/)
-* [Thymosin Beta-4](/guides/thymosin-beta-4/)
-* [MOTS-c](/guides/mots-c/)
-* [Oxytocin](/guides/oxytocin/)
+* [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs)
+* [Tirzepatide](/guides/tirzepatide)
+* [Sermorelin](/guides/sermorelin)
+* [Tesamorelin](/guides/tesamorelin)
+* [BPC-157: Benefits, Risks, and What the Evidence Shows](/guides/bpc-157)
+* [CJC-1295](/guides/cjc-1295)
+* [Ipamorelin](/guides/ipamorelin)
+* [Thymosin Beta-4](/guides/thymosin-beta-4)
+* [MOTS-c](/guides/mots-c)
+* [Oxytocin](/guides/oxytocin)

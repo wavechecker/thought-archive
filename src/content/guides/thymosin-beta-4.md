@@ -43,7 +43,7 @@ Its primary known function involves binding to **actin monomers** and regulating
 
 Because thymosin beta-4 appears to influence fundamental repair processes, researchers have studied whether delivering it externally could promote healing in injury, cardiac damage, or degenerative conditions.
 
-For background on how synthetic peptides are used in medicine more broadly, see [Peptide Therapy](/guides/peptide-therapy/).
+For background on how synthetic peptides are used in medicine more broadly, see [Peptide Therapy](/guides/peptide-therapy).
 
 ---
 
@@ -60,7 +60,7 @@ Second, animal studies have produced results that researchers found promising, p
 - central nervous system recovery
 - tendon and connective tissue injuries
 
-Third, online communities focused on injury recovery, biohacking, and longevity have adopted thymosin beta-4 (and the related synthetic analogue TB-500) as a topic of discussion, often in the same context as [BPC-157](/guides/bpc-157/) — another experimental peptide discussed for tissue-repair claims.
+Third, online communities focused on injury recovery, biohacking, and longevity have adopted thymosin beta-4 (and the related synthetic analogue TB-500) as a topic of discussion, often in the same context as [BPC-157](/guides/bpc-157) — another experimental peptide discussed for tissue-repair claims.
 
 The combination of plausible biology, animal-model findings, and active online communities has driven interest that frequently exceeds what clinical research can currently support.
 
@@ -127,7 +127,7 @@ Concerns with research-grade peptide products include:
 
 Regulatory agencies have expressed concern about the marketing of unapproved peptide products. Products obtained outside a regulated pharmaceutical supply chain may not match the compounds used in research settings.
 
-For a broader discussion of regulatory and quality issues affecting peptide markets, see [Peptide Therapy](/guides/peptide-therapy/).
+For a broader discussion of regulatory and quality issues affecting peptide markets, see [Peptide Therapy](/guides/peptide-therapy).
 
 ---
 
@@ -182,5 +182,5 @@ A: Human clinical evidence is limited, approved uses are narrow, and products av
 
 ## Related Guides
 
-- [Peptide Therapy](/guides/peptide-therapy/)
-- [BPC-157](/guides/bpc-157/)
+- [Peptide Therapy](/guides/peptide-therapy)
+- [BPC-157](/guides/bpc-157)

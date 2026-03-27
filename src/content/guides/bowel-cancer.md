@@ -56,12 +56,12 @@ If you are experiencing sudden heavy rectal bleeding, severe abdominal pain, or 
 
 If you are new to this topic, these are the most important guides:
 
-- [Understanding Bowel Cancer — Risks and Symptoms](/guides/understanding-bowel-cancer/) — What it is, how it develops, and warning signs to know.
-- [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening/) — How FIT testing and colonoscopy work, and who should be screened.
-- [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained/) — A plain-language walkthrough of the screening process.
-- [Treatment Pathways — Surgery, Chemo, Radiotherapy](/guides/bowel-cancer-treatment/) — What the main treatments involve and what to expect.
-- [Living With Bowel Cancer](/guides/living-with-bowel-cancer/) — Practical guidance on managing daily life during treatment.
-- [Family Risk and Genetics in Bowel Cancer](/guides/bowel-cancer-genetics/) — Inherited risk, Lynch syndrome, and who should consider genetic testing.
+- [Understanding Bowel Cancer — Risks and Symptoms](/guides/understanding-bowel-cancer) — What it is, how it develops, and warning signs to know.
+- [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening) — How FIT testing and colonoscopy work, and who should be screened.
+- [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained) — A plain-language walkthrough of the screening process.
+- [Treatment Pathways — Surgery, Chemo, Radiotherapy](/guides/bowel-cancer-treatment) — What the main treatments involve and what to expect.
+- [Living With Bowel Cancer](/guides/living-with-bowel-cancer) — Practical guidance on managing daily life during treatment.
+- [Family Risk and Genetics in Bowel Cancer](/guides/bowel-cancer-genetics) — Inherited risk, Lynch syndrome, and who should consider genetic testing.
 
 ---
 
@@ -81,30 +81,30 @@ If you are new to this topic, these are the most important guides:
 - Vomiting with abdominal distension
 - Signs of shock — rapid heart rate, pale skin, dizziness, confusion
 
-See also: [Emergencies — Guide Hub](/guides/emergencies/) | [Severe Bleeding — First Aid](/guides/severe-bleeding/)
+See also: [Emergencies — Guide Hub](/guides/emergencies) | [Severe Bleeding — First Aid](/guides/severe-bleeding)
 
 ---
 
 ## Key Guides
 
 ### Understanding the Disease
-- [Understanding Bowel Cancer — Risks and Symptoms](/guides/understanding-bowel-cancer/) — Causes, risk factors, how polyps become cancer, and the symptoms to watch for.
-- [Family Risk and Genetics in Bowel Cancer](/guides/bowel-cancer-genetics/) — Covers Lynch syndrome, familial adenomatous polyposis (FAP), and when to consider genetic counselling.
+- [Understanding Bowel Cancer — Risks and Symptoms](/guides/understanding-bowel-cancer) — Causes, risk factors, how polyps become cancer, and the symptoms to watch for.
+- [Family Risk and Genetics in Bowel Cancer](/guides/bowel-cancer-genetics) — Covers Lynch syndrome, familial adenomatous polyposis (FAP), and when to consider genetic counselling.
 
 ### Screening and Early Detection
-- [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening/) — Who needs screening, FIT test vs colonoscopy, and how to prepare.
-- [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained/) — Plain-language guide to what happens at each stage of the screening process.
+- [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening) — Who needs screening, FIT test vs colonoscopy, and how to prepare.
+- [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained) — Plain-language guide to what happens at each stage of the screening process.
 
 ### Treatment
-- [Treatment Pathways — Surgery, Chemo, Radiotherapy](/guides/bowel-cancer-treatment/) — The main treatment options, what each involves, and how they are combined.
+- [Treatment Pathways — Surgery, Chemo, Radiotherapy](/guides/bowel-cancer-treatment) — The main treatment options, what each involves, and how they are combined.
 
 ### Living Well During Treatment
-- [Living With Bowel Cancer](/guides/living-with-bowel-cancer/) — Coping with side effects, maintaining activity, emotional health, and practical support.
-- [Nutrition Basics for Bowel Cancer](/guides/bowel-cancer-nutrition/) — Eating well during and after treatment, managing stoma diet, and weight concerns.
+- [Living With Bowel Cancer](/guides/living-with-bowel-cancer) — Coping with side effects, maintaining activity, emotional health, and practical support.
+- [Nutrition Basics for Bowel Cancer](/guides/bowel-cancer-nutrition) — Eating well during and after treatment, managing stoma diet, and weight concerns.
 
 ### Survivorship and Long-Term Care
-- [Bowel Cancer Survivorship](/guides/bowel-cancer-survivorship/) — Follow-up schedules, managing late effects, and returning to normal life.
-- [Palliative Care in Bowel Cancer — Comfort, Dignity, and Support](/guides/bowel-cancer-palliative-care/) — Symptom management, advance care planning, and support for patients and families.
+- [Bowel Cancer Survivorship](/guides/bowel-cancer-survivorship) — Follow-up schedules, managing late effects, and returning to normal life.
+- [Palliative Care in Bowel Cancer — Comfort, Dignity, and Support](/guides/bowel-cancer-palliative-care) — Symptom management, advance care planning, and support for patients and families.
 
 ---
 
@@ -160,9 +160,9 @@ Seek emergency care for large rectal bleeds, sudden severe abdominal pain, bowel
 
 ## Related Guides
 
-- [Cancer — Guide Hub](/guides/cancer/) — Overview of all cancer types covered on this site.
-- [Palliative Care — Guide Hub](/guides/palliative-care/) — Supportive and comfort-focused care for serious illness.
-- [Emergencies — Guide Hub](/guides/emergencies/) — When symptoms become urgent.
+- [Cancer — Guide Hub](/guides/cancer) — Overview of all cancer types covered on this site.
+- [Palliative Care — Guide Hub](/guides/palliative-care) — Supportive and comfort-focused care for serious illness.
+- [Emergencies — Guide Hub](/guides/emergencies) — When symptoms become urgent.
 
 ---
 

@@ -67,7 +67,7 @@ Less common, but possible—especially in ketosis-prone T2 or with SGLT2 inhibit
 - [ADA — DKA Basics](https://diabetes.org/)  
 
 ## Related Guides
-- [Recognising Highs and Lows](/guides/recognising-highs-and-lows/)  
-- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia/)  
-- [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise/)  
+- [Recognising Highs and Lows](/guides/recognising-highs-and-lows)  
+- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia)  
+- [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise)  
 

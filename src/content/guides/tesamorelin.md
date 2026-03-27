@@ -106,7 +106,7 @@ A: High levels of visceral fat are associated with increased risk of metabolic d
 
 ## Related Guides
 
-- [Peptide Therapy](/guides/peptide-therapy/)
-- [CJC-1295](/guides/cjc-1295/)
-- [Sermorelin](/guides/sermorelin/)
-- [Ipamorelin](/guides/ipamorelin/)
+- [Peptide Therapy](/guides/peptide-therapy)
+- [CJC-1295](/guides/cjc-1295)
+- [Sermorelin](/guides/sermorelin)
+- [Ipamorelin](/guides/ipamorelin)

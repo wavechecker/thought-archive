@@ -56,7 +56,7 @@ These are the most medically established.
 - GLP-1 drugs regulate appetite and insulin  
 - Used in obesity and diabetes  
 
-👉 Read more: [/guides/glp-1-weight-loss-drugs]
+👉 Read more: [GLP-1 Weight Loss Drugs: How They Work, Benefits, and Risks](/guides/glp-1-weight-loss-drugs)
 
 ---
 
@@ -67,8 +67,8 @@ Focused on tissue repair and regeneration.
 - **BPC-157** → injury and gut healing claims  
 - **TB-500** → muscle recovery  
 
-👉 Read more: [/guides/bpc-157]  
-👉 Read more: [/guides/thymosin-beta-4]
+👉 Read more: [BPC-157: Benefits, Risks, and What the Evidence Shows](/guides/bpc-157)  
+👉 Read more: [Thymosin Beta-4: What It Is and What the Evidence Shows](/guides/thymosin-beta-4)
 
 ---
 
@@ -178,7 +178,7 @@ A: Most commonly marketed peptides are injectable, which raises additional safet
 
 ## Related Guides
 
-- [/guides/bpc-157]
-- [/guides/thymosin-beta-4]
-- [/guides/cjc-1295]
-- [/guides/ipamorelin]
+- [BPC-157: Benefits, Risks, and What the Evidence Shows](/guides/bpc-157)
+- [Thymosin Beta-4: What It Is and What the Evidence Shows](/guides/thymosin-beta-4)
+- [CJC-1295: Uses, Mechanism, and What the Evidence Shows](/guides/cjc-1295)
+- [Ipamorelin: Uses, Mechanism, and What the Evidence Shows](/guides/ipamorelin)

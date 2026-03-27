@@ -44,7 +44,7 @@ As a peptide hormone, oxytocin acts on receptors distributed throughout the body
 
 Oxytocin is structurally similar to vasopressin (antidiuretic hormone), and the two peptides share overlapping receptor activity. This accounts for some of oxytocin's cardiovascular and fluid-balance effects, as well as certain risks at high doses.
 
-For context on how peptide hormones are studied and used in medicine more broadly, see [Peptide Therapy](/guides/peptide-therapy/).
+For context on how peptide hormones are studied and used in medicine more broadly, see [Peptide Therapy](/guides/peptide-therapy).
 
 ---
 
@@ -84,7 +84,7 @@ Research questions that have been investigated include:
 - whether it plays a role in appetite regulation and metabolic health
 - whether changes in oxytocin levels with age contribute to social or metabolic decline
 
-Oxytocin has also appeared in discussions about peptide therapy and longevity medicine, often marketed alongside other peptides. For broader context on these discussions, see [Peptide Therapy](/guides/peptide-therapy/).
+Oxytocin has also appeared in discussions about peptide therapy and longevity medicine, often marketed alongside other peptides. For broader context on these discussions, see [Peptide Therapy](/guides/peptide-therapy).
 
 ---
 
@@ -210,5 +210,5 @@ A: Some studies have found associations between age and oxytocin levels, but fin
 
 ## Related Guides
 
-- [Peptide Therapy](/guides/peptide-therapy/)
-- [Anxiety](/guides/anxiety/)
+- [Peptide Therapy](/guides/peptide-therapy)
+- [Anxiety](/guides/anxiety)

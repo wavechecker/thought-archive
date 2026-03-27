@@ -118,7 +118,7 @@ Claims about tirzepatide specifically reducing cardiovascular risk should be eva
 
 Some clinical data suggest tirzepatide may preserve a higher proportion of lean mass during weight loss than seen in historical comparisons. This remains an active area of study. The general risk of lean mass loss during any significant caloric deficit applies; structured resistance training and adequate protein intake remain important for patients on this medication.
 
-See [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp-1/) for practical guidance on this topic.
+See [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp-1) for practical guidance on this topic.
 
 ---
 
@@ -248,8 +248,8 @@ A: Animal studies found that GLP-1 receptor agonists caused thyroid C-cell tumou
 
 ## Related Guides
 
-* [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs/)
-* [Ozempic and GLP-1 Weight Loss Drugs](/guides/ozempic-glp-1-guide/)
-* [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp-1/)
-* [GLP-1 Side Effects: Evidence vs Myth](/guides/glp-1-side-effects-evidence-vs-myth/)
-* [Peptide Therapy](/guides/peptide-therapy/)
+* [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs)
+* [Ozempic and GLP-1 Weight Loss Drugs](/guides/ozempic-glp-1-guide)
+* [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp-1)
+* [GLP-1 Side Effects: Evidence vs Myth](/guides/glp-1-side-effects-evidence-vs-myth)
+* [Peptide Therapy](/guides/peptide-therapy)

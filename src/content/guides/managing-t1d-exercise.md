@@ -107,8 +107,8 @@ Pumps allow **temp basal adjustments**. With MDI, pre-planning bolus reductions 
 ---
 
 ## Related Guides
-- [Type 1 Diabetes — Guide Hub](/guides/type-1-diabetes/)  
-- [Managing Hypoglycaemia in Type 1 Diabetes](/guides/type-1-diabetes-managing-hypoglycaemia/)  
-- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia/)  
-- [Recognising Highs and Lows](/guides/recognising-highs-and-lows/)  
-- [Insulin Types Explained](/guides/insulin-types-explained/)  
+- [Type 1 Diabetes — Guide Hub](/guides/type-1-diabetes)  
+- [Managing Hypoglycaemia in Type 1 Diabetes](/guides/type-1-diabetes-managing-hypoglycaemia)  
+- [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia)  
+- [Recognising Highs and Lows](/guides/recognising-highs-and-lows)  
+- [Insulin Types Explained](/guides/insulin-types-explained)  

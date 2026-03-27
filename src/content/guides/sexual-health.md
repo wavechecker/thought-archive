@@ -54,8 +54,8 @@ This hub provides evidence-based guides on contraception, STI prevention, and sa
 ---
 
 ## Core Guides
-- [HPV Vaccine](/guides/hpv-vaccine/)  
-- [Vaccination Safety Overview](/guides/vaccination-safety-overview/)  
+- [HPV Vaccine](/guides/hpv-vaccine)  
+- [Vaccination Safety Overview](/guides/vaccination-safety-overview)  
 - [Contraception Options — Guide](/guides/contraception-options)  
 - [STI Prevention Basics](/guides/sti-prevention)  
 - [HIV PrEP — Pre-Exposure Prophylaxis](/guides/hiv-prep)  
@@ -75,8 +75,8 @@ A: HPV and hepatitis B vaccines protect against infections that can lead to canc
 ---
 
 ## Related Hubs
-- [Preventive Health — Guide Hub](/guides/preventive-health/)  
-- [Infectious Diseases — Guide Hub](/guides/infectious-diseases/)  
+- [Preventive Health — Guide Hub](/guides/preventive-health)  
+- [Infectious Diseases — Guide Hub](/guides/infectious-diseases)  
 
 *Last reviewed: September 17, 2025*  
 
