@@ -3,7 +3,7 @@ title: "Peptides Explained: What Each Peptide Does (Simple Guide)"
 description: "A clear, practical guide to common peptides — what they do, how they work, and how they differ."
 category: "General Health"
 publishDate: "2026-03-25"
-updatedDate: "2026-03-25"
+updatedDate: "2026-04-01"
 tags: ["peptides", "hormones", "longevity", "metabolic health"]
 draft: false
 ---
@@ -171,12 +171,14 @@ A: Most commonly marketed peptides are injectable, which raises additional safet
 
 ---
 
-## Further Reading
-
-- [Peptide therapy overview](/guides/peptide-therapy)
-- [GLP-1 weight-loss drugs](/guides/glp-1-weight-loss-drugs)
-
 ## Related Guides
+
+**Overviews**
+
+- [Peptide Therapy: What It Is, How It Works, and Safety Considerations](/guides/peptide-therapy)
+- [GLP-1 Weight Loss Drugs: How They Work, Benefits, and Risks](/guides/glp-1-weight-loss-drugs)
+
+**Compound deep-dives**
 
 - [BPC-157: Benefits, Risks, and What the Evidence Shows](/guides/bpc-157)
 - [Thymosin Beta-4: What It Is and What the Evidence Shows](/guides/thymosin-beta-4)
