@@ -160,7 +160,7 @@ If someone is in immediate danger of harming themselves or others, call emergenc
 
 ## Related Hubs
 - [Emergencies — Guide Hub](/guides/emergencies)
-- [Neurology — Guide Hub](/guides/neurology)
+- [Brain Health Hub](/guides/brain-health-hub)
 - [Public Health — Guide Hub](/guides/public-health)
 
 ---
