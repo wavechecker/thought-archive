@@ -107,6 +107,15 @@ Your clinician can help you weigh the benefits and limitations of any test in yo
 - [Blood Oxygen Levels and Pulse Oximeters](/guides/blood-oxygen-pulse-oximeters)
 - [Understanding HbA1c](/guides/understanding-hba1c)
 
+## Cardiovascular Risk (Beyond Standard Testing)
+
+Standard cholesterol tests and risk calculators don't capture the full picture of heart disease risk. These guides cover newer tools that improve individual risk prediction:
+
+- [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
+- [ApoB vs LDL Cholesterol](/guides/apob-vs-ldl-cholesterol)
+- [Coronary Artery Calcium (CAC) Score](/guides/coronary-artery-calcium-score)
+- [Lipoprotein(a) Explained](/guides/lipoprotein-a-explained)
+
 ## Related Hubs
 - [Preventive Health — Guide Hub](/guides/preventive-health)
 - [Cancer — Guide Hub](/guides/cancer)
