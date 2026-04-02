@@ -24,6 +24,11 @@ export const HUBS: FeaturedHub[] = [
     title: "Mental Health",
     href: "/guides/mental-health",
     description: "Anxiety, depression, ADHD, sleep, and evidence-based care."
+  },
+  {
+    title: "Brain Health",
+    href: "/guides/brain-health-hub",
+    description: "Stroke, TIA, dementia, and brain health prevention."
   }
 ];
 
