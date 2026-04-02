@@ -6,7 +6,7 @@ publishDate: "2025-09-05"
 tags: ["opinion", "analysis", "politics", "health", "science"]
 draft: false
 related:
-  - /guides/vaccination-hub
+  - /guides/vaccination
 ---
 
 ## The Hook
@@ -35,7 +35,7 @@ Vaccine access is not an abstract fight. Recommendations drive pharmacy shelves,
 The bigger picture? A nation already divided over truth and trust now has a health secretary who treats science as optional. That makes us all less safe.
 
 ## Further Reading
-- [Vaccination Hub](/guides/vaccination-hub)  
+- [Vaccination Hub](/guides/vaccination)  
 - [CDC on COVID-19 mortality](https://www.cdc.gov/)  
 
 ## Closing

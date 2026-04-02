@@ -162,5 +162,5 @@ A: Use antibiotics only when prescribed, finish the full course, stay up to date
 - [WHO: Antimicrobial Resistance Fact Sheet](https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance)  
 
 ## Related Guides
-- [Vaccination Hub](/guides/vaccination-hub)  
+- [Vaccination Hub](/guides/vaccination)
 - [Sepsis](/guides/sepsis)  
