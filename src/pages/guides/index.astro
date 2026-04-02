@@ -54,9 +54,11 @@ const MAX_VISIBLE = 5;
 // Optional overrides: point some categories to a hub page
 const overrides: Record<string, string> = {
   "Mental Health": "/guides/mental-health",
+  "Neurology": "/guides/brain-health-hub",
+  "Heart & Circulation": "/guides/heart-health-hub",
+  "Vaccination": "/guides/vaccination",
   // Add more when ready:
   // "Child & Adolescent Health": "/guides/child-and-adolescent-health",
-  // "Vaccination": "/guides/vaccination",
   // "Emergencies": "/guides/emergencies",
 };
 
@@ -149,6 +151,10 @@ const frontmatter = {
                 );
               })}
             </ul>
+
+            {overrides[cat] && (
+              <a href={defaultHref} class="pg-category-card__archive-link">Browse all {cat} guides →</a>
+            )}
 
             {hidden.length > 0 && (
               <details class="pg-category-card__more">
@@ -356,5 +362,18 @@ const frontmatter = {
 
   .pg-category-card__more .pg-category-card__list {
     margin-top: var(--pg-space-3);
+  }
+
+  .pg-category-card__archive-link {
+    display: inline-block;
+    margin-top: var(--pg-space-3);
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+    text-decoration: none;
+  }
+
+  .pg-category-card__archive-link:hover {
+    color: var(--pg-link);
+    text-decoration: underline;
   }
 </style>
