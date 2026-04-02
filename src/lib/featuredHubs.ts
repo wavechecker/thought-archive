@@ -12,18 +12,13 @@ export const HUBS: FeaturedHub[] = [
   },
   {
     title: "Aging & Longevity",
-    href: "/guides/aging-longevity",
+    href: "/guides/aging-and-longevity-basics",
     description: "Aging biology, lifespan heritability, and longevity debates."
   },
   {
     title: "Infectious Diseases",
     href: "/guides/infectious-diseases",
     description: "Outbreaks, vaccines, and practical infectious disease guidance."
-  },
-  {
-    title: "Neurology",
-    href: "/guides/neurology",
-    description: "Stroke, TIA, emergency neurology, and brain health."
   },
   {
     title: "Mental Health",
