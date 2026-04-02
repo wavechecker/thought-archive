@@ -82,7 +82,7 @@ Clinical trials show GLP-1 drugs can:
 
 * reduce body weight
 * improve blood sugar control
-* lower cardiovascular risk
+* lower [cardiovascular risk](/guides/cardiovascular-risk-assessment)
 * improve metabolic health markers
 
 These outcomes represent a major change in how obesity is treated.
@@ -148,3 +148,4 @@ A: They represent one of the first treatments that can produce significant, sust
 * [Ozempic and GLP-1 Weight Loss Drugs](/guides/ozempic-glp-1-guide)
 * [Peptide Therapy](/guides/peptide-therapy)
 * [Muscle Preservation on GLP-1 Medications](/guides/muscle-preservation-glp-1)
+* [ApoB vs LDL Cholesterol: Which Matters More for Heart Risk?](/guides/apob-vs-ldl-cholesterol)

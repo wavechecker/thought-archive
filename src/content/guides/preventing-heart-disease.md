@@ -80,7 +80,7 @@ Heart disease remains one of the leading causes of illness and death worldwide. 
 
 ## Medical Screening & Risk Factor Management
 - **Blood pressure checks**: high blood pressure often has no symptoms.  
-- **Cholesterol tests**: high cholesterol contributes to atherosclerosis.  
+- **Cholesterol tests**: high cholesterol contributes to atherosclerosis. [ApoB may be a more accurate measure than standard LDL](/guides/apob-vs-ldl-cholesterol) for assessing atherogenic particle burden.  
 - **Diabetes screening**: manage blood glucose early to reduce complications.  
 - **Weight/BMI**: maintain a healthy weight.  
 - **Family history**: be aware if relatives had early heart disease.  
@@ -99,6 +99,8 @@ Heart disease remains one of the leading causes of illness and death worldwide. 
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)  
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
 - [Preventive Health — Guide Hub](/guides/preventive-health)  
+- [Coronary Artery Calcium (CAC) Score](/guides/coronary-artery-calcium-score)  
+- [Lipoprotein(a): The Overlooked Genetic Heart Risk Factor](/guides/lipoprotein-a-explained)  
 
 ---
 

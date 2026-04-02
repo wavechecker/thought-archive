@@ -57,7 +57,7 @@ Metabolic syndrome is a powerful independent predictor of cardiovascular disease
 - **Accelerated atherosclerosis**: elevated triglycerides, low HDL, and chronic inflammation contribute to plaque formation in arteries, increasing risk of heart attack and stroke even before formal diabetes develops.
 - **Kidney and liver involvement**: metabolic syndrome is closely associated with non-alcoholic fatty liver disease (NAFLD) and chronic kidney disease, adding further systemic risk.
 
-Because metabolic syndrome frequently has no obvious symptoms, many people are unaware they have it until screening reveals multiple abnormal values. Routine checks of blood pressure, fasting glucose, cholesterol, and waist circumference are the primary way to detect it early. See [Testing & Screening — Guide Hub](/guides/testing-and-screening) for more on preventive screening.
+Because metabolic syndrome frequently has no obvious symptoms, many people are unaware they have it until screening reveals multiple abnormal values. Routine checks of blood pressure, fasting glucose, cholesterol, and waist circumference are the primary way to detect it early. See [Testing & Screening — Guide Hub](/guides/testing-and-screening) for more on preventive screening, and [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) for tools that go beyond standard cholesterol tests.
 
 ---
 
@@ -134,6 +134,7 @@ A: Yes. Rates of metabolic syndrome in children and adolescents are rising in pa
 - [Diabetes — Guide Hub](/guides/diabetes-hub)
 - [Obesity Basics](/guides/obesity-basics)
 - [Waist-to-Hip Ratio (WHR)](/guides/waist-to-hip-ratio)
+- [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
 
 ---
 
