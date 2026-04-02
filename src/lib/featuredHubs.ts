@@ -7,7 +7,7 @@ export type FeaturedHub = {
 export const HUBS: FeaturedHub[] = [
   {
     title: "Metabolic Health",
-    href: "/guides/metabolic-health",
+    href: "/guides/metabolic-health-hub",
     description: "Weight, insulin resistance, GLP-1s, and cardiometabolic risk."
   },
   {
