@@ -4,6 +4,7 @@ slug: "mrna-vaccines"
 description: "A guide to mRNA vaccine technology: how it works, its benefits, risks, and future applications."
 category: "Vaccination"
 publishDate: "2025-09-05"
+updatedDate: "2026-04-13"
 tags: ["mrna", "covid-19", "safety", "technology", "public health"]
 draft: false
 ---
@@ -54,11 +55,11 @@ They were first deployed at scale during the COVID-19 pandemic and showed high e
 - **ATAGI (Australia):** Strongly recommends mRNA vaccines for eligible groups, with guidance on myocarditis risk.  
 
 ## Future Directions
-- **Seasonal influenza:** Trials underway.  
-- **RSV:** Late-stage clinical candidates.  
-- **Chronic infections:** HIV, hepatitis.  
-- **Cancer vaccines:** Personalized mRNA vaccines targeting tumor antigens.  
-- **Other applications:** Potential for rapid response to emerging pathogens.  
+- **Seasonal influenza:** Phase 3 trials ongoing; mRNA flu vaccines aim to improve annual strain matching speed and breadth.  
+- **RSV:** Moderna's mRESVIA (mRNA-1345) received FDA approval in June 2024 for adults ≥60 — the first mRNA vaccine approved for a disease other than COVID-19.  
+- **Chronic infections:** HIV and hepatitis B are active research targets.  
+- **Cancer vaccines:** Personalized mRNA vaccines targeting tumor-specific neoantigens are in clinical trials, including combinations with checkpoint inhibitors.  
+- **Other applications:** The platform's speed gives it particular value for rapid response to emerging pathogens.  
 
 ## Myths and Misconceptions
 - **“mRNA changes DNA.”** False — mRNA never enters the nucleus.  

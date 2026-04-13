@@ -4,7 +4,7 @@ slug: "hpv-vaccine"
 description: "Guide to the HPV vaccine, its role in preventing cervical and other cancers, and safety evidence."
 category: "Vaccination"
 publishDate: "2025-08-26"
-updatedDate: "2025-08-29"
+updatedDate: "2026-04-13"
 tags: ["HPV", "vaccination", "cancer prevention", "sexual health", "public health", "patientguide"]
 draft: false
 ---
@@ -24,7 +24,7 @@ The human papillomavirus (HPV) vaccine protects against infection from HPV strai
 HPV is a common sexually transmitted infection; most people are exposed at some point. Persistent infection with high-risk HPV types can lead to cancer.  
 
 - **Development:** The first HPV vaccines (bivalent and quadrivalent) were approved in the mid-2000s.  
-- **Global rollout:** Over 125 countries now include HPV vaccination in national immunisation programs.  
+- **Global rollout:** Over 140 countries now include HPV vaccination in national immunisation programs.  
 - **Equity issue:** Uptake remains lower in many low- and middle-income countries, despite high cervical cancer burden.  
 
 ## Evidence
@@ -54,7 +54,7 @@ A: Yes, but benefits decrease with age as more people have already been exposed 
 A: No. It protects against the majority caused by high-risk HPV strains, but cervical screening (Pap tests, HPV DNA tests) remains important.  
 
 **Q: How many doses are needed?**  
-A: WHO and many countries now recommend a **single dose** for adolescents, though some programs still use two doses. Adults often require three.  
+A: WHO recommends a **single dose** for adolescents aged 9–14; some programs still use two doses. People aged 15 and over generally require two or three doses depending on the product and program. Adults aged 27–45 may still benefit — discuss with your clinician.  
 
 ## Further Reading
 - [WHO: Human Papillomavirus (HPV) and Cervical Cancer](https://www.who.int/news-room/fact-sheets/detail/human-papillomavirus-(hpv)-and-cervical-cancer)  
@@ -72,10 +72,6 @@ A: WHO and many countries now recommend a **single dose** for adolescents, thoug
 ## Related Hubs
 - [Vaccination — Guide Hub](/guides/vaccination)  
 - [Sexual Health — Guide Hub](/guides/sexual-health)  
-
-*Last reviewed: August 29, 2025*
-
----
 
 ## Disclaimer
 This guide is for **educational purposes only** and is **not a substitute for professional medical advice**.  

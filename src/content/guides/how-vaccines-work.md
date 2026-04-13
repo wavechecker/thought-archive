@@ -4,6 +4,7 @@ slug: "how-vaccines-work"
 description: "A primer on the immune system, vaccine mechanisms, and how immunisation protects both individuals and communities."
 category: "Vaccination"
 publishDate: "2025-09-05"
+updatedDate: "2026-04-13"
 tags: ["immunology", "vaccines", "public health"]
 draft: false
 ---

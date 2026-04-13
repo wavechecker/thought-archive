@@ -4,7 +4,7 @@ slug: "antibiotic-resistance"
 description: "When bacteria and fungi no longer respond to the drugs meant to kill them, infections become harder — sometimes impossible — to treat."
 category: "Infectious Diseases"
 publishDate: "2025-09-29"
-updatedDate: "2025-09-29"
+updatedDate: "2026-04-13"
 tags: ["antibiotics", "drug resistance", "infectious diseases"]
 draft: false
 jsonld:
@@ -15,7 +15,7 @@ jsonld:
     "description": "When bacteria and fungi no longer respond to the drugs meant to kill them, infections become harder — sometimes impossible — to treat."
     "inLanguage": "en"
     "datePublished": "2025-09-29"
-    "dateModified": "2025-09-29"
+    "dateModified": "2026-04-13"
     "author":
       "@type": "Person"
       "name": "Michael Whitley"
@@ -156,6 +156,9 @@ A: Yes. By preventing infections, vaccines reduce antibiotic use and slow resist
 
 **Q: What can individuals do?**  
 A: Use antibiotics only when prescribed, finish the full course, stay up to date on vaccines, and practice hygiene.  
+
+**Q: Are new antibiotics being developed?**  
+A: Some, but not enough. The pipeline is thin — most pharmaceutical companies find antibiotic development economically unattractive because new drugs are often held in reserve. WHO and national governments are working on incentive programs to encourage investment.  
 
 ## Further Reading
 - [CDC: Antibiotic Resistance Threats in the U.S.](https://www.cdc.gov/drugresistance/biggest-threats.html)  

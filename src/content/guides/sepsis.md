@@ -3,7 +3,7 @@ title: "Sepsis"
 description: "Sepsis is a life-threatening condition caused by the body’s extreme response to an infection, leading to organ damage and shock if untreated."
 category: "Infectious Diseases"
 publishDate: "2025-09-15"
-updatedDate: "2025-09-15"
+updatedDate: "2026-04-13"
 tags: ["sepsis", "infection", "shock", "ICU", "emergency"]
 draft: false
 
@@ -104,6 +104,9 @@ A: Infants, older adults, people with weakened immune systems, and patients with
 
 **Q: When should I seek emergency care?**  
 A: If someone with an infection develops confusion, difficulty breathing, low blood pressure, or a rapid decline in health—call emergency services immediately.  
+
+**Q: What is post-sepsis syndrome?**  
+A: Many sepsis survivors experience lasting effects weeks to months after discharge, including fatigue, cognitive impairment, muscle weakness, sleep disturbances, and increased risk of re-infection. Follow-up care with a primary care physician is important after any sepsis hospitalization.  
 
 ## Further Reading
 - [Mayo Clinic: Sepsis Overview](https://www.mayoclinic.org/diseases-conditions/sepsis/symptoms-causes/syc-20351214)  

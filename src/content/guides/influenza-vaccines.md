@@ -4,7 +4,7 @@ slug: "influenza-vaccines"
 description: "Guide to seasonal influenza vaccination, effectiveness, safety, and public health impact."
 category: "Vaccination"
 publishDate: "2025-08-26"
-updatedDate: "2025-08-29"
+updatedDate: "2026-04-13"
 draft: false
 tags: ["influenza", "flu", "vaccination", "public health", "seasonal flu", "patientguide"]
 ---
@@ -58,6 +58,9 @@ A: Yes. While many cases are mild, flu causes hundreds of thousands of hospitali
 **Q: What if the vaccine is a poor match?**  
 A: Even in mismatch years, vaccination reduces severity, hospitalization, and complications.  
 
+**Q: Are there special flu vaccines for older adults?**  
+A: Yes. High-dose inactivated vaccines and adjuvanted vaccines (e.g., Fluzone High-Dose, Fluad) produce stronger immune responses in people ≥65. Most guidelines — including CDC and ATAGI — preferentially recommend these formulations for older adults over standard-dose vaccines.  
+
 ## Further Reading
 - [WHO: Influenza Vaccines](https://www.who.int/teams/immunization-vaccines-and-biologicals/diseases/influenza)  
 - [CDC: Seasonal Influenza Vaccination](https://www.cdc.gov/flu/prevent/vaccines.htm)  
@@ -74,7 +77,7 @@ A: Even in mismatch years, vaccination reduces severity, hospitalization, and co
 ## Related Hub
 - [Vaccination — Guide Hub](/guides/vaccination)  
 
-*Last reviewed: August 29, 2025*
+*Last reviewed: April 13, 2026*
 
 ---
 

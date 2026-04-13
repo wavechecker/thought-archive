@@ -4,6 +4,7 @@ slug: "testosterone-replacement-therapy"
 description: "Overview of low testosterone, how it’s diagnosed, and treatment options with testosterone replacement therapy."
 category: "Men's Health"
 publishDate: "2025-09-11"
+updatedDate: "2026-04-13"
 tags: ["testosterone", "men's health", "hormone therapy"]
 draft: false
 ---
@@ -43,7 +44,7 @@ Testosterone levels decline naturally with age, but true hypogonadism results fr
 ## Risks / Benefits / Prognosis
 - **Benefits**: improved libido, energy, muscle strength, bone density, mood.  
 - **Risks**: acne, fluid retention, breast enlargement, reduced fertility (sperm suppression), polycythemia (high red cell count).  
-- **Long-term concerns**: cardiovascular risk is debated; prostate cancer screening required before and during TRT.  
+- **Long-term concerns**: Cardiovascular risk was previously debated; the large TRAVERSE randomized trial (2023) found TRT did not increase the rate of major adverse cardiovascular events in men with hypogonadism and pre-existing cardiovascular disease or high cardiovascular risk, though it was associated with higher rates of atrial fibrillation, pulmonary embolism, and acute kidney injury. Prostate cancer screening is required before and during TRT.  
 - **Prognosis**: most men respond well if carefully selected, monitored, and managed.  
 
 ## FAQ
@@ -57,7 +58,7 @@ A: No. In fact, TRT usually suppresses sperm production. Other treatments (e.g.,
 A: Typically at 3–6 months after starting therapy, then annually (testosterone, hematocrit, PSA, liver function, lipid profile).  
 
 **Q: Is TRT safe long-term?**  
-A: Evidence is mixed; it can be safe with monitoring, but risks include blood thickening, prostate enlargement, and uncertain cardiovascular effects.  
+A: For most carefully selected men, TRT can be safe with appropriate monitoring. The 2023 TRAVERSE trial — the largest randomized cardiovascular safety study — did not show increased risk of major cardiac events (heart attack, stroke) in men with hypogonadism at cardiovascular risk, but did identify elevated rates of atrial fibrillation, blood clots, and acute kidney injury. Risks of blood thickening and prostate enlargement require ongoing monitoring.  
 
 ## Further Reading
 - [FDA: Testosterone Products Information](https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/testosterone-products)  
