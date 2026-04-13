@@ -1,0 +1,66 @@
+---
+// EmailSignup.astro — Brevo newsletter signup embed
+---
+
+<section class="pg-email-signup">
+  <div class="pg-email-signup__inner">
+    <h2 class="pg-email-signup__headline">Get clear, no-BS health insights</h2>
+    <p class="pg-email-signup__subtext">Practical explainers and sharp analysis. 1–2 emails per week.</p>
+    <div class="pg-email-signup__embed">
+      <iframe
+        width="100%"
+        height="360"
+        src="https://0435c33c.sibforms.com/serve/MUIFABrK7XSN4O6-XmOZsWWTbZw-uU50c9hnaP_wrtT5woBYbruhcLe2MvqpJYmeDzY4hKyXdHEhkDaoZs45Aeyytrfo_AoKHrHohFMqdgqTXSW8HXay_jjaLVHaVHrDqbPajXZT6k3sevWyvXQEBPMt8I6S-ccNqDneSUuxRMQmY1AL6L7a3XzwciMrWTQriJOsTrqWKHrhE3zGag=="
+        frameborder="0"
+        scrolling="auto"
+        allowfullscreen
+        style="display:block;margin-left:auto;margin-right:auto;max-width:100%;border:0;"
+        title="Email newsletter signup"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pg-email-signup {
+    margin-top: var(--pg-space-12);
+    margin-bottom: var(--pg-space-4);
+  }
+
+  .pg-email-signup__inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: var(--pg-space-8) var(--pg-space-6);
+    background: var(--pg-surface-soft);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-xl);
+    text-align: center;
+  }
+
+  .pg-email-signup__headline {
+    font-size: var(--pg-text-xl);
+    font-weight: 700;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-2);
+    line-height: var(--pg-leading-snug);
+  }
+
+  @media (min-width: 640px) {
+    .pg-email-signup__headline {
+      font-size: var(--pg-text-2xl);
+    }
+  }
+
+  .pg-email-signup__subtext {
+    font-size: var(--pg-text-base);
+    color: var(--pg-text-soft);
+    margin: 0 0 var(--pg-space-6);
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  .pg-email-signup__embed {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+</style>

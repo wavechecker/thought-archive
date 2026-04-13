@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { isValidDate, fmt } from "@/lib/date";
 import Layout from "@/layouts/Layout.astro";
 import AuthorCard from "@/components/AuthorCard.astro";
+import EmailSignup from "@/components/EmailSignup.astro";
 
 import StratBox from "@/components/StratBox.astro";
 import EvidenceBox from "@/components/EvidenceBox.astro";
@@ -379,6 +380,8 @@ const blogPostingLd = {
           note="This content is informational and not medical advice."
         />
       )}
+
+      <EmailSignup />
 
       <!-- End of post section -->
       <footer class="pg-post__footer">

@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { isValidDate, fmt } from "@/lib/date";
 import AuthorCard from "@/components/AuthorCard.astro";
+import EmailSignup from "@/components/EmailSignup.astro";
 
 // MDX components used inside guides
 import StratBox from "../../components/StratBox.astro";
@@ -263,6 +264,8 @@ const medicalWebPageLd = {
         note="This content is informational and not medical advice."
       />
     )}
+
+    <EmailSignup />
 
     <!-- Article footer -->
     <footer class="pg-article__footer">
