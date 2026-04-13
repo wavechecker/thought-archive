@@ -3,7 +3,8 @@ title: "Whooping Cough (Pertussis): Why Vaccination Still Matters"
 slug: "whooping-cough"
 description: "Pertussis is a highly contagious respiratory infection. Vaccination remains the best protection for children and communities."
 category: "Infectious Diseases"
-publishDate: "publishDate: 2025-09-04"
+publishDate: "2025-09-04"
+updatedDate: "2026-04-13"
 tags: ["whooping cough", "pertussis", "vaccines", "public health"]
 draft: false
 ---
@@ -62,8 +63,11 @@ A: Yes. Side effects are usually mild (soreness, low fever). Serious reactions a
 **Q: Why is pertussis more severe in babies?**  
 A: Infants have smaller airways and weaker immune systems, making them especially vulnerable to complications.  
 
----
+## Further Reading
+- [CDC: Pertussis (Whooping Cough)](https://www.cdc.gov/pertussis/)
+- [WHO: Pertussis Fact Sheet](https://www.who.int/health-topics/pertussis)
 
-**Further Reading**  
-- [CDC: Pertussis (Whooping Cough)](https://www.cdc.gov/pertussis/)  
-- [WHO: Pertussis Fact Sheet](https://www.who.int/health-topics/pertussis)  
+## Related Guides
+- [How Vaccines Work](/guides/how-vaccines-work)
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring)
+- [Vaccination — Guide Hub](/guides/vaccination)

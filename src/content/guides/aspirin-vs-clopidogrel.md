@@ -13,27 +13,49 @@ tags:
   - stroke
   - antiplatelet
 draft: false
-updatedDate: '2025-09-01'
+updatedDate: '2026-04-13'
 schema:
   medicalCondition:
     name: Aspirin vs Clopidogrel — Which Is Better for Heart Disease?
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    description: >-
+      Aspirin and clopidogrel are antiplatelet medicines used to reduce the risk
+      of heart attacks and strokes in people with coronary artery disease. They
+      work through different mechanisms and carry different side-effect profiles.
+    alternateName:
+      - Antiplatelet therapy comparison
     riskFactors:
-      - 'TODO risk factor #1'
+      - Coronary artery disease
+      - Prior heart attack or stent placement
+      - Aspirin intolerance or GI sensitivity
+      - High bleeding risk
     symptoms:
-      - 'TODO symptom #1'
+      - Chest pain or pressure
+      - Shortness of breath
+      - Heart palpitations
+      - Fatigue or light-headedness
     possibleComplication:
-      - 'TODO complication #1'
+      - Heart attack
+      - Ischaemic stroke
+      - Gastrointestinal bleeding
+      - Major haemorrhage
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - 'https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Antithrombotic-Therapy-in-Atrial-Fibrillation'
+      - 'https://medlineplus.gov/heartdiseases.html'
 faq:
-  - q: What is aspirin vs clopidogrel — which is better for heart disease??
-    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: Which is more effective — aspirin or clopidogrel for coronary artery disease?
+    a: >-
+      A 2025 meta-analysis of ~29,000 patients found clopidogrel reduced major
+      cardiovascular events by about 14% more than aspirin, with a similar
+      bleeding risk. However, current guidelines still recommend aspirin in many
+      situations, and any switch should be made under medical supervision.
   - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+    a: >-
+      Call emergency services immediately if you have sudden chest pain, pain
+      spreading to your arm or jaw, severe shortness of breath, sudden
+      weakness or numbness on one side, or signs of a stroke (face drooping,
+      arm weakness, speech difficulty). Do not stop your antiplatelet medicine
+      without first speaking to your doctor.
 ---
 # Aspirin vs Clopidogrel — Which Is Better for Heart Disease?
 

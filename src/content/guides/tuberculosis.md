@@ -3,7 +3,8 @@ title: "Tuberculosis (TB): Causes, Symptoms, and Treatment"
 slug: "tuberculosis"
 description: "Tuberculosis is a serious bacterial infection that primarily affects the lungs. Learn about transmission, symptoms, diagnosis, prevention, and treatment."
 category: "Infectious Diseases"
-publishDate: "publishDate: 2025-09-04"
+publishDate: "2025-09-04"
+updatedDate: "2026-04-13"
 tags: ["tuberculosis", "TB", "infection", "antibiotics", "public health"]
 draft: false
 ---
@@ -83,6 +84,11 @@ A: No. While most cases occur in low- and middle-income countries, TB also affec
 ---
 
 ## Further Reading
-- [CDC: Tuberculosis (TB)](https://www.cdc.gov/tb/)  
-- [WHO: Global Tuberculosis Programme](https://www.who.int/teams/global-tuberculosis-programme)  
-- [Stop TB Partnership](https://www.stoptb.org/)  
+- [CDC: Tuberculosis (TB)](https://www.cdc.gov/tb/)
+- [WHO: Global Tuberculosis Programme](https://www.who.int/teams/global-tuberculosis-programme)
+- [Stop TB Partnership](https://www.stoptb.org/)
+
+## Related Guides
+- [Antibiotic Resistance](/guides/antibiotic-resistance)
+- [Sepsis](/guides/sepsis)
+- [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring)

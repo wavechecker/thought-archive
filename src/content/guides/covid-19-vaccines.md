@@ -3,8 +3,8 @@ title: "COVID-19 Vaccines: What We Know, What We Don’t"
 slug: "covid-19-vaccines"
 description: "mRNA vaccines changed the course of the pandemic. Understanding their benefits, limitations, and uncertainties is key to informed choice."
 category: "Infectious Diseases"
-publishDate: "publishDate: 2025-09-04"
-updatedDate: "updatedDate: 2025-09-04"
+publishDate: "2025-09-04"
+updatedDate: "2026-04-13"
 tags: ["COVID-19", "vaccines", "mRNA", "safety", "public health"]
 draft: false
 ---
