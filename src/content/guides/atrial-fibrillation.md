@@ -74,6 +74,7 @@ faq:
 ## Related Guides
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)  
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)  
+- [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention)  
 
 ---
 

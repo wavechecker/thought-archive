@@ -158,10 +158,13 @@ If someone is in immediate danger of harming themselves or others, call emergenc
 
 ---
 
-## Related Hubs
-- [Emergencies — Guide Hub](/guides/emergencies)
-- [Brain Health Hub](/guides/brain-health-hub)
-- [Public Health — Guide Hub](/guides/public-health)
+## Related Guides
+- [Shared Genetics in Psychiatric Disorders](/guides/shared-genetics-psychiatric-disorders) — the biological overlap between depression, anxiety, and other conditions.
+- [Sleep and Mental Health](/guides/sleep) — poor sleep and mental illness are bidirectionally linked; sleep is a first-line modifiable factor.
+- [Smoking Cessation](/guides/smoking-cessation) — smoking rates are substantially higher in people with mental illness; quitting improves outcomes.
+- [Brain Health Hub](/guides/brain-health-hub) — the cognitive and neurological context surrounding mental health conditions.
+- [Emergencies — Guide Hub](/guides/emergencies) — what to do when a mental health situation becomes a medical emergency.
+- [Preventive Health Hub](/guides/preventive-health) — mental health in the context of whole-person preventive care.
 
 ---
 

@@ -66,4 +66,4 @@ A: Only when public health or safety thresholds are crossed (e.g., hospital syst
 
 ## Related Guides
 - [COVID-19: Risk and Prevention Strategies](/guides/covid-19-prevention)  
-- [Vaccine Safety and Monitoring Systems](/guides/vaccine-safety)  
+- [Vaccine Safety and Monitoring Systems](/guides/vaccination-safety-overview)  

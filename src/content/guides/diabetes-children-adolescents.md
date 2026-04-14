@@ -92,6 +92,7 @@ A: Yes — better diagnostics, therapies, and education have reduced early morta
 ## Related Guides
 - [Childhood Obesity Prevention](/guides/childhood-obesity-prevention)  
 - [Healthy Diets for Children](/guides/healthy-diets-for-children)  
+- [Ultra-Processed Foods — What They Are and Why They Matter](/guides/ultra-processed-foods)  
 - [Child & Adolescent Health Hub](/guides/child-adolescent-health-hub)  
 
 ---

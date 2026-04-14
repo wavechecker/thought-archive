@@ -14,7 +14,7 @@ updatedDate: "2025-09-18"
 draft: false
 related:
   - /guides/skin-cancer
-  - /guides/skin-cancer-diagnosis
+  - /guides/skin-cancer-diagnosis-treatment
   - /guides/skin-cancer-treatment
 
 faq:
@@ -130,4 +130,4 @@ A: Research suggests nicotinamide may reduce risk, but it’s not a substitute f
 ## Related Guides
 - [Skin Cancer Diagnosis and Staging](/guides/skin-cancer-diagnosis-treatment)
 - [Skin Cancer Treatment Options](/guides/skin-cancer-treatment)  
-- [Sun Safety & UV Protection](/guides/sun-safety)  
+- [Sun Safety & UV Protection](/guides/skin-cancer-prevention)  

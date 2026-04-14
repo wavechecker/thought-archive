@@ -61,5 +61,5 @@ A: Brisk daily walks, even broken into 10-minute bouts, provided measurable bene
 - [WHO: Physical activity and older adults](https://www.who.int/news-room/fact-sheets/detail/physical-activity)
 
 ## Related Guides
-- [Alzheimer’s Disease Overview](/guides/alzheimers-disease)  
-- [Cognitive Health and Aging](/guides/cognitive-health)
+- [Alzheimer’s Disease Overview](/guides/alzheimers-disease-overview)  
+- [Cognitive Health and Aging](/guides/brain-health-hub)

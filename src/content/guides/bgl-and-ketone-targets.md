@@ -16,8 +16,8 @@ tags:
 related:
   - /guides/bgl-ketone-quick-reference
   - /guides/blood-glucose-testing
-  - /guides/emergency-actions
-  - /guides/sick-day-management
+  - /guides/diabetes-emergency-actions
+  - /guides/type-1-diabetes-sick-day-management
 draft: true
 schema:
   medicalCondition:
@@ -90,8 +90,8 @@ Ketones indicate how much the body is breaking down fat for fuel. In Type 1 Diab
 ## Related Guides
 - [BGL & Ketones — Quick Reference](/guides/bgl-ketone-quick-reference)  
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing)  
-- [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions)  
-- [Sick-Day Management for Type 1 Diabetes](/guides/sick-day-management)  
+- [Emergency Actions — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)  
+- [Sick-Day Management for Type 1 Diabetes](/guides/type-1-diabetes-sick-day-management)  
 
 ---
 ---

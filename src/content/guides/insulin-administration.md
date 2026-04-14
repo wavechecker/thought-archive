@@ -9,7 +9,7 @@ tags: ["Type 1 Diabetes", "insulin", "patientguide"]
 related:
   - /guides/blood-glucose-testing
   - /guides/continuous-glucose-monitors
-  - /guides/emergency-actions
+  - /guides/diabetes-emergency-actions
 ---
 
 Insulin delivery is about two things: **the insulin you use** and **how you deliver it**. Get both right and day‑to‑day control becomes simpler and safer.
@@ -81,7 +81,7 @@ Insulin delivery is about two things: **the insulin you use** and **how you deli
 ## Related Guides
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing)
 - [Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing](/guides/cgm-vs-finger-prick)
-- [Emergency Actions — Hypos, Highs, and Ketones](/guides/emergency-actions)
+- [Emergency Actions — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)
 - [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c)
 
 

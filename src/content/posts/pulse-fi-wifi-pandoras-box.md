@@ -4,8 +4,6 @@ description: "Pulse-Fi proves WiFi can measure heart rate without wearables. But
 publishDate: "2025-09-06"
 tags: ["opinion", "analysis", "ai", "healthtech", "privacy"]
 draft: false
-related:
-  - /guides/heart-rate-monitoring
 ---
 
 ## Hook

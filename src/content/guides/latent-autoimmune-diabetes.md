@@ -141,4 +141,4 @@ A: Adults with “type 2 diabetes” who are not overweight, respond poorly to o
 ## Related Guides
 - [Type 1 Diabetes](/guides/type-1-diabetes)  
 - [Type 2 Diabetes](/guides/type-2-diabetes)  
-- [Diabetes in Children and Teens](/guides/diabetes-children-teens)  
+- [Diabetes in Children and Teens](/guides/diabetes-children)  

@@ -73,9 +73,9 @@ A: Stop CPR, place them in the recovery position, and monitor until help arrives
 
 ## Related Guides
 - [Emergencies — Guide Hub](/guides/emergencies)  
-- [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/chest-pain-when-to-call-911)  
+- [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/chest-pain)  
 - [Severe Bleeding — First Aid](/guides/severe-bleeding)  
-- [Stroke — Act FAST](/guides/stroke)  
+- [Stroke — Act FAST](/guides/stroke-symptoms-fast-response)  
 
 ---
 

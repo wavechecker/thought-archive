@@ -7,7 +7,7 @@ tags: ["opinion", "analysis", "chronic pain", "general health"]
 draft: false
 related:
   - /guides/chronic-pain-management
-  - /posts/managing-chronic-back-pain
+  - /guides/managing-chronic-back-pain
 ---
 
 # Bespoke Brain Implants for Pain — Promise or Pitfall?

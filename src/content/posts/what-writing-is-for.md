@@ -70,4 +70,4 @@ Just think.
 ## Further Reading
 
 If you want a structured overview of this topic:
-- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health)

@@ -92,7 +92,7 @@ A: They may cause injury (e.g., bruising, cracked ribs), but saving the airway t
 - [Emergencies — Guide Hub](/guides/emergencies)  
 - [CPR — First Aid Guide](/guides/cpr)  
 - [Severe Bleeding — First Aid](/guides/severe-bleeding)  
-- [Stroke — Act FAST](/guides/stroke)  
+- [Stroke — Act FAST](/guides/stroke-symptoms-fast-response)  
 - [Anaphylaxis — Severe Allergic Reaction](/guides/anaphylaxis)  
 
 ---

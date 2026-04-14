@@ -180,7 +180,7 @@ Learn more: [CGM vs Finger Prick](/guides/cgm-vs-finger-prick) | [Continuous Glu
 ## Frequently Asked Questions
 
 **What is the difference between Type 1 and Type 2 diabetes?**
-Type 1 is an autoimmune condition where the immune system destroys insulin-producing beta cells — it requires insulin from diagnosis and cannot be prevented. Type 2 involves insulin resistance and declining beta-cell function; it is strongly linked to lifestyle factors and can often be managed — and sometimes put into remission — through diet, exercise, and medication.
+Type 1 is an autoimmune condition where the immune system destroys insulin-producing beta cells — it requires insulin from diagnosis and cannot be prevented. Type 2 involves [insulin resistance](/guides/insulin-resistance) and declining beta-cell function; it is strongly linked to lifestyle factors and can often be managed — and sometimes put into remission — through diet, exercise, and medication.
 
 **Can Type 2 diabetes be reversed?**
 Type 2 diabetes can go into remission — meaning blood glucose returns to normal without medication — through significant weight loss (typically 10–15% of body weight), intensive dietary change, or bariatric surgery. Remission requires ongoing lifestyle maintenance. "Reversed" is a common shorthand; "remission" is the more accurate clinical term.
@@ -216,6 +216,13 @@ Yes. With modern insulin therapy, continuous glucose monitoring, and good self-m
 [International Diabetes Federation. (2023). *IDF Diabetes Atlas, 10th edition.*](https://diabetesatlas.org/)
 
 ---
+
+## Related Guides
+- [Heart & Circulation Hub](/guides/heart-circulation) — diabetes significantly raises cardiovascular risk; heart health and glucose management are closely linked.
+- [Testing and Screening](/guides/testing-and-screening) — HbA1c, fasting glucose, and lipid panels in context alongside diabetes monitoring.
+- [Statin Side Effects: Evidence](/guides/statin-side-effects-evidence) — statins are frequently co-prescribed with diabetes medications; understand the benefit/risk profile.
+- [Healthy Weight Loss Guide](/guides/healthy-weight-loss-guide) — weight reduction is a core strategy for Type 2 diabetes risk reduction and remission.
+- [Aging and Longevity Basics](/guides/aging-and-longevity-basics) — how metabolic health shapes healthspan and long-term disease risk.
 
 ## Related Hubs
 - [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub)

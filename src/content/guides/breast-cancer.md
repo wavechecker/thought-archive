@@ -75,8 +75,15 @@ A: Risk can be reduced with lifestyle measures and early detection, but not elim
 
 ---
 
-## Related Hub
-- [Cancer — Guide Hub](/guides/cancer)  
+## Related Guides
+- [Cancer — Guide Hub](/guides/cancer) — overview of cancer types, treatment approaches, and survivorship across all cancers.
+- [Genetic Testing](/guides/genetic-testing) — understanding BRCA1/2 and hereditary cancer risk assessment.
+- [HPV Vaccine](/guides/hpv-vaccine) — HPV vaccination reduces risk across several hormone- and virus-linked cancers.
+- [Cervical Cancer](/guides/cervical-cancer-guide) — another common cancer in women; HPV prevention and cervical screening.
+- [Bowel Cancer](/guides/bowel-cancer) — cancer screening principles and survivorship across cancer types.
+- [Skin Cancer](/guides/skin-cancer) — early detection strategies applicable across cancer types.
+- [Testing and Screening](/guides/testing-and-screening) — understanding what cancer screening tests detect and when to seek them.
+- [Smoking Cessation](/guides/smoking-cessation) — smoking is a risk factor for several cancers, including breast cancer.
 
 *Last reviewed: September 17, 2025*  
 

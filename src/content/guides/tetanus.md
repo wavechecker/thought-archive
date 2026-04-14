@@ -41,6 +41,8 @@ Vaccination and timely boosters are the best protection.
 - **CDC (US):** Tdap at 11–12 years, then Td/Tdap booster every 10 years. Extra dose if wound and >5 years since last shot.  
 - **ATAGI (Australia):** Routine doses at 2, 4, 6 months; 4 years; adolescence; and adult boosters every 10 years.  
 
+For wounds from animal bites, see [animal bite first aid](/guides/animal-bites) — including when a booster is indicated and how to clean the wound.
+
 ## FAQ
 **Q: What if I don’t know when I had my last tetanus shot?**  
 A: If you have a high-risk wound and it’s unclear, a booster is recommended.  

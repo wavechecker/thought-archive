@@ -36,7 +36,7 @@ This hub brings together our guides on depression, anxiety, suicide prevention, 
 ## Related Hubs
 - [Emergencies — Guide Hub](/guides/emergencies)  
 - [Brain Health Hub](/guides/brain-health-hub)
-- [Public Health — Guide Hub](/guides/public-health)  
+- [Preventive Health Hub](/guides/preventive-health)  
 
 ---
 

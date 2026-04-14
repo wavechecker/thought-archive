@@ -18,9 +18,10 @@ This hub pulls together guides on urgent conditions such as heart attack, stroke
 - [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/when-to-seek-emergency-help-for-chest-pain)  
 - [Recognizing a Stroke FAST — A Practical Guide](/guides/recognizing-stroke)  
 - [Allergies and Anaphylaxis — Symptoms and Emergency Response](/guides/anaphylaxis)
-- [Choking — First Aid Steps](/guides/choking-first-aid)  
-- [Seizures — First Aid and Safety](/guides/seizures-first-aid)  
-- [Shortness of Breath — 5 Signs to See a Doctor](/guides/shortness-of-breath-see-a-doctor)  
+- [Animal Bites — What To Do](/guides/animal-bites)
+- [Choking — First Aid Steps](/guides/choking)  
+- [Seizures — First Aid and Safety](/guides/seizures)  
+- [Shortness of Breath — 5 Signs to See a Doctor](/guides/shortness-of-breath)  
 - [Mental Health Crisis — When to Act and How to Help](/guides/mental-health-crisis)  
 - [Diabetes Emergency Actions — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)  
 

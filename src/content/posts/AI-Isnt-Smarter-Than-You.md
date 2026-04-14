@@ -65,7 +65,7 @@ We're not watching machines surpass human intelligence. We're watching corporati
 
 Don't get me wrong—AI has serious utility. It can speed up workflows, enhance creativity, and automate basic decision trees. It's already changing how we write, code, design, and interact with digital systems.
 
-But it's still a tool. A pattern predictor. A glorified autocomplete — and as it moves into sensitive domains like [healthcare and clinical decision-making](/guides/ai-in-health-overview), the stakes of that distinction grow significantly.
+But it's still a tool. A pattern predictor. A glorified autocomplete — and as it moves into sensitive domains like [healthcare and clinical decision-making](/guides/ai-in-health), the stakes of that distinction grow significantly.
 
 We shouldn't fear it becoming a god. We should fear it becoming a bureaucrat—*unaccountable, opaque, and always "just following the data."*
 
@@ -87,5 +87,5 @@ It's artificial authority.**
 ## Further Reading
 
 If you want a structured overview of this topic:
-- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health)
 - [How to Evaluate Medical Claims in the Age of AI](/guides/how-to-evaluate-medical-claims-age-of-ai)

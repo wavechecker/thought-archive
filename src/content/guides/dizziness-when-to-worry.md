@@ -152,5 +152,5 @@ A series of guided head movements performed by a clinician or physiotherapist to
 - [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack)
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
 - [Blood Oxygen Levels and Pulse Oximeters](/guides/blood-oxygen-pulse-oximeters)
-- [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke)
+- [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)
 - [Fever in Adults and Children](/guides/fever-adults-children)

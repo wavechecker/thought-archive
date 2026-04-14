@@ -7,9 +7,9 @@ publishDate: "2025-08-21"
 updatedDate: "2025-08-21"
 tags: ["Type 1 Diabetes", "travel", "planning", "patientguide"]
 related:
-  - /guides/emergency-actions
+  - /guides/diabetes-emergency-actions
   - /guides/insulin-administration
-  - /guides/sick-day-management
+  - /guides/type-1-diabetes-sick-day-management
 ---
 ---
 

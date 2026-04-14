@@ -55,7 +55,7 @@ But control, once given, is hard to reclaim — especially from something that n
 
 This is not a theoretical future problem. It is already playing out in hospitals, clinics, and mental health platforms — and the AGI version will be a matter of degree, not kind.
 
-**AI triage systems.** Emergency departments in major hospitals now use AI to prioritise which patients are seen first. Most of the time, the algorithm gets it right. But when it doesn't — when it misclassifies a patient with atypical presentation — who questions it? Research consistently shows that clinicians deferring to AI recommendations are less likely to override even when the override would be correct. The skill of disagreeing with the system atrophies when it is rarely exercised. See [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview) for the specifics.
+**AI triage systems.** Emergency departments in major hospitals now use AI to prioritise which patients are seen first. Most of the time, the algorithm gets it right. But when it doesn't — when it misclassifies a patient with atypical presentation — who questions it? Research consistently shows that clinicians deferring to AI recommendations are less likely to override even when the override would be correct. The skill of disagreeing with the system atrophies when it is rarely exercised. See [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health) for the specifics.
 
 **Mental health chatbots.** Over a billion people globally lack access to mental health care. AI tools are already filling gaps where no clinician is available — and [the case for their use is real](/posts/ai-mental-health). But "filling a gap" and "being fit for purpose" are different things. A chatbot that manages a low-acuity conversation well may delay appropriate escalation in a high-acuity one. The question of who monitors the quality of that interaction, and who is responsible when it goes wrong, is largely unanswered.
 
@@ -122,4 +122,4 @@ Because if we give away the ability to say no, we've already lost something no i
 
 *Related reading:*
 - [Can AI Help Solve the Global Mental Health Crisis?](/posts/ai-mental-health)
-- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health)

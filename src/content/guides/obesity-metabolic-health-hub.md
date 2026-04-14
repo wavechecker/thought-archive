@@ -112,7 +112,7 @@ Metabolic health is not determined by weight alone. Three patterns illustrate wh
 
 **Metabolically Healthy Obesity (MHO):** Some people with obesity have normal blood glucose, lipids, and blood pressure. Their metabolic risk is lower than those with obesity plus metabolic syndrome — but long-term studies show MHO is often transitional, with abnormalities developing over time.
 
-**Metabolically Unhealthy Normal Weight (MUNW):** People at a normal BMI can have visceral fat, insulin resistance, and elevated inflammatory markers — sometimes called TOFI (Thin Outside, Fat Inside). They carry elevated cardiovascular risk that is missed by BMI screening alone.
+**Metabolically Unhealthy Normal Weight (MUNW):** People at a normal BMI can have visceral fat, [insulin resistance](/guides/insulin-resistance), and elevated inflammatory markers — sometimes called TOFI (Thin Outside, Fat Inside). They carry elevated cardiovascular risk that is missed by BMI screening alone.
 
 **The limits of BMI:** BMI does not account for muscle mass, bone density, fat distribution, age, sex, or ethnicity. A muscular person and a person with high visceral fat can have the same BMI. South, East, and Southeast Asian populations develop metabolic risk at lower BMI thresholds than European populations.
 
@@ -148,6 +148,13 @@ Even 5–7% of body weight produces clinically meaningful improvements in blood 
 - [IDF — Metabolic Syndrome Consensus Definition](https://www.idf.org/our-activities/advocacy-awareness/resources-and-tools/60:idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html)
 
 ---
+
+## Related Guides
+- [Testing and Screening](/guides/testing-and-screening) — how to interpret fasting glucose, triglycerides, HDL, and blood pressure as metabolic markers.
+- [Sleep and Mental Health](/guides/sleep) — sleep deprivation impairs insulin sensitivity and is an underrecognised driver of metabolic dysfunction.
+- [Prediabetes](/guides/prediabetes) — the clinical threshold between metabolic dysfunction and diagnosed Type 2 diabetes.
+- [Aging and Longevity Basics](/guides/aging-and-longevity-basics) — how visceral fat and metabolic health shape long-term disease risk and longevity.
+- [Statin Side Effects: Evidence](/guides/statin-side-effects-evidence) — statins are commonly used alongside metabolic risk management; understanding the evidence matters.
 
 ## Related Hubs
 - [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub)

@@ -6,7 +6,6 @@ publishDate: "2025-08-28"
 tags: ["opinion", "analysis", "politics", "public health", "science"]
 draft: false
 related:
-  - /posts/rfk-covid-war
   - /posts/covid-vaccine-standoff
   - /posts/global-covid-vaccine-guidance-2025
   - /posts/mRNA-vaccine-war-pediatrics-2025
@@ -65,7 +64,7 @@ A: No. Politics has always colored policy. What’s new is the systematic remova
 A: Then challenge them with better research, not political retribution. Science evolves through critique, not cancellation.  
 
 ## Further Reading
-- [COVID-19 Vaccination Guidelines — United States (August 2025)](/guides/us-covid-vaccine-guidelines-aug-2025)   
+- [COVID-19 Vaccination Guidelines — United States (August 2025)](/posts/us-covid-vaccine-guidelines-aug-2025)   
 - [WHO: Global COVID-19 Vaccination Policy (2025 update)](https://www.who.int/publications/i/item/global-covid-19-vaccination-policy-2025)  
 - [CDC: Principles of Scientific Integrity](https://www.cdc.gov/about/integrity/)  
 - [Our guide to Legionnaires’ Disease](/guides/legionnaires-disease)  

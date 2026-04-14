@@ -79,6 +79,7 @@ It covers five broad domains: **screening and early detection**, **vaccination**
 
 ### Condition-Specific Prevention
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)
+- [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention)
 - [Heart & Circulation Overview](/guides/heart-circulation-overview)
 - [Diabetes Hub](/guides/diabetes-hub)
 - [Prediabetes: Early Warning Signs and Prevention](/guides/prediabetes)

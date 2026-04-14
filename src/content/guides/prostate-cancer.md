@@ -81,8 +81,14 @@ A: Not completely, but lifestyle changes and regular screening help.
 
 ---
 
-## Related Hub
-- [Cancer — Guide Hub](/guides/cancer)  
+## Related Guides
+- [Cancer — Guide Hub](/guides/cancer) — overview of cancer types, treatment approaches, and survivorship.
+- [Genetic Testing](/guides/genetic-testing) — BRCA2 mutations are a known risk factor for prostate cancer; hereditary testing context.
+- [Testing and Screening](/guides/testing-and-screening) — PSA testing, biopsy, and how to interpret cancer screening results.
+- [Heart & Circulation Hub](/guides/heart-circulation) — prostate cancer treatments (androgen deprivation therapy) carry significant cardiovascular implications.
+- [Bowel Cancer](/guides/bowel-cancer) — cancer screening principles and survivorship across cancer types.
+- [Skin Cancer](/guides/skin-cancer) — early detection strategies applicable across cancer types.
+- [Smoking Cessation](/guides/smoking-cessation) — smoking is associated with more aggressive prostate cancer outcomes.
 
 *Last reviewed: September 17, 2025*  
 

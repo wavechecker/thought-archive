@@ -65,6 +65,6 @@ A: No — the effect is modest (~40% shift) and species-specific, but it shows h
 
 ## Related Guides
 - [Antibiotic Resistance — How It Spreads](/guides/antibiotic-resistance)  
-- [Gut Microbiome and Drug Interactions](/guides/gut-microbiome-drugs)
+
 
 _Last updated: 25 August 2025_

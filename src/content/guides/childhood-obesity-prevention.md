@@ -89,4 +89,5 @@ A: Sugar taxes, restrictions on junk food advertising, healthy school food polic
 - [Difference Between Type 1 and Type 2 Diabetes](/guides/type-1-vs-type-2-diabetes)  
 - [Prediabetes & Metabolic Health](/guides/prediabetes)  
 - [Healthy Diets for Children](/guides/healthy-diets-for-children)  
+- [Ultra-Processed Foods — What They Are and Why They Matter](/guides/ultra-processed-foods)  
 

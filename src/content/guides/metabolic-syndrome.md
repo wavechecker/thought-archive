@@ -25,7 +25,7 @@ Meeting three or more criteria confirms the diagnosis. The more criteria present
 ## Key Points
 - Metabolic syndrome is defined by 3 or more of the five criteria above.
 - It affects up to one in three adults in some countries — many undiagnosed.
-- Strongly linked to insulin resistance and central (visceral) obesity.
+- Strongly linked to [insulin resistance](/guides/insulin-resistance) and central (visceral) obesity.
 - Doubles the risk of cardiovascular disease and increases type 2 diabetes risk five-fold.
 - Early lifestyle intervention can reverse or prevent progression in many people.
 
@@ -74,7 +74,7 @@ A 5–10% reduction in body weight can improve all five metabolic criteria simul
 **Dietary change**
 - Reduce refined carbohydrates and added sugars.
 - Emphasise vegetables, legumes, whole grains, lean protein, and unsaturated fats (Mediterranean-pattern diet has the strongest evidence).
-- Limit ultra-processed foods, excess sodium, and saturated fats.
+- Limit [ultra-processed foods](/guides/ultra-processed-foods), excess sodium, and saturated fats.
 - Moderate alcohol intake.
 
 **Smoking cessation**

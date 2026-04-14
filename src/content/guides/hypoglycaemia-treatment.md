@@ -7,7 +7,7 @@ publishDate: "2025-08-21"
 updatedDate: "2025-08-21"
 tags: ["Type 1 Diabetes", "hypoglycaemia", "blood glucose", "patientguide"]
 related:
-  - /guides/emergency-actions
+  - /guides/diabetes-emergency-actions
   - /guides/blood-glucose-testing
 ---
 ---

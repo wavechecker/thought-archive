@@ -25,7 +25,7 @@ Prediabetes is a condition where blood sugar levels are higher than normal but n
 - Early intervention can cut the risk of developing type 2 diabetes by **40–70%**.  
 
 ## Background
-Glucose (blood sugar) fuels the body. In prediabetes, insulin becomes less effective at moving glucose into cells — known as **insulin resistance**. Over time, this can damage the pancreas and lead to type 2 diabetes. Prediabetes also increases risk for **heart disease and stroke**, even before diabetes develops.
+Glucose (blood sugar) fuels the body. In prediabetes, insulin becomes less effective at moving glucose into cells — known as **[insulin resistance](/guides/insulin-resistance)**. Over time, this can damage the pancreas and lead to type 2 diabetes. Prediabetes also increases risk for **heart disease and stroke**, even before diabetes develops.
 
 ## Causes or Mechanisms
 - **Weight and obesity**: Excess body fat, especially around the waist.  

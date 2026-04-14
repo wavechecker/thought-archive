@@ -62,4 +62,5 @@ A: Yes, with careful planning to ensure adequate protein, vitamin B12, iron, cal
 - [Difference Between Type 1 and Type 2 Diabetes](/guides/type-1-vs-type-2-diabetes)  
 - [Childhood Obesity Prevention](/guides/childhood-obesity-prevention)  
 - [Prediabetes & Metabolic Health](/guides/prediabetes)  
+- [Ultra-Processed Foods — What They Are and Why They Matter](/guides/ultra-processed-foods)  
 

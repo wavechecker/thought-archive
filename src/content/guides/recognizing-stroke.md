@@ -114,10 +114,11 @@ Give your location, describe the symptoms in detail, and state the exact time th
 
 ## Related Guides
 
+- [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention)
 - [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain)
 - [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack)
 - [Dizziness — Common Causes and When to Worry](/guides/dizziness-when-to-worry)
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
 - [Blood Oxygen Levels and Pulse Oximeters](/guides/blood-oxygen-pulse-oximeters)
-- [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke)
+- [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)
 - [TIA — Warning Signs and Urgent Next Steps](/guides/tia-warning-signs)

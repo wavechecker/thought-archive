@@ -123,6 +123,7 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 
 ### Prevention
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — Diet, exercise, smoking cessation, cholesterol control, and screening checks.
+- [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention) — Blood pressure, atrial fibrillation, smoking, cholesterol, and the medications that reduce stroke risk.
 
 ### Recovery and Rehabilitation
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation) — Exercise, education, and psychological support after heart attack or surgery.

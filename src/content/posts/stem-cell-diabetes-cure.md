@@ -6,8 +6,8 @@ publishDate: "2025-09-02"
 tags: ["opinion", "analysis", "general health", "diabetes"]
 draft: false
 related:
-  - /guides/living-with-type-1-diabetes
-  - /posts/managing-chronic-back-pain
+  - /guides/type-1-diabetes
+  - /guides/managing-chronic-back-pain
 ---
 
 # Stem Cell "Cure" for Type 1 Diabetes—Hope or Hype?
@@ -120,7 +120,7 @@ For now, hope is justified—but so is caution. The jury, as always, is still ou
 - [Stem Cell–Derived, Fully Differentiated Islets for Type 1 Diabetes (NEJM, 2025)](https://www.nejm.org/doi/full/10.1056/NEJMoa2506549?utm_source=chatgpt.com)  
 - [UHN Press Release: Stem Cell–Derived Therapy Enables Insulin Independence](https://www.uhn.ca/corporate/News/PressReleases/Pages/stem-cell-derived-therapy-enables-insulin-independence-clinical-trial-for-type1-diabetes.aspx?utm_source=chatgpt.com)  
 - [Vertex VX-880 press summary (HCPLive)](https://www.hcplive.com/view/zimislecel-enables-insulin-independence-in-10-participants-with-type-1-diabetes?utm_source=chatgpt.com)  
-- [Our Guide: Living with Type 1 Diabetes](/guides/living-with-type-1-diabetes)  
+- [Our Guide: Living with Type 1 Diabetes](/guides/type-1-diabetes)  
 
 ---
 

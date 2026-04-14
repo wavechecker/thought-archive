@@ -14,7 +14,7 @@ tags:
   - patientguide
 related:
   - /guides/coronary-angiography
-  - /guides/heart-medications
+  - /guides/common-heart-medications
   - /guides/preventing-heart-disease
   - /guides/hormone-therapy-menopause/
 draft: true
@@ -85,7 +85,7 @@ Cardiac rehabilitation (rehab) is a structured program of exercise, education, a
 
 ## Related Guides
 - [Understanding Coronary Angiography](/guides/coronary-angiography)  
-- [Common Heart Medications and Their Side Effects](/guides/heart-medications)  
+- [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)  
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)  
 
 ---

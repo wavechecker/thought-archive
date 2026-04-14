@@ -74,7 +74,7 @@ Both Type 1 and Type 2 diabetes involve elevated blood glucose levels, but they 
 ## Key Points
 
 - **Type 1** is an autoimmune condition — the immune system destroys insulin-producing cells; it is **not caused by diet or lifestyle**
-- **Type 2** involves insulin resistance and insufficient insulin production — strongly influenced by genetics, age, and lifestyle factors
+- **Type 2** involves [insulin resistance](/guides/insulin-resistance) and insufficient insulin production — strongly influenced by genetics, age, and lifestyle factors
 - Type 1 requires **lifelong insulin** from diagnosis; Type 2 may be managed initially without insulin
 - Both types require ongoing medical management and carry serious risks if untreated
 - **Remission is possible for some people with Type 2** (via significant weight loss); it is not a feature of Type 1

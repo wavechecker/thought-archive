@@ -181,7 +181,7 @@ Not until it figures out how to *live in the real world* — like the rest of us
 
 If you want a structured overview of this topic:
 - [How to Use AI Tools Safely for Health Questions](/guides/how-to-use-ai-for-health-questions)
-- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health)
 
 ## 💬 Got Your Own AI Horror Story?
 

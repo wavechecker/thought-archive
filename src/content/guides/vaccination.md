@@ -112,7 +112,7 @@ This hub also connects closely to the [Infectious Diseases hub](/guides/infectio
 - [Why Vaccine Schedules Differ by Country](/guides/why-vaccine-schedules-differ-by-country)
 - [Why Combination Vaccines Exist](/guides/why-combination-vaccines-exist)
 - [Evidence-First COVID Vaccine Policy](/guides/evidence-first-covid-vaccine-policy)
-- [COVID-19 Vaccination Guidelines — United States (August 2025)](/guides/us-covid-vaccine-guidelines-aug-2025)
+- [COVID-19 Vaccination Guidelines — United States (August 2025)](/posts/us-covid-vaccine-guidelines-aug-2025)
 - [Mandates and Exemptions — Understanding Vaccine Policy](/guides/mandates-and-exemptions)
 - [Adverse Events Monitoring in Vaccines](/guides/adverse-events-monitoring)
 - [Aluminum in Vaccines: Safety Evidence and Controversy](/guides/aluminum-in-vaccines)
@@ -153,9 +153,12 @@ Herd immunity (or community immunity) occurs when enough people in a population 
 
 ---
 
-## Related Hubs
-- [Preventive Health — Guide Hub](/guides/preventive-health)
-- [Infectious Diseases — Guide Hub](/guides/infectious-diseases)
+## Related Guides
+- [Testing and Screening](/guides/testing-and-screening) — antibody titers, serology, and what to monitor alongside a vaccination programme.
+- [Aging and Longevity Basics](/guides/aging-and-longevity-basics) — how vaccine recommendations shift with age, and why immune senescence matters.
+- [Preventive Exercise](/guides/preventive-exercise) — the broader preventive health toolkit that vaccination sits within.
+- [Preventive Health Hub](/guides/preventive-health) — vaccination in the context of full-spectrum disease prevention.
+- [Infectious Diseases — Guide Hub](/guides/infectious-diseases) — the disease-perspective counterpart to this vaccine-perspective hub.
 
 *Last reviewed: September 17, 2025*
 

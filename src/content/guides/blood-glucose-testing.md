@@ -14,7 +14,7 @@ tags:
 related:
   - /guides/continuous-glucose-monitors
   - /guides/insulin-administration
-  - /guides/emergency-actions
+  - /guides/diabetes-emergency-actions
   - /guides/understanding-hba1c
 draft: true
 schema:

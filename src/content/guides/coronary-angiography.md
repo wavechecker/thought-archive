@@ -66,4 +66,4 @@ A: Yes. CT coronary angiography is less invasive, but standard catheter angiogra
 ## Related Guides
 - [Angina — Symptoms & Management](/guides/angina-symptoms-management)  
 - [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack)  
-- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation-after-a-heart-event)  
+- [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  

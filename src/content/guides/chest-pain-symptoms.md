@@ -70,7 +70,7 @@ A: Yes. While heart disease is more common with age, conditions like spontaneous
 
 ## Related Guides
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)  
-- [Heart Palpitations: When to Worry](/guides/heart-palpitations-when-to-worry)  
+- [Heart Palpitations: When to Worry](/guides/heart-palpitations)  
 - [Atrial Fibrillation](/guides/atrial-fibrillation)  
 
 ---

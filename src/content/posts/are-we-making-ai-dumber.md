@@ -76,5 +76,5 @@ It's: *Are we getting smarter with it?*
 ## Further Reading
 
 If you want a structured overview of this topic:
-- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health-overview)
+- [AI in Health: Safety, Bias, and Clinical Integration](/guides/ai-in-health)
 - [How to Evaluate Medical Claims in the Age of AI](/guides/how-to-evaluate-medical-claims-age-of-ai)

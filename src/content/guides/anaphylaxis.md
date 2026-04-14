@@ -87,10 +87,10 @@ A: Some do (e.g., milk or egg), but others (like peanut and tree nut) often pers
 
 ## Related Guides
 - [Emergencies — Guide Hub](/guides/emergencies)  
-- [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/chest-pain-when-to-call-911)  
+- [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/chest-pain)  
 - [Severe Bleeding — First Aid](/guides/severe-bleeding)  
 - [CPR — First Aid Guide](/guides/cpr)  
-- [Stroke — Act FAST](/guides/stroke)  
+- [Stroke — Act FAST](/guides/stroke-symptoms-fast-response)  
 
 ---
 

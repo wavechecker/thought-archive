@@ -5,8 +5,7 @@ description: "CVS suspends COVID shots in 16 states as RFK Jr.’s policies unse
 publishDate: "2025-08-29"
 tags: ["opinion", "analysis", "public health", "vaccines", "policy"]
 related:
-  - /posts/rfk-covid-war
-  - /guides/us-covid-vaccine-guidelines-aug-2025
+  - /posts/us-covid-vaccine-guidelines-aug-2025
   - /guides/evidence-first-covid-vaccine-policy
   - /guides/mandates-and-exemptions
 draft: false
@@ -37,10 +36,9 @@ The irony? Pharmacies like CVS once *expanded* vaccine access by sheer convenien
 - **September showdown:** All eyes are on the **Sept. 18–19 ACIP meeting**, which could cement the new vaccine reality or fracture it further.  
 
 ## Further Reading
-- [U.S. COVID-19 Vaccine Guidelines — August 2025](/guides/us-covid-vaccine-guidelines-aug-2025)  
+- [U.S. COVID-19 Vaccine Guidelines — August 2025](/posts/us-covid-vaccine-guidelines-aug-2025)  
 - [Evidence-First COVID Vaccine Policy](/guides/evidence-first-covid-vaccine-policy)  
 - [Mandates and Exemptions](/guides/mandates-and-exemptions)  
-- [Background explainer: RFK’s COVID policy shifts](/posts/rfk-covid-war)  
 
 ## Closing
 CVS’s pause isn’t just about 16 states. It’s a snapshot of a nation caught in the middle of a high-stakes gamble: RFK’s crusade against vaccines has moved from talking points to the pharmacy counter.  
