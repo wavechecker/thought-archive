@@ -18,6 +18,92 @@ faq:
     a: "Complete avoidance is neither practical nor necessary. The consistent finding across studies is that reducing ultra-processed food intake — even partially — improves health outcomes. A realistic goal is to shift the balance toward whole and minimally processed foods at most meals, rather than aiming for elimination."
   - q: "What about diet ultra-processed foods — are they safer?"
     a: "Not necessarily. Diet versions of ultra-processed products (sugar-free soft drinks, low-fat packaged snacks) share many of the structural and additive characteristics of their regular counterparts. The evidence on artificial sweeteners is evolving — some studies suggest effects on gut microbiome and metabolic signalling. 'Diet' labelling does not neutralise ultra-processing."
+  - q: "Can ultra-processed foods affect mental health?"
+    a: "Large observational studies — including the French NutriNet-Santé cohort and UK Biobank — find independent associations between high ultra-processed food intake and increased risk of depression and anxiety, even after controlling for overall diet quality. Proposed mechanisms include gut microbiome disruption, low-grade systemic inflammation, and blood sugar dysregulation. The relationship appears bidirectional — poor mental health also influences food choices."
+  - q: "How can I identify ultra-processed foods while shopping?"
+    a: "Check the ingredient list, not the nutrition panel. Key signals of ultra-processing include: more than five ingredients; substances not found in a home kitchen (maltodextrin, hydrolysed vegetable protein, modified starch, carrageenan, polysorbate 80); multiple additives listed as emulsifiers, flavour enhancers, artificial colours, or sweeteners. A very long shelf life and a uniform or reconstituted texture are also common markers."
+  - q: "Are plant-based meat alternatives ultra-processed?"
+    a: "Most commercial plant-based burgers, sausages, and nuggets made from soy or pea protein isolates qualify as ultra-processed under the NOVA classification, due to their long ingredient lists and industrial additives. This does not mean they are equivalent in harm to red or processed meat — they are typically lower in saturated fat. But 'plant-based' labelling does not exempt them from UPF concerns; they are not straightforwardly healthy foods."
+jsonLd:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Ultra-Processed Foods — What They Are and Why They Matter"
+    description: "Ultra-processed foods make up more than half the diet in many high-income countries and are linked to obesity, metabolic disease, cardiovascular disease, and early mortality."
+    datePublished: "2026-04-14"
+    dateModified: "2026-04-14"
+    inLanguage: "en"
+    mainEntityOfPage:
+      "@type": "WebPage"
+      "@id": "https://patientguide.io/guides/ultra-processed-foods"
+    author:
+      "@type": "Organization"
+      name: "PatientGuide"
+    publisher:
+      "@type": "Organization"
+      name: "PatientGuide"
+    keywords: ["ultra-processed foods", "NOVA classification", "nutrition", "metabolic health", "diet", "obesity"]
+    about:
+      "@type": "MedicalEntity"
+      name: "Ultra-processed foods"
+      sameAs: "https://en.wikipedia.org/wiki/Ultra-processed_food"
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "Are all processed foods bad?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "No. Minimal processing (freezing, canning, pasteurising) is nutritionally benign. Ultra-processing — industrial manufacturing with additives, modified ingredients, and engineered palatability — is where the health concerns arise."
+      - "@type": "Question"
+        name: "What makes ultra-processed foods harmful?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Multiple overlapping mechanisms: caloric density, disruption of satiety signals, rapid glucose absorption, displacement of whole foods, and potentially additive effects on gut microbiome and inflammation."
+      - "@type": "Question"
+        name: "How much of the average diet is ultra-processed?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "In the UK and US, approximately 55–60% of adult calories come from ultra-processed foods — and even more in children and adolescents."
+      - "@type": "Question"
+        name: "Is it realistic to avoid ultra-processed foods entirely?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Complete avoidance is neither practical nor necessary. The evidence shows that reducing intake — even partially — improves health outcomes. The goal is to shift the balance toward whole and minimally processed foods, not achieve elimination."
+      - "@type": "Question"
+        name: "What about diet or 'light' versions of ultra-processed foods — are they safer?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Not necessarily. Diet versions share ultra-processed characteristics — additives, food matrix disruption, engineered palatability. Evidence on artificial sweeteners remains unsettled. 'Diet' labelling does not neutralise ultra-processing."
+      - "@type": "Question"
+        name: "Can ultra-processed foods affect mental health?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Large cohort studies find independent associations between high ultra-processed food intake and increased risk of depression and anxiety, even after controlling for overall diet quality. Proposed mechanisms include gut microbiome disruption, low-grade inflammation, and blood sugar dysregulation."
+      - "@type": "Question"
+        name: "How can I identify ultra-processed foods while shopping?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Check the ingredient list, not the nutrition panel. Key signals include: more than five ingredients; substances not found in a home kitchen (maltodextrin, modified starch, carrageenan, polysorbate 80); multiple emulsifiers, flavour enhancers, or artificial colours. A very long shelf life and uniform reconstituted texture are also markers."
+      - "@type": "Question"
+        name: "Are plant-based meat alternatives ultra-processed?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Most commercial plant-based burgers, sausages, and nuggets qualify as ultra-processed under the NOVA classification due to their long ingredient lists and industrial additives. They are typically lower in saturated fat than red meat, but 'plant-based' labelling does not exempt them from UPF health concerns."
+  - "@context": "https://schema.org"
+    "@type": "BreadcrumbList"
+    itemListElement:
+      - "@type": "ListItem"
+        position: 1
+        name: "Guides"
+        item: "https://patientguide.io/guides"
+      - "@type": "ListItem"
+        position: 2
+        name: "Obesity & Metabolic Health"
+        item: "https://patientguide.io/guides/obesity-metabolic-health-hub"
+      - "@type": "ListItem"
+        position: 3
+        name: "Ultra-Processed Foods"
+        item: "https://patientguide.io/guides/ultra-processed-foods"
 ---
 
 ## Intro
@@ -144,6 +230,15 @@ A: Complete avoidance is not necessary. The evidence shows that reducing intake 
 
 **Q: What about diet or "light" versions?**
 A: Not necessarily safer. They share ultra-processed characteristics (additives, food matrix disruption, engineered palatability) and the evidence on artificial sweeteners remains unsettled.
+
+**Q: Can ultra-processed foods affect mental health?**
+A: Large observational studies — including the French NutriNet-Santé cohort and UK Biobank — find independent associations between high UPF intake and increased risk of depression and anxiety, even after controlling for overall diet quality. Proposed mechanisms include gut microbiome disruption, low-grade systemic inflammation, and blood sugar dysregulation.
+
+**Q: How can I identify ultra-processed foods while shopping?**
+A: Check the ingredient list, not the nutrition panel. Key signals include: more than five ingredients; substances not found in a home kitchen (maltodextrin, modified starch, carrageenan, polysorbate 80); multiple emulsifiers, flavour enhancers, or artificial colours listed. A very long shelf life and a uniform or reconstituted texture are also common markers.
+
+**Q: Are plant-based meat alternatives ultra-processed?**
+A: Most commercial plant-based burgers, sausages, and nuggets qualify as ultra-processed under the NOVA classification due to their long ingredient lists and industrial additives. They are typically lower in saturated fat than red or processed meat — but "plant-based" labelling does not exempt them from UPF health concerns.
 
 ---
 

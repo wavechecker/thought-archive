@@ -4,7 +4,7 @@ slug: "insulin-resistance"
 description: "Insulin resistance is a foundational metabolic problem behind type 2 diabetes, metabolic syndrome, and cardiovascular disease. This guide explains how it develops, how to detect it, and what actually helps."
 category: "Obesity & Metabolic Health Hub"
 publishDate: "2026-04-14"
-updatedDate: "2026-04-14"
+updatedDate: "2026-04-15"
 tags: ["insulin resistance", "metabolic health", "type 2 diabetes", "prediabetes", "metabolic syndrome", "prevention"]
 draft: false
 faq:
@@ -20,6 +20,10 @@ faq:
     a: "Excess calories, excess body fat (especially visceral fat), and physical inactivity drive insulin resistance — not dietary carbohydrates in isolation. However, diets high in refined carbohydrates and ultra-processed foods promote weight gain and visceral fat accumulation, which worsen insulin sensitivity. Whole food carbohydrates (legumes, vegetables, whole grains) are handled differently from refined ones."
   - q: "What medications help insulin resistance?"
     a: "Metformin is the most established medication for improving insulin sensitivity and is first-line in type 2 diabetes. GLP-1 receptor agonists (e.g., semaglutide) and SGLT2 inhibitors also improve insulin sensitivity through weight reduction and other mechanisms. These are typically considered when lifestyle changes are insufficient or when clinical diabetes or cardiovascular disease is present."
+  - q: "Can you have insulin resistance at a normal weight?"
+    a: "Yes. While excess visceral fat is a primary driver, insulin resistance can occur in people with a normal BMI — sometimes described as 'metabolically unhealthy normal weight.' It is more common in people of South and East Asian ancestry, who tend to accumulate visceral fat at lower overall body weights. Waist circumference and metabolic blood tests (fasting insulin, triglycerides, HDL) are more informative than BMI alone."
+  - q: "How long does it take to improve insulin sensitivity with lifestyle changes?"
+    a: "Improvements can occur quickly. A single session of moderate aerobic exercise improves insulin sensitivity for 24–48 hours. With consistent exercise and dietary improvement, meaningful changes in fasting glucose, fasting insulin, and HOMA-IR are typically measurable within 8–12 weeks. Full reversal of prediabetes can occur within months to years in those who sustain the changes and achieve meaningful weight loss."
 ---
 
 ## Intro
@@ -166,6 +170,12 @@ A: Not in isolation. Excess body fat, inactivity, and caloric surplus drive the 
 
 **Q: What medications help?**
 A: Metformin is the most established. GLP-1 receptor agonists and SGLT2 inhibitors also improve insulin sensitivity and are recommended when lifestyle changes are insufficient or when other risk factors (cardiovascular disease, significant obesity) are present.
+
+**Q: Can you have insulin resistance at a normal weight?**
+A: Yes. Insulin resistance can occur in people with a normal BMI — particularly in those of South and East Asian ancestry, who tend to accumulate visceral fat at lower body weights. Waist circumference and metabolic blood tests (fasting insulin, triglycerides, HDL cholesterol) reveal risk that BMI alone misses.
+
+**Q: How long does it take to improve insulin sensitivity?**
+A: A single bout of moderate aerobic exercise improves insulin sensitivity for 24–48 hours. With consistent exercise and dietary change, meaningful improvements in fasting glucose, fasting insulin, and HOMA-IR are typically measurable within 8–12 weeks. Full reversal of prediabetes is possible within months to years for those who sustain the changes and achieve meaningful weight loss.
 
 ---
 
