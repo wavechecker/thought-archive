@@ -2,7 +2,7 @@
 title: "Ultra-Processed Foods — What They Are and Why They Matter"
 slug: "ultra-processed-foods"
 description: "Ultra-processed foods make up more than half the diet in many high-income countries and are linked to obesity, metabolic disease, cardiovascular disease, and early mortality. This guide explains what they are, what the evidence shows, and how to reduce them."
-category: "Nutrition"
+category: "Obesity & Metabolic Health Hub"
 publishDate: "2026-04-14"
 updatedDate: "2026-04-14"
 tags: ["ultra-processed foods", "nutrition", "metabolic health", "diet", "obesity", "food systems"]

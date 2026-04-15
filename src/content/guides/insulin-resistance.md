@@ -2,7 +2,7 @@
 title: "Insulin Resistance — What It Is, What Causes It, and How to Reverse It"
 slug: "insulin-resistance"
 description: "Insulin resistance is a foundational metabolic problem behind type 2 diabetes, metabolic syndrome, and cardiovascular disease. This guide explains how it develops, how to detect it, and what actually helps."
-category: "Metabolic Health"
+category: "Obesity & Metabolic Health Hub"
 publishDate: "2026-04-14"
 updatedDate: "2026-04-14"
 tags: ["insulin resistance", "metabolic health", "type 2 diabetes", "prediabetes", "metabolic syndrome", "prevention"]
