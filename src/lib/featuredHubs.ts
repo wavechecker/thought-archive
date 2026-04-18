@@ -12,7 +12,7 @@ export const HUBS: FeaturedHub[] = [
   },
   {
     title: "Aging & Longevity",
-    href: "/guides/aging-and-longevity-basics",
+    href: "/guides/aging-longevity",
     description: "Aging biology, lifespan heritability, and longevity debates."
   },
   {
