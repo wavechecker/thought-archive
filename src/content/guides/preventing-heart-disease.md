@@ -48,7 +48,7 @@ Heart disease remains one of the leading causes of illness and death worldwide. 
 
 ## Heart Disease by the Numbers
 - **#1 global killer**: ~18 million deaths annually (WHO, 2024).  
-- **80% of premature heart disease** is preventable through lifestyle changes and early detection.  
+- **80% of premature heart disease** is preventable through [lifestyle changes](/guides/longevity-lifestyle-basics) and early detection.  
 - **1 in 3 deaths worldwide** is due to cardiovascular disease.  
 - **High blood pressure** affects >1 billion people globally, often undiagnosed.  
 - **Smoking** doubles the risk of heart attack compared to non-smokers.  

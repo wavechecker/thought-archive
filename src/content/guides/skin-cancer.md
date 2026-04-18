@@ -109,7 +109,7 @@ A: If you notice any new, changing, or non-healing spots, or a mole with ABCDE f
 ## Related Guides
 - [Cancer — Guide Hub](/guides/cancer) — overview of cancer types, treatment approaches, and survivorship.
 - [Skin Cancer — Prevention](/guides/skin-cancer-prevention) — practical, evidence-based strategies to reduce UV exposure and lower skin cancer risk.
-- [Sunscreen and Skin Protection](/guides/sunscreen-skin-protection) — how sunscreen works, SPF ratings, and correct application.
+- [Sunscreen and Skin Protection](/guides/sunscreen) — how sunscreen works, SPF ratings, and correct application.
 - [Nicotinamide and Skin Cancer Prevention](/guides/nicotinamide-skin-cancer-prevention) — the evidence on nicotinamide supplementation for reducing non-melanoma skin cancer risk.
 - [Skin Cancer: Survivorship and Follow-Up](/guides/skin-cancer-survivorship) — life after skin cancer treatment; monitoring and reducing recurrence risk.
 - [Bowel Cancer](/guides/bowel-cancer) — cancer screening and early detection principles across cancer types.
