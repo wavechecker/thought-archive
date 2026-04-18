@@ -181,6 +181,31 @@
   status = 301
   force = true
 
+# Sunscreen: legacy routes → current cluster guide (2026-04-17 cleanup)
+[[redirects]]
+  from = "/guides/sunscreen-basics"
+  to = "/guides/sunscreen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/sunscreen-basics/"
+  to = "/guides/sunscreen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/sunscreen-skin-protection"
+  to = "/guides/sunscreen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/sunscreen-skin-protection/"
+  to = "/guides/sunscreen"
+  status = 301
+  force = true
+
 # Deprecated GPT-5 bubble post → 2026 AI market update
 [[redirects]]
   from = "/posts/gpt5-cold-reality-bubble"
