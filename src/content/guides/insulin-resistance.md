@@ -77,7 +77,7 @@ When the pancreas can no longer compensate, blood glucose rises into the prediab
 | Chronic stress | Elevated cortisol promotes visceral fat deposition |
 | Genetic factors | Strong family history of type 2 diabetes; South and East Asian ancestry carry higher risk at lower BMI |
 | Polycystic ovary syndrome (PCOS) | Closely associated; hormonal and metabolic interactions are bidirectional |
-| Ageing | Gradual decline in muscle mass and hormonal milieu |
+| [Ageing](/guides/hallmarks-of-aging) | Gradual decline in muscle mass and hormonal milieu |
 
 ---
 

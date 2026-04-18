@@ -145,7 +145,7 @@ Sleep restriction of even a few nights impairs insulin sensitivity, raises hunge
 Short sleep duration (under 6 hours) and disturbed sleep increase blood pressure, inflammatory markers, and long-term risk of heart attack and stroke. Obstructive sleep apnoea, in particular, dramatically raises cardiovascular risk if left untreated.
 
 **Immune function and longevity**
-Sleep is when immune memory is consolidated and cellular repair occurs. Chronic sleep deprivation is associated with increased infection susceptibility and is linked to accelerated biological ageing in population studies.
+Sleep is when immune memory is consolidated and cellular repair occurs. Chronic sleep deprivation is associated with increased infection susceptibility and is linked to [accelerated biological ageing](/guides/aging-and-longevity-basics) in population studies.
 
 ---
 

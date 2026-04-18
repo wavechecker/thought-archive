@@ -74,7 +74,7 @@ It covers five broad domains: **screening and early detection**, **vaccination**
 ### Lifestyle — Limiting Harm
 - [Smoking and Tobacco Cessation](/guides/smoking-cessation)
 - [Alcohol and Health: Risks, Safe Limits, and Disease Prevention](/guides/alcohol-and-health)
-- [Sunscreen and Skin Protection — Benefits, Risks, and Myths](/guides/sunscreen-skin-protection)
+- [Sunscreen: Benefits, SPF Explained, and How It Protects Skin](/guides/sunscreen)
 - [STI Prevention Basics](/guides/sti-prevention)
 
 ### Condition-Specific Prevention
