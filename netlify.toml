@@ -237,11 +237,13 @@
   from = "/guides/fever-danger-adults-children"
   to = "/guides/fever-adults-children"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/guides/fever-danger-adults-children/"
   to = "/guides/fever-adults-children"
   status = 301
+  force = true
 
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
