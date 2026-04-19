@@ -107,7 +107,7 @@ const breadcrumbLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
-    { "@type": "ListItem", position: 2, name: "Posts", item: `${site}/posts/` },
+    { "@type": "ListItem", position: 2, name: "Posts", item: `${site}/posts` },
     { "@type": "ListItem", position: 3, name: data.title, item: canonicalUrl },
   ],
 };
@@ -229,7 +229,7 @@ const blogPostingLd = {
   <nav class="pg-breadcrumbs" aria-label="Breadcrumb">
     <ol>
       <li><a href="/">Home</a></li>
-      <li><a href="/posts/">Posts</a></li>
+      <li><a href="/posts">Posts</a></li>
       <li aria-current="page">{data.title}</li>
     </ol>
   </nav>
@@ -327,7 +327,7 @@ const blogPostingLd = {
         {tags.length > 0 && (
           <div class="pg-post__tags">
             {tags.map((tag: string) => (
-              <a href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}/`} class="pg-tag">
+              <a href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}`} class="pg-tag">
                 {tag}
               </a>
             ))}
@@ -393,7 +393,7 @@ const blogPostingLd = {
                 const postDate = isValidDate(post.data.publishDate) ? fmt(post.data.publishDate) : null;
                 const postSlug = getSlugFromId(post.id);
                 return (
-                  <a href={`/posts/${postSlug}/`} class="pg-related-card">
+                  <a href={`/posts/${postSlug}`} class="pg-related-card">
                     <h3 class="pg-related-card__title">{post.data.title}</h3>
                     {post.data.description && <p class="pg-related-card__description">{post.data.description}</p>}
                     {postDate && <span class="pg-related-card__date">{postDate}</span>}
@@ -405,7 +405,7 @@ const blogPostingLd = {
         )}
 
         <div class="pg-post__nav">
-          <a href="/posts/" class="pg-btn pg-btn--secondary">
+          <a href="/posts" class="pg-btn pg-btn--secondary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>

@@ -212,6 +212,37 @@
   to = "/posts/ai-bubble-2026-reality-check"
   status = 301
 
+# ---------- Legacy guide slug redirects (2026-04-19) ----------
+[[redirects]]
+  from = "/guides/aging-and-longevity"
+  to = "/guides/aging-longevity"
+  status = 301
+
+[[redirects]]
+  from = "/guides/aging-and-longevity/"
+  to = "/guides/aging-longevity"
+  status = 301
+
+[[redirects]]
+  from = "/guides/ai-in-medicine-evidence-standards"
+  to = "/guides/how-to-evaluate-medical-claims-age-of-ai"
+  status = 301
+
+[[redirects]]
+  from = "/guides/ai-in-medicine-evidence-standards/"
+  to = "/guides/how-to-evaluate-medical-claims-age-of-ai"
+  status = 301
+
+[[redirects]]
+  from = "/guides/fever-danger-adults-children"
+  to = "/guides/fever-adults-children"
+  status = 301
+
+[[redirects]]
+  from = "/guides/fever-danger-adults-children/"
+  to = "/guides/fever-adults-children"
+  status = 301
+
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
 #   from = "/*"

@@ -23,7 +23,7 @@ const published = resources
       <ul class="list-disc list-inside mt-6 space-y-2">
         {published.map((r) => (
           <li>
-            <a href={`/resources/${r.slug}/`}>{r.data?.title ?? "(Untitled)"}</a>
+            <a href={`/resources/${r.slug}`}>{r.data?.title ?? "(Untitled)"}</a>
             {r.data?.description && <small> — {r.data.description}</small>}
           </li>
         ))}

@@ -67,7 +67,7 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
           { title: "Measles Overview", href: "/guides/measles" },
           { title: "Measles and Pregnancy", href: "/guides/measles-pregnancy" },
           { title: "Measles and Travel", href: "/guides/measles-travel" },
-          { title: "MMR Vaccine Guide", href: "/guides/measles-vaccine" },
+          { title: "MMR Vaccine Guide", href: "/guides/measles-vaccination" },
           { title: "Why Measles Comes Back First", href: "/guides/why-measles-comes-back-first" },
         ],
       },
@@ -595,7 +595,7 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
       {
         title: "Ozempic & GLP-1 Guide",
         description: "How they work, who they're for, and what to expect.",
-        href: "/guides/ozempic-glp1-guide",
+        href: "/guides/ozempic-glp-1-guide",
       },
       {
         title: "Muscle Preservation",
@@ -612,7 +612,7 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
       {
         name: "GLP-1 Medications",
         guides: [
-          { title: "Ozempic & GLP-1 Overview", href: "/guides/ozempic-glp1-guide" },
+          { title: "Ozempic & GLP-1 Overview", href: "/guides/ozempic-glp-1-guide" },
           { title: "Ozempic Cautions", href: "/guides/ozempic-cautions" },
           { title: "GLP-1 Side Effects: Evidence vs Myth", href: "/guides/glp-1-side-effects-evidence-vs-myth" },
           { title: "GLP-1 vs Bariatric Surgery", href: "/guides/glp-1-vs-bariatric-surgery" },
@@ -623,7 +623,7 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         name: "Muscle & Metabolism",
         guides: [
           { title: "Muscle Preservation During Weight Loss", href: "/guides/muscle-preservation" },
-          { title: "Muscle Preservation with GLP-1s", href: "/guides/muscle-preservation-glp1" },
+          { title: "Muscle Preservation with GLP-1s", href: "/guides/muscle-preservation-glp-1" },
           { title: "Protein & Muscle Health", href: "/guides/protein-muscle-health" },
           { title: "Strength & Metabolism", href: "/guides/strength-metabolism" },
           { title: "Creatine Guide", href: "/guides/creatine-guide" },

@@ -62,3 +62,4 @@ A: The term "chronic Lyme disease" is used differently in different contexts. PT
 - [Lyme Disease](/guides/lyme-disease)
 - [Long COVID: Symptoms, Causes, and Recovery](/guides/long-covid)
 - [Post-Viral Syndromes: Why Some Infections Don't Fully Resolve](/guides/post-viral-syndromes)
+- [Chronic Fatigue: When Tiredness Doesn't Lift](/guides/chronic-fatigue)

@@ -45,7 +45,7 @@ const featuredHubs = getWeeklyFeaturedHubs(4);
     <p class="pg-hero__subtitle">
       Evidence-based content on metabolic health, aging & longevity, chronic disease, and everyday health decisions — no fluff, no sensationalism.
     </p>
-    <a href="/guides/" class="pg-btn pg-btn--primary pg-hero__cta">
+    <a href="/guides" class="pg-btn pg-btn--primary pg-hero__cta">
       Browse All Guides
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -81,7 +81,7 @@ const featuredHubs = getWeeklyFeaturedHubs(4);
 
       <div class="pg-list">
         {posts.map((p) => {
-          const href = `/posts/${safeSlug(p.slug)}/`;
+          const href = `/posts/${safeSlug(p.slug)}`;
           const title = p.data?.title ?? "(Untitled)";
           const desc = p.data?.description ?? "";
           const date = safeDate(p.data?.updatedDate ?? p.data?.publishDate);
@@ -99,7 +99,7 @@ const featuredHubs = getWeeklyFeaturedHubs(4);
         })}
       </div>
 
-      <a href="/posts/" class="pg-btn pg-btn--secondary pg-section__cta">
+      <a href="/posts" class="pg-btn pg-btn--secondary pg-section__cta">
         Browse all posts
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -145,7 +145,7 @@ const featuredHubs = getWeeklyFeaturedHubs(4);
       </div>
     )}
 
-    <a href="/guides/" class="pg-btn pg-btn--secondary pg-section__cta">
+    <a href="/guides" class="pg-btn pg-btn--secondary pg-section__cta">
       View all guides
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M5 12h14M12 5l7 7-7 7"/>
