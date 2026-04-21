@@ -1,24 +1,24 @@
 // netlify/functions/chat.js
 // PatientGuide chatbot API handler.
 // Requires ANTHROPIC_API_KEY environment variable.
-//
-// MODULE FORMAT NOTE
-// This file uses CommonJS syntax (require / exports.handler) even though
-// package.json declares "type": "module". It works because Netlify's own
-// esbuild bundler processes functions in netlify/functions/ at deploy time,
-// handling CJS→ESM interop transparently. The dynamic import() of retrieval.mjs
-// is resolved by esbuild at bundle time and is effectively synchronous after
-// the cold-start Promise resolves.
-//
-// Do NOT run this file directly with `node netlify/functions/chat.js` —
-// always test via `netlify dev` or a Netlify deploy preview.
 
-"use strict";
+import { createRequire } from "module";
+import {
+  retrieve,
+  classifyQuery,
+  classifyAnswerType,
+  responseMode,
+  filterDisplayLinks,
+  tokenize,
+} from "./retrieval.mjs";
 
-const CHATBOT_INDEX = require("./chatbot-index.json");
+console.log("CHAT_INIT retrieval module loaded");
 
-// Load shared retrieval/safety module once; await in handler (cached Promise).
-const _retrievalP = import("./retrieval.mjs");
+// createRequire lets ESM files load JSON via the CommonJS loader, which esbuild
+// inlines at bundle time — the same way it handles static JSON imports.
+const _require = createRequire(import.meta.url);
+const CHATBOT_INDEX = _require("./chatbot-index.json");
+console.log("CHAT_INIT index items:", CHATBOT_INDEX?.items?.length ?? "MISSING");
 
 // ---------------------------------------------------------------------------
 // Rate limiting — in-memory sliding window per IP
@@ -240,150 +240,148 @@ const HEADERS = {
   "Cache-Control": "no-store",
 };
 
-exports.handler = async function (event) {
-  if (event.httpMethod === "OPTIONS") {
-    return { statusCode: 204, headers: HEADERS, body: "" };
-  }
-
-  if (event.httpMethod !== "POST") {
-    return {
-      statusCode: 405,
-      headers: HEADERS,
-      body: JSON.stringify({ error: "Method not allowed" }),
-    };
-  }
-
-  // --- Rate limiting ---
-  const ip = getClientIp(event.headers || {});
-  if (checkRateLimit(ip)) {
-    return {
-      statusCode: 429,
-      headers: { ...HEADERS, "Retry-After": "60" },
-      body: JSON.stringify({
-        error: "Too many requests. Please wait a moment before asking again.",
-      }),
-    };
-  }
-
-  // --- Input parsing and validation ---
-  let question;
+export const handler = async function (event) {
   try {
-    const body = JSON.parse(event.body || "{}");
-    question = String(body.question || "").trim();
-  } catch {
-    return {
-      statusCode: 400,
-      headers: HEADERS,
-      body: JSON.stringify({ error: "Invalid request body" }),
-    };
-  }
+    if (event.httpMethod === "OPTIONS") {
+      return { statusCode: 204, headers: HEADERS, body: "" };
+    }
 
-  if (!question) {
-    return {
-      statusCode: 400,
-      headers: HEADERS,
-      body: JSON.stringify({ error: "Question is required" }),
-    };
-  }
+    if (event.httpMethod !== "POST") {
+      return {
+        statusCode: 405,
+        headers: HEADERS,
+        body: JSON.stringify({ error: "Method not allowed" }),
+      };
+    }
 
-  if (question.length > 600) {
-    return {
-      statusCode: 400,
-      headers: HEADERS,
-      body: JSON.stringify({ error: "Question too long (max 600 characters)" }),
-    };
-  }
+    // --- Rate limiting ---
+    const ip = getClientIp(event.headers || {});
+    if (checkRateLimit(ip)) {
+      return {
+        statusCode: 429,
+        headers: { ...HEADERS, "Retry-After": "60" },
+        body: JSON.stringify({
+          error: "Too many requests. Please wait a moment before asking again.",
+        }),
+      };
+    }
 
-  // --- Load shared module (cached Promise, near-synchronous on warm instances) ---
-  const { retrieve, classifyQuery, classifyAnswerType, responseMode, filterDisplayLinks, tokenize } = await _retrievalP;
+    // --- Input parsing and validation ---
+    let question;
+    try {
+      const body = JSON.parse(event.body || "{}");
+      question = String(body.question || "").trim();
+    } catch {
+      return {
+        statusCode: 400,
+        headers: HEADERS,
+        body: JSON.stringify({ error: "Invalid request body" }),
+      };
+    }
 
-  // --- Safety classification ---
-  const queryType = classifyQuery(question);
+    if (!question) {
+      return {
+        statusCode: 400,
+        headers: HEADERS,
+        body: JSON.stringify({ error: "Question is required" }),
+      };
+    }
 
-  if (queryType === "urgent") {
-    logQuery({ qLen: question.length, queryType: "urgent", answerType: "urgent", mode: "urgent" });
-    return {
-      statusCode: 200,
-      headers: HEADERS,
-      body: JSON.stringify({
-        type:         "urgent",
-        answer:       "PatientGuide cannot assess emergencies. If you or someone else may be in danger, please contact emergency services immediately.",
-        links:        [],
-        safetyNote:   "In a medical emergency do not delay — call 999 (UK), 911 (US), 112 (EU), or your local emergency number now.",
-        onwardRoute:  "emergency services",
-        onwardMessage:"Call your local emergency number immediately. Do not wait.",
-      }),
-    };
-  }
+    if (question.length > 600) {
+      return {
+        statusCode: 400,
+        headers: HEADERS,
+        body: JSON.stringify({ error: "Question too long (max 600 characters)" }),
+      };
+    }
 
-  // --- Retrieval ---
-  const results    = retrieve(CHATBOT_INDEX.items, question);
-  const answerType = classifyAnswerType(results);
-  const mode       = responseMode(queryType, answerType);
-  const topScore   = results[0]?.score || 0;
+    // --- Safety classification ---
+    const queryType = classifyQuery(question);
 
-  // filterDisplayLinks removes keyword-coincidence results. Claude still receives
-  // the full `results` context — only the displayed links are affected.
-  const queryTerms     = tokenize(question);
-  const displayResults = filterDisplayLinks(results, queryTerms);
+    if (queryType === "urgent") {
+      logQuery({ qLen: question.length, queryType: "urgent", answerType: "urgent", mode: "urgent" });
+      return {
+        statusCode: 200,
+        headers: HEADERS,
+        body: JSON.stringify({
+          type:         "urgent",
+          answer:       "PatientGuide cannot assess emergencies. If you or someone else may be in danger, please contact emergency services immediately.",
+          links:        [],
+          safetyNote:   "In a medical emergency do not delay — call 999 (UK), 911 (US), 112 (EU), or your local emergency number now.",
+          onwardRoute:  "emergency services",
+          onwardMessage:"Call your local emergency number immediately. Do not wait.",
+        }),
+      };
+    }
 
-  // Strong links: passed the display filter (relevant to 2+ query terms).
-  const strongLinks = displayResults.slice(0, 3).map((r) => ({ title: r.title, url: r.url }));
+    // --- Retrieval ---
+    const results    = retrieve(CHATBOT_INDEX.items, question);
+    const answerType = classifyAnswerType(results);
+    const mode       = responseMode(queryType, answerType);
+    const topScore   = results[0]?.score || 0;
 
-  // Fallback links: shown only when the strict filter removed everything but raw
-  // results exist. Labeled "Possibly related content" so lower confidence is clear.
-  const needsFallback = displayResults.length === 0 && results.length > 0;
-  const fallbackLinks = needsFallback
-    ? results.slice(0, 2).map((r) => ({ title: r.title, url: r.url }))
-    : [];
-  const linkNote = needsFallback
-    ? "We couldn't find closely matching guides for this question."
-    : null;
+    // filterDisplayLinks removes keyword-coincidence results. Claude still receives
+    // the full `results` context — only the displayed links are affected.
+    const queryTerms     = tokenize(question);
+    const displayResults = filterDisplayLinks(results, queryTerms);
 
-  const topTitles = results.slice(0, 3).map((r) => r.title);
+    // Strong links: passed the display filter (relevant to 2+ query terms).
+    const strongLinks = displayResults.slice(0, 3).map((r) => ({ title: r.title, url: r.url }));
 
-  if (answerType === "unavailable") {
-    // For unavailable, strong links become "related content" (capped at 2).
-    // Fallback links are offered when even those are absent.
-    const unavailableLinks = strongLinks.slice(0, 2);
-    const unavailableAnswer = (unavailableLinks.length || fallbackLinks.length)
-      ? "PatientGuide doesn't have a direct answer for this question. You may find these related guides useful, or try rephrasing your question."
-      : "PatientGuide does not currently cover this topic. Try rephrasing your question, or consult a trusted health source.";
+    // Fallback links: shown only when the strict filter removed everything but raw
+    // results exist. Labeled "Possibly related content" so lower confidence is clear.
+    const needsFallback = displayResults.length === 0 && results.length > 0;
+    const fallbackLinks = needsFallback
+      ? results.slice(0, 2).map((r) => ({ title: r.title, url: r.url }))
+      : [];
+    const linkNote = needsFallback
+      ? "We couldn't find closely matching guides for this question."
+      : null;
 
-    logQuery({
-      qLen: question.length, queryType, answerType, mode: "unavailable",
-      topScore,
-      topUrls:   unavailableLinks.map((l) => l.url),
-      topTitles: unavailableLinks.map((l) => l.title),
-    });
-    return {
-      statusCode: 200,
-      headers: HEADERS,
-      body: JSON.stringify({
-        type:         "unavailable",
-        answer:       unavailableAnswer,
-        links:        unavailableLinks,
-        fallbackLinks,
-        linkNote,
-        safetyNote:   null,
-        onwardRoute:  onwardRoute(queryType, true),
-        onwardMessage:onwardMessage(queryType, answerType),
-      }),
-    };
-  }
+    const topTitles = results.slice(0, 3).map((r) => r.title);
 
-  // --- Claude API ---
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
-    console.error("ANTHROPIC_API_KEY is not set");
-    return {
-      statusCode: 503,
-      headers: HEADERS,
-      body: JSON.stringify({ error: "Service temporarily unavailable" }),
-    };
-  }
+    if (answerType === "unavailable") {
+      // For unavailable, strong links become "related content" (capped at 2).
+      // Fallback links are offered when even those are absent.
+      const unavailableLinks = strongLinks.slice(0, 2);
+      const unavailableAnswer = (unavailableLinks.length || fallbackLinks.length)
+        ? "PatientGuide doesn't have a direct answer for this question. You may find these related guides useful, or try rephrasing your question."
+        : "PatientGuide does not currently cover this topic. Try rephrasing your question, or consult a trusted health source.";
 
-  try {
+      logQuery({
+        qLen: question.length, queryType, answerType, mode: "unavailable",
+        topScore,
+        topUrls:   unavailableLinks.map((l) => l.url),
+        topTitles: unavailableLinks.map((l) => l.title),
+      });
+      return {
+        statusCode: 200,
+        headers: HEADERS,
+        body: JSON.stringify({
+          type:         "unavailable",
+          answer:       unavailableAnswer,
+          links:        unavailableLinks,
+          fallbackLinks,
+          linkNote,
+          safetyNote:   null,
+          onwardRoute:  onwardRoute(queryType, true),
+          onwardMessage:onwardMessage(queryType, answerType),
+        }),
+      };
+    }
+
+    // --- Claude API ---
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
+      console.error("ANTHROPIC_API_KEY is not set");
+      return {
+        statusCode: 503,
+        headers: HEADERS,
+        body: JSON.stringify({ error: "Service temporarily unavailable" }),
+      };
+    }
+
+    console.log("CHAT_CLAUDE_CALL queryType:", queryType, "answerType:", answerType);
     const claudeResp = await callClaude(question, results, queryType, apiKey);
 
     logQuery({
@@ -408,11 +406,10 @@ exports.handler = async function (event) {
       }),
     };
   } catch (err) {
-    console.error("chat handler error:", err.message);
+    console.error("CHAT_HANDLER_ERROR", err.message, err.stack?.split("\n")[1] ?? "");
     return {
       statusCode: 500,
-      headers: HEADERS,
-      body: JSON.stringify({ error: "Something went wrong. Please try again." }),
+      body: JSON.stringify({ error: "Something went wrong" }),
     };
   }
 };
