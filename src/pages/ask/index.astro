@@ -1,0 +1,716 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Ask PatientGuide",
+  description:
+    "Ask natural-language health questions and get answers grounded in PatientGuide guides and articles.",
+};
+
+const sampleQuestions = [
+  "Can poor sleep feel like dementia?",
+  "What are brain zaps?",
+  "Is high blood pressure always symptomatic?",
+  "Can antidepressants affect sleep?",
+  "What does insulin resistance mean?",
+];
+---
+
+<Layout frontmatter={frontmatter}>
+  <div class="ask-page">
+    <div class="ask-header">
+      <h1 class="ask-title">Ask PatientGuide</h1>
+      <p class="ask-subtitle">
+        Ask a health question and get an answer grounded in PatientGuide
+        guides and articles. This tool finds and summarises existing
+        PatientGuide content — it does not diagnose or replace clinical advice.
+      </p>
+    </div>
+
+    <div class="ask-disclaimer" role="note">
+      <strong>Not a substitute for medical advice.</strong>
+      For emergencies, call your local emergency number immediately.
+      For personal health concerns, speak with your GP or a clinician.
+    </div>
+
+    <div
+      class="ask-chat"
+      id="chat-area"
+      aria-live="polite"
+      aria-label="Conversation history"
+    >
+      <div class="ask-empty" id="empty-state">
+        <p class="ask-empty__prompt">Try asking one of these:</p>
+        <div class="ask-empty__suggestions">
+          {
+            sampleQuestions.map((q) => (
+              <button class="ask-suggestion" type="button" data-question={q}>
+                {q}
+              </button>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <form class="ask-form" id="ask-form" novalidate>
+      <div class="ask-input-row">
+        <textarea
+          id="ask-input"
+          class="ask-input"
+          name="question"
+          rows="2"
+          placeholder="Ask a health question…"
+          maxlength="600"
+          aria-label="Your question"
+          autocomplete="off"
+        ></textarea>
+        <button
+          type="submit"
+          class="ask-send"
+          id="ask-send"
+          aria-label="Send question"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+          <span>Ask</span>
+        </button>
+      </div>
+      <p class="ask-hint">Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to send</p>
+    </form>
+  </div>
+</Layout>
+
+<script>
+  const chatArea = document.getElementById("chat-area")!;
+  const emptyState = document.getElementById("empty-state");
+  const form = document.getElementById("ask-form") as HTMLFormElement;
+  const input = document.getElementById("ask-input") as HTMLTextAreaElement;
+  const sendBtn = document.getElementById("ask-send") as HTMLButtonElement;
+
+  let hasMessages = false;
+
+  function esc(str: string): string {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function showUserMessage(text: string) {
+    if (!hasMessages) {
+      emptyState?.remove();
+      hasMessages = true;
+    }
+    const el = document.createElement("div");
+    el.className = "ask-message ask-message--user";
+    el.innerHTML = `<div class="ask-bubble">${esc(text)}</div>`;
+    chatArea.appendChild(el);
+    chatArea.scrollTo({ top: chatArea.scrollHeight, behavior: "smooth" });
+  }
+
+  function showLoadingMessage(): HTMLElement {
+    const el = document.createElement("div");
+    el.className = "ask-message ask-message--bot";
+    el.innerHTML = `<div class="ask-loading" aria-label="Loading response">
+      <span></span><span></span><span></span>
+    </div>`;
+    chatArea.appendChild(el);
+    chatArea.scrollTo({ top: chatArea.scrollHeight, behavior: "smooth" });
+    return el;
+  }
+
+  function badgeLabel(type: string): string {
+    const labels: Record<string, string> = {
+      grounded:         "From PatientGuide",
+      partial:          "From PatientGuide",
+      unavailable:      "We don't cover this yet",
+      urgent:           "Emergency",
+      "medication-safe":"Ask a pharmacist",
+      "personal-safe":  "Speak to a clinician",
+    };
+    return labels[type] ?? "From PatientGuide";
+  }
+
+  function modeSubtitle(type: string): string {
+    const subtitles: Record<string, string> = {
+      grounded:         "Answer sourced from PatientGuide content",
+      partial:          "Partial match — see sources for full context",
+      unavailable:      "We don't have a direct answer for this",
+      urgent:           "This sounds like an emergency — please act now",
+      "medication-safe":"Medication questions need a pharmacist or GP",
+      "personal-safe":  "Personal symptoms need clinical assessment",
+    };
+    return subtitles[type] ?? "";
+  }
+
+  function renderCard(data: {
+    type?: string;
+    answer?: string;
+    links?: { title: string; url: string }[];
+    fallbackLinks?: { title: string; url: string }[];
+    linkNote?: string | null;
+    safetyNote?: string | null;
+    onwardMessage?: string | null;
+  }): string {
+    const type          = data.type || "unavailable";
+    const answer        = esc(data.answer || "No answer returned.");
+    const links         = data.links         || [];
+    const fallbackLinks = data.fallbackLinks || [];
+
+    const subtitle = modeSubtitle(type);
+    let html = `<div class="ask-card ask-card--${esc(type)}">`;
+    html += `<div class="ask-card__header">`;
+    html += `<span class="ask-card__badge">${esc(badgeLabel(type))}</span>`;
+    if (subtitle) html += `<span class="ask-card__mode-hint">${esc(subtitle)}</span>`;
+    html += `</div>`;
+    html += `<p class="ask-card__answer">${answer}</p>`;
+
+    if (data.linkNote) {
+      html += `<p class="ask-card__link-note">${esc(data.linkNote)}</p>`;
+    }
+
+    const linksLabel = type === "unavailable" ? "Related content on PatientGuide" : "Read more on PatientGuide";
+    if (links.length) {
+      html += `<div class="ask-card__links">`;
+      html += `<p class="ask-card__links-label">${esc(linksLabel)}</p><ul>`;
+      for (const link of links) {
+        html += `<li><a href="${esc(link.url)}" class="ask-card__link">${esc(link.title)}</a></li>`;
+      }
+      html += `</ul></div>`;
+    }
+
+    if (fallbackLinks.length) {
+      html += `<div class="ask-card__links ask-card__links--fallback">`;
+      html += `<p class="ask-card__links-label">Possibly related content</p><ul>`;
+      for (const link of fallbackLinks) {
+        html += `<li><a href="${esc(link.url)}" class="ask-card__link ask-card__link--fallback">${esc(link.title)}</a></li>`;
+      }
+      html += `</ul></div>`;
+    }
+
+    if (data.safetyNote) {
+      html += `<p class="ask-card__safety">${esc(data.safetyNote)}</p>`;
+    }
+
+    if (data.onwardMessage) {
+      html += `<p class="ask-card__onward">${esc(data.onwardMessage)}</p>`;
+    }
+
+    html += `</div>`;
+    return html;
+  }
+
+  async function ask(question: string) {
+    const q = question.trim();
+    if (!q) return;
+
+    input.value = "";
+    input.style.height = "";
+    sendBtn.disabled = true;
+
+    showUserMessage(q);
+    const loadingEl = showLoadingMessage();
+
+    try {
+      const res = await fetch("/.netlify/functions/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: q }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        loadingEl.innerHTML = renderCard({
+          type: "unavailable",
+          answer: (data as any).error || "Something went wrong. Please try again.",
+        });
+      } else {
+        loadingEl.innerHTML = renderCard(data as any);
+      }
+    } catch {
+      loadingEl.innerHTML = renderCard({
+        type: "unavailable",
+        answer: "Unable to reach PatientGuide. Please check your connection and try again.",
+      });
+    } finally {
+      sendBtn.disabled = false;
+      chatArea.scrollTo({ top: chatArea.scrollHeight, behavior: "smooth" });
+    }
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    await ask(input.value);
+  });
+
+  document.querySelectorAll<HTMLElement>(".ask-suggestion").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      await ask(btn.dataset.question || "");
+    });
+  });
+
+  input.addEventListener("input", () => {
+    input.style.height = "auto";
+    input.style.height = Math.min(input.scrollHeight, 160) + "px";
+  });
+
+  input.addEventListener("keydown", (e: KeyboardEvent) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+      e.preventDefault();
+      form.requestSubmit();
+    }
+  });
+</script>
+
+<style>
+  .ask-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-6);
+  }
+
+  /* Header */
+  .ask-header {
+    text-align: center;
+    padding-bottom: var(--pg-space-2);
+  }
+
+  .ask-title {
+    font-size: var(--pg-text-3xl);
+    font-weight: 700;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-3);
+    line-height: var(--pg-leading-tight);
+  }
+
+  .ask-subtitle {
+    font-size: var(--pg-text-base);
+    color: var(--pg-text-soft);
+    max-width: 38rem;
+    margin: 0 auto;
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  /* Disclaimer */
+  .ask-disclaimer {
+    background: var(--pg-surface-soft);
+    border: 1px solid var(--pg-border);
+    border-left: 3px solid var(--pg-link);
+    border-radius: var(--pg-radius-md);
+    padding: var(--pg-space-3) var(--pg-space-4);
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  /* Chat area */
+  .ask-chat {
+    min-height: 280px;
+    max-height: 520px;
+    overflow-y: auto;
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-lg);
+    background: var(--pg-surface);
+    padding: var(--pg-space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-4);
+    scroll-behavior: smooth;
+  }
+
+  /* Empty state */
+  .ask-empty {
+    margin: auto;
+    text-align: center;
+    padding: var(--pg-space-8) var(--pg-space-4);
+  }
+
+  .ask-empty__prompt {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-muted);
+    margin: 0 0 var(--pg-space-4);
+  }
+
+  .ask-empty__suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pg-space-2);
+    justify-content: center;
+  }
+
+  .ask-suggestion {
+    padding: var(--pg-space-2) var(--pg-space-3);
+    font-size: var(--pg-text-sm);
+    color: var(--pg-link);
+    background: var(--pg-surface-soft);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-full);
+    cursor: pointer;
+    transition: all var(--pg-transition-fast);
+    text-align: left;
+    font-family: var(--pg-font-sans);
+  }
+
+  .ask-suggestion:hover {
+    background: #eff6ff;
+    border-color: var(--pg-link);
+  }
+
+  /* Messages */
+  .ask-message {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ask-message--user {
+    align-items: flex-end;
+  }
+
+  .ask-message--bot {
+    align-items: flex-start;
+  }
+
+  .ask-bubble {
+    max-width: 80%;
+    padding: var(--pg-space-3) var(--pg-space-4);
+    background: var(--pg-link);
+    color: white;
+    border-radius: var(--pg-radius-lg);
+    border-bottom-right-radius: var(--pg-radius-sm);
+    font-size: var(--pg-text-sm);
+    line-height: var(--pg-leading-relaxed);
+    word-break: break-word;
+  }
+
+  /* Loading indicator */
+  .ask-loading {
+    display: flex;
+    gap: var(--pg-space-1);
+    padding: var(--pg-space-3) var(--pg-space-4);
+    background: var(--pg-surface-soft);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-lg);
+    border-bottom-left-radius: var(--pg-radius-sm);
+    width: fit-content;
+  }
+
+  .ask-loading span {
+    width: 7px;
+    height: 7px;
+    background: var(--pg-text-muted);
+    border-radius: 50%;
+    animation: pg-dot-bounce 1.2s ease-in-out infinite;
+  }
+
+  .ask-loading span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .ask-loading span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes pg-dot-bounce {
+    0%, 80%, 100% {
+      transform: scale(0.6);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Response cards */
+  .ask-card {
+    max-width: 92%;
+    background: var(--pg-surface);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-lg);
+    border-bottom-left-radius: var(--pg-radius-sm);
+    padding: var(--pg-space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-3);
+    box-shadow: var(--pg-shadow-card);
+  }
+
+  .ask-card--urgent {
+    border-color: #fca5a5;
+    background: #fff5f5;
+  }
+
+  .ask-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--pg-space-2);
+    flex-wrap: wrap;
+  }
+
+  .ask-card__badge {
+    display: inline-block;
+    font-size: var(--pg-text-xs);
+    font-weight: 600;
+    padding: 0.125rem var(--pg-space-2);
+    border-radius: var(--pg-radius-full);
+    background: var(--pg-surface-muted);
+    color: var(--pg-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .ask-card__mode-hint {
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+    line-height: var(--pg-leading-normal);
+  }
+
+  .ask-card--grounded .ask-card__badge {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .ask-card--partial .ask-card__badge {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .ask-card--urgent .ask-card__badge {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  .ask-card--medication-safe .ask-card__badge,
+  .ask-card--personal-safe .ask-card__badge {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .ask-card__answer {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text);
+    line-height: var(--pg-leading-relaxed);
+    margin: 0;
+  }
+
+  .ask-card__links {
+    border-top: 1px solid var(--pg-border);
+    padding-top: var(--pg-space-3);
+  }
+
+  .ask-card__links-label {
+    font-size: var(--pg-text-xs);
+    font-weight: 600;
+    color: var(--pg-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 var(--pg-space-2);
+  }
+
+  .ask-card__links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-1);
+  }
+
+  .ask-card__link {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-link);
+    text-decoration: none;
+  }
+
+  .ask-card__link:hover {
+    text-decoration: underline;
+  }
+
+  /* "We couldn't find closely matching guides…" note */
+  .ask-card__link-note {
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+    font-style: italic;
+    margin: 0;
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  /* Fallback links section — visually lower-confidence than strong links */
+  .ask-card__links--fallback .ask-card__links-label {
+    color: var(--pg-text-muted);
+    font-weight: 500;
+  }
+
+  .ask-card__link--fallback {
+    color: var(--pg-text-soft);
+  }
+
+  .ask-card__link--fallback:hover {
+    color: var(--pg-link);
+    text-decoration: underline;
+  }
+
+  .ask-card__safety {
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-soft);
+    background: var(--pg-surface-soft);
+    border-radius: var(--pg-radius-sm);
+    padding: var(--pg-space-2) var(--pg-space-3);
+    margin: 0;
+    line-height: var(--pg-leading-relaxed);
+    border-left: 2px solid var(--pg-border-muted);
+  }
+
+  .ask-card__onward {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    border-top: 1px solid var(--pg-border);
+    padding-top: var(--pg-space-3);
+    margin: 0;
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  /* Input form */
+  .ask-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-2);
+  }
+
+  .ask-input-row {
+    display: flex;
+    gap: var(--pg-space-2);
+    align-items: flex-end;
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-lg);
+    padding: var(--pg-space-2);
+    background: var(--pg-surface);
+    transition: border-color var(--pg-transition-fast), box-shadow var(--pg-transition-fast);
+  }
+
+  .ask-input-row:focus-within {
+    border-color: var(--pg-link);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+  }
+
+  .ask-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: var(--pg-font-sans);
+    font-size: var(--pg-text-base);
+    color: var(--pg-text);
+    background: transparent;
+    line-height: var(--pg-leading-normal);
+    padding: var(--pg-space-2);
+    min-height: 2.5rem;
+    max-height: 10rem;
+    overflow-y: auto;
+  }
+
+  .ask-input::placeholder {
+    color: var(--pg-text-muted);
+  }
+
+  .ask-send {
+    display: flex;
+    align-items: center;
+    gap: var(--pg-space-2);
+    padding: var(--pg-space-2) var(--pg-space-4);
+    background: var(--pg-link);
+    color: white;
+    border: none;
+    border-radius: var(--pg-radius-md);
+    font-size: var(--pg-text-sm);
+    font-weight: 600;
+    font-family: var(--pg-font-sans);
+    cursor: pointer;
+    transition: background var(--pg-transition-fast);
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-end;
+  }
+
+  .ask-send:hover:not(:disabled) {
+    background: var(--pg-link-hover);
+  }
+
+  .ask-send:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .ask-hint {
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+    margin: 0;
+    text-align: right;
+  }
+
+  kbd {
+    display: inline-block;
+    padding: 0.1em 0.35em;
+    font-family: var(--pg-font-mono);
+    font-size: 0.8em;
+    background: var(--pg-surface-muted);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-sm);
+  }
+
+  /* Dark mode overrides for coloured states */
+  html[data-theme="dark"] .ask-card--urgent {
+    background: rgba(220, 38, 38, 0.08);
+    border-color: rgba(248, 113, 113, 0.35);
+  }
+
+  html[data-theme="dark"] .ask-card--grounded .ask-card__badge {
+    background: rgba(6, 95, 70, 0.3);
+    color: #6ee7b7;
+  }
+
+  html[data-theme="dark"] .ask-card--partial .ask-card__badge,
+  html[data-theme="dark"] .ask-card--medication-safe .ask-card__badge,
+  html[data-theme="dark"] .ask-card--personal-safe .ask-card__badge {
+    background: rgba(146, 64, 14, 0.3);
+    color: #fcd34d;
+  }
+
+  html[data-theme="dark"] .ask-suggestion:hover {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: var(--pg-link);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .ask-card--urgent {
+      background: rgba(220, 38, 38, 0.08);
+      border-color: rgba(248, 113, 113, 0.35);
+    }
+
+    :root:not([data-theme="light"]) .ask-card--grounded .ask-card__badge {
+      background: rgba(6, 95, 70, 0.3);
+      color: #6ee7b7;
+    }
+
+    :root:not([data-theme="light"]) .ask-card--partial .ask-card__badge,
+    :root:not([data-theme="light"]) .ask-card--medication-safe .ask-card__badge,
+    :root:not([data-theme="light"]) .ask-card--personal-safe .ask-card__badge {
+      background: rgba(146, 64, 14, 0.3);
+      color: #fcd34d;
+    }
+  }
+</style>

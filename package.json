@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "rm -rf .astro node_modules/.astro/data-store.json",
+    "chatbot:index": "node scripts/build-chatbot-index.mjs",
+    "prebuild": "rm -rf .astro node_modules/.astro/data-store.json && node scripts/build-chatbot-index.mjs",
     "build": "astro build",
     "postbuild": "pagefind --site dist",
     "preview": "astro preview",
