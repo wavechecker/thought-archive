@@ -140,6 +140,7 @@ const sampleQuestions = [
       urgent:           "Emergency",
       "medication-safe":"Ask a pharmacist",
       "personal-safe":  "Speak to a clinician",
+      "error":          "PatientGuide",
     };
     return labels[type] ?? "From PatientGuide";
   }
@@ -152,6 +153,7 @@ const sampleQuestions = [
       urgent:           "This sounds like an emergency — please act now",
       "medication-safe":"Medication questions need a pharmacist or GP",
       "personal-safe":  "Personal symptoms need clinical assessment",
+      "error":          "",
     };
     return subtitles[type] ?? "";
   }
@@ -235,7 +237,7 @@ const sampleQuestions = [
 
       if (!res.ok) {
         loadingEl.innerHTML = renderCard({
-          type: "unavailable",
+          type: "error",
           answer: (data as any).error || "Something went wrong. Please try again.",
         });
       } else {
