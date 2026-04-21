@@ -4,11 +4,11 @@
 //
 // MODULE FORMAT NOTE
 // This file uses CommonJS syntax (require / exports.handler) even though
-// package.json declares "type": "module". It works because @astrojs/netlify
-// bundles all Netlify Functions with esbuild at deploy time, which handles
-// CJS→ESM interop transparently. The dynamic import() of retrieval.mjs is
-// similarly resolved by esbuild at bundle time and is effectively synchronous
-// after the cold-start Promise resolves.
+// package.json declares "type": "module". It works because Netlify's own
+// esbuild bundler processes functions in netlify/functions/ at deploy time,
+// handling CJS→ESM interop transparently. The dynamic import() of retrieval.mjs
+// is resolved by esbuild at bundle time and is effectively synchronous after
+// the cold-start Promise resolves.
 //
 // Do NOT run this file directly with `node netlify/functions/chat.js` —
 // always test via `netlify dev` or a Netlify deploy preview.
