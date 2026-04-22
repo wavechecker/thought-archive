@@ -1,19 +1,30 @@
 // netlify/functions/chat.js
 // PatientGuide chatbot API handler.
 // Requires ANTHROPIC_API_KEY environment variable.
+//
+// This file uses CommonJS syntax (require / exports.handler).
+// Netlify's esbuild bundler (node_bundler = "esbuild" in netlify.toml) resolves
+// all require() calls at bundle time — including require("./retrieval.mjs"),
+// which esbuild handles via CJS-ESM interop, and require("./chatbot-index.json"),
+// which esbuild inlines as a JS object. Neither file needs to exist alongside the
+// bundle at runtime. Do NOT convert to ESM imports: the .js extension combined
+// with the root "type": "module" creates an ambiguous module format for ZISI that
+// is resolved differently by production Netlify build servers.
 
-import {
+"use strict";
+
+const CHATBOT_INDEX = require("./chatbot-index.json");
+console.log("CHAT_INIT index items:", CHATBOT_INDEX?.items?.length ?? "MISSING");
+
+const {
   retrieve,
   classifyQuery,
   classifyAnswerType,
   responseMode,
   filterDisplayLinks,
   tokenize,
-} from "./retrieval.mjs";
-import CHATBOT_INDEX from "./chatbot-index.json" assert { type: "json" };
-
+} = require("./retrieval.mjs");
 console.log("CHAT_INIT retrieval module loaded");
-console.log("CHAT_INIT index items:", CHATBOT_INDEX?.items?.length ?? "MISSING");
 
 // ---------------------------------------------------------------------------
 // Rate limiting — in-memory sliding window per IP
@@ -235,7 +246,7 @@ const HEADERS = {
   "Cache-Control": "no-store",
 };
 
-export const handler = async function (event) {
+exports.handler = async function (event) {
   try {
     if (event.httpMethod === "OPTIONS") {
       return { statusCode: 204, headers: HEADERS, body: "" };
@@ -404,6 +415,7 @@ export const handler = async function (event) {
     console.error("CHAT_HANDLER_ERROR", err.message, err.stack?.split("\n")[1] ?? "");
     return {
       statusCode: 500,
+      headers: HEADERS,
       body: JSON.stringify({ error: "Something went wrong" }),
     };
   }

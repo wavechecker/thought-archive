@@ -4,6 +4,7 @@
 
 [functions]
   directory = "netlify/functions"
+  node_bundler = "esbuild"
 
 # 410 (Gone) — keep force for hard removals
 [[redirects]]
@@ -248,6 +249,28 @@
   to = "/guides/fever-adults-children"
   status = 301
   force = true
+
+# ---------- Category slug canonicalization (2026-04-19) ----------
+# Apostrophe in "Women's" / "Men's" previously produced women-s-health / men-s-health
+[[redirects]]
+  from = "/guides/category/women-s-health"
+  to = "/guides/category/womens-health"
+  status = 301
+
+[[redirects]]
+  from = "/guides/category/women-s-health/"
+  to = "/guides/category/womens-health"
+  status = 301
+
+[[redirects]]
+  from = "/guides/category/men-s-health"
+  to = "/guides/category/mens-health"
+  status = 301
+
+[[redirects]]
+  from = "/guides/category/men-s-health/"
+  to = "/guides/category/mens-health"
+  status = 301
 
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
