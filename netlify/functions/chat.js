@@ -86,9 +86,19 @@ function onwardMessage(queryType, answerType) {
     return "For personal symptom assessment, please speak with your GP or a relevant clinician who knows your history.";
   }
   if (answerType === "unavailable") {
-    return "PatientGuide does not currently cover this topic well enough to give a reliable answer. For health information, consider the NHS, Mayo Clinic, or CDC — or speak with a clinician.";
+    return "For reliable health information on this topic, the NHS, Mayo Clinic, or CDC are good starting points — or speak with a clinician.";
   }
   return null;
+}
+
+// ---------------------------------------------------------------------------
+// Definition query detection — narrow pattern for "what is X" style queries
+// ---------------------------------------------------------------------------
+
+function isDefinitionQuery(question) {
+  // Matches: "what is X", "what are X", "what does X", "what do X", "what causes X"
+  // Does NOT match: "I feel X", "should I X", "best X for Y", etc.
+  return /^\s*what\s+(is|are|does|do|causes?)\s+\w{3}/i.test(question);
 }
 
 // ---------------------------------------------------------------------------
@@ -135,6 +145,21 @@ function buildContextBlock(results) {
 // ---------------------------------------------------------------------------
 // System prompt — base + query-type addenda
 // ---------------------------------------------------------------------------
+
+// Definition-only system prompt — used when retrieval is unavailable but query is definitional.
+// No retrieved context is passed; Claude is constrained to encyclopedia-style definitions only.
+const DEFINITION_SYSTEM_PROMPT = `You are a medical terminology assistant. The user is asking what a medical term or condition means.
+
+Rules:
+- Provide a brief plain-English explanation of what the term or concept is (1–2 sentences maximum).
+- This is a dictionary-style definition only — not a diagnosis, not treatment advice, not personalised guidance.
+- Do not say what the user should do. Do not speculate about what the user might have.
+- Mention that PatientGuide doesn't yet have a dedicated guide on this topic.
+- Keep it factual, neutral, and safe.
+
+Respond ONLY with a valid JSON object — no other text, no markdown:
+{"answer":"…","safetyNote":null}
+"answer": 1–2 sentences only. Plain text, no markdown. "safetyNote": always null.`;
 
 const BASE_SYSTEM_PROMPT = `You are PatientGuide's content assistant. Your role is to help users find and understand information published on PatientGuide.
 
@@ -211,6 +236,45 @@ async function callClaude(question, results, queryType, apiKey) {
   // Claude returned non-JSON — fail closed rather than silently degrade.
   console.error("Claude non-JSON response:", raw.slice(0, 400));
   throw new Error("Claude returned unexpected response format");
+}
+
+// Definition fallback — lightweight Claude call with no retrieved context.
+// Only invoked for unavailable + definition-style queries.
+async function callDefinition(question, apiKey) {
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type":      "application/json",
+      "x-api-key":         apiKey,
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify({
+      model:      "claude-sonnet-4-6",
+      max_tokens: 200,
+      system:     DEFINITION_SYSTEM_PROMPT,
+      messages:   [{ role: "user", content: `User question: ${question}` }],
+    }),
+  });
+
+  if (!res.ok) {
+    const errText = await res.text().catch(() => String(res.status));
+    throw new Error(`Anthropic API ${res.status}: ${errText.slice(0, 200)}`);
+  }
+
+  const data  = await res.json();
+  const raw   = (data.content?.[0]?.text || "").trim();
+  const match = raw.match(/\{[\s\S]*\}/);
+
+  if (match) {
+    try {
+      const parsed = JSON.parse(match[0]);
+      if (parsed.answer) return parsed;
+    } catch {
+      // fall through
+    }
+  }
+
+  throw new Error("Definition call returned unexpected format");
 }
 
 // ---------------------------------------------------------------------------
@@ -335,24 +399,57 @@ exports.handler = async function (event) {
     const strongLinks = displayResults.slice(0, 3).map((r) => ({ title: r.title, url: r.url }));
 
     // Fallback links: shown only when the strict filter removed everything but raw
-    // results exist. Labeled "Possibly related content" so lower confidence is clear.
-    const needsFallback = displayResults.length === 0 && results.length > 0;
+    // results exist AND the top result has a meaningful relevance score.
+    // Requiring score >= 8 prevents loosely-matched noise (e.g. COPD for "headaches")
+    // from appearing as fallback content and undermining trust.
+    const needsFallback = displayResults.length === 0 && results.length > 0 && results[0].score >= 8;
     const fallbackLinks = needsFallback
-      ? results.slice(0, 2).map((r) => ({ title: r.title, url: r.url }))
+      ? results.filter((r) => r.score >= 8).slice(0, 2).map((r) => ({ title: r.title, url: r.url }))
       : [];
     const linkNote = needsFallback
-      ? "We couldn't find closely matching guides for this question."
+      ? "These guides may be loosely related — not a direct match."
       : null;
 
     const topTitles = results.slice(0, 3).map((r) => r.title);
 
     if (answerType === "unavailable") {
+      // Definition fallback: for "what is X" style queries with no PatientGuide coverage,
+      // call Claude with a constrained definition-only prompt. Returns type "definition"
+      // so the UI can label it clearly as generic info, not PatientGuide source content.
+      if (queryType === "informational" && isDefinitionQuery(question)) {
+        const apiKey = process.env.ANTHROPIC_API_KEY;
+        if (apiKey) {
+          try {
+            console.log("CHAT_DEFINITION_CALL qLen:", question.length);
+            const defResp = await callDefinition(question, apiKey);
+            logQuery({ qLen: question.length, queryType, answerType, mode: "definition", topScore });
+            return {
+              statusCode: 200,
+              headers: HEADERS,
+              body: JSON.stringify({
+                type:         "definition",
+                answer:       defResp.answer || "",
+                links:        [],
+                fallbackLinks: [],
+                linkNote:     null,
+                safetyNote:   null,
+                onwardRoute:  null,
+                onwardMessage:"For comprehensive information, trusted sources like the NHS, Mayo Clinic, or CDC are good starting points.",
+              }),
+            };
+          } catch (defErr) {
+            console.error("CHAT_DEFINITION_ERROR", defErr.message);
+            // Fall through to static unavailable response below.
+          }
+        }
+      }
+
       // For unavailable, strong links become "related content" (capped at 2).
       // Fallback links are offered when even those are absent.
       const unavailableLinks = strongLinks.slice(0, 2);
       const unavailableAnswer = (unavailableLinks.length || fallbackLinks.length)
-        ? "PatientGuide doesn't have a direct answer for this question. You may find these related guides useful, or try rephrasing your question."
-        : "PatientGuide does not currently cover this topic. Try rephrasing your question, or consult a trusted health source.";
+        ? "PatientGuide doesn't yet have a full guide on this topic, but these related articles may still help."
+        : "PatientGuide doesn't yet cover this topic. For reliable health information, the NHS, Mayo Clinic, or CDC are good starting points.";
 
       logQuery({
         qLen: question.length, queryType, answerType, mode: "unavailable",

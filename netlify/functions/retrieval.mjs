@@ -20,6 +20,8 @@ export const STOP_WORDS = new Set([
   // Generic nouns that are too vague to serve as high-signal filter hits in
   // short 2-term queries (e.g. "weight loss" should not pass on "loss" alone).
   "loss",
+  "mean",
+  "means",
 ]);
 
 // ---------------------------------------------------------------------------
