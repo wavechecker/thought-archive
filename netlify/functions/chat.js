@@ -2,7 +2,6 @@
 // PatientGuide chatbot API handler.
 // Requires ANTHROPIC_API_KEY environment variable.
 
-import { createRequire } from "module";
 import {
   retrieve,
   classifyQuery,
@@ -11,13 +10,9 @@ import {
   filterDisplayLinks,
   tokenize,
 } from "./retrieval.mjs";
+import CHATBOT_INDEX from "./chatbot-index.json" assert { type: "json" };
 
 console.log("CHAT_INIT retrieval module loaded");
-
-// createRequire lets ESM files load JSON via the CommonJS loader, which esbuild
-// inlines at bundle time — the same way it handles static JSON imports.
-const _require = createRequire(import.meta.url);
-const CHATBOT_INDEX = _require("./chatbot-index.json");
 console.log("CHAT_INIT index items:", CHATBOT_INDEX?.items?.length ?? "MISSING");
 
 // ---------------------------------------------------------------------------
