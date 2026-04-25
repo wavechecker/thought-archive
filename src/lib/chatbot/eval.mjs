@@ -12,6 +12,7 @@ import {
   responseMode,
   filterDisplayLinks,
   tokenize,
+  isInformationalAboutEmergency,
 } from "../../../netlify/functions/retrieval.mjs";
 
 const INDEX_PATH = resolve("netlify/functions/chatbot-index.json");
@@ -400,4 +401,72 @@ if (uFailures.length) {
   console.log();
 }
 
-if (fail > 0 || lqFail > 0 || uFail > 0) process.exit(1);
+// ---------------------------------------------------------------------------
+// Classification boundary tests — informational vs. urgent
+//
+// These test classifyQuery directly without retrieval, so they run regardless
+// of index content and verify the informational-override logic.
+// ---------------------------------------------------------------------------
+
+const CLASSIFY_BOUNDARY_CASES = [
+  // Informational framing — must NOT trigger emergency mode
+  { q: "What are the signs of stroke?",                    expectQType: "informational" },
+  { q: "What are symptoms of stroke?",                     expectQType: "informational" },
+  { q: "What are signs of a heart attack?",                expectQType: "informational" },
+  { q: "What are the warning signs of stroke?",            expectQType: "informational" },
+  { q: "Signs of stroke",                                  expectQType: "informational" },
+  { q: "Symptoms of heart attack",                         expectQType: "informational" },
+  // Personal / current — MUST trigger emergency mode
+  { q: "I think I'm having a stroke",                      expectQType: "urgent" },
+  { q: "My face is drooping",                              expectQType: "urgent" },
+  { q: "I can't speak properly",                           expectQType: "urgent" },
+  { q: "Someone is having a stroke",                       expectQType: "urgent" },
+  { q: "What should I do if someone has stroke symptoms?", expectQType: "urgent" },
+  { q: "Chest pain right now",                             expectQType: "urgent" },
+];
+
+const INFORM_EMERGENCY_CASES = [
+  // isInformationalAboutEmergency: true for educational queries about high-acuity conditions
+  { q: "What are the signs of stroke?",      expect: true },
+  { q: "What are symptoms of heart attack?", expect: true },
+  // Should be false for personal/urgent queries even when they mention serious conditions
+  { q: "I think I'm having a stroke",        expect: false },
+  // Should be false for informational queries about non-emergency conditions
+  { q: "What are the signs of eczema?",      expect: false },
+];
+
+console.log(`\nQuery classification boundary tests`);
+console.log(SEP);
+
+let cPass = 0;
+let cFail = 0;
+
+for (const tc of CLASSIFY_BOUNDARY_CASES) {
+  const qType = classifyQuery(tc.q);
+  const ok    = qType === tc.expectQType;
+  if (ok) cPass++; else cFail++;
+  console.log(`\n[${ok ? "PASS" : "FAIL"}] "${tc.q}"`);
+  console.log(`  Expected qType: ${tc.expectQType}  |  Got: ${qType}`);
+}
+
+console.log(`\n${SEP}`);
+console.log(`Classification boundary: ${cPass}/${CLASSIFY_BOUNDARY_CASES.length} passed, ${cFail} failed\n`);
+
+console.log(`isInformationalAboutEmergency tests`);
+console.log(SEP);
+
+let iePass = 0;
+let ieFail = 0;
+
+for (const tc of INFORM_EMERGENCY_CASES) {
+  const result = isInformationalAboutEmergency(tc.q);
+  const ok     = result === tc.expect;
+  if (ok) iePass++; else ieFail++;
+  console.log(`\n[${ok ? "PASS" : "FAIL"}] "${tc.q}"`);
+  console.log(`  Expected: ${tc.expect}  |  Got: ${result}`);
+}
+
+console.log(`\n${SEP}`);
+console.log(`isInformationalAboutEmergency: ${iePass}/${INFORM_EMERGENCY_CASES.length} passed, ${ieFail} failed\n`);
+
+if (fail > 0 || lqFail > 0 || uFail > 0 || cFail > 0 || ieFail > 0) process.exit(1);

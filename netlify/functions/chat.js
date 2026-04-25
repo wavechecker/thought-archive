@@ -23,8 +23,13 @@ const {
   responseMode,
   filterDisplayLinks,
   tokenize,
+  isInformationalAboutEmergency,
 } = require("./retrieval.mjs");
 console.log("CHAT_INIT retrieval module loaded");
+
+// Safety note injected for informational queries about high-acuity conditions
+// (e.g. "what are the signs of stroke?") when Claude doesn't supply one.
+const EMERGENCY_SAFETY_NOTE = "If these symptoms are happening now, call your local emergency number immediately.";
 
 // ---------------------------------------------------------------------------
 // Rate limiting — in-memory sliding window per IP
@@ -99,6 +104,12 @@ function isDefinitionQuery(question) {
   // Matches: "what is X", "what are X", "what does X", "what do X", "what causes X"
   // Does NOT match: "I feel X", "should I X", "best X for Y", etc.
   return /^\s*what\s+(is|are|does|do|causes?)\s+\w{3}/i.test(question);
+}
+
+function isSymptomInterpretationQuery(question) {
+  // Matches "what does this/that/my ..." and "what is this/that/my ..." — vague
+  // symptom-interpretation prompts that cannot be safely answered without context.
+  return /^\s*what\s+(does\s+(this|that|my)|is\s+(this|that|my))\b/i.test(question);
 }
 
 // ---------------------------------------------------------------------------
@@ -413,6 +424,28 @@ exports.handler = async function (event) {
     const topTitles = results.slice(0, 3).map((r) => r.title);
 
     if (answerType === "unavailable") {
+      const unavailableLinks = strongLinks.slice(0, 2);
+
+      // Symptom-interpretation queries ("what does this rash mean") cannot be safely answered
+      // without context. Return a single calm message before attempting the definition branch.
+      if (queryType === "informational" && isSymptomInterpretationQuery(question)) {
+        logQuery({ qLen: question.length, queryType, answerType, mode: "unavailable", topScore });
+        return {
+          statusCode: 200,
+          headers: HEADERS,
+          body: JSON.stringify({
+            type:         "unavailable",
+            answer:       "I can't interpret a symptom from that alone, but I can help with general information and warning signs.",
+            links:        unavailableLinks,
+            fallbackLinks,
+            linkNote,
+            safetyNote:   null,
+            onwardRoute:  onwardRoute(queryType, true),
+            onwardMessage:onwardMessage(queryType, answerType),
+          }),
+        };
+      }
+
       // Definition fallback: for "what is X" style queries with no PatientGuide coverage,
       // call Claude with a constrained definition-only prompt. Returns type "definition"
       // so the UI can label it clearly as generic info, not PatientGuide source content.
@@ -446,10 +479,9 @@ exports.handler = async function (event) {
 
       // For unavailable, strong links become "related content" (capped at 2).
       // Fallback links are offered when even those are absent.
-      const unavailableLinks = strongLinks.slice(0, 2);
       const unavailableAnswer = (unavailableLinks.length || fallbackLinks.length)
-        ? "PatientGuide doesn't yet have a full guide on this topic, but these related articles may still help."
-        : "PatientGuide doesn't yet cover this topic. For reliable health information, the NHS, Mayo Clinic, or CDC are good starting points.";
+        ? "I couldn't find a direct answer, but these related articles may help."
+        : "I couldn't find a clear answer to that in PatientGuide's current content.";
 
       logQuery({
         qLen: question.length, queryType, answerType, mode: "unavailable",
@@ -494,6 +526,11 @@ exports.handler = async function (event) {
       topTitles,
     });
 
+    // For informational queries about high-acuity conditions, ensure a safety note is
+    // present even if Claude didn't generate one. Claude's note takes precedence when supplied.
+    const safetyNote = claudeResp.safetyNote
+      || (isInformationalAboutEmergency(question) ? EMERGENCY_SAFETY_NOTE : null);
+
     return {
       statusCode: 200,
       headers: HEADERS,
@@ -503,7 +540,7 @@ exports.handler = async function (event) {
         links:        strongLinks,
         fallbackLinks,
         linkNote,
-        safetyNote:   claudeResp.safetyNote || null,
+        safetyNote,
         onwardRoute:  onwardRoute(queryType),
         onwardMessage:onwardMessage(queryType, answerType),
       }),
