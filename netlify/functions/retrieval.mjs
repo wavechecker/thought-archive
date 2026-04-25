@@ -16,7 +16,7 @@ export const STOP_WORDS = new Set([
   "and","but","or","nor","not","no","how","why","when","where","feel","does",
   // Extended: content-free words that add scoring noise in medical text
   "all","also","any","both","each","even","few","just","many","more","most",
-  "much","now","only","some","too","very",
+  "much","now","only","some","too","very","always",
   // Generic nouns that are too vague to serve as high-signal filter hits in
   // short 2-term queries (e.g. "weight loss" should not pass on "loss" alone).
   "loss",
@@ -70,12 +70,20 @@ export function classifyQuery(question) {
 // Tokenisation
 // ---------------------------------------------------------------------------
 
+// Maps derived/adjective forms to the canonical noun found in PatientGuide content.
+// Keeps the list minimal — only add entries that demonstrably improve retrieval.
+const NORMALIZATIONS = new Map([
+  ["symptomatic",  "symptoms"],
+  ["asymptomatic", "symptoms"],
+]);
+
 export function tokenize(text) {
   return text
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, " ")
     .split(/\s+/)
-    .filter((t) => t.length > 2 && !STOP_WORDS.has(t));
+    .filter((t) => t.length > 2 && !STOP_WORDS.has(t))
+    .map((t) => NORMALIZATIONS.get(t) ?? t);
 }
 
 // ---------------------------------------------------------------------------
