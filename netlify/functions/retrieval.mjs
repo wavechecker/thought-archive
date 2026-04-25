@@ -43,7 +43,32 @@ export const URGENT_PATTERNS = [
   /\bsevere (bleeding|hemorrhage|haemorrhage)\b/i,
   /\boverdose\b/i,
   /\b(2[1-9][0-9]|[3-9][0-9]{2})\/\d{2,3}\b/,
+  // FAST stroke symptoms described in first person, without the word "stroke"
+  /\bface\s+(is\s+|looks?\s+|feels?\s+)?droop(ing|ed|s)?\b/i,
+  /\bcan'?t\s+(speak|talk)\s+(properly|suddenly|clearly|at all|anymore|straight)\b/i,
 ];
+
+// Informational framing: "what are the signs/symptoms of X", "signs of X", etc.
+// These are educational queries that mention serious conditions but do NOT describe
+// a current emergency. Checked before URGENT_PATTERNS in classifyQuery so that
+// "what are the signs of stroke?" is not treated as an emergency call.
+const INFORMATIONAL_SYMPTOM_PATTERNS = [
+  /^\s*what\s+(are|is)\s+(the\s+)?(warning\s+)?(signs?|symptoms?|causes?|risk\s+factors?)\s+(of|for)\b/i,
+  /^\s*(warning\s+)?(signs?|symptoms?)\s+(of|for)\s+\w/i,
+];
+
+// High-acuity conditions that warrant a safety note even when the query is informational.
+const EMERGENCY_CONDITION_PATTERN = /\b(stroke|heart attack|cardiac arrest|myocardial infarction|anaphylaxis|sepsis)\b/i;
+
+// Returns true when the query is informational in framing (asking *about* a serious
+// condition rather than describing a current emergency), AND mentions an emergency-level
+// condition. Used by chat.js to guarantee a "call emergency if happening now" safety note.
+export function isInformationalAboutEmergency(question) {
+  return (
+    INFORMATIONAL_SYMPTOM_PATTERNS.some((p) => p.test(question)) &&
+    EMERGENCY_CONDITION_PATTERN.test(question)
+  );
+}
 
 export const MEDICATION_PATTERNS = [
   /\b(should I take|can I take|stop taking|start taking|change my|reduce my|increase my|miss(ed)? (a |my )?dose)\b/i,
@@ -60,6 +85,9 @@ export const PERSONAL_SYMPTOM_PATTERNS = [
 ];
 
 export function classifyQuery(question) {
+  // Informational framing ("what are the signs of X") takes priority over URGENT_PATTERNS
+  // so that educational queries about serious conditions are not routed to emergency mode.
+  if (INFORMATIONAL_SYMPTOM_PATTERNS.some((p) => p.test(question))) return "informational";
   if (URGENT_PATTERNS.some((p) => p.test(question))) return "urgent";
   if (MEDICATION_PATTERNS.some((p) => p.test(question))) return "medication";
   if (PERSONAL_SYMPTOM_PATTERNS.some((p) => p.test(question))) return "personal-symptom";
