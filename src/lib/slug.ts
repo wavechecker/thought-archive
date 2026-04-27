@@ -16,6 +16,9 @@ export const CATEGORY_FIXES: Record<string, string> = {
   "Aging & Longevity": "Aging & Longevity",
   "End of Life": "End of Life",
   "Child & Adolescent Health": "Child & Adolescent Health",
+  "AI in Health": "AI in Health",
+  "Respiratory": "Respiratory",
+  "Obesity & Metabolic Health Hub": "Obesity & Metabolic Health Hub",
   "Guide Hubs": "Guide Hubs",
 };
 

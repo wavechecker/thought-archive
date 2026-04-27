@@ -23,9 +23,7 @@
 # Targeted post slugs & typos
 # ──────────────────────────────────────────────────────────────────────────────
 
-# RFK post cleanup
-/posts/wiki-draft-rfk-vaccine-2025     /posts/rfk-vaccine-2025          301!
-/posts/wiki-draft-rfk-vaccine-2025/    /posts/rfk-vaccine-2025          301!
+# RFK post cleanup (wiki-draft was never published; no redirect needed)
 
 # Legionnaires typo → correct slug
 /guides/legionairres-disease           /guides/legionnaires-disease     301!

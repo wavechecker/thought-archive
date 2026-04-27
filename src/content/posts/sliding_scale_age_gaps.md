@@ -70,7 +70,7 @@ Each archetype bends the way we read the gap.
 
 Here’s the pattern made visible:  
 
-![Age Gap Graph](sliding_scale_age_gaps.png)  
+![Age Gap Graph](/sliding_scale_age_gaps.png)  
 
 - For **men**, the “acceptable” age gap expands steeply with wealth and status — from ~7 years at the civilian level to ~35 years at the billionaire/rockstar tier.  
 - For **women**, it stays flat for most of the scale, only starting to climb in music and business at the top end — up to ~20 years.  
