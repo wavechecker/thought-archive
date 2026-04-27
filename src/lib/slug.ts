@@ -6,7 +6,8 @@ export const CATEGORY_FIXES: Record<string, string> = {
   "Infectious Diseases": "Infectious Diseases",
   "Vaccination": "Vaccination",
   "Heart & Circulation": "Heart & Circulation",
-  "Women’s Health": "Women’s Health",
+  "Women's Health": "Women's Health",
+  "Men's Health": "Men's Health",
   "Diabetes": "Diabetes",
   "Cancer": "Cancer",
   "Neurology": "Neurology",
@@ -24,7 +25,7 @@ export const CATEGORY_ORDER: string[] = [
   "Infectious Diseases",
   "Vaccination",
   "Heart & Circulation",
-  "Women’s Health",
+  "Women's Health",
   "Diabetes",
   "Cancer",
   "Neurology",
@@ -42,7 +43,7 @@ export const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   "Infectious Diseases": "Prevention, treatment, and key facts.",
   "Vaccination": "Vaccines, schedules, and safety.",
   "Heart & Circulation": "Cardiac health and risk management.",
-  "Women’s Health": "Conditions, prevention, and care options.",
+  "Women's Health": "Conditions, prevention, and care options.",
   "Diabetes": "Type 1, Type 2, and management strategies.",
   "Cancer": "Screening, treatment, and support resources.",
   "Neurology": "Brain and nervous system conditions.",
@@ -60,6 +61,7 @@ export function slugifyCategory(name: string): string {
   return display
     .trim()
     .toLowerCase()
+    .replace(/'/g, "")
     .replace(/&/g, "and")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
