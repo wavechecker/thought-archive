@@ -11,7 +11,7 @@ const sampleQuestions = [
   "Can poor sleep feel like dementia?",
   "What are brain zaps?",
   "Is high blood pressure always symptomatic?",
-  "Can antidepressants affect sleep?",
+  "What are common antidepressant side effects?",
   "What does insulin resistance mean?",
 ];
 ---
@@ -136,7 +136,8 @@ const sampleQuestions = [
     const labels: Record<string, string> = {
       grounded:         "From PatientGuide",
       partial:          "From PatientGuide",
-      unavailable:      "We don't cover this yet",
+      unavailable:      "PatientGuide",
+      definition:       "General info",
       urgent:           "Emergency",
       "medication-safe":"Ask a pharmacist",
       "personal-safe":  "Speak to a clinician",
@@ -147,12 +148,13 @@ const sampleQuestions = [
 
   function modeSubtitle(type: string): string {
     const subtitles: Record<string, string> = {
-      grounded:         "Answer sourced from PatientGuide content",
-      partial:          "Partial match — see sources for full context",
-      unavailable:      "We don't have a direct answer for this",
-      urgent:           "This sounds like an emergency — please act now",
-      "medication-safe":"Medication questions need a pharmacist or GP",
-      "personal-safe":  "Personal symptoms need clinical assessment",
+      grounded:         "",
+      partial:          "related content — may not fully answer this",
+      unavailable:      "",
+      definition:       "brief overview · not from PatientGuide guides",
+      urgent:           "this sounds like an emergency — please act now",
+      "medication-safe":"medication questions need a pharmacist or GP",
+      "personal-safe":  "personal symptoms need clinical assessment",
       "error":          "",
     };
     return subtitles[type] ?? "";
@@ -174,10 +176,17 @@ const sampleQuestions = [
 
     const subtitle = modeSubtitle(type);
     let html = `<div class="ask-card ask-card--${esc(type)}">`;
-    html += `<div class="ask-card__header">`;
-    html += `<span class="ask-card__badge">${esc(badgeLabel(type))}</span>`;
-    if (subtitle) html += `<span class="ask-card__mode-hint">${esc(subtitle)}</span>`;
-    html += `</div>`;
+    if (type === "grounded" || type === "partial") {
+      html += `<div class="ask-card__source-header">`;
+      html += `<strong class="ask-card__source-label">From PatientGuide content</strong>`;
+      if (subtitle) html += `<span class="ask-card__mode-hint">${esc(subtitle)}</span>`;
+      html += `</div>`;
+    } else {
+      html += `<div class="ask-card__header">`;
+      html += `<span class="ask-card__badge">${esc(badgeLabel(type))}</span>`;
+      if (subtitle) html += `<span class="ask-card__sep" aria-hidden="true">·</span><span class="ask-card__mode-hint">${esc(subtitle)}</span>`;
+      html += `</div>`;
+    }
     html += `<p class="ask-card__answer">${answer}</p>`;
 
     if (data.linkNote) {
@@ -462,6 +471,19 @@ const sampleQuestions = [
     flex-wrap: wrap;
   }
 
+  .ask-card__source-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pg-space-1);
+  }
+
+  .ask-card__source-label {
+    font-size: var(--pg-text-sm);
+    font-weight: 700;
+    color: var(--pg-text);
+    line-height: var(--pg-leading-tight);
+  }
+
   .ask-card__badge {
     display: inline-block;
     font-size: var(--pg-text-xs);
@@ -473,6 +495,13 @@ const sampleQuestions = [
     text-transform: uppercase;
     letter-spacing: 0.05em;
     flex-shrink: 0;
+  }
+
+  .ask-card__sep {
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+    flex-shrink: 0;
+    user-select: none;
   }
 
   .ask-card__mode-hint {
@@ -489,6 +518,11 @@ const sampleQuestions = [
   .ask-card--partial .ask-card__badge {
     background: #fef3c7;
     color: #92400e;
+  }
+
+  .ask-card--definition .ask-card__badge {
+    background: #e0e7ff;
+    color: #3730a3;
   }
 
   .ask-card--urgent .ask-card__badge {
@@ -692,6 +726,11 @@ const sampleQuestions = [
     color: #fcd34d;
   }
 
+  html[data-theme="dark"] .ask-card--definition .ask-card__badge {
+    background: rgba(55, 48, 163, 0.3);
+    color: #a5b4fc;
+  }
+
   html[data-theme="dark"] .ask-suggestion:hover {
     background: rgba(37, 99, 235, 0.12);
     border-color: var(--pg-link);
@@ -713,6 +752,11 @@ const sampleQuestions = [
     :root:not([data-theme="light"]) .ask-card--personal-safe .ask-card__badge {
       background: rgba(146, 64, 14, 0.3);
       color: #fcd34d;
+    }
+
+    :root:not([data-theme="light"]) .ask-card--definition .ask-card__badge {
+      background: rgba(55, 48, 163, 0.3);
+      color: #a5b4fc;
     }
   }
 </style>
