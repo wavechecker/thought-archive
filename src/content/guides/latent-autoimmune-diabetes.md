@@ -38,7 +38,7 @@ It looks like type 2 at first, but behaves more like type 1 over time. Recognizi
 
 ## Background
 Historically, type 1 diabetes was called “juvenile diabetes,” because it was usually recognized in children and teenagers.  
-We now know type 1 can start at any age — even in people in their 60s. The “juvenile vs. adult” labels are outdated.  
+We now know [type 1 diabetes](/guides/type-1-diabetes) can start at any age — even in people in their 60s. The “juvenile vs. adult” labels are outdated.  
 
 LADA emerged as a concept in the 1990s to describe adults with autoimmune diabetes that didn’t fit neatly into type 1 or type 2.  
 The Immunology of Diabetes Society defines it as:  
@@ -59,6 +59,7 @@ The Immunology of Diabetes Society defines it as:
   Other useful markers include IA-2, ZnT8, and insulin autoantibodies.  
 - **C-peptide:** Measures insulin production; often intermediate at diagnosis, declining gradually.  
 - **Clinical clues:** Normal or low BMI, family/personal history of autoimmune disease, poor or short-lived response to oral diabetes drugs.  
+- **Ongoing monitoring:** [HbA1c](/guides/understanding-hba1c) tracks average blood sugar control over time. A [continuous glucose monitor (CGM)](/guides/continuous-glucose-monitors) can help reveal glucose patterns as beta-cell function gradually declines.  
 
 > ### Key Difference in Diagnosis  
 > - **Type 1 diabetes (classic):** Usually antibody positive, rapid onset, low/absent C-peptide. Often diagnosed clinically without waiting for antibody tests.  
@@ -96,7 +97,7 @@ The Immunology of Diabetes Society defines it as:
 ---
 
 ## Treatment / Options
-- **Insulin:** Evidence suggests early insulin can protect remaining beta cells and improve control【ADA†source】.  
+- **Insulin:** Evidence suggests early insulin can protect remaining beta cells and improve control【ADA†source】. Understanding the [different insulin types](/guides/insulin-types-explained) is helpful as therapy is introduced or intensified.  
 - **Sulfonylureas:** Not recommended; they accelerate beta-cell decline.  
 - **Other agents:** DPP-4 inhibitors, GLP-1 receptor agonists, or thiazolidinediones show promise in small studies, often alongside insulin.  
 - **Lifestyle:** As with type 2, diet, exercise, and cardiovascular risk management are essential.  
@@ -110,7 +111,8 @@ In fact, insulin can reduce stress on surviving cells and may preserve their fun
 ## Risks / Prognosis
 - Most patients require insulin within a few years of diagnosis.  
 - Risks of complications (heart, eyes, kidneys, nerves) are similar to type 1 and type 2.  
-- Delayed recognition increases the risk of poor blood sugar control and earlier complications.  
+- Delayed recognition increases the risk of poor blood sugar control and earlier complications.
+- Those reclassified from type 2 or newly confirmed with LADA will find the [guide for newly diagnosed type 1 diabetes patients](/guides/newly-diagnosed-type1-diabetes) a useful starting point for practical management steps.  
 
 ---
 
@@ -141,4 +143,4 @@ A: Adults with “type 2 diabetes” who are not overweight, respond poorly to o
 ## Related Guides
 - [Type 1 Diabetes](/guides/type-1-diabetes)  
 - [Type 2 Diabetes](/guides/type-2-diabetes)  
-- [Diabetes in Children and Teens](/guides/diabetes-children)  
+- [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents)  

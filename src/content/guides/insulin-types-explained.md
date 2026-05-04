@@ -71,6 +71,8 @@ Yes, biosimilars undergo rigorous testing and are equally effective.
 - [NHS — Insulin](https://www.nhs.uk/conditions/insulin/)  
 
 ## Related Guides
-- [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children)  
-- [Angina — Symptoms & Management](/guides/angina-symptoms-management)  
-- [Coronary Angiography — What to Expect](/guides/coronary-angiography)  
+- [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration)
+- [Type 1 Diabetes](/guides/type-1-diabetes)
+- [Type 1 Diabetes — Managing Hypoglycaemia](/guides/type-1-diabetes-managing-hypoglycaemia)
+- [Continuous Glucose Monitors (CGMs)](/guides/continuous-glucose-monitors)
+- [Carbohydrate Counting — Matching Food and Insulin](/guides/carbohydrate-counting)

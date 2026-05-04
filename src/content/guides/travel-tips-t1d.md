@@ -80,6 +80,7 @@ Often not for short flights. For long-haul/time-zone shifts, follow your persona
 - Airline medical assistance pages for carrying sharps/meds
 
 ## Related Guides
+- [Travel Checklist for Type 1 Diabetes](/guides/travel-checklist-diabetes) — printable packing and airport checklist
 - [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise)  
 - [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia)  
 - [Recognising Highs and Lows](/guides/recognising-highs-and-lows)  

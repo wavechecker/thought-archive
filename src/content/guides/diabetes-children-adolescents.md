@@ -18,7 +18,7 @@ Diabetes is a growing concern among children and adolescents worldwide. While ty
 
 ## Key Points
 - Diabetes in children and teens has nearly **doubled worldwide since 1990**.  
-- **Type 1 diabetes**: Autoimmune, usually diagnosed in childhood, lifelong insulin required.  
+- **[Type 1 diabetes](/guides/type-1-diabetes)**: Autoimmune, usually diagnosed in childhood, lifelong insulin required.  
 - **Type 2 diabetes**: Strongly linked to obesity, poor diet, and inactivity; fastest-rising form in youth.  
 - Classic symptoms: frequent urination, thirst, fatigue, blurred vision, weight changes.  
 - Management combines medical treatment, healthy eating, activity, and education.  
@@ -53,14 +53,14 @@ Hu et al. (2025) analyzed diabetes burden in children and adolescents across **2
 - Unexplained weight loss or gain  
 - Fatigue and irritability  
 - Blurred vision  
-- In severe cases: nausea, vomiting, abdominal pain, or diabetic ketoacidosis (more common in type 1).  
+- In severe cases: nausea, vomiting, abdominal pain, or diabetic ketoacidosis (more common in type 1). Learning to [recognise highs and lows](/guides/recognising-highs-and-lows) early is essential for all families.  
 
 ## Diagnosis / Treatment / Options
 - **Diagnosis**: Fasting plasma glucose, HbA1c, oral glucose tolerance test. Autoantibody tests help distinguish type 1 from type 2.  
 - **Treatment**:  
-  - *Type 1*: Lifelong insulin therapy (injections or pump), continuous glucose monitoring, dietary planning.  
+  - *Type 1*: Lifelong insulin therapy (injections or pump), continuous glucose monitoring, dietary planning. The [guide for newly diagnosed Type 1 patients](/guides/newly-diagnosed-type1-diabetes) covers practical first steps.  
   - *Type 2*: Lifestyle interventions (nutrition, exercise, sleep), weight management, oral medications (metformin), sometimes insulin.  
-- **Support**: Diabetes education, psychological support, family involvement, and school-based care plans.  
+- **Support**: Diabetes education, psychological support, family involvement, and [school-based care plans](/guides/school-and-t1d).  
 
 ## Risks / Prognosis
 Without control, chronic high blood sugar damages:  
@@ -69,7 +69,7 @@ Without control, chronic high blood sugar damages:
 - **Eyes** → retinopathy and vision loss.  
 - **Nerves** → neuropathy.  
 
-Early-onset diabetes increases lifetime risk of complications, but good glycemic control, healthy weight, and sustained lifestyle changes greatly improve prognosis.
+Early-onset diabetes increases lifetime risk of complications, but good glycemic control, healthy weight, and sustained lifestyle changes greatly improve prognosis. For children using insulin, [managing hypoglycaemia](/guides/type-1-diabetes-managing-hypoglycaemia) is a core day-to-day skill for the whole family.
 
 ## FAQ
 **Q: What’s the difference between type 1 and type 2 diabetes in children?**  

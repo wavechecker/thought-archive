@@ -15,6 +15,8 @@ related:
 
 # Exercise and Type 1 Diabetes
 
+> This is a quick-reference companion. For a full protocol — insulin adjustments, basal strategies, CGM setup, and delayed hypo prevention — see [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise).
+
 ## How exercise affects glucose
 - Aerobic → tends to **lower** BGL (risk of hypos).  
 - Anaerobic/sprint → may **raise** BGL short term.  
@@ -33,3 +35,8 @@ related:
 ## After
 - Watch for delayed hypos (overnight).  
 - Consider reduced basal or extra carbs if needed.
+
+## Related Guides & Resources
+- [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise) — full protocol
+- [Exercise Safety Checklist for Type 1 Diabetes](/resources/exercise-safety-checklist)
+- [Hypoglycaemia — Fast Treatment Guide](/guides/hypoglycaemia-treatment)

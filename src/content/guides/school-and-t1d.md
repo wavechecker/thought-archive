@@ -9,13 +9,13 @@ tags: ["type 1 diabetes", "school", "care plan", "hypoglycaemia", "insulin", "CG
 ---
 
 ## Intro
-Children with type 1 diabetes (T1D) can thrive at school when staff understand a few essentials:  
+Children with [type 1 diabetes (T1D)](/guides/type-1-diabetes) can thrive at school when staff understand a few essentials:  
 - **Monitoring glucose** and supporting insulin/meal routines.  
 - **Treating lows fast** without delay.  
 - Knowing **what to do for highs/ketones** and when to escalate.  
 - Having a clear, shared **Diabetes Care Plan (DCP)**.  
 
-The goal is equal participation in learning, sports, and social activities while keeping the student safe.
+The goal is equal participation in learning, sports, and social activities while keeping the student safe. For families new to a T1D diagnosis, the [guide for newly diagnosed patients](/guides/newly-diagnosed-type1-diabetes) covers the clinical and practical essentials your school will need to know.
 
 ---
 
@@ -68,6 +68,8 @@ The goal is equal participation in learning, sports, and social activities while
 - Vomiting, abdominal pain, rapid or deep breathing.  
 - Confusion, extreme drowsiness.  
 
+For a full emergency reference including glucagon use and the DKA protocol, see [Diabetes Emergencies — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions).  
+
 ---
 
 ## PE / Sports
@@ -89,6 +91,7 @@ The goal is equal participation in learning, sports, and social activities while
 - Share DCP with trip leaders; identify nearest medical facility.  
 - Assign a **named adult** trained in T1D care for the trip.  
 - Plan basal/bolus adjustments for activity; bring plenty of snacks.  
+- For detailed packing lists, insulin storage, and time-zone management, see [Travel Tips for Type 1 Diabetes](/guides/travel-tips-t1d).  
 
 ---
 
@@ -128,7 +131,11 @@ Yes, with accommodations. Must be silent/airplane mode if required.
 ---
 
 ## Related Guides
+- [Type 1 Diabetes](/guides/type-1-diabetes)
+- [Newly Diagnosed with Type 1 Diabetes — First Steps](/guides/newly-diagnosed-type1-diabetes)
+- [Diabetes Emergencies — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)
 - [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise)  
 - [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia)  
-- [Recognising Highs and Lows](/guides/recognising-highs-and-lows)  
+- [Recognising Highs and Lows](/guides/recognising-highs-and-lows)
+- [Travel Tips for Type 1 Diabetes](/guides/travel-tips-t1d)  
 
