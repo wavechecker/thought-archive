@@ -269,7 +269,7 @@ Getting the carbohydrate count right is only half of the task — the timing of 
 
 For high-GI meals — white bread, white rice, sugary desserts, fruit juice — glucose can rise quickly. For low-GI meals or high-fat meals, glucose rises more slowly and peaks later.
 
-Timing adjustments are personal and should be guided by your diabetes team and your own glucose patterns. A [continuous glucose monitor (CGM)](/guides/blood-glucose-testing) can make timing feedback visible in real time, showing you the shape of your glucose curve after different meals.
+Timing adjustments are personal and should be guided by your diabetes team and your own glucose patterns. A [continuous glucose monitor (CGM)](/guides/continuous-glucose-monitors) can make timing feedback visible in real time, showing you the shape of your glucose curve after different meals.
 
 The key principle is that insulin timing is not one-size-fits-all, even for the same individual eating the same food on different days.
 
@@ -323,4 +323,5 @@ An insulin-to-carb ratio (ICR) is a personalised number set by your diabetes tea
 - [Newly Diagnosed with Type 1 Diabetes — First Steps](/guides/newly-diagnosed-type1-diabetes)
 - [Insulin Types Explained](/guides/insulin-types-explained)
 - [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration)
+- [Insulin Pumps vs Injections (MDI): How to Choose](/guides/insulin-pumps-vs-injections)
 - [Blood Glucose Testing](/guides/blood-glucose-testing)

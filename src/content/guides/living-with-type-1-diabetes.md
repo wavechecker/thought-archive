@@ -218,8 +218,6 @@ The experience of finding Type 1 diabetes relentless, exhausting, or isolating a
 
 This does not make those experiences less significant, but it does mean you are not alone in them. The expectation that a person can manage a demanding chronic condition entirely without difficulty — without frustration, without periods of disengagement, without emotional cost — is not realistic. Living with Type 1 diabetes well, over the long term, includes finding ways to carry the condition without being consumed by it. That is a skill, and it is one that can be developed and supported.
 
-Understanding the longer-term health context — including [what complications can and cannot be prevented](/guides/type-1-diabetes-long-term-complications) — can also help shift the framing from fear-based management to genuinely informed, empowered decision-making.
-
 ---
 
 ## FAQ

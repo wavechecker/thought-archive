@@ -254,5 +254,6 @@ Yes. Exercise and alcohol both independently increase the risk of delayed hypogl
 
 - [Type 1 Diabetes](/guides/type-1-diabetes)
 - [Night-time Hypoglycaemia](/guides/night-time-hypoglycaemia)
+- [Hypoglycaemia — Fast Treatment Guide](/guides/hypoglycaemia-treatment)
 - [Managing Type 1 Diabetes During Exercise](/guides/managing-t1d-exercise)
 - [Travel Tips with Type 1 Diabetes](/guides/travel-tips-t1d)

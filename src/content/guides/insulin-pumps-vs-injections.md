@@ -148,7 +148,7 @@ Because pumps use only rapid-acting insulin, there is no long-acting insulin in 
 
 ### Automated Insulin Delivery (AID)
 
-A growing category of pump technology combines the pump with a [continuous glucose monitor (CGM)](/guides/continuous-glucose-monitors) and an algorithm that automatically adjusts the basal rate in real time based on glucose readings. These systems — often called automated insulin delivery (AID) or hybrid closed-loop systems — can reduce both hypoglycaemia and hyperglycaemia by responding to glucose trends without manual input. They still require the user to programme meal boluses and manage infusion sites, but they reduce the burden of background fine-tuning.
+A growing category of pump technology combines the pump with a [continuous glucose monitor (CGM)](/guides/continuous-glucose-monitors) and an algorithm that automatically adjusts the basal rate in real time based on glucose readings. These systems — often called automated insulin delivery (AID) or hybrid closed-loop systems — can reduce both hypoglycaemia and hyperglycaemia by responding to glucose trends without manual input. They still require the user to programme meal boluses (using [carbohydrate counting](/guides/carbohydrate-counting)) and manage infusion sites, but they reduce the burden of background fine-tuning.
 
 ---
 
@@ -173,6 +173,34 @@ MDI requires no continuous device, but does require reliable access to insulin p
 ### Learning Curve
 
 Starting pump therapy involves a significant period of learning — programming settings, managing infusion sites, understanding alarms, and knowing how to troubleshoot. This typically requires close support from a diabetes team experienced in pump initiation. MDI is simpler to begin and adjust, though it too requires skill and education to use well.
+
+---
+
+## Who Might Prefer Injections?
+
+Injections tend to work well and feel preferable for people who:
+
+- Have a fairly structured daily routine with consistent mealtimes and activity levels
+- Are cost-sensitive or have limited access to pump funding or consumables
+- Prefer a simpler approach without wearable technology
+- Are newly diagnosed and are building confidence with the fundamentals of insulin management before considering a device
+- Have a strong preference not to wear a device continuously
+- Have already achieved good glucose control with MDI and are not experiencing significant ongoing challenges
+
+---
+
+## Who Might Prefer a Pump?
+
+A pump may be worth exploring for people who:
+
+- Have variable schedules, irregular meals, shift work, or unpredictable activity
+- Experience frequent hypoglycaemia or significant glucose variability that has not improved with MDI adjustments
+- Need very fine dose increments that standard pen devices cannot provide
+- Want fewer daily injections — for example, people with needle anxiety or difficult injection sites
+- Are interested in automated insulin delivery (AID) to reduce manual adjustment
+- Have specific situations where basal flexibility is important — such as frequent exercise, night-time lows, or highly variable insulin needs
+
+Being interested in a pump, or meeting some of these criteria, is a starting point for a conversation with your diabetes team — not a guarantee that a pump is the right choice.
 
 ---
 
@@ -211,34 +239,6 @@ Starting pump therapy involves a significant period of learning — programming 
 - Requires significant initial training and ongoing engagement
 - Skin reactions, scarring, or infections at infusion sites can occur
 - Access and funding vary significantly by country and healthcare system
-
----
-
-## Who Might Prefer Injections?
-
-Injections tend to work well and feel preferable for people who:
-
-- Have a fairly structured daily routine with consistent mealtimes and activity levels
-- Are cost-sensitive or have limited access to pump funding or consumables
-- Prefer a simpler approach without wearable technology
-- Are newly diagnosed and are building confidence with the fundamentals of insulin management before considering a device
-- Have a strong preference not to wear a device continuously
-- Have already achieved good glucose control with MDI and are not experiencing significant ongoing challenges
-
----
-
-## Who Might Prefer a Pump?
-
-A pump may be worth exploring for people who:
-
-- Have variable schedules, irregular meals, shift work, or unpredictable activity
-- Experience frequent hypoglycaemia or significant glucose variability that has not improved with MDI adjustments
-- Need very fine dose increments that standard pen devices cannot provide
-- Want fewer daily injections — for example, people with needle anxiety or difficult injection sites
-- Are interested in automated insulin delivery (AID) to reduce manual adjustment
-- Have specific situations where basal flexibility is important — such as frequent exercise, night-time lows, or highly variable insulin needs
-
-Being interested in a pump, or meeting some of these criteria, is a starting point for a conversation with your diabetes team — not a guarantee that a pump is the right choice.
 
 ---
 

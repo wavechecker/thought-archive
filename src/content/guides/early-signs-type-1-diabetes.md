@@ -213,21 +213,9 @@ A fingerprick blood glucose or urine glucose dipstick can indicate diabetes in m
 
 ## How Diagnosis Is Confirmed
 
-A blood glucose test is the first step. In someone with symptoms:
+A blood glucose test can confirm diabetes within minutes — a random reading of 11.1 mmol/L (200 mg/dL) or higher alongside symptoms is diagnostic. Further tests confirm whether it is Type 1 specifically, typically including antibody testing and a measure of remaining insulin production.
 
-- **Random blood glucose ≥11.1 mmol/L (200 mg/dL)** is diagnostic of diabetes
-- **Fasting plasma glucose ≥7.0 mmol/L (126 mg/dL)** on two occasions
-- **HbA1c ≥48 mmol/mol (6.5%)** — may be lower than expected in acute-onset cases
-
-To confirm **Type 1 specifically**, the clinical team will arrange:
-
-| Test | Purpose |
-|------|---------|
-| **Islet autoantibodies** (GAD, IA-2, ZnT8, IAA) | Confirm the autoimmune cause; distinguish Type 1 from Type 2 |
-| **C-peptide** | Measures remaining insulin production; very low or absent in Type 1 |
-| **HbA1c** | Reflects average blood glucose over ~3 months |
-
-In clear-cut cases — particularly children with classic symptoms — insulin treatment begins urgently and does not wait for all test results. In adults, antibody testing helps avoid misdiagnosis as Type 2.
+For a full explanation, see the [Type 1 Diabetes overview](/guides/type-1-diabetes).
 
 ---
 
