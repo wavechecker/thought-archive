@@ -90,6 +90,7 @@ Teething may cause slight warmth, but not high fever. Look for other causes.
 - [CDC — Fever in children](https://www.cdc.gov/)  
 
 ## Related Guides
-- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain)  
-- [Angina — Symptoms & Management](/guides/angina-symptoms-management)  
-- [Coronary Angiography — What to Expect](/guides/coronary-angiography)  
+- [Fever in Adults and Children — When It Becomes Dangerous](/guides/fever-adults-children)
+- [Bacterial Meningitis](/guides/bacterial-meningitis)
+- [Sepsis](/guides/sepsis)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)

@@ -99,3 +99,4 @@ A: Children, adolescents, and high-risk adults — check local immunization sche
 - [Sepsis](/guides/sepsis)  
 - [Septic Shock](/guides/septic-shock)  
 - [Pneumonia](/guides/pneumonia)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)

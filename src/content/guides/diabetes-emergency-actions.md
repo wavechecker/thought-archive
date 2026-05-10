@@ -93,6 +93,7 @@ A: Call emergency services immediately and put the person in the recovery positi
 - [Type 1 Diabetes — Guide Hub](/guides/type-1-diabetes)  
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing)  
 - [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration)  
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
 
 ---
 

@@ -54,3 +54,8 @@ A: Recovery includes cardiac rehab, lifestyle changes, and follow-up visits with
 **Q: Why is this page incomplete?**  
 A: This is a draft placeholder to support internal links. Full content will follow soon.  
 
+## Related Guides
+- [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
+- [Recognizing a Stroke FAST](/guides/recognizing-stroke)
+

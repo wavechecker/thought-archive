@@ -62,6 +62,7 @@ A: Panic itself is not usually dangerous, but it can feel terrifying and may mas
 - [Mental Health First Aid — The Basics](/guides/mental-health-first-aid)  
 - [Depression: Symptoms, Causes, and Treatment](/guides/depression)  
 - [Anxiety Disorders](/guides/anxiety)  
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
 
 ---
 

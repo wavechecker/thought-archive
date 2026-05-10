@@ -117,3 +117,4 @@ A: Many sepsis survivors experience lasting effects weeks to months after discha
 - [Pneumonia](/guides/pneumonia)  
 - [Urinary Tract Infections](/guides/urinary-tract-infection)  
 - [Septic Shock](/guides/septic-shock)  
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)

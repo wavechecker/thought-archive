@@ -165,6 +165,7 @@ const sampleQuestions = [
     answer?: string;
     links?: { title: string; url: string }[];
     fallbackLinks?: { title: string; url: string }[];
+    safetyLinks?: { title: string; url: string }[];
     linkNote?: string | null;
     safetyNote?: string | null;
     onwardMessage?: string | null;
@@ -173,6 +174,7 @@ const sampleQuestions = [
     const answer        = esc(data.answer || "No answer returned.");
     const links         = data.links         || [];
     const fallbackLinks = data.fallbackLinks || [];
+    const safetyLinks   = data.safetyLinks   || [];
 
     const subtitle = modeSubtitle(type);
     let html = `<div class="ask-card ask-card--${esc(type)}">`;
@@ -193,7 +195,11 @@ const sampleQuestions = [
       html += `<p class="ask-card__link-note">${esc(data.linkNote)}</p>`;
     }
 
-    const linksLabel = type === "unavailable" ? "Related content on PatientGuide" : "Read more on PatientGuide";
+    const linksLabel = type === "urgent"
+      ? "Emergency care guidance"
+      : type === "unavailable"
+      ? "Related content on PatientGuide"
+      : "Read more on PatientGuide";
     if (links.length) {
       html += `<div class="ask-card__links">`;
       html += `<p class="ask-card__links-label">${esc(linksLabel)}</p><ul>`;
@@ -208,6 +214,15 @@ const sampleQuestions = [
       html += `<p class="ask-card__links-label">Possibly related content</p><ul>`;
       for (const link of fallbackLinks) {
         html += `<li><a href="${esc(link.url)}" class="ask-card__link ask-card__link--fallback">${esc(link.title)}</a></li>`;
+      }
+      html += `</ul></div>`;
+    }
+
+    if (safetyLinks.length) {
+      html += `<div class="ask-card__links ask-card__links--safety">`;
+      html += `<p class="ask-card__links-label">When to seek emergency care</p><ul>`;
+      for (const link of safetyLinks) {
+        html += `<li><a href="${esc(link.url)}" class="ask-card__link ask-card__link--safety">${esc(link.title)}</a></li>`;
       }
       html += `</ul></div>`;
     }
@@ -573,6 +588,24 @@ const sampleQuestions = [
   }
 
   .ask-card__link:hover {
+    text-decoration: underline;
+  }
+
+  /* Safety links section — emergency-care guide supplement for informational queries */
+  .ask-card__links--safety {
+    border-top: 1px solid var(--pg-border);
+    padding-top: var(--pg-space-3);
+  }
+
+  .ask-card__links--safety .ask-card__links-label {
+    color: var(--pg-text-soft);
+  }
+
+  .ask-card__link--safety {
+    color: var(--pg-link);
+  }
+
+  .ask-card__link--safety:hover {
     text-decoration: underline;
   }
 

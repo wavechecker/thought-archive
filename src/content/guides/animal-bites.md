@@ -171,6 +171,7 @@ A: Minor scratches from a known vaccinated pet can be cleaned and monitored. Any
 - [Emergencies — Guide Hub](/guides/emergencies)
 - [Severe Bleeding — First Aid](/guides/severe-bleeding)
 - [Anaphylaxis — Severe Allergic Reaction](/guides/anaphylaxis)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
 
 ---
 

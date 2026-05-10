@@ -31,6 +31,13 @@ console.log("CHAT_INIT retrieval module loaded");
 // (e.g. "what are the signs of stroke?") when Claude doesn't supply one.
 const EMERGENCY_SAFETY_NOTE = "If these symptoms are happening now, call your local emergency number immediately.";
 
+// Canonical safety destination injected for urgent queries and informational queries
+// about high-acuity conditions. Supplements condition-specific retrieval links — never replaces them.
+const EMERGENCY_CARE_LINK = {
+  title: "When to Seek Emergency Care — Warning Signs and Red Flags",
+  url: "/guides/when-to-seek-emergency-care",
+};
+
 // ---------------------------------------------------------------------------
 // Rate limiting — in-memory sliding window per IP
 //
@@ -387,7 +394,10 @@ exports.handler = async function (event) {
         body: JSON.stringify({
           type:         "urgent",
           answer:       "PatientGuide cannot assess emergencies. If you or someone else may be in danger, please contact emergency services immediately.",
-          links:        [],
+          links:        [EMERGENCY_CARE_LINK],
+          fallbackLinks:[],
+          safetyLinks:  [],
+          linkNote:     null,
           safetyNote:   "In a medical emergency do not delay — call 999 (UK), 911 (US), 112 (EU), or your local emergency number now.",
           onwardRoute:  "emergency services",
           onwardMessage:"Call your local emergency number immediately. Do not wait.",
@@ -421,6 +431,17 @@ exports.handler = async function (event) {
       ? "These guides may be loosely related — not a direct match."
       : null;
 
+    // Safety supplement: inject the canonical emergency-care guide for informational
+    // queries about high-acuity conditions, when it isn't already surfaced by retrieval.
+    // Does not fire for urgent queries (handled above) or non-emergency informational queries.
+    const alreadyInLinks =
+      strongLinks.some((l) => l.url === EMERGENCY_CARE_LINK.url) ||
+      fallbackLinks.some((l) => l.url === EMERGENCY_CARE_LINK.url);
+    const safetyLinks =
+      isInformationalAboutEmergency(question) && !alreadyInLinks
+        ? [EMERGENCY_CARE_LINK]
+        : [];
+
     const topTitles = results.slice(0, 3).map((r) => r.title);
 
     if (answerType === "unavailable") {
@@ -438,6 +459,7 @@ exports.handler = async function (event) {
             answer:       "I can't interpret a symptom from that alone, but I can help with general information and warning signs.",
             links:        unavailableLinks,
             fallbackLinks,
+            safetyLinks,
             linkNote,
             safetyNote:   null,
             onwardRoute:  onwardRoute(queryType, true),
@@ -464,6 +486,7 @@ exports.handler = async function (event) {
                 answer:       defResp.answer || "",
                 links:        [],
                 fallbackLinks: [],
+                safetyLinks:  [],
                 linkNote:     null,
                 safetyNote:   null,
                 onwardRoute:  null,
@@ -497,6 +520,7 @@ exports.handler = async function (event) {
           answer:       unavailableAnswer,
           links:        unavailableLinks,
           fallbackLinks,
+          safetyLinks,
           linkNote,
           safetyNote:   null,
           onwardRoute:  onwardRoute(queryType, true),
@@ -539,6 +563,7 @@ exports.handler = async function (event) {
         answer:       claudeResp.answer || "",
         links:        strongLinks,
         fallbackLinks,
+        safetyLinks,
         linkNote,
         safetyNote,
         onwardRoute:  onwardRoute(queryType),

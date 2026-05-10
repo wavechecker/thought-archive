@@ -93,3 +93,4 @@ A: No. Brief pain that resolves can still be a sign of unstable angina — a war
 ## Related Guides
 - [Heart Palpitations: When to Worry](/guides/heart-palpitations)  
 - [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home)  
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)

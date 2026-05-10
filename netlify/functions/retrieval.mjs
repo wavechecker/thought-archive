@@ -22,6 +22,9 @@ export const STOP_WORDS = new Set([
   "loss",
   "mean",
   "means",
+  // "signs" is too common in medical content ("Early Signs of X", "Warning Signs")
+  // and causes spurious title matches; condition terms carry the specificity.
+  "signs",
 ]);
 
 // ---------------------------------------------------------------------------
@@ -53,12 +56,14 @@ export const URGENT_PATTERNS = [
 // a current emergency. Checked before URGENT_PATTERNS in classifyQuery so that
 // "what are the signs of stroke?" is not treated as an emergency call.
 const INFORMATIONAL_SYMPTOM_PATTERNS = [
-  /^\s*what\s+(are|is)\s+(the\s+)?(warning\s+)?(signs?|symptoms?|causes?|risk\s+factors?)\s+(of|for)\b/i,
+  // Allow one optional adjective between "the" and "signs/symptoms/causes" (e.g. "early", "warning", "first").
+  /^\s*what\s+(are|is)\s+(the\s+)?(\w+\s+)?(signs?|symptoms?|causes?|risk\s+factors?)\s+(of|for)\b/i,
   /^\s*(warning\s+)?(signs?|symptoms?)\s+(of|for)\s+\w/i,
 ];
 
 // High-acuity conditions that warrant a safety note even when the query is informational.
-const EMERGENCY_CONDITION_PATTERN = /\b(stroke|heart attack|cardiac arrest|myocardial infarction|anaphylaxis|sepsis)\b/i;
+// Also used to gate injection of the canonical emergency-care guide link.
+const EMERGENCY_CONDITION_PATTERN = /\b(stroke|heart attack|cardiac arrest|myocardial infarction|anaphylaxis|sepsis|septic shock|meningitis|chest pain|chest tightness|shortness of breath|difficulty breathing)\b/i;
 
 // Returns true when the query is informational in framing (asking *about* a serious
 // condition rather than describing a current emergency), AND mentions an emergency-level
@@ -105,13 +110,23 @@ const NORMALIZATIONS = new Map([
   ["asymptomatic", "symptoms"],
 ]);
 
-export function tokenize(text) {
+// Expands common medical shorthand before tokenisation so short acronyms
+// (e.g. "ER", "A&E") produce meaningful query terms instead of being filtered.
+function preprocessQuery(text) {
   return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, " ")
-    .split(/\s+/)
-    .filter((t) => t.length > 2 && !STOP_WORDS.has(t))
-    .map((t) => NORMALIZATIONS.get(t) ?? t);
+    .replace(/\bE\.?R\.?\b/gi, "emergency")
+    .replace(/\bA&E\b/gi, "emergency");
+}
+
+export function tokenize(text) {
+  return [...new Set(
+    preprocessQuery(text)
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, " ")
+      .split(/\s+/)
+      .filter((t) => t.length > 2 && !STOP_WORDS.has(t))
+      .map((t) => NORMALIZATIONS.get(t) ?? t),
+  )];
 }
 
 // ---------------------------------------------------------------------------
