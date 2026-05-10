@@ -122,3 +122,4 @@ Give your location, describe the symptoms in detail, and state the exact time th
 - [Blood Oxygen Levels and Pulse Oximeters](/guides/blood-oxygen-pulse-oximeters)
 - [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)
 - [TIA — Warning Signs and Urgent Next Steps](/guides/tia-warning-signs)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)

@@ -120,6 +120,7 @@ A: Mild breathlessness is common in pregnancy. Sudden, severe, or rapidly worsen
 - [Asthma](/guides/asthma)
 - [COPD](/guides/copd)
 - [Sleep Apnoea](/guides/sleep-apnoea)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
 
 ---
 

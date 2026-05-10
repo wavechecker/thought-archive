@@ -72,6 +72,7 @@ A: Yes. Stress, missed medication, alcohol, or sleep deprivation are common trig
 - [Stroke — Act FAST](/guides/stroke-symptoms-fast-response)  
 - [Anaphylaxis — Severe Allergic Reaction](/guides/anaphylaxis)  
 - [Choking — First Aid Guide](/guides/choking)  
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
 
 ---
 

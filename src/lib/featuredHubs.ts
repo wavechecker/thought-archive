@@ -17,8 +17,8 @@ export const HUBS: FeaturedHub[] = [
   },
   {
     title: "Infectious Diseases",
-    href: "/guides/infectious-diseases",
-    description: "Outbreaks, vaccines, and practical infectious disease guidance."
+    href: "/guides/infectious-disease-hub",
+    description: "Fever, sepsis, vaccines, and when infections become emergencies."
   },
   {
     title: "Mental Health",

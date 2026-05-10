@@ -224,6 +224,7 @@ A: Hantavirus infection is rare but cases occur regularly in the Americas, Europ
 - [Shortness of Breath](/guides/shortness-of-breath)
 - [Pneumonia](/guides/pneumonia)
 - [Legionnaires' Disease](/guides/legionnaires-disease)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
 
 ---
 

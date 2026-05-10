@@ -91,6 +91,7 @@ A: Some do (e.g., milk or egg), but others (like peanut and tree nut) often pers
 - [Severe Bleeding — First Aid](/guides/severe-bleeding)  
 - [CPR — First Aid Guide](/guides/cpr)  
 - [Stroke — Act FAST](/guides/stroke-symptoms-fast-response)  
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
 
 ---
 

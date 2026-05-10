@@ -85,3 +85,4 @@ A: Preventing and promptly treating infections (vaccination, hygiene, early care
 - [Sepsis](/guides/sepsis)  
 - [Pneumonia](/guides/pneumonia)  
 - [Urinary Tract Infection](/guides/urinary-tract-infection)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)

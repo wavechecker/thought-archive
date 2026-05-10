@@ -65,6 +65,7 @@ A: Minor bleeding may, but **severe bleeding will not**. Always treat as an emer
 - [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/chest-pain)  
 - [Anaphylaxis — Severe Allergic Reaction](/guides/anaphylaxis)  
 - [CPR — First Aid Guide](/guides/cpr) *(coming soon)*  
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
 
 ---
 

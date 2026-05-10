@@ -130,3 +130,4 @@ Call emergency services anyway. Paramedics would rather respond to a false alarm
 - [Dizziness — Common Causes and When to Worry](/guides/dizziness-when-to-worry)
 - [Preventing Heart Disease](/guides/preventing-heart-disease)
 - [Common Heart Medications](/guides/common-heart-medications)
+- [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
