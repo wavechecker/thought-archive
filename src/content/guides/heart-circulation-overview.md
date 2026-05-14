@@ -47,5 +47,8 @@ A: Adults should check blood pressure at least annually; cholesterol and glucose
 - [American Heart Association: Conditions](https://www.heart.org/en/health-topics)  
 
 ## Related Guides
-- [Testosterone Replacement Therapy](/guides/testosterone-replacement-therapy)  
-- [Diabetes and Hormones](/guides/diabetes-hormones)  
+- [Heart & Circulation — Guide Hub](/guides/heart-circulation)
+- [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
+- [High Blood Pressure — What It Means and How to Manage It](/guides/high-blood-pressure)
+- [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
+- [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)  

@@ -165,6 +165,47 @@ const TEST_CASES = [
   { q: "signs of pneumonia",
     expected: "grounded",
     note: "'signs' is a stop word; 'pneumonia' alone retrieves pneumonia guide cleanly" },
+
+  // --- Synonym preprocessing: acronym expansion ---
+  { q: "What is afib?",
+    expected: "grounded",
+    note: "'afib' expands to 'atrial fibrillation' before tokenisation; AFib guide should score strongly" },
+  { q: "a fib symptoms",
+    expected: "grounded",
+    note: "'a fib' expands to 'atrial fibrillation'; should retrieve AFib guide" },
+  { q: "I have htn and need medication advice",
+    expected: "grounded", expectedQType: "medication", expectedMode: "medication-safe",
+    note: "'htn' expands to 'hypertension high blood pressure'; medication query mode" },
+  { q: "what is DKA",
+    expected: "grounded", expectedQType: "informational",
+    note: "'DKA' expands to 'diabetic ketoacidosis'; diabetes guides should score strongly" },
+  { q: "t1d management tips",
+    expected: "grounded",
+    note: "'t1d' expands to 'type 1 diabetes'; should retrieve T1D guides" },
+  { q: "what causes cva",
+    expected: "grounded",
+    note: "'cva' expands to 'stroke cerebrovascular accident'; stroke guide should score strongly" },
+
+  // --- New urgent patterns: DKA / diabetic emergency ---
+  { q: "I'm going into DKA",
+    expected: "urgent",
+    note: "DKA urgent pattern — first-person current tense" },
+  { q: "vomiting with very high ketones",
+    expected: "urgent",
+    note: "vomiting + high ketones pattern — DKA warning sign" },
+  { q: "I need glucagon",
+    expected: "urgent",
+    note: "'need glucagon' pattern — severe hypoglycemia emergency" },
+
+  // --- New urgent patterns: meningitis rash ---
+  { q: "there's a rash that won't fade when I press it",
+    expected: "urgent",
+    note: "non-blanching rash pattern — possible meningitis" },
+
+  // --- Informational about DKA should NOT trigger urgent ---
+  { q: "What are the symptoms of diabetic ketoacidosis?",
+    expected: "grounded", expectedQType: "informational",
+    note: "informational framing takes priority; DKA content should ground the response" },
 ];
 
 // ---------------------------------------------------------------------------

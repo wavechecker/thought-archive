@@ -16,26 +16,17 @@ tags:
 updatedDate: '2025-08-20'
 schema:
   medicalCondition:
-    name: Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
-    riskFactors:
-      - 'TODO risk factor #1'
-    symptoms:
-      - 'TODO symptom #1'
-    possibleComplication:
-      - 'TODO complication #1'
+    name: "Nutrition for Bowel Cancer"
+    description: "Dietary guidance for people with bowel cancer covers both risk reduction (a diet high in fibre, vegetables, and whole grains and low in processed meats reduces colorectal cancer risk) and treatment support (managing side effects such as diarrhoea, constipation, poor appetite, and nausea during chemotherapy, radiotherapy, or surgery recovery)."
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.cancer.org/cancer/types/colon-rectal-cancer.html"
+      - "https://www.wcrf.org/dietandcancer/colorectal-cancer/"
 faq:
-  - q: >-
-      What is nutrition basics for bowel cancer — eating well during and after
-      treatment?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "How does diet affect bowel cancer risk and recovery?"
+    a: "A diet high in dietary fibre, fruits, vegetables, and whole grains is associated with reduced colorectal cancer risk. During and after treatment, nutrition goals shift to managing treatment side effects, maintaining weight and muscle mass, and supporting recovery. Specific advice varies depending on the type of treatment received and any surgical changes to the bowel."
+  - q: "When should I seek urgent medical care during bowel cancer treatment?"
+    a: "Contact your cancer team urgently for: severe or persistent diarrhoea or vomiting that prevents you from eating or drinking, fever above 38°C (which may indicate infection in a neutropenic patient), severe abdominal pain, significant rectal bleeding, or signs of dehydration such as dizziness and dark urine. If you cannot reach your team, go to an emergency department."
 ---
 # Nutrition Basics for Bowel Cancer — Eating Well During and After Treatment
 

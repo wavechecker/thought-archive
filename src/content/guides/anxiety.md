@@ -15,23 +15,39 @@ updatedDate: '2025-09-03'
 schema:
   medicalCondition:
     name: Anxiety Disorders
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    description: "Anxiety disorders are a group of mental health conditions characterised by excessive, persistent fear or worry that is difficult to control and interferes with daily life. They include generalised anxiety disorder (GAD), panic disorder, social anxiety disorder, and specific phobias."
+    alternateName:
+      - "Generalised Anxiety Disorder"
+      - "GAD"
+      - "Panic Disorder"
+      - "Social Anxiety"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "Family history of anxiety or other mental health conditions"
+      - "Childhood trauma or adverse experiences"
+      - "Chronic stress or significant life events"
+      - "Certain medical conditions (thyroid disorders, heart arrhythmias)"
+      - "Substance use or withdrawal"
     symptoms:
-      - 'TODO symptom #1'
+      - "Persistent excessive worry"
+      - "Restlessness or feeling on edge"
+      - "Fatigue and difficulty concentrating"
+      - "Muscle tension"
+      - "Sleep disturbance"
+      - "Rapid heartbeat, sweating, or dizziness (in panic attacks)"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Depression (frequently co-occurs)"
+      - "Substance use disorder"
+      - "Social isolation and relationship difficulties"
+      - "Occupational impairment"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.who.int/news-room/fact-sheets/detail/mental-disorders"
+      - "https://medlineplus.gov/anxiety.html"
 faq:
-  - q: What is anxiety disorders?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What are anxiety disorders?"
+    a: "Anxiety disorders are among the most common mental health conditions, involving persistent, excessive fear or worry that interferes with daily life. They include generalised anxiety disorder, panic disorder, social anxiety disorder, and phobias. Unlike ordinary nervousness, anxiety disorders involve distress that is difficult to control and often has no clear external cause."
+  - q: "When should I seek emergency care?"
+    a: "Seek emergency care if you or someone else is experiencing thoughts of self-harm or suicide, severe panic with chest pain and shortness of breath that could indicate a heart problem, or a sudden mental health crisis where safety is at risk. Call emergency services or go to an emergency department. If it's less acute, contact your GP or a mental health crisis line."
 ---
 ## Intro
 Anxiety disorders are among the most common mental health conditions worldwide. While occasional anxiety is normal, anxiety disorders involve persistent, excessive fear or worry that interferes with daily life. The good news: anxiety disorders are highly treatable, and many people achieve lasting recovery.

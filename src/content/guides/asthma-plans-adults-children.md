@@ -15,24 +15,33 @@ updatedDate: '2025-08-20'
 draft: false
 schema:
   medicalCondition:
-    name: Asthma Action Plans for Adults and Children
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    name: "Asthma Action Plan"
+    description: "An asthma action plan is a personalised written guide developed with a doctor or nurse that helps people with asthma recognise worsening symptoms and take appropriate action, using green (controlled), yellow (worsening), and red (emergency) zones based on symptoms or peak flow readings."
+    alternateName:
+      - "Asthma management plan"
+      - "Asthma self-management plan"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "Poorly controlled asthma"
+      - "Allergen or trigger exposure"
+      - "Respiratory infections"
+      - "Not using preventer inhaler as prescribed"
     symptoms:
-      - 'TODO symptom #1'
+      - "Increasing wheeze or cough"
+      - "Shortness of breath with normal activities"
+      - "Waking at night with breathing symptoms"
+      - "Peak flow below personal best"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Severe asthma attack requiring hospital care"
+      - "Respiratory failure in untreated severe attack"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.asthma.org.uk/advice/manage-your-asthma/action-plan/"
+      - "https://www.nhlbi.nih.gov/health/asthma"
 faq:
-  - q: What is asthma action plans for adults and children?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What is an asthma action plan?"
+    a: "An asthma action plan is a written guide developed with your doctor that tells you what to do when your asthma is controlled (green zone), getting worse (yellow zone), or a medical emergency (red zone). It uses your symptoms and sometimes peak flow readings to guide when to increase treatment or call for help."
+  - q: "When should I seek emergency care for asthma?"
+    a: "Call emergency services immediately if you have: severe breathlessness that makes it difficult to speak in full sentences, reliever inhaler (blue puffer) not helping or wearing off quickly, lips or fingertips turning blue, confusion or drowsiness, or peak flow below 33% of your best. Do not delay — severe asthma can deteriorate rapidly."
 ---
 An **Asthma Action Plan** is a personalised written guide that helps you recognise worsening asthma and take the right steps to keep it under control.  
 It's a tool for both **day-to-day management** and **emergency response**.

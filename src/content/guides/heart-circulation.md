@@ -110,6 +110,8 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 
 ### Diagnosis and Procedures
 - [Understanding Coronary Angiography](/guides/understanding-coronary-angiography) — How cardiac catheterisation works, what to expect on the day, and interpreting results.
+- [Coronary Artery Calcium Score](/guides/coronary-artery-calcium-score) — A CT scan that measures calcium deposits in coronary arteries, providing an early indicator of plaque burden and heart attack risk.
+- [ApoB vs LDL Cholesterol — Which Matters More?](/guides/apob-vs-ldl-cholesterol) — Why ApoB may be a more accurate marker of cardiovascular risk than standard LDL, and when it changes clinical decisions.
 
 ### Treatment and Medications
 - [Heart Attack Treatment — What to Expect](/guides/heart-attack-treatment) — Angioplasty, stenting, clot-busting drugs, and in-hospital care.
@@ -124,6 +126,7 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 ### Prevention
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — Diet, exercise, smoking cessation, cholesterol control, and screening checks.
 - [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention) — Blood pressure, atrial fibrillation, smoking, cholesterol, and the medications that reduce stroke risk.
+- [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea) — Untreated sleep apnoea significantly raises the risk of high blood pressure, heart attack, stroke, and arrhythmia.
 
 ### Recovery and Rehabilitation
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation) — Exercise, education, and psychological support after heart attack or surgery.

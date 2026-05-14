@@ -15,24 +15,40 @@ draft: false
 updatedDate: '2025-09-08'
 schema:
   medicalCondition:
-    name: 'Chest Pain: When to Call 911 vs Wait for a Doctor'
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    name: "Chest Pain"
+    description: "Chest pain is discomfort or pain felt anywhere in the chest. It can range from a dull ache to a sharp stabbing sensation and may be caused by cardiac conditions (such as a heart attack or angina), lung conditions, gastrointestinal issues, musculoskeletal problems, or anxiety. Cardiac causes require urgent assessment."
+    alternateName:
+      - "Chest discomfort"
+      - "Chest tightness"
+      - "Chest pressure"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "Age over 50"
+      - "High blood pressure"
+      - "High cholesterol"
+      - "Smoking"
+      - "Diabetes"
+      - "Family history of heart disease"
+      - "Obesity and physical inactivity"
     symptoms:
-      - 'TODO symptom #1'
+      - "Crushing, squeezing, or pressure in the chest"
+      - "Pain radiating to the arm, neck, jaw, or back"
+      - "Shortness of breath"
+      - "Sweating and nausea"
+      - "Sharp, localised pain worsened by breathing (may suggest pleurisy or musculoskeletal cause)"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Heart attack (myocardial infarction)"
+      - "Pulmonary embolism"
+      - "Aortic dissection"
+      - "Cardiac arrest"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.nhs.uk/conditions/chest-pain/"
+      - "https://medlineplus.gov/chestpain.html"
 faq:
-  - q: 'What is chest pain: when to call 911 vs wait for a doctor?'
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "How do I know if chest pain is a heart attack?"
+    a: "Cardiac chest pain is typically described as crushing, squeezing, or heavy pressure in the centre or left of the chest, often spreading to the arm, neck, jaw, or back, and accompanied by sweating, nausea, or breathlessness. However, heart attacks do not always present this way — women, people with diabetes, and older adults may have atypical symptoms. When in doubt, call emergency services."
+  - q: "When should I seek emergency care for chest pain?"
+    a: "Call emergency services immediately for: crushing or pressure-like chest pain; chest pain spreading to the arm, jaw, or back; chest pain with sweating, nausea, or vomiting; sudden shortness of breath at rest; palpitations with dizziness or fainting; or any chest pain you are unsure about. Do not drive yourself to hospital."
 ---
 ## Intro
 Chest pain is one of the most important symptoms in medicine. It may be caused by something minor — like muscle strain or heartburn — or by life-threatening conditions such as a heart attack or blood clot in the lungs. Knowing when to call emergency services can save lives.

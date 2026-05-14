@@ -123,5 +123,7 @@ A: Yes. Pills may help in the short term but do not address root causes. CBT-I i
 - [National Sleep Foundation](https://www.thensf.org/insomnia/)  
 
 ## Related Guides
-- [When to Seek Help for Insomnia](/guides/when-to-seek-help-for-insomnia)  
-- [Healthy Sleep Hygiene](/guides/sleep-hygiene)  
+- [Sleep Health: Why It Matters and How to Improve It](/guides/sleep)
+- [Healthy Sleep Hygiene](/guides/sleep-hygiene)
+- [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea)
+- [When to Seek Help for Insomnia](/guides/when-to-seek-help-for-insomnia)

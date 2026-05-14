@@ -84,9 +84,13 @@ A: CPAP, lifestyle changes, oral appliances, and sometimes surgery.
 - [National Heart, Lung, and Blood Institute](https://www.nhlbi.nih.gov/health/sleep-apnea)  
 
 ## Related Guides
-- [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)  
-- [Asthma (Coming Soon)](/guides/asthma)  
-- [Chronic Obstructive Pulmonary Disease (COPD)](/guides/copd)  
+- [Sleep Health: Why It Matters and How to Improve It](/guides/sleep)
+- [Healthy Sleep Hygiene](/guides/sleep-hygiene)
+- [Cognitive Behavioural Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
+- [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
+- [Heart & Circulation — Guide Hub](/guides/heart-circulation)
+- [Dementia: Early Signs, Causes, and Prevention](/guides/dementia-overview)
+- [Chronic Obstructive Pulmonary Disease (COPD)](/guides/copd)
 
 ---
 

@@ -49,6 +49,24 @@ export const URGENT_PATTERNS = [
   // FAST stroke symptoms described in first person, without the word "stroke"
   /\bface\s+(is\s+|looks?\s+|feels?\s+)?droop(ing|ed|s)?\b/i,
   /\bcan'?t\s+(speak|talk)\s+(properly|suddenly|clearly|at all|anymore|straight)\b/i,
+  // Diabetic ketoacidosis (DKA) — high-acuity diabetes emergency
+  // Matches first-person/current-tense presentations but not educational "what is DKA" queries
+  // (those are caught by INFORMATIONAL_SYMPTOM_PATTERNS first).
+  /\bi('?m| am) (going into|having|in) (dka|diabetic ketoacidosis|ketoacidosis)\b/i,
+  /\b(vomiting|throwing up).{0,40}(high ketones?|ketones? (are |is )?(high|elevated|over|above))\b/i,
+  /\b(high ketones?|ketones? (are |is )?(high|elevated)).{0,40}(vomiting|throwing up|can'?t keep down)\b/i,
+  /\bketones? (are |is )?(very high|dangerously high|over [3-9]|over \d{2})\b/i,
+  // Severe hypoglycemia — unconscious or unable to treat self
+  /\b(not responding|won'?t wake|unconscious).{0,30}(diabetic|low blood sugar|hypoglycemi)\b/i,
+  /\b(hypoglycemi|low blood sugar).{0,30}(not responding|won'?t wake|unconscious|need glucagon)\b/i,
+  /\bneed (the )?glucagon\b/i,
+  // Meningitis — non-blanching rash described in first person (not educational queries)
+  /\brash.{0,30}(won'?t|doesn'?t|not) (fade|disappear|go away).{0,30}(press|glass|tumbler)\b/i,
+  /\b(glass test|tumbler test).{0,20}rash\b/i,
+  /\bmeningitis rash\b/i,
+  // Possible ectopic pregnancy rupture
+  /\b(severe|sudden) (abdominal|pelvic|stomach|belly) pain.{0,40}(pregnant|pregnancy|period late|missed period)\b/i,
+  /\b(pregnant|pregnancy).{0,40}(severe|sudden) (pain|bleeding)\b/i,
 ];
 
 // Informational framing: "what are the signs/symptoms of X", "signs of X", etc.
@@ -63,7 +81,7 @@ const INFORMATIONAL_SYMPTOM_PATTERNS = [
 
 // High-acuity conditions that warrant a safety note even when the query is informational.
 // Also used to gate injection of the canonical emergency-care guide link.
-const EMERGENCY_CONDITION_PATTERN = /\b(stroke|heart attack|cardiac arrest|myocardial infarction|anaphylaxis|sepsis|septic shock|meningitis|chest pain|chest tightness|shortness of breath|difficulty breathing)\b/i;
+const EMERGENCY_CONDITION_PATTERN = /\b(stroke|heart attack|cardiac arrest|myocardial infarction|anaphylaxis|sepsis|septic shock|meningitis|chest pain|chest tightness|shortness of breath|difficulty breathing|diabetic ketoacidosis|dka|severe hypoglycemia|hypoglycaemia|ectopic pregnancy)\b/i;
 
 // Returns true when the query is informational in framing (asking *about* a serious
 // condition rather than describing a current emergency), AND mentions an emergency-level
@@ -111,11 +129,27 @@ const NORMALIZATIONS = new Map([
 ]);
 
 // Expands common medical shorthand before tokenisation so short acronyms
-// (e.g. "ER", "A&E") produce meaningful query terms instead of being filtered.
+// (e.g. "ER", "A&E", "AFib", "HTN") produce meaningful query terms instead of being filtered.
+// Order matters: longer / more-specific patterns are listed first.
 function preprocessQuery(text) {
   return text
+    // Emergency services shorthand
     .replace(/\bE\.?R\.?\b/gi, "emergency")
-    .replace(/\bA&E\b/gi, "emergency");
+    .replace(/\bA&E\b/gi, "emergency")
+    // Cardiac
+    .replace(/\ba[\s-]?fib\b/gi, "atrial fibrillation")
+    .replace(/\bafib\b/gi, "atrial fibrillation")
+    .replace(/\bmi\b(?=\s|$)/gi, "myocardial infarction heart attack")  // guard: "mi" only at word boundary; overbroad alone so paired with heart attack
+    .replace(/\bcva\b/gi, "stroke cerebrovascular accident")
+    // Blood pressure / hypertension
+    .replace(/\bhtn\b/gi, "hypertension high blood pressure")
+    .replace(/\b(?<![a-z])bp(?![a-z])\b/gi, "blood pressure")
+    // Diabetes
+    .replace(/\bt1d\b/gi, "type 1 diabetes")
+    .replace(/\bt2d\b/gi, "type 2 diabetes")
+    .replace(/\bt1dm\b/gi, "type 1 diabetes")
+    .replace(/\bt2dm\b/gi, "type 2 diabetes")
+    .replace(/\bdka\b/gi, "diabetic ketoacidosis");
 }
 
 export function tokenize(text) {

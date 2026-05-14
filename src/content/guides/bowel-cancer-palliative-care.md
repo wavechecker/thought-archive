@@ -16,24 +16,17 @@ tags:
 updatedDate: '2025-08-20'
 schema:
   medicalCondition:
-    name: 'Palliative Care in Bowel Cancer — Comfort, Dignity, and Support'
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
-    riskFactors:
-      - 'TODO risk factor #1'
-    symptoms:
-      - 'TODO symptom #1'
-    possibleComplication:
-      - 'TODO complication #1'
+    name: "Palliative Care in Bowel Cancer"
+    description: "Palliative care in bowel cancer focuses on improving quality of life when cure is no longer the primary goal. It provides specialist symptom management (pain, fatigue, bowel changes, nausea), psychological and emotional support, advance care planning, and coordinated end-of-life care for patients and their families."
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.who.int/news-room/fact-sheets/detail/palliative-care"
+      - "https://medlineplus.gov/palliativecare.html"
 faq:
-  - q: 'What is palliative care in bowel cancer — comfort, dignity, and support?'
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What does palliative care mean in bowel cancer?"
+    a: "Palliative care in bowel cancer is specialist medical care focused on relieving symptoms, reducing distress, and improving quality of life when the cancer cannot be cured. It is not about giving up — it can be provided alongside active treatment, and often helps people live better and sometimes longer. It includes pain management, emotional support, and help with practical and end-of-life planning."
+  - q: "When should I contact the palliative care team urgently?"
+    a: "Contact your palliative care team or GP urgently for: pain that is severe or not controlled by current medications, sudden change in consciousness, severe breathlessness, inability to eat or drink, or significant distress. If your team is not available and symptoms are severe, go to an emergency department or call emergency services. Most palliative care teams have an on-call line for exactly these situations."
 ---
 # Palliative Care in Bowel Cancer — Comfort, Dignity, and Support
 

@@ -5,6 +5,14 @@
 # Canonicalizations & slugs
 # ──────────────────────────────────────────────────────────────────────────────
 
+# Infectious disease hub deduplication — canonical is /guides/infectious-diseases
+/guides/infectious-disease-hub        /guides/infectious-diseases      301!
+/guides/infectious-disease-hub/       /guides/infectious-diseases      301!
+
+# TIA deduplication — thin stub redirects to canonical TIA guide
+/guides/transient-ischemic-attack-tia   /guides/tia-warning-signs      301!
+/guides/transient-ischemic-attack-tia/  /guides/tia-warning-signs      301!
+
 # Old "heart" section → canonical "heart-circulation"
 /guides/heart                          /guides/heart-circulation        301!
 /guides/heart/                         /guides/heart-circulation        301!
