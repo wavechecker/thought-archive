@@ -69,14 +69,25 @@ export const URGENT_PATTERNS = [
   /\b(pregnant|pregnancy).{0,40}(severe|sudden) (pain|bleeding)\b/i,
 ];
 
-// Informational framing: "what are the signs/symptoms of X", "signs of X", etc.
+// Informational framing: "what are the signs/symptoms of X", "signs of X",
+// "how is X treated", "what medications for X" etc.
 // These are educational queries that mention serious conditions but do NOT describe
 // a current emergency. Checked before URGENT_PATTERNS in classifyQuery so that
-// "what are the signs of stroke?" is not treated as an emergency call.
+// "what are the signs of stroke?" or "how is a heart attack treated?" are not
+// routed to emergency mode.
 const INFORMATIONAL_SYMPTOM_PATTERNS = [
   // Allow one optional adjective between "the" and "signs/symptoms/causes" (e.g. "early", "warning", "first").
   /^\s*what\s+(are|is)\s+(the\s+)?(\w+\s+)?(signs?|symptoms?|causes?|risk\s+factors?)\s+(of|for)\b/i,
   /^\s*(warning\s+)?(signs?|symptoms?)\s+(of|for)\s+\w/i,
+  // Treatment queries: "how is a heart attack treated", "how are strokes managed"
+  // Requires "treated/managed/diagnosed/prevented" anywhere within ~80 chars of the start.
+  // Anchored to avoid matching "I had a heart attack, how is that treated now?" (longer preamble).
+  /^\s*how\s+(?:is|are)\s+\S.{0,70}\s+(?:treated|managed|diagnosed|prevented)\b/i,
+  // "How do you / how do doctors treat X"
+  /^\s*how\s+do\s+(?:you|doctors?|hospitals?|they)\s+(?:treat|manage|diagnose|prevent)\b/i,
+  // Medication queries about conditions: "what medications are used for X", "what medications after X"
+  // Must be followed immediately by "are", "do", or "is" — blocks "what medications should I take for my pain"
+  /^\s*what\s+medications?\s+(?:are|do\s+you|is)\b/i,
 ];
 
 // High-acuity conditions that warrant a safety note even when the query is informational.
@@ -136,20 +147,26 @@ function preprocessQuery(text) {
     // Emergency services shorthand
     .replace(/\bE\.?R\.?\b/gi, "emergency")
     .replace(/\bA&E\b/gi, "emergency")
-    // Cardiac
+    // Cardiac — procedures and abbreviations
     .replace(/\ba[\s-]?fib\b/gi, "atrial fibrillation")
     .replace(/\bafib\b/gi, "atrial fibrillation")
     .replace(/\bmi\b(?=\s|$)/gi, "myocardial infarction heart attack")  // guard: "mi" only at word boundary; overbroad alone so paired with heart attack
     .replace(/\bcva\b/gi, "stroke cerebrovascular accident")
+    .replace(/\bcabg\b/gi, "coronary artery bypass grafting surgery")
+    .replace(/\bpci\b/gi, "percutaneous coronary intervention angioplasty stent")
     // Blood pressure / hypertension
     .replace(/\bhtn\b/gi, "hypertension high blood pressure")
     .replace(/\b(?<![a-z])bp(?![a-z])\b/gi, "blood pressure")
-    // Diabetes
+    // Diabetes — monitoring
     .replace(/\bt1d\b/gi, "type 1 diabetes")
     .replace(/\bt2d\b/gi, "type 2 diabetes")
     .replace(/\bt1dm\b/gi, "type 1 diabetes")
     .replace(/\bt2dm\b/gi, "type 2 diabetes")
-    .replace(/\bdka\b/gi, "diabetic ketoacidosis");
+    .replace(/\bdka\b/gi, "DKA diabetic ketoacidosis")  // preserve acronym so guide titles with "DKA" still score
+    .replace(/\bcgm\b/gi, "continuous glucose monitor")
+    .replace(/\bbgm\b/gi, "blood glucose monitoring")
+    // Sleep
+    .replace(/\bosa\b/gi, "obstructive sleep apnoea");
 }
 
 export function tokenize(text) {

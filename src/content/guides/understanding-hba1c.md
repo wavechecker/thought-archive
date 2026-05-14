@@ -170,8 +170,10 @@ Check for factors that lower HbA1c artificially, such as haemolysis, recent bloo
 - [Type 1 vs Type 2 Diabetes — Key Differences](/guides/type-1-vs-type-2-diabetes)
 - [Newly Diagnosed with Type 1 Diabetes — First Steps](/guides/newly-diagnosed-type1-diabetes)
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing)
+- [Continuous Glucose Monitors — CGM vs Fingerstick](/guides/continuous-glucose-monitors)
 - [Diabetes Emergencies — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)
 - [Prediabetes: Early Warning Signs and Prevention](/guides/prediabetes)
+- [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
 
 ---
 

@@ -161,7 +161,10 @@ Catheter ablation restores normal rhythm in many people, particularly with parox
 ## Related Guides
 
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
+- [Heart Attack Treatment — Emergency Care, Procedures, and Recovery](/guides/heart-attack-treatment)
+- [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)
+- [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
 - [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea)

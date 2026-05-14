@@ -109,8 +109,13 @@ function onwardMessage(queryType, answerType) {
 
 function isDefinitionQuery(question) {
   // Matches: "what is X", "what are X", "what does X", "what do X", "what causes X"
+  // Also matches: "explain X", "tell me about X", "describe X" — same definition-fallback intent
   // Does NOT match: "I feel X", "should I X", "best X for Y", etc.
-  return /^\s*what\s+(is|are|does|do|causes?)\s+\w{3}/i.test(question);
+  return (
+    /^\s*what\s+(is|are|does|do|causes?)\s+\w{3}/i.test(question) ||
+    /^\s*(explain|describe)\s+\w{3}/i.test(question) ||
+    /^\s*tell\s+me\s+(about|what)\s+\w{3}/i.test(question)
+  );
 }
 
 function isSymptomInterpretationQuery(question) {

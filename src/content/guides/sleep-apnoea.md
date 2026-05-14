@@ -26,7 +26,7 @@ faq:
 ---
 
 ## Intro
-Sleep apnoea is a common but underdiagnosed condition where breathing repeatedly stops and starts during sleep. It disrupts sleep quality and places strain on the heart and circulation.
+Sleep apnoea is a common but underdiagnosed condition where breathing repeatedly stops and starts during sleep. It disrupts sleep quality and places strain on the heart and circulation. Untreated, it increases the risk of [high blood pressure](/guides/high-blood-pressure), heart disease, [stroke](/guides/stroke-symptoms-fast-response), and type 2 diabetes.
 
 ## Key Points
 - Loud snoring and daytime sleepiness are hallmark signs.  
@@ -59,7 +59,8 @@ Sleep apnoea is a common but underdiagnosed condition where breathing repeatedly
 - **Surgery:** for anatomical blockages or severe cases.  
 
 ## Risks and Prognosis
-- Untreated OSA leads to cardiovascular disease, diabetes, accidents, and reduced quality of life.  
+- Untreated OSA leads to [cardiovascular disease](/guides/preventing-heart-disease), diabetes, accidents, and reduced quality of life.  
+- Sleep apnoea is an independent risk factor for [atrial fibrillation](/guides/atrial-fibrillation) — treating OSA reduces AF burden.  
 - With treatment, risks fall dramatically, and energy, mood, and long-term outcomes improve.  
 
 ## FAQ
@@ -88,6 +89,9 @@ A: CPAP, lifestyle changes, oral appliances, and sometimes surgery.
 - [Healthy Sleep Hygiene](/guides/sleep-hygiene)
 - [Cognitive Behavioural Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
+- [Atrial Fibrillation — What It Is and How It's Treated](/guides/atrial-fibrillation)
+- [High Blood Pressure — What It Means and How to Manage It](/guides/high-blood-pressure)
+- [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Dementia: Early Signs, Causes, and Prevention](/guides/dementia-overview)
 - [Chronic Obstructive Pulmonary Disease (COPD)](/guides/copd)
