@@ -94,6 +94,7 @@ A: It’s **not prescribed** for primary prevention. Timing matters for risk; di
 - WHO: Menopause facts & healthy aging
 
 ## Related Guides
+- [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause)
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
 - [Understanding Coronary Angiography](/guides/understanding-coronary-angiography)  
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing)

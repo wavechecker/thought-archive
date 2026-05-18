@@ -303,6 +303,7 @@ A: A short nap of 10–20 minutes in the early afternoon can improve alertness a
 - [Anxiety Disorders](/guides/anxiety)
 - [Light Therapy](/guides/light-therapy)
 - [Mental Health Toolkit](/guides/mental-health-toolkit)
+- [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause)
 
 ---
 

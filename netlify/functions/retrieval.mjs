@@ -166,7 +166,16 @@ function preprocessQuery(text) {
     .replace(/\bcgm\b/gi, "continuous glucose monitor")
     .replace(/\bbgm\b/gi, "blood glucose monitoring")
     // Sleep
-    .replace(/\bosa\b/gi, "obstructive sleep apnoea");
+    .replace(/\bosa\b/gi, "obstructive sleep apnoea")
+    // Women's Health — hormone therapy
+    .replace(/\bhrt\b/gi, "hormone replacement therapy hormone therapy")
+    .replace(/\bmht\b/gi, "menopausal hormone therapy hormone therapy menopause")
+    // Women's Health — PCOS (preserve acronym so PCOS guide title still scores)
+    .replace(/\bpcos\b/gi, "PCOS polycystic ovary syndrome")
+    // Breast screening — expand common search term to guide terminology
+    .replace(/\bmammograms?\b/gi, "mammogram mammography breast screening")
+    // US English hot flashes → Australian hot flushes (used throughout menopause content)
+    .replace(/\bhot flashes?\b/gi, "hot flushes vasomotor");
 }
 
 export function tokenize(text) {
