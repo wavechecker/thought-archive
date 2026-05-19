@@ -42,7 +42,7 @@ export const URGENT_PATTERNS = [
   /\b(unconscious|unresponsive|collapsed|won'?t wake)\b/i,
   /\b(throat (closing|swelling|tightening)|severe allergic reaction|anaphylactic (shock|reaction))\b/i,
   /\bi'?m (having|going into) anaphylaxis\b/i,
-  /\b(seizure|convuls|fitting|fit and)\b/i,
+  /\b(seizure|convuls(?:e|ed|ion|ions|ing|ive)|fitting|fit and)\b/i,
   /\bsevere (bleeding|hemorrhage|haemorrhage)\b/i,
   /\boverdose\b/i,
   /\b(2[1-9][0-9]|[3-9][0-9]{2})\/\d{2,3}\b/,
@@ -78,6 +78,14 @@ export const URGENT_PATTERNS = [
 const INFORMATIONAL_SYMPTOM_PATTERNS = [
   // Allow one optional adjective between "the" and "signs/symptoms/causes" (e.g. "early", "warning", "first").
   /^\s*what\s+(are|is)\s+(the\s+)?(\w+\s+)?(signs?|symptoms?|causes?|risk\s+factors?)\s+(of|for)\b/i,
+  // "What is epilepsy/a seizure?" — definitional queries about these conditions must not route
+  // to urgent mode even though URGENT_PATTERNS matches "seizure". This pattern fires first.
+  /^\s*what\s+(is|are)\s+(a\s+|an\s+|the\s+)?(?:seizure|convulsion|epilepsy|epileptic\s+fit)s?\b/i,
+  // First-aid preparedness queries — "what should I/you do during/after a seizure"
+  // "during/after" implies preparedness framing. "if someone" is intentionally excluded —
+  // condition-specific queries like "what should I do if someone has stroke symptoms" should
+  // still route via URGENT_PATTERNS when the condition is high-acuity.
+  /^\s*what\s+should\s+(?:i|you|we|one)\s+do\s+(?:during|after)\b/i,
   /^\s*(warning\s+)?(signs?|symptoms?)\s+(of|for)\s+\w/i,
   // Treatment queries: "how is a heart attack treated", "how are strokes managed"
   // Requires "treated/managed/diagnosed/prevented" anywhere within ~80 chars of the start.
@@ -172,10 +180,21 @@ function preprocessQuery(text) {
     .replace(/\bmht\b/gi, "menopausal hormone therapy hormone therapy menopause")
     // Women's Health — PCOS (preserve acronym so PCOS guide title still scores)
     .replace(/\bpcos\b/gi, "PCOS polycystic ovary syndrome")
+    // Neurology — MS (safe on a medical platform; context is unambiguous)
+    .replace(/\bMS\b/gi, "MS multiple sclerosis")
     // Breast screening — expand common search term to guide terminology
     .replace(/\bmammograms?\b/gi, "mammogram mammography breast screening")
     // US English hot flashes → Australian hot flushes (used throughout menopause content)
-    .replace(/\bhot flashes?\b/gi, "hot flushes vasomotor");
+    .replace(/\bhot flashes?\b/gi, "hot flushes vasomotor")
+    // Men's Health — prostate / urinary
+    .replace(/\bBPH\b/gi, "BPH benign prostatic hyperplasia enlarged prostate urinary")
+    .replace(/\bLUTS\b/gi, "LUTS lower urinary tract symptoms urinary prostate")
+    // Neurology — Parkinson's (only expand unambiguous full-word "PD" in neurological context)
+    .replace(/\bPD\b(?=\s+(?:tremor|symptoms?|diagnosis|treatment|exercise|progression|medication|motor|non.motor))/gi, "PD Parkinson's disease")
+    // Neurology — tremor synonym expansion (links "shaking" queries to Parkinson's / tremor content)
+    .replace(/\b(uncontrolled\s+)?shaking\b/gi, "shaking tremor")
+    // Neurology — epilepsy / seizure terminology
+    .replace(/\bepilept(?:ic\s+fit|ic\s+seizure)\b/gi, "epileptic seizure epilepsy");
 }
 
 export function tokenize(text) {
