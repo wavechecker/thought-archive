@@ -125,4 +125,3 @@ A: The trial suggested fewer rhinovirus infections, but larger studies are requi
 
 ## Related Guides
 - [COVID-19 Vaccines and Boosters](/guides/covid-19-vaccines)  
-- [COVID-19 Treatments and Antivirals](/guides/covid-19-treatments)  

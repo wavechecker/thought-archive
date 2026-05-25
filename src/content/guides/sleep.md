@@ -292,13 +292,18 @@ A: A short nap of 10–20 minutes in the early afternoon can improve alertness a
 - [Healthy Sleep Hygiene](/guides/sleep-hygiene)
 - [Cognitive Behavioural Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
 - [When to Seek Help for Insomnia](/guides/when-to-seek-help-for-insomnia)
-- [Sleep Apnoea](/guides/sleep-apnoea)
+- [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea)
+- [Brain Health Hub](/guides/brain-health-hub)
+- [Dementia: Early Signs, Causes, and Prevention](/guides/dementia-overview)
+- [Alzheimer's Prevention and Exercise](/guides/alzheimers-prevention-and-exercise)
+- [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Mild Cognitive Impairment (MCI)](/guides/mild-cognitive-impairment)
 - [Cognitive Testing and Memory Assessment](/guides/cognitive-testing-memory-assessment)
 - [Depression: Symptoms, Causes, and Treatment](/guides/depression)
 - [Anxiety Disorders](/guides/anxiety)
 - [Light Therapy](/guides/light-therapy)
 - [Mental Health Toolkit](/guides/mental-health-toolkit)
+- [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause)
 
 ---
 

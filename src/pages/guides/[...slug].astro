@@ -16,7 +16,7 @@ const mdxComponents = {
 };
 
 export async function getStaticPaths() {
-  const guides = await getCollection("guides");
+  const guides = await getCollection("guides", ({ data }) => !data.draft);
   return guides.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },

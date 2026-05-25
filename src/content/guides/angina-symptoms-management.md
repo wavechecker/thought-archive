@@ -15,24 +15,40 @@ tags:
 updatedDate: '2025-08-30'
 schema:
   medicalCondition:
-    name: Angina — Symptoms & Management
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    name: "Angina"
+    description: "Angina is chest discomfort caused by reduced blood flow to the heart muscle, usually due to narrowed coronary arteries. Stable angina occurs predictably with exertion and resolves with rest; unstable angina occurs at rest or with minimal exertion and is a medical emergency."
+    alternateName:
+      - "Angina pectoris"
+      - "Stable angina"
+      - "Unstable angina"
+      - "Prinzmetal angina"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "High blood pressure"
+      - "High cholesterol"
+      - "Smoking"
+      - "Diabetes"
+      - "Obesity and physical inactivity"
+      - "Family history of coronary artery disease"
+      - "Age (risk increases with age)"
     symptoms:
-      - 'TODO symptom #1'
+      - "Chest pressure, heaviness, or squeezing"
+      - "Pain radiating to the left arm, neck, jaw, or back"
+      - "Shortness of breath on exertion"
+      - "Fatigue with physical activity"
+      - "Discomfort triggered by stress or cold weather (stable angina)"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Heart attack (myocardial infarction)"
+      - "Arrhythmia"
+      - "Heart failure"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.nhs.uk/conditions/angina/"
+      - "https://medlineplus.gov/angina.html"
 faq:
-  - q: What is angina — symptoms & management?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What is angina and how is it different from a heart attack?"
+    a: "Angina is chest discomfort caused by temporarily reduced blood flow to the heart muscle, usually during exertion, which eases within minutes with rest or nitrate medication. A heart attack occurs when a coronary artery is completely blocked and heart muscle begins to die — it is more severe, longer-lasting, and requires immediate emergency treatment."
+  - q: "When should I seek emergency care for angina?"
+    a: "Call emergency services immediately if chest pain: is new or different from your usual pattern; occurs at rest; is more severe or lasts longer than usual; does not improve with your nitrate spray after 2 doses; is accompanied by sweating, nausea, or breathlessness. This may indicate unstable angina or a heart attack, both of which are emergencies."
 ---
 ## Intro
 Angina is chest discomfort caused by reduced blood flow to the heart muscle. It is a warning sign of underlying heart disease and should never be ignored. Recognizing angina and managing it early can help prevent a heart attack.

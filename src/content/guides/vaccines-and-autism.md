@@ -4,8 +4,28 @@ slug: "vaccines-and-autism"
 description: "Review of the evidence on the alleged link between vaccines and autism, and the public health impact of this controversy."
 category: "Vaccination"
 publishDate: "2025-08-26"
-tags: ["safety", "autism", "controversy"]
-draft: true
+updatedDate: "2026-05-14"
+tags: ["safety", "autism", "controversy", "MMR", "vaccine hesitancy"]
+draft: false
+schema:
+  medicalCondition:
+    name: "Vaccines and Autism"
+    description: "The scientific consensus that vaccines — including the MMR vaccine and aluminum-containing vaccines — do not cause autism spectrum disorder (ASD). Multiple large studies involving millions of children have found no causal link."
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/questions-and-answers/item/vaccines-and-autism"
+      - "https://www.cdc.gov/vaccine-safety/about/autism.html"
+faq:
+  - q: "Do vaccines cause autism?"
+    a: "No. Multiple large studies involving millions of children — including systematic reviews and long-term cohort studies — have found no causal link between any vaccine or vaccine ingredient and autism spectrum disorder. The original 1998 study claiming a link was retracted after being found fraudulent."
+  - q: "What about the MMR vaccine specifically?"
+    a: "The MMR vaccine has been studied more exhaustively than almost any other vaccine safety question. Danish cohort studies covering over a million children, and meta-analyses pooling data from millions more, consistently find no increased risk of autism after MMR vaccination."
+  - q: "What about aluminum adjuvants in vaccines?"
+    a: "Multiple studies have found no harmful neurological or developmental effects from aluminum adjuvants at the doses used in vaccines. The amount of aluminum in vaccines is far lower than what infants are naturally exposed to through food, air, and water."
+  - q: "Could it be a timing coincidence?"
+    a: "Yes. Autism symptoms often become noticeable around 12–18 months of age — the same time several vaccines are given — creating a false appearance of cause and effect. This temporal coincidence has been rigorously tested in population studies and does not reflect a real causal relationship."
+  - q: "Why does this myth persist despite the evidence?"
+    a: "Emotional narratives, distrust of authorities, the rapid spread of misinformation online, and the persistence of the original fraudulent claims in media coverage all contribute to ongoing hesitancy despite clear scientific consensus."
 ---
 
 # Vaccines and Autism

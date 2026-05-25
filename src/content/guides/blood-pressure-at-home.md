@@ -15,24 +15,34 @@ draft: false
 updatedDate: '2025-09-08'
 schema:
   medicalCondition:
-    name: 'Blood Pressure at Home: How to Measure Correctly'
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    name: "Home Blood Pressure Monitoring"
+    description: "Home blood pressure monitoring involves regularly measuring blood pressure outside a clinical setting using an automatic upper-arm cuff. It provides a more accurate picture of average blood pressure than clinic readings, helps detect white coat hypertension, and supports treatment decisions."
+    alternateName:
+      - "HBPM"
+      - "Ambulatory blood pressure monitoring"
+      - "Self-measured blood pressure"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "High blood pressure (hypertension)"
+      - "Diabetes"
+      - "Kidney disease"
+      - "Family history of cardiovascular disease"
     symptoms:
-      - 'TODO symptom #1'
+      - "Most people with high blood pressure have no symptoms"
+      - "Severe hypertension may cause headache or visual disturbance"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Stroke"
+      - "Heart attack"
+      - "Heart failure"
+      - "Kidney damage"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.nhs.uk/conditions/blood-pressure-test/"
+      - "https://medlineplus.gov/howtopreventhighbloodpressure.html"
 faq:
-  - q: 'What is blood pressure at home: how to measure correctly?'
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "How do I measure blood pressure correctly at home?"
+    a: "Sit quietly for 5 minutes before measuring. Use a validated upper-arm automatic cuff. Sit with your back supported, feet flat on the floor, and your arm at heart level. Take 2–3 readings 1–2 minutes apart and record the average. Measure at the same time each day, before taking medications in the morning. Avoid caffeine, exercise, or smoking for 30 minutes beforehand."
+  - q: "When should I seek emergency care based on my blood pressure reading?"
+    a: "Seek emergency care immediately if your blood pressure is 180/120 mmHg or higher, especially if combined with symptoms such as severe headache, visual disturbance, chest pain, shortness of breath, or confusion. This may indicate hypertensive crisis. A very high reading without symptoms still warrants urgent same-day medical review — call your GP or go to urgent care."
 ---
 ## Intro
 Home blood pressure monitoring is an effective way to track your heart health and manage high blood pressure (hypertension). Done properly, it can help guide treatment decisions and catch problems early. Done incorrectly, it can cause unnecessary worry.

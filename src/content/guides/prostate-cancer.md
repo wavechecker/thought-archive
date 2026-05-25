@@ -58,12 +58,6 @@ This hub connects guides on prevention, diagnosis, treatment choices, and long-t
 
 ---
 
-## Core Guides
-- [Prostate Cancer Risk Factors](/guides/prostate-cancer-risk-factors)  
-- [Prostate Cancer Screening — PSA and Beyond](/guides/prostate-cancer-screening)  
-- [Prostate Cancer Treatment Options](/guides/prostate-cancer-treatment)  
-- [Life After Prostate Cancer: Survivorship and Support](/guides/prostate-cancer-survivorship)  
-
 ---
 
 ## FAQ

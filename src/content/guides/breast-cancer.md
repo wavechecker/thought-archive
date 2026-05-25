@@ -84,6 +84,7 @@ A: Risk can be reduced with lifestyle measures and early detection, but not elim
 - [Skin Cancer](/guides/skin-cancer) — early detection strategies applicable across cancer types.
 - [Testing and Screening](/guides/testing-and-screening) — understanding what cancer screening tests detect and when to seek them.
 - [Smoking Cessation](/guides/smoking-cessation) — smoking is a risk factor for several cancers, including breast cancer.
+- [Mammography and Breast Cancer Screening: What You Need to Know](/guides/mammography-breast-screening) — how mammograms work, BI-RADS results, dense breasts, and what to do after a recall.
 
 *Last reviewed: September 17, 2025*  
 

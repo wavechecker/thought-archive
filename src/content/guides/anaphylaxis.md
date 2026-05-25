@@ -16,24 +16,40 @@ tags:
 draft: false
 schema:
   medicalCondition:
-    name: Anaphylaxis — Severe Allergic Reaction
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    name: "Anaphylaxis"
+    description: "Anaphylaxis is a severe, rapid-onset, potentially life-threatening allergic reaction that affects multiple body systems simultaneously. It requires immediate treatment with epinephrine (adrenaline) and emergency medical care."
+    alternateName:
+      - "Anaphylactic shock"
+      - "Severe allergic reaction"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "Known food allergy (peanuts, tree nuts, shellfish, milk, eggs)"
+      - "History of previous anaphylaxis"
+      - "Insect venom allergy (bee or wasp sting)"
+      - "Drug allergy (antibiotics, NSAIDs, contrast dye)"
+      - "Asthma or other atopic conditions"
     symptoms:
-      - 'TODO symptom #1'
+      - "Hives, flushing, or itching"
+      - "Swelling of lips, tongue, or throat (angioedema)"
+      - "Difficulty breathing or wheezing"
+      - "Drop in blood pressure"
+      - "Dizziness or fainting"
+      - "Abdominal pain, nausea, or vomiting"
+      - "Rapid or weak pulse"
+      - "Collapse or loss of consciousness"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Cardiac arrest"
+      - "Respiratory failure"
+      - "Biphasic anaphylaxis (recurrence hours after initial reaction)"
+      - "Brain damage from oxygen deprivation"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.nhs.uk/conditions/anaphylaxis/"
+      - "https://medlineplus.gov/anaphylaxis.html"
 faq:
-  - q: What is anaphylaxis — severe allergic reaction?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What is anaphylaxis?"
+    a: "Anaphylaxis is a severe, rapid-onset allergic reaction that affects multiple body systems at once and can be life-threatening. It causes swelling of the throat, difficulty breathing, a sudden drop in blood pressure, and can lead to collapse. Epinephrine (adrenaline) is the emergency treatment — always call emergency services, even after using an auto-injector."
+  - q: "When should I seek emergency care?"
+    a: "Call emergency services immediately if someone has: difficulty breathing or wheezing, swelling of the throat or tongue, a sudden drop in blood pressure, collapse, or any combination of hives plus breathing difficulty or dizziness after an allergen exposure. Use an epinephrine auto-injector (such as an EpiPen) without delay if available, then call emergency services. Do not wait to see if symptoms improve on their own."
 ---
 ## Intro
 Food and environmental allergies are common, but **anaphylaxis** is a severe, life-threatening allergic reaction. It can happen within minutes of exposure to an allergen, and requires **immediate emergency action**. Even a tiny exposure can trigger a reaction in sensitive individuals.

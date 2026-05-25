@@ -18,24 +18,37 @@ related:
   - /guides/diabetes-children
 schema:
   medicalCondition:
-    name: Childhood Obesity Prevention
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    name: "Childhood Obesity"
+    description: "Childhood obesity is defined as a BMI at or above the 95th percentile for age and sex in children, driven by excess energy intake relative to expenditure. It is a major global health issue linked to increased risk of type 2 diabetes, cardiovascular disease, mental health problems, and obesity persisting into adulthood."
+    alternateName:
+      - "Childhood overweight"
+      - "Pediatric obesity"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "High consumption of ultra-processed foods and sugary drinks"
+      - "Low levels of physical activity and high screen time"
+      - "Parental obesity (genetic and environmental factors)"
+      - "Low-income environments with limited access to healthy food"
+      - "Poor sleep"
+      - "Certain medications (corticosteroids)"
     symptoms:
-      - 'TODO symptom #1'
+      - "BMI above the 95th percentile for age and sex"
+      - "Excess body fat, particularly around the abdomen"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Type 2 diabetes"
+      - "High blood pressure and cardiovascular risk"
+      - "Sleep apnoea"
+      - "Joint problems"
+      - "Depression and low self-esteem"
+      - "Obesity in adulthood"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
+      - "https://medlineplus.gov/obesityinchildren.html"
 faq:
-  - q: What is childhood obesity prevention?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What causes childhood obesity?"
+    a: "Childhood obesity is caused by a combination of genetics, diet, physical activity levels, and the environment. The modern food environment — with cheap, widely available ultra-processed foods and sugary drinks — plays a major role, alongside reduced physical activity and increased screen time. Parental obesity is a significant risk factor due to both genetic and shared lifestyle influences."
+  - q: "When should I speak to a doctor about my child's weight?"
+    a: "Speak to your GP or paediatrician if you are concerned about your child's weight, particularly if they are gaining weight rapidly, have symptoms such as fatigue, snoring, or joint pain, or if their weight is affecting their wellbeing or self-esteem. Healthcare professionals can calculate BMI-for-age, assess contributing factors, and refer to dietitian or specialist support where needed."
 ---
 ## Intro
 In 2025, childhood obesity overtook underweight worldwide for the first time. This marked a global tipping point in nutrition: the challenge is no longer just too little food, but too much of the wrong food. Preventing obesity in children is now one of the most urgent public health priorities.

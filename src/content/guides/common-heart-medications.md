@@ -6,7 +6,7 @@ description: >-
   and their common side effects.
 category: Heart & Circulation
 publishDate: '2025-08-20'
-updatedDate: '2025-08-21'
+updatedDate: '2026-05-14'
 tags:
   - cardiology
   - medications
@@ -16,27 +16,24 @@ related:
   - /guides/coronary-angiography
   - /guides/cardiac-rehabilitation
   - /guides/atrial-fibrillation
-draft: true
+draft: false
 schema:
   medicalCondition:
-    name: Common Heart Medications and Their Side Effects
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
-    riskFactors:
-      - 'TODO risk factor #1'
-    symptoms:
-      - 'TODO symptom #1'
-    possibleComplication:
-      - 'TODO complication #1'
+    name: "Common Heart Medications"
+    description: "An overview of the main classes of medications used to treat heart conditions — including beta blockers, ACE inhibitors, statins, anticoagulants, and diuretics — what they do, and their common side effects."
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.heart.org/en/health-topics/consumer-healthcare/medication-information"
+      - "https://medlineplus.gov/heartdiseases.html"
 faq:
-  - q: What is common heart medications and their side effects?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What are the main types of heart medications?"
+    a: "The main classes are: antiplatelets (aspirin, clopidogrel) to prevent clots; beta blockers to slow heart rate and reduce blood pressure; ACE inhibitors and ARBs to relax blood vessels; statins to lower cholesterol; calcium channel blockers for blood pressure and angina; diuretics to remove excess fluid; and anticoagulants (blood thinners) to prevent stroke in conditions like AFib."
+  - q: "What side effects should I watch for with heart medications?"
+    a: "Common side effects include fatigue or cold hands (beta blockers), a persistent dry cough (ACE inhibitors), muscle aches (statins), increased urination and low potassium (diuretics), and easy bruising or bleeding (anticoagulants and antiplatelets). Report any severe or unexpected symptoms to your doctor promptly."
+  - q: "Can I stop taking my heart medication if I feel better?"
+    a: "No — do not stop heart medications suddenly without medical advice. Many heart medicines protect against future events (like heart attack or stroke) even when you feel well. Stopping abruptly can cause rebound effects or increase your risk. Always discuss any concerns with your doctor first."
+  - q: "When should I seek emergency care?"
+    a: "Call emergency services immediately for: sudden severe chest pain, severe breathlessness at rest, palpitations with dizziness or fainting, sudden weakness or speech difficulty (possible stroke), or unexplained collapse. Also seek urgent care for signs of serious bleeding such as coughing up blood, blood in urine, or unusually heavy bruising while on blood thinners."
 ---
 # Common Heart Medications and Their Side Effects
 

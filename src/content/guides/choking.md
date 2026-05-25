@@ -16,24 +16,37 @@ tags:
 draft: false
 schema:
   medicalCondition:
-    name: Choking — First Aid Guide
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    name: "Choking"
+    description: "Choking is a life-threatening emergency in which an object — most commonly food — partially or completely blocks the airway, preventing normal breathing. Immediate first aid with back blows and abdominal thrusts (Heimlich manoeuvre) can dislodge the object and restore the airway. Technique differs for adults, children, and infants."
+    alternateName:
+      - "Foreign body airway obstruction"
+      - "FBAO"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "Young children (especially under 3 years)"
+      - "Older adults with swallowing difficulties"
+      - "Neurological conditions affecting swallowing (stroke, Parkinson's)"
+      - "Eating quickly, talking while eating, or laughing while chewing"
+      - "Alcohol intoxication"
+      - "Small objects accessible to young children"
     symptoms:
-      - 'TODO symptom #1'
+      - "Sudden inability to speak, cry, or breathe"
+      - "High-pitched noise or no noise when trying to breathe"
+      - "Clutching the throat (universal choking sign)"
+      - "Cyanosis (blue lips or fingertips)"
+      - "Loss of consciousness in severe cases"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Hypoxic brain injury"
+      - "Cardiac arrest"
+      - "Death if airway not cleared promptly"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.nhs.uk/conditions/choking/"
+      - "https://medlineplus.gov/choking.html"
 faq:
-  - q: What is choking — first aid guide?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What should I do if someone is choking?"
+    a: "If the person can cough, breathe, or speak — encourage them to cough forcefully and monitor closely. If they cannot cough, speak, or breathe, act immediately: give up to 5 firm back blows between the shoulder blades, then up to 5 abdominal thrusts (Heimlich manoeuvre). Alternate until the obstruction is cleared. Call emergency services if the obstruction is not quickly relieved or the person loses consciousness."
+  - q: "When should I call emergency services for choking?"
+    a: "Call emergency services immediately if: the person cannot breathe, speak, or make sound; back blows and abdominal thrusts are not clearing the obstruction; the person loses consciousness; or you are dealing with a pregnant person or infant where technique differs. Stay on the line for guidance. If the person becomes unconscious, begin CPR."
 ---
 ## Intro
 Choking occurs when the airway is blocked by food or an object. Without quick action, choking can lead to unconsciousness and death within minutes. Knowing simple first aid steps can save a life.

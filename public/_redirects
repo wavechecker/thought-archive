@@ -5,6 +5,18 @@
 # Canonicalizations & slugs
 # ──────────────────────────────────────────────────────────────────────────────
 
+# Infectious disease hub deduplication — canonical is /guides/infectious-diseases
+/guides/infectious-disease-hub        /guides/infectious-diseases      301!
+/guides/infectious-disease-hub/       /guides/infectious-diseases      301!
+
+# TIA deduplication — thin stub redirects to canonical TIA guide
+/guides/transient-ischemic-attack-tia   /guides/tia-warning-signs      301!
+/guides/transient-ischemic-attack-tia/  /guides/tia-warning-signs      301!
+
+# stroke.mdx uses slug "stroke-symptoms-fast-response"; /guides/stroke has no page
+/guides/stroke                          /guides/stroke-symptoms-fast-response  301!
+/guides/stroke/                         /guides/stroke-symptoms-fast-response  301!
+
 # Old "heart" section → canonical "heart-circulation"
 /guides/heart                          /guides/heart-circulation        301!
 /guides/heart/                         /guides/heart-circulation        301!
@@ -33,6 +45,20 @@
 /guides/cpod                           /guides/copd                     301!
 /guides/cpod/                          /guides/copd                     301!
 /guides/cpod/*                         /guides/copd/:splat              301!
+
+# Draft guides — redirected to nearest published equivalent so indexed URLs resolve
+/guides/bowel-cancer-treatment          /guides/bowel-cancer              301!
+/guides/bowel-cancer-treatment/         /guides/bowel-cancer              301!
+/guides/heart-health-hub                /guides/heart-circulation         301!
+/guides/heart-health-hub/               /guides/heart-circulation         301!
+/guides/bgl-and-ketone-targets          /guides/blood-glucose-testing     301!
+/guides/bgl-and-ketone-targets/         /guides/blood-glucose-testing     301!
+/guides/bgl-ketone-quick-reference      /guides/blood-glucose-testing     301!
+/guides/bgl-ketone-quick-reference/     /guides/blood-glucose-testing     301!
+/guides/lifespan-vs-healthspan          /guides/healthspan-vs-lifespan    301!
+/guides/lifespan-vs-healthspan/         /guides/healthspan-vs-lifespan    301!
+/guides/mental-health-crisis            /guides/mental-health             301!
+/guides/mental-health-crisis/           /guides/mental-health             301!
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Gone for good

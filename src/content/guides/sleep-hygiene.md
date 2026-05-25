@@ -151,5 +151,7 @@ A: Most people notice improvements within 2–3 weeks of consistent habits.
 - [American Academy of Sleep Medicine – Patient Resources](https://aasm.org/resources/)  
 
 ## Related Guides
-- [Cognitive Behavioral Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)  
-- [When to Seek Help for Insomnia](/guides/when-to-seek-help-for-insomnia)  
+- [Sleep Health: Why It Matters and How to Improve It](/guides/sleep)
+- [Cognitive Behavioral Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
+- [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea)
+- [When to Seek Help for Insomnia](/guides/when-to-seek-help-for-insomnia)

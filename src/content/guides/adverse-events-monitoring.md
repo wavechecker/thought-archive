@@ -14,24 +14,17 @@ draft: false
 updatedDate: '2025-08-26'
 schema:
   medicalCondition:
-    name: Adverse Events Monitoring in Vaccines
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
-    riskFactors:
-      - 'TODO risk factor #1'
-    symptoms:
-      - 'TODO symptom #1'
-    possibleComplication:
-      - 'TODO complication #1'
+    name: "Adverse Events Monitoring in Vaccines"
+    description: "Post-marketing surveillance systems that monitor vaccine safety after a vaccine has been licensed and deployed, detecting rare adverse events that were too infrequent to appear in pre-approval clinical trials. Key systems include VAERS (US), EudraVigilance (EU), and AusVaxSafety (Australia)."
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://vaers.hhs.gov/"
+      - "https://www.who.int/teams/regulation-prequalification/regulation-and-safety/pharmacovigilance"
 faq:
-  - q: What is adverse events monitoring in vaccines?
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "What is vaccine adverse events monitoring?"
+    a: "Adverse events monitoring is the ongoing process of tracking side effects and unexpected outcomes that occur after vaccination in real-world populations. Because clinical trials include tens of thousands of people (not millions), very rare adverse events can only be reliably detected through post-marketing surveillance systems that monitor outcomes in millions of vaccinated individuals over time."
+  - q: "When should I seek medical care after a vaccine?"
+    a: "Seek same-day medical care for: high fever not controlled by paracetamol, severe or unusual pain at the injection site, signs of allergic reaction such as rash, swelling, or difficulty breathing, or unusual neurological symptoms such as severe headache or confusion. Seek emergency care immediately for: difficulty breathing, throat swelling, collapse, or any rapid-onset severe reaction within minutes of vaccination — these may indicate anaphylaxis."
 ---
 # Adverse Events Monitoring in Vaccines
 

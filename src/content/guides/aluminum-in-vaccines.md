@@ -14,24 +14,20 @@ draft: false
 updatedDate: '2025-08-26'
 schema:
   medicalCondition:
-    name: 'Aluminum in Vaccines: Safety Evidence and Controversy'
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
-    riskFactors:
-      - 'TODO risk factor #1'
-    symptoms:
-      - 'TODO symptom #1'
-    possibleComplication:
-      - 'TODO complication #1'
+    name: "Aluminum Adjuvants in Vaccines"
+    description: "Aluminum salts (such as aluminum hydroxide and aluminum phosphate) are adjuvants — ingredients added to some vaccines to enhance immune response. They have been used safely in vaccines for approximately 100 years. Large population studies find no increased risk of autism, autoimmune conditions, or neurodevelopmental disorders from aluminum adjuvants at vaccine doses."
+    alternateName:
+      - "Aluminium adjuvants"
+      - "Alum adjuvants"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.who.int/news-room/questions-and-answers/item/vaccines-and-adjuvants"
+      - "https://www.cdc.gov/vaccines/hcp/conversations/downloads/vacsafe-understand-color-office.pdf"
 faq:
-  - q: 'What is aluminum in vaccines: safety evidence and controversy?'
-    a: 'TODO: Plain-language answer (1–2 sentences).'
-  - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+  - q: "Are aluminum adjuvants in vaccines safe?"
+    a: "Yes. Aluminum adjuvants have been used in vaccines for nearly 100 years and have been studied extensively. Large population studies — including cohorts of over a million children — find no increased risk of autism, autoimmune disease, or neurodevelopmental disorders from vaccine doses of aluminum. The amount of aluminum in vaccines is small relative to everyday dietary and environmental exposure."
+  - q: "Why is aluminum added to vaccines?"
+    a: "Aluminum acts as an adjuvant — it stimulates the immune system to mount a stronger, longer-lasting response to the vaccine antigen. This means vaccines can work effectively with lower doses of antigen, improving both efficacy and manufacturability."
 ---
 # Aluminum in Vaccines: Safety Evidence and Controversy
 

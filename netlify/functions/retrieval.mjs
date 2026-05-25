@@ -42,28 +42,65 @@ export const URGENT_PATTERNS = [
   /\b(unconscious|unresponsive|collapsed|won'?t wake)\b/i,
   /\b(throat (closing|swelling|tightening)|severe allergic reaction|anaphylactic (shock|reaction))\b/i,
   /\bi'?m (having|going into) anaphylaxis\b/i,
-  /\b(seizure|convuls|fitting|fit and)\b/i,
+  /\b(seizure|convuls(?:e|ed|ion|ions|ing|ive)|fitting|fit and)\b/i,
   /\bsevere (bleeding|hemorrhage|haemorrhage)\b/i,
   /\boverdose\b/i,
   /\b(2[1-9][0-9]|[3-9][0-9]{2})\/\d{2,3}\b/,
   // FAST stroke symptoms described in first person, without the word "stroke"
   /\bface\s+(is\s+|looks?\s+|feels?\s+)?droop(ing|ed|s)?\b/i,
   /\bcan'?t\s+(speak|talk)\s+(properly|suddenly|clearly|at all|anymore|straight)\b/i,
+  // Diabetic ketoacidosis (DKA) — high-acuity diabetes emergency
+  // Matches first-person/current-tense presentations but not educational "what is DKA" queries
+  // (those are caught by INFORMATIONAL_SYMPTOM_PATTERNS first).
+  /\bi('?m| am) (going into|having|in) (dka|diabetic ketoacidosis|ketoacidosis)\b/i,
+  /\b(vomiting|throwing up).{0,40}(high ketones?|ketones? (are |is )?(high|elevated|over|above))\b/i,
+  /\b(high ketones?|ketones? (are |is )?(high|elevated)).{0,40}(vomiting|throwing up|can'?t keep down)\b/i,
+  /\bketones? (are |is )?(very high|dangerously high|over [3-9]|over \d{2})\b/i,
+  // Severe hypoglycemia — unconscious or unable to treat self
+  /\b(not responding|won'?t wake|unconscious).{0,30}(diabetic|low blood sugar|hypoglycemi)\b/i,
+  /\b(hypoglycemi|low blood sugar).{0,30}(not responding|won'?t wake|unconscious|need glucagon)\b/i,
+  /\bneed (the )?glucagon\b/i,
+  // Meningitis — non-blanching rash described in first person (not educational queries)
+  /\brash.{0,30}(won'?t|doesn'?t|not) (fade|disappear|go away).{0,30}(press|glass|tumbler)\b/i,
+  /\b(glass test|tumbler test).{0,20}rash\b/i,
+  /\bmeningitis rash\b/i,
+  // Possible ectopic pregnancy rupture
+  /\b(severe|sudden) (abdominal|pelvic|stomach|belly) pain.{0,40}(pregnant|pregnancy|period late|missed period)\b/i,
+  /\b(pregnant|pregnancy).{0,40}(severe|sudden) (pain|bleeding)\b/i,
 ];
 
-// Informational framing: "what are the signs/symptoms of X", "signs of X", etc.
+// Informational framing: "what are the signs/symptoms of X", "signs of X",
+// "how is X treated", "what medications for X" etc.
 // These are educational queries that mention serious conditions but do NOT describe
 // a current emergency. Checked before URGENT_PATTERNS in classifyQuery so that
-// "what are the signs of stroke?" is not treated as an emergency call.
+// "what are the signs of stroke?" or "how is a heart attack treated?" are not
+// routed to emergency mode.
 const INFORMATIONAL_SYMPTOM_PATTERNS = [
   // Allow one optional adjective between "the" and "signs/symptoms/causes" (e.g. "early", "warning", "first").
   /^\s*what\s+(are|is)\s+(the\s+)?(\w+\s+)?(signs?|symptoms?|causes?|risk\s+factors?)\s+(of|for)\b/i,
+  // "What is epilepsy/a seizure?" — definitional queries about these conditions must not route
+  // to urgent mode even though URGENT_PATTERNS matches "seizure". This pattern fires first.
+  /^\s*what\s+(is|are)\s+(a\s+|an\s+|the\s+)?(?:seizure|convulsion|epilepsy|epileptic\s+fit)s?\b/i,
+  // First-aid preparedness queries — "what should I/you do during/after a seizure"
+  // "during/after" implies preparedness framing. "if someone" is intentionally excluded —
+  // condition-specific queries like "what should I do if someone has stroke symptoms" should
+  // still route via URGENT_PATTERNS when the condition is high-acuity.
+  /^\s*what\s+should\s+(?:i|you|we|one)\s+do\s+(?:during|after)\b/i,
   /^\s*(warning\s+)?(signs?|symptoms?)\s+(of|for)\s+\w/i,
+  // Treatment queries: "how is a heart attack treated", "how are strokes managed"
+  // Requires "treated/managed/diagnosed/prevented" anywhere within ~80 chars of the start.
+  // Anchored to avoid matching "I had a heart attack, how is that treated now?" (longer preamble).
+  /^\s*how\s+(?:is|are)\s+\S.{0,70}\s+(?:treated|managed|diagnosed|prevented)\b/i,
+  // "How do you / how do doctors treat X"
+  /^\s*how\s+do\s+(?:you|doctors?|hospitals?|they)\s+(?:treat|manage|diagnose|prevent)\b/i,
+  // Medication queries about conditions: "what medications are used for X", "what medications after X"
+  // Must be followed immediately by "are", "do", or "is" — blocks "what medications should I take for my pain"
+  /^\s*what\s+medications?\s+(?:are|do\s+you|is)\b/i,
 ];
 
 // High-acuity conditions that warrant a safety note even when the query is informational.
 // Also used to gate injection of the canonical emergency-care guide link.
-const EMERGENCY_CONDITION_PATTERN = /\b(stroke|heart attack|cardiac arrest|myocardial infarction|anaphylaxis|sepsis|septic shock|meningitis|chest pain|chest tightness|shortness of breath|difficulty breathing)\b/i;
+const EMERGENCY_CONDITION_PATTERN = /\b(stroke|heart attack|cardiac arrest|myocardial infarction|anaphylaxis|sepsis|septic shock|meningitis|chest pain|chest tightness|shortness of breath|difficulty breathing|diabetic ketoacidosis|dka|severe hypoglycemia|hypoglycaemia|ectopic pregnancy)\b/i;
 
 // Returns true when the query is informational in framing (asking *about* a serious
 // condition rather than describing a current emergency), AND mentions an emergency-level
@@ -111,11 +148,53 @@ const NORMALIZATIONS = new Map([
 ]);
 
 // Expands common medical shorthand before tokenisation so short acronyms
-// (e.g. "ER", "A&E") produce meaningful query terms instead of being filtered.
+// (e.g. "ER", "A&E", "AFib", "HTN") produce meaningful query terms instead of being filtered.
+// Order matters: longer / more-specific patterns are listed first.
 function preprocessQuery(text) {
   return text
+    // Emergency services shorthand
     .replace(/\bE\.?R\.?\b/gi, "emergency")
-    .replace(/\bA&E\b/gi, "emergency");
+    .replace(/\bA&E\b/gi, "emergency")
+    // Cardiac — procedures and abbreviations
+    .replace(/\ba[\s-]?fib\b/gi, "atrial fibrillation")
+    .replace(/\bafib\b/gi, "atrial fibrillation")
+    .replace(/\bmi\b(?=\s|$)/gi, "myocardial infarction heart attack")  // guard: "mi" only at word boundary; overbroad alone so paired with heart attack
+    .replace(/\bcva\b/gi, "stroke cerebrovascular accident")
+    .replace(/\bcabg\b/gi, "coronary artery bypass grafting surgery")
+    .replace(/\bpci\b/gi, "percutaneous coronary intervention angioplasty stent")
+    // Blood pressure / hypertension
+    .replace(/\bhtn\b/gi, "hypertension high blood pressure")
+    .replace(/\b(?<![a-z])bp(?![a-z])\b/gi, "blood pressure")
+    // Diabetes — monitoring
+    .replace(/\bt1d\b/gi, "type 1 diabetes")
+    .replace(/\bt2d\b/gi, "type 2 diabetes")
+    .replace(/\bt1dm\b/gi, "type 1 diabetes")
+    .replace(/\bt2dm\b/gi, "type 2 diabetes")
+    .replace(/\bdka\b/gi, "DKA diabetic ketoacidosis")  // preserve acronym so guide titles with "DKA" still score
+    .replace(/\bcgm\b/gi, "continuous glucose monitor")
+    .replace(/\bbgm\b/gi, "blood glucose monitoring")
+    // Sleep
+    .replace(/\bosa\b/gi, "obstructive sleep apnoea")
+    // Women's Health — hormone therapy
+    .replace(/\bhrt\b/gi, "hormone replacement therapy hormone therapy")
+    .replace(/\bmht\b/gi, "menopausal hormone therapy hormone therapy menopause")
+    // Women's Health — PCOS (preserve acronym so PCOS guide title still scores)
+    .replace(/\bpcos\b/gi, "PCOS polycystic ovary syndrome")
+    // Neurology — MS (safe on a medical platform; context is unambiguous)
+    .replace(/\bMS\b/gi, "MS multiple sclerosis")
+    // Breast screening — expand common search term to guide terminology
+    .replace(/\bmammograms?\b/gi, "mammogram mammography breast screening")
+    // US English hot flashes → Australian hot flushes (used throughout menopause content)
+    .replace(/\bhot flashes?\b/gi, "hot flushes vasomotor")
+    // Men's Health — prostate / urinary
+    .replace(/\bBPH\b/gi, "BPH benign prostatic hyperplasia enlarged prostate urinary")
+    .replace(/\bLUTS\b/gi, "LUTS lower urinary tract symptoms urinary prostate")
+    // Neurology — Parkinson's (only expand unambiguous full-word "PD" in neurological context)
+    .replace(/\bPD\b(?=\s+(?:tremor|symptoms?|diagnosis|treatment|exercise|progression|medication|motor|non.motor))/gi, "PD Parkinson's disease")
+    // Neurology — tremor synonym expansion (links "shaking" queries to Parkinson's / tremor content)
+    .replace(/\b(uncontrolled\s+)?shaking\b/gi, "shaking tremor")
+    // Neurology — epilepsy / seizure terminology
+    .replace(/\bepilept(?:ic\s+fit|ic\s+seizure)\b/gi, "epileptic seizure epilepsy");
 }
 
 export function tokenize(text) {

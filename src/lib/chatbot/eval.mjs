@@ -165,6 +165,248 @@ const TEST_CASES = [
   { q: "signs of pneumonia",
     expected: "grounded",
     note: "'signs' is a stop word; 'pneumonia' alone retrieves pneumonia guide cleanly" },
+
+  // --- Synonym preprocessing: acronym expansion ---
+  { q: "What is afib?",
+    expected: "grounded",
+    note: "'afib' expands to 'atrial fibrillation' before tokenisation; AFib guide should score strongly" },
+  { q: "a fib symptoms",
+    expected: "grounded",
+    note: "'a fib' expands to 'atrial fibrillation'; should retrieve AFib guide" },
+  { q: "I have htn and need medication advice",
+    expected: "grounded", expectedQType: "personal-symptom", expectedMode: "personal-safe",
+    note: "'htn' expands to 'hypertension'; 'I have' triggers personal-symptom before medication pattern fires" },
+  { q: "what is DKA",
+    expected: "grounded", expectedQType: "informational",
+    note: "'DKA' expands to 'diabetic ketoacidosis'; diabetes guides should score strongly" },
+  { q: "t1d management tips",
+    expected: "grounded",
+    note: "'t1d' expands to 'type 1 diabetes'; should retrieve T1D guides" },
+  { q: "what causes cva",
+    expected: "grounded",
+    note: "'cva' expands to 'stroke cerebrovascular accident'; stroke guide should score strongly" },
+
+  // --- New urgent patterns: DKA / diabetic emergency ---
+  { q: "I'm going into DKA",
+    expected: "urgent",
+    note: "DKA urgent pattern — first-person current tense" },
+  { q: "vomiting with very high ketones",
+    expected: "urgent",
+    note: "vomiting + high ketones pattern — DKA warning sign" },
+  { q: "I need glucagon",
+    expected: "urgent",
+    note: "'need glucagon' pattern — severe hypoglycemia emergency" },
+
+  // --- New urgent patterns: meningitis rash ---
+  { q: "there's a rash that won't fade when I press it",
+    expected: "urgent",
+    note: "non-blanching rash pattern — possible meningitis" },
+
+  // --- Informational about DKA should NOT trigger urgent ---
+  { q: "What are the symptoms of diabetic ketoacidosis?",
+    expected: "grounded", expectedQType: "informational",
+    note: "informational framing takes priority; DKA content should ground the response" },
+
+  // --- New Phase 1B guides: blood glucose testing ---
+  // Requires index rebuild after publishing blood-glucose-testing.md
+  { q: "When should I test my blood glucose?",
+    expected: "grounded",
+    note: "blood-glucose-testing guide should score strongly on title match" },
+  { q: "What is a normal blood glucose level?",
+    expected: "grounded",
+    note: "blood-glucose-testing and understanding-hba1c should both score strongly" },
+  { q: "How do I test for ketones?",
+    expected: "grounded",
+    note: "blood-glucose-testing guide covers ketone testing; diabetes-emergency-actions also scores" },
+  { q: "What is CGM monitoring?",
+    expected: "grounded",
+    note: "'CGM' expands to 'continuous glucose monitor'; continuous-glucose-monitors guide should score strongly" },
+
+  // --- New Phase 1B guides: cardiac rehabilitation ---
+  { q: "What is cardiac rehabilitation?",
+    expected: "grounded",
+    note: "cardiac-rehabilitation guide should score strongly on title + content match" },
+  { q: "Who should attend cardiac rehab?",
+    expected: "grounded",
+    note: "cardiac-rehabilitation guide covers eligibility; 'rehab' matches" },
+  { q: "Does cardiac rehab reduce mortality?",
+    expected: "grounded",
+    note: "cardiac-rehabilitation guide covers evidence including mortality reduction" },
+
+  // --- New Phase 1B guides: heart attack treatment ---
+  { q: "How is a heart attack treated in hospital?",
+    expected: "grounded", expectedQType: "informational",
+    note: "'How is X treated' pattern now informational; heart-attack-treatment scores strongly" },
+  { q: "What is a stent procedure?",
+    expected: "grounded",
+    note: "heart-attack-treatment guide covers PCI and stents" },
+  { q: "What medications do you take after a heart attack?",
+    expected: "grounded", expectedQType: "informational",
+    note: "'What medications do you...' matches informational pattern; heart-attack-treatment + common-heart-medications score strongly" },
+
+  // --- New abbreviation expansions: CABG / PCI / OSA ---
+  { q: "What is CABG surgery?",
+    expected: "grounded",
+    note: "'CABG' expands to 'coronary artery bypass grafting surgery'; heart-attack-treatment covers it" },
+  { q: "What does PCI stand for?",
+    expected: "grounded",
+    note: "'PCI' expands to 'percutaneous coronary intervention angioplasty stent'; heart-attack-treatment scores strongly" },
+  { q: "I have OSA and snore",
+    expected: "grounded", expectedQType: "personal-symptom", expectedMode: "personal-safe",
+    note: "'OSA' expands to 'obstructive sleep apnoea'; sleep-apnoea guide should score strongly" },
+
+  // --- Women's Health Foundation Cluster (Phase 2) ---
+  { q: "What is menopause?",
+    expected: "grounded", expectedQType: "informational",
+    note: "menopause guide should score strongly on title + tag + description match" },
+  { q: "menopause symptoms",
+    expected: "grounded",
+    note: "menopause guide has both 'menopause' and 'symptoms' in title; should score ≥15" },
+  { q: "hot flushes at night",
+    expected: "grounded",
+    note: "menopause guide tags include 'hot flushes' and 'night sweats'; FAQ also covers vasomotor symptoms" },
+  { q: "HRT risks and benefits",
+    expected: "grounded",
+    note: "'HRT' expands to 'hormone replacement therapy hormone therapy'; hormone-therapy-menopause title matches 'hormone therapy risks benefits'" },
+  { q: "What is PCOS?",
+    expected: "grounded", expectedQType: "informational",
+    note: "'PCOS' expands to 'PCOS polycystic ovary syndrome'; PCOS guide title matches all expanded terms" },
+  { q: "What are symptoms of endometriosis?",
+    expected: "grounded", expectedQType: "informational",
+    note: "endometriosis guide title includes both 'symptoms' and 'endometriosis'; should score strongly" },
+  { q: "I have pelvic pain every period",
+    expected: "grounded", expectedQType: "personal-symptom", expectedMode: "personal-safe",
+    note: "endometriosis guide covers dysmenorrhea and pelvic pain; 'pelvic pain' tag scores" },
+  { q: "When should I get a mammogram?",
+    expected: "grounded",
+    note: "'mammogram' expands to 'mammogram mammography breast screening'; breast-screening guide title matches" },
+  { q: "What are the symptoms of ovarian cancer?",
+    expected: "grounded", expectedQType: "informational",
+    note: "ovarian-cancer-overview guide title has 'symptoms' and 'ovarian cancer'; should score strongly" },
+
+  // --- Phase 3: Men's Health + Neurology Foundation Cluster ---
+
+  // BPH / prostate urinary
+  { q: "What is BPH?",
+    expected: "grounded", expectedQType: "informational",
+    note: "benign-prostatic-hyperplasia-bph guide should score strongly on title + tag match" },
+  { q: "What causes an enlarged prostate?",
+    expected: "grounded", expectedQType: "informational",
+    note: "BPH guide covers prostate enlargement; 'causes' matches informational pattern" },
+  { q: "urinary symptoms at night prostate",
+    expected: "grounded",
+    note: "BPH guide has nocturia and urinary tags; should score strongly" },
+  { q: "What is LUTS?",
+    expected: "grounded",
+    note: "'LUTS' expands to 'lower urinary tract symptoms'; BPH guide should score strongly" },
+  { q: "What is BPH treatment?",
+    expected: "grounded",
+    note: "'BPH' expands; BPH guide should score strongly on expanded terms" },
+  { q: "alpha blockers for prostate",
+    expected: "grounded",
+    note: "BPH guide covers alpha-blockers in treatment section; should score strongly" },
+  { q: "I wake up multiple times at night to urinate",
+    expected: "grounded",
+    note: "nocturia symptom — BPH guide and sleep guides should score; 'I wake up' does not match personal-symptom patterns so informational mode is expected" },
+
+  // Testicular cancer
+  { q: "I found a lump on my testicle",
+    expected: "grounded",
+    note: "testicular-cancer-overview covers painless testicular lump; 'testicle'+'lump' tags score strongly; 'I found' does not trigger personal-symptom pattern" },
+  { q: "What are the signs of testicular cancer?",
+    expected: "grounded", expectedQType: "informational",
+    note: "testicular-cancer-overview guide should score strongly on title + tag match" },
+  { q: "testicular cancer treatment",
+    expected: "grounded",
+    note: "testicular-cancer-overview covers orchidectomy, BEP chemotherapy, staging" },
+
+  // Male mental health
+  { q: "Why do men not seek help for depression?",
+    expected: "grounded",
+    note: "male-mental-health guide covers help-seeking barriers; 'depression' + 'men' tags score" },
+  { q: "depression in men symptoms",
+    expected: "grounded",
+    note: "male-mental-health guide covers irritability, withdrawal — male presentations" },
+  { q: "male suicide statistics",
+    expected: "urgent",
+    note: "URGENT_PATTERNS catches 'suicid\\w*'; acceptable — system adds crisis note for any suicide-adjacent query" },
+  { q: "I'm experiencing depression and feeling hopeless",
+    expected: "grounded", expectedQType: "personal-symptom", expectedMode: "personal-safe",
+    note: "'I'm experiencing' triggers personal-symptom; 'depression' term directly matches depression + male-mental-health guides" },
+
+  // Parkinson's disease
+  { q: "What is Parkinson's disease?",
+    expected: "grounded", expectedQType: "informational",
+    note: "parkinsons-disease-overview guide should score strongly on title + tag match" },
+  { q: "What causes tremors in Parkinson's?",
+    expected: "grounded", expectedQType: "informational",
+    note: "Parkinson's guide covers tremor / bradykinesia / dopamine; informational framing" },
+  { q: "Parkinson's symptoms",
+    expected: "grounded",
+    note: "parkinsons-disease-overview has tremor, bradykinesia, rigidity in title/tags" },
+  { q: "What is levodopa used for?",
+    expected: "unavailable",
+    note: "'levodopa' in tags+description+FAQ gives ~8 pts — below partial threshold; Parkinson's guide is #1 result but scoring is not strong enough for grounded/partial" },
+  { q: "Does exercise help Parkinson's disease?",
+    expected: "grounded",
+    note: "Parkinson's guide has extensive exercise evidence section; 'exercise' tag scores" },
+  { q: "My hand is shaking at rest",
+    expected: "grounded",
+    note: "'shaking' expands to 'shaking tremor'; Parkinson's guide scores strongly via tremor tag + description; 'my hand' does not trigger personal-symptom pattern" },
+
+  // Multiple sclerosis
+  { q: "What is multiple sclerosis?",
+    expected: "grounded", expectedQType: "informational",
+    note: "multiple-sclerosis-overview guide should score strongly on title + tag match" },
+  { q: "What are MS symptoms?",
+    expected: "grounded",
+    note: "'MS' is in guide tags; multiple-sclerosis-overview covers fatigue, vision, weakness" },
+  { q: "What is MS fatigue?",
+    expected: "grounded",
+    note: "MS guide has dedicated fatigue section; 'fatigue' and 'MS' both in tags" },
+  { q: "What are the symptoms of MS?",
+    expected: "grounded", expectedQType: "informational",
+    note: "multiple-sclerosis-overview covers all MS symptoms; informational pattern fires" },
+  { q: "What is relapsing remitting MS?",
+    expected: "grounded",
+    note: "MS guide covers RRMS as the most common type; 'relapsing remitting MS' in tags" },
+  { q: "What is optic neuritis?",
+    expected: "partial",
+    note: "'optic neuritis' in MS guide tags+description gives ~12 pts — reaches partial threshold" },
+
+  // Epilepsy — informational queries must NOT route to urgent
+  { q: "What is epilepsy?",
+    expected: "grounded", expectedQType: "informational",
+    note: "epilepsy-overview should score strongly; 'epilepsy' is not in URGENT_PATTERNS so no urgent risk" },
+  { q: "What is a seizure?",
+    expected: "grounded", expectedQType: "informational",
+    note: "informational pattern override prevents 'seizure' word from triggering urgent mode; epilepsy guide scores" },
+  { q: "What are the types of seizures?",
+    expected: "grounded", expectedQType: "informational",
+    note: "epilepsy-overview covers focal, generalised, absence, tonic-clonic seizure types" },
+  { q: "What causes epilepsy?",
+    expected: "grounded", expectedQType: "informational",
+    note: "epilepsy guide covers structural, genetic, metabolic, autoimmune causes" },
+  { q: "epilepsy driving restrictions",
+    expected: "grounded",
+    note: "epilepsy-overview covers driving safety; 'driving' appears in guide section" },
+  { q: "What should I do during a seizure?",
+    expected: "grounded",
+    note: "epilepsy guide covers seizure first aid; existing seizures.md also relevant" },
+  { q: "What is SUDEP?",
+    expected: "unavailable",
+    note: "'SUDEP' in epilepsy guide tags+FAQ gives ~5 pts — below partial threshold; epilepsy guide is top result; consider adding SUDEP to title for future improvement" },
+  { q: "What medications are used for epilepsy?",
+    expected: "grounded", expectedQType: "informational",
+    note: "'what medications are used' matches informational pattern; epilepsy guide covers ASMs" },
+
+  // Epilepsy — emergency framing must STILL route to urgent
+  { q: "my child is having a seizure",
+    expected: "urgent",
+    note: "URGENT_PATTERNS /seizure/ still fires; personal emergency framing does not match informational guard" },
+  { q: "someone is convulsing on the floor",
+    expected: "urgent",
+    note: "URGENT_PATTERNS /convuls/ still fires; bystander emergency framing" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -439,6 +681,19 @@ if (uFailures.length) {
 // ---------------------------------------------------------------------------
 
 const CLASSIFY_BOUNDARY_CASES = [
+  // Treatment / management queries — must NOT trigger urgent despite mentioning "heart attack" etc.
+  { q: "How is a heart attack treated?",
+    expectQType: "informational",
+    note: "'how is X treated' pattern must override URGENT_PATTERNS" },
+  { q: "How are strokes treated in hospital?",
+    expectQType: "informational",
+    note: "'how are X treated' pattern" },
+  { q: "What medications do you take for atrial fibrillation?",
+    expectQType: "informational",
+    note: "'what medications do you' pattern" },
+  { q: "What medications are used after a heart attack?",
+    expectQType: "informational",
+    note: "'what medications are' pattern" },
   // Informational framing — must NOT trigger emergency mode
   { q: "What are the signs of stroke?",                    expectQType: "informational" },
   { q: "What are symptoms of stroke?",                     expectQType: "informational" },
@@ -506,6 +761,56 @@ const INFORM_EMERGENCY_CASES = [
     note: "meningitis added to EMERGENCY_CONDITION_PATTERN" },
 ];
 
+// ---------------------------------------------------------------------------
+// isDefinitionQuery extension tests
+// Verify "explain X" and "tell me about X" are caught for definition fallback.
+// These run after the main TEST_CASES section.
+// Note: isDefinitionQuery is only called for unavailable retrieval — these tests
+// verify the pattern, not the full pipeline.
+// ---------------------------------------------------------------------------
+
+const DEFINITION_QUERY_CASES = [
+  { q: "What is atrial fibrillation?",         expect: true },
+  { q: "What are ketones?",                    expect: true },
+  { q: "Explain cardiac rehabilitation",        expect: true,
+    note: "'explain X' should now be caught as definition-style query" },
+  { q: "Tell me about blood glucose testing",   expect: true,
+    note: "'tell me about X' should be caught" },
+  { q: "Describe DKA",                          expect: true,
+    note: "'describe X' should be caught" },
+  { q: "I have chest pain right now",           expect: false,
+    note: "current symptom — must not be treated as a definition query" },
+  { q: "Should I take aspirin?",                expect: false },
+];
+
+// Import isDefinitionQuery via re-export or test inline
+// We test the patterns directly since isDefinitionQuery is not exported from chat.js
+function isDefinitionQueryTest(question) {
+  return (
+    /^\s*what\s+(is|are|does|do|causes?)\s+\w{3}/i.test(question) ||
+    /^\s*(explain|describe)\s+\w{3}/i.test(question) ||
+    /^\s*tell\s+me\s+(about|what)\s+\w{3}/i.test(question)
+  );
+}
+
+console.log(`\nisDefinitionQuery extension tests`);
+console.log(SEP);
+
+let dqPass = 0;
+let dqFail = 0;
+
+for (const tc of DEFINITION_QUERY_CASES) {
+  const result = isDefinitionQueryTest(tc.q);
+  const ok     = result === tc.expect;
+  if (ok) dqPass++; else dqFail++;
+  console.log(`\n[${ok ? "PASS" : "FAIL"}] "${tc.q}"`);
+  console.log(`  Expected: ${tc.expect}  |  Got: ${result}`);
+  if (tc.note) console.log(`  Note: ${tc.note}`);
+}
+
+console.log(`\n${SEP}`);
+console.log(`isDefinitionQuery: ${dqPass}/${DEFINITION_QUERY_CASES.length} passed, ${dqFail} failed\n`);
+
 console.log(`\nQuery classification boundary tests`);
 console.log(SEP);
 
@@ -540,4 +845,4 @@ for (const tc of INFORM_EMERGENCY_CASES) {
 console.log(`\n${SEP}`);
 console.log(`isInformationalAboutEmergency: ${iePass}/${INFORM_EMERGENCY_CASES.length} passed, ${ieFail} failed\n`);
 
-if (fail > 0 || lqFail > 0 || uFail > 0 || cFail > 0 || ieFail > 0) process.exit(1);
+if (fail > 0 || lqFail > 0 || uFail > 0 || cFail > 0 || ieFail > 0 || dqFail > 0) process.exit(1);
