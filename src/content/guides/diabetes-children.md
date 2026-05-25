@@ -9,6 +9,37 @@ draft: false
 related:
   - /guides/childhood-obesity-prevention
   - /guides/healthy-diets-for-children
+schema:
+  medicalCondition:
+    name: "Diabetes in Children"
+    description: "Diabetes mellitus affecting children and adolescents, including autoimmune Type 1 (most common in childhood) and increasing rates of obesity-related Type 2, both requiring ongoing management to prevent long-term complications."
+    alternateName:
+      - "Paediatric diabetes"
+      - "Childhood diabetes"
+      - "Type 1 diabetes in children"
+      - "Type 2 diabetes in children"
+    riskFactors:
+      - "Autoimmune predisposition and specific HLA variants (Type 1)"
+      - "Family history of Type 1 or Type 2 diabetes"
+      - "Obesity and sedentary lifestyle (Type 2)"
+      - "Certain ethnic backgrounds (higher Type 2 risk)"
+    symptoms:
+      - "Frequent urination (polyuria)"
+      - "Excessive thirst (polydipsia)"
+      - "Unexplained weight loss"
+      - "Fatigue and irritability"
+      - "Blurred vision"
+      - "Fruity-smelling breath with nausea or vomiting (DKA presentation)"
+    possibleComplication:
+      - "Diabetic ketoacidosis (DKA) — potentially life-threatening at onset or during illness"
+      - "Hypoglycaemia from insulin therapy"
+      - "Long-term microvascular complications (retinopathy, nephropathy, neuropathy)"
+      - "Cardiovascular disease risk in adulthood"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/diabetes/about/about-type-1-diabetes.html"
+      - "https://www.who.int/news-room/questions-and-answers/item/diabetes-type-1"
+      - "https://medlineplus.gov/diabetesinchildren.html"
 ---
 
 ## Intro

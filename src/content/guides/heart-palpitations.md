@@ -12,6 +12,38 @@ tags:
 publishDate: '2025-09-08'
 updatedDate: '2025-09-18'
 draft: false
+schema:
+  medicalCondition:
+    name: "Heart Palpitations"
+    description: "An abnormal awareness of one's own heartbeat — perceived as racing, pounding, fluttering, or irregular — that may reflect benign lifestyle causes or underlying cardiac arrhythmia."
+    alternateName:
+      - "Palpitations"
+      - "Cardiac palpitations"
+      - "Heart racing"
+    riskFactors:
+      - "Anxiety and psychological stress"
+      - "Excess caffeine, alcohol, or nicotine intake"
+      - "Thyroid disorders (especially hyperthyroidism)"
+      - "Anaemia"
+      - "Dehydration or electrolyte imbalance"
+      - "Pregnancy"
+      - "Underlying structural heart disease or arrhythmia"
+      - "Stimulant medications or recreational drugs"
+    symptoms:
+      - "Sensation of rapid, pounding, or irregular heartbeat"
+      - "Fluttering or pounding sensation in the chest, throat, or neck"
+      - "Awareness of skipped or extra beats"
+      - "Dizziness or lightheadedness"
+      - "Shortness of breath during episodes"
+    possibleComplication:
+      - "Syncope (fainting) due to serious arrhythmia"
+      - "Heart failure from sustained tachyarrhythmia"
+      - "Stroke if underlying atrial fibrillation is undiagnosed"
+      - "Sudden cardiac death (rare, associated with ventricular arrhythmias)"
+    contagious: false
+    sameAs:
+      - "https://medlineplus.gov/ency/article/003081.htm"
+      - "https://www.nhs.uk/conditions/heart-palpitations/"
 faq:
   - q: "Should I see a doctor if my heart races during exercise?"
     a: "A faster heartbeat during exertion is normal. If it feels irregular, causes chest pain, or makes you faint, see a doctor."

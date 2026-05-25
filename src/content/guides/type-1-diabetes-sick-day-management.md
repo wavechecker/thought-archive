@@ -7,6 +7,38 @@ publishDate: "2025-08-30"
 updatedDate: "2025-09-14"
 draft: false
 tags: ["type 1 diabetes", "sick day", "ketones", "DKA", "insulin", "patientguide"]
+schema:
+  medicalCondition:
+    name: "Diabetic Ketoacidosis"
+    description: "A life-threatening metabolic emergency in diabetes characterised by hyperglycaemia, elevated blood ketones, and metabolic acidosis, often precipitated by illness, infection, or inadequate insulin."
+    alternateName:
+      - "DKA"
+      - "Ketoacidosis"
+    riskFactors:
+      - "Type 1 diabetes (primary risk population)"
+      - "Intercurrent illness (infection, fever, gastroenteritis)"
+      - "Insufficient or omitted insulin dose"
+      - "Insulin pump failure or cannula occlusion"
+      - "Surgery or physiological stress"
+      - "Newly diagnosed or undiagnosed Type 1 diabetes"
+    symptoms:
+      - "Nausea, vomiting, and abdominal pain"
+      - "Elevated blood ketones (≥1.5 mmol/L) or large urine ketones"
+      - "Hyperglycaemia (often >13.9 mmol/L / 250 mg/dL)"
+      - "Rapid, deep breathing (Kussmaul respiration)"
+      - "Fruity or acetone-smelling breath"
+      - "Dehydration and excessive thirst"
+      - "Drowsiness or altered consciousness"
+    possibleComplication:
+      - "Cerebral oedema (especially in children)"
+      - "Cardiac arrhythmia from electrolyte imbalance"
+      - "Acute kidney injury"
+      - "Death if untreated"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html"
+      - "https://medlineplus.gov/ency/article/000320.htm"
+      - "https://www.nhs.uk/conditions/diabetic-ketoacidosis/"
 ---
 
 # Type 1 Diabetes — Sick-Day Management

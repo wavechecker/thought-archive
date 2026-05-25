@@ -39,6 +39,37 @@ jsonld:
         acceptedAnswer:
           "@type": "Answer"
           text: "Yes. Anxiety about recurrence is common. Counseling, support groups, or talking with your care team can help."
+schema:
+  medicalCondition:
+    name: "Skin Cancer"
+    description: "A malignant neoplasm of the skin including basal cell carcinoma, squamous cell carcinoma, and melanoma; survivorship focuses on monitoring for recurrence, sun protection, and long-term physical and psychological support."
+    alternateName:
+      - "Cutaneous malignancy"
+      - "Melanoma"
+      - "Basal cell carcinoma"
+      - "Squamous cell carcinoma"
+    riskFactors:
+      - "UV radiation exposure (sun and artificial tanning)"
+      - "Fair skin, light hair, and light eyes"
+      - "History of sunburn, especially in childhood"
+      - "Immunosuppression"
+      - "Prior skin cancer (strongest predictor of recurrence)"
+      - "Numerous atypical naevi (melanoma)"
+    symptoms:
+      - "New or changing skin lesion, mole, or ulcer"
+      - "Non-healing sore or wound"
+      - "Irregular border, colour variation, or asymmetry of mole"
+      - "Rapidly growing, bleeding, or crusting lesion"
+    possibleComplication:
+      - "Local recurrence after treatment"
+      - "Lymph node and distant metastasis (especially melanoma)"
+      - "Second primary skin or other cancers"
+      - "Psychological distress from fear of recurrence"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/cancer/skin/index.htm"
+      - "https://medlineplus.gov/skincancer.html"
+      - "https://www.nhs.uk/conditions/skin-cancer/"
 ---
 
 ## Overview

@@ -12,6 +12,35 @@ tags:
 publishDate: '2025-09-18'
 updatedDate: '2025-09-18'
 draft: false
+schema:
+  medicalCondition:
+    name: "Nonmelanoma Skin Cancer"
+    description: "A category of common skin malignancies — primarily basal cell carcinoma and cutaneous squamous cell carcinoma — linked to cumulative UV exposure and amenable to chemoprevention with nicotinamide (vitamin B3)."
+    alternateName:
+      - "Basal cell carcinoma"
+      - "BCC"
+      - "Cutaneous squamous cell carcinoma"
+      - "cSCC"
+      - "Keratinocyte carcinoma"
+    riskFactors:
+      - "Cumulative UV radiation exposure (sun and artificial tanning)"
+      - "Fair skin and history of sunburn"
+      - "Immunosuppression (especially solid organ transplant recipients)"
+      - "Prior nonmelanoma skin cancer"
+      - "Actinic keratoses (precursor lesions)"
+    symptoms:
+      - "Pearlescent or translucent nodule (basal cell carcinoma)"
+      - "Firm, scaly, or crusting lesion that may bleed (squamous cell carcinoma)"
+      - "Non-healing ulcer or wound on sun-exposed skin"
+    possibleComplication:
+      - "Recurrence after treatment"
+      - "Local tissue destruction and nerve invasion"
+      - "Lymph node metastasis (squamous cell carcinoma)"
+      - "Multiple primary tumours in high-risk individuals"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/cancer/skin/index.htm"
+      - "https://medlineplus.gov/skincancer.html"
 faq:
   - q: "Who should consider nicotinamide?"
     a: "People with a history of nonmelanoma skin cancer (basal cell carcinoma or cutaneous squamous cell carcinoma), especially after their first tumor. Discuss with your clinician."

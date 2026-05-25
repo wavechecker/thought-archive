@@ -7,6 +7,36 @@ tags: ["fever", "emergencies", "children", "adults", "urgent care"]
 publishDate: "2025-08-14"
 updatedDate: "2026-02-24"
 draft: false
+schema:
+  medicalCondition:
+    name: "Fever"
+    description: "An elevation of body temperature above the normal range (typically above 38°C / 100.4°F) representing a physiological response to infection, inflammation, or other pathological stimuli."
+    alternateName:
+      - "Pyrexia"
+      - "High temperature"
+      - "Febrile illness"
+    riskFactors:
+      - "Age extremes (infants under 3 months; older adults)"
+      - "Immunocompromised state (HIV, chemotherapy, long-term steroids)"
+      - "Exposure to infectious illness"
+      - "Environmental heat exposure (heatstroke)"
+    symptoms:
+      - "Body temperature above 38°C (100.4°F)"
+      - "Chills and shivering"
+      - "Sweating"
+      - "Headache and muscle aches"
+      - "Loss of appetite"
+      - "Weakness and fatigue"
+      - "Non-blanching rash (red flag — suggests meningococcal disease)"
+    possibleComplication:
+      - "Febrile seizures (children aged 6 months to 5 years)"
+      - "Dehydration"
+      - "Sepsis or bacteraemia from underlying serious infection"
+      - "Organ damage from extreme hyperthermia (above 41°C)"
+    contagious: false
+    sameAs:
+      - "https://medlineplus.gov/fever.html"
+      - "https://www.nhs.uk/conditions/fever-in-adults/"
 faq:
   - q: "What temperature is considered a fever in adults?"
     a: "A fever in adults is generally defined as a body temperature above 38°C (100.4°F). High fever is above 39.4°C (103°F). A temperature above 40°C (104°F) that is not responding to medication warrants urgent emergency evaluation. Confusion, severe headache, or a non-blanching rash alongside fever at any temperature are also independent reasons to call emergency services immediately."

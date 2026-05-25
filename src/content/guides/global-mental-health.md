@@ -6,6 +6,35 @@ category: "Mental Health"
 publishDate: "2025-09-03"
 tags: ["mental health", "WHO", "public health"]
 draft: false
+schema:
+  medicalCondition:
+    name: "Mental Health Disorders"
+    description: "A broad category of conditions affecting mood, cognition, and behaviour — including depression, anxiety, bipolar disorder, and schizophrenia — collectively representing the second leading cause of disability worldwide."
+    alternateName:
+      - "Psychiatric disorders"
+      - "Mental illness"
+      - "Psychological disorders"
+    riskFactors:
+      - "Genetic predisposition"
+      - "Adverse childhood experiences and trauma"
+      - "Social isolation and lack of support networks"
+      - "Poverty and economic inequality"
+      - "Armed conflict and forced displacement"
+      - "Chronic physical illness"
+    symptoms:
+      - "Persistent low mood or anxiety"
+      - "Impaired cognition and concentration"
+      - "Behavioural and functional disturbances"
+      - "Significant impairment in social and occupational function"
+    possibleComplication:
+      - "Suicide and self-harm"
+      - "Disability and loss of productivity"
+      - "Reduced life expectancy from associated physical illness"
+      - "Substance use disorders"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/mental-disorders"
+      - "https://medlineplus.gov/mentalhealth.html"
 ---
 
 ## Intro

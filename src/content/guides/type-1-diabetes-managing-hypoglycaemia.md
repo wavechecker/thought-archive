@@ -7,6 +7,40 @@ publishDate: "2025-08-30"
 updatedDate: "2025-09-14"
 draft: false
 tags: ["type 1 diabetes", "hypoglycaemia", "low blood sugar", "glucagon", "CGM", "patientguide"]
+schema:
+  medicalCondition:
+    name: "Hypoglycaemia"
+    description: "An abnormally low blood glucose level, typically below 3.9 mmol/L (70 mg/dL), producing adrenergic and neuroglycopenic symptoms and requiring prompt treatment to prevent serious harm."
+    alternateName:
+      - "Low blood sugar"
+      - "Hypo"
+      - "Insulin-induced hypoglycaemia"
+    riskFactors:
+      - "Insulin therapy (Type 1 or Type 2 diabetes)"
+      - "Excessive insulin dose relative to carbohydrate intake"
+      - "Delayed or missed meals"
+      - "Unplanned or intense physical activity"
+      - "Alcohol consumption without carbohydrate intake"
+      - "Hypoglycaemia unawareness (reduced or absent warning symptoms)"
+    symptoms:
+      - "Shakiness and tremor"
+      - "Sweating and pallor"
+      - "Rapid heartbeat and palpitations"
+      - "Anxiety and hunger"
+      - "Headache and blurred vision"
+      - "Confusion, difficulty concentrating, and irritability"
+      - "Seizures and unconsciousness in severe cases"
+    possibleComplication:
+      - "Severe hypoglycaemia requiring glucagon or emergency services"
+      - "Seizure or loss of consciousness"
+      - "Cardiac arrhythmia"
+      - "Hypoglycaemia unawareness from recurrent episodes"
+      - "Psychological fear of hypoglycaemia affecting quality of life"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/diabetes/about/low-blood-sugar.html"
+      - "https://medlineplus.gov/ency/article/000386.htm"
+      - "https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/"
 ---
 
 # Type 1 Diabetes — Managing Hypoglycaemia

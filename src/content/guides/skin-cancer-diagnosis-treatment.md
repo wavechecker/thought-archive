@@ -54,6 +54,39 @@ jsonld:
         acceptedAnswer:
           "@type": "Answer"
           text: "Early melanoma is treated with surgery. Advanced melanoma may require immunotherapy, targeted therapy, or combination treatments."
+schema:
+  medicalCondition:
+    name: "Skin Cancer"
+    description: "A malignant neoplasm of the skin diagnosed by biopsy after clinical and dermoscopic examination, with treatment ranging from surgical excision for early disease to immunotherapy or targeted agents for advanced melanoma."
+    alternateName:
+      - "Melanoma"
+      - "Basal cell carcinoma"
+      - "BCC"
+      - "Squamous cell carcinoma"
+      - "SCC"
+      - "Nonmelanoma skin cancer"
+    riskFactors:
+      - "Cumulative UV radiation exposure"
+      - "Fair complexion and tendency to burn"
+      - "Multiple atypical naevi"
+      - "Immunosuppression"
+      - "Prior skin cancer"
+      - "Family history of melanoma"
+    symptoms:
+      - "Suspicious mole with asymmetry, irregular border, colour variation, or diameter >6 mm"
+      - "New or enlarging skin lesion"
+      - "Non-healing ulcer or sore"
+      - "Bleeding, itching, or crusting lesion"
+    possibleComplication:
+      - "Lymph node spread requiring sentinel node biopsy"
+      - "Distant metastasis (melanoma to brain, liver, lung)"
+      - "Local recurrence requiring further surgery"
+      - "Immune-related adverse events from checkpoint inhibitor therapy"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/cancer/skin/index.htm"
+      - "https://medlineplus.gov/skincancer.html"
+      - "https://www.nhs.uk/conditions/skin-cancer/"
 ---
 
 ## Overview

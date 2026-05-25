@@ -5,6 +5,40 @@ category: "Infectious Diseases"
 publishDate: "2025-08-30"
 draft: false
 tags: ["flu", "influenza", "cold", "upper respiratory infection", "fever", "patientguide"]
+schema:
+  medicalCondition:
+    name: "Influenza"
+    description: "A highly contagious acute respiratory illness caused by influenza viruses, characterised by sudden onset of high fever, severe myalgia, headache, and respiratory symptoms, with significant risk of complications in vulnerable groups."
+    alternateName:
+      - "Flu"
+      - "Seasonal influenza"
+      - "Influenza A"
+      - "Influenza B"
+    riskFactors:
+      - "Age ≥65 years"
+      - "Children under 5 years"
+      - "Pregnancy"
+      - "Chronic heart, lung, kidney, or liver disease"
+      - "Diabetes mellitus"
+      - "Immunocompromised state"
+      - "Obesity"
+    symptoms:
+      - "Abrupt onset of high fever (≥38°C / 100.4°F)"
+      - "Prominent myalgia (muscle aches) and chills"
+      - "Severe headache and fatigue"
+      - "Dry cough"
+      - "Sore throat (less prominent than common cold)"
+    possibleComplication:
+      - "Pneumonia (primary viral or secondary bacterial)"
+      - "Hospitalisation and ICU admission"
+      - "Exacerbation of chronic cardiopulmonary conditions"
+      - "Myocarditis"
+      - "Death in high-risk groups"
+    contagious: true
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)"
+      - "https://www.cdc.gov/flu/index.html"
+      - "https://medlineplus.gov/flu.html"
 ---
 
 ## Intro

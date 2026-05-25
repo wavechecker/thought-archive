@@ -7,6 +7,39 @@ tags: ["type 1 diabetes", "newly diagnosed", "insulin", "management", "first ste
 publishDate: "2025-08-13"
 updatedDate: "2026-02-24"
 draft: false
+schema:
+  medicalCondition:
+    name: "Type 1 Diabetes"
+    description: "A chronic autoimmune condition in which the immune system destroys insulin-producing beta cells in the pancreas, requiring lifelong exogenous insulin therapy for survival."
+    alternateName:
+      - "T1D"
+      - "Insulin-dependent diabetes mellitus"
+      - "Juvenile diabetes"
+      - "Type 1 DM"
+    riskFactors:
+      - "Family history of Type 1 diabetes"
+      - "Certain HLA gene variants"
+      - "Autoimmune conditions (thyroid disease, coeliac disease)"
+      - "Northern European or white ancestry"
+    symptoms:
+      - "Excessive thirst (polydipsia)"
+      - "Frequent urination (polyuria)"
+      - "Unexplained weight loss"
+      - "Extreme fatigue"
+      - "Blurred vision"
+      - "Fruity-smelling breath (indicates diabetic ketoacidosis)"
+      - "Nausea and vomiting in DKA"
+    possibleComplication:
+      - "Diabetic ketoacidosis (DKA) — life-threatening"
+      - "Hypoglycaemia (low blood sugar), including severe episodes"
+      - "Long-term microvascular complications (retinopathy, nephropathy, neuropathy)"
+      - "Cardiovascular disease"
+      - "Coeliac disease and other autoimmune conditions"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/questions-and-answers/item/diabetes-type-1"
+      - "https://www.cdc.gov/diabetes/about/about-type-1-diabetes.html"
+      - "https://medlineplus.gov/type1diabetes.html"
 faq:
   - q: Can Type 1 diabetes go away?
     a: >-

@@ -18,24 +18,48 @@ related:
 draft: true
 schema:
   medicalCondition:
-    name: 'Treatment Pathways — Surgery, Chemo, Radiotherapy'
-    description: 'TODO: Concise clinical definition.'
-    alternateName: []
+    name: "Colorectal Cancer"
+    description: "A malignant tumour arising from the epithelial lining of the colon or rectum, treated with surgery as the primary modality and supplemented by chemotherapy, radiotherapy, or targeted therapies depending on stage."
+    alternateName:
+      - "Bowel cancer"
+      - "Colon cancer"
+      - "Rectal cancer"
+      - "CRC"
     riskFactors:
-      - 'TODO risk factor #1'
+      - "Age over 50 years"
+      - "Family history of colorectal cancer or Lynch syndrome"
+      - "Personal history of adenomatous polyps"
+      - "Inflammatory bowel disease (Crohn's disease, ulcerative colitis)"
+      - "Diet high in red and processed meat"
+      - "Obesity, physical inactivity, smoking, and heavy alcohol use"
     symptoms:
-      - 'TODO symptom #1'
+      - "Rectal bleeding or blood in stool"
+      - "Persistent change in bowel habit"
+      - "Unexplained weight loss"
+      - "Iron-deficiency anaemia"
+      - "Ongoing abdominal pain or bloating"
     possibleComplication:
-      - 'TODO complication #1'
+      - "Bowel obstruction"
+      - "Perforation and peritonitis"
+      - "Metastatic disease (liver, lung, peritoneum)"
+      - "Treatment-related complications (anastomotic leak, neuropathy, stoma)"
     contagious: false
     sameAs:
-      - 'https://www.who.int/'
-      - 'https://medlineplus.gov/'
+      - "https://www.who.int/news-room/fact-sheets/detail/colorectal-cancer"
+      - "https://www.cdc.gov/cancer/colorectal/index.htm"
+      - "https://medlineplus.gov/colorectalcancer.html"
 faq:
-  - q: 'What is treatment pathways — surgery, chemo, radiotherapy?'
-    a: 'TODO: Plain-language answer (1–2 sentences).'
+  - q: What are the main treatments for bowel cancer?
+    a: >-
+      Treatment depends on stage and location. Surgery is the primary approach,
+      often followed by adjuvant chemotherapy (e.g., FOLFOX or CAPOX) to reduce
+      recurrence risk. Rectal cancer frequently involves neoadjuvant
+      chemoradiotherapy before surgery.
   - q: When should I seek emergency care?
-    a: 'TODO: Clear red-flags + call emergency services if present.'
+    a: >-
+      Seek emergency care immediately for severe abdominal pain, inability to
+      pass stool or wind (possible bowel obstruction), or signs of post-operative
+      infection (high fever, rapid heart rate, abdominal rigidity).
 ---
 # Treatment Pathways — Surgery, Chemo, Radiotherapy
 

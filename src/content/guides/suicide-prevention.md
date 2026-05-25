@@ -6,6 +6,40 @@ category: "Mental Health"
 publishDate: "2025-09-03"
 tags: ["suicide", "prevention", "mental health"]
 draft: false
+schema:
+  medicalCondition:
+    name: "Suicidal Behaviour"
+    description: "A spectrum of actions and thoughts encompassing suicidal ideation, attempted suicide, and death by suicide, arising from complex interactions of mental health conditions, life stressors, and social factors."
+    alternateName:
+      - "Suicide risk"
+      - "Suicidal ideation"
+      - "Self-harm"
+    riskFactors:
+      - "Depression, bipolar disorder, and other mental health conditions"
+      - "Substance misuse and dependence"
+      - "Previous suicide attempt (strongest single predictor)"
+      - "Family history of suicide"
+      - "Trauma, abuse, or adverse childhood experiences"
+      - "Social isolation and lack of support"
+      - "Access to lethal means"
+      - "Chronic pain or serious physical illness"
+    symptoms:
+      - "Expressing hopelessness or feeling like a burden to others"
+      - "Withdrawal from family, friends, and activities"
+      - "Talking about death or wanting to die"
+      - "Giving away possessions or saying goodbyes"
+      - "Sudden calmness after a period of depression"
+      - "Increased alcohol or drug use"
+    possibleComplication:
+      - "Suicide attempt resulting in serious injury"
+      - "Death by suicide"
+      - "Grief and trauma among family and community"
+      - "Contagion effect in communities, particularly among youth"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/suicide"
+      - "https://www.nimh.nih.gov/health/topics/suicide-prevention"
+      - "https://medlineplus.gov/suicide.html"
 ---
 
 ## Intro

@@ -12,6 +12,38 @@ tags:
 publishDate: '2025-09-18'
 updatedDate: '2025-09-18'
 draft: false
+schema:
+  medicalCondition:
+    name: "Asthma"
+    description: "A chronic inflammatory disease of the airways causing recurrent episodes of wheezing, breathlessness, chest tightness, and cough, often triggered by identifiable environmental or physiological stimuli."
+    alternateName:
+      - "Bronchial asthma"
+      - "Reactive airway disease"
+    riskFactors:
+      - "Family history of asthma or atopic conditions"
+      - "Personal history of eczema or allergic rhinitis"
+      - "Exposure to allergens (dust mites, pollen, pet dander, mold)"
+      - "Air pollution or tobacco smoke exposure"
+      - "Obesity"
+      - "Respiratory infections in early childhood"
+      - "Occupational exposures (fumes, dust, chemicals)"
+    symptoms:
+      - "Wheezing (high-pitched whistling on expiration)"
+      - "Shortness of breath"
+      - "Chest tightness"
+      - "Cough (often worse at night or early morning)"
+      - "Increased mucus production"
+    possibleComplication:
+      - "Severe or life-threatening asthma attack (status asthmaticus)"
+      - "Respiratory failure requiring ventilation"
+      - "Airway remodeling with permanent reduction in lung function"
+      - "Exercise limitation and reduced quality of life"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/asthma"
+      - "https://www.cdc.gov/asthma/index.html"
+      - "https://medlineplus.gov/asthma.html"
+      - "https://www.nhs.uk/conditions/asthma/"
 faq:
   - q: "What is asthma?"
     a: "Asthma is a long-term condition that inflames and narrows the airways, causing wheezing, coughing, chest tightness, and shortness of breath."

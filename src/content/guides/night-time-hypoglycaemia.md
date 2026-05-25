@@ -7,6 +7,37 @@ publishDate: "2025-08-30"
 updatedDate: "2025-09-14"
 draft: false
 tags: ["hypoglycaemia", "nocturnal", "night-time", "diabetes", "CGM", "insulin", "patientguide"]
+schema:
+  medicalCondition:
+    name: "Nocturnal Hypoglycaemia"
+    description: "Low blood glucose occurring during sleep in people using insulin therapy, causing symptoms such as night sweats, vivid dreams, and morning headache, with risk of severe unawareness episodes."
+    alternateName:
+      - "Night-time hypoglycaemia"
+      - "Nocturnal lows"
+      - "Overnight hypoglycaemia"
+      - "Night-time low blood sugar"
+    riskFactors:
+      - "Insulin therapy (basal insulin dose too high or poorly timed)"
+      - "Intense evening exercise increasing overnight insulin sensitivity"
+      - "Alcohol consumption without adequate carbohydrate intake"
+      - "Skipped or low-carbohydrate evening meal"
+      - "Hypoglycaemia unawareness (reduced symptom perception)"
+      - "Illness or recent weight loss altering insulin requirements"
+    symptoms:
+      - "Night sweats and vivid or disturbing dreams"
+      - "Restless or disrupted sleep"
+      - "Waking with headache, shakiness, or hunger"
+      - "Morning rebound hyperglycaemia"
+      - "Fatigue and cognitive sluggishness on waking"
+    possibleComplication:
+      - "Severe hypoglycaemia with loss of consciousness or seizure"
+      - "Glucagon emergency administration required"
+      - "Cardiac arrhythmias associated with severe hypoglycaemia"
+      - "Psychological fear of hypoglycaemia impacting quality of life"
+    contagious: false
+    sameAs:
+      - "https://www.diabetes.org.uk/guide-to-diabetes/complications/hypoglycaemia"
+      - "https://medlineplus.gov/ency/article/000386.htm"
 ---
 
 # Night-time Hypoglycaemia (Nocturnal Lows)

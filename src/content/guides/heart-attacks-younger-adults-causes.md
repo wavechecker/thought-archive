@@ -12,6 +12,42 @@ tags:
 publishDate: '2025-09-18'
 updatedDate: '2025-09-18'
 draft: false
+schema:
+  medicalCondition:
+    name: "Myocardial Infarction"
+    description: "A cardiac emergency caused by sudden interruption of coronary blood supply causing ischaemic myocardial death, arising from diverse mechanisms including atherosclerosis, coronary dissection, embolism, and vasospasm — with different treatment implications."
+    alternateName:
+      - "Heart attack"
+      - "MI"
+      - "Acute myocardial infarction"
+      - "STEMI"
+      - "NSTEMI"
+      - "MINOCA"
+    riskFactors:
+      - "Atherosclerosis, hypertension, dyslipidaemia, and diabetes"
+      - "Smoking"
+      - "Family history of premature coronary artery disease"
+      - "Female sex (higher risk of non-atherosclerotic MI and SCAD)"
+      - "Pregnancy and peripartum period"
+      - "Anaemia, sepsis, or systemic stressors (supply-demand mismatch)"
+      - "Connective tissue disorders (SCAD association)"
+    symptoms:
+      - "Central chest pressure, tightness, or squeezing"
+      - "Radiation to arm, jaw, neck, or back"
+      - "Shortness of breath, sweating, and nausea"
+      - "Atypical presentations more common in women (jaw pain, back pain, fatigue)"
+      - "Sudden cardiac arrest"
+    possibleComplication:
+      - "Cardiac arrest and sudden death"
+      - "Acute or chronic heart failure"
+      - "Ventricular arrhythmia"
+      - "Cardiogenic shock"
+      - "Recurrent MI"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/heartdisease/heartattack.htm"
+      - "https://medlineplus.gov/heartattack.html"
+      - "https://www.nhs.uk/conditions/heart-attack/"
 faq:
   - q: "What is SCAD and who gets it?"
     a: "Spontaneous coronary artery dissection (SCAD) is a tear in a heart artery wall that reduces blood flow. It most often affects younger, otherwise healthy women and is frequently misdiagnosed as a typical plaque heart attack."
