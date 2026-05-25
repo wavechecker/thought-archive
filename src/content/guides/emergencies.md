@@ -15,22 +15,22 @@ draft: false
 This hub pulls together guides on urgent conditions such as heart attack, stroke, anaphylaxis, seizures, diabetes emergencies, and more. Each guide explains **warning signs**, **first steps**, and **when to call emergency services**.
 
 ## Core Guides
-- [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/when-to-seek-emergency-help-for-chest-pain)  
-- [Recognizing a Stroke FAST — A Practical Guide](/guides/recognizing-stroke)  
+- [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/when-to-seek-emergency-help-for-chest-pain)
+- [Recognizing a Stroke FAST — A Practical Guide](/guides/recognizing-stroke)
 - [Allergies and Anaphylaxis — Symptoms and Emergency Response](/guides/anaphylaxis)
 - [Animal Bites — What To Do](/guides/animal-bites)
-- [Choking — First Aid Steps](/guides/choking)  
-- [Seizures — First Aid and Safety](/guides/seizures)  
-- [Shortness of Breath — 5 Signs to See a Doctor](/guides/shortness-of-breath)  
-- [Mental Health Crisis — When to Act and How to Help](/guides/mental-health-crisis)  
-- [Diabetes Emergency Actions — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)  
+- [Choking — First Aid Steps](/guides/choking)
+- [Seizures — First Aid and Safety](/guides/seizures)
+- [Shortness of Breath — 5 Signs to See a Doctor](/guides/shortness-of-breath)
+- [Mental Health — Guide Hub](/guides/mental-health)
+- [Diabetes Emergency Actions — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)
 
 ## Quick-Reference Resources
-- [CPR Quick Reference](/resources/cpr-quick-reference)  
-- [Diabetes Emergency Actions — Checklist](/resources/diabetes-emergency-actions-checklist)  
+- [CPR Quick Reference](/resources/cpr-quick-reference)
+- [Diabetes Emergency Actions — Checklist](/resources/diabetes-emergency-actions-checklist)
 
 ---
 
-*Last reviewed: September 13, 2025*  
+*Last reviewed: September 13, 2025*
 
 

@@ -13,7 +13,7 @@ tags:
   - screening
   - patientguide
 related:
-  - /guides/bowel-cancer-treatment
+  - /guides/bowel-cancer
   - /guides/living-with-bowel-cancer
 draft: false
 schema:
@@ -179,7 +179,7 @@ A: Seek prompt medical assessment if you notice blood in your stool, a persisten
 
 ## Related Guides
 - [Understanding Bowel Cancer](/guides/understanding-bowel-cancer)
-- [Bowel Cancer Treatment Pathways](/guides/bowel-cancer-treatment)
+- [Bowel Cancer — Guide Hub](/guides/bowel-cancer)
 - [Living with Bowel Cancer](/guides/living-with-bowel-cancer)
 - [Testing & Screening — Guide Hub](/guides/testing-and-screening)
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)

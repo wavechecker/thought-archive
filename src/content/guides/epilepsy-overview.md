@@ -250,4 +250,4 @@ Mental health should be actively assessed and treated — not accepted as inevit
 - [Sleep and Health](/guides/sleep)
 - [Depression](/guides/depression)
 - [Anxiety](/guides/anxiety)
-- [Mental Health Crisis](/guides/mental-health-crisis)
+- [Mental Health — Guide Hub](/guides/mental-health)

@@ -55,44 +55,44 @@ Most bowel cancers are **sporadic** (happen by chance), but about **1 in 10 case
 ---
 
 ## Family History
-Your risk is higher if:  
-- A **first-degree relative** (parent, sibling, or child) had bowel cancer.  
-- Multiple relatives on the same side of the family were affected.  
-- A relative was diagnosed at a **younger age** (before 50).  
+Your risk is higher if:
+- A **first-degree relative** (parent, sibling, or child) had bowel cancer.
+- Multiple relatives on the same side of the family were affected.
+- A relative was diagnosed at a **younger age** (before 50).
 
 The closer the relation and the younger the age of diagnosis, the stronger the risk.
 
 ---
 
 ## Genetic Conditions
-Some rare inherited syndromes carry a very high risk:  
+Some rare inherited syndromes carry a very high risk:
 
-- **Lynch Syndrome (HNPCC)**: Increases lifetime risk of bowel and other cancers.  
-- **Familial Adenomatous Polyposis (FAP)**: Causes hundreds of polyps in the bowel, almost always progressing to cancer without treatment.  
-- **MUTYH-associated polyposis (MAP)**: Similar to FAP but usually fewer polyps.  
+- **Lynch Syndrome (HNPCC)**: Increases lifetime risk of bowel and other cancers.
+- **Familial Adenomatous Polyposis (FAP)**: Causes hundreds of polyps in the bowel, almost always progressing to cancer without treatment.
+- **MUTYH-associated polyposis (MAP)**: Similar to FAP but usually fewer polyps.
 
 ---
 
 ## Genetic Testing
-- Recommended if your family history suggests an inherited syndrome.  
-- Usually involves a **blood test** or cheek swab to check for specific gene mutations.  
-- Results help guide personalised screening and prevention plans for you and your relatives.  
+- Recommended if your family history suggests an inherited syndrome.
+- Usually involves a **blood test** or cheek swab to check for specific gene mutations.
+- Results help guide personalised screening and prevention plans for you and your relatives.
 
 ---
 
 ## What This Means for Screening
-- **Average risk**: Begin screening at 50 (FIT test, colonoscopy if needed).  
-- **Moderate risk**: Screening may start at 40, or 10 years earlier than the youngest family diagnosis.  
-- **High risk (Lynch, FAP, MAP)**: Screening may begin in the 20s or 30s, with regular colonoscopy.  
+- **Average risk**: Begin screening at 50 (FIT test, colonoscopy if needed).
+- **Moderate risk**: Screening may start at 40, or 10 years earlier than the youngest family diagnosis.
+- **High risk (Lynch, FAP, MAP)**: Screening may begin in the 20s or 30s, with regular colonoscopy.
 
 ---
 
 ## Takeaway
-Family history and genetics don't guarantee you'll develop bowel cancer, but they change your risk level and influence screening recommendations. If you're concerned, talk to your doctor or a genetic counsellor — early awareness saves lives.  
+Family history and genetics don't guarantee you'll develop bowel cancer, but they change your risk level and influence screening recommendations. If you're concerned, talk to your doctor or a genetic counsellor — early awareness saves lives.
 
 ---
 
 ## Related Guides
-- [Bowel Cancer Screening](/guides/bowel-cancer-screening)  
-- [Understanding Bowel Cancer](/guides/understanding-bowel-cancer)  
-- [Treatment Pathways](/guides/bowel-cancer-treatment)  
+- [Bowel Cancer Screening](/guides/bowel-cancer-screening)
+- [Understanding Bowel Cancer](/guides/understanding-bowel-cancer)
+- [Bowel Cancer — Guide Hub](/guides/bowel-cancer)

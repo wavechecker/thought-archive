@@ -59,7 +59,6 @@ If you are new to this topic, these are the most important guides:
 - [Understanding Bowel Cancer — Risks and Symptoms](/guides/understanding-bowel-cancer) — What it is, how it develops, and warning signs to know.
 - [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening) — How FIT testing and colonoscopy work, and who should be screened.
 - [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained) — A plain-language walkthrough of the screening process.
-- [Treatment Pathways — Surgery, Chemo, Radiotherapy](/guides/bowel-cancer-treatment) — What the main treatments involve and what to expect.
 - [Living With Bowel Cancer](/guides/living-with-bowel-cancer) — Practical guidance on managing daily life during treatment.
 - [Family Risk and Genetics in Bowel Cancer](/guides/bowel-cancer-genetics) — Inherited risk, Lynch syndrome, and who should consider genetic testing.
 
@@ -94,9 +93,6 @@ See also: [Emergencies — Guide Hub](/guides/emergencies) | [Severe Bleeding �
 ### Screening and Early Detection
 - [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening) — Who needs screening, FIT test vs colonoscopy, and how to prepare.
 - [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained) — Plain-language guide to what happens at each stage of the screening process.
-
-### Treatment
-- [Treatment Pathways — Surgery, Chemo, Radiotherapy](/guides/bowel-cancer-treatment) — The main treatment options, what each involves, and how they are combined.
 
 ### Living Well During Treatment
 - [Living With Bowel Cancer](/guides/living-with-bowel-cancer) — Coping with side effects, maintaining activity, emotional health, and practical support.
