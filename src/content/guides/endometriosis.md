@@ -31,12 +31,34 @@ schema:
       - "endo"
       - "pelvic endometriosis"
       - "endometrioma"
-      - "adenomyosis" # Note: adenomyosis is related but distinct
+      - "adenomyosis"
+    riskFactors:
+      - "Family history of endometriosis in first-degree relatives"
+      - "Early menarche or short menstrual cycles (increased cumulative menstrual exposure)"
+      - "Nulliparity or delayed first pregnancy"
+      - "Severe primary dysmenorrhoea from an early age"
+      - "Retrograde menstruation — present in most women but endometriosis develops in a subset"
+    symptoms:
+      - "Severe dysmenorrhoea (painful periods), often unresponsive to standard analgesia"
+      - "Chronic pelvic pain, non-cyclical and persisting beyond menstruation"
+      - "Dyspareunia (pain during or after intercourse), especially with deep penetration"
+      - "Dyschezia (painful bowel movements), worsening cyclically with menstruation"
+      - "Cyclical bowel or bladder symptoms — bloating, diarrhoea, urinary frequency, haematuria"
+      - "Heavy menstrual bleeding and associated fatigue"
+      - "Subfertility or infertility"
+    possibleComplication:
+      - "Infertility from ovarian endometriomas, pelvic adhesions, and impaired tubal function"
+      - "Ovarian reserve decline from endometrioma-related follicular destruction"
+      - "Chronic pelvic pain with central sensitisation"
+      - "Depression and anxiety from chronic pain and fertility-related psychological burden"
+      - "Post-surgical recurrence — estimated 20–40% within 5 years of conservative surgery"
+      - "Endometriosis-associated ovarian cancer — small absolute risk, primarily clear cell and endometrioid subtypes"
     contagious: false
     sameAs:
       - "https://www.nhs.uk/conditions/endometriosis/"
+      - "https://medlineplus.gov/endometriosis.html"
       - "https://www.endometriosisaustralia.org/"
-      - "https://www.endometriosis.org/"
+      - "https://www.acog.org/womens-health/faqs/endometriosis"
 faq:
   - q: "What is endometriosis?"
     a: >-
