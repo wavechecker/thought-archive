@@ -12,6 +12,35 @@ tags:
 publishDate: '2025-09-18'
 updatedDate: '2025-09-18'
 draft: false
+schema:
+  medicalCondition:
+    name: "Nocturnal Dyspnoea"
+    description: "Breathlessness and wheezing occurring at night or on waking from sleep, arising from asthma, obstructive sleep apnoea, heart failure, or other respiratory and cardiac causes requiring clinical differentiation."
+    alternateName:
+      - "Night-time breathlessness"
+      - "Nocturnal wheezing"
+      - "Nocturnal asthma"
+      - "Paroxysmal nocturnal dyspnoea"
+    riskFactors:
+      - "Asthma or atopic disease"
+      - "Obesity (obstructive sleep apnoea risk)"
+      - "Cardiovascular disease and heart failure"
+      - "Gastro-oesophageal reflux disease (GORD)"
+      - "Smoking and environmental allergen exposure"
+    symptoms:
+      - "Wheezing or whistling sound during sleep or on waking"
+      - "Shortness of breath waking from sleep"
+      - "Chest tightness and cough at night"
+      - "Loud snoring and witnessed breathing pauses (sleep apnoea)"
+    possibleComplication:
+      - "Uncontrolled asthma requiring hospitalisation"
+      - "Untreated obstructive sleep apnoea increasing cardiovascular risk"
+      - "Acute decompensated heart failure"
+      - "Nocturnal hypoxaemia with oxygen desaturation"
+    contagious: false
+    sameAs:
+      - "https://medlineplus.gov/ency/article/003076.htm"
+      - "https://www.nhs.uk/conditions/shortness-of-breath/"
 faq:
   - q: "Is wheezing at night always asthma?"
     a: "Not always. While asthma commonly causes night-time wheezing, sleep apnoea, heart failure, and other conditions can also lead to night-time breathlessness."

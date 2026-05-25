@@ -11,6 +11,34 @@ related:
   - /guides/prediabetes
   - /guides/testing-and-screening
   - /guides/diabetes-hub
+schema:
+  medicalCondition:
+    name: "Diabetes Mellitus"
+    description: "A metabolic disease characterised by chronic hyperglycaemia resulting from defects in insulin secretion, insulin action, or both — managed in part through continuous glucose monitoring technology."
+    alternateName:
+      - "Diabetes"
+      - "Type 1 diabetes"
+      - "Type 2 diabetes"
+    riskFactors:
+      - "Autoimmune destruction of beta cells (Type 1)"
+      - "Insulin resistance associated with obesity and inactivity (Type 2)"
+      - "Family history of diabetes"
+      - "Age over 45 years (Type 2)"
+    symptoms:
+      - "Hyperglycaemia (high blood glucose)"
+      - "Hypoglycaemia (low blood glucose) during insulin therapy"
+      - "Fatigue, thirst, frequent urination"
+      - "Poor wound healing"
+    possibleComplication:
+      - "Diabetic ketoacidosis (DKA)"
+      - "Hyperosmolar hyperglycaemic state"
+      - "Retinopathy, nephropathy, neuropathy"
+      - "Cardiovascular disease"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      - "https://www.cdc.gov/diabetes/index.html"
+      - "https://medlineplus.gov/diabetes.html"
 ---
 
 # Continuous Glucose Monitors (CGMs): How They Work, Benefits, and Limits

@@ -7,6 +7,31 @@ publishDate: "2025-08-30"
 updatedDate: "2025-09-14"
 draft: false
 tags: ["hypoglycaemia", "hyperglycaemia", "CGM", "glucose", "diabetes", "patientguide"]
+schema:
+  medicalCondition:
+    name: "Hyperglycaemia and Hypoglycaemia in Diabetes"
+    description: "Blood glucose dysregulation in diabetes encompassing hypoglycaemia (below 3.9 mmol/L) and hyperglycaemia (above target range), both requiring recognition and prompt action."
+    alternateName:
+      - "High and low blood sugar"
+      - "Blood glucose highs and lows"
+      - "Hypoglycaemia and hyperglycaemia"
+    riskFactors:
+      - "Insulin therapy in Type 1 or Type 2 diabetes"
+      - "Mismatch between insulin dose and carbohydrate intake"
+      - "Exercise, illness, or stress affecting glucose levels"
+      - "Alcohol consumption without adequate carbohydrate"
+    symptoms:
+      - "Hypoglycaemia: shakiness, sweating, palpitations, confusion, and loss of consciousness in severe cases"
+      - "Hyperglycaemia: thirst, frequent urination, fatigue, blurred vision"
+      - "Hyperglycaemia with ketones: nausea, vomiting, abdominal pain, rapid breathing"
+    possibleComplication:
+      - "Severe hypoglycaemia: seizure, unconsciousness, cardiac arrhythmia"
+      - "Diabetic ketoacidosis (DKA) from uncontrolled hyperglycaemia"
+      - "Long-term hyperglycaemia: retinopathy, nephropathy, neuropathy, cardiovascular disease"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/diabetes/about/low-blood-sugar.html"
+      - "https://medlineplus.gov/ency/article/000386.htm"
 ---
 
 # Recognising Highs and Lows (Blood Glucose)

@@ -9,6 +9,40 @@ draft: false
 tags: ["chest pain", "emergency", "patientguide"]
 related:
   - /guides/early-warning-signs-of-a-heart-attack
+schema:
+  medicalCondition:
+    name: "Chest Pain"
+    description: "Discomfort or pain in the chest that may arise from benign musculoskeletal causes through to life-threatening cardiac, pulmonary, or aortic emergencies requiring immediate emergency assessment."
+    alternateName:
+      - "Cardiac chest pain"
+      - "Angina"
+      - "Chest discomfort"
+    riskFactors:
+      - "Known cardiovascular disease or coronary artery disease"
+      - "Diabetes mellitus"
+      - "Hypertension"
+      - "Hyperlipidaemia"
+      - "Smoking"
+      - "Family history of heart disease"
+      - "Obesity and sedentary lifestyle"
+      - "Prolonged immobility (risk of pulmonary embolism)"
+    symptoms:
+      - "Pressure, tightness, squeezing, or heaviness in the chest"
+      - "Pain radiating to the arm, jaw, neck, back, or shoulder"
+      - "Shortness of breath accompanying chest discomfort"
+      - "Cold sweats, nausea, or lightheadedness"
+      - "Sharp chest pain worsening on inspiration (suggests pulmonary embolism)"
+      - "Fainting or near-fainting"
+    possibleComplication:
+      - "Myocardial infarction (heart attack)"
+      - "Cardiac arrest"
+      - "Pulmonary embolism"
+      - "Aortic dissection"
+      - "Death from delayed recognition of atypical presentation"
+    contagious: false
+    sameAs:
+      - "https://medlineplus.gov/chestpain.html"
+      - "https://www.nhs.uk/conditions/chest-pain/"
 faq:
   - q: "Is heart pain always severe?"
     a: "No. Many heart attacks feel like pressure, tightness, or heaviness — not sharp, stabbing pain. Mild or vague discomfort that lasts more than a few minutes should not be dismissed."

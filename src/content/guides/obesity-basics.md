@@ -5,6 +5,40 @@ category: "Heart & Circulation"
 publishDate: "2025-09-09"
 tags: ["obesity", "BMI", "waist-to-hip ratio", "metabolic health"]
 draft: false
+schema:
+  medicalCondition:
+    name: "Obesity"
+    description: "A chronic, complex metabolic disease characterised by excess body fat accumulation (BMI ≥30 in adults) substantially increasing risk of cardiovascular disease, type 2 diabetes, certain cancers, and reduced life expectancy."
+    alternateName:
+      - "Adiposity"
+      - "Overweight and obesity"
+      - "Morbid obesity (Class III)"
+    riskFactors:
+      - "Caloric excess and sedentary lifestyle"
+      - "Genetic predisposition and family history"
+      - "Hormonal disorders (hypothyroidism, Cushing's syndrome)"
+      - "Certain medications (antipsychotics, corticosteroids)"
+      - "Obesogenic food environment and socioeconomic disadvantage"
+      - "Psychological factors (emotional eating, depression)"
+    symptoms:
+      - "Excess body weight (BMI ≥30 kg/m²)"
+      - "Increased waist circumference (metabolic risk marker)"
+      - "Fatigue and reduced exercise tolerance"
+      - "Joint pain from excess mechanical load"
+      - "Breathlessness on exertion"
+    possibleComplication:
+      - "Type 2 diabetes mellitus"
+      - "Cardiovascular disease (hypertension, coronary artery disease, stroke)"
+      - "Obstructive sleep apnoea"
+      - "Non-alcoholic fatty liver disease"
+      - "Certain cancers (endometrial, colorectal, breast)"
+      - "Osteoarthritis and musculoskeletal disorders"
+      - "Reduced life expectancy"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
+      - "https://www.cdc.gov/obesity/index.html"
+      - "https://medlineplus.gov/obesity.html"
 ---
 
 

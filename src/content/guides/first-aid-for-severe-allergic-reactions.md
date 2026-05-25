@@ -5,6 +5,37 @@ category: "Emergencies"
 publishDate: "2025-08-30"
 draft: false
 tags: ["anaphylaxis", "epinephrine", "EpiPen", "allergy", "first aid"]
+schema:
+  medicalCondition:
+    name: "Anaphylaxis"
+    description: "A severe, life-threatening systemic hypersensitivity reaction occurring within minutes to hours of allergen exposure, characterised by airway obstruction, circulatory collapse, or both, requiring immediate epinephrine."
+    alternateName:
+      - "Severe allergic reaction"
+      - "Anaphylactic shock"
+      - "Anaphylactic reaction"
+    riskFactors:
+      - "Known food allergy (peanuts, tree nuts, shellfish, milk, eggs)"
+      - "Insect venom allergy (bee, wasp stings)"
+      - "Drug allergy (penicillin, NSAIDs, anaesthetic agents)"
+      - "Latex allergy"
+      - "Previous anaphylaxis episode"
+      - "Asthma (increases severity of reactions)"
+    symptoms:
+      - "Throat tightness, stridor, and hoarse voice (airway swelling)"
+      - "Wheezing and bronchospasm"
+      - "Pale skin, faintness, and rapid weak pulse (circulatory collapse)"
+      - "Widespread urticaria, flushing, or angioedema"
+      - "Nausea, vomiting, and abdominal cramps"
+      - "Loss of consciousness"
+    possibleComplication:
+      - "Respiratory arrest from complete airway obstruction"
+      - "Cardiac arrest from circulatory collapse"
+      - "Biphasic reaction (recurrence 1–72 hours after initial episode)"
+      - "Death if epinephrine is not administered promptly"
+    contagious: false
+    sameAs:
+      - "https://medlineplus.gov/anaphylaxis.html"
+      - "https://www.nhs.uk/conditions/anaphylaxis/"
 ---
 
 ## Intro

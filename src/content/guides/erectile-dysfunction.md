@@ -6,6 +6,34 @@ category: "Men's Health"
 publishDate: "2025-09-11"
 tags: ["erectile dysfunction", "sexual health", "men's health"]
 draft: false
+schema:
+  medicalCondition:
+    name: "Erectile Dysfunction"
+    description: "The persistent inability to achieve or maintain an erection sufficient for satisfactory sexual performance, often reflecting underlying vascular, neurological, hormonal, or psychological pathology."
+    alternateName:
+      - "ED"
+      - "Impotence"
+      - "Male sexual dysfunction"
+    riskFactors:
+      - "Cardiovascular disease and atherosclerosis"
+      - "Diabetes mellitus"
+      - "Obesity and metabolic syndrome"
+      - "Low testosterone or hypogonadism"
+      - "Smoking and excessive alcohol intake"
+      - "Anxiety, depression, or relationship stress"
+      - "Medications (antihypertensives, antidepressants, finasteride)"
+    symptoms:
+      - "Difficulty achieving an erection"
+      - "Difficulty maintaining an erection during sexual activity"
+      - "Reduced sexual desire"
+    possibleComplication:
+      - "Relationship difficulties and psychological distress"
+      - "Reduced quality of life"
+      - "Underlying cardiovascular disease (ED may be an early marker)"
+    contagious: false
+    sameAs:
+      - "https://www.niddk.nih.gov/health-information/urologic-diseases/erectile-dysfunction"
+      - "https://medlineplus.gov/erectiledysfunction.html"
 ---
 
 ## Intro

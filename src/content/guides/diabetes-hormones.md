@@ -6,6 +6,33 @@ category: "Diabetes"
 publishDate: "2025-09-11"
 tags: ["diabetes", "hormones", "testosterone"]
 draft: false
+schema:
+  medicalCondition:
+    name: "Diabetes Mellitus"
+    description: "A metabolic disease characterised by chronic hyperglycaemia from insulin deficiency or resistance, with bidirectional effects on sex hormones — particularly testosterone in men — affecting metabolic and reproductive health."
+    alternateName:
+      - "Diabetes"
+      - "Type 2 diabetes"
+      - "Insulin resistance"
+    riskFactors:
+      - "Obesity and metabolic syndrome"
+      - "Sedentary lifestyle"
+      - "Family history of diabetes"
+      - "Age over 45 years"
+      - "Low testosterone (bidirectional relationship with Type 2 diabetes)"
+    symptoms:
+      - "Excessive thirst, frequent urination, and fatigue"
+      - "Low libido and erectile dysfunction (in men with associated low testosterone)"
+      - "Unexplained weight changes"
+    possibleComplication:
+      - "Hypogonadism and low testosterone in men"
+      - "Erectile dysfunction"
+      - "Cardiovascular disease"
+      - "Neuropathy, nephropathy, and retinopathy"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      - "https://medlineplus.gov/diabetes.html"
 ---
 
 ## Intro

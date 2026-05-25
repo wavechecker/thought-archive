@@ -6,6 +6,42 @@ category: "Mental Health"
 publishDate: "2025-09-03"
 tags: ["depression", "mental health", "WHO"]
 draft: false
+schema:
+  medicalCondition:
+    name: "Depression"
+    description: "A mood disorder characterised by persistent low mood, loss of interest in activities, and a range of emotional and physical symptoms that impair daily functioning."
+    alternateName:
+      - "Major depressive disorder"
+      - "Major depression"
+      - "Clinical depression"
+      - "MDD"
+    riskFactors:
+      - "Family history of depression or mood disorders"
+      - "Personal history of anxiety or other mental health conditions"
+      - "Chronic illness or persistent pain"
+      - "Trauma or adverse childhood experiences"
+      - "Social isolation or lack of support networks"
+      - "Substance use"
+      - "Major life stressors (bereavement, job loss, relationship breakdown)"
+    symptoms:
+      - "Persistent low or sad mood most of the day"
+      - "Loss of interest or pleasure in previously enjoyed activities"
+      - "Fatigue and low energy"
+      - "Changes in appetite or weight"
+      - "Sleep disturbance (insomnia or hypersomnia)"
+      - "Difficulty concentrating or making decisions"
+      - "Feelings of worthlessness or excessive guilt"
+      - "Recurrent thoughts of death or suicide in severe cases"
+    possibleComplication:
+      - "Increased risk of suicide and self-harm"
+      - "Physical health decline (cardiovascular disease, immune dysfunction)"
+      - "Substance abuse"
+      - "Significant impairment in work, relationships, and social function"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/depression"
+      - "https://www.nimh.nih.gov/health/topics/depression"
+      - "https://medlineplus.gov/depression.html"
 ---
 
 ## Intro

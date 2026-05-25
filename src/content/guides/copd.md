@@ -12,6 +12,42 @@ tags:
 publishDate: '2025-09-18'
 updatedDate: '2025-09-18'
 draft: false
+schema:
+  medicalCondition:
+    name: "Chronic Obstructive Pulmonary Disease"
+    description: "A progressive and largely irreversible obstructive lung disease encompassing chronic bronchitis and emphysema, most commonly caused by long-term cigarette smoking."
+    alternateName:
+      - "COPD"
+      - "Chronic bronchitis"
+      - "Emphysema"
+    riskFactors:
+      - "Cigarette smoking (most significant cause)"
+      - "Long-term occupational exposure to dusts, chemicals, or fumes"
+      - "Indoor air pollution from biomass fuel combustion"
+      - "Ambient outdoor air pollution"
+      - "Alpha-1 antitrypsin deficiency (genetic)"
+      - "Age over 40 years"
+      - "History of childhood respiratory infections"
+    symptoms:
+      - "Chronic cough, often productive with sputum"
+      - "Shortness of breath on exertion, progressing to rest"
+      - "Wheezing"
+      - "Chest tightness"
+      - "Frequent respiratory infections"
+      - "Fatigue and reduced exercise tolerance"
+    possibleComplication:
+      - "Acute exacerbations requiring hospitalisation"
+      - "Respiratory failure"
+      - "Pulmonary hypertension and cor pulmonale"
+      - "Pneumonia"
+      - "Lung cancer"
+      - "Anxiety and depression"
+    contagious: false
+    sameAs:
+      - "https://www.who.int/news-room/fact-sheets/detail/chronic-obstructive-pulmonary-disease-(copd)"
+      - "https://www.cdc.gov/copd/index.html"
+      - "https://medlineplus.gov/copd.html"
+      - "https://www.nhs.uk/conditions/chronic-obstructive-pulmonary-disease-copd/"
 faq:
   - q: "What is COPD?"
     a: "COPD (chronic obstructive pulmonary disease) is a long-term lung condition that makes it hard to breathe due to narrowed airways and damage to lung tissue."

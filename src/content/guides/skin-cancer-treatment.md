@@ -38,6 +38,36 @@ jsonld:
         acceptedAnswer:
           "@type": "Answer"
           text: "Radiotherapy may be used when surgery isn’t possible, or as an additional treatment for advanced or recurrent skin cancers."
+schema:
+  medicalCondition:
+    name: "Skin Cancer"
+    description: "A malignant neoplasm of the skin — including basal cell carcinoma, squamous cell carcinoma, and melanoma — treated primarily with surgery, with radiotherapy and systemic therapies for advanced or inoperable disease."
+    alternateName:
+      - "Melanoma"
+      - "Basal cell carcinoma"
+      - "Squamous cell carcinoma"
+      - "Nonmelanoma skin cancer"
+    riskFactors:
+      - "UV radiation exposure (sunlight and artificial tanning)"
+      - "Fair skin, light hair, and freckling"
+      - "History of sunburn, particularly in childhood"
+      - "Immunosuppression (organ transplant, HIV)"
+      - "Prior skin cancer"
+    symptoms:
+      - "New or changing mole, lesion, or ulcer"
+      - "Non-healing sore or wound on the skin"
+      - "Irregular border, asymmetry, or multi-colour pigmentation"
+      - "Rapidly growing, bleeding, or crusting skin lesion"
+    possibleComplication:
+      - "Lymph node and distant metastasis (especially melanoma)"
+      - "Local recurrence after surgery"
+      - "Perineural invasion with nerve damage"
+      - "Systemic toxicity from immunotherapy"
+    contagious: false
+    sameAs:
+      - "https://www.cdc.gov/cancer/skin/index.htm"
+      - "https://medlineplus.gov/skincancer.html"
+      - "https://www.nhs.uk/conditions/skin-cancer/"
 ---
 
 ## Overview
