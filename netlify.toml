@@ -6,6 +6,9 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+[[plugins]]
+  package = "./netlify/plugins/cloudflare-purge"
+
 # 410 (Gone) — keep force for hard removals
 [[redirects]]
   from = "/posts/governments-cancel-science"

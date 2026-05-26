@@ -1,0 +1,6 @@
+{
+  "name": "netlify-plugin-cloudflare-purge",
+  "version": "1.0.0",
+  "description": "Purges Cloudflare zone cache after successful Netlify deploys",
+  "main": "index.cjs"
+}
