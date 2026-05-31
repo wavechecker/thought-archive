@@ -85,7 +85,11 @@ A: CPAP, lifestyle changes, oral appliances, and sometimes surgery.
 - [National Heart, Lung, and Blood Institute](https://www.nhlbi.nih.gov/health/sleep-apnea)  
 
 ## Related Guides
+- [Sleep Health Hub](/guides/sleep-health-hub)
 - [Sleep Health: Why It Matters and How to Improve It](/guides/sleep)
+- [Why Am I Always Tired?](/guides/why-am-i-always-tired)
+- [What Is Insomnia?](/guides/what-is-insomnia)
+- [Restless Legs Syndrome](/guides/restless-legs-syndrome)
 - [Healthy Sleep Hygiene](/guides/sleep-hygiene)
 - [Cognitive Behavioural Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
