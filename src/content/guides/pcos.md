@@ -276,6 +276,8 @@ Given the metabolic risk profile of PCOS, regular monitoring is recommended even
 
 ## Related Guides
 
+- [Women's Health Hub](/guides/womens-health-hub)
+- [PCOS Management: Lifestyle, Medications, and Long-Term Care](/guides/pcos-management)
 - [Insulin Resistance: What It Is and Why It Matters](/guides/insulin-resistance)
 - [Type 2 Diabetes — Overview and Management](/guides/type-2-diabetes)
 - [Understanding HbA1c — Your Blood Sugar Average](/guides/understanding-hba1c)
