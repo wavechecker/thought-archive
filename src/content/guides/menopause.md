@@ -290,7 +290,10 @@ Moderately. Avoiding known triggers (alcohol, hot drinks, spicy food), dressing 
 
 ## Related Guides
 
-- [Hormone Therapy for Menopause: Weighing Risks and Benefits](/guides/hormone-therapy-menopause)
+- [Women's Health Hub](/guides/womens-health-hub)
+- [Perimenopause: What to Expect](/guides/perimenopause-what-to-expect)
+- [Menopause and Sleep: Why Rest Becomes Harder and What Helps](/guides/menopause-and-sleep)
+- [Hormone Therapy for Menopause: Benefits, Risks, and Who It Suits](/guides/hormone-therapy-menopause)
 - [Bone Density and Osteoporosis — What You Need to Know](/guides/bone-density-osteoporosis)
 - [Sleep: Why It Matters and What Affects It](/guides/sleep)
 - [Cardiovascular Risk Assessment — Understanding Your Numbers](/guides/cardiovascular-risk-assessment)

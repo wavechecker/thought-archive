@@ -167,6 +167,7 @@ The glymphatic system clears amyloid and tau from the brain predominantly during
 - [Depression: Symptoms, Causes, and Treatment](/guides/depression)
 - [Anxiety Disorders](/guides/anxiety)
 - [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause)
+- [Menopause and Sleep: Why Rest Becomes Harder and What Helps](/guides/menopause-and-sleep)
 - [Obesity and Metabolic Health](/guides/obesity-basics)
 - [Metabolic and Mental Health Link](/guides/metabolic-mental-health-link)
 - [Dementia: Early Signs, Causes, and Prevention](/guides/dementia-overview)
