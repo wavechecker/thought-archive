@@ -114,7 +114,7 @@ jsonLd:
 
 Sleep is not passive downtime — it is a biologically essential process that governs memory consolidation, emotional regulation, immune function, hormone balance, and metabolic health. A third of adults in high-income countries regularly sleep less than the recommended amount, and most are unaware of the cumulative cost.
 
-*[← Back to Toolkit](/guides/mental-health-toolkit)*
+*[← Back to Sleep Health Hub](/guides/sleep-health-hub) · [← Back to Toolkit](/guides/mental-health-toolkit)*
 
 ---
 
@@ -171,7 +171,7 @@ Chronic pain, heartburn (GERD), frequent nocturia, and respiratory conditions ca
 
 **Sleep disorders**
 - **Obstructive sleep apnoea (OSA):** repeated upper-airway collapse during sleep; often unrecognised
-- **Restless legs syndrome (RLS):** uncomfortable limb sensations that worsen at rest and disrupt sleep onset
+- **[Restless legs syndrome (RLS)](/guides/restless-legs-syndrome):** uncomfortable limb sensations that worsen at rest and disrupt sleep onset
 - **Circadian rhythm disorders:** e.g., delayed sleep phase syndrome (inability to sleep until very late and difficulty waking early)
 - **Parasomnias:** sleepwalking, night terrors, REM sleep behaviour disorder
 
@@ -289,6 +289,12 @@ A: A short nap of 10–20 minutes in the early afternoon can improve alertness a
 
 ## Related Guides
 
+- [Sleep Health Hub](/guides/sleep-health-hub)
+- [What Is Insomnia?](/guides/what-is-insomnia)
+- [Why Am I Always Tired?](/guides/why-am-i-always-tired)
+- [Restless Legs Syndrome](/guides/restless-legs-syndrome)
+- [Shift Work Sleep Disorder](/guides/shift-work-sleep-disorder)
+- [Melatonin: Benefits, Risks, and Safe Use](/guides/melatonin-benefits-risks-safe-use)
 - [Healthy Sleep Hygiene](/guides/sleep-hygiene)
 - [Cognitive Behavioural Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
 - [When to Seek Help for Insomnia](/guides/when-to-seek-help-for-insomnia)

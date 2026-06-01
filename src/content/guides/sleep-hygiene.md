@@ -151,7 +151,11 @@ A: Most people notice improvements within 2–3 weeks of consistent habits.
 - [American Academy of Sleep Medicine – Patient Resources](https://aasm.org/resources/)  
 
 ## Related Guides
+- [Sleep Health Hub](/guides/sleep-health-hub)
 - [Sleep Health: Why It Matters and How to Improve It](/guides/sleep)
+- [What Is Insomnia?](/guides/what-is-insomnia)
 - [Cognitive Behavioral Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
 - [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea)
 - [When to Seek Help for Insomnia](/guides/when-to-seek-help-for-insomnia)
+- [Melatonin: Benefits, Risks, and Safe Use](/guides/melatonin-benefits-risks-safe-use)
+- [Shift Work Sleep Disorder](/guides/shift-work-sleep-disorder)

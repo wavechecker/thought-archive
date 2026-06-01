@@ -138,5 +138,9 @@ A: They can be helpful short term but are not recommended as a long-term solutio
 - [NIH – Cognitive Behavioral Therapy for Insomnia](https://www.nhlbi.nih.gov/health/cognitive-behavioral-therapy-insomnia)  
 
 ## Related Guides
-- [Cognitive Behavioral Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)  
-- [Healthy Sleep Hygiene](/guides/sleep-hygiene)  
+- [Sleep Health Hub](/guides/sleep-health-hub)
+- [What Is Insomnia?](/guides/what-is-insomnia)
+- [Cognitive Behavioral Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
+- [Healthy Sleep Hygiene](/guides/sleep-hygiene)
+- [Sleep Health: Why It Matters and How to Improve It](/guides/sleep)
+- [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea)
