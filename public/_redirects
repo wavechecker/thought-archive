@@ -68,6 +68,14 @@
 /guides/prostate-cancer-survivorship    /guides/prostate-cancer           301!
 /guides/prostate-cancer-survivorship/   /guides/prostate-cancer           301!
 
+# Testosterone guide deduplication — canonical is /guides/natural-testosterone-optimisation
+/guides/natural-testosterone-guide        /guides/natural-testosterone-optimisation      301!
+/guides/natural-testosterone-guide/       /guides/natural-testosterone-optimisation      301!
+
+# ED stub deduplication — canonical is /guides/erectile-dysfunction-causes-and-treatment
+/guides/erectile-dysfunction              /guides/erectile-dysfunction-causes-and-treatment   301!
+/guides/erectile-dysfunction/             /guides/erectile-dysfunction-causes-and-treatment   301!
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Gone for good
 # ──────────────────────────────────────────────────────────────────────────────

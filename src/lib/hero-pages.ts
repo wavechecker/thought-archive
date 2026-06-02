@@ -497,7 +497,7 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
       {
         title: "Erectile Dysfunction",
         description: "Causes, evaluation, and treatment.",
-        href: "/guides/erectile-dysfunction",
+        href: "/guides/erectile-dysfunction-causes-and-treatment",
       },
       {
         title: "Testosterone Replacement",

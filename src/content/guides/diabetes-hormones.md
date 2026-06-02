@@ -76,5 +76,5 @@ A: Insulin itself doesn’t lower testosterone, but diabetes-related metabolic c
 
 ## Related Guides
 - [Testosterone Replacement Therapy](/guides/testosterone-replacement-therapy)  
-- [Erectile Dysfunction](/guides/erectile-dysfunction)  
+- [Erectile Dysfunction — Causes, Cardiovascular Risk, and Treatment](/guides/erectile-dysfunction-causes-and-treatment)  
 - [Heart & Circulation Overview](/guides/heart-circulation-overview)  
