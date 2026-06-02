@@ -51,7 +51,7 @@ We say we value safety, but as long as profit margins dictate the rules, scandal
 
 ## Further Reading
 - [ABC Investigation: Sunscreens fail SPF tests](https://www.abc.net.au/news/)  
-- [Our guide: How to choose and use sunscreen safely](/guides/sunscreen-basics)  
+- [Our guide: How to choose and use sunscreen safely](/guides/sunscreen)  
 
 ## Closing
 The sunburn may fade — but the damage to trust doesn’t.  

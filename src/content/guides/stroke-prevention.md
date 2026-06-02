@@ -187,6 +187,7 @@ A: Adults over 40 with hypertension, diabetes, AF, TIA history, or strong family
 
 ## Related Guides
 
+- [Neurology Hub](/guides/neurology-hub)
 - [Stroke Symptoms: FAST Response](/guides/stroke-symptoms-fast-response) — what to do if a stroke is happening now
 - [Transient Ischaemic Attack (TIA)](/guides/tia-warning-signs) — why TIA is a medical emergency
 - [High Blood Pressure — Symptoms, Causes, and Treatment](/guides/high-blood-pressure)

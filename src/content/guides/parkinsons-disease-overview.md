@@ -245,10 +245,15 @@ See [Dementia Overview](/guides/dementia-overview) and [Cognitive Testing and Me
 
 ## Related Guides
 
+- [Neurology Hub](/guides/neurology-hub)
+- [Brain Health Hub](/guides/brain-health-hub)
 - [Dementia Overview](/guides/dementia-overview)
 - [Alzheimer's Disease](/guides/alzheimers-disease-overview)
+- [Multiple Sclerosis (MS)](/guides/multiple-sclerosis-overview)
+- [Huntington's Disease](/guides/huntingtons-disease)
 - [Cognitive Testing and Memory Assessment](/guides/cognitive-testing-memory-assessment)
 - [Sleep and Health](/guides/sleep)
+- [Sleep Health Hub](/guides/sleep-health-hub)
 - [Exercise and Health](/guides/exercise)
 - [Aging and Longevity](/guides/aging-and-longevity-basics)
 - [Depression](/guides/depression)

@@ -245,9 +245,14 @@ Mental health should be actively assessed and treated — not accepted as inevit
 
 ## Related Guides
 
+- [Neurology Hub](/guides/neurology-hub)
 - [Seizures — First Aid and Emergency Management](/guides/seizures)
+- [Parkinson's Disease](/guides/parkinsons-disease-overview)
+- [Multiple Sclerosis (MS)](/guides/multiple-sclerosis-overview)
+- [Stroke](/guides/stroke-symptoms-fast-response)
 - [Dementia Overview](/guides/dementia-overview)
 - [Sleep and Health](/guides/sleep)
+- [Sleep Health Hub](/guides/sleep-health-hub)
 - [Depression](/guides/depression)
 - [Anxiety](/guides/anxiety)
 - [Mental Health — Guide Hub](/guides/mental-health)

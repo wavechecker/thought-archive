@@ -239,9 +239,15 @@ Modern DMTs, when started early, have substantially improved long-term outcomes 
 
 ## Related Guides
 
+- [Neurology Hub](/guides/neurology-hub)
+- [Brain Health Hub](/guides/brain-health-hub)
+- [Parkinson's Disease](/guides/parkinsons-disease-overview)
+- [Epilepsy](/guides/epilepsy-overview)
+- [Huntington's Disease](/guides/huntingtons-disease)
 - [Dementia Overview](/guides/dementia-overview)
 - [Cognitive Testing and Memory Assessment](/guides/cognitive-testing-memory-assessment)
 - [Sleep and Health](/guides/sleep)
+- [Sleep Health Hub](/guides/sleep-health-hub)
 - [Exercise and Health](/guides/exercise)
 - [Depression](/guides/depression)
 - [Anxiety](/guides/anxiety)

@@ -31,7 +31,7 @@ The real issue isn’t whether sunscreen is safe (it is), it’s whether people 
 - **Consumers:** Sun protection matters. If you don’t like one formula, switch brands — don’t ditch sunscreen entirely.
 
 ## Further Reading
-- [Sunscreen and Skin Protection — Benefits, Risks, and Myths](/guides/sunscreen-skin-protection)  
+- [Sunscreen: Benefits, SPF Explained, and How It Protects Skin](/guides/sunscreen)  
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)
 
 ## Closing
