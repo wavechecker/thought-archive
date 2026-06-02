@@ -5,7 +5,7 @@ description: "Overview of erectile dysfunction: causes, diagnosis, and treatment
 category: "Men's Health"
 publishDate: "2025-09-11"
 tags: ["erectile dysfunction", "sexual health", "men's health"]
-draft: false
+draft: true
 schema:
   medicalCondition:
     name: "Erectile Dysfunction"

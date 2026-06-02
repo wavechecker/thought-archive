@@ -158,7 +158,7 @@ Side effects: reduced libido, erectile dysfunction, decreased ejaculate volume; 
 **Combination therapy** (alpha-blocker + 5-ARI) provides greater symptom relief and slows disease progression in men with larger prostates.
 
 #### Phosphodiesterase-5 (PDE5) inhibitors
-**Tadalafil** (used for erectile dysfunction) is also approved for BPH-related LUTS. Useful when both BPH and [erectile dysfunction](/guides/erectile-dysfunction) are present.
+**Tadalafil** (used for erectile dysfunction) is also approved for BPH-related LUTS. Useful when both BPH and [erectile dysfunction](/guides/erectile-dysfunction-causes-and-treatment) are present.
 
 ### 3. Minimally invasive procedures
 
@@ -209,8 +209,9 @@ Regular monitoring is appropriate to detect symptom progression or rising PSA.
 
 ## Related Guides
 
+- [Men's Health Hub](/guides/mens-health-hub)
 - [Prostate Cancer Overview](/guides/prostate-cancer)
-- [Erectile Dysfunction](/guides/erectile-dysfunction)
+- [Erectile Dysfunction — Causes, Cardiovascular Risk, and Treatment](/guides/erectile-dysfunction-causes-and-treatment)
 - [Sleep and Nocturia](/guides/sleep)
 - [Aging and Longevity](/guides/aging-and-longevity-basics)
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)

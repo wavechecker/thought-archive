@@ -159,7 +159,7 @@ Heavy alcohol use and depression are deeply intertwined — alcohol is a depress
 
 Low testosterone is associated with low mood, fatigue, poor concentration, and reduced libido — symptoms that can overlap with depression. Testosterone levels decline gradually from the 30s onwards. If these symptoms are present alongside other signs of testosterone deficiency, evaluation is worthwhile.
 
-However, testosterone is not a treatment for primary depression. See [Natural Testosterone Optimisation](/guides/natural-testosterone-guide) for lifestyle-first approaches, and discuss clinical assessment with a doctor if needed.
+However, testosterone is not a treatment for primary depression. See [Natural Testosterone Optimisation](/guides/natural-testosterone-optimisation) for lifestyle-first approaches, and discuss clinical assessment with a doctor if needed.
 
 ---
 
@@ -169,7 +169,7 @@ Mental and physical health are closely linked in men:
 
 - Depression increases the risk of [cardiovascular disease](/guides/cardiovascular-risk-assessment) — an important reason to treat it
 - Physical illness, particularly chronic pain or serious diagnosis, substantially increases depression risk
-- [Erectile dysfunction](/guides/erectile-dysfunction) is both a cause and consequence of anxiety and depression in men
+- [Erectile dysfunction](/guides/erectile-dysfunction-causes-and-treatment) is both a cause and consequence of anxiety and depression in men
 
 ---
 
@@ -194,6 +194,7 @@ Mental and physical health are closely linked in men:
 
 ## Related Guides
 
+- [Men's Health Hub](/guides/mens-health-hub)
 - [Depression](/guides/depression)
 - [Anxiety](/guides/anxiety)
 - [Social Connection and Health](/guides/social-connection)
@@ -201,5 +202,5 @@ Mental and physical health are closely linked in men:
 - [Sleep and Health](/guides/sleep)
 - [Suicide Prevention](/guides/suicide-prevention)
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
-- [Natural Testosterone Optimisation](/guides/natural-testosterone-guide)
+- [Natural Testosterone Optimisation](/guides/natural-testosterone-optimisation)
 - [Alcohol and Health](/guides/alcohol-and-health)

@@ -138,7 +138,7 @@ Most men receive **BEP chemotherapy** (typically 3–4 cycles). This regimen ach
 - **Sperm banking before treatment** is strongly recommended for any man who may want to father children in the future
 - Testosterone levels should be monitored after treatment, particularly if both testes are affected or in men with pre-existing low testosterone
 
-See [Natural Testosterone Optimisation](/guides/natural-testosterone-guide) for context on hormone health in men.
+See [Natural Testosterone Optimisation](/guides/natural-testosterone-optimisation) for context on hormone health in men.
 
 ---
 
@@ -178,7 +178,8 @@ Regular monitoring continues for 5+ years after treatment completion:
 
 ## Related Guides
 
+- [Men's Health Hub](/guides/mens-health-hub)
 - [Prostate Cancer](/guides/prostate-cancer)
 - [Male Mental Health](/guides/male-mental-health)
-- [Natural Testosterone Optimisation](/guides/natural-testosterone-guide)
+- [Natural Testosterone Optimisation](/guides/natural-testosterone-optimisation)
 - [Cancer Overview](/guides/cancer)

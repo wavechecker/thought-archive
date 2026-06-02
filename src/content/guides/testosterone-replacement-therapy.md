@@ -66,6 +66,8 @@ A: For most carefully selected men, TRT can be safe with appropriate monitoring.
 - [Mayo Clinic: Testosterone therapy — potential benefits and risks](https://www.mayoclinic.org/healthy-lifestyle/sexual-health/in-depth/testosterone-therapy/art-20045728)  
 
 ## Related Guides
-- [Erectile Dysfunction](/guides/erectile-dysfunction)  
+- [Men's Health Hub](/guides/mens-health-hub)
+- [Erectile Dysfunction — Causes, Cardiovascular Risk, and Treatment](/guides/erectile-dysfunction-causes-and-treatment)  
+- [Natural Testosterone Optimisation for Men](/guides/natural-testosterone-optimisation)  
 - [Heart & Circulation Overview](/guides/heart-circulation-overview)  
 - [Diabetes and Hormones](/guides/diabetes-hormones)  
