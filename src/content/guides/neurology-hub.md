@@ -3,7 +3,7 @@ title: "Neurology Hub: Brain, Nerves, and Neurological Conditions"
 description: "Central navigation for all PatientGuide neurology content — covering stroke, dementia, movement disorders, epilepsy, multiple sclerosis, and neurological symptoms."
 category: "Guide Hubs"
 publishDate: "2026-06-02"
-updatedDate: "2026-06-02"
+updatedDate: "2026-06-03"
 slug: "neurology-hub"
 draft: false
 tags: ["neurology", "brain health", "stroke", "dementia", "Parkinson's disease", "multiple sclerosis", "epilepsy", "seizures", "TIA", "Huntington's disease", "neuropathy", "headache", "cognitive decline", "movement disorders"]
@@ -87,7 +87,7 @@ Some neurological symptoms require immediate emergency response.
 Memory and cognitive function sit at the core of how we experience the world. Decline can be a symptom of many conditions — some reversible, some progressive.
 
 - [Dementia: Early Signs, Causes, and Prevention](/guides/dementia-overview) — types (Alzheimer's, vascular, Lewy body, frontotemporal), risk factors, prevention evidence, and when to seek help
-- [Alzheimer's Disease Overview](/guides/alzheimers-disease-overview) — the most common dementia: pathology, staging, and current treatment
+- [Alzheimer's Disease: Symptoms, Diagnosis, and Treatment](/guides/alzheimers-disease-overview) — the most common dementia: early symptoms, risk factors, biomarkers, current treatments, and caregiver considerations
 - [Alzheimer's Prevention and Exercise](/guides/alzheimers-prevention-and-exercise) — the role of physical activity as one of the strongest known strategies for reducing Alzheimer's risk
 - [Can a Blood Test Predict When Alzheimer's Symptoms Will Begin?](/guides/blood-test-predict-alzheimers-symptom-onset) — plasma p-tau217 biomarkers and what they mean for early diagnosis
 - [Mild Cognitive Impairment (MCI)](/guides/mild-cognitive-impairment) — the intermediate state between normal ageing and dementia: recognition, risk, and what helps
@@ -134,11 +134,19 @@ Movement disorders affect the smooth coordination and control of voluntary movem
 
 ---
 
+## Headache Disorders
+
+Headache is the most common neurological symptom. Migraine alone affects approximately 15% of the global population and is among the leading causes of disability worldwide.
+
+- [Migraine: Symptoms, Triggers, and Treatment](/guides/migraine-symptoms-triggers-and-treatment) — what migraine is, aura, the four phases of an attack, common triggers, acute treatment (triptans, gepants), preventive options (CGRP monoclonal antibodies, oral preventives), and red flags requiring emergency assessment
+
+---
+
 ## Neurological Symptoms
 
 Symptoms can be the entry point for neurological concern. These guides address common presenting problems.
 
-- [Dizziness: When to Worry](/guides/dizziness-when-to-worry) — distinguishing benign causes from neurological red flags; when dizziness requires urgent assessment
+- [Dizziness: When to Worry](/guides/dizziness-when-to-worry) — distinguishing benign causes from neurological red flags; dizziness can also occur as vestibular migraine
 - [Delirium vs Dementia: How to Tell the Difference](/guides/delirium-vs-dementia) — sudden confusion in an older person is a medical emergency until proven otherwise
 
 ---
@@ -166,7 +174,7 @@ Managing these factors is among the highest-yield actions for neurological healt
 - [Brain Health Hub](/guides/brain-health-hub) — in-depth focus on stroke, dementia, sleep and cognitive health, vascular risk
 - [Sleep Health Hub](/guides/sleep-health-hub) — sleep disorders and the sleep–neurology interface: insomnia, sleep apnoea, restless legs
 - [Heart & Circulation Hub](/guides/heart-circulation) — vascular health, hypertension, atrial fibrillation, and cardiovascular risk
-- [Diabetes Hub](/guides/diabetes-hub) — metabolic drivers that affect neurological risk: neuropathy, vascular dementia, stroke risk
+- [Diabetes Hub](/guides/diabetes-hub) — metabolic drivers that affect neurological risk: neuropathy, vascular dementia, stroke risk · [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage)
 - [Mental Health Toolkit](/guides/mental-health-toolkit) — depression and anxiety are extremely common in neurological conditions including Parkinson's, MS, and epilepsy
 
 ---
