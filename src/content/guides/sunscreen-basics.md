@@ -4,7 +4,7 @@ slug: "sunscreen-basics"
 description: "How sunscreen works, what SPF really means, and how to choose the right one."
 category: "Cancer"
 publishDate: "2025-09-06"
-draft: false
+draft: true
 tags: ["sunscreen", "skin cancer", "SPF", "zinc", "sun safety", "patientguide"]
 ---
 
