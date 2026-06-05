@@ -238,6 +238,7 @@ Referral to a familial cancer clinic or high-risk breast clinic is appropriate f
 
 ## Related Guides
 
+- [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Breast Cancer: Understanding the Diagnosis and Treatment Options](/guides/breast-cancer)
 - [Skin Cancer Prevention and Screening](/guides/skin-cancer-prevention)
 - [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide)

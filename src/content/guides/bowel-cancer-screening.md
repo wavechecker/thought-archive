@@ -178,6 +178,7 @@ A: Seek prompt medical assessment if you notice blood in your stool, a persisten
 ---
 
 ## Related Guides
+- [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Understanding Bowel Cancer](/guides/understanding-bowel-cancer)
 - [Bowel Cancer — Guide Hub](/guides/bowel-cancer)
 - [Living with Bowel Cancer](/guides/living-with-bowel-cancer)

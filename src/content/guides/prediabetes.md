@@ -97,6 +97,7 @@ A: Yes — especially if overweight or obese with additional risk factors (famil
 - [World Health Organization — Diabetes](https://www.who.int/health-topics/diabetes)  
 
 ## Related Guides
+- [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Diabetes in Children and Adolescents](/guides/diabetes-children-adolescents)  
 - [Difference Between Type 1 and Type 2 Diabetes](/guides/type-1-vs-type-2-diabetes)  
 - [Childhood Obesity Prevention](/guides/childhood-obesity-prevention)  
