@@ -130,6 +130,7 @@ Bowel cancer is one of the most common cancers in high-income countries and one 
 Prostate-specific antigen (PSA) testing is more complex than most cancer screens. It can detect cancer early, but also leads to overdiagnosis and overtreatment of cancers that would never cause harm.
 
 - [Prostate Cancer — Guide Hub](/guides/prostate-cancer) — risk factors, the role of PSA, what an abnormal result means, and treatment decisions
+- [PSA Screening: Benefits, Risks, and Shared Decision-Making](/guides/psa-screening-benefits-risks-and-shared-decision-making) — a balanced, evidence-based guide to what PSA measures, the decision framework, false positives, overdiagnosis, and navigating an elevated result
 
 **Who should screen:** There is no universal programme for PSA screening. Most guidelines recommend an informed discussion between men aged 50–70 (or 45+ with elevated family risk or African heritage) and their clinician, weighing benefits and potential harms. PSA screening is not appropriate as a routine check without that conversation.
 
@@ -217,7 +218,7 @@ Screening needs change across the lifespan. This table summarises the most evide
 
 - Mammography screening (most national programs start at 50)
 - Bowel cancer screening begins (FIT test from 45–50)
-- Bone density testing for women (earlier after early menopause or fracture)
+- [Bone density testing (DEXA)](/guides/bone-density-testing-dexa-screening) for women (earlier after early menopause or fracture)
 - Cardiovascular risk assessment — Lp(a) testing if not done
 - PSA discussion for men
 - Annual blood pressure and cholesterol
@@ -226,7 +227,7 @@ Screening needs change across the lifespan. This table summarises the most evide
 
 - Continue all established screening (bowel, breast, cervical as appropriate)
 - Cardiovascular risk review — consider coronary artery calcium scoring
-- Bone density (DXA scan) for women and high-risk men
+- [Bone density scan (DEXA)](/guides/bone-density-testing-dexa-screening) for women and high-risk men
 - Hearing and vision checks
 - Lung cancer screening discussion for long-term smokers (low-dose CT; eligibility criteria vary by country)
 - Pneumococcal and shingles vaccination if not yet received
@@ -241,6 +242,7 @@ Women face specific screening requirements across the reproductive years, the me
 - [Cervical Screening by Age](/guides/cervical-screening-by-age) — age-specific guidance
 - [Mammography and Breast Cancer Screening](/guides/mammography-breast-screening) — when to start, what results mean
 - [Bone Density and Osteoporosis: What You Need to Know](/guides/bone-density-osteoporosis) — bone loss accelerates at menopause; DXA scanning and prevention
+- [Bone Density Testing (DEXA): Who Should Be Screened and When](/guides/bone-density-testing-dexa-screening) — how DEXA works, T-score interpretation, screening eligibility, and what to do after results
 - [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause) — cardiovascular risk rises after menopause; prevention implications
 - [Women's Health Hub](/guides/womens-health-hub) — centralised hub for all women's health content
 
@@ -251,6 +253,7 @@ Women face specific screening requirements across the reproductive years, the me
 Men face underdiagnosis across many conditions — lower rates of healthcare engagement lead to later detection of cardiovascular disease, diabetes, and prostate cancer.
 
 - [Prostate Cancer — Guide Hub](/guides/prostate-cancer) — PSA testing, what a raised result means, and how to navigate the decision
+- [PSA Screening: Benefits, Risks, and Shared Decision-Making](/guides/psa-screening-benefits-risks-and-shared-decision-making) — balanced guide to PSA testing, shared decision-making, and navigating an elevated result
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) — men have higher baseline cardiovascular risk and earlier onset of disease
 - [Preventing Heart Disease](/guides/preventing-heart-disease) — practical lifestyle and screening steps
 - [Prediabetes](/guides/prediabetes) — men with abdominal obesity have high metabolic risk; fasting glucose and HbA1c

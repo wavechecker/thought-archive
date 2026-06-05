@@ -95,6 +95,9 @@ Ovarian cancer is often diagnosed late because its symptoms are non-specific. Co
 ### [Bone Density and Osteoporosis: What You Need to Know](/guides/bone-density-osteoporosis)
 Bone loss accelerates dramatically at menopause, with women losing 10–20% of bone mineral density in the decade around the transition. Covers bone density testing (DEXA), interpreting your T-score, and preventing and treating osteoporosis.
 
+### [Bone Density Testing (DEXA): Who Should Be Screened and When](/guides/bone-density-testing-dexa-screening)
+A practical guide to the DEXA scan itself — how it works, what T-scores mean, which women should be screened and at what age, risk factors that bring forward the recommended age, and what to do after your results.
+
 ### [Bone Health Basics](/guides/bone-health-basics)
 The nutritional, hormonal, and physical activity foundations of lifelong bone health — most relevant for women approaching and beyond menopause.
 
