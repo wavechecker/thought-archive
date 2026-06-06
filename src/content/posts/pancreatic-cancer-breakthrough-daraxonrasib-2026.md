@@ -204,3 +204,6 @@ Possibly. KRAS and RAS mutations are found in multiple cancer types, including l
 **Internal guides**
 
 - [Cancer — PatientGuide](/guides/cancer)
+- [Pancreatic Cancer: Symptoms, Diagnosis, and Treatment](/guides/pancreatic-cancer-overview) — Background on symptoms, diagnosis, staging, and treatment options for pancreatic cancer.
+- [KRAS Mutations Explained: Why Some Cancer Targets Are Hard to Treat](/guides/kras-mutations-explained) — How KRAS mutations work, why the protein was historically undruggable, and what the science shift means.
+- [Precision Medicine in Cancer: Biomarkers, Targeted Therapy, and Genetic Testing](/guides/precision-medicine-in-cancer) — How biomarkers, tumour profiling, and targeted drugs work across oncology.

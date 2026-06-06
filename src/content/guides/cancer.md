@@ -4,7 +4,7 @@ slug: "cancer"
 description: "Cancer is a group of diseases where abnormal cells grow uncontrollably and may spread. Explore guides on bowel, breast, prostate, skin, cervical, and liver cancer."
 category: "Cancer"
 publishDate: "2025-08-20"
-updatedDate: "2026-02-24"
+updatedDate: "2026-06-05"
 hubKey: "Cancer"
 draft: false
 tags: ["cancer", "oncology", "patientguide", "hub"]
@@ -62,6 +62,7 @@ Essential guides for anyone navigating a cancer diagnosis or wanting to understa
 - [Skin Cancer — Guide Hub](/guides/skin-cancer) — Skin cancer types, prevention, diagnosis, and treatment.
 - [Liver Cancer — Guide Hub](/guides/liver-cancer) — Liver cancer: risk factors, detection, and treatment options.
 - [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide) — A comprehensive guide to cervical cancer prevention and care.
+- [Pancreatic Cancer: Symptoms, Diagnosis, and Treatment](/guides/pancreatic-cancer-overview) — Pancreatic cancer: symptoms, why diagnosis is often late, surgery, chemotherapy, and targeted therapy.
 - [Palliative Care — Guide Hub](/guides/palliative-care) — Supportive and comfort-focused care for people living with serious illness.
 
 ---
@@ -97,6 +98,11 @@ See also: [Emergencies — Guide Hub](/guides/emergencies) | [Sepsis](/guides/se
 - [Prostate Cancer — Guide Hub](/guides/prostate-cancer) — PSA, active surveillance, surgery vs radiotherapy, and hormonal treatment.
 - [Skin Cancer — Guide Hub](/guides/skin-cancer) — Melanoma and non-melanoma: detection, prevention, and treatment.
 - [Liver Cancer — Guide Hub](/guides/liver-cancer) — Hepatocellular carcinoma: risk factors (hepatitis B/C, cirrhosis), detection, and treatment.
+- [Pancreatic Cancer: Symptoms, Diagnosis, and Treatment](/guides/pancreatic-cancer-overview) — Symptoms, staging, surgery, chemotherapy, KRAS biology, and biomarker-driven treatment.
+
+### Precision Oncology
+- [Precision Medicine in Cancer: Biomarkers, Targeted Therapy, and Genetic Testing](/guides/precision-medicine-in-cancer) — How tumour profiling, biomarkers, and targeted drugs work — including KRAS, EGFR, HER2, BRCA, and MSI.
+- [KRAS Mutations Explained: Why Some Cancer Targets Are Hard to Treat](/guides/kras-mutations-explained) — The molecular biology of the KRAS problem, the shift in the science, and what current drugs can and cannot do.
 
 ### Cervical and Skin Cancer Guides
 - [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide) — HPV's role, Pap smears vs HPV testing, and treatment by stage.
@@ -177,6 +183,9 @@ Seek emergency care for severe bleeding, sudden breathlessness or chest pain, hi
 - [Breast Cancer — Guide Hub](/guides/breast-cancer)
 - [Prostate Cancer — Guide Hub](/guides/prostate-cancer)
 - [Skin Cancer — Guide Hub](/guides/skin-cancer)
+- [Pancreatic Cancer: Symptoms, Diagnosis, and Treatment](/guides/pancreatic-cancer-overview)
+- [Precision Medicine in Cancer: Biomarkers, Targeted Therapy, and Genetic Testing](/guides/precision-medicine-in-cancer)
+- [KRAS Mutations Explained: Why Some Cancer Targets Are Hard to Treat](/guides/kras-mutations-explained)
 - [Infectious Diseases — Guide Hub](/guides/infectious-diseases) — Infections that increase cancer risk (HPV, hepatitis B/C, H. pylori).
 - [Palliative Care — Guide Hub](/guides/palliative-care)
 - [Emergencies — Guide Hub](/guides/emergencies)
