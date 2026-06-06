@@ -97,6 +97,7 @@ Heart disease remains one of the leading causes of illness and death worldwide. 
 ## Related Guides
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)  
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)  
+- [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
 - [Preventive Health — Guide Hub](/guides/preventive-health)  
 - [Coronary Artery Calcium (CAC) Score](/guides/coronary-artery-calcium-score)  

@@ -1,0 +1,276 @@
+---
+title: "Preventive Screening Hub"
+slug: "preventive-screening-hub"
+description: "Your central guide to preventive health screening — cancer checks, cardiovascular testing, metabolic health, and age-based schedules for staying ahead of disease."
+category: "Guide Hubs"
+publishDate: "2026-06-05"
+updatedDate: "2026-06-05"
+hubKey: "Preventive Screening"
+draft: false
+tags:
+  - screening
+  - preventive health
+  - cancer screening
+  - mammography
+  - cervical screening
+  - bowel cancer screening
+  - PSA
+  - blood pressure
+  - cholesterol
+  - diabetes screening
+  - early detection
+  - hub
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "CollectionPage"
+    name: "Preventive Screening Hub"
+    description: "PatientGuide resources on preventive health screening — cancer, cardiovascular, metabolic, and age-based health checks."
+    about:
+      - "Preventive Health"
+      - "Cancer Screening"
+      - "Cardiovascular Screening"
+      - "Metabolic Screening"
+      - "Early Detection"
+    isPartOf:
+      "@type": "WebSite"
+      name: "PatientGuide"
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "What is preventive screening?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Preventive screening looks for early signs of disease in people with no symptoms — when treatment is most effective and outcomes are best."
+      - "@type": "Question"
+        name: "Which screening tests do I need?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "The right tests depend on your age, sex, and personal risk factors. Key cancer screens include bowel (from 45–50), breast (from 40–50), cervical (from early adulthood), and prostate (by informed discussion). All adults benefit from blood pressure and cholesterol checks from midlife."
+      - "@type": "Question"
+        name: "What is the difference between screening and diagnosis?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Screening tests are done in people with no symptoms to detect disease early. Diagnostic tests confirm or rule out a condition after a symptom appears or a screening result is abnormal."
+      - "@type": "Question"
+        name: "Are screening tests always reliable?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "No test is perfect. Screening programs are designed so the benefits of early detection outweigh the harms of false positives and unnecessary follow-up — but every result needs clinical context."
+---
+
+# Preventive Screening Hub
+
+Early detection changes outcomes. This hub connects PatientGuide's evidence-based screening guides — from cancer programs to cardiovascular and metabolic checks — into a single preventive health pathway.
+
+---
+
+## Why Screening Matters
+
+Most serious diseases begin silently. Heart disease, type 2 diabetes, bowel cancer, and cervical cancer can all be present for years before causing symptoms — and the window for effective treatment is widest before symptoms appear.
+
+Organised screening programs exist because the evidence consistently shows that finding disease early saves lives:
+
+- **Bowel cancer** caught at an early stage has a five-year survival rate above 90%; advanced disease falls below 15%.
+- **Cervical cancer** is largely preventable through HPV vaccination and screening — countries with high participation have driven incidence toward near-elimination.
+- **Breast cancer** detected by routine mammography is more likely to be localised, with better treatment options and survival outcomes.
+- **Blood pressure and cholesterol**, when identified and treated early, substantially reduce the risk of first heart attack and stroke.
+
+### Balancing Benefits and Harms
+
+Screening is not without tradeoffs. Understanding both sides helps inform decisions:
+
+- **False positives** — a test suggests disease when none exists, leading to anxiety and follow-up procedures
+- **Overdiagnosis** — detecting slow-growing conditions that might never cause harm, resulting in treatment with no benefit
+- **False negatives** — a test misses existing disease, creating false reassurance
+
+No screening test is perfect. Most programs are designed so that benefits outweigh harms across the population — but individual circumstances vary. Shared decision-making with your clinician is the right approach, particularly for tests like PSA where the evidence is more nuanced.
+
+For a deeper primer on how to interpret tests and results, see [Testing and Screening — Guide Hub](/guides/testing-and-screening).
+
+---
+
+## Cancer Screening
+
+### Cervical Cancer
+
+Cervical cancer is almost entirely preventable. HPV vaccination and regular screening together have driven incidence toward near-elimination in countries with high participation.
+
+- [Cervical Cancer Screening Explained: HPV Testing and Self-Collection](/guides/cervical-cancer-screening-hpv-self-testing) — how the national programme works, what HPV testing involves, and the option of at-home self-collection
+- [Cervical Screening by Age: What Tests You Need and When](/guides/cervical-screening-by-age) — age-based guidance from early adulthood through to post-menopause
+- [HPV Testing vs Pap Smear: What's the Difference?](/guides/hpv-testing-vs-pap-smear) — how the transition from cytology to HPV-first screening changed outcomes
+
+**Who should screen:** People with a cervix, typically from age 25 (varies by country). Intervals vary but most HPV-based programs recommend 5-yearly testing in people with a normal result.
+
+---
+
+### Breast Cancer
+
+Mammography is the only screening modality with demonstrated reduction in breast cancer mortality in randomised trials.
+
+- [Mammography and Breast Cancer Screening: What You Need to Know](/guides/mammography-breast-screening) — how mammography works, BI-RADS results, dense breast considerations, and what happens after a recall
+
+**Who should screen:** Women aged 50–74 in most national programs; many guidelines support starting from 40 with shared decision-making. Women with high genetic risk (BRCA1/2) need earlier, more intensive surveillance.
+
+---
+
+### Bowel Cancer
+
+Bowel cancer is one of the most common cancers in high-income countries and one of the most preventable through screening.
+
+- [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained) — who should be screened, how FIT and colonoscopy work, intervals, and positive result pathways
+- [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening) — overview of the programme and what to expect
+
+**Who should screen:** Most guidelines recommend starting at age 45–50 for average-risk adults, with the FIT test (home stool test) every 1–2 years. Earlier screening applies if you have a family history, Lynch syndrome, or long-standing inflammatory bowel disease.
+
+---
+
+### Prostate Cancer (PSA Testing)
+
+Prostate-specific antigen (PSA) testing is more complex than most cancer screens. It can detect cancer early, but also leads to overdiagnosis and overtreatment of cancers that would never cause harm.
+
+- [Prostate Cancer — Guide Hub](/guides/prostate-cancer) — risk factors, the role of PSA, what an abnormal result means, and treatment decisions
+
+**Who should screen:** There is no universal programme for PSA screening. Most guidelines recommend an informed discussion between men aged 50–70 (or 45+ with elevated family risk or African heritage) and their clinician, weighing benefits and potential harms. PSA screening is not appropriate as a routine check without that conversation.
+
+---
+
+### Skin Cancer
+
+Skin cancer is among the most common cancers in Australia and other high UV-exposure countries. Most cases are preventable and treatable when caught early.
+
+- [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention) — the ABCDE rule for melanoma, what to look for, and self-examination
+- [Skin Cancer — Prevention](/guides/skin-cancer-prevention) — sun protection strategies
+
+**Who should screen:** Australia has no national organised skin cancer screening program, but annual skin checks by a GP or dermatologist are recommended for people with a history of skin cancer, many moles, or significant past sun exposure.
+
+---
+
+## Heart and Metabolic Health
+
+Cardiovascular and metabolic conditions are the leading causes of death globally — and many are detectable well before symptoms appear.
+
+### Blood Pressure
+
+High blood pressure is the most common modifiable cardiovascular risk factor. It causes no symptoms until damage is already occurring.
+
+- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/high-blood-pressure) — what the diagnosis means and treatment options
+- [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home) — accurate home monitoring technique and what to do with results
+
+**Who should check:** All adults. Most guidelines recommend blood pressure checks every 1–2 years from age 18, or more frequently if readings are elevated or risk factors are present.
+
+---
+
+### Cholesterol and Cardiovascular Risk
+
+Standard cholesterol tests are a starting point — not the whole picture. Newer markers improve individual risk prediction.
+
+- [Cardiovascular Risk Assessment: Beyond Cholesterol and Risk Scores](/guides/cardiovascular-risk-assessment) — how risk is assessed today, and why CAC, ApoB, and Lp(a) are changing prevention
+- [ApoB vs LDL Cholesterol: Which Matters More for Heart Risk?](/guides/apob-vs-ldl-cholesterol) — why particle number may be more predictive than cholesterol levels
+- [Lipoprotein(a): The Overlooked Genetic Heart Risk Factor](/guides/lipoprotein-a-explained) — the genetic risk factor that standard tests miss
+- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — practical steps and which tests to prioritise
+
+**Who should check:** Cholesterol screening typically starts at age 35 in men and 45 in women (earlier if family history or other risk factors are present). Lp(a) testing is recommended at least once in life; a high result shifts risk management decisions.
+
+---
+
+### Diabetes and Prediabetes
+
+Type 2 diabetes develops slowly — prediabetes often precedes it by years and is entirely reversible with lifestyle change.
+
+- [Prediabetes: Early Warning Signs and Prevention](/guides/prediabetes) — who is at risk, what the blood tests show, and how reversal works
+- [Type 2 Diabetes](/guides/type-2-diabetes) — diagnosis, management, and cardiometabolic risk
+- [Understanding HbA1c — What It Means and How to Use It](/guides/understanding-hba1c) — interpreting the most common diabetes monitoring test
+
+**Who should screen:** Adults over 40 with one or more risk factors (overweight, family history, gestational diabetes history, hypertension, or certain ethnicities with higher baseline risk). Screening uses fasting blood glucose or HbA1c.
+
+---
+
+## Age-Based Health Checks
+
+Screening needs change across the lifespan. This table summarises the most evidence-supported checks by decade.
+
+### In Your 20s
+
+- Cervical screening begins (typically age 25 in HPV-based programs)
+- Blood pressure check
+- Skin self-examination habits established
+- STI screening where relevant ([STI Prevention Basics](/guides/sti-prevention))
+
+### In Your 30s
+
+- Continue cervical screening
+- Blood pressure every 1–2 years
+- Cholesterol check if family history of early cardiovascular disease
+- Prediabetes risk discussion if overweight or other risk factors present
+
+### In Your 40s
+
+- Mammography discussion begins (many guidelines support from 40 with shared decision-making)
+- Cholesterol and cardiovascular risk assessment
+- Prediabetes/type 2 diabetes screening if risk factors present
+- Blood pressure annually
+- PSA discussion for men (earlier if high-risk family history or African heritage)
+- Skin check recommended if significant sun exposure history
+
+### In Your 50s
+
+- Mammography screening (most national programs start at 50)
+- Bowel cancer screening begins (FIT test from 45–50)
+- Bone density testing for women (earlier after early menopause or fracture)
+- Cardiovascular risk assessment — Lp(a) testing if not done
+- PSA discussion for men
+- Annual blood pressure and cholesterol
+
+### In Your 60s and Beyond
+
+- Continue all established screening (bowel, breast, cervical as appropriate)
+- Cardiovascular risk review — consider coronary artery calcium scoring
+- Bone density (DXA scan) for women and high-risk men
+- Hearing and vision checks
+- Lung cancer screening discussion for long-term smokers (low-dose CT; eligibility criteria vary by country)
+- Pneumococcal and shingles vaccination if not yet received
+
+---
+
+## Women's Health Screening
+
+Women face specific screening requirements across the reproductive years, the menopausal transition, and beyond.
+
+- [Cervical Cancer Screening Explained](/guides/cervical-cancer-screening-hpv-self-testing) — HPV testing from age 25, self-collection options
+- [Cervical Screening by Age](/guides/cervical-screening-by-age) — age-specific guidance
+- [Mammography and Breast Cancer Screening](/guides/mammography-breast-screening) — when to start, what results mean
+- [Bone Density and Osteoporosis: What You Need to Know](/guides/bone-density-osteoporosis) — bone loss accelerates at menopause; DXA scanning and prevention
+- [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause) — cardiovascular risk rises after menopause; prevention implications
+- [Women's Health Hub](/guides/womens-health-hub) — centralised hub for all women's health content
+
+---
+
+## Men's Health Screening
+
+Men face underdiagnosis across many conditions — lower rates of healthcare engagement lead to later detection of cardiovascular disease, diabetes, and prostate cancer.
+
+- [Prostate Cancer — Guide Hub](/guides/prostate-cancer) — PSA testing, what a raised result means, and how to navigate the decision
+- [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) — men have higher baseline cardiovascular risk and earlier onset of disease
+- [Preventing Heart Disease](/guides/preventing-heart-disease) — practical lifestyle and screening steps
+- [Prediabetes](/guides/prediabetes) — men with abdominal obesity have high metabolic risk; fasting glucose and HbA1c
+- [Male Mental Health](/guides/male-mental-health) — mental health screening is part of preventive care; men are less likely to seek help unprompted
+
+---
+
+## Related Hubs
+
+- [Preventive Health — Guide Hub](/guides/preventive-health) — vaccination, nutrition, exercise, and broader lifestyle-based prevention
+- [Testing and Screening — Guide Hub](/guides/testing-and-screening) — how to interpret test results, sensitivity and specificity, cardiovascular biomarkers
+- [Women's Health Hub](/guides/womens-health-hub) — cervical, breast, bone, and hormonal health
+- [Cancer — Guide Hub](/guides/cancer) — all cancer types, treatment, and survivorship
+- [Heart & Circulation Hub](/guides/heart-circulation) — conditions, medications, and prevention
+- [Diabetes Hub](/guides/diabetes-hub) — type 1, type 2, prediabetes, and management
+
+---
+
+_Last updated: June 2026_
+
+---
+
+_This hub is for educational purposes only and is not a substitute for professional medical advice. Screening recommendations vary by country, age, and individual risk. Speak with your clinician about which tests apply to you._
