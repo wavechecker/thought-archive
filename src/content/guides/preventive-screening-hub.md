@@ -4,7 +4,7 @@ slug: "preventive-screening-hub"
 description: "Your central guide to preventive health screening — cancer checks, cardiovascular testing, metabolic health, and age-based schedules for staying ahead of disease."
 category: "Guide Hubs"
 publishDate: "2026-06-05"
-updatedDate: "2026-06-05"
+updatedDate: "2026-06-06"
 hubKey: "Preventive Screening"
 draft: false
 tags:
@@ -147,6 +147,16 @@ Skin cancer is among the most common cancers in Australia and other high UV-expo
 
 ---
 
+### Lung Cancer (Low-Dose CT Screening)
+
+Lung cancer is the leading cause of cancer death globally and in Australia. Low-dose CT (LDCT) is the only screening method with demonstrated mortality reduction — but it is targeted at people with a significant smoking history, not the general population.
+
+- [Lung Cancer Screening: Low-Dose CT, Benefits, Risks, and Eligibility](/guides/lung-cancer-screening-low-dose-ct) — who qualifies, what pack-years means, the evidence from major trials, and shared decision-making
+
+**Who should screen:** Adults with a 20 or more pack-year smoking history who currently smoke or have quit within the past 15 years, typically aged 50–80 (USPSTF 2021 criteria). Australia has no national lung cancer screening program as of 2026; discuss eligibility with your GP.
+
+---
+
 ## Heart and Metabolic Health
 
 Cardiovascular and metabolic conditions are the leading causes of death globally — and many are detectable well before symptoms appear.
@@ -172,6 +182,16 @@ Standard cholesterol tests are a starting point — not the whole picture. Newer
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — practical steps and which tests to prioritise
 
 **Who should check:** Cholesterol screening typically starts at age 35 in men and 45 in women (earlier if family history or other risk factors are present). Lp(a) testing is recommended at least once in life; a high result shifts risk management decisions.
+
+---
+
+### Abdominal Aortic Aneurysm (AAA)
+
+An abdominal aortic aneurysm is a dangerous, symptomless dilation of the main abdominal artery. Rupture is fatal in approximately 80–90% of cases. A single abdominal ultrasound can detect it before that happens.
+
+- [Abdominal Aortic Aneurysm Screening: Who Should Be Tested and When](/guides/abdominal-aortic-aneurysm-screening) — what an AAA is, why rupture is so dangerous, who should have an ultrasound, and how results guide surveillance and treatment
+
+**Who should screen:** Men aged 65–75 who have ever smoked (USPSTF 2019 Grade B recommendation). Men aged 65 and over with a family history of AAA, or with established cardiovascular disease, should discuss screening with their GP. Australia has no national AAA screening program as of 2026.
 
 ---
 
@@ -229,7 +249,8 @@ Screening needs change across the lifespan. This table summarises the most evide
 - Cardiovascular risk review — consider coronary artery calcium scoring
 - [Bone density scan (DEXA)](/guides/bone-density-testing-dexa-screening) for women and high-risk men
 - Hearing and vision checks
-- Lung cancer screening discussion for long-term smokers (low-dose CT; eligibility criteria vary by country)
+- [Lung cancer screening (low-dose CT)](/guides/lung-cancer-screening-low-dose-ct) for adults aged 50–80 with 20+ pack-year smoking history who currently smoke or quit within the past 15 years
+- [Abdominal aortic aneurysm (AAA) ultrasound](/guides/abdominal-aortic-aneurysm-screening) for men aged 65–75 who have ever smoked
 - Pneumococcal and shingles vaccination if not yet received
 
 ---
@@ -257,6 +278,8 @@ Men face underdiagnosis across many conditions — lower rates of healthcare eng
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) — men have higher baseline cardiovascular risk and earlier onset of disease
 - [Preventing Heart Disease](/guides/preventing-heart-disease) — practical lifestyle and screening steps
 - [Prediabetes](/guides/prediabetes) — men with abdominal obesity have high metabolic risk; fasting glucose and HbA1c
+- [Lung Cancer Screening (Low-Dose CT)](/guides/lung-cancer-screening-low-dose-ct) — annual LDCT for men aged 50–80 with 20+ pack-year smoking history
+- [Abdominal Aortic Aneurysm Screening](/guides/abdominal-aortic-aneurysm-screening) — one-time ultrasound for men aged 65–75 who have ever smoked
 - [Male Mental Health](/guides/male-mental-health) — mental health screening is part of preventive care; men are less likely to seek help unprompted
 
 ---
