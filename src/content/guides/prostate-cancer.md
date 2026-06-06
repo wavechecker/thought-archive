@@ -76,6 +76,7 @@ A: Not completely, but lifestyle changes and regular screening help.
 ---
 
 ## Related Guides
+- [PSA Screening: Benefits, Risks, and Shared Decision-Making](/guides/psa-screening-benefits-risks-and-shared-decision-making) — detailed guide to PSA testing, overdiagnosis, shared decision-making, and navigating an elevated result.
 - [Cancer — Guide Hub](/guides/cancer) — overview of cancer types, treatment approaches, and survivorship.
 - [Genetic Testing](/guides/genetic-testing) — BRCA2 mutations are a known risk factor for prostate cancer; hereditary testing context.
 - [Testing and Screening](/guides/testing-and-screening) — PSA testing, biopsy, and how to interpret cancer screening results.
