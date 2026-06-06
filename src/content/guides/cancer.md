@@ -4,7 +4,7 @@ slug: "cancer"
 description: "Cancer is a group of diseases where abnormal cells grow uncontrollably and may spread. Explore guides on bowel, breast, prostate, skin, cervical, and liver cancer."
 category: "Cancer"
 publishDate: "2025-08-20"
-updatedDate: "2026-06-05"
+updatedDate: "2026-06-06"
 hubKey: "Cancer"
 draft: false
 tags: ["cancer", "oncology", "patientguide", "hub"]
@@ -112,6 +112,7 @@ See also: [Emergencies — Guide Hub](/guides/emergencies) | [Sepsis](/guides/se
 - [Nicotinamide and Skin Cancer Prevention](/guides/nicotinamide-skin-cancer-prevention) — Evidence on vitamin B3 supplementation for high-risk patients.
 
 ### Screening and Prevention
+- [Lung Cancer Screening: Low-Dose CT, Benefits, Risks, and Eligibility](/guides/lung-cancer-screening-low-dose-ct) — Who qualifies for annual LDCT, what pack-years means, the evidence base, and shared decision-making.
 - [Skin Cancer — Prevention](/guides/skin-cancer-prevention) — Sun protection, sunscreen, and reducing UV exposure.
 - [HPV Vaccine](/guides/hpv-vaccine) — How HPV vaccination protects against cervical, anal, and other cancers.
 - [Hepatitis B: Risks, Prevention, and Treatment](/guides/hepatitis-b) — Why hepatitis B infection is a major liver cancer risk factor.

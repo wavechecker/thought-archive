@@ -4,7 +4,7 @@ slug: "heart-circulation"
 description: "Guides on common heart conditions, treatments, medications, and prevention — from angiography to atrial fibrillation, cardiac rehab, and blood pressure."
 category: "Guide Hubs"
 publishDate: "2025-08-20"
-updatedDate: "2026-02-24"
+updatedDate: "2026-06-06"
 hubKey: "Heart & Circulation"
 draft: false
 tags: ["cardiology", "heart disease", "arrhythmia", "angiography", "rehabilitation", "prevention", "patientguide", "hub"]
@@ -125,6 +125,7 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 
 ### Prevention
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — Diet, exercise, smoking cessation, cholesterol control, and screening checks.
+- [Abdominal Aortic Aneurysm Screening: Who Should Be Tested and When](/guides/abdominal-aortic-aneurysm-screening) — What an AAA is, why rupture is so dangerous, who should have an ultrasound, and how results guide surveillance and treatment.
 - [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention) — Blood pressure, atrial fibrillation, smoking, cholesterol, and the medications that reduce stroke risk.
 - [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea) — Untreated sleep apnoea significantly raises the risk of high blood pressure, heart attack, stroke, and arrhythmia.
 

@@ -102,3 +102,11 @@ Quitting smoking is challenging but achievable — and the health benefits start
 
 ---
 
+## Related Guides
+
+- [Lung Cancer Screening: Low-Dose CT, Benefits, Risks, and Eligibility](/guides/lung-cancer-screening-low-dose-ct) — Who qualifies for annual LDCT, pack-years explained, and shared decision-making
+- [Abdominal Aortic Aneurysm Screening: Who Should Be Tested and When](/guides/abdominal-aortic-aneurysm-screening) — Smoking is the strongest modifiable risk factor for AAA
+- [COPD: Chronic Obstructive Pulmonary Disease](/guides/copd) — Smoking is the leading cause of COPD; cessation is the most effective treatment
+- [Preventive Screening Hub](/guides/preventive-screening-hub) — Screening checks relevant to current and former smokers
+- [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)
+
