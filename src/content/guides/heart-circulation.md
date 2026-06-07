@@ -4,7 +4,7 @@ slug: "heart-circulation"
 description: "Guides on common heart conditions, treatments, medications, and prevention — from angiography to atrial fibrillation, cardiac rehab, and blood pressure."
 category: "Guide Hubs"
 publishDate: "2025-08-20"
-updatedDate: "2026-06-06"
+updatedDate: "2026-06-07"
 hubKey: "Heart & Circulation"
 draft: false
 tags: ["cardiology", "heart disease", "arrhythmia", "angiography", "rehabilitation", "prevention", "patientguide", "hub"]
@@ -62,6 +62,7 @@ The most important guides for anyone dealing with a heart condition:
 - [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack) — Recognise the symptoms, including atypical presentations in women and younger adults.
 - [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain) — A decision guide for chest pain — what's urgent and what can wait.
 - [Heart Attack Treatment — What to Expect](/guides/heart-attack-treatment) — What happens in hospital and in the days after a heart attack.
+- [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview) — What heart failure is, HFrEF vs HFpEF, medicines, and self-management.
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation) — The most common arrhythmia: what it is, stroke risk, and treatment options.
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — The evidence-based steps that most reduce risk.
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation) — Why cardiac rehab matters and what it involves.
@@ -103,6 +104,7 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 
 ### Understanding Heart Conditions
 - [Heart & Circulation Overview](/guides/heart-circulation-overview) — A broad introduction to how the heart and circulation work and what can go wrong.
+- [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview) — What heart failure is, HFrEF vs HFpEF, ejection fraction, medicines, and prognosis.
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation) — The most common arrhythmia: causes, stroke risk, rate vs rhythm control, and anticoagulation.
 - [Angina — Symptoms & Management](/guides/angina-symptoms-management) — Stable angina, unstable angina, and how each is managed.
 - [Heart Palpitations: When to Worry](/guides/heart-palpitations) — Which palpitations are benign and which need investigation.
@@ -131,6 +133,12 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 
 ### Recovery and Rehabilitation
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation) — Exercise, education, and psychological support after heart attack or surgery.
+- [Living With Heart Failure: Daily Care, Medicines, and Monitoring](/guides/living-with-heart-failure) — Self-management for people living with heart failure: medicines, daily weight, exercise, and care planning.
+
+### Heart Failure
+- [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview) — Comprehensive patient guide to heart failure causes, types, medicines, and prognosis.
+- [Heart Failure Warning Signs: When Symptoms Need Urgent Care](/guides/heart-failure-warning-signs) — Which symptoms need emergency care and how to track your health at home.
+- [Living With Heart Failure: Daily Care, Medicines, and Monitoring](/guides/living-with-heart-failure) — Medicines, daily weights, salt and fluid, exercise, vaccinations, and care planning.
 
 ---
 

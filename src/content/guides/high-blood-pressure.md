@@ -167,5 +167,6 @@ A: Causes may include medication resistance, underlying conditions, or persisten
 ## Related Guides
 
 - [2025 High Blood Pressure Guideline](/guides/2025-high-blood-pressure-guideline)
+- [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
 - [Heart & Circulation Overview](/guides/heart-circulation-overview)
 - [Stroke](/guides/stroke-symptoms-fast-response)

@@ -193,6 +193,7 @@ A: Yes, though it is far less common in children. When it does occur, inherited 
 ## Related Guides
 
 - [Chronic Kidney Disease Stages Explained](/guides/chronic-kidney-disease-stages-explained) — the staging system, eGFR numbers, and how risk is classified
+- [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview) — heart and kidney disease frequently worsen each other (cardiorenal syndrome)
 - [Type 2 Diabetes](/guides/type-2-diabetes) — the leading cause of CKD globally
 - [High Blood Pressure](/guides/high-blood-pressure) — second leading cause; blood pressure control is central to kidney protection
 - [Diabetes Hub](/guides/diabetes-hub) — overview of diabetes types, complications, and management

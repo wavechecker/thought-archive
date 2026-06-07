@@ -452,6 +452,7 @@ patient should be referred — ask if you haven't been.
 
 ## Related Guides
 
+- [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
 - [Chest Pain — When to Worry and What to Do](/guides/chest-pain)
 - [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
