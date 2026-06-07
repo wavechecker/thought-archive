@@ -147,6 +147,7 @@ Headache is the most common neurological symptom. Migraine alone affects approxi
 Symptoms can be the entry point for neurological concern. These guides address common presenting problems.
 
 - [Dizziness: When to Worry](/guides/dizziness-when-to-worry) — distinguishing benign causes from neurological red flags; dizziness can also occur as vestibular migraine
+- [Syncope and Fainting: Causes, Warning Signs, and When to Seek Help](/guides/syncope-fainting-overview) — vasovagal syncope, orthostatic hypotension, and cardiac causes; how to distinguish syncope from seizure
 - [Delirium vs Dementia: How to Tell the Difference](/guides/delirium-vs-dementia) — sudden confusion in an older person is a medical emergency until proven otherwise
 
 ---

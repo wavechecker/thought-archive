@@ -440,6 +440,7 @@ will advise individually.
 - [Living With Heart Failure: Daily Care, Medicines, and Monitoring](/guides/living-with-heart-failure)
 - [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview)
 - [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview)
+- [Pacemakers and ICDs: What They Do and What to Expect](/guides/icd-and-pacemakers)
 - [Heart Circulation and Coronary Artery Disease](/guides/heart-circulation)
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
 - [Preventing Heart Disease — Lifestyle and Medical Screening](/guides/preventing-heart-disease)
