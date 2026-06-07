@@ -1,9 +1,0 @@
----
-import HeroPage from "@/components/HeroPage.astro";
-import { getHeroPageConfig } from "@/lib/hero-pages";
-
-const config = getHeroPageConfig("heart-circulation");
-if (!config) throw new Error("Hero page config not found: heart-circulation");
----
-
-<HeroPage config={config} />
