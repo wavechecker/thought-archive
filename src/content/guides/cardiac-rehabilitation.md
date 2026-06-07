@@ -436,6 +436,8 @@ will advise individually.
 ## Related Guides
 
 - [Heart Attack Treatment — What to Expect](/guides/heart-attack-treatment)
+- [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
+- [Living With Heart Failure: Daily Care, Medicines, and Monitoring](/guides/living-with-heart-failure)
 - [Heart Circulation and Coronary Artery Disease](/guides/heart-circulation)
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
 - [Preventing Heart Disease — Lifestyle and Medical Screening](/guides/preventing-heart-disease)
