@@ -161,6 +161,8 @@ Catheter ablation restores normal rhythm in many people, particularly with parox
 ## Related Guides
 
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
+- [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview)
+- [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview)
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
 - [Heart Attack Treatment — Emergency Care, Procedures, and Recovery](/guides/heart-attack-treatment)
 - [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)

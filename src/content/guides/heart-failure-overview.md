@@ -160,8 +160,8 @@ Heart failure results from conditions that damage or overwork the heart over tim
 
 **Other important causes:**
 - **Diabetes** — independently damages heart muscle and blood vessels
-- **Valve disease** — leaking or narrowed valves place extra strain on the heart
-- **Cardiomyopathy** — disease of the heart muscle itself (including dilated, hypertrophic, and peripartum cardiomyopathy)
+- **[Valve disease](/guides/heart-valve-disease-overview)** — leaking or narrowed valves place extra strain on the heart
+- **[Cardiomyopathy](/guides/cardiomyopathy-overview)** — disease of the heart muscle itself (including dilated, hypertrophic, and peripartum cardiomyopathy)
 - **Chronic kidney disease** — cardiorenal syndrome: heart and kidney disease worsen each other
 - **Excessive alcohol use** — alcoholic cardiomyopathy
 - **Certain chemotherapy drugs** — anthracyclines and other cardiotoxic agents
@@ -351,12 +351,14 @@ Yes, for most people with stable heart failure. Supervised exercise — particul
 
 - [Heart Failure Warning Signs: When Symptoms Need Urgent Care](/guides/heart-failure-warning-signs)
 - [Living With Heart Failure: Daily Care, Medicines, and Monitoring](/guides/living-with-heart-failure)
-- [Heart & Circulation — Guide Hub](/guides/heart-circulation)
+- [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview)
+- [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview)
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
+- [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
 - [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/high-blood-pressure)
 - [Heart Attack Treatment — Emergency Care, Procedures, and Recovery](/guides/heart-attack-treatment)
 - [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease)
-- [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
+- [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Palliative Care — Guide Hub](/guides/palliative-care)
 
 ---

@@ -321,10 +321,12 @@ Heart failure is serious, but many people live with it for years or decades. Mod
 
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
 - [Heart Failure Warning Signs: When Symptoms Need Urgent Care](/guides/heart-failure-warning-signs)
+- [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview)
+- [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview)
 - [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
-- [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease)
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
 - [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/high-blood-pressure)
+- [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease)
 - [Sleep Health Hub](/guides/sleep-health-hub)
 - [Palliative Care — Guide Hub](/guides/palliative-care)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)

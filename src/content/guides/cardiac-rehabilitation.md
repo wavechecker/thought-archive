@@ -438,10 +438,13 @@ will advise individually.
 - [Heart Attack Treatment — What to Expect](/guides/heart-attack-treatment)
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
 - [Living With Heart Failure: Daily Care, Medicines, and Monitoring](/guides/living-with-heart-failure)
+- [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview)
+- [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview)
 - [Heart Circulation and Coronary Artery Disease](/guides/heart-circulation)
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
 - [Preventing Heart Disease — Lifestyle and Medical Screening](/guides/preventing-heart-disease)
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
+- [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Stroke Recovery](/guides/stroke-symptoms-fast-response)
 
 ---
