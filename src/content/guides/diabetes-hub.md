@@ -175,6 +175,10 @@ Learn more: [CGM vs Finger Prick](/guides/cgm-vs-finger-prick) | [Continuous Glu
 - [Latent Autoimmune Diabetes (LADA)](/guides/latent-autoimmune-diabetes)
 - [Diabetes Hormones](/guides/diabetes-hormones)
 
+### Complications
+- [Long-Term Complications of Type 1 Diabetes](/guides/type-1-diabetes-long-term-complications) — retinopathy, nephropathy, neuropathy, and cardiovascular risk: why they occur, screening, and how consistent management reduces risk.
+- [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage) — peripheral neuropathy (feet and legs), autonomic neuropathy, pain management, foot care, and prevention through glucose control.
+
 ---
 
 ## Frequently Asked Questions

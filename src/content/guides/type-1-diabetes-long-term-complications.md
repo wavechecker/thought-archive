@@ -271,6 +271,8 @@ No. Which complications develop, and how severely, varies considerably between i
 ## Related Guides
 
 - [Type 1 Diabetes](/guides/type-1-diabetes)
+- [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage) — a dedicated guide to peripheral and autonomic neuropathy: symptoms, foot care, pain management, and prevention.
 - [Understanding HbA1c](/guides/understanding-hba1c)
 - [Blood Glucose Testing — How and When to Check](/guides/blood-glucose-testing)
 - [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration)
+- [Diabetes Hub](/guides/diabetes-hub) — central navigation for all diabetes content.
