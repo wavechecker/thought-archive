@@ -4,7 +4,7 @@ slug: "womens-health-hub"
 description: "Your central guide to women's health — covering hormones and menopause, perimenopause, PCOS, endometriosis, cervical and breast screening, bone health, fertility, and the symptoms women most commonly search for."
 category: "Guide Hubs"
 publishDate: "2026-06-01"
-updatedDate: "2026-06-01"
+updatedDate: "2026-06-08"
 draft: false
 tags:
   - women's health
@@ -129,6 +129,9 @@ Women's health does not exist in isolation. Several major health conditions disp
 - [Sleep Health Hub](/guides/sleep-health-hub) — Sleep and women's health are closely intertwined: perimenopause disrupts sleep, iron deficiency from heavy periods causes restless legs, and anxiety is more prevalent in women
 - [Depression: Symptoms, Causes, and Treatment](/guides/depression) — Depression is twice as common in women; perimenopause is a specific window of increased vulnerability
 - [Anxiety Disorders](/guides/anxiety) — Anxiety is more prevalent in women and worsens during the perimenopausal transition
+- [Postpartum Depression: Symptoms, Risks, and Treatment](/guides/postpartum-depression) — Affects approximately 10–15% of new mothers; includes baby blues, postnatal depression, postnatal anxiety, and the psychiatric emergency of postpartum psychosis
+- [Eating Disorders: Types, Warning Signs, and Treatment](/guides/eating-disorders-overview) — Eating disorders disproportionately affect women; complications include menstrual disruption, bone density loss, and cardiovascular risk
+- [PTSD: Symptoms, Causes, and Treatment](/guides/ptsd-overview) — Women are more likely than men to develop PTSD after trauma; sexual violence, domestic violence, and medical trauma are common triggers
 - [Obesity and Metabolic Health](/guides/obesity-basics) — Menopause drives visceral fat accumulation and metabolic change; PCOS independently elevates metabolic risk
 - [Type 2 Diabetes — Overview and Management](/guides/type-2-diabetes) — Women with PCOS have 3–7× the diabetes risk; postmenopausal hormonal changes further increase metabolic risk
 - [Cardiovascular Risk Assessment — Understanding Your Numbers](/guides/cardiovascular-risk-assessment) — Women's cardiovascular risk, lower than men's before menopause, converges with men's risk after it; the transition is a key intervention window

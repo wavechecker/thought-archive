@@ -4,7 +4,7 @@ slug: "heart-circulation"
 description: "Guides on common heart conditions, treatments, medications, and prevention — from angiography to atrial fibrillation, cardiac rehab, and blood pressure."
 category: "Guide Hubs"
 publishDate: "2025-08-20"
-updatedDate: "2026-06-07"
+updatedDate: "2026-06-08"
 hubKey: "Heart & Circulation"
 draft: false
 tags: ["cardiology", "heart disease", "arrhythmia", "angiography", "rehabilitation", "prevention", "patientguide", "hub"]
@@ -110,6 +110,7 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 - [Heart Palpitations: When to Worry](/guides/heart-palpitations) — Which palpitations are benign and which need investigation.
 - [Syncope and Fainting: Causes, Warning Signs, and When to Seek Help](/guides/syncope-fainting-overview) — Vasovagal syncope, orthostatic hypotension, arrhythmia-related fainting, and the red flags that require urgent assessment.
 - [Heart Attacks in Younger Adults: Hidden Causes](/guides/heart-attacks-younger-adults-causes) — Why heart attacks happen in people under 50, especially women.
+- [Panic Disorder: Panic Attacks, Symptoms, and Treatment](/guides/panic-disorder) — Panic attacks can cause chest tightness, palpitations, shortness of breath, and dizziness that closely mimic cardiac symptoms. However, new, severe, or unusual chest pain — particularly if crushing, radiating to the arm or jaw, or associated with fainting — should always be assessed urgently rather than attributed to panic. Both conditions can coexist.
 
 ### Structural Heart Disease
 - [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview) — Disease of the heart muscle itself: dilated, hypertrophic, and restrictive types, causes including genetics and alcohol, and treatments including ICDs.

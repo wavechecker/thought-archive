@@ -5,7 +5,7 @@ description: "Resources on mental health, from urgent crisis support to long-ter
 category: "Guide Hubs"
 hubKey: "Mental Health"
 publishDate: "2025-09-30"
-updatedDate: "2025-09-30"
+updatedDate: "2026-06-08"
 tags: ["mental health", "depression", "anxiety", "suicide prevention", "toolkit", "hub"]
 draft: false
 jsonld:
@@ -93,7 +93,7 @@ Mental health on PatientGuide is organised across three layers:
 
 **1. Crisis & Clinical Care** — What to do in an emergency, how to recognise serious conditions like depression and anxiety, and when and how to seek professional help. These guides prioritise safety first.
 
-**2. Conditions** — Evidence-based explanations of the most common mental health conditions: what they are, how they are diagnosed, and what treatments work. Currently covers [Depression](/guides/depression), [Anxiety](/guides/anxiety), and the global burden of mental illness via [Global Mental Health](/guides/global-mental-health).
+**2. Conditions** — Evidence-based explanations of the most common mental health conditions: what they are, how they are diagnosed, and what treatments work. Covers [Depression](/guides/depression), [Anxiety](/guides/anxiety), [PTSD](/guides/ptsd-overview), [Panic Disorder](/guides/panic-disorder), [Health Anxiety](/guides/health-anxiety), [Eating Disorders](/guides/eating-disorders-overview), [Postpartum Depression](/guides/postpartum-depression), and the global burden of mental illness via [Global Mental Health](/guides/global-mental-health).
 
 **3. The Mental Health Toolkit** — The lifestyle and behavioural layer. These are strategies anyone can use — as standalone habits or alongside clinical care. The [Mental Health Toolkit hub](/guides/mental-health-toolkit) acts as a doorway into seven individual guides covering sleep, exercise, nutrition, light, social connection, mindfulness, and reducing harmful inputs.
 
@@ -107,9 +107,21 @@ Immediate response matters in times of crisis. These guides cover first aid, sui
 
 - [Mental Health First Aid — The Basics](/guides/mental-health-first-aid)
 - [Suicide Prevention and Support](/guides/suicide-prevention)
+- [Global Mental Health: Key Facts and Urgent Needs](/guides/global-mental-health)
+
+---
+
+## Conditions
+
+Evidence-based guides to the most common mental health conditions — what they are, how they present, and what treatments work.
+
 - [Depression: Symptoms, Causes, and Treatment](/guides/depression)
 - [Anxiety Disorders](/guides/anxiety)
-- [Global Mental Health: Key Facts and Urgent Needs](/guides/global-mental-health)
+- [PTSD: Symptoms, Causes, and Treatment](/guides/ptsd-overview)
+- [Panic Disorder: Panic Attacks, Symptoms, and Treatment](/guides/panic-disorder)
+- [Health Anxiety: Symptoms, Reassurance Loops, and Treatment](/guides/health-anxiety)
+- [Eating Disorders: Types, Warning Signs, and Treatment](/guides/eating-disorders-overview)
+- [Postpartum Depression: Symptoms, Risks, and Treatment](/guides/postpartum-depression)
 
 ---
 
