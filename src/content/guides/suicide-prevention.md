@@ -40,6 +40,18 @@ schema:
       - "https://www.who.int/news-room/fact-sheets/detail/suicide"
       - "https://www.nimh.nih.gov/health/topics/suicide-prevention"
       - "https://medlineplus.gov/suicide.html"
+updatedDate: "2026-06-08"
+faq:
+  - q: "What are the warning signs that someone may be at risk of suicide?"
+    a: "Warning signs include expressing hopelessness or feeling like a burden, withdrawing from friends and family, talking about wanting to die, giving away possessions, and sudden calmness after a period of distress. Take any of these seriously and reach out."
+  - q: "Is it safe to ask someone directly if they are thinking about suicide?"
+    a: "Yes. Research shows that asking directly about suicidal thoughts does not increase risk and can open an important, potentially life-saving conversation. Ask calmly and listen without judgement."
+  - q: "What should I do if I am worried someone is at immediate risk?"
+    a: "Stay with the person, listen without minimising, and call emergency services or a crisis line. Remove access to potential means of self-harm if it is safe to do so. Do not leave them alone if you believe they are in immediate danger."
+  - q: "Where can I get urgent help in a mental health crisis?"
+    a: "Contact emergency services (000 in Australia, 911 in the US), a crisis line such as Lifeline (13 11 14), or take the person to the nearest emergency department. Many countries have dedicated mental health crisis teams."
+  - q: "Can suicide be prevented?"
+    a: "Yes. Evidence-based interventions — including crisis support, reducing access to means, mental health treatment, and strong social connection — have been shown to reduce suicide rates. Support and early help make a significant difference."
 ---
 
 ## Intro

@@ -1,12 +1,23 @@
----
+﻿---
 title: "Liver Cancer: Risks, Detection, and Treatment"
 slug: "liver-cancer"
 description: "Liver cancer often follows long-standing liver disease, including chronic hepatitis B or C and cirrhosis. Learn symptoms, tests, treatment, and prevention."
 category: "Cancer"
 publishDate: "2025-09-17"
-updatedDate: "2025-09-17"
+updatedDate: "2026-06-08"
 tags: ["liver cancer", "hepatocellular carcinoma", "HCC", "hepatitis B", "hepatitis C", "cirrhosis", "screening"]
 draft: false
+faq:
+  - q: "What causes most liver cancers?"
+    a: "Most primary liver cancers develop in people with underlying chronic liver disease — particularly cirrhosis from chronic hepatitis B, hepatitis C, or alcohol-related liver disease. Fatty liver disease and diabetes also increase risk."
+  - q: "What are the symptoms of liver cancer?"
+    a: "Symptoms can include pain or discomfort in the upper right abdomen, unexplained weight loss, fatigue, loss of appetite, jaundice (yellowing of the skin or eyes), and abdominal swelling. Early liver cancer often causes no symptoms."
+  - q: "How is liver cancer detected?"
+    a: "Liver cancer is often detected through surveillance ultrasound and AFP (alpha-fetoprotein) blood tests in high-risk individuals. Diagnosis is confirmed with CT, MRI, or biopsy."
+  - q: "Who should have regular liver cancer surveillance?"
+    a: "People with cirrhosis or chronic hepatitis B are generally recommended regular liver ultrasound every 6 months to detect liver cancer at an early, potentially treatable stage. Your specialist will advise if surveillance applies to you."
+  - q: "What treatment options are available for liver cancer?"
+    a: "Options depend on the stage and underlying liver function, and may include surgical resection, liver transplant (for eligible patients), ablation or embolisation procedures, targeted therapy, or immunotherapy. Palliative care is important for advanced disease."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "MedicalCondition"

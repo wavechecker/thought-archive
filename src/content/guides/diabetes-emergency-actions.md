@@ -1,17 +1,28 @@
----
+﻿---
 category: "Emergencies"
 title: "Diabetes Emergencies — Hypos, Highs, and Ketones"
 slug: "diabetes-emergency-actions"
 description: "Quick reference for severe hypos, diabetic ketoacidosis (DKA), and when to call an ambulance."
 publishDate: "2025-08-13"
-updatedDate: "2025-09-13"
+updatedDate: "2026-06-08"
 tags: ["diabetes", "type 1 diabetes", "DKA", "hypoglycemia", "emergency", "first aid"]
 related:
-  - /guides/blood-glucose-testing
-  - /guides/cgm-vs-finger-prick
-  - /guides/insulin-administration
-  - /guides/understanding-hba1c
+  - "[Blood Glucose Testing](/guides/blood-glucose-testing)"
+  - "[CGM vs Finger Prick](/guides/cgm-vs-finger-prick)"
+  - "[Insulin Administration](/guides/insulin-administration)"
+  - "[Understanding HbA1c](/guides/understanding-hba1c)"
 draft: false
+faq:
+  - q: "What should I do if someone with diabetes is unconscious from a hypo?"
+    a: "Do not give food or drink if the person cannot swallow. Use a glucagon injection or nasal spray if available and you are trained to do so. Call emergency services immediately."
+  - q: "When should someone with diabetes call an ambulance?"
+    a: "Call emergency services if the person is unconscious, having a seizure, unable to swallow, or not responding to initial treatment. Also seek urgent care if blood ketones are 3.0 mmol/L or above, or if vomiting prevents fluid intake."
+  - q: "Should insulin ever be stopped during illness or when not eating?"
+    a: "No. Basal insulin should never be stopped, even when not eating. Stopping insulin during illness greatly increases the risk of diabetic ketoacidosis (DKA)."
+  - q: "What are the warning signs of DKA?"
+    a: "Warning signs include high blood glucose with raised ketones, nausea or vomiting, abdominal pain, deep or rapid breathing, fruity-smelling breath, and drowsiness or confusion. DKA requires urgent hospital treatment."
+  - q: "What should someone with diabetes keep in an emergency kit?"
+    a: "Fast-acting glucose (tablets, gel, or juice), glucagon (check the expiry date), ketone testing supplies, insulin and injection equipment, and a written emergency plan with contact numbers."
 ---
 
 ## Intro

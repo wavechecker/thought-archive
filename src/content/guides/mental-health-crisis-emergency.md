@@ -1,12 +1,23 @@
----
+﻿---
 title: "Mental Health Crisis — First Aid Guide"
 slug: "mental-health-crisis-emergency"
 description: "How to recognize and respond to a mental health crisis, including suicidal thoughts, severe panic, or psychosis, until professional help arrives."
 category: "Emergencies"
 publishDate: "2025-09-13"
-updatedDate: "2025-09-13"
+updatedDate: "2026-06-08"
 tags: ["mental health", "crisis", "suicide prevention", "emergency", "first aid"]
 draft: false
+faq:
+  - q: "How do I know if someone is in a mental health crisis?"
+    a: "Warning signs include talking about wanting to die or self-harm, expressing hopelessness, severe panic that is not settling, extreme withdrawal or confusion, and signs of psychosis such as hallucinations or disorganised thinking."
+  - q: "Is it safe to ask someone directly if they are thinking about suicide?"
+    a: "Yes. Asking directly does not increase risk — research consistently shows it can open an important conversation. Stay calm, listen without judgement, and take what they say seriously."
+  - q: "When should I call emergency services for a mental health crisis?"
+    a: "Call emergency services if the person has a specific plan to end their life, is at immediate risk of harm to themselves or others, or is severely confused and unable to keep themselves safe."
+  - q: "What should I do while waiting for help?"
+    a: "Stay with the person, remain calm, listen without judgement, and gently remove access to means of self-harm if it is safe to do so. Do not leave them alone if you believe they are at immediate risk."
+  - q: "What if the person in crisis tells me to leave?"
+    a: "If you believe they are at risk of immediate harm, stay nearby and call for professional help. Being present matters more than giving space in an acute safety situation."
 ---
 
 ## Intro

@@ -1,12 +1,23 @@
----
+﻿---
 title: "Seizures — First Aid Guide"
 slug: "seizures"
 description: "What to do if someone is having a seizure, when to call emergency services, and how to keep them safe until it stops."
 category: "Emergencies"
 publishDate: "2025-09-13"
-updatedDate: "2025-09-13"
+updatedDate: "2026-06-08"
 tags: ["seizures", "epilepsy", "first aid", "emergency", "neurology"]
 draft: false
+faq:
+  - q: "What should I do if someone is having a seizure?"
+    a: "Stay calm, stay with the person, move hazards away, and put something soft under their head. Do not restrain them or put anything in their mouth. Note the time. Once it ends, place them in the recovery position."
+  - q: "When should I call emergency services for a seizure?"
+    a: "Call emergency services if the seizure lasts longer than 5 minutes, another seizure begins before the person recovers, it is their first-ever seizure, breathing does not return to normal after the seizure ends, or the seizure happens in water."
+  - q: "Should I put something in the person's mouth to stop them biting their tongue?"
+    a: "No. Never put anything in the mouth of someone having a seizure. It can cause choking, broken teeth, or injury to you or them."
+  - q: "What happens after a seizure ends?"
+    a: "Confusion, fatigue, and disorientation are normal after a seizure — this is called the postictal phase. Place the person in the recovery position, stay with them, and reassure them until they are fully alert."
+  - q: "Can seizures be prevented?"
+    a: "People with epilepsy can reduce seizure frequency by taking prescribed medication consistently and avoiding known triggers. Having a seizure action plan and wearing a medical alert bracelet also improves safety."
 ---
 
 ## Intro

@@ -1,12 +1,23 @@
----
+﻿---
 title: "Tuberculosis (TB): Causes, Symptoms, and Treatment"
 slug: "tuberculosis"
 description: "Tuberculosis is a serious bacterial infection that primarily affects the lungs. Learn about transmission, symptoms, diagnosis, prevention, and treatment."
 category: "Infectious Diseases"
 publishDate: "2025-09-04"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["tuberculosis", "TB", "infection", "antibiotics", "public health"]
 draft: false
+faq:
+  - q: "How does tuberculosis spread?"
+    a: "TB spreads through the air when a person with active pulmonary TB coughs, sneezes, or speaks. Close, prolonged contact with an infectious person in an enclosed space carries the highest risk."
+  - q: "What is the difference between latent and active tuberculosis?"
+    a: "Latent TB means the bacteria are present in the body but inactive and not causing illness or spreading to others. Active TB causes symptoms and is infectious. People with latent TB can develop active TB later, particularly if their immune system is weakened."
+  - q: "What are the symptoms of active tuberculosis?"
+    a: "Symptoms include a persistent cough lasting more than 2–3 weeks, unexplained weight loss, night sweats, fever, fatigue, and in some cases coughing up blood."
+  - q: "How long does tuberculosis treatment take?"
+    a: "Standard TB treatment requires a combination of antibiotics taken for at least 6 months. Drug-resistant forms may require longer treatment with different medicines. Completing the full course is essential to prevent relapse and drug resistance."
+  - q: "Can tuberculosis be prevented?"
+    a: "The BCG vaccine offers partial protection, particularly against severe forms of TB in infants and young children. Prompt diagnosis and treatment of active cases, and treatment of high-risk latent infections, also reduce spread."
 ---
 
 ## Overview

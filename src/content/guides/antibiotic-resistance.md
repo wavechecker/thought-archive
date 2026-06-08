@@ -1,12 +1,23 @@
----
+﻿---
 title: "Antibiotic Resistance"
 slug: "antibiotic-resistance"
 description: "When bacteria and fungi no longer respond to the drugs meant to kill them, infections become harder — sometimes impossible — to treat."
 category: "Infectious Diseases"
 publishDate: "2025-09-29"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["antibiotics", "drug resistance", "infectious diseases"]
 draft: false
+faq:
+  - q: "What is antibiotic resistance?"
+    a: "Antibiotic resistance occurs when bacteria evolve to survive exposure to antibiotics that would previously have killed them. It develops when antibiotics are overused or misused, giving resistant bacteria a survival advantage."
+  - q: "Why does completing a course of antibiotics matter?"
+    a: "Stopping antibiotics early — even when you feel better — can leave surviving bacteria in the body. These are more likely to be resistant strains, which may then multiply and spread. Completing the full prescribed course helps prevent this."
+  - q: "Can I take leftover antibiotics for a new infection?"
+    a: "No. Antibiotics are prescribed for specific types of infection. Using leftover antibiotics is unlikely to treat a new infection effectively and contributes to resistance. Always see a doctor before starting antibiotics."
+  - q: "How does antibiotic use in farming affect human health?"
+    a: "Antibiotics are widely used in livestock, sometimes to promote growth rather than treat illness. This drives resistance in bacteria that can be transmitted to humans through food, water, and the environment."
+  - q: "What can individuals do to reduce antibiotic resistance?"
+    a: "Only take antibiotics when prescribed by a doctor, complete the full course, never share antibiotics, and vaccinate against preventable infections. Good hand hygiene and food safety also reduce the spread of resistant bacteria."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "Article"

@@ -5,6 +5,18 @@ category: "General Health"
 publishDate: "2025-08-30"
 draft: false
 tags: ["back pain", "low back pain", "sciatica", "pain", "rehab", "patientguide"]
+updatedDate: "2026-06-08"
+faq:
+  - q: "Should I rest in bed for chronic back pain?"
+    a: "No. Bed rest worsens chronic back pain over time. Staying active within a comfortable range, walking daily, and gradually resuming normal activities leads to better outcomes than prolonged rest."
+  - q: "What are the red flag symptoms that require urgent medical assessment?"
+    a: "Seek urgent care for new weakness or numbness in the legs, loss of bladder or bowel control, saddle area numbness, back pain after significant trauma, unexplained weight loss, fever, or a history of cancer."
+  - q: "What treatments work best for chronic back pain?"
+    a: "Evidence supports a combination of exercise therapy, education about pain, pacing activity, and psychological support where needed. Medications and procedures have a limited role and are generally used alongside — not instead of — rehabilitation."
+  - q: "Do I need an MRI for back pain?"
+    a: "Imaging is not routinely needed unless red flags are present or pain remains severely disabling after a trial of conservative care. Most chronic back pain does not have a structural cause that requires surgical treatment."
+  - q: "How long does chronic back pain last?"
+    a: "Chronic back pain is defined as lasting more than 12 weeks. Outcomes vary widely — many people improve significantly with active self-management, while some experience persistent symptoms that require ongoing care."
 ---
 
 ## Intro

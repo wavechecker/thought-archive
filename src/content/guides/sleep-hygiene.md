@@ -6,6 +6,18 @@ category: "Mental Health"
 publishDate: "2025-10-01"
 tags: ["sleep hygiene", "insomnia prevention", "sleep habits", "circadian rhythm"]
 draft: false
+updatedDate: "2026-06-08"
+faq:
+  - q: "What is sleep hygiene?"
+    a: "Sleep hygiene refers to a set of daily habits and environmental factors that support consistent, restorative sleep — including regular sleep and wake times, limiting caffeine and screens before bed, and creating a comfortable sleep environment."
+  - q: "What time should I stop caffeine to sleep better?"
+    a: "Caffeine has a half-life of about 5–7 hours. Most sleep experts recommend avoiding caffeine in the 6–8 hours before bedtime. For people sensitive to caffeine, cutting off earlier may be necessary."
+  - q: "Does blue light from screens actually disrupt sleep?"
+    a: "Yes. Blue light from screens suppresses melatonin production, which signals the brain that it is still daytime. Reducing bright screen use in the hour before bed, or using night mode filters, can support the natural wind-down process."
+  - q: "Can sleep hygiene alone fix insomnia?"
+    a: "Sleep hygiene helps most people sleep better and is a useful foundation. For persistent insomnia (lasting more than a few weeks), cognitive behavioural therapy for insomnia (CBT-I) is the recommended first-line treatment and is more effective than sleep hygiene alone."
+  - q: "Why is a consistent sleep schedule important?"
+    a: "Your body's internal clock (circadian rhythm) thrives on consistency. Going to bed and waking up at the same time each day — including weekends — reinforces your body's sleep-wake cycle and improves sleep quality over time."
 
 # JSON-LD (Article + FAQPage + Breadcrumbs + HowTo)
 jsonLd:

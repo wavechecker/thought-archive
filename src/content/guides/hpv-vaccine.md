@@ -1,12 +1,23 @@
----
+﻿---
 title: "HPV Vaccine"
 slug: "hpv-vaccine"
 description: "Guide to the HPV vaccine, its role in preventing cervical and other cancers, and safety evidence."
 category: "Vaccination"
 publishDate: "2025-08-26"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["HPV", "vaccination", "cancer prevention", "sexual health", "public health", "patientguide"]
 draft: false
+faq:
+  - q: "What does the HPV vaccine protect against?"
+    a: "The HPV vaccine protects against the high-risk HPV types most commonly responsible for cervical cancer (particularly HPV-16 and HPV-18), as well as several other HPV-related cancers (anal, penile, oropharyngeal, vulvar) and genital warts."
+  - q: "When is the HPV vaccine most effective?"
+    a: "The vaccine is most effective when given before first sexual activity, before potential HPV exposure. Most programs target adolescents aged 9–14. It can still provide benefit for older unvaccinated individuals, but protection may be lower."
+  - q: "Is the HPV vaccine safe?"
+    a: "Yes. Extensive post-marketing safety monitoring across tens of millions of doses worldwide has confirmed the HPV vaccine is safe. The most common side effects are mild and temporary: soreness at the injection site, low-grade fever, and fatigue."
+  - q: "Do boys need the HPV vaccine?"
+    a: "Yes. The HPV vaccine is recommended for all adolescents, not just girls. Boys are at risk of HPV-related cancers (anal, penile, throat) and protecting them also contributes to reducing HPV transmission in the community."
+  - q: "Should I still have cervical screening after HPV vaccination?"
+    a: "Yes. HPV vaccines do not protect against all high-risk HPV types, and many vaccinated people had prior HPV exposure. Regular cervical screening remains important even for vaccinated individuals."
 ---
 
 # HPV Vaccine

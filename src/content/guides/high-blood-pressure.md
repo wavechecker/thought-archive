@@ -1,11 +1,22 @@
----
+﻿---
 title: "High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment"
 description: "A clear guide to high blood pressure, including causes, risks, symptoms, and how it is treated."
 category: "Heart & Circulation"
 publishDate: "2026-04-10"
-updatedDate: "2026-04-10"
+updatedDate: "2026-06-08"
 tags: ["hypertension", "blood pressure", "heart health", "cardiovascular risk"]
 draft: false
+faq:
+  - q: "What blood pressure reading is considered high?"
+    a: "Blood pressure of 130/80 mmHg or above is generally classified as hypertension. A reading below 120/80 is considered normal. Your doctor can advise on what target is appropriate for you."
+  - q: "Does high blood pressure cause symptoms?"
+    a: "Usually not. Hypertension is often called the 'silent condition' because most people have no symptoms until complications occur. Regular monitoring is important even if you feel well."
+  - q: "What causes high blood pressure?"
+    a: "Most cases are primary hypertension with no single cause, but contributing factors include genetics, age, excess salt intake, overweight, inactivity, alcohol, and stress. A small proportion have a secondary cause such as kidney disease or a hormonal condition."
+  - q: "How is high blood pressure treated?"
+    a: "Treatment typically combines lifestyle changes — reducing salt and alcohol, increasing physical activity, maintaining a healthy weight — with medication when needed. Several effective medication classes are available, and the right choice depends on individual factors."
+  - q: "What health problems can untreated high blood pressure cause?"
+    a: "Sustained high blood pressure damages blood vessels and increases the risk of heart attack, stroke, heart failure, kidney disease, and vision problems."
 ---
 
 ## Intro

@@ -1,12 +1,23 @@
----
+﻿---
 title: "How Vaccines Work"
 slug: "how-vaccines-work"
 description: "A primer on the immune system, vaccine mechanisms, and how immunisation protects both individuals and communities."
 category: "Vaccination"
 publishDate: "2025-09-05"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["immunology", "vaccines", "public health"]
 draft: false
+faq:
+  - q: "How do vaccines prevent disease?"
+    a: "Vaccines train the immune system to recognise and respond to a specific pathogen by introducing a harmless piece of it — a protein, weakened form, or genetic instruction. This builds immunological memory without causing the disease itself."
+  - q: "What is the difference between live attenuated and inactivated vaccines?"
+    a: "Live attenuated vaccines use a weakened form of the pathogen and tend to produce strong, long-lasting immunity (e.g., measles, yellow fever). Inactivated vaccines use a killed pathogen and are often safer for immunocompromised individuals but may require booster doses."
+  - q: "What is herd immunity?"
+    a: "Herd immunity occurs when enough people in a community are immune — through vaccination or prior infection — that an infection cannot spread easily, indirectly protecting those who cannot be vaccinated."
+  - q: "Do vaccines cause the disease they protect against?"
+    a: "No. Vaccines do not cause the full disease. Some vaccines may cause mild, temporary symptoms (like a low-grade fever) as the immune system responds, but this is not the disease itself."
+  - q: "Are vaccine ingredients such as aluminium salts dangerous?"
+    a: "No. Aluminium salts (adjuvants) are used in small amounts to boost the immune response. Extensive safety data demonstrates that the quantities in vaccines are not harmful. The amount is far lower than what people are exposed to through food and environment."
 ---
 
 # How Vaccines Work

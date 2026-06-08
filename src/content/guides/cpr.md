@@ -1,12 +1,23 @@
----
+﻿---
 title: "CPR — First Aid Guide"
 slug: "cpr"
 description: "How to perform cardiopulmonary resuscitation (CPR) in an emergency, with step-by-step guidance for adults, children, and infants."
 category: "Emergencies"
 publishDate: "2025-09-13"
-updatedDate: "2025-09-13"
+updatedDate: "2026-06-08"
 tags: ["CPR", "resuscitation", "cardiac arrest", "first aid", "emergency"]
 draft: false
+faq:
+  - q: "What if I am not CPR-trained — should I still attempt it?"
+    a: "Yes. Hands-only CPR (chest compressions without rescue breaths) is effective and anyone can do it. Push hard and fast in the centre of the chest at about 100–120 compressions per minute until emergency services arrive."
+  - q: "How do I know if someone needs CPR?"
+    a: "Start CPR if the person is unresponsive and not breathing normally. Gasping is not normal breathing. If unsure, start CPR — doing something is safer than doing nothing."
+  - q: "What is the correct compression depth for adult CPR?"
+    a: "For adults, compress the chest 5–6 cm (2–2.5 inches) at 100–120 compressions per minute. Push hard and fast, and let the chest fully recoil between compressions."
+  - q: "Should I use an AED if one is available?"
+    a: "Yes. Send someone to find an AED immediately. Turn it on and follow the voice prompts. AEDs are designed for use without prior training and improve survival from cardiac arrest."
+  - q: "Is CPR different for children and infants?"
+    a: "Yes. For children (age 1–8), use one hand and compress about 5 cm. For infants (under 1 year), use two fingers and compress about 4 cm. Both use a 30:2 compression-to-breath ratio, or compressions only if untrained."
 ---
 
 ## Intro

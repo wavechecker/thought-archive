@@ -5,6 +5,18 @@ category: "Heart & Circulation"
 publishDate: "2025-08-30"
 draft: false
 tags: ["angiography", "coronary", "heart", "patientguide"]
+updatedDate: "2026-06-08"
+faq:
+  - q: "What is coronary angiography used for?"
+    a: "Coronary angiography is a diagnostic procedure that uses contrast dye and X-ray imaging to visualise the coronary arteries. It is used to investigate chest pain, assess suspected coronary artery disease, plan treatment (such as stents or bypass surgery), and evaluate complications after a heart attack."
+  - q: "Is coronary angiography painful?"
+    a: "The procedure is generally not painful. A local anaesthetic numbs the insertion site (wrist or groin), and most people experience only mild pressure or warmth when the dye is injected."
+  - q: "How long does coronary angiography take?"
+    a: "The procedure itself usually takes 30–60 minutes. You will spend additional time before (preparation) and after (observation). Many patients go home the same day."
+  - q: "What are the risks of coronary angiography?"
+    a: "Coronary angiography is generally safe. Risks include bruising or bleeding at the insertion site, allergic reaction to the contrast dye, and — rarely — more serious events such as stroke, heart attack, or artery damage. Your cardiologist will discuss your individual risk."
+  - q: "What happens after coronary angiography?"
+    a: "You will rest for several hours while the insertion site is monitored. You should avoid heavy lifting for a few days and report any chest pain, significant bleeding, or swelling at the site immediately. Results are usually discussed before discharge or at a follow-up appointment."
 ---
 
 ## Intro

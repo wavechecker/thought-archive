@@ -1,12 +1,23 @@
----
+﻿---
 title: "Exercise and Mental Health"
 slug: "exercise"
 description: "Why physical activity is one of the most effective non-drug treatments for depression and anxiety."
 category: "Mental Health"
 publishDate: "2025-09-30"
-updatedDate: "2025-09-30"
+updatedDate: "2026-06-08"
 tags: ["sleep", "mental health", "depression", "resilience", "patientguide"]
 draft: false
+faq:
+  - q: "How does exercise improve mental health?"
+    a: "Exercise reduces stress hormones, increases endorphins, supports neuroplasticity, and improves sleep — all of which contribute to better mood. It is one of the most consistently evidence-backed non-drug treatments for depression and anxiety."
+  - q: "How much exercise is needed to help with depression or anxiety?"
+    a: "Even 20–30 minutes of brisk walking most days can produce meaningful mental health benefits. Most guidelines recommend at least 150 minutes of moderate-intensity activity per week. Consistency matters more than intensity."
+  - q: "Can exercise replace medication for depression?"
+    a: "Exercise can reduce symptoms of mild-to-moderate depression and anxiety, and is often used alongside therapy or medication. For moderate-to-severe depression, it is generally used as part of a broader treatment plan rather than as the sole treatment."
+  - q: "What type of exercise is best for mental health?"
+    a: "Both aerobic exercise (walking, cycling, swimming) and resistance training have evidence supporting mental health benefits. The best exercise is one you enjoy and will do consistently. Social exercise such as group classes can add additional benefits."
+  - q: "What if I struggle to motivate myself to exercise when I'm depressed?"
+    a: "Low motivation is a symptom of depression, not a character flaw. Starting very small — a 10-minute walk, or any movement at all — is valid. Building a habit gradually, with support if needed, is more sustainable than waiting to 'feel like it'."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "WebPage"

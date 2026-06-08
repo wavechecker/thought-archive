@@ -5,6 +5,18 @@ category: "Diabetes"
 publishDate: "2025-08-30"
 draft: false
 tags: ["DKA", "type 1 diabetes", "ketones", "hyperglycaemia", "emergency", "patientguide"]
+updatedDate: "2026-06-08"
+faq:
+  - q: "What are the warning signs of diabetic ketoacidosis (DKA)?"
+    a: "Warning signs include high blood glucose with raised ketones, nausea or vomiting, abdominal pain, deep and rapid breathing, fruity-smelling breath, and drowsiness or confusion. DKA is a medical emergency."
+  - q: "When should someone with DKA go to hospital immediately?"
+    a: "Go to the emergency department if blood ketones are 3.0 mmol/L or above, if there is persistent vomiting, severe abdominal pain, drowsiness, or confusion, or if you cannot keep fluids down. Children and pregnant people should have a lower threshold to attend."
+  - q: "Should I stop insulin if I am vomiting and not eating?"
+    a: "No. Never stop basal insulin, even if you are not eating. Stopping insulin increases the risk of DKA. Follow your sick-day plan and seek urgent care if vomiting prevents fluid intake."
+  - q: "Can I exercise when I have high blood glucose and ketones?"
+    a: "No. Exercise with elevated ketones can worsen DKA. Rest, hydrate, give correction insulin as directed, and assess whether you need emergency care."
+  - q: "What treatment is given for DKA in hospital?"
+    a: "Hospital treatment typically includes IV fluids, insulin infusion, electrolyte replacement (particularly potassium), and treatment of any underlying cause such as infection or pump failure."
 ---
 
 ## Intro

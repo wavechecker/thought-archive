@@ -1,12 +1,23 @@
----
+﻿---
 title: "COVID-19 Vaccines: What We Know, What We Don’t"
 slug: "covid-19-vaccines"
 description: "mRNA vaccines changed the course of the pandemic. Understanding their benefits, limitations, and uncertainties is key to informed choice."
 category: "Infectious Diseases"
 publishDate: "2025-09-04"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["COVID-19", "vaccines", "mRNA", "safety", "public health"]
 draft: false
+faq:
+  - q: "Are COVID-19 vaccines still recommended?"
+    a: "Yes. Current guidance in most countries recommends COVID-19 vaccination for adults, particularly high-risk groups including older adults, immunocompromised individuals, and those with chronic health conditions. Recommendations on boosters and updated vaccines continue to evolve."
+  - q: "How do COVID-19 vaccines work?"
+    a: "The most widely used COVID-19 vaccines are mRNA vaccines that instruct cells to make the spike protein of SARS-CoV-2, triggering an immune response without using live virus. Other types include viral vector and protein subunit vaccines."
+  - q: "Do COVID-19 vaccines prevent infection entirely?"
+    a: "COVID-19 vaccines primarily reduce the risk of severe illness, hospitalisation, and death rather than preventing all infections. Protection against infection has waned with newer variants, though protection against serious outcomes remains more durable."
+  - q: "What are the main side effects of COVID-19 vaccines?"
+    a: "Common side effects include injection-site soreness, fatigue, headache, and mild fever — typically lasting one to two days. Serious adverse events, such as rare cases of myocarditis in young males, are monitored closely by safety surveillance systems."
+  - q: "Should children get the COVID-19 vaccine?"
+    a: "Recommendations vary by country and continue to evolve. Many countries recommend vaccination for children with underlying health conditions that increase risk. Speak with your doctor or consult your national health authority for current guidance."
 ---
 
 ## Overview

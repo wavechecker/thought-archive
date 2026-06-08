@@ -6,6 +6,18 @@ category: "Heart & Circulation"
 publishDate: "2025-09-09"
 tags: ["metabolic syndrome", "obesity", "diabetes", "heart disease", "prevention", "cardiovascular risk"]
 draft: false
+updatedDate: "2026-06-08"
+faq:
+  - q: "What is metabolic syndrome?"
+    a: "Metabolic syndrome is a cluster of at least three interconnected risk factors — high waist circumference, high blood pressure, high fasting blood glucose, high triglycerides, and low HDL cholesterol — that together significantly raise the risk of heart disease, stroke, and type 2 diabetes."
+  - q: "Does metabolic syndrome cause symptoms?"
+    a: "Usually not. Most components of metabolic syndrome are detected through blood tests and measurements rather than symptoms. Excess abdominal fat is the most visible sign."
+  - q: "Can metabolic syndrome be reversed?"
+    a: "Yes, in many cases. Lifestyle changes — weight loss, increased physical activity, improved diet, and reduced alcohol — can normalise the individual components and reduce overall cardiovascular risk."
+  - q: "How is metabolic syndrome diagnosed?"
+    a: "Diagnosis requires three or more of the five criteria: elevated waist circumference, high blood pressure, elevated fasting glucose, elevated triglycerides, and low HDL cholesterol. Your doctor will assess these with a physical examination and blood tests."
+  - q: "Who is most at risk of metabolic syndrome?"
+    a: "Risk is higher with excess abdominal weight, physical inactivity, a diet high in refined carbohydrates and processed foods, family history of diabetes or heart disease, older age, and certain ethnic backgrounds."
 ---
 
 ## Intro
