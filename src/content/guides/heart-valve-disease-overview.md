@@ -358,6 +358,8 @@ Most people with mild or moderate valve disease can exercise safely. Severe symp
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
 - [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview)
+- [Echocardiography Explained: What an Echo Shows and What to Expect](/guides/echocardiography-explained)
+- [Syncope and Fainting: Causes, Warning Signs, and When to Seek Help](/guides/syncope-fainting-overview)
 - [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)

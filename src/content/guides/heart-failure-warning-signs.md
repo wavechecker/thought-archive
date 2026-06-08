@@ -253,6 +253,7 @@ If you cannot reach your usual care team and your symptoms are worsening signifi
 - [Living With Heart Failure: Daily Care, Medicines, and Monitoring](/guides/living-with-heart-failure)
 - [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview)
 - [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview)
+- [Syncope and Fainting: Causes, Warning Signs, and When to Seek Help](/guides/syncope-fainting-overview)
 - [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of-a-heart-attack)
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)

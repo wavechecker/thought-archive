@@ -323,6 +323,8 @@ Heart failure is serious, but many people live with it for years or decades. Mod
 - [Heart Failure Warning Signs: When Symptoms Need Urgent Care](/guides/heart-failure-warning-signs)
 - [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview)
 - [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview)
+- [Echocardiography Explained: What an Echo Shows and What to Expect](/guides/echocardiography-explained)
+- [Pacemakers and ICDs: What They Do and What to Expect](/guides/icd-and-pacemakers)
 - [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
 - [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/high-blood-pressure)

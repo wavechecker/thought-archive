@@ -108,14 +108,17 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation) — The most common arrhythmia: causes, stroke risk, rate vs rhythm control, and anticoagulation.
 - [Angina — Symptoms & Management](/guides/angina-symptoms-management) — Stable angina, unstable angina, and how each is managed.
 - [Heart Palpitations: When to Worry](/guides/heart-palpitations) — Which palpitations are benign and which need investigation.
+- [Syncope and Fainting: Causes, Warning Signs, and When to Seek Help](/guides/syncope-fainting-overview) — Vasovagal syncope, orthostatic hypotension, arrhythmia-related fainting, and the red flags that require urgent assessment.
 - [Heart Attacks in Younger Adults: Hidden Causes](/guides/heart-attacks-younger-adults-causes) — Why heart attacks happen in people under 50, especially women.
 
 ### Structural Heart Disease
 - [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview) — Disease of the heart muscle itself: dilated, hypertrophic, and restrictive types, causes including genetics and alcohol, and treatments including ICDs.
 - [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview) — Aortic stenosis, mitral regurgitation, valve repair and replacement, and TAVI explained for patients.
+- [Pacemakers and ICDs: What They Do and What to Expect](/guides/icd-and-pacemakers) — Pacemakers, implantable cardioverter-defibrillators, and cardiac resynchronisation therapy: why they are used, implantation, follow-up, and living with a device.
 
 ### Diagnosis and Procedures
 - [Understanding Coronary Angiography](/guides/understanding-coronary-angiography) — How cardiac catheterisation works, what to expect on the day, and interpreting results.
+- [Echocardiography Explained: What an Echo Shows and What to Expect](/guides/echocardiography-explained) — How cardiac ultrasound works, the difference between TTE, TOE, and stress echo, ejection fraction explained, and what to expect on the day.
 - [Coronary Artery Calcium Score](/guides/coronary-artery-calcium-score) — A CT scan that measures calcium deposits in coronary arteries, providing an early indicator of plaque burden and heart attack risk.
 - [ApoB vs LDL Cholesterol — Which Matters More?](/guides/apob-vs-ldl-cholesterol) — Why ApoB may be a more accurate marker of cardiovascular risk than standard LDL, and when it changes clinical decisions.
 
