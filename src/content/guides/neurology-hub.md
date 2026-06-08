@@ -3,7 +3,7 @@ title: "Neurology Hub: Brain, Nerves, and Neurological Conditions"
 description: "Central navigation for all PatientGuide neurology content — covering stroke, dementia, movement disorders, epilepsy, multiple sclerosis, and neurological symptoms."
 category: "Guide Hubs"
 publishDate: "2026-06-02"
-updatedDate: "2026-06-03"
+updatedDate: "2026-06-08"
 slug: "neurology-hub"
 draft: false
 tags: ["neurology", "brain health", "stroke", "dementia", "Parkinson's disease", "multiple sclerosis", "epilepsy", "seizures", "TIA", "Huntington's disease", "neuropathy", "headache", "cognitive decline", "movement disorders"]
@@ -149,6 +149,7 @@ Symptoms can be the entry point for neurological concern. These guides address c
 - [Dizziness: When to Worry](/guides/dizziness-when-to-worry) — distinguishing benign causes from neurological red flags; dizziness can also occur as vestibular migraine
 - [Syncope and Fainting: Causes, Warning Signs, and When to Seek Help](/guides/syncope-fainting-overview) — vasovagal syncope, orthostatic hypotension, and cardiac causes; how to distinguish syncope from seizure
 - [Delirium vs Dementia: How to Tell the Difference](/guides/delirium-vs-dementia) — sudden confusion in an older person is a medical emergency until proven otherwise
+- [Health Anxiety: Symptoms, Reassurance Loops, and Treatment](/guides/health-anxiety) — health anxiety frequently attaches to neurological concerns such as headaches, dizziness, numbness, or tingling. This can amplify distress around neurological symptoms significantly. However, new, progressive, or clearly changing neurological signs still warrant medical assessment — health anxiety does not confer immunity to neurological disease.
 
 ---
 

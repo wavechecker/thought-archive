@@ -4,7 +4,7 @@ slug: "mens-health-hub"
 description: "Your central guide to men's health — covering testosterone, erectile dysfunction, prostate health, testicular cancer, men's mental health, cardiovascular disease, sleep apnoea, metabolic health, and the key screenings every man should know about."
 category: "Guide Hubs"
 publishDate: "2026-06-02"
-updatedDate: "2026-06-02"
+updatedDate: "2026-06-08"
 draft: false
 tags:
   - men's health
@@ -90,6 +90,9 @@ How depression and anxiety present in men (irritability, anger, risk-taking, sub
 
 ### [Depression — Symptoms, Causes, and Treatment](/guides/depression)
 A comprehensive guide to depression, including clinical criteria, evidence-based treatments (CBT, antidepressants, exercise, lifestyle), and when to seek urgent help.
+
+### [PTSD: Symptoms, Causes, and Treatment](/guides/ptsd-overview)
+PTSD can follow assault, accidents, occupational trauma, domestic violence, war, or medical events. In men, trauma-related symptoms often present as irritability, anger, sleep disturbance, withdrawal, increased alcohol use, or risk-taking behaviour — patterns that can be mistaken for personality change or conduct problems rather than recognised as trauma responses. Evidence-based treatments include EMDR, trauma-focused CBT, and medication.
 
 ### [Suicide Prevention — Resources and Warning Signs](/guides/suicide-prevention)
 Warning signs of suicidal crisis, how to start a conversation, and Australian crisis support resources including Lifeline (13 11 14) and Beyond Blue (1300 22 4636).
