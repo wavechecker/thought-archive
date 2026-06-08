@@ -110,6 +110,10 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 - [Heart Palpitations: When to Worry](/guides/heart-palpitations) — Which palpitations are benign and which need investigation.
 - [Heart Attacks in Younger Adults: Hidden Causes](/guides/heart-attacks-younger-adults-causes) — Why heart attacks happen in people under 50, especially women.
 
+### Structural Heart Disease
+- [Cardiomyopathy: Symptoms, Causes, Diagnosis, and Treatment](/guides/cardiomyopathy-overview) — Disease of the heart muscle itself: dilated, hypertrophic, and restrictive types, causes including genetics and alcohol, and treatments including ICDs.
+- [Heart Valve Disease: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-valve-disease-overview) — Aortic stenosis, mitral regurgitation, valve repair and replacement, and TAVI explained for patients.
+
 ### Diagnosis and Procedures
 - [Understanding Coronary Angiography](/guides/understanding-coronary-angiography) — How cardiac catheterisation works, what to expect on the day, and interpreting results.
 - [Coronary Artery Calcium Score](/guides/coronary-artery-calcium-score) — A CT scan that measures calcium deposits in coronary arteries, providing an early indicator of plaque burden and heart attack risk.
