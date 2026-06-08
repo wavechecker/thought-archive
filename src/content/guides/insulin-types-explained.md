@@ -3,8 +3,20 @@ title: "Insulin Types Explained"
 description: "A guide to the main types of insulin, how they work, onset and duration, and how they fit into diabetes care."
 category: "Diabetes"
 publishDate: "2025-08-30"
+updatedDate: "2026-06-08"
 draft: false
 tags: ["insulin", "diabetes", "type 1 diabetes", "type 2 diabetes", "patientguide"]
+faq:
+  - q: "What are the main types of insulin?"
+    a: "The main categories are rapid-acting (onset 10–30 min, e.g., NovoRapid, Humalog), short-acting (onset 30–60 min), intermediate-acting, and long-acting basal insulin (onset 1–4 hours, lasting 12–24+ hours, e.g., Lantus, Levemir, Tresiba)."
+  - q: "What is the difference between rapid-acting and short-acting insulin?"
+    a: "Rapid-acting analogues act faster and for a shorter duration than traditional short-acting (regular) insulin. Rapid-acting insulin is taken immediately before eating; short-acting is taken 20–30 minutes before. Rapid-acting analogues are now more commonly used."
+  - q: "What is a basal-bolus insulin regimen?"
+    a: "A basal-bolus regimen uses long-acting insulin (basal) once or twice daily for background glucose control, plus rapid- or short-acting insulin (bolus) at mealtimes to cover glucose rises from food. This closely mimics the body's natural insulin pattern."
+  - q: "Are insulin analogues better than older human insulin formulations?"
+    a: "Insulin analogues have more predictable absorption profiles. Rapid-acting analogues reduce post-meal spikes; long-acting analogues have smoother profiles with less overnight hypoglycaemia. The best choice depends on the individual and their management needs."
+  - q: "How should insulin be stored?"
+    a: "Unopened insulin should be refrigerated (2–8°C). Once opened, most insulin pens and vials can be kept at room temperature (below 25–30°C) for 28–30 days, depending on the product. Avoid direct sunlight and temperature extremes."
 ---
 
 ## Intro

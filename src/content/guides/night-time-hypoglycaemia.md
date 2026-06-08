@@ -4,9 +4,20 @@ slug: "night-time-hypoglycaemia"
 description: "Why night-time lows happen, how to spot them, immediate treatment, and prevention strategies for people using insulin."
 category: "Diabetes"
 publishDate: "2025-08-30"
-updatedDate: "2025-09-14"
+updatedDate: "2026-06-08"
 draft: false
 tags: ["hypoglycaemia", "nocturnal", "night-time", "diabetes", "CGM", "insulin", "patientguide"]
+faq:
+  - q: "Why do blood glucose lows happen more frequently at night?"
+    a: "Several factors make overnight lows more common: evening exercise increases insulin sensitivity for hours afterwards, alcohol can delay hypoglycaemia by several hours, basal insulin timing or dose may be mismatched to overnight needs, and carbohydrate intake at dinner may be lower than usual."
+  - q: "How do I know if I've had a hypo during sleep?"
+    a: "Signs include waking with a headache, confusion, or feeling shaky; night sweats or damp sheets; vivid or disturbing dreams; or an unexpected high glucose on waking (rebound hyperglycaemia). A CGM with overnight trend data can confirm whether lows occurred."
+  - q: "What can I eat before bed to prevent overnight lows?"
+    a: "A small bedtime snack combining a complex carbohydrate and protein — such as crackers with cheese or a small bowl of oats — can help stabilise overnight glucose. The right approach depends on your insulin regimen; discuss with your diabetes team."
+  - q: "How does a CGM help with night-time hypoglycaemia?"
+    a: "A CGM can detect falling glucose while you sleep and sound an alert before levels become dangerously low. Predictive low alerts (triggered when the trend indicates an impending hypo) give time to treat without waiting for a full hypo to develop."
+  - q: "Should I set alarms to check glucose overnight?"
+    a: "If you do not have a CGM and have had recent unexplained overnight lows or rebound highs, occasional overnight checks can identify a pattern. Discuss with your diabetes team whether routine overnight checks are needed and how to adjust insulin accordingly."
 schema:
   medicalCondition:
     name: "Nocturnal Hypoglycaemia"

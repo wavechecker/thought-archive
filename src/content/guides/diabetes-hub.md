@@ -4,10 +4,21 @@ title: "Diabetes Hub"
 slug: "diabetes-hub"
 description: "A central hub for understanding diabetes: type 1, type 2, and prediabetes — symptoms, management, prevention, and resources."
 publishDate: "2025-09-13"
-updatedDate: "2025-09-14"
+updatedDate: "2026-06-08"
 hubKey: "Diabetes"
 draft: false
 tags: ["diabetes", "type 1 diabetes", "type 2 diabetes", "prediabetes", "insulin", "management"]
+faq:
+  - q: "What is the difference between type 1 and type 2 diabetes?"
+    a: "Type 1 diabetes is an autoimmune condition where the immune system destroys insulin-producing cells in the pancreas. It requires lifelong insulin therapy and cannot be prevented. Type 2 diabetes involves insulin resistance and declining insulin production, strongly linked to lifestyle factors. It can often be managed with diet, exercise, and medication."
+  - q: "What are the warning signs of diabetes?"
+    a: "Common symptoms include increased thirst, frequent urination (especially at night), unexplained fatigue, blurred vision, slow wound healing, increased hunger, and numbness or tingling in hands and feet. Type 1 can develop rapidly over days to weeks; type 2 symptoms may develop gradually or be absent for years."
+  - q: "Can type 2 diabetes be reversed?"
+    a: "Type 2 diabetes can go into remission — meaning blood glucose returns to normal without diabetes medications — primarily through significant weight loss (typically 10–15% or more of body weight), often achieved through intensive dietary change, exercise, or bariatric surgery. Remission is not guaranteed, and underlying susceptibility remains."
+  - q: "What is prediabetes?"
+    a: "Prediabetes is a state where blood glucose is higher than normal but not yet in the diabetic range. It is a significant risk factor for developing type 2 diabetes and cardiovascular disease. Lifestyle changes — particularly weight loss, diet, and exercise — can prevent or substantially delay progression to type 2 diabetes."
+  - q: "Does diabetes affect life expectancy?"
+    a: "Both type 1 and type 2 diabetes are associated with reduced life expectancy, largely due to cardiovascular disease and other complications. However, well-managed diabetes with good blood glucose control, blood pressure and cholesterol management, and healthy lifestyle significantly reduces this gap. Modern treatment has substantially improved outcomes."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "CollectionPage"

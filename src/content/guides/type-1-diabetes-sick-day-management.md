@@ -4,9 +4,20 @@ slug: "type-1-diabetes-sick-day-management"
 description: "What to do when you’re ill with type 1 diabetes: sick-day rules, ketone thresholds, insulin adjustments, hydration, and when to seek urgent care."
 category: "Diabetes"
 publishDate: "2025-08-30"
-updatedDate: "2025-09-14"
+updatedDate: "2026-06-08"
 draft: false
 tags: ["type 1 diabetes", "sick day", "ketones", "DKA", "insulin", "patientguide"]
+faq:
+  - q: "Why does illness raise blood glucose in type 1 diabetes?"
+    a: "Illness triggers a stress hormone response (cortisol, adrenaline, glucagon) that raises blood glucose and reduces insulin sensitivity. Even with no food intake, glucose can rise significantly during illness. This also increases the rate of ketone production."
+  - q: "Should I stop my insulin when I'm sick and not eating?"
+    a: "No. Never stop insulin on sick days, even if you are not eating. Your body still needs background insulin. Stopping basal insulin significantly increases the risk of diabetic ketoacidosis (DKA). Doses may need adjustment up or down, but stopping is dangerous."
+  - q: "When should I go to hospital during an illness?"
+    a: "Seek urgent medical help if blood ketones reach 3.0 mmol/L or above, if you are vomiting and cannot keep fluids down, if glucose stays very high despite correction doses, or if you feel very unwell, drowsy, or are breathing rapidly. DKA is a medical emergency."
+  - q: "What should I drink on sick days?"
+    a: "Hydration is critical. Drink water, diluted fruit juice, or glucose drinks frequently — aim for at least 250 mL per hour. If you cannot eat, glucose-containing drinks help prevent hypoglycaemia while you manage ketones. Avoid dehydration, which worsens ketone build-up."
+  - q: "What if I'm vomiting and cannot keep fluids down?"
+    a: "Persistent vomiting preventing fluid intake is a reason to seek emergency care. Dehydration combined with high ketones can accelerate DKA rapidly. Call your diabetes team or go to an emergency department — intravenous fluids and insulin may be needed."
 schema:
   medicalCondition:
     name: "Diabetic Ketoacidosis"

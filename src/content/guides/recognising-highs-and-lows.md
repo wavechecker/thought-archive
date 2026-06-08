@@ -4,9 +4,20 @@ slug: "recognising-highs-and-lows"
 description: "How to spot hypoglycaemia and hyperglycaemia, what numbers mean, fast treatment steps, and prevention."
 category: "Diabetes"
 publishDate: "2025-08-30"
-updatedDate: "2025-09-14"
+updatedDate: "2026-06-08"
 draft: false
 tags: ["hypoglycaemia", "hyperglycaemia", "CGM", "glucose", "diabetes", "patientguide"]
+faq:
+  - q: "What glucose level is considered a hypoglycaemic episode?"
+    a: "A blood glucose below 3.9 mmol/L (70 mg/dL) is considered low and requires treatment. Levels below 3.0 mmol/L (54 mg/dL) represent clinically significant hypoglycaemia. Severe hypoglycaemia involves impaired consciousness or seizure and requires glucagon or emergency assistance."
+  - q: "How do I treat a low blood glucose quickly?"
+    a: "Use the Rule of 15: take 15–20 g of fast-acting carbohydrates (glucose tablets, fruit juice, or regular soft drink), wait 15 minutes, and recheck. If still below 3.9 mmol/L, repeat. Once glucose recovers, eat a small snack with complex carbohydrate if the next meal is more than an hour away."
+  - q: "What are the warning signs of high blood glucose?"
+    a: "Common symptoms include increased thirst, frequent urination, fatigue, blurred vision, and headache. Symptoms can be subtle or absent at mildly elevated levels. Prolonged or very high hyperglycaemia — especially with ketones — causes nausea, vomiting, and rapid breathing."
+  - q: "When does high blood glucose become an emergency?"
+    a: "Seek urgent medical help if glucose is persistently very high (typically above 15–17 mmol/L), especially with ketones ≥3.0 mmol/L, nausea or vomiting, fruity-smelling breath, rapid or laboured breathing, or confusion. These signs may indicate diabetic ketoacidosis (DKA) or hyperglycaemic hyperosmolar state."
+  - q: "Can I lose my ability to feel a hypo coming on?"
+    a: "Yes. Hypoglycaemia unawareness occurs when the body stops producing warning symptoms (shakiness, sweating, palpitations) at a low glucose level, typically from repeated hypos over time. A CGM with low-glucose alerts can help detect falls early. If you suspect unawareness, discuss it with your diabetes team."
 schema:
   medicalCondition:
     name: "Hyperglycaemia and Hypoglycaemia in Diabetes"

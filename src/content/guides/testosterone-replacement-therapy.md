@@ -4,9 +4,20 @@ slug: "testosterone-replacement-therapy"
 description: "Overview of low testosterone, how it’s diagnosed, and treatment options with testosterone replacement therapy."
 category: "Men's Health"
 publishDate: "2025-09-11"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["testosterone", "men's health", "hormone therapy"]
 draft: false
+faq:
+  - q: "What are the symptoms of low testosterone?"
+    a: "Symptoms include persistent fatigue, reduced libido, low mood or irritability, muscle loss, difficulty concentrating, and decreased morning erections. These are non-specific, so blood tests are needed to confirm low levels."
+  - q: "How is low testosterone diagnosed?"
+    a: "Diagnosis requires both symptoms and laboratory confirmation — typically two morning blood tests showing low total testosterone (commonly below 300 ng/dL or 10.4 nmol/L). Clinical context matters."
+  - q: "What forms does TRT come in?"
+    a: "TRT is available as intramuscular injections, topical gels or creams, skin patches, subcutaneous pellets, and oral formulations. Each has different dosing, absorption profiles, and convenience."
+  - q: "Does TRT affect fertility?"
+    a: "Yes. Exogenous testosterone suppresses the body's own hormonal signals that drive sperm production. TRT significantly reduces or stops sperm production in most men. Men wishing to preserve fertility should discuss alternatives with a specialist before starting."
+  - q: "What monitoring is needed on TRT?"
+    a: "Regular blood tests are required to monitor testosterone levels, haematocrit (red blood cell volume), and prostate health. Follow-up with a prescribing doctor is important throughout treatment."
 ---
 
 ## Intro

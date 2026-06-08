@@ -3,9 +3,20 @@ title: "Managing Type 1 Diabetes During Exercise"
 description: "How to prevent hypos, adjust insulin and carbs, and safely train with type 1 diabetes."
 category: "Diabetes"
 publishDate: "2025-08-30"
-updatedDate: "2025-09-13"
+updatedDate: "2026-06-08"
 draft: false
 tags: ["type 1 diabetes", "exercise", "hypoglycaemia", "insulin", "carbohydrates", "patientguide"]
+faq:
+  - q: "Why does blood glucose often drop during exercise with type 1 diabetes?"
+    a: "Aerobic exercise increases glucose uptake by muscles and enhances insulin sensitivity, causing blood glucose to fall during and for hours after activity. Planning with reduced insulin or added carbohydrate can help prevent hypoglycaemia."
+  - q: "What should blood glucose be before starting exercise?"
+    a: "Many guidelines suggest starting exercise with blood glucose between 6–10 mmol/L (108–180 mg/dL). If below 5 mmol/L (90 mg/dL), treat first and wait. If above 13–14 mmol/L with ketones present, delay exercise and treat."
+  - q: "Does strength training raise or lower blood glucose?"
+    a: "High-intensity resistance training and sprint intervals can temporarily raise blood glucose due to stress hormones. This is often followed by increased insulin sensitivity for hours after. Glucose patterns differ from aerobic exercise and are more individual."
+  - q: "How do I prevent low glucose hours after exercise?"
+    a: "Post-exercise hypoglycaemia can occur 6–12 hours after activity. Strategies include reducing evening basal insulin, having a bedtime snack on exercise days, and using a CGM to detect overnight trends. Discuss patterns with your diabetes team."
+  - q: "Do I need to carry fast-acting carbohydrates when exercising?"
+    a: "Yes. Always carry glucose tablets or fast-acting carbohydrates during exercise. Alert training partners or coaches to your diabetes, and consider wearing medical identification in case of emergency."
 ---
 
 ## Intro

@@ -4,10 +4,21 @@ slug: "skin-cancer"
 description: "Skin cancer is one of the most common cancers worldwide. Explore guides on signs, prevention, diagnosis, treatment, and survivorship."
 category: "Cancer"
 publishDate: "2025-09-17"
-updatedDate: "2025-09-17"
+updatedDate: "2026-06-08"
 hubKey: "Skin Cancer"
 draft: false
 tags: ["cancer", "skin cancer", "melanoma", "basal cell carcinoma", "squamous cell carcinoma", "hub"]
+faq:
+  - q: "What are the most common types of skin cancer?"
+    a: "The three main types are basal cell carcinoma (BCC, most common), squamous cell carcinoma (SCC), and melanoma (least common but most dangerous). BCCs and SCCs are often grouped as non-melanoma skin cancers and are highly treatable when caught early."
+  - q: "What warning signs should I look for on my skin?"
+    a: "Use the ABCDE rule for pigmented spots: Asymmetry, Border irregularity, Colour variation (multiple shades), Diameter larger than 6 mm, and Evolution (change in size, shape, or colour). Also watch for a sore that doesn't heal, a new growth, or anything that looks unusual or changes over time."
+  - q: "Who is most at risk of skin cancer?"
+    a: "High-risk factors include fair skin (especially skin that burns easily), history of sunburn particularly in childhood, extensive sun exposure, use of solariums, personal or family history of skin cancer, many moles, and immunosuppression. In Australia and similar high-UV countries, risk is elevated across the whole population."
+  - q: "How is skin cancer treated?"
+    a: "Treatment depends on type, size, and location. Most skin cancers are treated surgically. Options include standard excision, Mohs surgery (for BCCs and SCCs in complex locations), curettage and cautery, and for certain cases, topical treatments, radiation, or immunotherapy (for advanced melanoma)."
+  - q: "Can skin cancer be prevented?"
+    a: "UV exposure is the main preventable cause. Daily use of SPF 30+ broad-spectrum sunscreen on exposed skin, wearing protective clothing and hats, seeking shade during peak UV hours, and avoiding solariums all substantially reduce risk. Regular skin self-examination and annual skin checks with a GP or dermatologist allow early detection."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "CollectionPage"

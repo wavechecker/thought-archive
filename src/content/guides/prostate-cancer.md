@@ -4,10 +4,21 @@ slug: "prostate-cancer"
 description: "Guides and resources on prostate cancer — risks, screening, treatment, survivorship, and support."
 category: "Cancer"
 publishDate: "2025-08-29"
-updatedDate: "2025-09-17"
+updatedDate: "2026-06-08"
 hubKey: "Prostate Cancer"
 draft: false
 tags: ["cancer", "prostate cancer", "men's health", "oncology", "hub"]
+faq:
+  - q: "What are the symptoms of prostate cancer?"
+    a: "Early prostate cancer often produces no symptoms. As the disease progresses, symptoms may include urinary changes (weak stream, frequent urination especially at night, difficulty starting or stopping), blood in urine or semen, and pelvic discomfort. These symptoms overlap with benign prostate enlargement. Any urinary change should be assessed by a doctor."
+  - q: "What is PSA testing and is it recommended for all men?"
+    a: "PSA (prostate-specific antigen) is a blood test that can suggest prostate cancer, but it is not specific — a raised PSA may also occur with benign prostate enlargement, infection, or prostatitis. Routine PSA screening remains controversial due to risk of over-diagnosis and over-treatment. Men aged 50–70 (or from 40 with higher risk) should discuss PSA testing with their doctor."
+  - q: "What are the risk factors for prostate cancer?"
+    a: "Age is the strongest risk factor (most diagnoses occur after 60). Family history of prostate or BRCA2-related cancers, African ancestry, and dietary factors (high-fat, low-vegetable diets) are also associated with higher risk."
+  - q: "How is prostate cancer treated?"
+    a: "Treatment depends on stage, grade (Gleason score), PSA level, and the patient's age, overall health, and preferences. Options include active surveillance (watchful waiting for low-risk disease), surgery (radical prostatectomy), radiation therapy, hormone therapy, and for advanced cancer, chemotherapy or novel hormonal agents."
+  - q: "Is prostate cancer always life-threatening?"
+    a: "No. Many prostate cancers are slow-growing and may never cause harm during a man's lifetime. Low-risk, localised prostate cancer may be managed with active surveillance rather than immediate treatment. More aggressive forms require prompt treatment. The decision depends on cancer grade, stage, and individual circumstances, discussed with an oncology team."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "CollectionPage"

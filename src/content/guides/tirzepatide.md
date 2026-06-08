@@ -5,9 +5,20 @@ slug: "tirzepatide"
 description: "A patient-facing reference guide to tirzepatide — a dual GIP/GLP-1 receptor agonist used for type 2 diabetes and weight management — covering its mechanism, approved uses, benefits, risks, and regulatory context."
 category: "Obesity & Metabolic Health Hub"
 publishDate: "2026-03-11"
-updatedDate: "2026-03-11"
+updatedDate: "2026-06-08"
 tags: ["tirzepatide", "glp-1", "obesity", "weight loss", "metabolism", "diabetes"]
 draft: false
+faq:
+  - q: "What is tirzepatide and how does it differ from semaglutide?"
+    a: "Tirzepatide is a dual GIP/GLP-1 receptor agonist — it activates two hormone pathways. Semaglutide only activates GLP-1. Clinical trials have reported greater average weight loss with tirzepatide, though head-to-head comparisons are limited."
+  - q: "Who is tirzepatide approved for?"
+    a: "Tirzepatide (Mounjaro) is approved for type 2 diabetes management, and as Zepbound for chronic weight management in adults with obesity or overweight adults with at least one weight-related health condition."
+  - q: "How much weight can I expect to lose on tirzepatide?"
+    a: "Clinical trials reported average weight reductions of roughly 15–22% in people with obesity. Results vary considerably between individuals depending on dose, adherence, and lifestyle factors."
+  - q: "What are the main side effects of tirzepatide?"
+    a: "Most side effects are gastrointestinal — nausea, vomiting, diarrhoea, and constipation — most common during dose increases and typically improving over time. A contraindication exists for people with a personal or family history of medullary thyroid carcinoma."
+  - q: "Will the weight come back if I stop tirzepatide?"
+    a: "Studies show significant weight regain typically occurs after stopping tirzepatide, similar to other GLP-1-class medications. Sustained weight management usually requires either continuing the medication or establishing robust lifestyle strategies."
 ---
 
 ## Intro

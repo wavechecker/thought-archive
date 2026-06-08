@@ -5,6 +5,18 @@ category: "Infectious Diseases"
 publishDate: "2025-08-30"
 draft: false
 tags: ["flu", "influenza", "cold", "upper respiratory infection", "fever", "patientguide"]
+updatedDate: "2026-06-08"
+faq:
+  - q: "How can I tell if I have the flu or a common cold?"
+    a: "Flu typically starts suddenly with high fever (≥38°C), significant body aches, chills, and fatigue. A cold tends to come on gradually with milder symptoms — runny nose, sore throat, and low-grade or no fever. Body aches and fever are the most distinguishing features."
+  - q: "Do antivirals work for the flu?"
+    a: "Yes, antivirals such as oseltamivir (Tamiflu) can reduce the duration and severity of flu if taken within 48 hours of symptom onset. They are most recommended for high-risk groups (older adults, pregnant women, immunocompromised individuals) rather than routine use in healthy adults."
+  - q: "Does the flu vaccine prevent flu completely?"
+    a: "Not completely, but it significantly reduces the risk of infection and the severity of illness if you do get flu. Effectiveness varies by year (typically 40–60%) depending on how well the vaccine matches circulating strains. Annual vaccination is recommended for most adults."
+  - q: "When should I see a doctor for flu symptoms?"
+    a: "Seek medical attention if you have difficulty breathing, chest pain, persistent high fever not controlled by paracetamol, confusion or altered consciousness, severe vomiting, or if symptoms improve then sharply worsen. People in high-risk groups should contact a doctor early."
+  - q: "Is there any treatment for the common cold?"
+    a: "There is no cure for the common cold. Symptoms usually resolve within 7–10 days. Paracetamol or ibuprofen ease fever and discomfort. Zinc lozenges taken within 24 hours of symptom onset may modestly shorten duration. Antibiotics do not treat colds and should not be used."
 schema:
   medicalCondition:
     name: "Influenza"

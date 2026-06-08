@@ -4,13 +4,24 @@ title: "Continuous Glucose Monitors (CGMs): How They Work, Benefits, and Limits"
 slug: "continuous-glucose-monitors"
 description: "A comprehensive guide to continuous glucose monitors — how they work, who benefits, accuracy considerations, cost, data privacy, and practical tips for getting the most from your CGM."
 publishDate: "2025-08-18"
-updatedDate: "2025-08-21"
+updatedDate: "2026-06-08"
 tags: ["Type 1 Diabetes", "Type 2 Diabetes", "CGM", "blood glucose", "health technology", "patientguide"]
 related:
-  - /guides/blood-glucose-testing
-  - /guides/prediabetes
-  - /guides/testing-and-screening
-  - /guides/diabetes-hub
+  - "[Blood Glucose Testing](/guides/blood-glucose-testing)"
+  - "[Prediabetes](/guides/prediabetes)"
+  - "[Testing and Screening](/guides/testing-and-screening)"
+  - "[Diabetes Hub](/guides/diabetes-hub)"
+faq:
+  - q: "What is a CGM and how does it work?"
+    a: "A continuous glucose monitor (CGM) is a small wearable device with a sensor placed under the skin that measures glucose in interstitial fluid every 1–5 minutes. It transmits readings wirelessly to a smartphone or display, showing glucose levels and trend arrows — whether glucose is rising, stable, or falling."
+  - q: "How accurate is a CGM compared to a finger-prick meter?"
+    a: "Modern CGMs are accurate enough for most clinical decisions, but they measure interstitial fluid, which lags 5–15 minutes behind blood glucose during rapid changes. In most daily situations this is acceptable; calibration finger-prick checks may still be needed before treating a low or before correcting with insulin if symptoms don't match the reading."
+  - q: "Who benefits most from a CGM?"
+    a: "People with type 1 diabetes benefit most — CGMs significantly reduce hypoglycaemia and improve time-in-range. They are also increasingly used in type 2 diabetes on insulin, and in prediabetes management. Consumer-grade CGMs are available to the general public, though their clinical value in healthy people is less established."
+  - q: "Do I still need finger-prick blood tests if I have a CGM?"
+    a: "Usually less often, but not always never. Many clinicians recommend confirming CGM readings with a finger-prick before treating a suspected severe hypo or making a significant insulin adjustment. Some CGMs are validated to replace routine finger-prick testing; check the specific device's guidelines."
+  - q: "What is time-in-range and why does it matter?"
+    a: "Time-in-range (TIR) is the percentage of time glucose stays within a target range (commonly 3.9–10.0 mmol/L for most people with diabetes). Higher TIR is associated with reduced risk of diabetes complications. CGMs make TIR visible in a way finger-prick snapshots cannot."
 schema:
   medicalCondition:
     name: "Diabetes Mellitus"

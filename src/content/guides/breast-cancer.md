@@ -4,10 +4,21 @@ slug: "breast-cancer"
 description: "Guides and resources on breast cancer — risks, screening, treatment, survivorship, and support."
 category: "Cancer"
 publishDate: "2025-08-29"
-updatedDate: "2025-09-17"
+updatedDate: "2026-06-08"
 hubKey: "Breast Cancer"
 draft: false
 tags: ["cancer", "breast cancer", "patientguide", "hub"]
+faq:
+  - q: "What are the warning signs of breast cancer?"
+    a: "Common signs include a new lump or thickening in the breast or armpit, change in breast size or shape, skin changes (dimpling, puckering, or redness), nipple changes or discharge (especially if bloody), and persistent breast pain. Most lumps are not cancer, but any new or unusual change should be assessed by a doctor promptly."
+  - q: "What are the main risk factors for breast cancer?"
+    a: "Key risk factors include older age, female sex (though men can develop breast cancer), family history (particularly BRCA1/BRCA2 gene mutations), personal history of breast cancer or certain benign breast conditions, dense breast tissue, hormonal factors (early menstruation, late menopause, hormone therapy), alcohol use, and obesity after menopause."
+  - q: "Who should have routine breast cancer screening?"
+    a: "Screening recommendations vary by country and individual risk. Most programs offer mammography every 1–2 years for women aged 50–74. Women with high genetic risk (BRCA1/2 mutations or strong family history) may be recommended earlier screening, additional MRI, and specialist review. Ask your GP about what is recommended for your age and risk."
+  - q: "How is breast cancer treated?"
+    a: "Treatment depends on cancer type, stage, grade, and hormone receptor status. Options include surgery (lumpectomy or mastectomy), radiation therapy, chemotherapy, targeted therapy (e.g., HER2-directed therapy), and hormone therapy (for hormone receptor-positive cancers). Many people receive a combination, determined by their multidisciplinary team."
+  - q: "What is the survival rate for breast cancer?"
+    a: "Survival rates vary considerably by stage and subtype. Overall, breast cancer has relatively high survival rates compared to many cancers — particularly when detected early. Stage I cancers have very high 5-year survival rates (above 90%). Advanced or metastatic breast cancer is not generally curable, though effective treatments can extend life substantially."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "CollectionPage"
