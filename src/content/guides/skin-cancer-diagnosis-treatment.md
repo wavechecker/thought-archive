@@ -1,12 +1,23 @@
----
+﻿---
 title: "Skin Cancer: Diagnosis and Treatment"
 slug: "skin-cancer-diagnosis-treatment"
 description: "Learn how skin cancer is diagnosed and treated — from skin exams and biopsy to surgery, Mohs surgery, radiotherapy, and systemic therapies."
 category: "Cancer"
 publishDate: "2025-09-17"
-updatedDate: "2025-09-17"
+updatedDate: "2026-06-08"
 tags: ["skin cancer", "diagnosis", "treatment", "biopsy", "surgery", "immunotherapy", "mohs"]
 draft: false
+faq:
+  - q: "How is skin cancer diagnosed?"
+    a: "Doctors start with a skin examination, often using dermoscopy (magnified lighting to view beneath the skin surface). A biopsy — removing a small sample for laboratory analysis — confirms the diagnosis."
+  - q: "What is Mohs surgery and when is it used?"
+    a: "Mohs micrographic surgery removes skin cancer layer by layer, checking each layer under a microscope until no cancer cells remain. It is used for cancers on the face or other areas where preserving healthy tissue is especially important."
+  - q: "Is surgery always needed for skin cancer?"
+    a: "Not always. Very early or superficial skin cancers may be treated with topical creams or cryotherapy. However, surgery is the most common treatment and typically the most effective for confirmed cancers."
+  - q: "What happens after skin cancer treatment?"
+    a: "After treatment, regular follow-up skin checks are recommended to monitor for recurrence and detect new lesions early. Sun protection remains important ongoing."
+  - q: "Are all skin cancers curable?"
+    a: "Basal cell carcinoma and squamous cell carcinoma detected early are highly treatable and usually curable. Melanoma outcomes depend heavily on how early it is found — early-stage melanoma has a very high survival rate, while advanced melanoma is much more serious."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "MedicalWebPage"

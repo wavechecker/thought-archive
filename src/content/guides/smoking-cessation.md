@@ -1,12 +1,23 @@
----
+﻿---
 title: "Smoking and Tobacco Cessation"
 slug: "smoking-cessation"
 description: "Quitting smoking is the single most effective step to improve health and prevent disease. Learn methods, supports, and benefits."
 category: "General Health"
 publishDate: "2025-09-17"
-updatedDate: "2025-09-30"
+updatedDate: "2026-06-08"
 tags: ["smoking cessation", "tobacco", "preventive health", "lung cancer", "addiction", "public health", "mental health"]
 draft: false
+faq:
+  - q: "Why is quitting smoking so important?"
+    a: "Smoking causes lung cancer, heart disease, stroke, COPD, and many other serious conditions. Quitting reduces risk from the first day and continues to improve health for years. It is the single most effective step most smokers can take for their health."
+  - q: "What methods help with quitting smoking?"
+    a: "Nicotine replacement therapy (patches, gum, spray), prescription medications such as varenicline or bupropion, and behavioural counselling all increase quit rates. Combining medication with support is more effective than either alone."
+  - q: "How quickly do health benefits start after quitting?"
+    a: "Benefits begin within minutes to hours — blood pressure drops and carbon monoxide levels fall rapidly. Over months and years, risks of heart disease, stroke, and lung cancer continue to decline."
+  - q: "Is smoking linked to mental health?"
+    a: "Yes. Smoking is more common among people with depression and anxiety, and while smokers often feel it reduces stress, quitting actually improves long-term mental wellbeing for many people."
+  - q: "What if I have tried to quit before and relapsed?"
+    a: "Relapse is very common and part of the quitting process for many people. Most successful quitters have tried multiple times. Each attempt provides useful information, and support and medication can significantly improve the chances of lasting success."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "MedicalWebPage"

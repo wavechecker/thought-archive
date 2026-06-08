@@ -6,6 +6,18 @@ category: "Cancer"
 publishDate: "2025-09-06"
 draft: false
 tags: ["cancer", "skin cancer", "prevention", "sun safety", "patientguide"]
+updatedDate: "2026-06-08"
+faq:
+  - q: "What is the most effective way to prevent skin cancer?"
+    a: "The most effective prevention combines multiple strategies: wearing protective clothing, applying broad-spectrum SPF 30+ sunscreen and reapplying every two hours, wearing a wide-brimmed hat, seeking shade during peak UV hours (10am–4pm), and avoiding tanning beds."
+  - q: "Should I use sunscreen on cloudy days?"
+    a: "Yes. Up to 80% of UV radiation reaches the ground on cloudy days. Sun protection should be applied whenever the UV index is 3 or above — regardless of cloud cover."
+  - q: "How often should I have a skin check?"
+    a: "The frequency depends on your skin type, history, and risk factors. Most adults benefit from a regular professional skin examination, particularly those with fair skin, many moles, a history of sunburn, or a family history of melanoma."
+  - q: "What are the warning signs of skin cancer?"
+    a: "Look for new or changing spots, moles that change in size, shape, or colour, lesions that bleed, itch, or don't heal, and dark streaks under a nail. The ABCDE rule (Asymmetry, Border, Colour, Diameter, Evolving) helps identify suspicious melanomas."
+  - q: "Are tanning beds safer than sun exposure?"
+    a: "No. Tanning beds emit UV radiation that causes DNA damage to skin cells and significantly increases melanoma risk. There is no safe level of tan from UV exposure."
 ---
 
 # Skin Cancer — Prevention

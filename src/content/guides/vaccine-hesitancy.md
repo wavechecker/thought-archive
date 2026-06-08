@@ -1,12 +1,23 @@
----
+﻿---
 title: "Vaccine Hesitancy"
 slug: "vaccine-hesitancy"
 description: "Understanding the causes of vaccine hesitancy and approaches to strengthen trust and confidence in immunization."
 category: "Vaccination"
 publishDate: "2025-09-05"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["hesitancy", "trust", "policy", "society", "public health"]
 draft: false
+faq:
+  - q: "What is vaccine hesitancy?"
+    a: "Vaccine hesitancy refers to a delay in accepting or a reluctance to receive vaccines despite their availability. It exists on a spectrum from cautious questioning to outright refusal, and is shaped by trust, cultural context, convenience, and access to information."
+  - q: "Is vaccine hesitancy the same as being anti-vaccine?"
+    a: "No. Most hesitant people are not categorically opposed to all vaccines — they may have specific concerns, uncertainty about a particular vaccine, or questions about timing. Treating hesitancy as anti-science often makes meaningful engagement harder."
+  - q: "What causes vaccine hesitancy?"
+    a: "Key drivers include distrust of governments or pharmaceutical companies, complacency (believing vaccine-preventable diseases are no longer a threat), misinformation, cultural or religious concerns, and practical barriers such as cost or inconvenience."
+  - q: "Do vaccine side effects justify hesitancy?"
+    a: "Serious side effects from vaccines are rare and are actively monitored through global safety surveillance systems. For most vaccines, the risk of the disease — including serious complications — substantially outweighs the risk of adverse events from vaccination."
+  - q: "What approaches help address vaccine hesitancy?"
+    a: "Evidence supports respectful, two-way communication that acknowledges concerns without dismissing them, using trusted local healthcare providers as messengers, improving convenience of access, and correcting misinformation with accurate information."
 ---
 
 # Vaccine Hesitancy

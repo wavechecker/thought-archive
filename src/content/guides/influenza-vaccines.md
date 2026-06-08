@@ -1,12 +1,23 @@
----
+﻿---
 title: "Influenza Vaccines"
 slug: "influenza-vaccines"
 description: "Guide to seasonal influenza vaccination, effectiveness, safety, and public health impact."
 category: "Vaccination"
 publishDate: "2025-08-26"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 draft: false
 tags: ["influenza", "flu", "vaccination", "public health", "seasonal flu", "patientguide"]
+faq:
+  - q: "Why is the flu vaccine needed every year?"
+    a: "Influenza viruses mutate constantly, so the strains circulating each season are usually different from previous ones. The vaccine is updated annually to match the strains expected to circulate, which is why yearly vaccination provides the best protection."
+  - q: "Who most benefits from the influenza vaccine?"
+    a: "High-risk groups benefit most: adults aged 65 and over, children under 5, pregnant women, and people with chronic conditions such as asthma, diabetes, heart disease, or weakened immune systems. Annual vaccination is recommended for all eligible groups."
+  - q: "How effective is the flu vaccine?"
+    a: "Effectiveness varies by year depending on how well the vaccine matches circulating strains — typically around 40–60% against symptomatic illness. Protection against severe outcomes such as hospitalisation and death is generally higher."
+  - q: "Can the flu vaccine cause the flu?"
+    a: "No. Inactivated influenza vaccines do not contain live virus and cannot cause influenza. Some people experience mild temporary symptoms such as a sore arm or low-grade fever, which reflect the immune response, not the illness."
+  - q: "When should I get the flu vaccine?"
+    a: "The best time is before flu season begins — ideally in autumn (April–May in the Southern Hemisphere, September–October in the Northern Hemisphere). Getting vaccinated later in the season still provides protection."
 ---
 
 # Influenza Vaccines

@@ -1,13 +1,24 @@
----
+﻿---
 
 title: "GLP-1 Weight Loss Drugs: How They Work, Benefits, and Risks"
 slug: "glp-1-weight-loss-drugs"
 description: "A medical overview of GLP-1 receptor agonist medications used for weight loss and metabolic health, including semaglutide and tirzepatide."
 category: "Obesity & Metabolic Health Hub"
 publishDate: "2026-03-09"
-updatedDate: "2026-03-09"
+updatedDate: "2026-06-08"
 tags: ["glp-1", "obesity", "weight loss", "metabolism"]
 draft: false
+faq:
+  - q: "How do GLP-1 weight loss drugs work?"
+    a: "GLP-1 receptor agonists mimic glucagon-like peptide-1, a natural gut hormone. They reduce appetite by slowing stomach emptying and sending satiety signals to the brain, and they improve blood sugar regulation."
+  - q: "Who are GLP-1 drugs approved for?"
+    a: "GLP-1 medications are approved for adults with obesity (BMI ≥30) or overweight (BMI ≥27) with at least one weight-related health condition such as type 2 diabetes, high blood pressure, or high cholesterol. Eligibility criteria vary by country and specific drug."
+  - q: "What weight loss can be expected with GLP-1 medications?"
+    a: "Clinical trials show average weight reductions of 10–20% of body weight with weekly injectable doses over 12–18 months, though individual results vary. Lifestyle changes alongside medication generally improve outcomes."
+  - q: "What are the common side effects of GLP-1 drugs?"
+    a: "The most common side effects are gastrointestinal — nausea, vomiting, diarrhoea, and constipation — particularly when starting treatment or increasing the dose. These often improve over time."
+  - q: "Do you need to stay on GLP-1 drugs indefinitely?"
+    a: "Weight tends to return if the medication is stopped without sustained lifestyle changes, as the underlying drivers of obesity persist. Ongoing treatment is typically needed to maintain weight loss. This is a decision best made with a clinician."
 ---
 
 ## Intro

@@ -1,12 +1,23 @@
----
+﻿---
 title: "mRNA Vaccines"
 slug: "mrna-vaccines"
 description: "A guide to mRNA vaccine technology: how it works, its benefits, risks, and future applications."
 category: "Vaccination"
 publishDate: "2025-09-05"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["mrna", "covid-19", "safety", "technology", "public health"]
 draft: false
+faq:
+  - q: "How do mRNA vaccines work?"
+    a: "mRNA vaccines deliver genetic instructions (messenger RNA) wrapped in lipid nanoparticles into cells. The cells use these instructions to produce a harmless viral protein (antigen), which the immune system recognises and learns to respond to."
+  - q: "Can mRNA vaccines alter my DNA?"
+    a: "No. mRNA never enters the cell nucleus, where DNA is stored. It cannot integrate into DNA or change it in any way. The mRNA is broken down naturally by the body within days after delivering its instructions."
+  - q: "What are the known side effects of mRNA vaccines?"
+    a: "Common side effects include injection-site soreness, fatigue, headache, and mild fever — typically resolving within one to two days. Rare but real side effects, such as myocarditis (particularly in young males after COVID-19 mRNA vaccination), are monitored through safety surveillance."
+  - q: "What other vaccines or treatments are being developed using mRNA technology?"
+    a: "mRNA technology is being applied to seasonal influenza, RSV, HIV, and personalised cancer vaccines. Early results in some cancer applications are particularly promising."
+  - q: "Are mRNA vaccines a new or unproven technology?"
+    a: "The technology underlying mRNA vaccines was developed over decades of research before COVID-19. The rapid authorisation of COVID-19 mRNA vaccines reflected parallel development and regulatory processes, not shortened safety testing."
 ---
 
 # mRNA Vaccines

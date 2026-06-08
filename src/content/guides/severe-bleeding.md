@@ -1,12 +1,23 @@
----
+﻿---
 title: "Severe Bleeding — First Aid"
 slug: "severe-bleeding"
 description: "How to control severe bleeding in an emergency: first aid steps, when to use a tourniquet, and when to call for help."
 category: "Emergencies"
 publishDate: "2025-09-13"
-updatedDate: "2025-09-13"
+updatedDate: "2026-06-08"
 tags: ["first aid", "bleeding", "hemorrhage", "emergency", "trauma"]
 draft: false
+faq:
+  - q: "What is the first thing to do for severe bleeding?"
+    a: "Apply firm, direct pressure to the wound immediately using a clean cloth or your hand, and call emergency services. Do not remove soaked bandages — add more layers on top."
+  - q: "When should a tourniquet be used?"
+    a: "A tourniquet should only be used on a limb when direct pressure has failed to stop life-threatening bleeding. Apply it 5–7 cm above the wound, not on a joint, and note the time it was applied."
+  - q: "What are the warning signs of dangerous blood loss?"
+    a: "Danger signs include blood that spurts or will not stop with pressure, soaked bandages, and signs of shock: pale or clammy skin, rapid weak pulse, confusion, or loss of consciousness."
+  - q: "Should I remove soaked bandages to replace them?"
+    a: "No. Removing bandages can disrupt clotting and restart bleeding. Add clean layers on top and maintain continuous firm pressure."
+  - q: "Can severe bleeding stop on its own?"
+    a: "Minor wounds may slow with pressure, but severe bleeding requires prompt first aid and emergency medical care. Never wait to see if it stops on its own."
 ---
 
 ## Intro

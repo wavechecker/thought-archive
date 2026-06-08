@@ -42,6 +42,18 @@ schema:
       - "https://www.who.int/news-room/fact-sheets/detail/depression"
       - "https://www.nimh.nih.gov/health/topics/depression"
       - "https://medlineplus.gov/depression.html"
+updatedDate: "2026-06-08"
+faq:
+  - q: "What is the difference between depression and normal sadness?"
+    a: "Sadness is a normal response to difficult events and usually lifts over time. Depression is a persistent condition lasting weeks or more, affecting energy, sleep, concentration, and daily function — not just mood."
+  - q: "What treatments are available for depression?"
+    a: "Effective treatments include psychological therapies (particularly cognitive-behavioural therapy), antidepressant medications, lifestyle measures (exercise, sleep), and in severe cases, specialist care. Treatment is most effective when tailored to the individual."
+  - q: "Can depression go away without treatment?"
+    a: "Mild episodes sometimes resolve on their own, but moderate-to-severe depression usually requires treatment. Without support, episodes can last longer and increase the risk of recurrence. Early help generally leads to better outcomes."
+  - q: "How do I know if someone I care about needs help for depression?"
+    a: "Warning signs include persistent low mood, withdrawal from friends and activities, changes in sleep or appetite, loss of interest in things they used to enjoy, and expressions of hopelessness. Encourage them to speak to a doctor."
+  - q: "Is depression more common in certain groups?"
+    a: "Depression is more common in people with chronic illness, those who have experienced trauma, women (roughly twice the rate of men globally), and people who are socially isolated. It can affect anyone at any age."
 ---
 
 ## Intro

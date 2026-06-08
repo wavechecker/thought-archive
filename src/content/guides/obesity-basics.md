@@ -39,6 +39,18 @@ schema:
       - "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
       - "https://www.cdc.gov/obesity/index.html"
       - "https://medlineplus.gov/obesity.html"
+updatedDate: "2026-06-08"
+faq:
+  - q: "What defines obesity?"
+    a: "Obesity is generally defined as a BMI of 30 or above in adults. Waist circumference and waist-to-hip ratio are also used because they better reflect metabolically active abdominal fat. BMI alone does not capture the full picture of health risk."
+  - q: "What health conditions are associated with obesity?"
+    a: "Obesity increases the risk of type 2 diabetes, cardiovascular disease, obstructive sleep apnoea, certain cancers, fatty liver disease, osteoarthritis, and reduced life expectancy."
+  - q: "What causes obesity?"
+    a: "Obesity results from a complex interaction of genetics, environment, hormones, metabolism, and behaviour. Excess calorie intake and insufficient physical activity are key contributors, but factors such as sleep, stress, medications, and socioeconomic conditions also play a role."
+  - q: "Is obesity a personal choice or a medical condition?"
+    a: "Obesity is recognised as a chronic medical condition influenced by biological, genetic, environmental, and psychological factors. Reducing stigma and taking a healthcare-based approach improves outcomes for people managing it."
+  - q: "What treatments are available for obesity?"
+    a: "Treatment options include lifestyle interventions (dietary change, physical activity), structured weight management programmes, medications such as GLP-1 receptor agonists, and bariatric surgery for eligible individuals. The most effective approach is individual-specific and often multidisciplinary."
 ---
 
 

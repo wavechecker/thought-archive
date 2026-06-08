@@ -36,6 +36,18 @@ schema:
     sameAs:
       - "https://medlineplus.gov/anaphylaxis.html"
       - "https://www.nhs.uk/conditions/anaphylaxis/"
+updatedDate: "2026-06-08"
+faq:
+  - q: "What is the first thing to do in an anaphylaxis emergency?"
+    a: "Give epinephrine (adrenaline) immediately using an auto-injector, then call emergency services. Do not wait to see if symptoms improve before using the auto-injector."
+  - q: "Where should an epinephrine auto-injector be injected?"
+    a: "Into the outer mid-thigh. It can be injected through clothing in an emergency. Hold in place for the time specified on the device."
+  - q: "Can anaphylaxis return after it seems to have resolved?"
+    a: "Yes. A biphasic reaction can occur 1–72 hours after the initial episode. This is why hospital observation is recommended even when the reaction appears to have improved after epinephrine."
+  - q: "Should the person lie flat or sit up during anaphylaxis?"
+    a: "Lay the person flat with legs raised to support circulation. If they are having difficulty breathing, allow them to sit up slightly. Pregnant people should lie on their left side."
+  - q: "How do I tell anaphylaxis apart from a mild allergic reaction?"
+    a: "Anaphylaxis involves life-threatening features: breathing difficulty, throat tightness, circulation problems (pale, faint, weak pulse), or loss of consciousness. When in doubt, treat as anaphylaxis and call emergency services."
 ---
 
 ## Intro
