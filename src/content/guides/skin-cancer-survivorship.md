@@ -4,9 +4,20 @@ slug: "skin-cancer-survivorship"
 description: "Living well after skin cancer involves follow-up care, skin checks, sun protection, emotional support, and reducing future risk."
 category: "Cancer"
 publishDate: "2025-09-17"
-updatedDate: "2025-09-17"
+updatedDate: "2026-06-08"
 tags: ["skin cancer", "survivorship", "support", "follow-up", "prevention"]
 draft: false
+faq:
+  - q: "How often should I have follow-up checks after skin cancer treatment?"
+    a: "Follow-up frequency depends on the type and stage of skin cancer. For low-risk BCCs or SCCs, clinical review every 6–12 months for 2–5 years is typical. For melanoma, especially higher-stage, follow-up is more frequent (every 3–6 months) for several years. Your treating team will outline your specific schedule."
+  - q: "Can skin cancer come back after treatment?"
+    a: "Yes. Recurrence at the original site and the development of new skin cancers are both risks. People with a history of skin cancer have a significantly elevated risk of developing further skin cancers throughout their lifetime. Regular skin checks are an ongoing part of survivorship."
+  - q: "What sun protection do I need after a skin cancer diagnosis?"
+    a: "Daily sun protection is strongly recommended: SPF 30–50+ broad-spectrum sunscreen on exposed skin, protective clothing, a wide-brimmed hat, sunglasses, and seeking shade during peak UV hours. These measures reduce the risk of new skin cancers developing."
+  - q: "Are there psychological effects after a skin cancer diagnosis?"
+    a: "Yes. Anxiety about recurrence, changes in body image (especially after surgery affecting visible areas), and the ongoing vigilance required for skin checks can affect wellbeing. These concerns are common and valid. Support from your GP, a psychologist, or a cancer support service can help."
+  - q: "Am I at higher risk of other skin cancers after a first diagnosis?"
+    a: "Yes. A prior skin cancer is one of the strongest risk factors for future skin cancers. People with a history of melanoma are at increased risk of a second melanoma. Regular professional skin checks and diligent self-examination are recommended long term."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "MedicalWebPage"

@@ -6,6 +6,18 @@ category: "Mental Health"
 publishDate: "2025-10-01"
 tags: ["insomnia", "sleep therapy", "cognitive behavioral therapy"]
 draft: false
+updatedDate: "2026-06-08"
+faq:
+  - q: "What is CBT-I and how does it differ from sleep medication?"
+    a: "Cognitive Behavioural Therapy for Insomnia (CBT-I) is a structured program that addresses the thoughts and behaviours maintaining chronic insomnia. Unlike sleep medication, which works for the duration of use, CBT-I produces lasting changes and is recommended as first-line treatment for chronic insomnia. Its effects are durable after the program ends."
+  - q: "How long does CBT-I take to work?"
+    a: "Most people see meaningful improvement within 4–8 weeks of consistent practice. CBT-I typically involves 4–8 sessions, delivered weekly. Some techniques like sleep restriction cause brief initial worsening before sleep consolidates and improves — this is expected and temporary."
+  - q: "What techniques does CBT-I include?"
+    a: "CBT-I includes sleep restriction (temporarily limiting time in bed to consolidate sleep), stimulus control (re-associating the bed with sleepiness), relaxation techniques, cognitive restructuring (addressing unhelpful beliefs about sleep), and sleep hygiene education. Sleep restriction and stimulus control are the most effective components."
+  - q: "Can I access CBT-I without a therapist?"
+    a: "Yes. Digital CBT-I programs (apps and online courses) are validated and produce similar results to therapist-delivered CBT-I for many people with chronic insomnia. These are accessible and cost-effective options where in-person access is limited."
+  - q: "Is CBT-I effective for everyone with insomnia?"
+    a: "CBT-I is effective for most people with chronic primary insomnia and is also effective when insomnia occurs alongside other conditions (depression, anxiety, chronic pain). It may be less effective if insomnia is caused by an untreated sleep disorder (such as sleep apnoea) or if there is a significant untreated medical or psychiatric condition driving the insomnia."
 
 # JSON-LD (Article + FAQ + Breadcrumbs + TherapeuticProcedure)
 jsonLd:

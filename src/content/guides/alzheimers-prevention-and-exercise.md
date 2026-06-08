@@ -5,8 +5,19 @@ description: "How regular physical activity — even just a few thousand steps a
 category: "Neurology"
 tags: ["Alzheimer's", "Exercise", "Cognitive Health", "Brain Aging"]
 publishDate: "2025-11-04"
-updatedDate: "2025-11-04"
+updatedDate: "2026-06-08"
 draft: false
+faq:
+  - q: "How many steps per day help reduce Alzheimer's risk?"
+    a: "Research from the Harvard Aging Brain Study suggests 3,000–5,000 steps per day can delay cognitive decline by around 3 years in those with early Alzheimer's biomarkers. 5,000–7,500 steps may delay decline by up to 7 years. Benefits appear to plateau beyond 7,500 steps."
+  - q: "Is it too late to start exercising for brain health?"
+    a: "It is never too late to start. While earlier and sustained activity provides the greatest benefit, beginning exercise in midlife or beyond still improves brain blood flow, reduces inflammation, and supports neuroplasticity. Even modest increases in daily movement are beneficial."
+  - q: "Does exercise prevent Alzheimer's disease completely?"
+    a: "Exercise reduces risk and can delay symptom onset, but it does not prevent Alzheimer's entirely. Genetics, age, and other factors also play a role. Exercise is one of the most modifiable lifestyle factors with the strongest evidence for cognitive protection."
+  - q: "What types of exercise are best for brain health?"
+    a: "Aerobic exercise (walking, cycling, swimming) has the strongest evidence for cognitive benefit. Resistance training also supports brain health. A combination of both, along with balance and coordination activities, appears most beneficial."
+  - q: "What other lifestyle factors reduce dementia risk?"
+    a: "Alongside exercise, strong evidence supports managing cardiovascular risk factors (blood pressure, cholesterol, diabetes), quality sleep, not smoking, moderate alcohol intake, social engagement, and mental stimulation. The Lancet Commission identifies 14 modifiable risk factors that together account for nearly half of dementia cases."
 
 schema:
   "@context": "https://schema.org"

@@ -5,8 +5,19 @@ description: "Evidence-based strategies anyone can use to support mental health 
 category: "Mental Health"
 hubKey: "Mental Health Toolkit"
 publishDate: "2025-09-30"
-updatedDate: "2025-09-30"
+updatedDate: "2026-06-08"
 draft: false
+faq:
+  - q: "Can lifestyle changes replace medication or therapy for mental health?"
+    a: "For mild-to-moderate symptoms, lifestyle strategies can have a significant effect — some comparable to medication in certain studies. For moderate-to-severe depression, anxiety, or other mental health conditions, lifestyle changes are best used alongside — not instead of — evidence-based professional treatment. Never stop prescribed medication without speaking to your doctor."
+  - q: "Which lifestyle habit has the biggest impact on mental health?"
+    a: "Sleep is arguably the most impactful single factor. Chronic poor sleep increases risk of depression and anxiety, impairs emotional regulation, and reduces the effectiveness of other healthy behaviours. Most adults need 7–9 hours of quality sleep. Improving sleep often makes other changes easier."
+  - q: "How much exercise is needed to benefit mental health?"
+    a: "Research suggests that even modest amounts make a difference — 30 minutes of moderate aerobic exercise most days of the week is associated with meaningful reductions in depression and anxiety. The benefits appear within weeks. Consistency matters more than intensity."
+  - q: "Does what I eat affect my mental health?"
+    a: "Evidence links diet quality to mental health. Diets high in vegetables, fruit, wholegrains, legumes, fish, and olive oil are associated with lower risk of depression. Ultra-processed food diets are associated with higher risk. The relationship is bi-directional — poor mental health also makes healthy eating harder."
+  - q: "When should I seek professional help rather than just using lifestyle strategies?"
+    a: "Seek professional support if symptoms are persistent (most days for 2 weeks or more), significantly affecting work or relationships, or if you are having thoughts of self-harm or suicide. Lifestyle strategies are supportive tools — not substitutes for assessment and treatment when symptoms are serious."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "WebPage"

@@ -4,9 +4,20 @@ slug: "whooping-cough"
 description: "Pertussis is a highly contagious respiratory infection. Vaccination remains the best protection for children and communities."
 category: "Infectious Diseases"
 publishDate: "2025-09-04"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-08"
 tags: ["whooping cough", "pertussis", "vaccines", "public health"]
 draft: false
+faq:
+  - q: "How is whooping cough spread?"
+    a: "Pertussis is highly contagious and spreads through respiratory droplets from coughing and sneezing. Adults and adolescents with waning immunity are often the source of infection for infants, who are at the highest risk of severe illness."
+  - q: "What does the 'whoop' in whooping cough sound like?"
+    a: "The 'whoop' is a characteristic high-pitched sound made when breathing in sharply after a coughing fit. It is more typical in older children and adults; infants may instead turn blue, pause breathing, or appear very unwell during coughing episodes."
+  - q: "How is whooping cough treated?"
+    a: "Antibiotics (commonly azithromycin or erythromycin) are most effective if given early in the illness. If started within the first 1–2 weeks, they can reduce severity and prevent spread. Hospitalisation may be needed for infants."
+  - q: "Why is whooping cough vaccination recommended during pregnancy?"
+    a: "Vaccinating pregnant women (with Tdap) allows antibodies to be passed to the baby before birth, providing protection before newborns are old enough to be vaccinated. Newborns face the highest risk of severe complications, including death."
+  - q: "How long does whooping cough last?"
+    a: "Whooping cough is sometimes called the '100-day cough'. The severe coughing phase typically lasts 2–6 weeks, followed by gradual recovery. Adults may have a persistent mild cough for months. Recovery can be prolonged even with treatment."
 ---
 
 ## Overview

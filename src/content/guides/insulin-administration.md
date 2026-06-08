@@ -4,12 +4,23 @@ slug: "insulin-administration"
 description: "Basal and bolus basics, dosing methods, site rotation, and pump set changes."
 category: "Diabetes"
 publishDate: "2025-08-18"
-updatedDate: "2025-08-21"
+updatedDate: "2026-06-08"
 tags: ["Type 1 Diabetes", "insulin", "patientguide"]
 related:
-  - /guides/blood-glucose-testing
-  - /guides/continuous-glucose-monitors
-  - /guides/diabetes-emergency-actions
+  - "[Blood Glucose Testing](/guides/blood-glucose-testing)"
+  - "[Continuous Glucose Monitors](/guides/continuous-glucose-monitors)"
+  - "[Diabetes Emergencies](/guides/diabetes-emergency-actions)"
+faq:
+  - q: "What is the difference between basal and bolus insulin?"
+    a: "Basal insulin (long-acting) provides a steady background level throughout the day and night to control glucose between meals. Bolus insulin (rapid- or short-acting) is taken around mealtimes to handle glucose rises from food and to correct high readings."
+  - q: "How should I rotate insulin injection sites?"
+    a: "Rotate sites within the same general area (abdomen, thigh, buttock, upper arm) and avoid injecting in the same spot repeatedly. Lipohypertrophy (lumpy scar tissue from repeated injections) significantly reduces insulin absorption and should be avoided."
+  - q: "Does injection site matter for insulin absorption?"
+    a: "Yes. The abdomen absorbs insulin fastest and is generally preferred for bolus (mealtime) insulin. The thigh and buttock absorb more slowly, making them suitable for long-acting basal insulin. Absorption can vary with lipohypertrophy."
+  - q: "How do I know if my insulin pump infusion set needs changing?"
+    a: "Change infusion sets every 2–3 days as recommended, or sooner if glucose is unexpectedly rising, the site looks red or irritated, or delivery feels uncomfortable. Always carry spare injection supplies in case of pump failure."
+  - q: "What should I do if I miss an insulin dose?"
+    a: "For basal insulin, take it as soon as you remember if close to the scheduled time. If near the next dose, seek advice from your diabetes team. For bolus insulin, smaller corrections at the next meal are generally safer than a large late corrective dose."
 ---
 
 Insulin delivery is about two things: **the insulin you use** and **how you deliver it**. Get both right and day‑to‑day control becomes simpler and safer.

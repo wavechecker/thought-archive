@@ -3,8 +3,20 @@ title: "Waist-to-Hip Ratio (WHR)"
 description: "How to measure your waist-to-hip ratio and why it’s a better predictor of health risks than BMI."
 category: "Heart & Circulation"
 publishDate: "2025-09-09"
+updatedDate: "2026-06-08"
 tags: ["waist-to-hip ratio", "BMI", "obesity", "metabolic health"]
 draft: false
+faq:
+  - q: "What is a healthy waist-to-hip ratio?"
+    a: "A WHR below 0.90 for men and below 0.85 for women is generally considered lower risk. The WHO defines WHR above these thresholds as indicating central obesity associated with elevated cardiovascular and metabolic risk."
+  - q: "Why is waist-to-hip ratio more useful than BMI?"
+    a: "BMI does not distinguish where body fat is stored. Central (abdominal) fat — measured by WHR — is more strongly associated with cardiovascular disease, type 2 diabetes, and metabolic syndrome than fat stored elsewhere. BMI can also misclassify risk in muscular people."
+  - q: "How do I measure my waist-to-hip ratio?"
+    a: "Measure your waist at the narrowest point (typically just above the belly button while relaxed and exhaling), then measure your hips at the widest point around the buttocks. Divide your waist measurement by your hip measurement."
+  - q: "Can waist-to-hip ratio be improved?"
+    a: "Yes. Regular aerobic and resistance exercise, a healthy diet, and adequate sleep all help reduce abdominal fat and improve WHR. Visceral fat (deep fat around organs) responds relatively well to lifestyle change."
+  - q: "What other measurements help assess cardiometabolic risk?"
+    a: "Waist circumference alone, waist-to-height ratio, and body fat percentage complement WHR. Blood pressure, fasting glucose, and lipid levels complete a thorough cardiometabolic risk picture."
 ---
 
 > **See also:** [Forget BMI: Why Your Waistline Tells the Real Story](/posts/forget-bmi-waistline)  

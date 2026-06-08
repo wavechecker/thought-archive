@@ -4,13 +4,24 @@ slug: "diabetes-children-adolescents"
 description: "Global data and clinical guidance on type 1 and type 2 diabetes in children: prevalence, causes, symptoms, diagnosis, treatment, and risks."
 category: "Diabetes"
 publishDate: "2025-09-13"
-updatedDate: "2025-09-13"
+updatedDate: "2026-06-08"
 tags: ["diabetes", "children", "adolescents", "type 1 diabetes", "type 2 diabetes", "global health", "obesity", "prevention"]
 draft: false
 related:
-  - /guides/childhood-obesity-prevention
-  - /guides/healthy-diets-for-children
-  - /guides/child-adolescent-health-hub
+  - "[Childhood Obesity Prevention](/guides/childhood-obesity-prevention)"
+  - "[Healthy Diets for Children](/guides/healthy-diets-for-children)"
+  - "[Child and Adolescent Health Hub](/guides/child-adolescent-health-hub)"
+faq:
+  - q: "Is diabetes in children always type 1?"
+    a: "Not anymore. While type 1 diabetes has traditionally been most common in childhood, type 2 diabetes in children and adolescents has grown rapidly worldwide, particularly where childhood obesity rates are high. Both types require careful diagnosis and management."
+  - q: "What are the warning signs of diabetes in children?"
+    a: "Warning signs include increased thirst and urination (including bedwetting in a previously dry child), unexplained weight loss, fatigue, blurred vision, and slow-healing wounds. Type 1 symptoms can develop rapidly — sometimes over days — and warrant urgent medical attention."
+  - q: "How does diabetes affect a child's school life?"
+    a: "Children with diabetes can fully participate in school with appropriate support. Management requires blood glucose monitoring, insulin doses around mealtimes, snacks for activity, and a plan for managing low or high glucose. Most schools can support this with guidance from the diabetes team."
+  - q: "Do children with type 1 diabetes outgrow it?"
+    a: "No. Type 1 diabetes is a lifelong autoimmune condition. A 'honeymoon phase' shortly after diagnosis may temporarily reduce insulin needs, but this is not remission. Insulin treatment is required indefinitely."
+  - q: "What long-term health risks does diabetes pose for children?"
+    a: "Without good glucose management, diabetes increases lifetime risk of complications including eye disease, kidney damage, nerve damage, and cardiovascular disease. Early management and sustained glucose control significantly reduce these risks."
 ---
 
 ## Intro

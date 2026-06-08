@@ -4,9 +4,20 @@ slug: "type-1-diabetes-managing-hypoglycaemia"
 description: "How to recognise hypos, treat them quickly, prevent recurrences, and adjust insulin/carbs to stay safe."
 category: "Diabetes"
 publishDate: "2025-08-30"
-updatedDate: "2025-09-14"
+updatedDate: "2026-06-08"
 draft: false
 tags: ["type 1 diabetes", "hypoglycaemia", "low blood sugar", "glucagon", "CGM", "patientguide"]
+faq:
+  - q: "What is the Rule of 15 for treating a hypo?"
+    a: "Take 15–20 g of fast-acting carbohydrate (glucose tablets, fruit juice, or regular soft drink — not diet), wait 15 minutes, and recheck blood glucose. If still below 3.9 mmol/L (70 mg/dL), repeat. Once recovered, eat a small snack if the next meal is more than an hour away."
+  - q: "When should I use glucagon for a hypo?"
+    a: "Glucagon is needed for severe hypoglycaemia when the person cannot swallow safely — if they are unconscious, having a seizure, or too confused to eat or drink. Bystanders should administer glucagon (nasal powder or injection kit) and call emergency services. Do not try to put food or drink into the mouth of an unconscious person."
+  - q: "What is hypoglycaemia unawareness?"
+    a: "Hypoglycaemia unawareness is when the early warning symptoms of a low (shakiness, sweating, palpitations) are absent or diminished. It typically develops after repeated episodes of hypoglycaemia, which blunt the hormonal counter-regulatory response. CGM with alerts and 'hypo avoidance' periods supervised by a diabetes team can help restore awareness."
+  - q: "How can I reduce how often I have hypos?"
+    a: "Strategies include consistent carbohydrate counting, matching insulin doses to meals and activity, adjusting basal rates for exercise, using a CGM with low-glucose alerts, reviewing patterns with your diabetes team, and avoiding alcohol without adequate food."
+  - q: "Can I have a hypo while asleep and not wake up?"
+    a: "Yes. Nocturnal hypoglycaemia can occur without waking. Symptoms include sweating, restlessness, or waking with a headache. A CGM with night alerts is particularly valuable for detecting overnight lows. Review evening insulin doses and consider a small bedtime snack if levels are trending low."
 schema:
   medicalCondition:
     name: "Hypoglycaemia"

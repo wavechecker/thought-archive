@@ -6,6 +6,18 @@ category: "Mental Health"
 publishDate: "2025-10-01"
 tags: ["insomnia", "sleep disorders", "CBT-I"]
 draft: false
+updatedDate: "2026-06-08"
+faq:
+  - q: "When does insomnia warrant professional help?"
+    a: "Seek help if you are regularly taking 30 minutes or more to fall asleep, waking for long periods at night, or sleeping fewer than 6 hours and feeling significantly impaired during the day — and this has persisted for at least 3 months. Also seek help if insomnia is affecting your safety (e.g., driving), mental health, or quality of life."
+  - q: "What is the recommended first-line treatment for chronic insomnia?"
+    a: "Cognitive Behavioural Therapy for Insomnia (CBT-I) is recommended as first-line treatment over sleep medication by clinical guidelines including those from AASM, NICE, and Sleep Health Foundation. It is more effective and produces durable improvements without dependence or rebound."
+  - q: "Can sleeping tablets cure insomnia long term?"
+    a: "Sleeping tablets (benzodiazepines, z-drugs) can help short term but are not recommended for ongoing chronic insomnia. They carry risks of dependence, rebound insomnia on stopping, tolerance, and next-day impairment. Melatonin may be appropriate for certain circadian-related issues. A doctor can advise on appropriate short-term use."
+  - q: "What medical conditions can cause or worsen insomnia?"
+    a: "Insomnia can be caused or worsened by sleep apnoea, restless legs syndrome, chronic pain, depression and anxiety, hyperthyroidism, GERD, and certain medications. If a cause is identified and treated, insomnia may improve. CBT-I remains effective even when insomnia is comorbid with other conditions."
+  - q: "How is insomnia assessed when I see a doctor?"
+    a: "A doctor will ask about sleep patterns, daytime symptoms, mental and physical health, medications, and lifestyle factors. They may suggest a sleep diary. Investigations such as a sleep study may be arranged if a sleep disorder like sleep apnoea is suspected. The Insomnia Severity Index (ISI) is a commonly used questionnaire."
 
 # JSON-LD (Article + FAQ + Breadcrumbs + MedicalCondition)
 jsonLd:
