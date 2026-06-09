@@ -1,12 +1,23 @@
----
+﻿---
 title: "Tesamorelin: Uses, Mechanism, and Safety"
 slug: "tesamorelin"
 description: "An overview of tesamorelin, a peptide drug used to reduce visceral fat in certain medical conditions."
 category: "Aging & Longevity"
 publishDate: "2026-03-09"
-updatedDate: "2026-03-09"
+updatedDate: "2026-06-09"
 tags: ["peptides", "metabolism", "hormones"]
 draft: false
+faq:
+  - q: "What is tesamorelin approved for?"
+    a: "Tesamorelin is approved in several countries to treat HIV-associated lipodystrophy — a condition characterised by visceral fat accumulation that can occur as a side effect of HIV treatment."
+  - q: "How does tesamorelin work?"
+    a: "Tesamorelin mimics growth hormone-releasing hormone, stimulating the pituitary gland to release growth hormone. This promotes fat metabolism, particularly reducing visceral abdominal fat."
+  - q: "Can tesamorelin be used for general weight loss or anti-aging?"
+    a: "Tesamorelin is not approved for general weight loss or anti-aging. Off-label use occurs in some hormone optimisation clinics, but evidence outside its approved indication is limited. Treatment choices should be individualised with clinician guidance."
+  - q: "What are the side effects of tesamorelin?"
+    a: "Common side effects include injection-site reactions, joint pain, and fluid retention. Changes in blood sugar are possible and monitoring is required during treatment."
+  - q: "Does tesamorelin require a prescription?"
+    a: "Yes. It is a regulated prescription drug in countries where it is approved. Use should be supervised by a clinician with experience in metabolic and hormonal health."
 ---
 
 ## Intro

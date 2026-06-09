@@ -6,6 +6,18 @@ category: "Vaccination"
 publishDate: "2025-08-26"
 tags: ["equity", "global health", "access", "policy"]
 draft: false
+updatedDate: "2026-06-09"
+faq:
+  - q: "What is vaccine equity?"
+    a: "Vaccine equity means ensuring fair access to vaccines across all countries and communities, regardless of income level. It is both a moral principle and a global health security necessity — uncontrolled outbreaks anywhere can threaten health everywhere."
+  - q: "Why should high-income countries care about vaccine equity?"
+    a: "Infectious diseases cross borders. Outbreaks in regions with low vaccination coverage create conditions for sustained transmission, emergence of new variants, and risk of global resurgence."
+  - q: "What is COVAX?"
+    a: "COVAX is a global initiative co-led by WHO, Gavi, and CEPI to provide equitable access to COVID-19 vaccines for lower-income countries. It improved access but was constrained by supply shortages and vaccine nationalism during the acute pandemic phase."
+  - q: "What are the main barriers to vaccine equity?"
+    a: "Key barriers include cost, cold-chain logistics, limited health infrastructure, political instability, inadequate financing, and misinformation that reduces uptake even where supply exists."
+  - q: "How can vaccine equity be improved long-term?"
+    a: "Long-term solutions include building regional vaccine manufacturing in Africa, Asia, and Latin America, sustainable financing through Gavi and similar mechanisms, and strengthening local health systems to deliver and monitor vaccines."
 ---
 
 # Global Vaccine Equity

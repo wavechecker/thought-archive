@@ -4,9 +4,20 @@ slug: "mandates-and-exemptions"
 description: "A guide to vaccine mandate policies, types of exemptions, and the debates around them."
 category: "Vaccination"
 publishDate: "2025-08-26"
-updatedDate: "2026-04-13"
+updatedDate: "2026-06-09"
 tags: ["policy", "society", "mandates", "exemptions"]
 draft: false
+faq:
+  - q: "What is a vaccine mandate?"
+    a: "A vaccine mandate is a law or policy requiring vaccination as a condition for school enrolment, healthcare employment, or other activities. Mandates exist on a spectrum from strict requirements to conditional access policies."
+  - q: "Are vaccine mandates legal?"
+    a: "In most jurisdictions, vaccine mandates for specific purposes have been upheld by courts. Legal analysis typically weighs public health benefit against individual rights, requiring proportionality and medical exemption provisions."
+  - q: "What types of exemptions are available?"
+    a: "Most programs allow medical exemptions for genuine contraindications. Religious exemptions exist in some jurisdictions. Philosophical or personal belief exemptions are available in fewer places and are associated with lower vaccination coverage."
+  - q: "What happened to COVID vaccine mandates?"
+    a: "Most COVID-specific mandates — for healthcare workers, travel, and employment — have been repealed or are no longer enforced in most jurisdictions. Childhood vaccination mandates for established vaccines such as MMR generally remained in place."
+  - q: "Do mandates increase or decrease vaccine hesitancy?"
+    a: "Evidence is mixed and context-dependent. Mandates with accessible medical exemptions and clear public communication tend to increase coverage without deepening resistance. In communities with pre-existing distrust, coercive approaches can reinforce negative attitudes."
 ---
 
 # Vaccine Mandates and Exemptions

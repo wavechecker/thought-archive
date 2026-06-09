@@ -1,11 +1,22 @@
----
+﻿---
 title: "Peptides Explained: What Each Peptide Does (Simple Guide)"
 description: "A clear, practical guide to common peptides — what they do, how they work, and how they differ."
 category: "General Health"
 publishDate: "2026-03-25"
-updatedDate: "2026-04-01"
+updatedDate: "2026-06-09"
 tags: ["peptides", "hormones", "longevity", "metabolic health"]
 draft: false
+faq:
+  - q: "What is a peptide?"
+    a: "A peptide is a short chain of amino acids — the same building blocks as proteins, but in shorter sequences. Peptides act as signalling molecules throughout the body, influencing processes from hormone release to cell repair."
+  - q: "What is the difference between a peptide and a protein?"
+    a: "Proteins are larger chains of amino acids that serve structural or enzymatic functions. Peptides are shorter chains that typically act as biological signals. The distinction is partly one of size and partly function."
+  - q: "Are GLP-1 drugs peptides?"
+    a: "Yes. GLP-1 receptor agonists such as semaglutide (Ozempic, Wegovy) are synthetic peptides that mimic a naturally occurring gut hormone. They are among the most evidence-backed peptide therapies available."
+  - q: "Why are some peptides sold online without a prescription?"
+    a: "Many experimental peptides are sold as research chemicals in regulatory grey areas not specifically covered by existing drug laws. This does not mean they are safe or effective — it reflects a gap in oversight, not proven safety."
+  - q: "How do I know which peptides have real clinical evidence?"
+    a: "Look for regulatory approval status, published phase 2–3 clinical trials, and guideline recommendations. Products discussed primarily in fitness forums or by longevity influencers without peer-reviewed data warrant careful scrutiny."
 ---
 
 ## Intro

@@ -1,12 +1,23 @@
----
+﻿---
 title: "Oxytocin: Established Uses and Evolving Research"
 slug: "oxytocin"
 description: "A medical overview of oxytocin covering its established obstetric uses, research into social and mental health applications, evidence limitations, and safety considerations."
 category: "General Health"
 publishDate: "2026-03-11"
-updatedDate: "2026-03-11"
+updatedDate: "2026-06-09"
 tags: ["oxytocin", "hormones", "obstetrics", "mental health", "experimental medicine"]
 draft: false
+faq:
+  - q: "What is oxytocin used for medically?"
+    a: "Oxytocin is an approved prescription medication used in obstetrics to induce or augment labour and to manage postpartum haemorrhage. These are its best-supported and most widely used clinical applications."
+  - q: "Is oxytocin the 'love hormone'?"
+    a: "Oxytocin plays a role in social bonding and mother-infant attachment in animal studies. The popular 'love hormone' label oversimplifies complex, context-dependent biology. Evidence for consistent social or psychological benefits of administered oxytocin in humans is inconsistent."
+  - q: "Do oxytocin nasal sprays improve mood or social connection?"
+    a: "Clinical trials of intranasal oxytocin for anxiety, autism, and depression have produced mixed results. Several large trials have not demonstrated meaningful clinical benefit. These formulations are not approved for psychological indications in most countries."
+  - q: "Is oxytocin safe outside of obstetric settings?"
+    a: "Synthetic oxytocin has well-characterised risks in obstetric use including uterine overstimulation and cardiovascular effects. Products marketed for wellness or social enhancement outside regulated pharmacy supply chains carry uncertain quality and safety profiles."
+  - q: "What are the main limitations of oxytocin research?"
+    a: "Translating animal bonding research to human psychology is challenging. Intranasal oxytocin may not reach the brain in consistent concentrations. Many early positive trials have not replicated in larger, better-controlled studies."
 ---
 
 ## Intro

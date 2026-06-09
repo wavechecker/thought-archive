@@ -1,13 +1,24 @@
----
+﻿---
 
 title: "Peptide Therapy: What It Is, How It Works, and Safety Considerations"
 slug: "peptide-therapy"
 description: "An overview of peptide therapy, how peptide drugs work in the body, and the safety and regulatory issues surrounding these treatments."
 category: "Aging & Longevity"
 publishDate: "2026-03-09"
-updatedDate: "2026-03-09"
+updatedDate: "2026-06-09"
 tags: ["peptides", "biotech", "longevity", "metabolism"]
 draft: false
+faq:
+  - q: "What is peptide therapy?"
+    a: "Peptide therapy refers to treatments using synthetic or natural peptide molecules — short chains of amino acids — to influence biological processes including hormone release, metabolism, tissue repair, and immune function."
+  - q: "Which peptide therapies have good clinical evidence?"
+    a: "GLP-1 receptor agonists such as semaglutide and tirzepatide for diabetes and obesity are among the most evidence-supported peptide therapies. Insulin is also a peptide. Oxytocin is approved for obstetric use. Most other peptides discussed online have limited clinical evidence."
+  - q: "Are all peptide therapies the same?"
+    a: "No. Peptides vary greatly in their mechanisms, targets, evidence quality, and regulatory status. An approved medicine like semaglutide has extensive trial data. An experimental compound like BPC-157 has mainly animal model evidence."
+  - q: "How are peptide therapies regulated?"
+    a: "Approved peptide drugs follow standard pharmaceutical regulation requiring clinical evidence of safety and efficacy. Experimental peptides sold outside regulated channels are not subject to the same oversight and may vary in purity, dose, and safety."
+  - q: "Is it safe to use peptides from online vendors?"
+    a: "Products sold without prescription as research chemicals carry significant quality and safety uncertainty. Purported contents may differ from labelled contents. Independent medical supervision is important before using any hormone-related therapy."
 ---
 
 ## Intro
