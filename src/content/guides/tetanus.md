@@ -4,9 +4,20 @@ slug: "tetanus"
 description: "Who needs a tetanus booster and when, including routine schedules, wound management, and global recommendations."
 category: "Vaccination"
 publishDate: "2025-08-20"
-updatedDate: "2025-08-29"
 draft: false
 tags: ["tetanus", "booster", "vaccination", "public health", "patientguide"]
+updatedDate: "2026-06-09"
+faq:
+  - q: "How often do adults need a tetanus booster?"
+    a: "Adults need a routine tetanus booster every ten years. If a high-risk or dirty wound occurs more than five years after the last dose, an additional booster is recommended at that point."
+  - q: "Is tetanus contagious — can I catch it from someone else?"
+    a: "No. Tetanus is not spread person to person. The bacteria live in soil and enter the body through cuts, punctures, burns, or animal bites. You cannot catch tetanus from being near someone who has it."
+  - q: "Do I still need boosters if I was vaccinated as a child?"
+    a: "Yes. Childhood vaccination provides good initial protection, but immunity wanes over time. Adult boosters every ten years are required to maintain protection throughout life."
+  - q: "When should I get a tetanus booster after an injury?"
+    a: "A booster is recommended if you have a dirty, deep, or high-risk wound and it has been more than five years since your last tetanus-containing vaccine. If you are unsure of your vaccination history, a booster is also recommended."
+  - q: "Why is tetanus vaccination recommended during pregnancy?"
+    a: "Maternal tetanus vaccination during pregnancy protects newborns from neonatal tetanus — a serious and often fatal condition in settings where births occur outside clean environments or where vaccination coverage is low."
 ---
 
 # Tetanus — When to Get a Booster

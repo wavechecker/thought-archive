@@ -4,7 +4,7 @@ slug: "preventive-screening-hub"
 description: "Your central guide to preventive health screening — cancer checks, cardiovascular testing, metabolic health, and age-based schedules for staying ahead of disease."
 category: "Guide Hubs"
 publishDate: "2026-06-05"
-updatedDate: "2026-06-06"
+updatedDate: "2026-06-09"
 hubKey: "Preventive Screening"
 draft: false
 tags:
@@ -57,6 +57,17 @@ jsonld:
         acceptedAnswer:
           "@type": "Answer"
           text: "No test is perfect. Screening programs are designed so the benefits of early detection outweigh the harms of false positives and unnecessary follow-up — but every result needs clinical context."
+faq:
+  - q: "What is preventive screening?"
+    a: "Preventive screening looks for early signs of disease in people who have no symptoms — when treatment is most effective and outcomes are best. Common examples include bowel cancer testing, mammography, cervical screening, and blood pressure checks."
+  - q: "Which screening tests do I need?"
+    a: "The right tests depend on your age, sex, family history, and personal risk factors. Key cancer screens include bowel cancer (from age 45–50), breast cancer (from age 40–50), cervical cancer (from early adulthood), and prostate cancer (by informed discussion). Blood pressure and cholesterol checks are recommended for all adults from midlife."
+  - q: "What is the difference between screening and diagnosis?"
+    a: "Screening tests are carried out in people with no symptoms to find disease early. Diagnostic tests confirm or rule out a condition after a symptom has appeared or a screening result has come back abnormal."
+  - q: "Are all screening tests reliable?"
+    a: "No test is perfect. All screening programs involve trade-offs between the benefits of early detection and the harms of false-positive results, unnecessary follow-up, and overdiagnosis. Understanding these trade-offs helps with shared decision-making."
+  - q: "Should I have screening tests if I feel completely healthy?"
+    a: "Yes. Many serious conditions — including high blood pressure, bowel cancer, and type 2 diabetes — cause no symptoms in their early stages. Routine screening is specifically designed to find these conditions before they cause harm."
 ---
 
 # Preventive Screening Hub

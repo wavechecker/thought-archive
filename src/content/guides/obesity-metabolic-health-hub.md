@@ -49,6 +49,18 @@ jsonld:
         "acceptedAnswer":
           "@type": "Answer"
           "text": "Even modest weight loss — as little as 5–7% of body weight — produces clinically meaningful improvements in blood pressure, blood glucose, and lipid profiles in people with metabolic syndrome or prediabetes. A 10% reduction significantly reduces visceral fat and may achieve prediabetes reversal. Greater weight loss (15%+) is associated with Type 2 diabetes remission and cardiovascular risk reduction comparable to medication."
+updatedDate: "2026-06-09"
+faq:
+  - q: "Is BMI a reliable measure of individual health?"
+    a: "BMI is a useful population-level screening tool but a poor individual measure. It cannot distinguish between muscle and fat, does not account for fat distribution, and misclassifies certain ethnic groups. Waist circumference and waist-to-hip ratio are better predictors of visceral fat and cardiometabolic risk."
+  - q: "What is metabolic syndrome?"
+    a: "Metabolic syndrome is diagnosed when a person has three or more of five criteria: elevated waist circumference, high triglycerides, low HDL cholesterol, high blood pressure, and elevated fasting blood glucose. It affects roughly one in three adults in high-income countries and significantly raises the risk of Type 2 diabetes and cardiovascular disease."
+  - q: "How does visceral fat differ from subcutaneous fat?"
+    a: "Subcutaneous fat sits just beneath the skin and has limited metabolic effects. Visceral fat is stored deep inside the abdominal cavity around the organs. It releases inflammatory signals and free fatty acids that drive insulin resistance and raise cardiovascular risk."
+  - q: "Can someone at a normal weight have poor metabolic health?"
+    a: "Yes. People at a normal BMI can carry visceral fat and have insulin resistance — sometimes called TOFI (Thin Outside, Fat Inside). They may have elevated cardiovascular risk that BMI screening completely misses."
+  - q: "How much weight loss is needed to see meaningful metabolic improvements?"
+    a: "Even 5–7% of body weight produces clinically meaningful improvements in blood glucose, blood pressure, and lipid profiles. A 10% reduction significantly reduces visceral fat. Weight loss of 15% or more is associated with Type 2 diabetes remission and cardiovascular risk reduction comparable to medication."
 ---
 
 # Obesity & Metabolic Health Hub

@@ -4,7 +4,7 @@ slug: "social-connection"
 description: "Why friendships and social bonds are vital for resilience and reduced depression risk."
 category: "Mental Health"
 publishDate: "2025-09-30"
-updatedDate: "2025-09-30"
+updatedDate: "2026-06-09"
 tags: ["sleep", "mental health", "depression", "resilience", "patientguide"]
 draft: false
 jsonld:
@@ -19,6 +19,17 @@ jsonld:
       - { "@type": "ListItem", "position": 2, "name": "Mental Health", "item": "https://patientguide.io/guides/mental-health" }
       - { "@type": "ListItem", "position": 3, "name": "Mental Health Toolkit", "item": "https://patientguide.io/guides/mental-health-toolkit" }
       - { "@type": "ListItem", "position": 4, "name": "Social Connection and Mental Health", "item": "https://patientguide.io/guides/social-connection" }
+faq:
+  - q: "How does loneliness affect physical health?"
+    a: "Chronic loneliness is associated with significant health risks, including increased risk of heart disease, dementia, and premature death. Research suggests the effect is comparable to smoking around 15 cigarettes a day."
+  - q: "Does social connection genuinely protect against depression?"
+    a: "Yes. People with strong, supportive social ties have lower rates of depression and anxiety, and better recovery outcomes when mental illness does occur. The protective effect is well established in research."
+  - q: "Does quality or quantity of friendships matter more for mental health?"
+    a: "Quality matters more than quantity. A few close, supportive relationships are more protective than a large network of superficial connections."
+  - q: "Can online relationships substitute for in-person social connection?"
+    a: "Online connections can provide some benefit, particularly for people with limited mobility or in isolated circumstances. However, face-to-face interaction tends to be more protective for mental health overall."
+  - q: "How can I improve social connection if I feel isolated?"
+    a: "Start small — reach out to one person, join a local group, or combine connection with another activity such as a walking group. Volunteering is also a well-supported route to building meaningful social bonds."
 ---
 
 # Social Connection and Mental Health

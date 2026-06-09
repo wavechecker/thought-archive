@@ -40,6 +40,18 @@ schema:
       - "https://www.cdc.gov/diabetes/about/about-type-1-diabetes.html"
       - "https://www.who.int/news-room/questions-and-answers/item/diabetes-type-1"
       - "https://medlineplus.gov/diabetesinchildren.html"
+updatedDate: "2026-06-09"
+faq:
+  - q: "What is the difference between type 1 and type 2 diabetes in children?"
+    a: "Type 1 is an autoimmune condition where the immune system destroys insulin-producing cells — it is not preventable and requires lifelong insulin therapy. Type 2 is linked to obesity and lifestyle, is increasingly common in children, and can often be managed or prevented with lifestyle changes."
+  - q: "What are the warning signs of diabetes in a child?"
+    a: "Key symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, irritability, and blurred vision. If a child develops vomiting, abdominal pain, or fruity-smelling breath, seek emergency care promptly as these may signal diabetic ketoacidosis."
+  - q: "Can type 2 diabetes in children be prevented?"
+    a: "In many cases, yes. Healthy eating, regular physical activity, maintaining a healthy weight, and reducing sedentary time are the most effective preventive strategies for childhood type 2 diabetes."
+  - q: "How is diabetes managed for children at school?"
+    a: "A written Diabetes Care Plan should be in place at school, covering glucose monitoring, insulin routines, hypo and hyper treatment, and emergency procedures. Schools are required to make reasonable accommodations in most countries."
+  - q: "Can children with diabetes lead a normal life?"
+    a: "Yes. With good blood glucose management, education, family support, and access to modern technology such as CGMs and insulin pumps, children with diabetes can participate fully in school, sports, and social activities."
 ---
 
 ## Intro

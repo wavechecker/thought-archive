@@ -5,8 +5,19 @@ description: "How to recognise mental health warning signs, offer immediate supp
 category: "Mental Health"
 tags: ["mental health", "first aid", "crisis", "suicide prevention"]
 publishDate: "2025-08-14"
-updatedDate: "2025-08-21"
+updatedDate: "2026-06-09"
 draft: false
+faq:
+  - q: "Do I need special training to provide mental health first aid?"
+    a: "No special qualifications are required to offer basic support. However, completing a certified Mental Health First Aid (MHFA) course gives structured tools and confidence to respond more effectively."
+  - q: "Should I ask someone directly if they are thinking about suicide?"
+    a: "Yes. Evidence shows that asking directly about suicidal thoughts does not increase risk and can actually reduce it by giving the person a chance to talk openly and feel supported."
+  - q: "What should I do if someone is in immediate mental health crisis?"
+    a: "Stay with the person — never leave them alone if they may be at risk. Call emergency services (000 in Australia, 911 in the US, 999 in the UK) if there is immediate danger. Provide crisis line numbers if safe to do so."
+  - q: "Is mental health first aid the same as therapy or counselling?"
+    a: "No. Mental health first aid is short-term immediate support until the person can access professional care. It does not replace ongoing psychological or psychiatric treatment."
+  - q: "What if I say the wrong thing while trying to help?"
+    a: "Showing genuine compassion and a willingness to listen matters more than finding the perfect words. Avoid minimising feelings or offering unsolicited advice. Simply being present and non-judgmental is valuable."
 ---
 Mental health first aid is the help offered to someone experiencing a mental health problem, crisis, or emotional distress until professional support can be arranged.  
 It focuses on **recognising warning signs, offering initial support, and guiding towards appropriate care** — much like physical first aid does for medical emergencies.

@@ -4,7 +4,6 @@ slug: "preventive-health"
 description: "Preventive health covers screening, vaccination, nutrition, exercise, and lifestyle choices to reduce the risk of disease and improve wellbeing."
 category: "Guide Hubs"
 publishDate: "2025-08-29"
-updatedDate: "2025-09-17"
 hubKey: "Preventive Health"
 draft: false
 tags: ["preventive health", "screening", "lifestyle", "nutrition", "exercise", "vaccination", "hub"]
@@ -35,6 +34,18 @@ jsonld:
         acceptedAnswer:
           "@type": "Answer"
           text: "Vaccination, cancer screening, regular exercise, balanced diet, and avoiding tobacco and harmful alcohol use."
+updatedDate: "2026-06-09"
+faq:
+  - q: "What is preventive health?"
+    a: "Preventive health focuses on staying well and reducing the risk of disease before it starts — through screening, vaccination, lifestyle changes, and managing modifiable risk factors such as blood pressure, cholesterol, and weight."
+  - q: "How much exercise do adults need for health benefits?"
+    a: "Current guidelines recommend at least 150 minutes of moderate-intensity aerobic activity per week (such as brisk walking or cycling) or 75 minutes of vigorous activity, plus muscle-strengthening exercise at least twice weekly. Even activity below these levels is beneficial compared with being sedentary."
+  - q: "Does alcohol increase the risk of cancer?"
+    a: "Yes. Alcohol is classified as a Group 1 carcinogen. It raises the risk of cancers of the mouth, throat, oesophagus, colon, liver, and breast. No safe level of alcohol for cancer risk has been established — reducing intake lowers risk proportionally."
+  - q: "What vaccines do adults need beyond the childhood schedule?"
+    a: "Adults commonly need annual influenza vaccination, COVID-19 boosters as recommended, a Tdap booster every ten years, a shingles vaccine from age 50, and a pneumococcal vaccine from age 65. Travel, occupational, and individual risk factors may require additional vaccines."
+  - q: "What is the most effective single preventive health action for most adults?"
+    a: "Not smoking has the strongest evidence across the widest range of conditions — cutting risk of lung cancer, heart disease, stroke, and COPD simultaneously. For non-smokers, regular physical activity has the broadest preventive benefit."
 ---
 
 # Preventive Health — Guide Hub
