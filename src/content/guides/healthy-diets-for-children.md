@@ -1,14 +1,25 @@
----
+﻿---
 title: "Healthy Diets for Children"
 slug: "healthy-diets-for-children"
 description: "A guide to building balanced, nutritious diets for children, covering food groups, portion sizes, and practical strategies for families."
 category: "Child & Adolescent Health"
 publishDate: "2025-09-10"
-updatedDate: "2025-09-13"
+updatedDate: "2026-06-09"
 tags: ["child nutrition", "healthy eating", "prevention", "diet"]
 draft: false
 related:
-  - /guides/childhood-obesity-prevention
+  - "[Childhood Obesity Prevention](/guides/childhood-obesity-prevention)"
+faq:
+  - q: "What should children eat for a healthy diet?"
+    a: "A balanced diet for children includes fruits, vegetables, whole grains, lean proteins, and dairy or alternatives. Ultra-processed foods, sugary drinks, and excess salt should be limited. Regular family meals help establish healthy patterns."
+  - q: "How much sugar is safe for children?"
+    a: "Less than 10% of daily energy from free sugars is the general guideline; under 5% is better. This means limiting sugary drinks, sweets, and processed snack foods."
+  - q: "Should children take vitamin supplements?"
+    a: "Most children on a balanced diet do not need supplements. Supplements may be appropriate for vitamin D (in low-sunlight environments), B12 (for vegan diets), or other specific deficiencies diagnosed by a clinician."
+  - q: "Are plant-based diets safe for children?"
+    a: "Yes, with careful planning to ensure adequate B12, iron, calcium, vitamin D, iodine, and omega-3 fatty acids. A dietitian referral is recommended for families raising children on entirely vegan diets."
+  - q: "How do I encourage healthy eating without creating anxiety around food?"
+    a: "Offer variety without pressure, avoid labelling foods as 'bad', allow children reasonable autonomy, and model healthy eating yourself. If a child shows signs of significant food-related anxiety, speak with a paediatrician or dietitian."
 ---
 
 ## Intro

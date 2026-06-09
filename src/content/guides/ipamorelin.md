@@ -1,13 +1,24 @@
----
+﻿---
 
 title: "Ipamorelin: Uses, Mechanism, and What the Evidence Shows"
 slug: "ipamorelin"
 description: "An overview of ipamorelin, a synthetic growth hormone secretagogue peptide, including how it works, claimed uses, and the current state of clinical evidence."
 category: "Aging & Longevity"
 publishDate: "2026-03-10"
-updatedDate: "2026-03-10"
+updatedDate: "2026-06-09"
 tags: ["peptides", "growth hormone", "endocrinology", "longevity", "experimental medicine"]
 draft: false
+faq:
+  - q: "What is ipamorelin?"
+    a: "Ipamorelin is a synthetic peptide that stimulates growth hormone release by activating the ghrelin receptor in the pituitary gland. It belongs to the growth hormone secretagogue class."
+  - q: "Is ipamorelin approved as a medicine?"
+    a: "No. Ipamorelin is not approved as a prescription drug in most countries. It is an experimental compound with limited human clinical evidence."
+  - q: "How is ipamorelin different from other growth hormone peptides?"
+    a: "Unlike some related peptides, ipamorelin does not strongly elevate cortisol or prolactin at experimental doses. It acts through the ghrelin receptor — a distinct mechanism from sermorelin and tesamorelin, which work via the GHRH receptor."
+  - q: "What are the risks of using ipamorelin?"
+    a: "Potential risks include those associated with elevated growth hormone levels — fluid retention, joint discomfort, and changes in insulin sensitivity. Long-term effects in humans are not well characterised."
+  - q: "Can ipamorelin be safely combined with CJC-1295?"
+    a: "Some compounding clinics offer this combination, but there is no established clinical evidence supporting it, and it operates outside approved pharmaceutical frameworks. Do not start any hormone therapy without clinician guidance."
 ---
 
 ## Intro

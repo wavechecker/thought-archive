@@ -6,6 +6,18 @@ category: "Guide Hubs"
 publishDate: "2025-08-26"
 tags: ["safety", "overview", "controversy"]
 draft: false
+updatedDate: "2026-06-09"
+faq:
+  - q: "Are vaccines safe?"
+    a: "Yes. Vaccines undergo extensive pre-approval clinical testing and continuous post-market surveillance. Serious adverse events are rare and are tracked globally through dedicated monitoring systems. The benefit-risk balance strongly favours vaccination for all routine recommended vaccines."
+  - q: "What monitoring systems track vaccine safety?"
+    a: "Systems including VAERS (US), EudraVigilance (Europe), Yellow Card (UK), and AusVaxSafety (Australia) collect and analyse adverse event reports continuously. These detect rare safety signals that may not have been apparent in clinical trials."
+  - q: "Does the MMR vaccine cause autism?"
+    a: "No. The original 1998 study suggesting a link was retracted following evidence of data fraud. Numerous large-scale studies involving millions of children have found no causal relationship between MMR vaccination and autism."
+  - q: "What are adjuvants and are they safe?"
+    a: "Adjuvants are substances added to vaccines to enhance immune response. Aluminium salts are the most common. Decades of safety data show adjuvants are safe at vaccine doses — the quantities are far lower than everyday aluminium exposure from food and environment."
+  - q: "What should I do if I experience a side effect after vaccination?"
+    a: "Report it to your national vaccine safety monitoring system. Most side effects — soreness, low-grade fever, fatigue — resolve within 1–2 days. Seek medical care for any severe, unusual, or prolonged symptoms."
 ---
 
 # Vaccination Safety Overview

@@ -7,6 +7,18 @@ publishDate: "2025-08-27"
 tags: ["covid-19", "vaccination", "policy", "risk-benefit"]
 hubKey: "Vaccination"
 draft: false
+updatedDate: "2026-06-09"
+faq:
+  - q: "What does evidence-first COVID vaccine policy mean?"
+    a: "It means evaluating policy based on absolute risk measures — absolute risk reduction (ARR) and number needed to treat (NNT) — and transparent communication of both benefits and risks, rather than blanket universal recommendations or political messaging."
+  - q: "What is the difference between relative and absolute risk reduction?"
+    a: "Relative risk reduction (RRR) shows the proportional change. Absolute risk reduction (ARR) shows the actual numerical difference. ARR is more informative for individual decisions because high RRR can make small absolute benefits appear large."
+  - q: "Should everyone still receive COVID boosters?"
+    a: "Recommendations depend on individual risk. High-risk groups — older adults and those with significant comorbidities — typically show the greatest benefit. Decisions for lower-risk individuals should weigh baseline disease risk against known adverse event rates."
+  - q: "How are COVID vaccine safety signals detected?"
+    a: "Systems including VAERS, the Vaccine Safety Datalink (US), and equivalent programs in Australia, the EU, and UK continuously monitor for adverse events. Signals are reviewed by expert committees before policy responses are made."
+  - q: "What are the rare serious side effects of COVID vaccines?"
+    a: "Recognised rare serious events include myocarditis (primarily after mRNA vaccines in young males) and thrombosis with thrombocytopenia syndrome (TTS) with certain adenoviral vector vaccines. Benefits have substantially outweighed these risks in high-risk groups."
 ---
 
 # Evidence-First COVID Vaccine Policy

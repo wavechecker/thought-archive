@@ -35,6 +35,18 @@ schema:
     sameAs:
       - "https://www.who.int/news-room/fact-sheets/detail/mental-disorders"
       - "https://medlineplus.gov/mentalhealth.html"
+updatedDate: "2026-06-09"
+faq:
+  - q: "How many people are affected by mental health conditions globally?"
+    a: "The WHO estimates over one billion people — approximately one in eight people worldwide — live with a mental health condition. Depression and anxiety are the most common. The majority do not receive adequate treatment."
+  - q: "What are the leading mental health conditions globally?"
+    a: "Depression, anxiety disorders, schizophrenia, and bipolar disorder account for the largest burden. Depression is a leading cause of disability worldwide. Dementia and substance use disorders are also significant contributors."
+  - q: "Why is mental health care so underfunded globally?"
+    a: "Historically, mental health conditions received less political and funding priority than physical illness, partly due to stigma and limited advocacy. In many countries, mental health receives less than 2% of health budgets despite representing a major share of the disease burden."
+  - q: "Can mental health conditions be effectively treated?"
+    a: "Yes. Effective treatments exist for most mental health conditions — including psychotherapy, particularly CBT, medication, and lifestyle interventions. Earlier treatment generally produces better outcomes."
+  - q: "What can I do if I am struggling with my mental health?"
+    a: "Speak with a GP or primary care provider as a first step. Many countries have national crisis lines and community mental health services. For urgent distress, contact a crisis line: 988 (US/Canada), 13 11 14 Lifeline (Australia), or 116 123 Samaritans (UK)."
 ---
 
 ## Intro

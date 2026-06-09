@@ -1,12 +1,23 @@
----
+﻿---
 title: "MOTS-c: What It Is and What the Evidence Shows"
 slug: "mots-c"
 description: "An overview of MOTS-c, a mitochondrial-derived peptide studied in metabolism and aging research, including evidence limitations, regulatory status, and safety considerations."
 category: "Aging & Longevity"
 publishDate: "2026-03-11"
-updatedDate: "2026-03-11"
+updatedDate: "2026-06-09"
 tags: ["peptides", "mitochondria", "metabolism", "experimental medicine", "longevity"]
 draft: false
+faq:
+  - q: "What is MOTS-c?"
+    a: "MOTS-c is a small peptide encoded in mitochondrial DNA, belonging to a class called mitochondrial-derived peptides. It is studied for possible roles in metabolism, insulin sensitivity, and aging."
+  - q: "Is MOTS-c approved as a medication?"
+    a: "No. MOTS-c is not approved as a drug anywhere. It remains an early-stage research compound with most evidence from laboratory and animal studies."
+  - q: "Why is MOTS-c discussed in longevity research?"
+    a: "MOTS-c levels appear to vary with age and exercise, and it is involved in AMPK signalling — a cellular energy pathway. This has led to research questions about whether it contributes to metabolic aging and exercise adaptation."
+  - q: "What does the current evidence for MOTS-c show?"
+    a: "Animal studies have suggested metabolic effects. Human clinical evidence is very limited. Commercial and online interest in MOTS-c substantially exceeds what current data support."
+  - q: "What are the risks of MOTS-c products sold online?"
+    a: "Products outside regulated pharmaceutical channels carry uncertain quality, purity, and safety. Long-term effects of external MOTS-c administration in humans have not been adequately studied."
 ---
 
 ## Intro

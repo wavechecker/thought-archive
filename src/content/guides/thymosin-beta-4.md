@@ -1,12 +1,23 @@
----
+﻿---
 title: "Thymosin Beta-4: What It Is and What the Evidence Shows"
 slug: "thymosin-beta-4"
 description: "An overview of thymosin beta-4, a naturally occurring peptide studied for tissue repair and healing, including evidence limitations, regulatory status, and safety considerations."
 category: "Aging & Longevity"
 publishDate: "2026-03-10"
-updatedDate: "2026-03-10"
+updatedDate: "2026-06-09"
 tags: ["peptides", "tissue repair", "experimental medicine", "longevity", "injury recovery"]
 draft: false
+faq:
+  - q: "What is thymosin beta-4?"
+    a: "Thymosin beta-4 is a naturally occurring 43-amino acid peptide found throughout the body. It plays a role in regulating actin — a structural protein involved in cell movement and tissue repair."
+  - q: "What is TB-500?"
+    a: "TB-500 is a synthetic analogue of a fragment of thymosin beta-4, commonly sold as a research chemical. It should not be confused with the naturally occurring thymosin beta-4 protein. It is not an approved medication."
+  - q: "Is thymosin beta-4 approved as a treatment?"
+    a: "No. Thymosin beta-4 is not approved as a prescription drug for conditions discussed online. Clinical trials are limited, and most evidence comes from preclinical laboratory and animal research."
+  - q: "What conditions has thymosin beta-4 been studied for?"
+    a: "Researchers have explored potential applications in cardiac repair, wound healing, corneal conditions, and neurological recovery. Most studies are preclinical. Human trials are limited and early-stage."
+  - q: "What are the safety risks of TB-500 products sold online?"
+    a: "Products sold as TB-500 are unregulated research chemicals with uncertain purity and quality. Long-term effects in humans have not been adequately characterised. Do not use any peptide therapy without medical supervision."
 ---
 
 ## Intro
