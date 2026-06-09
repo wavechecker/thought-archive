@@ -287,6 +287,7 @@ A GP referral is required for LDCT in most Australian contexts.
 
 ## Related Guides
 
+- [Lung Cancer: Symptoms, Diagnosis, and Treatment](/guides/lung-cancer-overview) — Full patient guide to lung cancer types, symptoms, diagnosis, and treatment
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Cancer — Guide Hub](/guides/cancer)
 - [Smoking Cessation — Methods, Support, and What Actually Works](/guides/smoking-cessation)

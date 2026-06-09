@@ -65,6 +65,7 @@ A: Yes, most can. For babies under 6 months, focus on shade and clothing first.
 
 ## Related Guides
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
+- [Melanoma: Symptoms, Diagnosis, and Treatment](/guides/melanoma-overview)
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)
 - [Sunscreen: Benefits, SPF Explained, and How It Protects Skin](/guides/sunscreen)  
 - [Cancer — Guide Hub](/guides/cancer)  
