@@ -3,9 +3,20 @@ title: "Post-Treatment Lyme Disease Syndrome (PTLDS)"
 description: "Why some people have ongoing symptoms after treated Lyme disease, and what is (and isn't) known about recovery."
 category: "Infectious Diseases"
 publishDate: "2026-04-01"
-updatedDate: "2026-04-01"
+updatedDate: "2026-06-09"
 tags: ["lyme", "PTLDS", "post-infectious", "fatigue", "chronic symptoms"]
 draft: false
+faq:
+  - q: "What are the main symptoms of post-treatment Lyme disease syndrome?"
+    a: "The most common symptoms are persistent fatigue, musculoskeletal pain, and cognitive difficulties (sometimes called 'brain fog'). These continue for months after completing appropriate antibiotic treatment for confirmed Lyme disease."
+  - q: "Does PTLDS mean the Lyme infection is still active?"
+    a: "Evidence does not generally support ongoing active Borrelia infection in PTLDS. It is classified as a post-infectious syndrome — persistent immune or neurological changes after infection, not continued bacterial activity."
+  - q: "Should I take long-term antibiotics for PTLDS?"
+    a: "No. Controlled clinical trials have not shown sustained benefit from prolonged antibiotic courses in PTLDS, and they carry real risks including C. difficile infection. Current guidelines recommend against this approach."
+  - q: "How long does PTLDS last?"
+    a: "Many people improve gradually over months to years. Some experience more prolonged symptoms. Supportive care, pacing, and treatment of specific symptoms can aid recovery, though no cure currently exists."
+  - q: "How is PTLDS managed without ongoing antibiotics?"
+    a: "Management focuses on symptom control — addressing sleep, pain, and mood — alongside pacing and graded activity, psychological support (such as CBT), and where needed, multidisciplinary care involving GP, physiotherapy, and psychology."
 ---
 
 ## Intro

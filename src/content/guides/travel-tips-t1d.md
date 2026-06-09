@@ -5,6 +5,18 @@ category: "Diabetes"
 publishDate: "2025-08-30"
 draft: false
 tags: ["type 1 diabetes", "travel", "insulin", "CGM", "pump", "sick-day", "patientguide"]
+updatedDate: "2026-06-09"
+faq:
+  - q: "How do I adjust insulin across time zones when travelling?"
+    a: "For eastward travel, take the next basal dose slightly earlier; for westward travel, slightly later. Pump users should set local time on arrival. Always follow your personalised clinician-approved plan."
+  - q: "How should insulin be transported safely when travelling?"
+    a: "Keep insulin in hand luggage, use a cooling pouch or Frio wallet, avoid direct ice contact, and never store insulin in checked baggage where temperatures can be extreme and uncontrolled."
+  - q: "What should I do if I become unwell while travelling?"
+    a: "Check blood glucose and ketones more frequently, stay hydrated, follow your sick-day protocol, and seek medical care if ketones persist, you cannot keep fluids down, or signs of DKA develop."
+  - q: "Can I travel with a pump and CGM without problems at airport security?"
+    a: "Generally yes, but check your device manufacturer's guidance about body scanners. Many recommend requesting a hand inspection. Keep devices in carry-on luggage and carry your medical letter."
+  - q: "When should I seek urgent care while travelling with type 1 diabetes?"
+    a: "Seek urgent medical attention for vomiting with positive ketones, signs of DKA (abdominal pain, deep breathing, confusion), or repeated severe hypos requiring assistance."
 ---
 
 ## Intro

@@ -4,9 +4,20 @@ slug: "skin-cancer-treatment"
 description: "Treatment of skin cancer may involve surgery, topical therapy, radiotherapy, or systemic therapy depending on the type and stage."
 category: "Cancer"
 publishDate: "2025-09-17"
-updatedDate: "2025-09-17"
 tags: ["skin cancer", "treatment", "surgery", "radiotherapy", "melanoma", "immunotherapy"]
 draft: false
+updatedDate: "2026-06-09"
+faq:
+  - q: "How is skin cancer treated?"
+    a: "Most skin cancers are treated with surgery. Other options — depending on the type, location, and stage — include topical creams, radiotherapy, and for advanced melanoma, immunotherapy or targeted therapy."
+  - q: "What is Mohs surgery?"
+    a: "Mohs micrographic surgery removes skin cancer layer by layer under real-time microscope guidance, preserving as much healthy tissue as possible. It is particularly used for cancers on the face or in areas where tissue preservation matters."
+  - q: "When is immunotherapy used for skin cancer?"
+    a: "Immunotherapy — particularly immune checkpoint inhibitors — is used for advanced or metastatic melanoma and some other skin cancers where surgery alone is not curative."
+  - q: "What factors determine which treatment is best?"
+    a: "Treatment depends on the type of skin cancer, size, location, depth of invasion, whether it has spread, and the patient's overall health and preferences. Discuss all options with your treating specialist."
+  - q: "Can skin cancer come back after treatment?"
+    a: "Yes. Recurrence is possible, particularly with melanoma. Regular skin checks and follow-up appointments are recommended after any skin cancer treatment."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "MedicalTherapy"

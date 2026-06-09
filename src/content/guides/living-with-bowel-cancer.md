@@ -4,11 +4,22 @@ title: "Living With Bowel Cancer"
 slug: "living-with-bowel-cancer"
 description: "Practical guidance on recovery, lifestyle adjustments, stoma care, and emotional support after a bowel cancer diagnosis."
 publishDate: "2025-08-21"
-updatedDate: "2025-08-21"
 tags: ["cancer", "bowel cancer", "support", "patientguide"]
 related:
   - /guides/bowel-cancer
   - /guides/bowel-cancer-screening
+updatedDate: "2026-06-09"
+faq:
+  - q: "What side effects are common during bowel cancer treatment?"
+    a: "Common side effects include fatigue and bowel changes from surgery, nausea, hair loss, and infection risk from chemotherapy, and bowel urgency and skin irritation from radiotherapy. Side effects vary by treatment type."
+  - q: "How should I eat during and after bowel cancer treatment?"
+    a: "A low-fibre diet may be recommended initially after surgery, then gradually reintroduced. Long-term, a balanced diet rich in whole grains, fruits, vegetables, and lean protein supports recovery. A dietitian can provide personalised guidance."
+  - q: "What is a stoma and what support is available?"
+    a: "A stoma is an opening in the abdomen created surgically to allow waste to leave the body. Specialist stoma nurses provide practical training and ongoing support to help with everyday management and adjustment."
+  - q: "How is life after bowel cancer treatment monitored?"
+    a: "Regular follow-up includes colonoscopy, blood tests such as CEA, and in some cases CT imaging, to check for recurrence and new growths. Follow-up schedules vary based on the stage and treatment received."
+  - q: "Can people return to normal activities after bowel cancer treatment?"
+    a: "Many people return to work, exercise, and travel after treatment, sometimes with adjustments. Emotional, practical, and peer support all play important roles alongside medical care."
 ---
 ---
 

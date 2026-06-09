@@ -5,8 +5,19 @@ description: "How gastroenteritis spreads and the steps you can take to prevent 
 category: "Infectious Diseases"
 tags: ["gastroenteritis", "stomach flu", "infection control", "hygiene", "prevention"]
 publishDate: "2025-08-14"
-updatedDate: "2025-08-28"
+updatedDate: "2026-06-09"
 draft: false
+faq:
+  - q: "What causes gastroenteritis?"
+    a: "Gastroenteritis is most commonly caused by viruses, particularly Norovirus and Rotavirus. Bacteria (such as Salmonella and Campylobacter) and parasites (such as Giardia) can also cause it, typically through contaminated food or water."
+  - q: "How does gastroenteritis spread?"
+    a: "It spreads mainly via the faecal-oral route — contact with infected people, contaminated surfaces, food, or water. It spreads rapidly in households, childcare centres, and aged care settings."
+  - q: "What is the most effective way to prevent gastroenteritis spreading at home?"
+    a: "Thorough handwashing with soap and water is the most important step. Infected people should avoid preparing food for others, and should not return to work, school, or food handling for at least 48 hours after symptoms resolve."
+  - q: "Does alcohol hand gel protect against Norovirus?"
+    a: "Alcohol hand gel is less effective against Norovirus than soap and water. Washing hands with soap and water for at least 20 seconds is recommended during and after a Norovirus outbreak."
+  - q: "When should I seek medical help for gastroenteritis?"
+    a: "Seek medical care if you notice blood in stool or vomit, signs of dehydration (dizziness, very dark urine, no urination for 8 or more hours), a high fever above 39°C, symptoms lasting more than 3–4 days, or if an infant or elderly person deteriorates quickly."
 ---
 
 

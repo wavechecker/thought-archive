@@ -33,6 +33,18 @@ schema:
     sameAs:
       - "https://www.who.int/news-room/fact-sheets/detail/diabetes"
       - "https://medlineplus.gov/diabetes.html"
+updatedDate: "2026-06-09"
+faq:
+  - q: "Does diabetes cause low testosterone?"
+    a: "Men with type 2 diabetes are at higher risk of low testosterone due to obesity, insulin resistance, and vascular changes. The relationship is bidirectional — low testosterone can also worsen insulin resistance."
+  - q: "Can testosterone replacement therapy help with diabetes management?"
+    a: "In men with confirmed low testosterone, TRT may improve insulin sensitivity and metabolic markers. It should only be used under medical supervision after hormonal assessment."
+  - q: "Which hormones besides insulin are commonly affected by diabetes?"
+    a: "Diabetes can affect sex hormones (particularly testosterone), cortisol, and in some people thyroid function. Poor glucose control amplifies these hormonal disturbances."
+  - q: "How is low testosterone diagnosed in someone with diabetes?"
+    a: "A fasting morning blood test measures total (and sometimes free) testosterone. Diagnosis requires consistently low levels alongside relevant symptoms."
+  - q: "Can lifestyle changes improve hormone balance in diabetes?"
+    a: "Yes. Weight loss, regular exercise, and improved sleep quality can raise testosterone levels and improve insulin sensitivity, sometimes significantly, even without medication."
 ---
 
 ## Intro

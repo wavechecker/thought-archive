@@ -3,9 +3,20 @@ title: "Tick-Borne Diseases: An Overview"
 description: "A guide to the range of diseases spread by ticks, how they differ, and what to do after a tick bite."
 category: "Infectious Diseases"
 publishDate: "2026-04-01"
-updatedDate: "2026-04-01"
 tags: ["tick", "lyme", "tickborne", "vector-borne", "infection", "ehrlichia", "spotted fever"]
 draft: false
+updatedDate: "2026-06-09"
+faq:
+  - q: "What diseases do ticks transmit?"
+    a: "Ticks can transmit bacteria, viruses, and parasites — including Lyme disease, Rocky Mountain spotted fever, ehrlichiosis, babesiosis, tick-borne encephalitis, and others, depending on the region and tick species."
+  - q: "Do I need antibiotics after every tick bite?"
+    a: "No. Most tick bites do not transmit disease. Prophylactic antibiotics are reserved for specific high-risk situations — such as prolonged attachment in a Lyme-endemic area. A doctor can advise based on local risk and circumstances."
+  - q: "What are the most important warning signs after a tick bite?"
+    a: "Seek medical advice for an expanding red rash at or near the bite site, fever, severe headache, muscle aches, neurological symptoms, joint swelling, or palpitations within days to weeks of a tick bite."
+  - q: "How long does a tick need to be attached to transmit Lyme disease?"
+    a: "Significant transmission risk for Lyme disease typically begins after approximately 36–48 hours of tick attachment. Other tick-borne pathogens, such as spotted fever group Rickettsia, may transmit faster."
+  - q: "Can one tick transmit more than one disease at the same time?"
+    a: "Yes. Ticks can carry multiple pathogens simultaneously. Co-infection with Lyme disease and babesiosis, for example, has been documented in the same patients."
 ---
 
 ## Intro

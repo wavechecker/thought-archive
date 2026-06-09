@@ -3,9 +3,20 @@ title: "Type 1 Diabetes at School — A Practical Guide"
 description: "What schools need to know about T1D: care plans, hypo/hyper treatment, exams, sports, trips, and legal basics."
 category: "Diabetes"
 publishDate: "2025-08-30"
-updatedDate: "2025-09-13"
 draft: false
 tags: ["type 1 diabetes", "school", "care plan", "hypoglycaemia", "insulin", "CGM", "patientguide"]
+updatedDate: "2026-06-09"
+faq:
+  - q: "What is a Diabetes Care Plan for school?"
+    a: "A written Diabetes Care Plan (DCP) documents a student's blood glucose targets, insulin regimen, hypoglycaemia and hyperglycaemia treatment protocols, and emergency procedures. Every child with type 1 diabetes at school should have one on file."
+  - q: "Can a student treat a low blood glucose in class?"
+    a: "Yes — treating immediately on the spot is the safest approach. Never send a hypoglycaemic student alone to another area. Fast glucose should always be accessible in or near the classroom."
+  - q: "What legal rights do students with type 1 diabetes have at school?"
+    a: "Students are entitled to reasonable accommodations in most countries — including 504 Plans in the US, Individual Healthcare Plans in the UK, and protections under disability legislation in Australia."
+  - q: "What should happen during exams if a student has a hypo or hyper?"
+    a: "The student should be allowed to pause, treat the episode, and then resume. Schools should provide extra time or alternative arrangements if diabetes significantly disrupted testing."
+  - q: "How should school trips be planned for a student with type 1 diabetes?"
+    a: "Double the usual supplies should be packed, a named adult trained in T1D emergency care should be identified for the trip, and the Diabetes Care Plan should be shared with all trip leaders in advance."
 ---
 
 ## Intro

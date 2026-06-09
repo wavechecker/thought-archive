@@ -4,7 +4,7 @@ slug: "voluntary-assisted-dying"
 description: "Voluntary assisted dying (VAD), also known as MAiD or assisted dying, is legal in some countries as an end-of-life option. Explore global laws, access, and ethical debates."
 category: "End of Life"
 publishDate: "2025-09-17"
-updatedDate: "2025-09-17"
+updatedDate: "2026-06-09"
 hubKey: "Voluntary Assisted Dying"
 draft: false
 tags: ["voluntary assisted dying", "MAiD", "assisted dying", "euthanasia", "end of life", "hub"]
@@ -40,6 +40,17 @@ jsonld:
         acceptedAnswer:
           "@type": "Answer"
           text: "No. Palliative care and VAD are separate options. Patients may continue to receive palliative support while considering VAD."
+faq:
+  - q: "What is voluntary assisted dying?"
+    a: "Voluntary assisted dying (VAD) allows a person with a terminal illness to choose to end their life with medical assistance, under strict legal safeguards. It requires a voluntary, informed, and repeated decision from a person with decision-making capacity."
+  - q: "Is voluntary assisted dying legal in Australia?"
+    a: "Yes. All six Australian states have VAD legislation in force. The laws vary by state in their eligibility criteria, prognosis requirements, and assessment processes."
+  - q: "Does choosing VAD mean giving up palliative care?"
+    a: "No. Palliative care and VAD are separate, and not mutually exclusive. A person may continue to receive palliative support — focused on comfort and quality of life — while also considering or pursuing VAD."
+  - q: "What safeguards are typically required to access VAD?"
+    a: "Safeguards generally include a confirmed terminal diagnosis, multiple independent medical assessments, demonstrated decision-making capacity, a voluntary and persistent request, and in most jurisdictions, a minimum waiting period between requests."
+  - q: "What are the different terms used for voluntary assisted dying globally?"
+    a: "Australia and New Zealand use 'voluntary assisted dying' (VAD). Canada uses 'medical assistance in dying' (MAiD). The United States uses 'assisted dying' or 'death with dignity.' Some European countries use 'euthanasia,' which covers a broader range of practices."
 ---
 
 # Voluntary Assisted Dying — Guide Hub

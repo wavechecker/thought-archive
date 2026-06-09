@@ -4,11 +4,22 @@ slug: "understanding-coronary-angiography"
 description: "What coronary angiography is, when it's used, and what to expect before, during, and after the procedure."
 category: "Heart & Circulation"
 publishDate: "2025-08-20"
-updatedDate: "2025-08-21"
 draft: false
 tags: ["Heart & Circulation", "Cardiology", "Angiography", "patientguide"]
 related:
 - /guides/hormone-therapy-menopause/
+updatedDate: "2026-06-09"
+faq:
+  - q: "What is coronary angiography?"
+    a: "Coronary angiography is an X-ray test that uses contrast dye to visualise the arteries supplying the heart, revealing blockages or narrowing that may be causing chest pain, angina, or other heart problems."
+  - q: "Why is coronary angiography recommended?"
+    a: "It is used when other tests suggest blocked or narrowed coronary arteries — for example, after an abnormal stress test, ECG, or echocardiogram, or in the setting of chest pain or a suspected heart attack."
+  - q: "What happens during the procedure?"
+    a: "A thin catheter is inserted into an artery in the wrist or groin, contrast dye is injected, and real-time X-ray images are taken. A straightforward study typically takes less than an hour."
+  - q: "What are the risks of coronary angiography?"
+    a: "Risks include bleeding at the catheter site, allergic reaction to dye, kidney strain from contrast, and rarely serious complications such as stroke or arrhythmia. These risks should be discussed with your cardiologist beforehand."
+  - q: "What happens after coronary angiography?"
+    a: "Most people go home the same day after a period of observation. Strenuous activity should be avoided for a day or two. Results guide next steps — which may include medication, angioplasty, or bypass surgery."
 ---
 
 # Understanding Coronary Angiography
