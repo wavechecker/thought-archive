@@ -175,5 +175,6 @@ A: Surgery for early stages, immunotherapy and targeted therapy for advanced dis
 
 ## Related Guides
 - [Skin Cancer — Guide Hub](/guides/skin-cancer)  
+- [Melanoma: Symptoms, Diagnosis, and Treatment](/guides/melanoma-overview)  
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention)  
 - [Life After Skin Cancer: Survivorship and Support](/guides/skin-cancer-survivorship)  

@@ -13,7 +13,7 @@ tags:
   - shortness of breath
   - wheezing
 publishDate: '2025-09-18'
-updatedDate: '2026-03-02'
+updatedDate: '2026-06-08'
 draft: false
 faq:
   - q: "What conditions affect the respiratory system?"
@@ -59,6 +59,8 @@ Respiratory conditions on PatientGuide are organised across four clinical groups
 - [Wheezing & Night-time Breathlessness](/guides/wheezing-night-time-breathlessness) — distinguishes asthma, sleep apnoea, and cardiac causes of night-time breathlessness
 
 **4. Overlap with other systems** — respiratory disease frequently intersects with cardiovascular disease. Heart failure causes breathlessness that mimics lung disease; COPD and coronary artery disease share risk factors and commonly co-exist. For breathlessness with chest pain, see [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain).
+
+**5. Serious lung conditions** — some persistent respiratory symptoms, such as an ongoing cough, coughing blood, unexplained weight loss, or worsening breathlessness, may need assessment for serious causes, including lung cancer. See [Lung Cancer: Symptoms, Diagnosis, and Treatment](/guides/lung-cancer-overview).
 
 Respiratory infections — including pneumonia, influenza, and COVID-19 — are covered in the [Infectious Diseases hub](/guides/infectious-diseases), where antibiotic and antiviral treatment decisions are also addressed.
 
@@ -170,6 +172,8 @@ Obstructive [sleep apnoea](/guides/sleep-apnoea) occurs when the upper airway re
 - [Sleep Apnoea](/guides/sleep-apnoea)
 - [Shortness of Breath](/guides/shortness-of-breath)
 - [Wheezing & Night-time Breathlessness](/guides/wheezing-night-time-breathlessness)
+- [Lung Cancer: Symptoms, Diagnosis, and Treatment](/guides/lung-cancer-overview)
+- [Lung Cancer Screening: Low-Dose CT, Benefits, Risks, and Eligibility](/guides/lung-cancer-screening-low-dose-ct)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Infectious Diseases — Guide Hub](/guides/infectious-diseases)
 - [Emergencies — Guide Hub](/guides/emergencies)

@@ -1,10 +1,10 @@
 ---
 title: "Cancer — Guide Hub"
 slug: "cancer"
-description: "Cancer is a group of diseases where abnormal cells grow uncontrollably and may spread. Explore guides on bowel, breast, prostate, skin, cervical, and liver cancer."
+description: "Cancer is a group of diseases where abnormal cells grow uncontrollably and may spread. Explore guides on lung, bowel, breast, prostate, skin, cervical, liver, and other cancers."
 category: "Cancer"
 publishDate: "2025-08-20"
-updatedDate: "2026-06-06"
+updatedDate: "2026-06-08"
 hubKey: "Cancer"
 draft: false
 tags: ["cancer", "oncology", "patientguide", "hub"]
@@ -62,7 +62,11 @@ Essential guides for anyone navigating a cancer diagnosis or wanting to understa
 - [Skin Cancer — Guide Hub](/guides/skin-cancer) — Skin cancer types, prevention, diagnosis, and treatment.
 - [Liver Cancer — Guide Hub](/guides/liver-cancer) — Liver cancer: risk factors, detection, and treatment options.
 - [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide) — A comprehensive guide to cervical cancer prevention and care.
+- [Lung Cancer: Symptoms, Diagnosis, and Treatment](/guides/lung-cancer-overview) — Lung cancer: types, symptoms, risk factors, diagnosis, staging, treatment options, and follow-up.
 - [Pancreatic Cancer: Symptoms, Diagnosis, and Treatment](/guides/pancreatic-cancer-overview) — Pancreatic cancer: symptoms, why diagnosis is often late, surgery, chemotherapy, and targeted therapy.
+- [Melanoma: Symptoms, Diagnosis, and Treatment](/guides/melanoma-overview) — Melanoma: warning signs, ABCDE rule, diagnosis, staging, immunotherapy, and targeted therapy.
+- [Ovarian Cancer: Symptoms, Diagnosis, and Treatment](/guides/ovarian-cancer-overview) — Ovarian cancer: non-specific symptoms, BRCA genetics, staging, surgery, and PARP inhibitors.
+- [Testicular Cancer: Symptoms, Diagnosis, and Treatment](/guides/testicular-cancer-overview) — Testicular cancer: what to look for, diagnosis, and treatment.
 - [Palliative Care — Guide Hub](/guides/palliative-care) — Supportive and comfort-focused care for people living with serious illness.
 
 ---
@@ -92,13 +96,17 @@ See also: [Emergencies — Guide Hub](/guides/emergencies) | [Sepsis](/guides/se
 
 ## Key Guides
 
-### Cancer Type Hubs
+### Cancer Type Hubs and Overviews
 - [Bowel Cancer — Guide Hub](/guides/bowel-cancer) — Colorectal cancer: screening (FIT, colonoscopy), surgery, chemo, genetics, and survivorship.
 - [Breast Cancer — Guide Hub](/guides/breast-cancer) — Mammography, surgical options, hormone therapy, targeted therapy, and recovery.
 - [Prostate Cancer — Guide Hub](/guides/prostate-cancer) — PSA, active surveillance, surgery vs radiotherapy, and hormonal treatment.
 - [Skin Cancer — Guide Hub](/guides/skin-cancer) — Melanoma and non-melanoma: detection, prevention, and treatment.
 - [Liver Cancer — Guide Hub](/guides/liver-cancer) — Hepatocellular carcinoma: risk factors (hepatitis B/C, cirrhosis), detection, and treatment.
+- [Lung Cancer: Symptoms, Diagnosis, and Treatment](/guides/lung-cancer-overview) — Types (NSCLC, SCLC), symptoms, risk factors, molecular testing, staging, and treatment.
 - [Pancreatic Cancer: Symptoms, Diagnosis, and Treatment](/guides/pancreatic-cancer-overview) — Symptoms, staging, surgery, chemotherapy, KRAS biology, and biomarker-driven treatment.
+- [Melanoma: Symptoms, Diagnosis, and Treatment](/guides/melanoma-overview) — Warning signs, ABCDE rule, Breslow thickness, immunotherapy, and targeted therapy.
+- [Ovarian Cancer: Symptoms, Diagnosis, and Treatment](/guides/ovarian-cancer-overview) — Non-specific symptoms, BRCA genetics, staging, cytoreductive surgery, and PARP inhibitors.
+- [Testicular Cancer: Symptoms, Diagnosis, and Treatment](/guides/testicular-cancer-overview) — What to look for, diagnosis, and treatment.
 
 ### Precision Oncology
 - [Precision Medicine in Cancer: Biomarkers, Targeted Therapy, and Genetic Testing](/guides/precision-medicine-in-cancer) — How tumour profiling, biomarkers, and targeted drugs work — including KRAS, EGFR, HER2, BRCA, and MSI.
@@ -107,11 +115,14 @@ See also: [Emergencies — Guide Hub](/guides/emergencies) | [Sepsis](/guides/se
 ### Cervical and Skin Cancer Guides
 - [Cervical Cancer: Causes, Screening, Prevention, and Treatment](/guides/cervical-cancer-guide) — HPV's role, Pap smears vs HPV testing, and treatment by stage.
 - [Cervical Cancer Screening Explained: HPV Testing, Self-Collection, and What's Changed](/guides/cervical-cancer-screening-hpv-self-testing) — How modern cervical screening programs work.
+- [Melanoma: Symptoms, Diagnosis, and Treatment](/guides/melanoma-overview) — A dedicated overview of melanoma: warning signs, ABCDE rule, diagnosis, staging, and treatment.
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention) — How to recognise melanoma and non-melanoma skin cancers.
 - [Skin Cancer: Diagnosis and Treatment](/guides/skin-cancer-diagnosis-treatment) — What happens after an abnormal skin finding.
+- [Skin Cancer — Prevention](/guides/skin-cancer-prevention) — Sun protection, sunscreen, and reducing UV exposure.
 - [Nicotinamide and Skin Cancer Prevention](/guides/nicotinamide-skin-cancer-prevention) — Evidence on vitamin B3 supplementation for high-risk patients.
 
 ### Screening and Prevention
+- [Lung Cancer: Symptoms, Diagnosis, and Treatment](/guides/lung-cancer-overview) — Patient overview: types, symptoms, risk factors, and treatment.
 - [Lung Cancer Screening: Low-Dose CT, Benefits, Risks, and Eligibility](/guides/lung-cancer-screening-low-dose-ct) — Who qualifies for annual LDCT, what pack-years means, the evidence base, and shared decision-making.
 - [Skin Cancer — Prevention](/guides/skin-cancer-prevention) — Sun protection, sunscreen, and reducing UV exposure.
 - [HPV Vaccine](/guides/hpv-vaccine) — How HPV vaccination protects against cervical, anal, and other cancers.
@@ -184,6 +195,10 @@ Seek emergency care for severe bleeding, sudden breathlessness or chest pain, hi
 - [Breast Cancer — Guide Hub](/guides/breast-cancer)
 - [Prostate Cancer — Guide Hub](/guides/prostate-cancer)
 - [Skin Cancer — Guide Hub](/guides/skin-cancer)
+- [Lung Cancer: Symptoms, Diagnosis, and Treatment](/guides/lung-cancer-overview)
+- [Melanoma: Symptoms, Diagnosis, and Treatment](/guides/melanoma-overview)
+- [Ovarian Cancer: Symptoms, Diagnosis, and Treatment](/guides/ovarian-cancer-overview)
+- [Testicular Cancer: Symptoms, Diagnosis, and Treatment](/guides/testicular-cancer-overview)
 - [Pancreatic Cancer: Symptoms, Diagnosis, and Treatment](/guides/pancreatic-cancer-overview)
 - [Precision Medicine in Cancer: Biomarkers, Targeted Therapy, and Genetic Testing](/guides/precision-medicine-in-cancer)
 - [KRAS Mutations Explained: Why Some Cancer Targets Are Hard to Treat](/guides/kras-mutations-explained)

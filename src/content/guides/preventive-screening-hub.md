@@ -147,14 +147,15 @@ Prostate-specific antigen (PSA) testing is more complex than most cancer screens
 
 ---
 
-### Skin Cancer
+### Skin Cancer and Melanoma
 
-Skin cancer is among the most common cancers in Australia and other high UV-exposure countries. Most cases are preventable and treatable when caught early.
+Skin cancer is among the most common cancers in Australia and other high UV-exposure countries. **Melanoma** is the most serious form — it can spread if not caught early, but detected while still thin and localised it is usually curable. Most skin cancers are preventable and most are highly treatable when found early.
 
+- [Melanoma: Symptoms, Diagnosis, and Treatment](/guides/melanoma-overview) — a dedicated guide to melanoma: warning signs, the ABCDE rule, the ugly duckling sign, diagnosis, staging, and treatment
 - [Skin Cancer — Warning Signs and Prevention](/guides/skin-cancer-signs-prevention) — the ABCDE rule for melanoma, what to look for, and self-examination
 - [Skin Cancer — Prevention](/guides/skin-cancer-prevention) — sun protection strategies
 
-**Who should screen:** Australia has no national organised skin cancer screening program, but annual skin checks by a GP or dermatologist are recommended for people with a history of skin cancer, many moles, or significant past sun exposure.
+**Who should screen:** Australia has no national organised skin cancer screening program, but annual skin checks by a GP or dermatologist are recommended for people with a history of skin cancer, many moles, atypical moles, or significant past sun exposure. People with a personal or family history of melanoma benefit from regular specialist skin surveillance.
 
 ---
 
