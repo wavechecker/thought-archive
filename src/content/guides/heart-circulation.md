@@ -133,6 +133,13 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 - [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home) — Technique, timing, and what the numbers mean.
 - [2025 High Blood Pressure Guideline — Key Updates](/guides/2025-high-blood-pressure-guideline) — What changed in the latest hypertension management guidance.
 
+### Kidney Disease and the Heart
+
+Chronic kidney disease and cardiovascular disease are closely linked — each worsens the other through shared mechanisms involving blood pressure, fluid balance, inflammation, and metabolic change. CKD is an independent cardiovascular risk factor; conversely, poorly controlled blood pressure and heart disease drive kidney damage.
+
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — central CKD navigation including the cardiorenal relationship, complications, and management
+- [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — blood pressure targets, medicines, and cardiovascular risk reduction in CKD
+
 ### Prevention
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — Diet, exercise, smoking cessation, cholesterol control, and screening checks.
 - [Abdominal Aortic Aneurysm Screening: Who Should Be Tested and When](/guides/abdominal-aortic-aneurysm-screening) — What an AAA is, why rupture is so dangerous, who should have an ultrasound, and how results guide surveillance and treatment.
@@ -214,6 +221,7 @@ Immediately for severe chest pain, chest pain with arm or jaw pain, sudden breat
 
 - [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)
 - [Emergencies — Guide Hub](/guides/emergencies)
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — kidney disease raises cardiovascular risk; the cardiorenal relationship, blood pressure, and management
 - [Cancer — Guide Hub](/guides/cancer) — Some cancers affect the heart; cardiac toxicity from cancer treatment is an important shared topic.
 - [Preventive Health — Guide Hub](/guides/preventive-health)
 

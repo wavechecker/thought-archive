@@ -179,5 +179,6 @@ A: Causes may include medication resistance, underlying conditions, or persisten
 
 - [2025 High Blood Pressure Guideline](/guides/2025-high-blood-pressure-guideline)
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — high blood pressure is the second most common cause of CKD; blood pressure control is central to kidney protection
 - [Heart & Circulation Overview](/guides/heart-circulation-overview)
 - [Stroke](/guides/stroke-symptoms-fast-response)

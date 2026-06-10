@@ -1,9 +1,9 @@
 ---
 title: "What Is Chronic Kidney Disease?"
 description: "A clear guide to chronic kidney disease — what it is, why it often goes unnoticed, how it is measured, and when to seek medical advice."
-category: "Diabetes"
+category: "General Health"
 publishDate: "2026-05-31"
-updatedDate: "2026-05-31"
+updatedDate: "2026-06-08"
 tags: ["chronic kidney disease", "CKD", "kidney function", "eGFR", "albuminuria", "kidney damage", "renal disease"]
 draft: false
 faq:
@@ -192,6 +192,8 @@ A: Yes, though it is far less common in children. When it does occur, inherited 
 
 ## Related Guides
 
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — central navigation for all CKD content
+- [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — monitoring, medicines, diet, complications, and planning ahead
 - [Chronic Kidney Disease Stages Explained](/guides/chronic-kidney-disease-stages-explained) — the staging system, eGFR numbers, and how risk is classified
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview) — heart and kidney disease frequently worsen each other (cardiorenal syndrome)
 - [Type 2 Diabetes](/guides/type-2-diabetes) — the leading cause of CKD globally

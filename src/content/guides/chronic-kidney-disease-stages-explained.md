@@ -1,9 +1,9 @@
 ---
 title: "Chronic Kidney Disease Stages Explained"
 description: "A clear explanation of CKD stages 1 to 5, how eGFR and albuminuria are used together, what progression means, and how to reduce your risk."
-category: "Diabetes"
+category: "General Health"
 publishDate: "2026-05-31"
-updatedDate: "2026-05-31"
+updatedDate: "2026-06-08"
 tags: ["chronic kidney disease", "CKD stages", "eGFR", "albuminuria", "kidney disease progression", "kidney failure", "dialysis"]
 draft: false
 faq:
@@ -243,6 +243,8 @@ A: No. The majority of people with CKD — especially those diagnosed in early s
 
 ## Related Guides
 
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — central navigation for all CKD content
+- [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — practical guide to slowing progression, medicines, diet, and planning
 - [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease) — foundations: causes, symptoms, and tests
 - [Type 2 Diabetes](/guides/type-2-diabetes) — the leading cause of CKD; managing diabetes is inseparable from managing diabetic kidney disease
 - [High Blood Pressure](/guides/high-blood-pressure) — blood pressure control is the most important modifiable factor in slowing progression
