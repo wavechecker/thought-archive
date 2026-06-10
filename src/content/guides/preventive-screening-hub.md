@@ -4,7 +4,7 @@ slug: "preventive-screening-hub"
 description: "Your central guide to preventive health screening — cancer checks, cardiovascular testing, metabolic health, and age-based schedules for staying ahead of disease."
 category: "Guide Hubs"
 publishDate: "2026-06-05"
-updatedDate: "2026-06-09"
+updatedDate: "2026-06-08"
 hubKey: "Preventive Screening"
 draft: false
 tags:
@@ -216,6 +216,19 @@ Type 2 diabetes develops slowly — prediabetes often precedes it by years and i
 - [Understanding HbA1c — What It Means and How to Use It](/guides/understanding-hba1c) — interpreting the most common diabetes monitoring test
 
 **Who should screen:** Adults over 40 with one or more risk factors (overweight, family history, gestational diabetes history, hypertension, or certain ethnicities with higher baseline risk). Screening uses fasting blood glucose or HbA1c.
+
+---
+
+### Kidney Function and CKD
+
+Chronic kidney disease is common and usually has no symptoms until it is advanced. Early detection relies on blood and urine tests, not symptoms.
+
+People with type 2 diabetes, high blood pressure, cardiovascular disease, or a family history of kidney disease are at higher risk. Kidney function testing is a standard part of preventive health reviews for these groups, and in general health checks from midlife.
+
+- [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease) — what CKD means, how it is measured, and when to seek advice
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — full CKD content: stages, management, complications, and specialist care
+
+**Key tests:** A blood test for eGFR (kidney filtration rate) and a urine test for albumin (ACR — protein leakage) together give a more complete picture than either alone. A single abnormal result requires repeat testing to confirm. Most people with early CKD are asymptomatic — testing is the only way to know.
 
 ---
 

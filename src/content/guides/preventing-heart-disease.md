@@ -111,6 +111,7 @@ Heart disease remains one of the leading causes of illness and death worldwide. 
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
 - [Preventive Health — Guide Hub](/guides/preventive-health)  
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — CKD is an independent cardiovascular risk factor; blood pressure control and shared risk reduction apply across both
 - [Coronary Artery Calcium (CAC) Score](/guides/coronary-artery-calcium-score)  
 - [Lipoprotein(a): The Overlooked Genetic Heart Risk Factor](/guides/lipoprotein-a-explained)  
 

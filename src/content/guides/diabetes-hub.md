@@ -190,6 +190,16 @@ Learn more: [CGM vs Finger Prick](/guides/cgm-vs-finger-prick) | [Continuous Glu
 - [Long-Term Complications of Type 1 Diabetes](/guides/type-1-diabetes-long-term-complications) — retinopathy, nephropathy, neuropathy, and cardiovascular risk: why they occur, screening, and how consistent management reduces risk.
 - [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage) — peripheral neuropathy (feet and legs), autonomic neuropathy, pain management, foot care, and prevention through glucose control.
 
+### Kidney Disease (Diabetic Nephropathy)
+
+Diabetes is the leading cause of chronic kidney disease worldwide. Persistently high blood glucose damages the kidneys' filtration units over time — a process known as diabetic nephropathy. It is often silent until advanced. Regular kidney function and urine tests are an important part of diabetes care, even when no symptoms are present.
+
+Note that chronic kidney disease is not exclusive to people with diabetes — it can also result from high blood pressure, inherited conditions, and other causes.
+
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — central navigation for all CKD content: stages, management, complications, and advanced care
+- [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease) — what CKD means, how it is measured, and when to seek advice
+- [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — blood pressure, medicines, diet, monitoring, and planning ahead
+
 ---
 
 ## Frequently Asked Questions
@@ -234,6 +244,7 @@ Yes. With modern insulin therapy, continuous glucose monitoring, and good self-m
 
 ## Related Guides
 - [Heart & Circulation Hub](/guides/heart-circulation) — diabetes significantly raises cardiovascular risk; heart health and glucose management are closely linked.
+- [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — diabetes is the leading cause of CKD; kidney monitoring is part of integrated diabetes care.
 - [Testing and Screening](/guides/testing-and-screening) — HbA1c, fasting glucose, and lipid panels in context alongside diabetes monitoring.
 - [Statin Side Effects: Evidence](/guides/statin-side-effects-evidence) — statins are frequently co-prescribed with diabetes medications; understand the benefit/risk profile.
 - [Healthy Weight Loss Guide](/guides/healthy-weight-loss-guide) — weight reduction is a core strategy for Type 2 diabetes risk reduction and remission.
