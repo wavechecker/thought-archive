@@ -376,7 +376,7 @@ Molecular testing analyses the tumour for specific genetic changes — mutations
 - [COPD: Chronic Obstructive Pulmonary Disease](/guides/copd)
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
 - [Smoking Cessation — Methods, Support, and What Actually Works](/guides/smoking-cessation)
-- [Palliative Care — Guide Hub](/guides/palliative-care)
+- [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
 - [Respiratory Hub](/guides/respiratory-hub)
 
 ---

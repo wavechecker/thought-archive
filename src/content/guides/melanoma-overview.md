@@ -244,7 +244,7 @@ Radiotherapy is used in selected situations:
 
 ### Palliative and Supportive Care
 
-[Palliative care](/guides/palliative-care) addresses symptoms, quality of life, and emotional wellbeing for people with advanced melanoma — alongside or instead of tumour-directed treatment. Early palliative care involvement improves quality of life and is not only appropriate at end of life.
+[Palliative care](/guides/palliative-care) addresses symptoms, quality of life, and emotional wellbeing for people with melanoma at any stage — alongside or instead of tumour-directed treatment. Supportive care can help with symptoms, decisions, and quality of life at different stages, and early palliative care involvement is not only appropriate at end of life.
 
 ---
 
@@ -361,7 +361,7 @@ A guide to suspicious features: Asymmetry, Border irregularity, Colour variation
 - [Skin Cancer — Prevention](/guides/skin-cancer-prevention)
 - [Sunscreen: Benefits, SPF Explained, and How It Protects Skin](/guides/sunscreen)
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
-- [Palliative Care — Guide Hub](/guides/palliative-care)
+- [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
 
 ---
 
