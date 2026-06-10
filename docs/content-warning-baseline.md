@@ -1,6 +1,6 @@
 # Content Warning Baseline
 
-As of 2026-06-08, `npm run content:check` passes with 0 errors and approximately 22 warnings.
+As of 2026-06-08, `npm run content:check` passes with 0 errors and approximately 21 warnings.
 
 These remaining warnings are intentional. They are all "No FAQ items in frontmatter" warnings and should not be treated as breakage.
 
@@ -26,10 +26,11 @@ substantive guides. Adding FAQ frontmatter would produce artificial filler.
 | `src/content/guides/vaccination.md` | Vaccination |
 | `src/content/guides/testing-and-screening.md` | Testing & Screening |
 | `src/content/guides/sexual-health.md` | Sexual Health |
-| `src/content/guides/palliative-care.md` | Palliative Care |
 | `src/content/guides/mental-health.md` | Mental Health |
 | `src/content/guides/mental-health-crisis.md` | Mental Health (draft hub) |
 | `src/content/guides/emergencies.md` | Emergencies |
+
+> **Note (2026-06-08):** `src/content/guides/palliative-care.md` was removed from this group in the palliative care expansion sprint. It has been expanded into a substantive patient-facing guide with `faq:` frontmatter and no longer belongs in the intentional warning baseline.
 
 ### Group 2 — Existing FAQPage schema via inline JSON-LD or SchemaFAQ component
 

@@ -67,7 +67,7 @@ Essential guides for anyone navigating a cancer diagnosis or wanting to understa
 - [Melanoma: Symptoms, Diagnosis, and Treatment](/guides/melanoma-overview) — Melanoma: warning signs, ABCDE rule, diagnosis, staging, immunotherapy, and targeted therapy.
 - [Ovarian Cancer: Symptoms, Diagnosis, and Treatment](/guides/ovarian-cancer-overview) — Ovarian cancer: non-specific symptoms, BRCA genetics, staging, surgery, and PARP inhibitors.
 - [Testicular Cancer: Symptoms, Diagnosis, and Treatment](/guides/testicular-cancer-overview) — Testicular cancer: what to look for, diagnosis, and treatment.
-- [Palliative Care — Guide Hub](/guides/palliative-care) — Supportive and comfort-focused care for people living with serious illness.
+- [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — Symptom control, advance care planning, family support, and how palliative care differs from end-of-life care.
 
 ---
 
@@ -131,7 +131,7 @@ See also: [Emergencies — Guide Hub](/guides/emergencies) | [Sepsis](/guides/se
 ### Survivorship and Palliative Care
 - [Bowel Cancer Survivorship](/guides/bowel-cancer-survivorship) — Follow-up, late effects, and living well after colorectal cancer.
 - [Life After Skin Cancer: Survivorship and Support](/guides/skin-cancer-survivorship) — Monitoring, emotional impact, and ongoing skin checks.
-- [Palliative Care — Guide Hub](/guides/palliative-care) — Symptom management, comfort care, and advance care planning.
+- [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — Symptom control, advance care planning, family support, and quality of life alongside or after active treatment.
 
 ---
 
@@ -203,7 +203,7 @@ Seek emergency care for severe bleeding, sudden breathlessness or chest pain, hi
 - [Precision Medicine in Cancer: Biomarkers, Targeted Therapy, and Genetic Testing](/guides/precision-medicine-in-cancer)
 - [KRAS Mutations Explained: Why Some Cancer Targets Are Hard to Treat](/guides/kras-mutations-explained)
 - [Infectious Diseases — Guide Hub](/guides/infectious-diseases) — Infections that increase cancer risk (HPV, hepatitis B/C, H. pylori).
-- [Palliative Care — Guide Hub](/guides/palliative-care)
+- [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
 - [Emergencies — Guide Hub](/guides/emergencies)
 
 ---
