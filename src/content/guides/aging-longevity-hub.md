@@ -158,6 +158,7 @@ Key areas include movement, strength, nutrition, sleep, social connection, medic
 - [Healthspan vs Lifespan: What's the Difference?](/guides/healthspan-vs-lifespan)
 - [The Hallmarks of Aging Explained](/guides/hallmarks-of-aging)
 - [Brain Health Hub](/guides/brain-health-hub)
+- [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke as a cause of sudden functional decline in older adults; rehabilitation, falls risk, and secondary prevention
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
 

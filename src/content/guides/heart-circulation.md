@@ -4,7 +4,7 @@ slug: "heart-circulation"
 description: "Guides on common heart conditions, treatments, medications, and prevention — from angiography to atrial fibrillation, cardiac rehab, and blood pressure."
 category: "Guide Hubs"
 publishDate: "2025-08-20"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 hubKey: "Heart & Circulation"
 draft: false
 tags: ["cardiology", "heart disease", "arrhythmia", "angiography", "rehabilitation", "prevention", "patientguide", "hub"]
@@ -149,6 +149,7 @@ Chronic kidney disease and cardiovascular disease are closely linked — each wo
 ### Recovery and Rehabilitation
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation) — Exercise, education, and psychological support after heart attack or surgery.
 - [Living With Heart Failure: Daily Care, Medicines, and Monitoring](/guides/living-with-heart-failure) — Self-management for people living with heart failure: medicines, daily weight, exercise, and care planning.
+- [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — Rehabilitation roles, physical and cognitive recovery, secondary prevention, and caregiver support after stroke — closely linked to cardiovascular risk management.
 
 ### Heart Failure
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview) — Comprehensive patient guide to heart failure causes, types, medicines, and prognosis.

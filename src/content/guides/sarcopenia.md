@@ -142,6 +142,7 @@ Several conditions directly or indirectly accelerate muscle loss:
 - **Diabetes and metabolic disease** — insulin resistance impairs muscle protein synthesis; neuropathy and fatigue reduce activity
 - **Chronic kidney disease** — uraemic toxins, metabolic acidosis, reduced appetite, and hormonal disruption all promote muscle wasting; sarcopenia is extremely common in CKD
 - **Heart failure** — reduced cardiac output, systemic inflammation, and activity limitation drive muscle wasting
+- **Stroke** — weakness, spasticity, and prolonged reduced activity after stroke directly accelerate muscle loss; rehabilitation aims in part to reverse this. See: [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation)
 - **Cancer** — cancer-associated inflammation and cachexia cause profound muscle loss
 - **COPD** — systemic inflammation and activity limitation reduce muscle mass
 
@@ -327,6 +328,7 @@ People with repeated falls, frailty, unexplained weakness, weight loss, slow wal
 - [Metabolic Health Hub](/guides/metabolic-health-hub) — insulin resistance, metabolic health, and muscle
 - [Heart & Circulation Hub](/guides/heart-circulation) — cardiac rehabilitation addresses deconditioning and muscle function
 - [Brain Health Hub](/guides/brain-health-hub) — cognitive decline and physical decline are bidirectionally linked
+- [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke-related muscle loss, rehabilitation, and falls risk after stroke
 - [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving) — falls risk, frailty, and safety planning for people with dementia
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — advanced illness, muscle wasting, and goals of care
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — age-based health checks and falls risk assessment

@@ -182,3 +182,4 @@ A: Causes may include medication resistance, underlying conditions, or persisten
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — high blood pressure is the second most common cause of CKD; blood pressure control is central to kidney protection
 - [Heart & Circulation Overview](/guides/heart-circulation-overview)
 - [Stroke](/guides/stroke-symptoms-fast-response)
+- [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — secondary prevention, blood pressure management, and rehabilitation after stroke
