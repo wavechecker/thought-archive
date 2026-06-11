@@ -18,6 +18,8 @@ Do not add generic FAQ filler purely to reach zero warnings. If a remaining file
 
 > **Note (2026-06-11):** `coronary-angiography.md` was removed in the `chore/consolidate-coronary-angiography` sprint. It was a near-duplicate of `understanding-coronary-angiography.md`. Unique content (Background section, Why It's Done indications, CT angiography alternative FAQ, Further Reading links, urgent-help section) was merged into the canonical guide. A 301 redirect from `/guides/coronary-angiography` to `/guides/understanding-coronary-angiography` was added. Both files had `faq:` frontmatter, so warning count remains 13. Internal links in 5 content files were updated to point to the canonical route.
 
+> **Note (2026-06-11):** `chest-pain-symptoms.md` was removed in the `chore/chest-pain-content-architecture` sprint. It was a thin duplicate (~280 words, 1 inbound link) of the existing chest pain guides. Unique content (SCAD mention, "blue lips or collapse" red flag) was merged into `chest-pain.md`. The emergency guide `when-to-seek-emergency-help-for-chest-pain.md` was kept unchanged as the definitive emergency resource. A 301 redirect from `/guides/chest-pain-symptoms` to `/guides/chest-pain` was added. `chest-pain-symptoms.md` had `faq:` frontmatter, so warning count remains 13.
+
 ---
 
 ## Classified file list

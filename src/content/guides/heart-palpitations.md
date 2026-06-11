@@ -121,7 +121,7 @@ A: If they come with chest pain, fainting, severe shortness of breath, or last m
 - [American Heart Association – Arrhythmias](https://www.heart.org/en/health-topics/arrhythmia)  
 
 ## Related Guides
-- [Chest Pain Symptoms — When to Call 911](/guides/chest-pain-symptoms)  
+- [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/chest-pain)  
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)  
 - [Atrial Fibrillation](/guides/atrial-fibrillation)  
 

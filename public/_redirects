@@ -86,6 +86,10 @@
 /guides/coronary-angiography        /guides/understanding-coronary-angiography      301!
 /guides/coronary-angiography/       /guides/understanding-coronary-angiography      301!
 
+# chest-pain-symptoms deduplication — canonical is /guides/chest-pain
+/guides/chest-pain-symptoms         /guides/chest-pain                              301!
+/guides/chest-pain-symptoms/        /guides/chest-pain                              301!
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Gone for good
 # ──────────────────────────────────────────────────────────────────────────────
