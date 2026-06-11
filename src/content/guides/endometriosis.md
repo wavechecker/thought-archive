@@ -326,6 +326,8 @@ Psychological support, access to peer communities, and a healthcare team that ac
 
 ## Related Guides
 
+- [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids) — fibroids often coexist with endometriosis; another common cause of heavy periods and pelvic pain
+- [Heavy Periods: When to Seek Help](/guides/heavy-periods-when-to-seek-help) — heavy menstrual bleeding is common in endometriosis; investigation and treatment options
 - [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause)
 - [Hormone Therapy for Menopause: Weighing Risks and Benefits](/guides/hormone-therapy-menopause)
 - [Managing Chronic Back Pain — Principles of Pain Management](/guides/managing-chronic-back-pain)

@@ -458,6 +458,7 @@ Seek urgent help for difficulty breathing, swelling of the face or throat, sever
 - [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — antibiotics, blood thinners, and diabetes medicines in the context of foot infections and wound management
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — medication review in advanced illness; symptom medicines and simplifying regimens
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — medicines review as part of preventive health
+- [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids) — safe use of hormonal medicines, tranexamic acid, NSAIDs, and iron replacement for fibroid-related symptoms
 - [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — medication management as a source of carer stress; respite and support planning
 
 ---

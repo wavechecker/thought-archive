@@ -4,7 +4,7 @@ slug: "heavy-periods-when-to-seek-help"
 description: "A guide to heavy menstrual bleeding — causes, when bleeding becomes a medical concern, the link to iron deficiency anaemia, investigations, and treatment options."
 category: "Women's Health"
 publishDate: "2026-06-01"
-updatedDate: "2026-06-01"
+updatedDate: "2026-06-11"
 draft: false
 tags:
   - heavy periods
@@ -217,6 +217,7 @@ Definitive treatment — removes the uterus, ending periods permanently. Reserve
 ## Related Guides
 
 - [Women's Health Hub](/guides/womens-health-hub)
+- [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids) — fibroids are one of the most common structural causes of heavy periods; symptoms, diagnosis, and treatment
 - [Perimenopause: What to Expect](/guides/perimenopause-what-to-expect)
 - [PCOS: Understanding Polycystic Ovary Syndrome](/guides/pcos)
 - [Endometriosis: Symptoms, Diagnosis, and Treatment Options](/guides/endometriosis)

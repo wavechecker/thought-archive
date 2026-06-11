@@ -277,6 +277,7 @@ Given the metabolic risk profile of PCOS, regular monitoring is recommended even
 ## Related Guides
 
 - [Women's Health Hub](/guides/womens-health-hub)
+- [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids) — fibroids are another common cause of heavy periods; relevant when assessing abnormal bleeding
 - [PCOS Management: Lifestyle, Medications, and Long-Term Care](/guides/pcos-management)
 - [Insulin Resistance: What It Is and Why It Matters](/guides/insulin-resistance)
 - [Type 2 Diabetes — Overview and Management](/guides/type-2-diabetes)

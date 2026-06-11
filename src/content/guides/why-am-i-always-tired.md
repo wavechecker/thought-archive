@@ -255,6 +255,8 @@ A: No. CFS/ME is a specific diagnosed condition with distinct clinical criteria 
 - [Chronic Fatigue Syndrome](/guides/chronic-fatigue)
 - [Post-Viral Syndromes](/guides/post-viral-syndromes)
 - [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview)
+- [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids) — heavy periods from fibroids are a common cause of iron deficiency anaemia and fatigue in women
+- [Heavy Periods: When to Seek Help](/guides/heavy-periods-when-to-seek-help) — heavy menstrual bleeding is the leading cause of iron deficiency anaemia in women of reproductive age
 
 ---
 
