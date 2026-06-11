@@ -159,3 +159,4 @@ A: Yes. Exercise, sleep, and nutrition aren’t cures on their own, but they str
 - [Anxiety Disorders](/guides/anxiety)  
 - [Suicide Prevention and Support](/guides/suicide-prevention)  
 - [Global Mental Health](/guides/global-mental-health)  
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — depression in carers; mental health support for people providing sustained care  

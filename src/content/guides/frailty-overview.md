@@ -234,7 +234,7 @@ Speak with a clinician if you or someone you care for:
 - Is struggling with daily tasks that were previously manageable
 - Is recovering slowly after illness or surgery
 - Is taking many medicines and seems more tired or unsteady than before
-- Is a carer who is struggling to provide safe support
+- Is a carer who is struggling to provide safe support — see also [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout)
 
 Early review — by a GP, geriatrician, or a multidisciplinary team — gives the best chance of identifying reversible causes and implementing changes before frailty becomes entrenched.
 
@@ -285,6 +285,7 @@ A GP or primary care clinician, geriatrician, physiotherapist, dietitian, pharma
 - [Heart and Circulation Hub](/guides/heart-circulation) — cardiovascular disease and frailty
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — hospital discharge as a high-risk transition; deconditioning, medicines, falls risk, and when home may not be safe
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — polypharmacy and frailty; medicines that increase falls risk; medication review
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — carer strain in frailty caregiving; recognising burnout and accessing support
 
 ---
 

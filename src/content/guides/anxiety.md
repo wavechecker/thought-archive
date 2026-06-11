@@ -142,3 +142,4 @@ A: No. SSRIs and SNRIs may take 4–6 weeks to show full effect.
 - [Depression: Symptoms, Causes, and Treatment](/guides/depression)  
 - [Suicide Prevention and Support](/guides/suicide-prevention)  
 - [Global Mental Health](/guides/global-mental-health)  
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — anxiety in carers; recognising burnout and accessing mental health support  

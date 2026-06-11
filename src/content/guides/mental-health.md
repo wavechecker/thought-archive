@@ -171,6 +171,7 @@ If someone is in immediate danger of harming themselves or others, call emergenc
 ---
 
 ## Related Guides
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — mental health support for carers; burnout, depression, anxiety, respite, and urgent red flags
 - [Shared Genetics in Psychiatric Disorders](/guides/shared-genetics-psychiatric-disorders) — the biological overlap between depression, anxiety, and other conditions.
 - [Sleep and Mental Health](/guides/sleep) — poor sleep and mental illness are bidirectionally linked; sleep is a first-line modifiable factor.
 - [Smoking Cessation](/guides/smoking-cessation) — smoking rates are substantially higher in people with mental illness; quitting improves outcomes.

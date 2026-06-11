@@ -455,6 +455,7 @@ Seek urgent help for difficulty breathing, swelling of the face or throat, sever
 - [Diabetes Hub](/guides/diabetes-hub) — diabetes medicines, hypoglycaemia, sick days, and CKD
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — medication review in advanced illness; symptom medicines and simplifying regimens
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — medicines review as part of preventive health
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — medication management as a source of carer stress; respite and support planning
 
 ---
 
