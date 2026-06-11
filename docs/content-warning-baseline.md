@@ -14,6 +14,8 @@ Do not add generic FAQ filler purely to reach zero warnings. If a remaining file
 
 > **Note (2026-06-11):** 8 draft stubs were removed in the `chore/stub-and-draft-cleanup` sprint, reducing the intentional warning count from 21 to 13. Removed files: `heart-health-hub.mdx`, `transient-ischemic-attack-tia.mdx`, `natural-testosterone-guide.mdx`, `erectile-dysfunction.md`, `mental-health-crisis.md`, `sunscreen-basics.md`, `sunscreen-skin-protection.md`, `lifespan-vs-healthspan.mdx`. All had 301 redirects to canonical guides.
 
+> **Note (2026-06-11):** `infectious-disease-hub.mdx` was removed in the `chore/infectious-disease-hub-merge` sprint. Useful FAQ content and guide sections (Key Points, Start Here, Vector/Animal/Rodent-Borne, Long COVID, Post-Viral Syndromes) were ported into the canonical hub `infectious-diseases.mdx`. A 301 redirect from `/guides/infectious-disease-hub` to `/guides/infectious-diseases` was already in place. Warning count remains 13.
+
 ---
 
 ## Classified file list

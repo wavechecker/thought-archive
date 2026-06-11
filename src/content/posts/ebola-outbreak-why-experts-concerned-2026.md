@@ -6,7 +6,7 @@ updatedDate: "2026-05-26"
 tags: ["infectious disease", "ebola", "public health", "global health", "outbreaks"]
 draft: false
 related:
-  - /guides/infectious-disease-hub
+  - /guides/infectious-diseases
 ---
 
 ## Hook
@@ -126,7 +126,7 @@ A: This is extremely unlikely. COVID-19 spread globally because it is airborne, 
 
 - [WHO Ebola Disease Fact Sheet](https://www.who.int/news-room/fact-sheets/detail/ebola-virus-disease)
 - [CDC Ebola Information](https://www.cdc.gov/ebola/)
-- [Infectious Disease Hub](/guides/infectious-disease-hub)
+- [Infectious Diseases — Guide Hub](/guides/infectious-diseases)
 
 ---
 
