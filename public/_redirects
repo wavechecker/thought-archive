@@ -82,6 +82,10 @@
 /guides/sunscreen-skin-protection         /guides/sunscreen                 301!
 /guides/sunscreen-skin-protection/        /guides/sunscreen                 301!
 
+# Coronary angiography deduplication — canonical is /guides/understanding-coronary-angiography
+/guides/coronary-angiography        /guides/understanding-coronary-angiography      301!
+/guides/coronary-angiography/       /guides/understanding-coronary-angiography      301!
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Gone for good
 # ──────────────────────────────────────────────────────────────────────────────
