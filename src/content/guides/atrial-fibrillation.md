@@ -172,6 +172,7 @@ Catheter ablation restores normal rhythm in many people, particularly with parox
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
 - [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention)
+- [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — for people who have had a stroke related to atrial fibrillation: rehabilitation, secondary prevention, and recovery
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea)
 

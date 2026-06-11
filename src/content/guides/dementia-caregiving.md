@@ -426,6 +426,7 @@ Seek urgent help for sudden confusion, stroke-like symptoms, falls with injury, 
 - [Depression](/guides/depression)
 - [Anxiety](/guides/anxiety)
 - [Stroke: Symptoms and Emergency Response](/guides/stroke-symptoms-fast-response)
+- [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — neurological disability, rehabilitation, and caregiver support after stroke
 - [TIA Warning Signs](/guides/tia-warning-signs)
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 

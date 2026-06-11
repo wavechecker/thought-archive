@@ -96,7 +96,7 @@ Reduced appetite, difficulty eating, social isolation, depression, and financial
 
 ### Chronic Disease
 
-Conditions including heart failure, COPD, CKD, diabetes, and cancer all deplete physical reserves. The more chronic conditions a person has, the greater the cumulative strain on their capacity to cope with additional illness.
+Conditions including heart failure, COPD, CKD, diabetes, cancer, and stroke all deplete physical reserves. Stroke in particular can cause sudden, significant functional decline — contributing to frailty through weakness, reduced activity, and the demands of rehabilitation. See: [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) The more chronic conditions a person has, the greater the cumulative strain on their capacity to cope with additional illness.
 
 See: [Heart and Circulation Hub](/guides/heart-circulation) | [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub)
 
@@ -279,6 +279,7 @@ A GP or primary care clinician, geriatrician, physiotherapist, dietitian, pharma
 - [Anxiety](/guides/anxiety) — emotional health and physical decline
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — goals of care in severe frailty
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — CKD and its interaction with frailty
+- [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke as a cause of sudden functional decline and frailty; rehabilitation, falls risk, and secondary prevention
 - [Heart and Circulation Hub](/guides/heart-circulation) — cardiovascular disease and frailty
 
 ---

@@ -150,7 +150,7 @@ Fall risk is highest in people who have:
 - Frailty — reduced muscle reserve and resilience
 - Parkinson's disease — postural instability, freezing, and gait changes
 - Dementia — impaired judgement and hazard recognition
-- Stroke history — weakness, spasticity, or coordination problems
+- Stroke history — weakness, spasticity, or coordination problems (see [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation))
 - Heart disease, CKD, or diabetes — through medication effects and neurological changes
 - Multiple medicines (polypharmacy)
 

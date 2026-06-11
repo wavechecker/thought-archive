@@ -319,6 +319,7 @@ Palliative care is a broad approach to symptom management and support across any
 - [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving)
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview)
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia)
+- [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — supportive care and goals of care when recovery after stroke is limited
 - [Aging and Longevity Hub](/guides/aging-longevity-hub)
 - [Depression](/guides/depression)
 - [Anxiety](/guides/anxiety)
