@@ -267,7 +267,7 @@ Erectile dysfunction following radical prostatectomy occurs in 30–90% of men a
 ## Related Guides
 
 - [Men's Health Hub](/guides/mens-health-hub)
-- [Heart Health Hub](/guides/heart-health-hub)
+- [Heart & Circulation Hub](/guides/heart-circulation)
 - [Cardiovascular Risk Assessment — Beyond Cholesterol](/guides/cardiovascular-risk-assessment)
 - [Preventing Heart Disease](/guides/preventing-heart-disease)
 - [Type 2 Diabetes — Overview and Management](/guides/type-2-diabetes)

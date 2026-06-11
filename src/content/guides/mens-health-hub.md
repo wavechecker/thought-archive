@@ -140,7 +140,7 @@ Insulin resistance underlies type 2 diabetes, obesity, and metabolic syndrome �
 
 ## Related Health Topics
 
-- [Heart Health Hub](/guides/heart-health-hub) — Cardiovascular disease kills more Australian men than any other cause; heart attack risk is higher and occurs earlier in men than women
+- [Heart & Circulation Hub](/guides/heart-circulation) — Cardiovascular disease kills more Australian men than any other cause; heart attack risk is higher and occurs earlier in men than women
 - [Preventing Heart Disease](/guides/preventing-heart-disease) — Evidence-based lifestyle and medical strategies for primary prevention of cardiovascular events
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) — Understanding absolute risk: cholesterol, blood pressure, smoking, diabetes, and advanced biomarkers (ApoB, Lp(a), CAC score)
 - [Stroke — What You Need to Know](/guides/stroke) — Stroke risk is higher in men; recognising symptoms and acting fast determines outcome

@@ -1,6 +1,6 @@
 # Content Warning Baseline
 
-As of 2026-06-08, `npm run content:check` passes with 0 errors and approximately 21 warnings.
+As of 2026-06-11, `npm run content:check` passes with 0 errors and approximately 13 warnings.
 
 These remaining warnings are intentional. They are all "No FAQ items in frontmatter" warnings and should not be treated as breakage.
 
@@ -11,6 +11,8 @@ The remaining files generally fall into three groups:
 3. Thin/stub pages that should be expanded in future content sprints before FAQ frontmatter is added.
 
 Do not add generic FAQ filler purely to reach zero warnings. If a remaining file is expanded into a substantive patient guide later, add useful `faq:` frontmatter as part of that content update.
+
+> **Note (2026-06-11):** 8 draft stubs were removed in the `chore/stub-and-draft-cleanup` sprint, reducing the intentional warning count from 21 to 13. Removed files: `heart-health-hub.mdx`, `transient-ischemic-attack-tia.mdx`, `natural-testosterone-guide.mdx`, `erectile-dysfunction.md`, `mental-health-crisis.md`, `sunscreen-basics.md`, `sunscreen-skin-protection.md`, `lifespan-vs-healthspan.mdx`. All had 301 redirects to canonical guides.
 
 ---
 
@@ -27,10 +29,11 @@ substantive guides. Adding FAQ frontmatter would produce artificial filler.
 | `src/content/guides/testing-and-screening.md` | Testing & Screening |
 | `src/content/guides/sexual-health.md` | Sexual Health |
 | `src/content/guides/mental-health.md` | Mental Health |
-| `src/content/guides/mental-health-crisis.md` | Mental Health (draft hub) |
 | `src/content/guides/emergencies.md` | Emergencies |
 
 > **Note (2026-06-08):** `src/content/guides/palliative-care.md` was removed from this group in the palliative care expansion sprint. It has been expanded into a substantive patient-facing guide with `faq:` frontmatter and no longer belongs in the intentional warning baseline.
+
+> **Note (2026-06-11):** `src/content/guides/mental-health-crisis.md` was removed from this group in the stub cleanup sprint. It was a draft hub with a redirect to `/guides/mental-health`.
 
 ### Group 2 — Existing FAQPage schema via inline JSON-LD or SchemaFAQ component
 
@@ -48,18 +51,15 @@ create duplicate schema output.
 | `src/content/guides/creatine-guide.mdx` | `<SchemaFAQ>` component |
 | `src/content/guides/how-to-evaluate-medical-claims-age-of-ai.mdx` | Inline FAQPage JSON-LD |
 | `src/content/guides/intrinsic-vs-extrinsic-mortality.mdx` | Inline FAQPage JSON-LD |
-| `src/content/guides/lifespan-vs-healthspan.mdx` | Inline FAQPage JSON-LD |
 
-### Group 3 — Thin/stub pages (all `draft: true`)
+> **Note (2026-06-11):** `src/content/guides/lifespan-vs-healthspan.mdx` was removed from this group in the stub cleanup sprint. It was `draft: true` with a redirect to `/guides/healthspan-vs-lifespan`.
 
-These pages are unfinished drafts. They should be expanded into full patient guides before FAQ
-frontmatter is added. Forcing in FAQ items now would produce low-quality content.
+### Group 3 — Thin/stub pages
+
+These pages are unfinished drafts or pages that need FAQ content before it can be meaningfully added.
 
 | File | Topic |
 |------|-------|
-| `src/content/guides/transient-ischemic-attack-tia.mdx` | TIA / mini-stroke |
-| `src/content/guides/heart-health-hub.mdx` | Heart health hub (stub) |
-| `src/content/guides/sunscreen-skin-protection.md` | Sunscreen and UV protection |
-| `src/content/guides/sunscreen-basics.md` | Sunscreen basics |
-| `src/content/guides/natural-testosterone-guide.mdx` | Natural testosterone optimisation |
-| `src/content/guides/erectile-dysfunction.md` | Erectile dysfunction |
+| (none remaining) | — |
+
+> **Note (2026-06-11):** All files previously in this group were removed in the stub cleanup sprint. `transient-ischemic-attack-tia.mdx`, `heart-health-hub.mdx`, `sunscreen-skin-protection.md`, `sunscreen-basics.md`, `natural-testosterone-guide.mdx`, and `erectile-dysfunction.md` were all `draft: true` with canonical replacements and 301 redirects.
