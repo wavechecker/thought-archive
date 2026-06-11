@@ -51,6 +51,7 @@ If you are experiencing chest pain, sudden shortness of breath, or symptoms that
 - Cardiac rehabilitation — after a heart attack or surgery
 - Medications — statins, blood thinners, beta-blockers, and more
 - Heart disease prevention — lifestyle and medical screening
+- Peripheral artery disease (PAD) — leg pain when walking, poor circulation, foot care, and when to seek urgent help
 - Stroke and TIA — closely linked to heart and circulation health
 
 ---
@@ -140,6 +141,12 @@ Chronic kidney disease and cardiovascular disease are closely linked — each wo
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — central CKD navigation including the cardiorenal relationship, complications, and management
 - [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — blood pressure targets, medicines, and cardiovascular risk reduction in CKD
 
+### Peripheral Artery Disease
+
+Peripheral artery disease (PAD) is narrowing of the arteries supplying the legs — caused by the same atherosclerosis that blocks coronary and carotid arteries. PAD is a marker of widespread arterial disease: people with PAD have a significantly elevated risk of heart attack and stroke, often without cardiac symptoms. It is under-recognised and undertreated.
+
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — claudication, poor circulation, foot care, risk factors, diagnosis, vascular procedures, and urgent limb red flags
+
 ### Prevention
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — Diet, exercise, smoking cessation, cholesterol control, and screening checks.
 - [Abdominal Aortic Aneurysm Screening: Who Should Be Tested and When](/guides/abdominal-aortic-aneurysm-screening) — What an AAA is, why rupture is so dangerous, who should have an ultrasound, and how results guide surveillance and treatment.
@@ -220,6 +227,7 @@ Immediately for severe chest pain, chest pain with arm or jaw pain, sudden breat
 
 ## Related Guides
 
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD is part of the same atherosclerotic spectrum as coronary artery disease; people with PAD face elevated heart attack and stroke risk
 - [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)
 - [Emergencies — Guide Hub](/guides/emergencies)
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — kidney disease raises cardiovascular risk; the cardiorenal relationship, blood pressure, and management

@@ -195,6 +195,7 @@ Gestational diabetes is diabetes first recognised during pregnancy. It arises be
 ### Complications
 - [Long-Term Complications of Type 1 Diabetes](/guides/type-1-diabetes-long-term-complications) — retinopathy, nephropathy, neuropathy, and cardiovascular risk: why they occur, screening, and how consistent management reduces risk.
 - [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage) — peripheral neuropathy (feet and legs), autonomic neuropathy, pain management, foot care, and prevention through glucose control.
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD is significantly more common and more severe in people with diabetes. Poor circulation and neuropathy together create a compound risk for slow-healing foot wounds, ulcers, and infection. Recognising PAD symptoms early — and maintaining daily foot care — is an important part of diabetes management.
 
 ### Kidney Disease (Diabetic Nephropathy)
 
@@ -249,6 +250,7 @@ Yes. With modern insulin therapy, continuous glucose monitoring, and good self-m
 ---
 
 ## Related Guides
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD is a major vascular complication of diabetes; combined with neuropathy, it substantially raises the risk of foot ulceration and amputation
 - [Heart & Circulation Hub](/guides/heart-circulation) — diabetes significantly raises cardiovascular risk; heart health and glucose management are closely linked.
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — diabetes is the leading cause of CKD; kidney monitoring is part of integrated diabetes care.
 - [Testing and Screening](/guides/testing-and-screening) — HbA1c, fasting glucose, and lipid panels in context alongside diabetes monitoring.

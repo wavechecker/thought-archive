@@ -327,6 +327,7 @@ People with repeated falls, frailty, unexplained weakness, weight loss, slow wal
 - [Diabetes Hub](/guides/diabetes-hub) — sarcopenia and diabetes share risk factors and interact
 - [Metabolic Health Hub](/guides/metabolic-health-hub) — insulin resistance, metabolic health, and muscle
 - [Heart & Circulation Hub](/guides/heart-circulation) — cardiac rehabilitation addresses deconditioning and muscle function
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD limits walking and physical activity, contributing to muscle loss and deconditioning
 - [Brain Health Hub](/guides/brain-health-hub) — cognitive decline and physical decline are bidirectionally linked
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke-related muscle loss, rehabilitation, and falls risk after stroke
 - [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving) — falls risk, frailty, and safety planning for people with dementia

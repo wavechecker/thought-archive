@@ -4,7 +4,7 @@ slug: "preventing-heart-disease"
 description: "Steps to reduce your risk of heart disease — diet, exercise, risk factor control, and the role of regular screening."
 category: "Heart & Circulation"
 publishDate: "2025-08-20"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 tags: ["cardiology", "prevention", "screening", "heart", "patientguide"]
 related:
   - "[Common Heart Medications](/guides/common-heart-medications)"
@@ -111,6 +111,7 @@ Heart disease remains one of the leading causes of illness and death worldwide. 
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
 - [Preventive Health — Guide Hub](/guides/preventive-health)  
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD is an atherosclerotic condition sharing the same risk factors as heart disease; its presence indicates elevated cardiovascular risk
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — CKD is an independent cardiovascular risk factor; blood pressure control and shared risk reduction apply across both
 - [Coronary Artery Calcium (CAC) Score](/guides/coronary-artery-calcium-score)  
 - [Lipoprotein(a): The Overlooked Genetic Heart Risk Factor](/guides/lipoprotein-a-explained)  

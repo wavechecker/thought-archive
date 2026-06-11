@@ -3,7 +3,7 @@ title: "High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment"
 description: "A clear guide to high blood pressure, including causes, risks, symptoms, and how it is treated."
 category: "Heart & Circulation"
 publishDate: "2026-04-10"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 tags: ["hypertension", "blood pressure", "heart health", "cardiovascular risk"]
 draft: false
 faq:
@@ -142,6 +142,7 @@ Untreated or poorly controlled hypertension increases risk of:
 - Stroke  
 - Heart failure  
 - Kidney disease  
+- Peripheral artery disease (PAD) — narrowed leg arteries causing walking pain, poor circulation, and slow-healing wounds  
 - Vision loss  
 
 Good control significantly reduces these risks.
@@ -183,4 +184,5 @@ A: Causes may include medication resistance, underlying conditions, or persisten
 - [Heart & Circulation Overview](/guides/heart-circulation-overview)
 - [Stroke](/guides/stroke-symptoms-fast-response)
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — secondary prevention, blood pressure management, and rehabilitation after stroke
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — hypertension is a major PAD risk factor; blood pressure control is part of PAD management
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — blood pressure medicines, falls risk from dizziness, and medication review

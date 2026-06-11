@@ -451,6 +451,7 @@ Seek urgent help for difficulty breathing, swelling of the face or throat, sever
 - [Heart & Circulation Hub](/guides/heart-circulation) — blood thinners, blood pressure medicines, and heart medicines
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications) — plain-language guide to statins, ACE inhibitors, beta-blockers, anticoagulants, and more
 - [Atrial Fibrillation](/guides/atrial-fibrillation) — anticoagulation in AF; stroke prevention and bleeding risk
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — antiplatelet medicines, blood-thinning treatments, and vascular risk reduction in PAD
 - [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — blood pressure medicines, monitoring, and side effects
 - [Diabetes Hub](/guides/diabetes-hub) — diabetes medicines, hypoglycaemia, sick days, and CKD
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — medication review in advanced illness; symptom medicines and simplifying regimens

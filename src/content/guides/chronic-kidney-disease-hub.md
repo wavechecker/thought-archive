@@ -142,7 +142,13 @@ The relationship between kidney and heart disease is sometimes called cardiorena
 
 Cardiovascular risk reduction — through blood pressure, cholesterol, diabetes management, and lifestyle — is therefore a core component of CKD care, not a separate issue.
 
-See: [Heart & Circulation Hub](/guides/heart-circulation) | [Preventing Heart Disease](/guides/preventing-heart-disease) | [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
+See: [Heart & Circulation Hub](/guides/heart-circulation) | [Preventing Heart Disease](/guides/preventing-heart-disease) | [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) | [Peripheral Artery Disease](/guides/peripheral-artery-disease)
+
+### Peripheral Artery Disease
+
+PAD — narrowing of the arteries supplying the legs — shares most of its risk factors with CKD: smoking, diabetes, high blood pressure, and older age. The two conditions commonly coexist, and each amplifies cardiovascular risk. Reduced blood flow to the legs can impair mobility, slow wound healing, and, in severe cases, threaten limb viability. People with CKD and diabetes face compound foot risk from the combination of poor circulation and neuropathy.
+
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — risk factors, claudication, foot care, diagnosis, and urgent limb red flags
 
 ---
 
@@ -332,6 +338,7 @@ Specialist referral depends on kidney function, urine results, blood pressure, r
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — frailty and CKD often coexist; a shared management approach improves outcomes
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting is particularly common in CKD and affects outcomes
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — kidney-relevant medicine changes, follow-up blood tests, and care planning after hospital admission
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD and CKD share risk factors and commonly coexist; combined management reduces cardiovascular and limb risk
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — NSAIDs, contrast, sick day rules, and polypharmacy in kidney disease
 
 ---
