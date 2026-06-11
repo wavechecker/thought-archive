@@ -4,7 +4,7 @@ title: "Diabetes Hub"
 slug: "diabetes-hub"
 description: "A central hub for understanding diabetes: type 1, type 2, and prediabetes — symptoms, management, prevention, and resources."
 publishDate: "2025-09-13"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 hubKey: "Diabetes"
 draft: false
 tags: ["diabetes", "type 1 diabetes", "type 2 diabetes", "prediabetes", "insulin", "management"]
@@ -102,7 +102,7 @@ Type 1 and Type 2 diabetes are often discussed as though they sit on the same sp
 | **Can it be prevented?** | No known prevention | Risk can be substantially reduced through lifestyle changes |
 | **Proportion of cases** | ~5–10% of all diabetes | ~90–95% of all diabetes |
 
-Other forms of diabetes also exist, including gestational diabetes (during pregnancy), [LADA](/guides/latent-autoimmune-diabetes) (latent autoimmune diabetes in adults, sometimes called Type 1.5), and rarer monogenic forms. Each has its own characteristics, but Type 1 and Type 2 account for the vast majority of diagnoses.
+Other forms of diabetes also exist, including [gestational diabetes](/guides/gestational-diabetes) (diabetes first recognised during pregnancy), [LADA](/guides/latent-autoimmune-diabetes) (latent autoimmune diabetes in adults, sometimes called Type 1.5), and rarer monogenic forms. Each has its own characteristics, but Type 1 and Type 2 account for the vast majority of diagnoses.
 
 ---
 
@@ -185,6 +185,12 @@ Learn more: [CGM vs Finger Prick](/guides/cgm-vs-finger-prick) | [Continuous Glu
 - [Insulin Administration](/guides/insulin-administration)
 - [Latent Autoimmune Diabetes (LADA)](/guides/latent-autoimmune-diabetes)
 - [Diabetes Hormones](/guides/diabetes-hormones)
+
+### Gestational Diabetes
+
+Gestational diabetes is diabetes first recognised during pregnancy. It arises because pregnancy hormones cause insulin resistance that the pancreas cannot fully compensate for. Blood glucose usually returns to normal after birth, but gestational diabetes significantly increases the risk of developing type 2 diabetes in the years that follow — making postpartum follow-up testing and long-term metabolic health monitoring an important part of care.
+
+- **[Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes)** — screening, risk factors, blood glucose monitoring, food and activity changes, insulin when needed, birth planning, and postpartum follow-up
 
 ### Complications
 - [Long-Term Complications of Type 1 Diabetes](/guides/type-1-diabetes-long-term-complications) — retinopathy, nephropathy, neuropathy, and cardiovascular risk: why they occur, screening, and how consistent management reduces risk.

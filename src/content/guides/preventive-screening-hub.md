@@ -214,8 +214,9 @@ Type 2 diabetes develops slowly — prediabetes often precedes it by years and i
 - [Prediabetes: Early Warning Signs and Prevention](/guides/prediabetes) — who is at risk, what the blood tests show, and how reversal works
 - [Type 2 Diabetes](/guides/type-2-diabetes) — diagnosis, management, and cardiometabolic risk
 - [Understanding HbA1c — What It Means and How to Use It](/guides/understanding-hba1c) — interpreting the most common diabetes monitoring test
+- [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes) — pregnancy glucose screening, OGTT, management, and postpartum follow-up testing
 
-**Who should screen:** Adults over 40 with one or more risk factors (overweight, family history, gestational diabetes history, hypertension, or certain ethnicities with higher baseline risk). Screening uses fasting blood glucose or HbA1c.
+**Who should screen:** Adults over 40 with one or more risk factors (overweight, family history, gestational diabetes history, hypertension, or certain ethnicities with higher baseline risk). Screening uses fasting blood glucose or HbA1c. People with a history of gestational diabetes should have ongoing glucose screening after pregnancy, typically every one to three years.
 
 ---
 
@@ -289,6 +290,7 @@ Women face specific screening requirements across the reproductive years, the me
 - [Mammography and Breast Cancer Screening](/guides/mammography-breast-screening) — when to start, what results mean
 - [Bone Density and Osteoporosis: What You Need to Know](/guides/bone-density-osteoporosis) — bone loss accelerates at menopause; DXA scanning and prevention
 - [Bone Density Testing (DEXA): Who Should Be Screened and When](/guides/bone-density-testing-dexa-screening) — how DEXA works, T-score interpretation, screening eligibility, and what to do after results
+- [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes) — pregnancy glucose screening (OGTT), management, and postpartum follow-up; a history of gestational diabetes is a significant risk factor for type 2 diabetes
 - [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause) — cardiovascular risk rises after menopause; prevention implications
 - [Women's Health Hub](/guides/womens-health-hub) — centralised hub for all women's health content
 

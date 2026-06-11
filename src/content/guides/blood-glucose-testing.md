@@ -6,7 +6,7 @@ description: >-
   results, ketone testing basics, and when to seek urgent help.
 category: "Diabetes"
 publishDate: "2025-08-19"
-updatedDate: "2026-05-14"
+updatedDate: "2026-06-11"
 draft: false
 tags:
   - blood glucose
@@ -206,7 +206,7 @@ Targets may be **less strict** for older adults, people with frequent severe
 hypoglycaemia, or those with reduced hypoglycaemia awareness.
 
 Targets are **tighter** during pregnancy (gestational or pre-existing diabetes)
-— always follow your obstetric team's guidance.
+— always follow your obstetric team's guidance. See [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes) for more on pregnancy blood glucose monitoring.
 
 ### How HbA1c Relates
 
@@ -394,6 +394,7 @@ rises. Recognising your personal patterns is as important as the numbers themsel
 - [Type 1 Diabetes — An Overview](/guides/type-1-diabetes)
 - [Early Signs of Type 1 Diabetes](/guides/early-signs-type-1-diabetes)
 - [Diabetes Emergencies — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)
+- [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes) — blood glucose monitoring in pregnancy and what pregnancy-specific targets mean
 
 ---
 

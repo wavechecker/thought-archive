@@ -193,6 +193,7 @@ A: Most modern CGMs are water-resistant and can be worn while swimming, showerin
 - [Prediabetes: Early Warning Signs and Prevention](/guides/prediabetes)
 - [Testing & Screening — Guide Hub](/guides/testing-and-screening)
 - [Diabetes — Guide Hub](/guides/diabetes-hub)
+- [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes) — CGM use in gestational diabetes is an evolving clinical area; discuss suitability with your care team
 
 ---
 

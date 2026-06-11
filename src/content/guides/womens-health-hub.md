@@ -70,6 +70,9 @@ Endometriosis — tissue similar to the uterine lining growing outside the uteru
 ### [Contraception Options](/guides/contraception-options)
 An overview of all contraceptive methods — hormonal and non-hormonal, short-acting and long-acting, reversible and permanent — with effectiveness data and considerations for different life stages.
 
+### [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes)
+Gestational diabetes is diabetes first recognised during pregnancy. It arises when pregnancy hormones cause insulin resistance the pancreas cannot fully compensate for. Management includes blood glucose monitoring, food and activity adjustments, and sometimes insulin or medication. Blood glucose usually improves after birth, but gestational diabetes significantly increases the future risk of type 2 diabetes — making postpartum follow-up testing and long-term screening an essential part of care.
+
 ---
 
 ## Screening and Prevention
