@@ -102,9 +102,9 @@ See: [Heart and Circulation Hub](/guides/heart-circulation) | [Chronic Kidney Di
 
 ### Cognitive Impairment
 
-Dementia and mild cognitive impairment are associated with frailty, both as contributors and as consequences. They reduce motivation, activity, and the ability to organise daily tasks — which can accelerate physical decline.
+Dementia and mild cognitive impairment are associated with frailty, both as contributors and as consequences. They reduce motivation, activity, and the ability to organise daily tasks — which can accelerate physical decline. For families supporting someone with dementia, safety planning and carer support are integral to managing the frailty that often accompanies cognitive decline.
 
-See: [Dementia Overview](/guides/dementia-overview)
+See: [Dementia Overview](/guides/dementia-overview) · [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving)
 
 ### Social Isolation
 
@@ -274,6 +274,7 @@ A GP or primary care clinician, geriatrician, physiotherapist, dietitian, pharma
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle loss as a major contributor to frailty
 - [Bone Health Basics](/guides/bone-health-basics) — bone health in the context of frailty
 - [Dementia Overview](/guides/dementia-overview) — cognitive impairment and frailty
+- [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving) — practical carer support for families managing dementia alongside frailty
 - [Depression](/guides/depression) — depression as a contributor to frailty
 - [Anxiety](/guides/anxiety) — emotional health and physical decline
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — goals of care in severe frailty

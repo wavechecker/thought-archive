@@ -154,6 +154,7 @@ Key areas include movement, strength, nutrition, sleep, social connection, medic
 - [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention)
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview)
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia)
+- [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving)
 - [Healthspan vs Lifespan: What's the Difference?](/guides/healthspan-vs-lifespan)
 - [The Hallmarks of Aging Explained](/guides/hallmarks-of-aging)
 - [Brain Health Hub](/guides/brain-health-hub)
