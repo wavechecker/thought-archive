@@ -327,6 +327,7 @@ Planning begins when kidney function has declined significantly and progression 
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — kidney function testing as preventive health
 - [Palliative Care — Guide Hub](/guides/palliative-care) — supportive care in advanced kidney disease
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting in CKD, physical activity, and nutrition
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — medicine review, kidney function monitoring, and follow-up planning after a hospital admission
 
 ---
 

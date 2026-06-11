@@ -438,6 +438,7 @@ Aphasia is difficulty with language — speaking, understanding, reading, or wri
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — preparing for safe discharge after stroke; medicines, follow-up, warning signs, and home support
 
 ---
 

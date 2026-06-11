@@ -331,6 +331,7 @@ Specialist referral depends on kidney function, urine results, blood pressure, r
 - [Aging and Longevity Hub](/guides/aging-longevity-hub) — healthy aging, frailty, and falls prevention in the context of aging with chronic conditions
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — frailty and CKD often coexist; a shared management approach improves outcomes
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting is particularly common in CKD and affects outcomes
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — kidney-relevant medicine changes, follow-up blood tests, and care planning after hospital admission
 
 ---
 

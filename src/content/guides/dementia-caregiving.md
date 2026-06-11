@@ -429,6 +429,7 @@ Seek urgent help for sudden confusion, stroke-like symptoms, falls with injury, 
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — neurological disability, rehabilitation, and caregiver support after stroke
 - [TIA Warning Signs](/guides/tia-warning-signs)
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — managing the transition home after hospital admission; delirium, medicines, carer planning, and when to seek help
 
 ---
 

@@ -332,6 +332,7 @@ People with repeated falls, frailty, unexplained weakness, weight loss, slow wal
 - [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving) — falls risk, frailty, and safety planning for people with dementia
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — advanced illness, muscle wasting, and goals of care
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — age-based health checks and falls risk assessment
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — post-discharge deconditioning, rehabilitation, mobility, and falls risk after hospital admission
 
 ---
 

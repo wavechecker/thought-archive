@@ -325,6 +325,7 @@ Palliative care is a broad approach to symptom management and support across any
 - [Anxiety](/guides/anxiety)
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
 - [Voluntary Assisted Dying — Guide Hub](/guides/voluntary-assisted-dying)
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — planning for safe discharge; carer support, medicines, follow-up, and when home may not be safe
 
 ---
 

@@ -106,6 +106,7 @@ Bone loss accelerates with age and is often silent until a fracture occurs.
 
 Planning for later life — including medical, legal, and emotional preparation — allows people to retain choice and dignity.
 
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — what to check before going home; medicines, follow-up, mobility, carer support, and warning signs
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — what palliative care involves and when it applies
 - [Voluntary Assisted Dying in Australia](/guides/voluntary-assisted-dying) — the Australian framework for VAD
 
@@ -159,6 +160,7 @@ Key areas include movement, strength, nutrition, sleep, social connection, medic
 - [The Hallmarks of Aging Explained](/guides/hallmarks-of-aging)
 - [Brain Health Hub](/guides/brain-health-hub)
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke as a cause of sudden functional decline in older adults; rehabilitation, falls risk, and secondary prevention
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — high-risk discharge transition; medicines, deconditioning, falls risk, carer support, and when to seek urgent help
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
 
