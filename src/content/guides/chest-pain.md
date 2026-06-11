@@ -12,7 +12,7 @@ tags:
   - cardiology
 publishDate: '2025-09-08'
 draft: false
-updatedDate: '2025-09-08'
+updatedDate: '2026-06-11'
 schema:
   medicalCondition:
     name: "Chest Pain"
@@ -49,6 +49,10 @@ faq:
     a: "Cardiac chest pain is typically described as crushing, squeezing, or heavy pressure in the centre or left of the chest, often spreading to the arm, neck, jaw, or back, and accompanied by sweating, nausea, or breathlessness. However, heart attacks do not always present this way — women, people with diabetes, and older adults may have atypical symptoms. When in doubt, call emergency services."
   - q: "When should I seek emergency care for chest pain?"
     a: "Call emergency services immediately for: crushing or pressure-like chest pain; chest pain spreading to the arm, jaw, or back; chest pain with sweating, nausea, or vomiting; sudden shortness of breath at rest; palpitations with dizziness or fainting; or any chest pain you are unsure about. Do not drive yourself to hospital."
+  - q: "What are common non-cardiac causes of chest pain?"
+    a: "Heartburn (acid reflux), anxiety, chest wall muscle strain, costochondritis, lung infections, and shingles can all cause chest discomfort. These should only be assumed after a clinician has ruled out cardiac causes."
+  - q: "Can younger adults have serious chest pain?"
+    a: "Yes. Conditions such as spontaneous coronary artery dissection (SCAD) and pulmonary embolism can cause life-threatening chest pain in younger adults, including women with no traditional cardiac risk factors. Do not assume chest pain in a young person is benign."
 ---
 ## Intro
 Chest pain is one of the most important symptoms in medicine. It may be caused by something minor — like muscle strain or heartburn — or by life-threatening conditions such as a heart attack or blood clot in the lungs. Knowing when to call emergency services can save lives.
@@ -58,6 +62,7 @@ Chest pain is one of the most important symptoms in medicine. It may be caused b
 - **Urgent red flags** include pain with sweating, shortness of breath, fainting, or radiation to the arm/jaw.  
 - Common non-cardiac causes: indigestion, anxiety, chest wall strain.  
 - If in doubt, call emergency services — it’s safer to be checked.  
+- For step-by-step emergency guidance including what to do while waiting for help, see [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain).  
 
 ## 🚨 Red Flags
 Call emergency services immediately if chest pain is:  
@@ -66,21 +71,20 @@ Call emergency services immediately if chest pain is:
 - Associated with sweating, nausea, or vomiting  
 - Combined with shortness of breath, fainting, or severe weakness  
 - Sudden and severe, especially with risk factors (age, smoking, diabetes, high blood pressure)  
-
-## ✅ Reassurance
-- Many cases of chest pain are not heart-related.  
-- Muscle strain, acid reflux, anxiety, or even shingles can mimic heart pain.  
-- If your doctor has already ruled out serious causes, symptoms are often manageable and not dangerous.  
+- Blue lips, grey skin, or sudden collapse  
 
 ## Background
 Chest pain has many potential sources:  
-- **Cardiac:** heart attack, angina, pericarditis.  
-- **Lungs:** pulmonary embolism (blood clot), pneumonia, pleurisy.  
-- **Digestive system:** acid reflux, gallbladder disease.  
-- **Musculoskeletal:** costochondritis, muscle strain.  
-- **Other:** anxiety or panic attacks.  
+- **Cardiac:** heart attack, angina, pericarditis, spontaneous coronary artery dissection (SCAD — an important cause in younger adults, particularly women).  
+- **Lungs:** pulmonary embolism (blood clot), pneumonia, pleurisy, pneumothorax.  
+- **Digestive system:** acid reflux, oesophageal spasm, gallbladder disease.  
+- **Musculoskeletal:** costochondritis, muscle or rib strain.  
+- **Other:** anxiety or panic attacks, shingles.  
 
 Because the heart and lungs are vital, chest pain is always approached with caution in medicine.
+
+## Non-Cardiac Causes
+Many cases of chest pain are not heart-related. Muscle strain, acid reflux, anxiety, or even shingles can mimic heart pain. These causes are only safe to assume after a clinician has ruled out cardiac and other serious causes.
 
 ## Diagnosis and Treatment
 - **Emergency setting:** ECG, blood tests (troponin), chest X-ray, oxygen, and sometimes CT scan.  
@@ -107,6 +111,8 @@ A: No. Brief pain that resolves can still be a sign of unstable angina — a war
 - [NHS – Chest Pain](https://www.nhs.uk/conditions/chest-pain/)  
 
 ## Related Guides
-- [Heart Palpitations: When to Worry](/guides/heart-palpitations)  
-- [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home)  
+- [When to Seek Emergency Help for Chest Pain](/guides/when-to-seek-emergency-help-for-chest-pain)
+- [Heart Palpitations: When to Worry](/guides/heart-palpitations)
+- [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
+- [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home)
 - [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
