@@ -393,3 +393,4 @@ The following are neutral, reputable sources of information on hospital discharg
 - [COPD](/guides/copd)
 - [Sepsis](/guides/sepsis)
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
+- [Colorectal Polyps: What They Mean and When Follow-Up Is Needed](/guides/colorectal-polyps-surveillance) — recovery and red flags after colonoscopy and polypectomy; when to seek urgent help after a bowel procedure

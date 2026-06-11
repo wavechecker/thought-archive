@@ -452,6 +452,7 @@ Seek urgent help for difficulty breathing, swelling of the face or throat, sever
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications) — plain-language guide to statins, ACE inhibitors, beta-blockers, anticoagulants, and more
 - [Atrial Fibrillation](/guides/atrial-fibrillation) — anticoagulation in AF; stroke prevention and bleeding risk
 - [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — antiplatelet medicines, blood-thinning treatments, and vascular risk reduction in PAD
+- [Colorectal Polyps: What They Mean and When Follow-Up Is Needed](/guides/colorectal-polyps-surveillance) — managing anticoagulants and antiplatelets around colonoscopy and polypectomy; post-procedure bleeding risk
 - [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — blood pressure medicines, monitoring, and side effects
 - [Diabetes Hub](/guides/diabetes-hub) — diabetes medicines, hypoglycaemia, sick days, and CKD
 - [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — antibiotics, blood thinners, and diabetes medicines in the context of foot infections and wound management

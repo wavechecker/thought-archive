@@ -179,6 +179,7 @@ A: Seek prompt medical assessment if you notice blood in your stool, a persisten
 
 ## Related Guides
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
+- [Colorectal Polyps: What They Mean and When Follow-Up Is Needed](/guides/colorectal-polyps-surveillance) — what to expect after a positive FIT or polyps found at colonoscopy; pathology, surveillance intervals, and red flags
 - [Understanding Bowel Cancer](/guides/understanding-bowel-cancer)
 - [Bowel Cancer — Guide Hub](/guides/bowel-cancer)
 - [Living with Bowel Cancer](/guides/living-with-bowel-cancer)

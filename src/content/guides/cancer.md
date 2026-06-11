@@ -4,7 +4,7 @@ slug: "cancer"
 description: "Cancer is a group of diseases where abnormal cells grow uncontrollably and may spread. Explore guides on lung, bowel, breast, prostate, skin, cervical, liver, and other cancers."
 category: "Cancer"
 publishDate: "2025-08-20"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 hubKey: "Cancer"
 draft: false
 tags: ["cancer", "oncology", "patientguide", "hub"]
@@ -122,6 +122,8 @@ See also: [Emergencies — Guide Hub](/guides/emergencies) | [Sepsis](/guides/se
 - [Nicotinamide and Skin Cancer Prevention](/guides/nicotinamide-skin-cancer-prevention) — Evidence on vitamin B3 supplementation for high-risk patients.
 
 ### Screening and Prevention
+- [Colorectal Polyps: What They Mean and When Follow-Up Is Needed](/guides/colorectal-polyps-surveillance) — Adenomas, serrated polyps, pathology results, colonoscopy removal, surveillance after polypectomy, family history, and post-procedure warning signs.
+- [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening) — FIT testing, colonoscopy, and the preventive power of polyp removal.
 - [Lung Cancer: Symptoms, Diagnosis, and Treatment](/guides/lung-cancer-overview) — Patient overview: types, symptoms, risk factors, and treatment.
 - [Lung Cancer Screening: Low-Dose CT, Benefits, Risks, and Eligibility](/guides/lung-cancer-screening-low-dose-ct) — Who qualifies for annual LDCT, what pack-years means, the evidence base, and shared decision-making.
 - [Skin Cancer — Prevention](/guides/skin-cancer-prevention) — Sun protection, sunscreen, and reducing UV exposure.
