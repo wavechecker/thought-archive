@@ -176,6 +176,7 @@ Catheter ablation restores normal rhythm in many people, particularly with parox
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Sleep Apnoea — Causes, Risks, and Treatment](/guides/sleep-apnoea)
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — blood thinners in AF; anticoagulation safety, bleeding risk, missed doses, and interactions
+- [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview) — hyperthyroidism is a recognised trigger for atrial fibrillation; thyroid function is part of the standard AF workup
 
 ---
 

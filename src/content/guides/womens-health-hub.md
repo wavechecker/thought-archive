@@ -109,13 +109,13 @@ The nutritional, hormonal, and physical activity foundations of lifelong bone he
 ## Symptoms Women Commonly Search For
 
 ### Fatigue and Low Energy
-Persistent fatigue is one of the most common reasons women seek medical care. Causes range from iron deficiency anaemia and thyroid dysfunction to sleep disorders, perimenopause, depression, and undiagnosed chronic conditions. See [Why Am I Always Tired?](/guides/why-am-i-always-tired) for a differential diagnostic guide.
+Persistent fatigue is one of the most common reasons women seek medical care. Causes range from iron deficiency anaemia and [thyroid dysfunction](/guides/thyroid-disease-overview) to sleep disorders, perimenopause, depression, and undiagnosed chronic conditions. See [Why Am I Always Tired?](/guides/why-am-i-always-tired) for a differential diagnostic guide.
 
 ### Sleep Problems
 Sleep disturbance is extremely common across the menopausal transition, but also occurs throughout a woman's life — related to hormonal cycles, iron deficiency, anxiety, or primary sleep disorders. See [Menopause and Sleep](/guides/menopause-and-sleep) and the [Sleep Health Hub](/guides/sleep-health-hub).
 
 ### Irregular or Missed Periods
-Irregular periods can indicate PCOS, thyroid dysfunction, hyperprolactinaemia, perimenopause, stress, or an eating disorder. Any new irregularity warrants medical assessment, particularly if accompanied by other symptoms. See [PCOS: Understanding Polycystic Ovary Syndrome](/guides/pcos) and [Perimenopause: What to Expect](/guides/perimenopause-what-to-expect).
+Irregular periods can indicate PCOS, [thyroid dysfunction](/guides/thyroid-disease-overview), hyperprolactinaemia, perimenopause, stress, or an eating disorder. Any new irregularity warrants medical assessment, particularly if accompanied by other symptoms. See [PCOS: Understanding Polycystic Ovary Syndrome](/guides/pcos) and [Perimenopause: What to Expect](/guides/perimenopause-what-to-expect).
 
 ### Hot Flushes and Night Sweats
 Vasomotor symptoms affect around 75% of women during the menopausal transition, on average for 7 years. They can begin during perimenopause — sometimes years before periods stop. See [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause) and [Perimenopause: What to Expect](/guides/perimenopause-what-to-expect).
@@ -142,6 +142,7 @@ Women's health does not exist in isolation. Several major health conditions disp
 - [Aging and Longevity Hub](/guides/aging-longevity-hub) — Menopause accelerates bone loss and cardiovascular risk; aging well is a core women's health concern
 - [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention) — Osteoporosis and frailty after menopause increase fall and fracture risk
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — Frailty is more common in older women; early recognition and intervention help
+- [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview) — Thyroid disease is significantly more common in women; it can cause irregular periods, heavy bleeding, fatigue, weight changes, anxiety-like symptoms, and postpartum thyroiditis overlapping with postnatal depression
 
 ---
 

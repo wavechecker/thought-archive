@@ -233,6 +233,18 @@ People with type 2 diabetes, high blood pressure, cardiovascular disease, or a f
 
 ---
 
+### Thyroid Function
+
+Thyroid blood tests (TSH and free T4) are used to investigate symptoms that may reflect thyroid dysfunction — including unexplained fatigue, significant weight change, palpitations, heavy or irregular periods, and mood changes. They are also relevant in the postpartum period, as postpartum thyroiditis can closely mimic depression or anxiety in the months after birth.
+
+There is no nationally recommended universal thyroid screening programme for asymptomatic adults in most countries. Thyroid testing is most useful when there are symptoms, a known risk factor, or a clinical reason for testing.
+
+- [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview) — what thyroid tests show, who benefits from testing, and what results mean
+
+**Who should consider testing:** People with unexplained fatigue, significant menstrual changes, unexplained weight change, palpitations, or a first-degree relative with autoimmune thyroid disease. People who are pregnant or in the postpartum period. People taking medicines known to affect thyroid function, such as amiodarone or lithium.
+
+---
+
 ## Age-Based Health Checks
 
 Screening needs change across the lifespan. This table summarises the most evidence-supported checks by decade.
@@ -291,6 +303,7 @@ Women face specific screening requirements across the reproductive years, the me
 - [Bone Density and Osteoporosis: What You Need to Know](/guides/bone-density-osteoporosis) — bone loss accelerates at menopause; DXA scanning and prevention
 - [Bone Density Testing (DEXA): Who Should Be Screened and When](/guides/bone-density-testing-dexa-screening) — how DEXA works, T-score interpretation, screening eligibility, and what to do after results
 - [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes) — pregnancy glucose screening (OGTT), management, and postpartum follow-up; a history of gestational diabetes is a significant risk factor for type 2 diabetes
+- [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview) — thyroid testing when symptoms, pregnancy, postpartum context, or risk factors indicate assessment; postpartum thyroiditis can mimic postnatal depression
 - [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause) — cardiovascular risk rises after menopause; prevention implications
 - [Women's Health Hub](/guides/womens-health-hub) — centralised hub for all women's health content
 

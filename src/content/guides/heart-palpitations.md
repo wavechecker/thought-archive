@@ -124,5 +124,6 @@ A: If they come with chest pain, fainting, severe shortness of breath, or last m
 - [Chest Pain: When to Call 911 vs Wait for a Doctor](/guides/chest-pain)  
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)  
 - [Atrial Fibrillation](/guides/atrial-fibrillation)  
+- [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview) — thyroid dysfunction, particularly hyperthyroidism, is a common medical cause of palpitations  
 
 
