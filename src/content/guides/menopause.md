@@ -291,6 +291,7 @@ Moderately. Avoiding known triggers (alcohol, hot drinks, spicy food), dressing 
 ## Related Guides
 
 - [Women's Health Hub](/guides/womens-health-hub)
+- [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids) — fibroids typically shrink after menopause; any postmenopausal bleeding requires assessment regardless of fibroid history
 - [Perimenopause: What to Expect](/guides/perimenopause-what-to-expect)
 - [Menopause and Sleep: Why Rest Becomes Harder and What Helps](/guides/menopause-and-sleep)
 - [Hormone Therapy for Menopause: Benefits, Risks, and Who It Suits](/guides/hormone-therapy-menopause)

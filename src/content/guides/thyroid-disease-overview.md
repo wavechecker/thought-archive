@@ -366,6 +366,7 @@ If you are uncertain whether your symptoms need urgent attention, seek medical r
 - [Anxiety Disorders](/guides/anxiety) — anxiety-like symptoms can be driven by an overactive thyroid; testing helps distinguish the cause
 - [Depression: Symptoms, Causes, and Treatment](/guides/depression) — hypothyroidism can contribute to depression-like symptoms; thyroid testing is part of the workup for new-onset depression
 - [Heavy Periods: When to Seek Help](/guides/heavy-periods-when-to-seek-help) — heavy or irregular periods can be caused by hypothyroidism
+- [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids) — fibroids are another common cause of heavy periods and fatigue; thyroid dysfunction is part of the differential diagnosis
 - [Postpartum Depression: Symptoms, Risks, and Treatment](/guides/postpartum-depression) — postpartum thyroiditis can mimic postnatal depression; thyroid testing is part of the postpartum differential
 - [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes) — metabolic and hormonal health during pregnancy and the postpartum period
 - [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — thyroid dysfunction can affect blood pressure and cardiovascular risk

@@ -121,7 +121,10 @@ Irregular periods can indicate PCOS, [thyroid dysfunction](/guides/thyroid-disea
 Vasomotor symptoms affect around 75% of women during the menopausal transition, on average for 7 years. They can begin during perimenopause — sometimes years before periods stop. See [Menopause: Symptoms, Stages, and What to Expect](/guides/menopause) and [Perimenopause: What to Expect](/guides/perimenopause-what-to-expect).
 
 ### Heavy or Prolonged Periods
-Heavy menstrual bleeding is one of the most common gynaecological complaints and a leading cause of iron deficiency anaemia in women. See [Heavy Periods: When to Seek Help](/guides/heavy-periods-when-to-seek-help).
+Heavy menstrual bleeding is one of the most common gynaecological complaints and a leading cause of iron deficiency anaemia in women. Uterine fibroids are among the most frequent causes — see [Heavy Periods: When to Seek Help](/guides/heavy-periods-when-to-seek-help) and [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids).
+
+### Pelvic Pain and Pressure
+Pelvic pain and pressure have multiple causes — endometriosis, adenomyosis, fibroids, and PCOS among them. See [Endometriosis: Symptoms, Diagnosis, and Treatment Options](/guides/endometriosis) and [Uterine Fibroids: Heavy Periods, Pelvic Pressure, and Treatment Options](/guides/uterine-fibroids).
 
 ---
 
