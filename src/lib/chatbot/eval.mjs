@@ -407,6 +407,22 @@ const TEST_CASES = [
   { q: "someone is convulsing on the floor",
     expected: "urgent",
     note: "URGENT_PATTERNS /convuls/ still fires; bystander emergency framing" },
+
+  // --- Vascular / PAD / claudication ---
+  // PAD guide title has "Leg Pain" + "Circulation"; tags include claudication, PAD, leg pain.
+  // Claudication expansion boosts PAD above generic coincidence matches.
+  { q: "leg pain when walking",
+    expected: "grounded",
+    note: "PAD guide scores strongly; claudication expansion suppresses false-prefix 'leg'→'Legionnaires' match" },
+  { q: "calf pain when walking",
+    expected: "grounded",
+    note: "PAD FAQ covers calf claudication; expansion adds claudication + PAD terms" },
+  { q: "leg pain better with rest",
+    expected: "grounded",
+    note: "classic claudication pattern — expansion boosts PAD guide strongly" },
+  { q: "diabetes foot sore not healing",
+    expected: "grounded",
+    note: "PAD guide covers slow-healing wounds + diabetes risk; diabetic foot care content also scores" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -503,6 +519,11 @@ const LINK_QUALITY_CASES = [
     mustNotBeOnlyToken: "problems",
     note: "displayed links must not match on 'problems' alone",
   },
+  {
+    q: "leg pain when walking",
+    mustNotBeOnlyToken: "pain",
+    note: "Legionnaires and anxiety/abdominal-pain guides must not appear via generic 'pain' match alone",
+  },
 ];
 
 console.log(`Link Quality Checks`);
@@ -553,7 +574,7 @@ console.log(`Link quality: ${lqPass}/${LINK_QUALITY_CASES.length} passed, ${lqFa
 const M = {
   titleAndTag: { title: "Acid Reflux and Chest Discomfort", tags: ["acid reflux", "chest"], headings: [], score: 12 },
   tagOnly:     { title: "Nutrition During Cancer Treatment", tags: ["nutrition", "eating", "cancer"], headings: [], score: 8 },
-  highScore:   { title: "Blood Pressure Overview", tags: ["blood pressure"], headings: [], score: 16 },
+  highScore:   { title: "Blood Pressure Overview", tags: ["blood pressure"], headings: [], score: 20 },
   noMatch:     { title: "General Wellness Tips", tags: ["wellness"], headings: [], score: 4 },
   headingOnly: { title: "Sleep Overview", tags: ["sleep"], headings: ["chest pain during sleep"], score: 9 },
 };
@@ -622,7 +643,7 @@ console.log(SEP);
   const terms   = ["chest", "discomfort", "eating"];
   const results = [M.highScore]; // score=16, no matching terms
   const out     = filterDisplayLinks(results, terms);
-  uAssert("high-score bypass: score≥15 always passes", out.length, 1);
+  uAssert("high-score bypass: score≥20 always passes", out.length, 1);
 }
 
 // 5. Title-match ordering: item with title hit comes before item without.
