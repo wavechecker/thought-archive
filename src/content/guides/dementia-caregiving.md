@@ -204,7 +204,7 @@ See: [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention) · [F
 
 ## Medication Safety
 
-Medication errors are common in dementia caregiving and can have serious consequences.
+Medication errors are common in dementia caregiving and can have serious consequences. For a comprehensive overview of medication safety including polypharmacy, dose aids, and high-risk medicines, see [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety).
 
 ### Preventing Missed or Double Doses
 
@@ -430,6 +430,7 @@ Seek urgent help for sudden confusion, stroke-like symptoms, falls with injury, 
 - [TIA Warning Signs](/guides/tia-warning-signs)
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — managing the transition home after hospital admission; delirium, medicines, carer planning, and when to seek help
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — dose administration aids, blister packs, polypharmacy, and medicines that carry specific risks in dementia
 
 ---
 

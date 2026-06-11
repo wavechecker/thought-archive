@@ -219,6 +219,8 @@ Medication review is an important and often overlooked component of falls preven
 
 Never stop or reduce prescribed medicines without speaking with a clinician first.
 
+See: [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — for a detailed overview of which medicines raise fall risk and how to approach a medication review.
+
 ---
 
 ## Vision, Hearing, Feet, and Footwear
@@ -306,6 +308,7 @@ Useful steps include improving lighting, removing loose rugs, installing handrai
 - [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving) — home safety, fall risk, and daily routines for people with dementia
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — age-based health checks including bone density and vision
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — falls risk is elevated after any hospital admission; deconditioning, medication changes, and home hazards after discharge
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — medicines that raise fall risk, medication review, and polypharmacy
 
 ---
 

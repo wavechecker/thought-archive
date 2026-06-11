@@ -93,6 +93,7 @@ Many heart conditions require **long-term medication**. Understanding what your 
 - [Understanding Coronary Angiography](/guides/understanding-coronary-angiography)  
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)  
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — polypharmacy, blood thinners, interactions, and when to seek urgent help
 
 ---
 

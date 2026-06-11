@@ -167,7 +167,7 @@ Iodinated contrast dyes used in CT scans and some other procedures can also affe
 
 A pharmacist or clinician can review medicines for kidney-related safety considerations.
 
-See: [Managing Chronic Kidney Disease — Medication Safety](/guides/managing-chronic-kidney-disease)
+See: [Managing Chronic Kidney Disease — Medication Safety](/guides/managing-chronic-kidney-disease) | [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety)
 
 ---
 
@@ -332,6 +332,7 @@ Specialist referral depends on kidney function, urine results, blood pressure, r
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — frailty and CKD often coexist; a shared management approach improves outcomes
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting is particularly common in CKD and affects outcomes
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — kidney-relevant medicine changes, follow-up blood tests, and care planning after hospital admission
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — NSAIDs, contrast, sick day rules, and polypharmacy in kidney disease
 
 ---
 

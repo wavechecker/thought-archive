@@ -119,6 +119,7 @@ Preventive health care is especially valuable in later life — screening, vacci
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — age-based screening recommendations from 50s onward, including bone density, cardiovascular risk, and cancer checks
 - [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention) — practical fall risk reduction
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — clinical assessment and what can help
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — polypharmacy, falls risk from medicines, and medication review in older adults
 
 ---
 
@@ -161,6 +162,7 @@ Key areas include movement, strength, nutrition, sleep, social connection, medic
 - [Brain Health Hub](/guides/brain-health-hub)
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke as a cause of sudden functional decline in older adults; rehabilitation, falls risk, and secondary prevention
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — high-risk discharge transition; medicines, deconditioning, falls risk, carer support, and when to seek urgent help
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — polypharmacy, medicines and falls, and medication review
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
 

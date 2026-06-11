@@ -139,7 +139,7 @@ Additional medicines may be used to manage specific complications — for anaemi
 
 ## Medication Safety
 
-Kidney disease changes how many medicines behave in the body.
+Kidney disease changes how many medicines behave in the body. For a broader overview covering polypharmacy, discharge transitions, blood thinners, and supplements, see [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety).
 
 ### NSAIDs (Anti-inflammatory Medicines)
 
@@ -328,6 +328,7 @@ Planning begins when kidney function has declined significantly and progression 
 - [Palliative Care — Guide Hub](/guides/palliative-care) — supportive care in advanced kidney disease
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting in CKD, physical activity, and nutrition
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — medicine review, kidney function monitoring, and follow-up planning after a hospital admission
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — NSAIDs, contrast, sick day advice, polypharmacy, and medication review in CKD
 
 ---
 

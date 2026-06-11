@@ -227,6 +227,7 @@ Immediately for severe chest pain, chest pain with arm or jaw pain, sudden breat
 - [Cancer — Guide Hub](/guides/cancer) — Some cancers affect the heart; cardiac toxicity from cancer treatment is an important shared topic.
 - [Preventive Health — Guide Hub](/guides/preventive-health)
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — cardiac discharge planning; medicines, follow-up, warning signs, and cardiac rehabilitation referral
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — blood thinners, blood pressure medicines, polypharmacy, and medication review
 
 ---
 

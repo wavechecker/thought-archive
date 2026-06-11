@@ -114,6 +114,8 @@ Social isolation is independently associated with faster physical decline, depre
 
 Taking multiple medicines — particularly sedatives, strong pain medicines, antidepressants, and blood pressure medicines — can cause fatigue, dizziness, appetite suppression, and sedation that together mimic or worsen frailty. Medication review is an important part of frailty management.
 
+See: [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety)
+
 ### Hospitalisation
 
 Hospital admissions — even brief ones — can cause significant deconditioning in frail older adults, through bedrest, poor nutrition, disruption to routine, and exposure to infection. Early mobilisation and nutritional support during hospital stays are now recognised priorities in geriatric care.
@@ -282,6 +284,7 @@ A GP or primary care clinician, geriatrician, physiotherapist, dietitian, pharma
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke as a cause of sudden functional decline and frailty; rehabilitation, falls risk, and secondary prevention
 - [Heart and Circulation Hub](/guides/heart-circulation) — cardiovascular disease and frailty
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — hospital discharge as a high-risk transition; deconditioning, medicines, falls risk, and when home may not be safe
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — polypharmacy and frailty; medicines that increase falls risk; medication review
 
 ---
 
