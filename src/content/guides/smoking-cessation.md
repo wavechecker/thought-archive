@@ -121,4 +121,5 @@ Quitting smoking is challenging but achievable — and the health benefits start
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — Screening checks relevant to current and former smokers
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)
 - [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — Smoking is the single most powerful modifiable risk factor for PAD; cessation is the most important intervention
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — Smoking worsens vascular risk in diabetes and significantly increases the risk of foot complications, poor wound healing, and limb-threatening disease
 

@@ -96,3 +96,4 @@ A: Yes — treat athlete’s foot, moisturize skin, avoid trauma, and manage swe
 ## Related Guides
 - [Sepsis](/guides/sepsis)  
 - [Septic Shock](/guides/septic-shock)
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — diabetic foot wounds are a common entry point for cellulitis and deeper infection; diabetes is a key risk factor for severe or spreading cellulitis

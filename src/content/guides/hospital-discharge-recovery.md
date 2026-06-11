@@ -388,6 +388,7 @@ The following are neutral, reputable sources of information on hospital discharg
 - [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease)
 - [Heart Disease and Circulation](/guides/heart-circulation)
 - [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — recovery after vascular procedures; wound care, medicines, mobility, and warning signs after discharge
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — discharge after foot surgery or vascular procedures in diabetes; wound care, follow-up, medicines, and when to seek urgent help
 - [Heart Failure Overview](/guides/heart-failure-overview)
 - [COPD](/guides/copd)
 - [Sepsis](/guides/sepsis)

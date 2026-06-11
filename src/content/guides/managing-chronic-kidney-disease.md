@@ -329,6 +329,7 @@ Planning begins when kidney function has declined significantly and progression 
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting in CKD, physical activity, and nutrition
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — medicine review, kidney function monitoring, and follow-up planning after a hospital admission
 - [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD is common in people with CKD; shared vascular risk factors and the importance of foot care
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — for people with CKD and diabetes; foot risk, wound healing, and infection management across both conditions
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — NSAIDs, contrast, sick day advice, polypharmacy, and medication review in CKD
 
 ---
