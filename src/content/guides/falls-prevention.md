@@ -308,6 +308,7 @@ Useful steps include improving lighting, removing loose rugs, installing handrai
 - [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving) — home safety, fall risk, and daily routines for people with dementia
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — age-based health checks including bone density and vision
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — falls risk is elevated after any hospital admission; deconditioning, medication changes, and home hazards after discharge
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD-related leg pain and walking limitation contribute to reduced activity, deconditioning, and falls risk
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — medicines that raise fall risk, medication review, and polypharmacy
 - [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — carer strain related to falls risk management and home safety planning
 

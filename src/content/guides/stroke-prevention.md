@@ -4,7 +4,7 @@ slug: "stroke-prevention"
 description: "Up to 80% of strokes are preventable. This guide covers the modifiable risk factors, evidence-based lifestyle strategies, and medications that reduce stroke risk — and who should be assessed."
 category: "Neurology"
 publishDate: "2026-04-14"
-updatedDate: "2026-04-14"
+updatedDate: "2026-06-11"
 tags: ["stroke prevention", "stroke", "hypertension", "atrial fibrillation", "cardiovascular risk", "neurology"]
 draft: false
 faq:
@@ -195,6 +195,7 @@ A: Adults over 40 with hypertension, diabetes, AF, TIA history, or strong family
 - [Brain Health Hub](/guides/brain-health-hub)
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
 - [Heart & Circulation Hub](/guides/heart-circulation)
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD and stroke share atherosclerosis as their underlying cause; people with PAD face elevated stroke risk
 
 ---
 

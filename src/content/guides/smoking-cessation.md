@@ -4,7 +4,7 @@ slug: "smoking-cessation"
 description: "Quitting smoking is the single most effective step to improve health and prevent disease. Learn methods, supports, and benefits."
 category: "General Health"
 publishDate: "2025-09-17"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 tags: ["smoking cessation", "tobacco", "preventive health", "lung cancer", "addiction", "public health", "mental health"]
 draft: false
 faq:
@@ -120,4 +120,5 @@ Quitting smoking is challenging but achievable — and the health benefits start
 - [COPD: Chronic Obstructive Pulmonary Disease](/guides/copd) — Smoking is the leading cause of COPD; cessation is the most effective treatment
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — Screening checks relevant to current and former smokers
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — Smoking is the single most powerful modifiable risk factor for PAD; cessation is the most important intervention
 

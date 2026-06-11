@@ -387,6 +387,7 @@ The following are neutral, reputable sources of information on hospital discharg
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub)
 - [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease)
 - [Heart Disease and Circulation](/guides/heart-circulation)
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — recovery after vascular procedures; wound care, medicines, mobility, and warning signs after discharge
 - [Heart Failure Overview](/guides/heart-failure-overview)
 - [COPD](/guides/copd)
 - [Sepsis](/guides/sepsis)

@@ -283,6 +283,7 @@ A GP or primary care clinician, geriatrician, physiotherapist, dietitian, pharma
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — CKD and its interaction with frailty
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke as a cause of sudden functional decline and frailty; rehabilitation, falls risk, and secondary prevention
 - [Heart and Circulation Hub](/guides/heart-circulation) — cardiovascular disease and frailty
+- [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD-related walking limitation and reduced mobility contribute to deconditioning and frailty
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — hospital discharge as a high-risk transition; deconditioning, medicines, falls risk, and when home may not be safe
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — polypharmacy and frailty; medicines that increase falls risk; medication review
 - [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — carer strain in frailty caregiving; recognising burnout and accessing support
