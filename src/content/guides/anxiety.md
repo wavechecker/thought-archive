@@ -143,3 +143,4 @@ A: No. SSRIs and SNRIs may take 4–6 weeks to show full effect.
 - [Suicide Prevention and Support](/guides/suicide-prevention)  
 - [Global Mental Health](/guides/global-mental-health)  
 - [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — anxiety in carers; recognising burnout and accessing mental health support  
+- [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview) — an overactive thyroid can cause anxiety-like symptoms, palpitations, and restlessness; thyroid testing is a relevant part of the clinical workup when physical causes are suspected  

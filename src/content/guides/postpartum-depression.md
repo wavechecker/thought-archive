@@ -120,6 +120,14 @@ Having risk factors does not mean postpartum depression will occur — and many 
 
 ---
 
+## Medical Causes to Consider
+
+Postpartum thyroiditis — thyroid inflammation triggered by the immune system's rebound after delivery — affects around 5–10% of women in the year after birth. Its symptoms (fatigue, mood changes, anxiety, cognitive difficulty) can closely mimic postpartum depression or anxiety. A thyroid blood test is a straightforward part of the clinical assessment for persistent postpartum mood or energy symptoms.
+
+If your clinician is assessing postpartum mood or anxiety symptoms, it is reasonable to ask about thyroid testing alongside standard depression screening. See [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview) for more on postpartum thyroiditis.
+
+---
+
 ## Screening
 
 The **Edinburgh Postnatal Depression Scale (EPDS)** is a validated 10-item questionnaire widely used in Australia, the UK, and internationally to screen for postpartum depression. It is typically offered at the 6-week postnatal check and at subsequent maternal and child health visits. Being asked to complete it is routine — not a sign that something is obviously wrong.
@@ -224,3 +232,4 @@ A: Several antidepressants are considered compatible with breastfeeding. Decisio
 - [Anxiety Disorders](/guides/anxiety)
 - [Women's Health Hub](/guides/womens-health-hub)
 - [Mental Health — Guide Hub](/guides/mental-health)
+- [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview) — postpartum thyroiditis is a medical cause of fatigue, mood changes, and anxiety after birth that can mimic postnatal depression

@@ -254,6 +254,7 @@ A: No. CFS/ME is a specific diagnosed condition with distinct clinical criteria 
 - [Type 2 Diabetes](/guides/type-2-diabetes)
 - [Chronic Fatigue Syndrome](/guides/chronic-fatigue)
 - [Post-Viral Syndromes](/guides/post-viral-syndromes)
+- [Thyroid Disease: Symptoms, Tests, and Treatment](/guides/thyroid-disease-overview)
 
 ---
 
