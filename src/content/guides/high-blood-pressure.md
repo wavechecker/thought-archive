@@ -183,3 +183,4 @@ A: Causes may include medication resistance, underlying conditions, or persisten
 - [Heart & Circulation Overview](/guides/heart-circulation-overview)
 - [Stroke](/guides/stroke-symptoms-fast-response)
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — secondary prevention, blood pressure management, and rehabilitation after stroke
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — blood pressure medicines, falls risk from dizziness, and medication review

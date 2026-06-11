@@ -98,7 +98,7 @@ Palliative care teams are multidisciplinary — they bring together doctors, nur
 Expert assessment and management of physical symptoms including pain, breathlessness, nausea, fatigue, and confusion. Palliative care specialists are trained in complex symptom management and have access to a wide range of medications and techniques that may not be available in other settings.
 
 ### Medication Review
-Reviewing existing medications to simplify regimens, reduce side effects, stop medications that are no longer beneficial, and add or adjust medications for symptom control.
+Reviewing existing medications to simplify regimens, reduce side effects, stop medications that are no longer beneficial, and add or adjust medications for symptom control. For a broader patient-facing overview of medication safety in serious illness, see [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety).
 
 ### Emotional Support
 Addressing anxiety, depression, fear, grief, and existential distress. Palliative care teams acknowledge the psychological impact of serious illness on patients and families. Referral to psychologists or counsellors may be part of care.
@@ -326,6 +326,7 @@ Palliative care is a broad approach to symptom management and support across any
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
 - [Voluntary Assisted Dying — Guide Hub](/guides/voluntary-assisted-dying)
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — planning for safe discharge; carer support, medicines, follow-up, and when home may not be safe
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — medication review in serious illness; simplifying regimens, symptom medicines, and polypharmacy
 
 ---
 

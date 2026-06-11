@@ -134,7 +134,7 @@ Medicines are the most common source of problems after hospital discharge. A hos
 
 ### Pharmacist Review
 
-A pharmacist — in the hospital, at a community pharmacy, or through a home medicines review programme — can help you understand your full medicine list, identify duplicates or conflicts, check doses, and explain any changes. This is one of the most valuable things you can arrange after discharge.
+A pharmacist — in the hospital, at a community pharmacy, or through a home medicines review programme — can help you understand your full medicine list, identify duplicates or conflicts, check doses, and explain any changes. This is one of the most valuable things you can arrange after discharge. For a detailed guide to medicine safety at and after discharge, see [Medication Safety](/guides/medication-safety).
 
 ---
 
@@ -376,6 +376,7 @@ The following are neutral, reputable sources of information on hospital discharg
 
 ## Related Guides
 
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — a practical guide to medicine lists, side effects, interactions, and high-risk times including hospital discharge
 - [Falls Prevention](/guides/falls-prevention)
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview)
 - [Sarcopenia](/guides/sarcopenia)

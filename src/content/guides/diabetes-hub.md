@@ -250,6 +250,7 @@ Yes. With modern insulin therapy, continuous glucose monitoring, and good self-m
 - [Healthy Weight Loss Guide](/guides/healthy-weight-loss-guide) — weight reduction is a core strategy for Type 2 diabetes risk reduction and remission.
 - [Aging and Longevity Basics](/guides/aging-and-longevity-basics) — how metabolic health shapes healthspan and long-term disease risk.
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — sarcopenia and diabetes interact through insulin resistance and reduced physical capacity
+- [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — hypoglycaemia risk, sick day rules, kidney function and diabetes medicines, and polypharmacy
 
 ## Related Hubs
 - [Metabolic Health & Weight-Loss Medicines Hub](/guides/metabolic-health-hub)
