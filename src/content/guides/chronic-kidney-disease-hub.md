@@ -330,6 +330,7 @@ Specialist referral depends on kidney function, urine results, blood pressure, r
 - [Palliative Care — Guide Hub](/guides/palliative-care) — supportive care in advanced kidney disease
 - [Aging and Longevity Hub](/guides/aging-longevity-hub) — healthy aging, frailty, and falls prevention in the context of aging with chronic conditions
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — frailty and CKD often coexist; a shared management approach improves outcomes
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting is particularly common in CKD and affects outcomes
 
 ---
 

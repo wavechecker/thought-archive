@@ -73,7 +73,9 @@ Falls are usually the result of multiple risk factors combining, rather than a s
 
 ### Muscle Weakness and Deconditioning
 
-Loss of muscle strength — particularly in the legs — makes it harder to recover balance after a stumble. Reduced leg strength is one of the most important and modifiable risk factors for falls.
+Loss of muscle strength — particularly in the legs — makes it harder to recover balance after a stumble. Reduced leg strength is one of the most important and modifiable risk factors for falls. When this muscle loss is significant enough to affect strength and physical function, it is called sarcopenia — a condition more common in older adults, people with chronic disease, and those who have had prolonged periods of inactivity or hospitalisation.
+
+See: [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia)
 
 ### Balance Problems
 
@@ -293,6 +295,7 @@ Useful steps include improving lighting, removing loose rugs, installing handrai
 
 - [Aging and Longevity Hub](/guides/aging-longevity-hub) — overview of healthy aging content
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — the connection between frailty and falls
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle loss as a primary falls risk factor
 - [Fractures and Falls](/guides/fractures-and-falls) — fracture management and bone fragility
 - [After a Fracture](/guides/after-a-fracture) — recovery and secondary fracture prevention
 - [Bone Health Basics](/guides/bone-health-basics) — what bones need to stay strong

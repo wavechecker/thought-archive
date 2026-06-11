@@ -3,7 +3,7 @@ title: "Managing Chronic Kidney Disease"
 description: "A patient-friendly guide to managing chronic kidney disease, including monitoring, blood pressure, diabetes, medicines, diet, complications, and when specialist care may be needed."
 category: "General Health"
 publishDate: "2026-06-08"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 draft: false
 tags: ["chronic kidney disease", "kidney disease", "kidney management", "blood pressure", "diabetes", "kidney function", "CKD", "eGFR"]
 faq:
@@ -326,6 +326,7 @@ Planning begins when kidney function has declined significantly and progression 
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) — risk scoring and prevention
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — kidney function testing as preventive health
 - [Palliative Care — Guide Hub](/guides/palliative-care) — supportive care in advanced kidney disease
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting in CKD, physical activity, and nutrition
 
 ---
 

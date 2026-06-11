@@ -317,6 +317,7 @@ Palliative care is a broad approach to symptom management and support across any
 - [Chronic Kidney Disease: Stages, Symptoms, and Progression Explained](/guides/chronic-kidney-disease-stages-explained)
 - [Dementia Overview](/guides/dementia-overview)
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview)
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia)
 - [Aging and Longevity Hub](/guides/aging-longevity-hub)
 - [Depression](/guides/depression)
 - [Anxiety](/guides/anxiety)
