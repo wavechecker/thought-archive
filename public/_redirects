@@ -76,6 +76,12 @@
 /guides/erectile-dysfunction              /guides/erectile-dysfunction-causes-and-treatment   301!
 /guides/erectile-dysfunction/             /guides/erectile-dysfunction-causes-and-treatment   301!
 
+# Sunscreen stub deduplication — canonical is /guides/sunscreen
+/guides/sunscreen-basics                  /guides/sunscreen                 301!
+/guides/sunscreen-basics/                 /guides/sunscreen                 301!
+/guides/sunscreen-skin-protection         /guides/sunscreen                 301!
+/guides/sunscreen-skin-protection/        /guides/sunscreen                 301!
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Gone for good
 # ──────────────────────────────────────────────────────────────────────────────
