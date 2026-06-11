@@ -4,7 +4,7 @@ slug: "womens-health-hub"
 description: "Your central guide to women's health — covering hormones and menopause, perimenopause, PCOS, endometriosis, cervical and breast screening, bone health, fertility, and the symptoms women most commonly search for."
 category: "Guide Hubs"
 publishDate: "2026-06-01"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 draft: false
 tags:
   - women's health
@@ -136,7 +136,9 @@ Women's health does not exist in isolation. Several major health conditions disp
 - [Type 2 Diabetes — Overview and Management](/guides/type-2-diabetes) — Women with PCOS have 3–7× the diabetes risk; postmenopausal hormonal changes further increase metabolic risk
 - [Cardiovascular Risk Assessment — Understanding Your Numbers](/guides/cardiovascular-risk-assessment) — Women's cardiovascular risk, lower than men's before menopause, converges with men's risk after it; the transition is a key intervention window
 - [Osteoporosis: Symptoms, Risk, and Treatment](/guides/osteoporosis) — Women lose 10–20% of bone density around menopause; osteoporosis is predominantly a women's health issue
-- [Ageing and Longevity Basics](/guides/aging-and-longevity-basics) — Menopause is the single largest determinant of biological ageing trajectory in women
+- [Aging and Longevity Hub](/guides/aging-longevity-hub) — Menopause accelerates bone loss and cardiovascular risk; aging well is a core women's health concern
+- [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention) — Osteoporosis and frailty after menopause increase fall and fracture risk
+- [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — Frailty is more common in older women; early recognition and intervention help
 
 ---
 

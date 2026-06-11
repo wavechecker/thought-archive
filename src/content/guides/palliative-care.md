@@ -4,7 +4,7 @@ slug: "palliative-care"
 description: "A patient-friendly guide to palliative care, including symptom control, emotional support, advance care planning, family support, and how it differs from end-of-life care."
 category: "Cancer"
 publishDate: "2025-09-17"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 draft: false
 tags: ["palliative care", "supportive care", "cancer", "symptom control", "advance care planning"]
 faq:
@@ -316,6 +316,8 @@ Palliative care is a broad approach to symptom management and support across any
 - [COPD: Chronic Obstructive Pulmonary Disease](/guides/copd)
 - [Chronic Kidney Disease: Stages, Symptoms, and Progression Explained](/guides/chronic-kidney-disease-stages-explained)
 - [Dementia Overview](/guides/dementia-overview)
+- [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview)
+- [Aging and Longevity Hub](/guides/aging-longevity-hub)
 - [Depression](/guides/depression)
 - [Anxiety](/guides/anxiety)
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)

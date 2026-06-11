@@ -4,7 +4,7 @@ slug: "preventive-screening-hub"
 description: "Your central guide to preventive health screening — cancer checks, cardiovascular testing, metabolic health, and age-based schedules for staying ahead of disease."
 category: "Guide Hubs"
 publishDate: "2026-06-05"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 hubKey: "Preventive Screening"
 draft: false
 tags:
@@ -311,6 +311,7 @@ Men face underdiagnosis across many conditions — lower rates of healthcare eng
 
 ## Related Hubs
 
+- [Aging and Longevity Hub](/guides/aging-longevity-hub) — falls prevention, frailty, bone health, and healthy aging
 - [Preventive Health — Guide Hub](/guides/preventive-health) — vaccination, nutrition, exercise, and broader lifestyle-based prevention
 - [Testing and Screening — Guide Hub](/guides/testing-and-screening) — how to interpret test results, sensitivity and specificity, cardiovascular biomarkers
 - [Women's Health Hub](/guides/womens-health-hub) — cervical, breast, bone, and hormonal health
