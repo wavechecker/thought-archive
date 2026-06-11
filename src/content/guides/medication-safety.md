@@ -454,6 +454,7 @@ Seek urgent help for difficulty breathing, swelling of the face or throat, sever
 - [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — antiplatelet medicines, blood-thinning treatments, and vascular risk reduction in PAD
 - [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — blood pressure medicines, monitoring, and side effects
 - [Diabetes Hub](/guides/diabetes-hub) — diabetes medicines, hypoglycaemia, sick days, and CKD
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — antibiotics, blood thinners, and diabetes medicines in the context of foot infections and wound management
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — medication review in advanced illness; symptom medicines and simplifying regimens
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — medicines review as part of preventive health
 - [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — medication management as a source of carer stress; respite and support planning

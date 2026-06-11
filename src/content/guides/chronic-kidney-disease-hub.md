@@ -339,6 +339,7 @@ Specialist referral depends on kidney function, urine results, blood pressure, r
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle wasting is particularly common in CKD and affects outcomes
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — kidney-relevant medicine changes, follow-up blood tests, and care planning after hospital admission
 - [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD and CKD share risk factors and commonly coexist; combined management reduces cardiovascular and limb risk
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — CKD amplifies vascular and wound-healing risk in diabetes; foot care connects kidney disease, PAD, neuropathy, and wound management
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — NSAIDs, contrast, sick day rules, and polypharmacy in kidney disease
 
 ---

@@ -185,4 +185,5 @@ A: Causes may include medication resistance, underlying conditions, or persisten
 - [Stroke](/guides/stroke-symptoms-fast-response)
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — secondary prevention, blood pressure management, and rehabilitation after stroke
 - [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — hypertension is a major PAD risk factor; blood pressure control is part of PAD management
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — blood pressure management reduces vascular damage and foot complication risk in diabetes
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — blood pressure medicines, falls risk from dizziness, and medication review

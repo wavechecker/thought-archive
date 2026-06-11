@@ -3,7 +3,7 @@ title: "Diabetic Neuropathy and Nerve Damage: Symptoms, Prevention, and Manageme
 description: "Diabetic neuropathy is one of the most common complications of diabetes — affecting the feet, legs, and internal organs. This guide explains what it is, how to recognise it, and how to protect nerve health through glucose control and foot care."
 category: "Diabetes"
 publishDate: "2026-06-03"
-updatedDate: "2026-06-03"
+updatedDate: "2026-06-11"
 tags: ["diabetic neuropathy", "nerve damage", "diabetes complications", "peripheral neuropathy", "autonomic neuropathy", "foot care", "diabetes", "neurology"]
 draft: false
 faq:
@@ -151,6 +151,8 @@ A mirror can help inspect the soles. If vision is poor, ask a family member or c
 - Cut nails straight across, not into the corners. If nails are difficult to manage, a podiatrist can assist.
 - Avoid using sharp instruments, corn plasters, or chemical treatments on feet without podiatry guidance.
 
+For a comprehensive guide specifically focused on foot care — including daily checks, footwear, wounds, infection warning signs, and when to seek urgent help — see [Diabetic Foot Care](/guides/diabetic-foot-care).
+
 ### Clinical Foot Reviews
 
 People with diabetes should receive an annual foot examination as part of their diabetes review. This includes:
@@ -242,6 +244,7 @@ See your doctor or diabetes team if you develop numbness, tingling, burning pain
 ## Related Guides
 
 - [Diabetes Hub](/guides/diabetes-hub) — central navigation for all diabetes content: Type 1, Type 2, management, and complications.
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — standalone patient guide to foot checks, footwear, wounds, infection warning signs, podiatry, and urgent red flags; the practical companion to this neuropathy guide.
 - [Long-Term Complications of Type 1 Diabetes](/guides/type-1-diabetes-long-term-complications) — an overview of all major long-term complications including retinopathy, nephropathy, and cardiovascular risk.
 - [Understanding HbA1c](/guides/understanding-hba1c) — the primary tool for monitoring long-term blood glucose control and complication risk.
 - [Type 1 Diabetes](/guides/type-1-diabetes) — comprehensive guide to Type 1 diabetes management.

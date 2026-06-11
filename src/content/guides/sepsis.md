@@ -118,3 +118,4 @@ A: Many sepsis survivors experience lasting effects weeks to months after discha
 - [Urinary Tract Infections](/guides/urinary-tract-infection)  
 - [Septic Shock](/guides/septic-shock)  
 - [When to Seek Emergency Care — Warning Signs and Red Flags](/guides/when-to-seek-emergency-care)
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — infected diabetic foot wounds are a recognised pathway to sepsis; diabetes is a major sepsis risk factor

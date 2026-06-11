@@ -183,7 +183,7 @@ Foot care is an essential part of PAD management, particularly for people with d
 - Wear properly fitted shoes; avoid walking barefoot, especially if sensation is reduced
 - Keep skin moisturised, and trim nails carefully (or have them trimmed by a podiatrist)
 - Seek prompt review for any blister, cut, callus, wound, or area of redness — even small injuries can become serious when blood flow is reduced
-- People with diabetes who have PAD face a compound risk: neuropathy may mask injury, and impaired circulation makes healing difficult. See [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage)
+- People with diabetes who have PAD face a compound risk: neuropathy may mask injury, and impaired circulation makes healing difficult. See [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage) and [Diabetic Foot Care](/guides/diabetic-foot-care)
 
 ### Vascular Procedures
 
@@ -289,6 +289,7 @@ Seek emergency care for sudden severe leg pain, a cold pale or blue foot, new in
 - [Diabetes Hub](/guides/diabetes-hub) — diabetes significantly raises PAD risk and increases the severity of foot complications
 - [Type 2 Diabetes](/guides/type-2-diabetes) — T2D and PAD commonly coexist; combined management is essential
 - [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage) — neuropathy and PAD together create compound foot risk
+- [Diabetic Foot Care: Nerve Damage, Circulation, and Wound Warning Signs](/guides/diabetic-foot-care) — practical patient guide to foot checks, footwear, wounds, infection warning signs, podiatry, and urgent red flags in diabetes
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — CKD and PAD share risk factors and commonly coexist; both raise cardiovascular risk
 - [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — cardiovascular risk reduction applies across CKD and PAD
 - [Aspirin vs Clopidogrel — Which Is Better for Heart Disease?](/guides/aspirin-vs-clopidogrel) — antiplatelet therapy used in PAD management
