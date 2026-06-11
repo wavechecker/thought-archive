@@ -83,7 +83,7 @@ Breathlessness, fatigue, and recurrent exacerbations in advanced lung disease si
 Advanced kidney disease causes fatigue, fluid retention, nausea, and difficult treatment decisions including dialysis choices. Palliative care input can be valuable whether or not dialysis is pursued. See: [Chronic Kidney Disease: Stages, Symptoms, and Progression Explained](/guides/chronic-kidney-disease-stages-explained)
 
 **Dementia and Neurological Disease**
-Dementia, motor neurone disease, Parkinson's disease, and other neurological conditions create complex symptom and care needs over years. Palliative care helps at multiple stages — not only when death is near. See: [Dementia Overview](/guides/dementia-overview)
+Dementia, motor neurone disease, Parkinson's disease, and other neurological conditions create complex symptom and care needs over years. Palliative and supportive care can help with symptom burden, family support, goals of care, and advance care planning at multiple stages — not only when death is near. See: [Dementia Overview](/guides/dementia-overview) · [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving)
 
 **Frailty and Multiple Serious Illnesses**
 Older adults with multiple chronic conditions and functional decline often have complex symptom burdens and care goals that palliative care teams are well placed to support.
@@ -316,6 +316,7 @@ Palliative care is a broad approach to symptom management and support across any
 - [COPD: Chronic Obstructive Pulmonary Disease](/guides/copd)
 - [Chronic Kidney Disease: Stages, Symptoms, and Progression Explained](/guides/chronic-kidney-disease-stages-explained)
 - [Dementia Overview](/guides/dementia-overview)
+- [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving)
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview)
 - [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia)
 - [Aging and Longevity Hub](/guides/aging-longevity-hub)

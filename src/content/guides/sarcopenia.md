@@ -327,6 +327,7 @@ People with repeated falls, frailty, unexplained weakness, weight loss, slow wal
 - [Metabolic Health Hub](/guides/metabolic-health-hub) — insulin resistance, metabolic health, and muscle
 - [Heart & Circulation Hub](/guides/heart-circulation) — cardiac rehabilitation addresses deconditioning and muscle function
 - [Brain Health Hub](/guides/brain-health-hub) — cognitive decline and physical decline are bidirectionally linked
+- [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving) — falls risk, frailty, and safety planning for people with dementia
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care) — advanced illness, muscle wasting, and goals of care
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — age-based health checks and falls risk assessment
 

@@ -303,6 +303,7 @@ Useful steps include improving lighting, removing loose rugs, installing handrai
 - [Dizziness — When to Worry](/guides/dizziness-when-to-worry) — causes of dizziness relevant to fall risk
 - [Syncope and Fainting](/guides/syncope-fainting-overview) — causes and management of fainting
 - [Dementia Overview](/guides/dementia-overview) — cognitive impairment and fall risk
+- [Dementia Caregiving: Safety, Support, and Planning](/guides/dementia-caregiving) — home safety, fall risk, and daily routines for people with dementia
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — age-based health checks including bone density and vision
 
 ---
