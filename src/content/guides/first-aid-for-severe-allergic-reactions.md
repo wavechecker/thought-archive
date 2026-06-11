@@ -114,4 +114,4 @@ Yes. Poorly controlled asthma increases risk for severe reactions; ensure asthma
 ## Related Guides
 - [Fever — When Is It Dangerous (Adults & Children)?](/guides/fever-danger-adults-children)
 - [Angina — Symptoms & Management](/guides/angina-symptoms-management)
-- [Coronary Angiography — What to Expect](/guides/coronary-angiography)
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography)

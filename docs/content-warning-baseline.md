@@ -16,6 +16,8 @@ Do not add generic FAQ filler purely to reach zero warnings. If a remaining file
 
 > **Note (2026-06-11):** `infectious-disease-hub.mdx` was removed in the `chore/infectious-disease-hub-merge` sprint. Useful FAQ content and guide sections (Key Points, Start Here, Vector/Animal/Rodent-Borne, Long COVID, Post-Viral Syndromes) were ported into the canonical hub `infectious-diseases.mdx`. A 301 redirect from `/guides/infectious-disease-hub` to `/guides/infectious-diseases` was already in place. Warning count remains 13.
 
+> **Note (2026-06-11):** `coronary-angiography.md` was removed in the `chore/consolidate-coronary-angiography` sprint. It was a near-duplicate of `understanding-coronary-angiography.md`. Unique content (Background section, Why It's Done indications, CT angiography alternative FAQ, Further Reading links, urgent-help section) was merged into the canonical guide. A 301 redirect from `/guides/coronary-angiography` to `/guides/understanding-coronary-angiography` was added. Both files had `faq:` frontmatter, so warning count remains 13. Internal links in 5 content files were updated to point to the canonical route.
+
 ---
 
 ## Classified file list

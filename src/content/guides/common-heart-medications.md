@@ -13,7 +13,7 @@ tags:
   - heart
   - patientguide
 related:
-  - /guides/coronary-angiography
+  - /guides/understanding-coronary-angiography
   - /guides/cardiac-rehabilitation
   - /guides/atrial-fibrillation
 draft: false
@@ -90,7 +90,7 @@ Many heart conditions require **long-term medication**. Understanding what your 
 ---
 
 ## Related Guides
-- [Understanding Coronary Angiography](/guides/coronary-angiography)  
+- [Understanding Coronary Angiography](/guides/understanding-coronary-angiography)  
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)  
 
