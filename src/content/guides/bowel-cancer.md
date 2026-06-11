@@ -4,7 +4,7 @@ slug: "bowel-cancer"
 description: "Guides on risks, screening, treatment, living well, and family risk for bowel cancer."
 category: "Guide Hubs"
 publishDate: "2025-08-20"
-updatedDate: "2026-02-24"
+updatedDate: "2026-06-11"
 hubKey: "Bowel Cancer"
 draft: false
 tags: ["cancer", "bowel cancer", "patientguide", "hub"]
@@ -93,6 +93,7 @@ See also: [Emergencies — Guide Hub](/guides/emergencies) | [Severe Bleeding �
 ### Screening and Early Detection
 - [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening) — Who needs screening, FIT test vs colonoscopy, and how to prepare.
 - [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained) — Plain-language guide to what happens at each stage of the screening process.
+- [Colorectal Polyps: What They Mean and When Follow-Up Is Needed](/guides/colorectal-polyps-surveillance) — What polyps are found at colonoscopy, how pathology guides surveillance, and when to seek urgent help after polypectomy.
 
 ### Living Well During Treatment
 - [Living With Bowel Cancer](/guides/living-with-bowel-cancer) — Coping with side effects, maintaining activity, emotional health, and practical support.

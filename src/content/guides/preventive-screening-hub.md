@@ -5,6 +5,7 @@ description: "Your central guide to preventive health screening — cancer check
 category: "Guide Hubs"
 publishDate: "2026-06-05"
 updatedDate: "2026-06-11"
+
 hubKey: "Preventive Screening"
 draft: false
 tags:
@@ -131,8 +132,9 @@ Bowel cancer is one of the most common cancers in high-income countries and one 
 
 - [Bowel Cancer Screening Explained](/guides/bowel-cancer-screening-explained) — who should be screened, how FIT and colonoscopy work, intervals, and positive result pathways
 - [Bowel Cancer Screening — Early Detection Matters](/guides/bowel-cancer-screening) — overview of the programme and what to expect
+- [Colorectal Polyps: What They Mean and When Follow-Up Is Needed](/guides/colorectal-polyps-surveillance) — polyp types, pathology results, colonoscopy removal, surveillance intervals, and post-procedure warning signs
 
-**Who should screen:** Most guidelines recommend starting at age 45–50 for average-risk adults, with the FIT test (home stool test) every 1–2 years. Earlier screening applies if you have a family history, Lynch syndrome, or long-standing inflammatory bowel disease.
+**Who should screen:** Most guidelines recommend starting at age 45–50 for average-risk adults, with the FIT test (home stool test) every 1–2 years. Earlier screening applies if you have a family history, Lynch syndrome, or long-standing inflammatory bowel disease. A positive FIT test or previous polyps found at colonoscopy triggers personalised surveillance planning.
 
 ---
 
