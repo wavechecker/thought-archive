@@ -315,7 +315,7 @@ Stroke may fundamentally change the roles within a household or relationship. A 
 
 ### Caregiver Burnout
 
-Caregiver burnout is real and common. Signs include persistent exhaustion, emotional withdrawal, feeling overwhelmed, resentment, depression, and neglect of personal health. Burnout is not a personal failing — it is a predictable consequence of sustained high-level caregiving without adequate support.
+Caregiver burnout is real and common. Signs include persistent exhaustion, emotional withdrawal, feeling overwhelmed, resentment, depression, and neglect of personal health. Burnout is not a personal failing — it is a predictable consequence of sustained high-level caregiving without adequate support. See: [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout)
 
 Carers should be encouraged to:
 - Accept help from others

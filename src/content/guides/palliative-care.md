@@ -212,7 +212,7 @@ Family support may include:
 - Financial and legal information (social workers can assist with benefits and entitlements)
 - Communication support — helping family members talk to each other and to the care team
 
-Carers of people with serious illness have high rates of [depression](/guides/depression), [anxiety](/guides/anxiety), physical exhaustion, and social isolation. Their wellbeing matters both for their own sake and for the sustainability of care at home.
+Carers of people with serious illness have high rates of [depression](/guides/depression), [anxiety](/guides/anxiety), physical exhaustion, and social isolation. Their wellbeing matters both for their own sake and for the sustainability of care at home. For a dedicated guide to recognising and managing carer strain, see [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout).
 
 Bereavement support — before and after the death of a loved one — is often offered by palliative care teams and connected hospice services.
 
@@ -327,6 +327,7 @@ Palliative care is a broad approach to symptom management and support across any
 - [Voluntary Assisted Dying — Guide Hub](/guides/voluntary-assisted-dying)
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — planning for safe discharge; carer support, medicines, follow-up, and when home may not be safe
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — medication review in serious illness; simplifying regimens, symptom medicines, and polypharmacy
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — carer strain in palliative caregiving; emotional support, respite, and urgent red flags
 
 ---
 

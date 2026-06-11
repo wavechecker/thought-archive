@@ -313,7 +313,7 @@ If any of these apply, speak with a GP as soon as possible — not when things b
 
 **Crisis planning** — knowing what to do if you are suddenly unable to care (due to illness, injury, or emotional breakdown) protects the person with dementia and reduces the carer's anxiety. Discuss an emergency care plan with the care team before it is needed.
 
-See: [Depression](/guides/depression) · [Anxiety](/guides/anxiety)
+See: [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) · [Depression](/guides/depression) · [Anxiety](/guides/anxiety)
 
 ---
 
@@ -431,6 +431,7 @@ Seek urgent help for sudden confusion, stroke-like symptoms, falls with injury, 
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — managing the transition home after hospital admission; delirium, medicines, carer planning, and when to seek help
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — dose administration aids, blister packs, polypharmacy, and medicines that carry specific risks in dementia
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — recognising and managing burnout in dementia caregiving; respite, support planning, and when to seek help
 
 ---
 

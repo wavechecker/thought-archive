@@ -165,6 +165,7 @@ Key areas include movement, strength, nutrition, sleep, social connection, medic
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — polypharmacy, medicines and falls, and medication review
 - [Preventive Screening Hub](/guides/preventive-screening-hub)
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — recognising and managing burnout in carers of older adults; respite, support planning, and urgent red flags
 
 ---
 

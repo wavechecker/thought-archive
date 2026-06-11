@@ -298,7 +298,7 @@ Hospital discharge does not just affect the patient — it places real demands o
 
 ### Carer Wellbeing and Respite
 
-Caring is demanding. Carer strain — burnout, exhaustion, anxiety, and social isolation — is a genuine health risk. Carers should be honest with themselves and with health providers about what they can manage. Respite services, community support programmes, and carer support organisations exist for this reason.
+Caring is demanding. Carer strain — burnout, exhaustion, anxiety, and social isolation — is a genuine health risk. Carers should be honest with themselves and with health providers about what they can manage. Respite services, community support programmes, and carer support organisations exist for this reason. For more on recognising and managing carer strain, see [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout).
 
 ---
 
@@ -382,6 +382,7 @@ The following are neutral, reputable sources of information on hospital discharg
 - [Sarcopenia](/guides/sarcopenia)
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation)
 - [Dementia Caregiving](/guides/dementia-caregiving)
+- [Caregiver Burnout: Signs, Support, and When to Ask for Help](/guides/caregiver-burnout) — carer strain after hospital discharge; respite, support planning, and when a care situation may be unsafe
 - [Palliative Care: Support, Symptoms, and Planning](/guides/palliative-care)
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub)
 - [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease)
