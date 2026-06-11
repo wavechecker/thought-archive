@@ -281,6 +281,7 @@ A GP or primary care clinician, geriatrician, physiotherapist, dietitian, pharma
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — CKD and its interaction with frailty
 - [Stroke Recovery and Rehabilitation](/guides/stroke-recovery-rehabilitation) — stroke as a cause of sudden functional decline and frailty; rehabilitation, falls risk, and secondary prevention
 - [Heart and Circulation Hub](/guides/heart-circulation) — cardiovascular disease and frailty
+- [Hospital Discharge and Recovery](/guides/hospital-discharge-recovery) — hospital discharge as a high-risk transition; deconditioning, medicines, falls risk, and when home may not be safe
 
 ---
 
