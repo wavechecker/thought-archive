@@ -4,7 +4,7 @@ slug: "mens-health-hub"
 description: "Your central guide to men's health — covering testosterone, erectile dysfunction, prostate health, testicular cancer, men's mental health, cardiovascular disease, sleep apnoea, metabolic health, and the key screenings every man should know about."
 category: "Guide Hubs"
 publishDate: "2026-06-02"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 draft: false
 tags:
   - men's health
@@ -147,6 +147,7 @@ Insulin resistance underlies type 2 diabetes, obesity, and metabolic syndrome �
 - [Sleep Health Hub](/guides/sleep-health-hub) — Sleep apnoea, shift work, and chronic sleep deprivation disproportionately affect men and compound cardiovascular and metabolic risk
 - [Obesity and Metabolic Health Hub](/guides/obesity-metabolic-health-hub) — Visceral obesity is central to many men's health problems; evidence-based weight management changes outcomes
 - [Brain Health Hub](/guides/brain-health-hub) — Cognitive health, dementia prevention, and mental performance
+- [Aging and Longevity Hub](/guides/aging-longevity-hub) — Falls prevention, frailty, bone health, and healthy aging — relevant to men from midlife onward
 - [Alcohol and Health](/guides/alcohol-and-health) — Men drink more than women on average; alcohol contributes to liver disease, cancer, injury, and mental health disorders
 - [Smoking Cessation](/guides/smoking-cessation) — Smoking is a major cause of erectile dysfunction, cardiovascular disease, and lung cancer in men; the benefits of quitting are rapid
 

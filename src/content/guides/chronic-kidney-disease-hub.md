@@ -3,7 +3,7 @@ title: "Chronic Kidney Disease — Guide Hub"
 description: "A guide hub for chronic kidney disease, including causes, stages, tests, treatment, monitoring, complications, dialysis, transplant, and related conditions."
 category: "Guide Hubs"
 publishDate: "2026-06-08"
-updatedDate: "2026-06-08"
+updatedDate: "2026-06-11"
 draft: false
 tags: ["chronic kidney disease", "kidney disease", "kidney function", "CKD", "diabetes", "blood pressure", "dialysis", "kidney transplant", "hub"]
 faq:
@@ -328,6 +328,8 @@ Specialist referral depends on kidney function, urine results, blood pressure, r
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) — risk tools and prevention in people with CKD
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — kidney function testing in preventive health
 - [Palliative Care — Guide Hub](/guides/palliative-care) — supportive care in advanced kidney disease
+- [Aging and Longevity Hub](/guides/aging-longevity-hub) — healthy aging, frailty, and falls prevention in the context of aging with chronic conditions
+- [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — frailty and CKD often coexist; a shared management approach improves outcomes
 
 ---
 

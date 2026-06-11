@@ -12,8 +12,8 @@ export const HUBS: FeaturedHub[] = [
   },
   {
     title: "Aging & Longevity",
-    href: "/guides/aging-longevity",
-    description: "Aging biology, lifespan heritability, and longevity debates."
+    href: "/guides/aging-longevity-hub",
+    description: "Healthy aging, falls prevention, frailty, bone health, and longevity."
   },
   {
     title: "Infectious Diseases",
