@@ -162,6 +162,19 @@ function preprocessQuery(text) {
     .replace(/\bcva\b/gi, "stroke cerebrovascular accident")
     .replace(/\bcabg\b/gi, "coronary artery bypass grafting surgery")
     .replace(/\bpci\b/gi, "percutaneous coronary intervention angioplasty stent")
+    // Vascular / claudication — intermittent leg pain on walking
+    // Maps plain-English descriptions of claudication to the clinical terms
+    // used in the PAD guide (claudication, PAD, peripheral artery disease).
+    // Order: more-specific multi-word phrases before bare "claudication".
+    .replace(/\bleg\s+pain\s+(?:when|while|during|after|on|with)\s+(?:walking|exercise|exertion|activity)\b/gi,
+      "leg pain walking claudication peripheral artery disease PAD circulation")
+    .replace(/\bcalf\s+pain\s+(?:when|while|during|after|on|with)\s+(?:walking|exercise|exertion|activity)\b/gi,
+      "calf pain walking claudication peripheral artery disease PAD circulation")
+    .replace(/\bpain\s+in\s+(?:my\s+)?(?:calf|calves?|leg|legs)\s+(?:when|while|during|after|with)\s+(?:walking|exercise|exertion|activity)\b/gi,
+      "leg pain walking claudication peripheral artery disease PAD circulation")
+    .replace(/\bleg\s+pain\s+(?:better|goes?\s+away|improves?|relieves?|eases?)\s+(?:with|after|when|at)\s+rest\b/gi,
+      "claudication peripheral artery disease PAD leg pain rest")
+    .replace(/\bclaudication\b/gi, "claudication peripheral artery disease PAD leg pain walking")
     // Blood pressure / hypertension
     .replace(/\bhtn\b/gi, "hypertension high blood pressure")
     .replace(/\b(?<![a-z])bp(?![a-z])\b/gi, "blood pressure")
@@ -218,10 +231,13 @@ const _regexCache = new Map();
 function termRegex(term) {
   if (!_regexCache.has(term)) {
     const esc = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    // Negative lookbehind: the term must not be immediately preceded by [a-z0-9].
-    // No positive lookahead, so plurals and inflected forms still match
-    // (e.g. query term "antidepressant" hits document token "antidepressants").
-    _regexCache.set(term, new RegExp(`(?<![a-z0-9])${esc}`, "i"));
+    // Lookbehind: term must not be immediately preceded by [a-z0-9].
+    // Lookahead (?![a-z]{5,}): allows up to 4 trailing letters so common medical
+    // inflections still match ("treat"→"treatment" +4, "rest"→"resting" +3,
+    // "antidepressant"→"antidepressants" +1) but blocks false prefix matches where
+    // the term is a short stem of an unrelated word ("leg" must not hit
+    // "Legionnaires" +9 chars or "legionella" +7 chars).
+    _regexCache.set(term, new RegExp(`(?<![a-z0-9])${esc}(?![a-z]{5,})`, "i"));
   }
   return _regexCache.get(term);
 }
@@ -270,7 +286,12 @@ export function scoreItem(item, queryTerms) {
 //
 // A result is shown as a link only when:
 //   - 2+ distinct query terms appear in title / tags / headings (high-signal fields), OR
-//   - the item's raw score is very high (≥ 15), indicating a strong overall match
+//   - the item's raw score is very high (≥ 20), indicating a strong multi-term match
+//
+// The ≥ 20 threshold is intentionally above the maximum score a single query term
+// can accumulate across all fields (title 6 + desc 3 + tags 3 + headings 2 + FAQ 2
+// + excerpt 1 = 17), so only items where at least two query terms contributed can
+// bypass the high-signal-hit check.
 //
 // Single-term queries bypass the filter entirely — nothing to cross-check against.
 // ---------------------------------------------------------------------------
@@ -285,7 +306,7 @@ export function filterDisplayLinks(results, queryTerms) {
   const required = queryTerms.length >= 3 ? 2 : 1;
 
   const filtered = results.filter((item) => {
-    if (item.score >= 15) return true; // already strongly grounded
+    if (item.score >= 20) return true; // strong multi-term match
     const title    = item.title.toLowerCase();
     const tags     = (item.tags     || []).map((t) => t.toLowerCase());
     const headings = (item.headings || []).map((h) => h.toLowerCase());
