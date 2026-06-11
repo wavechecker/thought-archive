@@ -47,6 +47,7 @@ Aging well is not only about adding years to life — it is about adding life to
 - [The Hallmarks of Aging Explained](/guides/hallmarks-of-aging) — the core biology of aging and how it shapes disease and decline
 - [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention) — practical strategies for reducing fall risk at any age
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — understanding frailty, its causes, and what can help
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — what sarcopenia is, how it is assessed, and what can help
 
 ---
 
@@ -56,6 +57,7 @@ Maintaining physical capacity is one of the most important things older adults c
 
 - [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention) — causes, home safety, exercise, medication review, and when to seek help
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview) — signs, contributors, and what can help
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle loss, assessment, strength training, and falls risk
 - [Fractures and Falls](/guides/fractures-and-falls) — fracture risk, bone fragility, and management
 - [After a Fracture](/guides/after-a-fracture) — recovery, rehabilitation, and preventing future fractures
 - [Exercise and Physical Activity](/guides/exercise) — evidence on activity for health at all ages
@@ -151,6 +153,7 @@ Key areas include movement, strength, nutrition, sleep, social connection, medic
 
 - [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention)
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview)
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia)
 - [Healthspan vs Lifespan: What's the Difference?](/guides/healthspan-vs-lifespan)
 - [The Hallmarks of Aging Explained](/guides/hallmarks-of-aging)
 - [Brain Health Hub](/guides/brain-health-hub)

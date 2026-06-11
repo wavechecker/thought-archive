@@ -222,6 +222,7 @@ Immediately for severe chest pain, chest pain with arm or jaw pain, sudden breat
 - [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)
 - [Emergencies — Guide Hub](/guides/emergencies)
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — kidney disease raises cardiovascular risk; the cardiorenal relationship, blood pressure, and management
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle deconditioning in heart failure and cardiac rehabilitation
 - [Cancer — Guide Hub](/guides/cancer) — Some cancers affect the heart; cardiac toxicity from cancer treatment is an important shared topic.
 - [Preventive Health — Guide Hub](/guides/preventive-health)
 

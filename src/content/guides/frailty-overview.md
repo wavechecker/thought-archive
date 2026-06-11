@@ -84,9 +84,11 @@ Not all signs need to be present. The picture is cumulative — the more of thes
 
 ## Causes and Contributors
 
-### Muscle Loss
+### Muscle Loss and Sarcopenia
 
-Loss of muscle mass and strength — which accelerates with inactivity, illness, and nutritional deficiency — is one of the most important biological contributors to frailty. It is largely preventable and partially reversible with exercise and adequate protein intake.
+Loss of muscle mass and strength — which accelerates with inactivity, illness, and nutritional deficiency — is one of the most important biological contributors to frailty. It is largely preventable and partially reversible with exercise and adequate protein intake. When muscle loss reaches the level of significantly impaired strength and physical performance, it is called sarcopenia. Sarcopenia and frailty overlap substantially, but they are not identical: sarcopenia is specifically about muscle, while frailty reflects a broader loss of physiological reserve. Both require attention and can often be addressed with similar strategies.
+
+See: [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia)
 
 ### Poor Nutrition and Low Appetite
 
@@ -269,6 +271,7 @@ A GP or primary care clinician, geriatrician, physiotherapist, dietitian, pharma
 
 - [Aging and Longevity Hub](/guides/aging-longevity-hub) — overview of healthy aging content
 - [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention) — the overlap between frailty and falls risk
+- [Sarcopenia: Muscle Loss, Strength, and Healthy Aging](/guides/sarcopenia) — muscle loss as a major contributor to frailty
 - [Bone Health Basics](/guides/bone-health-basics) — bone health in the context of frailty
 - [Dementia Overview](/guides/dementia-overview) — cognitive impairment and frailty
 - [Depression](/guides/depression) — depression as a contributor to frailty
