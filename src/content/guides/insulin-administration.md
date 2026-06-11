@@ -94,6 +94,7 @@ Insulin delivery is about two things: **the insulin you use** and **how you deli
 - [Continuous Glucose Monitors (CGMs) vs Finger‑Prick Testing](/guides/cgm-vs-finger-prick)
 - [Emergency Actions — Hypos, Highs, and Ketones](/guides/diabetes-emergency-actions)
 - [Understanding HbA1c and Why It Matters](/guides/understanding-hba1c)
+- [Gestational Diabetes: Screening, Treatment, and Follow-Up](/guides/gestational-diabetes) — insulin is commonly used in gestational diabetes that cannot be managed with food and activity changes alone
 
 
 ## References (plain text)
