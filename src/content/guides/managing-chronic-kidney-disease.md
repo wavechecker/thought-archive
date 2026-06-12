@@ -1,7 +1,7 @@
 ---
 title: "Managing Chronic Kidney Disease"
 description: "A patient-friendly guide to managing chronic kidney disease, including monitoring, blood pressure, diabetes, medicines, diet, complications, and when specialist care may be needed."
-category: "General Health"
+category: "Kidney Health"
 publishDate: "2026-06-08"
 updatedDate: "2026-06-11"
 draft: false

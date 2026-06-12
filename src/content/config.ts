@@ -19,6 +19,7 @@ const CATEGORY = z.enum([
   "Heart & Circulation",
   "Women's Health",
   "Diabetes",
+  "Kidney Health",
   "Cancer",
   "Neurology",
   "Mental Health",

@@ -1,7 +1,7 @@
 ---
 title: "What Is Chronic Kidney Disease?"
 description: "A clear guide to chronic kidney disease — what it is, why it often goes unnoticed, how it is measured, and when to seek medical advice."
-category: "General Health"
+category: "Kidney Health"
 publishDate: "2026-05-31"
 updatedDate: "2026-06-08"
 tags: ["chronic kidney disease", "CKD", "kidney function", "eGFR", "albuminuria", "kidney damage", "renal disease"]
