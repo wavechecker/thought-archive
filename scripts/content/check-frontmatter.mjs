@@ -33,6 +33,7 @@ const GUIDE_CATEGORIES = new Set([
   "Heart & Circulation",
   "Women's Health",
   "Diabetes",
+  "Kidney Health",
   "Cancer",
   "Neurology",
   "Mental Health",

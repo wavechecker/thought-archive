@@ -7,7 +7,6 @@ import {
   CATEGORY_ORDER,
   CATEGORY_DESCRIPTIONS,
 } from "@/lib/slug.ts";
-import { HERO_PAGES } from "@/lib/hero-pages.ts";
 
 // Redirect legacy links like /guides/?category=Emergencies → /guides/category/emergencies
 const q = Astro.url.searchParams.get("category");
@@ -18,19 +17,86 @@ if (q) {
 // Load all published guides
 const guides = await getCollection("guides", ({ data }) => data?.draft !== true);
 
-// ---- Featured row: sourced from hero-pages.ts ----
-const childHealthConfig = HERO_PAGES["child-and-adolescent-health"];
-const featuredEntries = childHealthConfig.featuredClusters.map((f) => ({
-  title: f.title,
-  blurb: f.description,
-  href: f.href,
-}));
+// Priority topic cards shown in the featured section
+const PRIORITY_TOPICS = [
+  {
+    title: "Emergencies",
+    description: "First aid, CPR, choking, bleeding, and when to call for help.",
+    href: "/guides/category/emergencies",
+    links: [
+      { title: "CPR Guide", href: "/guides/cpr" },
+      { title: "Choking Response", href: "/guides/choking" },
+      { title: "Severe Allergic Reactions", href: "/guides/first-aid-for-severe-allergic-reactions" },
+      { title: "Severe Bleeding", href: "/guides/severe-bleeding" },
+    ],
+    browseHref: "/guides/category/emergencies",
+  },
+  {
+    title: "Heart & Circulation",
+    description: "Heart attacks, stroke, blood pressure, atrial fibrillation, and cardiac risk.",
+    href: "/guides/heart-circulation",
+    links: [
+      { title: "Heart Attack Response", href: "/guides/heart-attack-treatment" },
+      { title: "Stroke Recognition", href: "/guides/stroke" },
+      { title: "Blood Pressure at Home", href: "/guides/blood-pressure-at-home" },
+      { title: "Atrial Fibrillation", href: "/guides/atrial-fibrillation" },
+    ],
+    browseHref: "/guides/category/heart-and-circulation",
+  },
+  {
+    title: "Diabetes",
+    description: "Type 1, Type 2, blood glucose monitoring, insulin, and everyday management.",
+    href: "/guides/diabetes-hub",
+    links: [
+      { title: "Type 1 Diabetes", href: "/guides/type-1-diabetes" },
+      { title: "Blood Glucose Monitoring", href: "/guides/blood-glucose-testing" },
+      { title: "Understanding HbA1c", href: "/guides/understanding-hba1c" },
+      { title: "Type 2 Diabetes", href: "/guides/type-2-diabetes" },
+    ],
+    browseHref: "/guides/category/diabetes",
+  },
+  {
+    title: "Cancer",
+    description: "Screening, treatment, precision oncology, survivorship, and support.",
+    href: "/guides/cancer",
+    links: [
+      { title: "Bowel Cancer", href: "/guides/bowel-cancer" },
+      { title: "Skin Cancer", href: "/guides/skin-cancer" },
+      { title: "Breast Cancer", href: "/guides/breast-cancer" },
+      { title: "Precision Medicine in Cancer", href: "/guides/precision-medicine-in-cancer" },
+    ],
+    browseHref: "/guides/category/cancer",
+  },
+  {
+    title: "Mental Health",
+    description: "Anxiety, depression, ADHD, sleep, crisis support, and evidence-based self-care.",
+    href: "/guides/mental-health",
+    links: [
+      { title: "Mental Health Toolkit", href: "/guides/mental-health-toolkit" },
+      { title: "Crisis Support", href: "/guides/mental-health-crisis-emergency" },
+      { title: "Anxiety", href: "/guides/anxiety" },
+      { title: "CBT for Insomnia", href: "/guides/cbt-insomnia" },
+    ],
+    browseHref: "/guides/category/mental-health",
+  },
+  {
+    title: "Kidney Health",
+    description: "Chronic kidney disease, stages, monitoring, medicines, dialysis, transplant, and related conditions.",
+    href: "/guides/chronic-kidney-disease-hub",
+    links: [
+      { title: "Chronic Kidney Disease — Guide Hub", href: "/guides/chronic-kidney-disease-hub" },
+      { title: "What Is Chronic Kidney Disease?", href: "/guides/what-is-chronic-kidney-disease" },
+      { title: "CKD Stages Explained", href: "/guides/chronic-kidney-disease-stages-explained" },
+      { title: "Managing Chronic Kidney Disease", href: "/guides/managing-chronic-kidney-disease" },
+    ],
+    browseHref: "/guides/category/kidney-health",
+  },
+];
 
 // Build map: category -> guides
 // Exclude hub/overview pages (category "Guide Hubs") from counts
 const byCategory = new Map<string, typeof guides>();
 for (const e of guides) {
-  // Skip hub pages to avoid inflating category counts
   if (typeof e.data?.category === "string" && e.data.category.trim() === "Guide Hubs") {
     continue;
   }
@@ -51,7 +117,7 @@ const categories = Array.from(byCategory.keys()).sort((a, b) => {
 
 const MAX_VISIBLE = 5;
 
-// Optional overrides: point some categories to a hub page
+// Optional overrides: point some category cards to a hub page
 const overrides: Record<string, string> = {
   "Mental Health": "/guides/mental-health",
   "Neurology": "/guides/brain-health-hub",
@@ -59,52 +125,58 @@ const overrides: Record<string, string> = {
   "Vaccination": "/guides/vaccination",
   "Aging & Longevity": "/guides/aging-longevity",
   "Infectious Diseases": "/guides/infectious-disease-hub",
-  // Add more when ready:
-  // "Child & Adolescent Health": "/guides/child-and-adolescent-health",
-  // "Emergencies": "/guides/emergencies",
+  "Kidney Health": "/guides/chronic-kidney-disease-hub",
 };
 
 const frontmatter = {
   title: "Health Guides — PatientGuide.io",
-  description: "Browse our library of evidence-based health guides organized by category.",
+  description: "Browse our library of evidence-based health guides organised by topic.",
 };
 ---
 
 <Layout {frontmatter}>
-  <!-- Hero featuring the Mental Health Toolkit -->
   <section class="hero">
     <div class="hero-inner">
-      <div>
-        <h1>Guides</h1>
+      <div class="hero-text">
+        <h1>Health Guides</h1>
         <p class="tagline">
-          Explore our library of health guides, organized by category.
-          Start with our <strong>Mental Health Toolkit</strong>—evidence-based habits that
-          support mood and resilience alongside therapy or medication.
+          Evidence-based guides on conditions, treatments, and everyday health —
+          written for patients, carers, and anyone wanting reliable health information.
         </p>
-
         <div class="cta-row">
-          <a href="/guides/mental-health-toolkit" class="btn btn-primary">Open Mental Health Toolkit</a>
-          <a href="/guides/mental-health" class="btn btn-ghost">Browse Mental Health Hub</a>
+          <a href="/ask" class="btn btn-primary">Ask a health question</a>
+          <a href="#browse" class="btn btn-ghost">Browse by topic</a>
         </div>
       </div>
     </div>
   </section>
 
-  {featuredEntries.length > 0 && (
-    <section class="pg-section">
-      <h2 class="section-title">Featured: Child & Adolescent Health</h2>
-      <div class="cards">
-        {featuredEntries.map((f) => (
-          <article class="card">
-            <h3><a href={f!.href}>{f!.title}</a></h3>
-            <p>{f!.blurb}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  )}
-
   <section class="pg-section">
+    <h2 class="section-title">Key Topics</h2>
+    <p class="section-subtitle">Start here for common and high-impact health areas.</p>
+    <div class="priority-grid">
+      {PRIORITY_TOPICS.map((topic) => (
+        <article class="priority-card">
+          <div class="priority-card__header">
+            <h3 class="priority-card__title">
+              <a href={topic.href}>{topic.title}</a>
+            </h3>
+          </div>
+          <p class="priority-card__desc">{topic.description}</p>
+          <ul class="priority-card__list">
+            {topic.links.map((link) => (
+              <li><a href={link.href}>{link.title}</a></li>
+            ))}
+          </ul>
+          {topic.browseHref !== topic.href && (
+            <a href={topic.browseHref} class="priority-card__browse">Browse all {topic.title} guides →</a>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="pg-section" id="browse">
     <div class="pg-section__header">
       <h2 class="pg-section__title">Browse by Category</h2>
     </div>
@@ -184,48 +256,79 @@ const frontmatter = {
 </Layout>
 
 <style>
-  /* Hero banner styles */
+  /* ===========================
+     Hero
+     =========================== */
   .hero {
-    margin-block: .25rem 1.25rem;
+    margin-block: 0.25rem 2rem;
   }
+
   .hero-inner {
-    border: 1px solid var(--astro-border, #e5e7eb);
+    border: 1px solid var(--pg-border);
     border-radius: 16px;
-    background: linear-gradient(180deg, #ffffff, #fafafa);
-    padding: 1.25rem;
+    background: linear-gradient(180deg, var(--pg-surface), var(--pg-surface-soft));
+    padding: 1.75rem 1.5rem;
   }
+
   .hero h1 {
     font-size: 2rem;
     line-height: 1.2;
-    margin: 0 0 .35rem;
+    margin: 0 0 0.4rem;
     font-weight: 700;
+    color: var(--pg-text);
   }
+
   .tagline {
-    color: #374151;
-    margin: 0 0 .9rem;
+    color: var(--pg-text-soft);
+    margin: 0 0 1rem;
+    max-width: 56ch;
+    line-height: 1.6;
   }
+
   .cta-row {
     display: flex;
-    gap: .6rem;
+    gap: 0.6rem;
     flex-wrap: wrap;
   }
+
   .btn {
     display: inline-block;
-    padding: .55rem .9rem;
+    padding: 0.55rem 1rem;
     border-radius: 10px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--pg-border);
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--pg-text);
+    transition: background var(--pg-transition-fast), border-color var(--pg-transition-fast);
   }
-  .btn-primary {
-    background: #111827;
-    color: #fff;
-    border-color: #111827;
-  }
-  .btn-primary:hover { background:#0f172a; border-color:#0f172a; }
-  .btn-ghost:hover { background:#f3f4f6; }
 
-  /* Section and featured styles */
+  .btn-primary {
+    background: var(--pg-text);
+    color: var(--pg-surface);
+    border-color: var(--pg-text);
+  }
+
+  .btn-primary:hover {
+    background: var(--pg-text-soft);
+    border-color: var(--pg-text-soft);
+    color: var(--pg-surface);
+    text-decoration: none;
+  }
+
+  .btn-ghost {
+    background: transparent;
+  }
+
+  .btn-ghost:hover {
+    background: var(--pg-surface-muted);
+    border-color: var(--pg-border-muted);
+    text-decoration: none;
+  }
+
+  /* ===========================
+     Section chrome
+     =========================== */
   .pg-section {
     margin-top: var(--pg-space-10);
   }
@@ -242,35 +345,113 @@ const frontmatter = {
   }
 
   .section-title {
-    margin: 1.25rem 0 .5rem;
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: var(--pg-text-xl);
+    font-weight: 600;
+    color: var(--pg-text);
+    margin: 0 0 0.25rem;
   }
 
-  .cards {
+  .section-subtitle {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-muted);
+    margin: 0 0 1.25rem;
+  }
+
+  /* ===========================
+     Priority topic cards
+     =========================== */
+  .priority-grid {
     display: grid;
     gap: var(--pg-space-4);
     grid-template-columns: 1fr;
   }
 
   @media (min-width: 640px) {
-    .cards {
+    .priority-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  .card {
-    padding: 1rem;
-    border: 1px solid var(--astro-border, #e5e7eb);
-    border-radius: 12px;
-    background: white;
+  @media (min-width: 1024px) {
+    .priority-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
-  .card h3 {
-    margin-top: 0;
+  .priority-card {
+    background: var(--pg-surface);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-xl);
+    padding: var(--pg-space-5);
+    transition: border-color var(--pg-transition-fast), box-shadow var(--pg-transition-fast);
   }
 
-  /* Category grid */
+  .priority-card:hover {
+    border-color: var(--pg-border-muted);
+    box-shadow: var(--pg-shadow-sm);
+  }
+
+  .priority-card__header {
+    margin-bottom: var(--pg-space-2);
+  }
+
+  .priority-card__title {
+    font-size: var(--pg-text-lg);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .priority-card__title a {
+    color: var(--pg-text);
+    text-decoration: none;
+  }
+
+  .priority-card__title a:hover {
+    color: var(--pg-link);
+    text-decoration: underline;
+  }
+
+  .priority-card__desc {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
+    margin: 0 0 var(--pg-space-3);
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  .priority-card__list {
+    margin: 0 0 var(--pg-space-3);
+    padding-left: var(--pg-space-5);
+    font-size: var(--pg-text-sm);
+  }
+
+  .priority-card__list li {
+    margin-bottom: var(--pg-space-2);
+    line-height: var(--pg-leading-snug);
+  }
+
+  .priority-card__list a {
+    color: var(--pg-link);
+  }
+
+  .priority-card__list a:hover {
+    color: var(--pg-link-hover);
+  }
+
+  .priority-card__browse {
+    display: inline-block;
+    font-size: var(--pg-text-xs);
+    color: var(--pg-text-muted);
+    text-decoration: none;
+  }
+
+  .priority-card__browse:hover {
+    color: var(--pg-link);
+    text-decoration: underline;
+  }
+
+  /* ===========================
+     Category grid
+     =========================== */
   .pg-category-grid {
     display: grid;
     gap: var(--pg-space-4);

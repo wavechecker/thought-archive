@@ -652,6 +652,42 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
     ],
   },
 
+  "kidney-health": {
+    slug: "chronic-kidney-disease-hub",
+    title: "Kidney Health",
+    description: "Chronic kidney disease, kidney function, stages, monitoring, medicines, dialysis, transplant, and related conditions.",
+    categoryKey: "Kidney Health",
+    whatThisCovers: [
+      "What chronic kidney disease is and how it develops",
+      "CKD stages 1–5 and what they mean",
+      "Managing blood pressure, diabetes, and medicines",
+      "Diet, fluid, and lifestyle for kidney health",
+      "Advanced CKD, dialysis options, and transplant",
+    ],
+    featuredClusters: [
+      {
+        title: "Chronic Kidney Disease — Guide Hub",
+        description: "Central navigation for all CKD guides: stages, causes, cardiorenal risk, treatment, and advanced care.",
+        href: "/guides/chronic-kidney-disease-hub",
+      },
+      {
+        title: "What Is Chronic Kidney Disease?",
+        description: "What CKD is, why it often goes unnoticed, how it is measured, and when to seek advice.",
+        href: "/guides/what-is-chronic-kidney-disease",
+      },
+      {
+        title: "CKD Stages Explained",
+        description: "eGFR and albuminuria, stages 1–5, progression risk, and what each stage means for monitoring.",
+        href: "/guides/chronic-kidney-disease-stages-explained",
+      },
+      {
+        title: "Managing Chronic Kidney Disease",
+        description: "Blood pressure, diabetes, ACE inhibitors, SGLT2 inhibitors, diet, and advance care planning.",
+        href: "/guides/managing-chronic-kidney-disease",
+      },
+    ],
+  },
+
   "bone-health": {
     slug: "bone-health",
     title: "Bone Health",

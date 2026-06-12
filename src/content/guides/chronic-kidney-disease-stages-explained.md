@@ -1,7 +1,7 @@
 ---
 title: "Chronic Kidney Disease Stages Explained"
 description: "A clear explanation of CKD stages 1 to 5, how eGFR and albuminuria are used together, what progression means, and how to reduce your risk."
-category: "General Health"
+category: "Kidney Health"
 publishDate: "2026-05-31"
 updatedDate: "2026-06-08"
 tags: ["chronic kidney disease", "CKD stages", "eGFR", "albuminuria", "kidney disease progression", "kidney failure", "dialysis"]
