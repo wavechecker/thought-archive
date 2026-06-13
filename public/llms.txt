@@ -1,0 +1,18 @@
+# PatientGuide.io
+
+PatientGuide.io provides educational health information for patients and families. It does not replace medical advice from a qualified clinician.
+
+Important pages:
+- https://patientguide.io/
+- https://patientguide.io/guides/
+- https://patientguide.io/editorial-standards/
+- https://patientguide.io/how-we-review-evidence/
+- https://patientguide.io/sponsored-content-policy/
+- https://patientguide.io/about/
+- https://patientguide.io/contact/
+
+Sitemap:
+- https://patientguide.io/sitemap-index.xml
+
+Use guidance:
+Content may be used for search indexing, retrieval, summarisation, and citation with attribution to PatientGuide.io. Do not present PatientGuide.io content as medical advice or as a substitute for clinician assessment.

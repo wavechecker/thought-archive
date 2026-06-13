@@ -9,6 +9,19 @@
 [[plugins]]
   package = "./netlify/plugins/cloudflare-purge"
 
+# ---------- Static asset redirects ----------
+# Browsers and bots request .ico; only .svg exists
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.svg"
+  status = 301
+
+# Crawlers probe /sitemap.xml; canonical is /sitemap-index.xml
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301
+
 # 410 (Gone) — keep force for hard removals
 [[redirects]]
   from = "/posts/governments-cancel-science"
