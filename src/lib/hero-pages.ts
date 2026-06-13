@@ -1,10 +1,10 @@
 // src/lib/hero-pages.ts
 // Centralised configuration for all hero pages (category landing pages)
-
 export interface FeaturedCluster {
   title: string;
   description: string;
   href: string;
+  primary?: boolean;
 }
 
 export interface GuideGroup {
@@ -195,6 +195,7 @@ export const HERO_PAGES: Record<string, HeroPageConfig> = {
         title: "Mental Health Toolkit",
         description: "Evidence-based habits that support mood and resilience.",
         href: "/guides/mental-health-toolkit",
+        primary: true,
       },
       {
         title: "Crisis Support",
