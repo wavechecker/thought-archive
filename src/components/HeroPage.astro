@@ -90,7 +90,7 @@ const frontmatter = {
         <h2 class="hero-page__section-title">Featured Guides</h2>
         <div class="hero-page__clusters">
           {config.featuredClusters.map((cluster: FeaturedCluster) => (
-            <a href={cluster.href} class="hero-page__cluster-card">
+            <a href={cluster.href} class:list={["hero-page__cluster-card", { "hero-page__cluster-card--primary": cluster.primary }]}>
               <h3 class="hero-page__cluster-title">{cluster.title}</h3>
               <p class="hero-page__cluster-desc">{cluster.description}</p>
             </a>
@@ -253,6 +253,54 @@ const frontmatter = {
     border-color: var(--pg-link, #2563eb);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     text-decoration: none;
+  }
+
+  /* Mental Health Toolkit CTA — blue accent */
+  .hero-page__cluster-card--primary {
+    background: var(--pg-link, #2563eb);
+    border-color: var(--pg-link, #2563eb);
+  }
+
+  .hero-page__cluster-card--primary .hero-page__cluster-title {
+    color: #ffffff;
+  }
+
+  .hero-page__cluster-card--primary .hero-page__cluster-desc {
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .hero-page__cluster-card--primary:hover {
+    background: var(--pg-link-hover, #1d4ed8);
+    border-color: var(--pg-link-hover, #1d4ed8);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  }
+
+  .hero-page__cluster-card--primary:hover .hero-page__cluster-title {
+    color: #ffffff;
+  }
+
+  /* Dark mode: use a deep blue (#1e40af) so white text clears WCAG AA.
+     The dark-mode --pg-link (#60a5fa) is too pale for a filled bg. */
+  html[data-theme="dark"] .hero-page__cluster-card--primary {
+    background: #1e40af;
+    border-color: #1e40af;
+  }
+
+  html[data-theme="dark"] .hero-page__cluster-card--primary:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .hero-page__cluster-card--primary {
+      background: #1e40af;
+      border-color: #1e40af;
+    }
+
+    :root:not([data-theme="light"]) .hero-page__cluster-card--primary:hover {
+      background: #2563eb;
+      border-color: #2563eb;
+    }
   }
 
   .hero-page__cluster-title {
