@@ -206,7 +206,7 @@ For more on blood glucose monitoring: [Blood Glucose Testing](/guides/blood-gluc
 Foot risk in diabetes is not determined by glucose alone. Other factors substantially shape the risk of vascular complications:
 
 - **Smoking** — smoking is the most powerful modifiable driver of PAD. It damages artery walls, accelerates atherosclerosis, and dramatically worsens circulation to the legs and feet. Stopping smoking is one of the most important steps a person with diabetes can take for their foot and vascular health. See [Smoking and Tobacco Cessation](/guides/smoking-cessation).
-- **Blood pressure** — uncontrolled blood pressure damages blood vessels, accelerates kidney disease, and promotes atherosclerosis. Blood pressure management is part of integrated diabetes and foot care. See [High Blood Pressure](/guides/high-blood-pressure).
+- **Blood pressure** — uncontrolled blood pressure damages blood vessels, accelerates kidney disease, and promotes atherosclerosis. Blood pressure management is part of integrated diabetes and foot care. See [High Blood Pressure](/guides/hypertension).
 - **CKD** — chronic kidney disease is common in people with diabetes and amplifies both vascular and wound-healing risk. Impaired kidney function also affects immune response and the ability to fight infection. See [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) and [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease).
 
 ---
@@ -404,7 +404,7 @@ Daily foot checks, well-fitting footwear, careful skin and nail care, regular po
 - [Diabetic Neuropathy and Nerve Damage](/guides/diabetic-neuropathy-and-nerve-damage) — detailed guide to peripheral and autonomic neuropathy; foot care, prevention, and symptom management
 - [Peripheral Artery Disease: Leg Pain, Circulation, and When to Seek Help](/guides/peripheral-artery-disease) — PAD in detail; circulation assessment, treatment, foot care, and emergency signs
 - [Blood Glucose Testing](/guides/blood-glucose-testing) — monitoring blood glucose as part of long-term foot and diabetes care
-- [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — blood pressure management as part of vascular and kidney protection
+- [High Blood Pressure (Hypertension)](/guides/hypertension) — blood pressure management as part of vascular and kidney protection
 - [Smoking and Tobacco Cessation](/guides/smoking-cessation) — smoking is the most important modifiable driver of PAD and foot vascular risk
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — CKD, diabetes, and compound vascular and wound-healing risk
 - [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — kidney and cardiovascular risk management relevant to people with diabetic foot disease

@@ -6,7 +6,7 @@ updatedDate: "2026-04-10"
 tags: ["hypertension", "blood pressure", "cardiovascular health", "brain health", "research"]
 draft: false
 related:
-  - /guides/high-blood-pressure
+  - /guides/hypertension
 ---
 
 ## Hook
@@ -70,7 +70,7 @@ A: No. This is a promising mechanistic study, but it is far too early to change 
 
 ## Further Reading
 
-- [High blood pressure: symptoms, causes, and treatment](/guides/high-blood-pressure)
+- [High blood pressure: symptoms, causes, and treatment](/guides/hypertension)
 - [Circulation Research study abstract](https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.125.326674)
 - [Research summary from Agência FAPESP](https://agencia.fapesp.br/research-shows-that-changes-in-breathing-may-be-linked-to-hypertension/57472)
 

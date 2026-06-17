@@ -54,7 +54,7 @@ The single most important risk factor for both ischaemic and haemorrhagic stroke
 - A target systolic BP below 130 mmHg is recommended by most guidelines for high-risk individuals.
 - Both medication (many effective classes) and lifestyle (salt reduction, exercise, weight loss, alcohol reduction) reduce blood pressure.
 
-See: [High Blood Pressure — Symptoms, Causes, and Treatment](/guides/high-blood-pressure)
+See: [High Blood Pressure — Symptoms, Causes, and Treatment](/guides/hypertension)
 
 ### 2. Atrial Fibrillation (AF)
 
@@ -190,7 +190,7 @@ A: Adults over 40 with hypertension, diabetes, AF, TIA history, or strong family
 - [Neurology Hub](/guides/neurology-hub)
 - [Stroke Symptoms: FAST Response](/guides/stroke-symptoms-fast-response) — what to do if a stroke is happening now
 - [Transient Ischaemic Attack (TIA)](/guides/tia-warning-signs) — why TIA is a medical emergency
-- [High Blood Pressure — Symptoms, Causes, and Treatment](/guides/high-blood-pressure)
+- [High Blood Pressure — Symptoms, Causes, and Treatment](/guides/hypertension)
 - [Atrial Fibrillation](/guides/atrial-fibrillation)
 - [Brain Health Hub](/guides/brain-health-hub)
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)

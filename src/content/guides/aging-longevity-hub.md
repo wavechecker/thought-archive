@@ -85,7 +85,7 @@ Many chronic conditions become more common with age and interact with one anothe
 - [Heart and Circulation Hub](/guides/heart-circulation) — conditions, prevention, medications, and cardiac rehabilitation
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — CKD becomes more common with age and interacts with cardiovascular and metabolic risk
 - [Diabetes Hub](/guides/diabetes-hub) — metabolic health in the context of aging
-- [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — the most common modifiable cardiovascular risk factor
+- [High Blood Pressure (Hypertension)](/guides/hypertension) — the most common modifiable cardiovascular risk factor
 - [Parkinson's Disease Overview](/guides/parkinsons-disease-overview) — movement, balance, and motor complications in later life
 - [Stroke Prevention](/guides/stroke-prevention) — reducing stroke risk and recognising early warning signs
 

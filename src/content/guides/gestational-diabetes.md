@@ -212,7 +212,7 @@ When blood glucose is well managed, most people with gestational diabetes have h
 ### For the Parent
 
 - **Likelihood of induction or caesarean birth** — depending on glucose control, the baby's estimated size, and other clinical factors; decisions are individualised and made with your obstetric team
-- **Pre-eclampsia** — gestational diabetes is associated with a modestly higher risk of high blood pressure in pregnancy; blood pressure monitoring is a standard part of antenatal care. For background on hypertension, see [High Blood Pressure (Hypertension)](/guides/high-blood-pressure)
+- **Pre-eclampsia** — gestational diabetes is associated with a modestly higher risk of high blood pressure in pregnancy; blood pressure monitoring is a standard part of antenatal care. For background on hypertension, see [High Blood Pressure (Hypertension)](/guides/hypertension)
 
 These outcomes are not certain. The care you receive, and the management you put in place, meaningfully affects the risk.
 
@@ -318,7 +318,7 @@ If you are unsure whether something needs urgent attention, contact your midwife
 - [Insulin Administration — Pens, Syringes, and Pumps](/guides/insulin-administration) — how to use insulin safely if it is prescribed during pregnancy
 - [Medication Safety: How to Avoid Common Medicine Problems](/guides/medication-safety) — safe medicine use in pregnancy and beyond
 - [PCOS: Understanding Polycystic Ovary Syndrome](/guides/pcos) — PCOS is associated with insulin resistance and higher gestational diabetes risk
-- [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — pre-eclampsia risk is relevant to gestational diabetes management
+- [High Blood Pressure (Hypertension)](/guides/hypertension) — pre-eclampsia risk is relevant to gestational diabetes management
 - [Postpartum Depression: Symptoms, Risks, and Treatment](/guides/postpartum-depression) — emotional health support after a complex pregnancy
 - [Women's Health Hub](/guides/womens-health-hub) — all women's health content on PatientGuide
 - [Preventive Screening Hub](/guides/preventive-screening-hub) — screening programmes and follow-up testing explained

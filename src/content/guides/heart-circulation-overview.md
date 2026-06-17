@@ -62,6 +62,6 @@ A: Adults should check blood pressure at least annually; cholesterol and glucose
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview)
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
-- [High Blood Pressure — What It Means and How to Manage It](/guides/high-blood-pressure)
+- [High Blood Pressure — What It Means and How to Manage It](/guides/hypertension)
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
 - [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)  

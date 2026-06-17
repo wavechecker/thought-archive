@@ -87,7 +87,7 @@ This hub is the central navigation point for all PatientGuide sleep content.
 ## Why Sleep Matters
 
 **Heart disease and blood pressure**
-Short sleep duration and disturbed sleep raise blood pressure, increase inflammatory markers, and contribute independently to heart attack and stroke risk. Obstructive sleep apnoea is an independent risk factor for atrial fibrillation, heart failure, and stroke. See [Heart & Circulation — Guide Hub](/guides/heart-circulation) and [High Blood Pressure](/guides/high-blood-pressure).
+Short sleep duration and disturbed sleep raise blood pressure, increase inflammatory markers, and contribute independently to heart attack and stroke risk. Obstructive sleep apnoea is an independent risk factor for atrial fibrillation, heart failure, and stroke. See [Heart & Circulation — Guide Hub](/guides/heart-circulation) and [High Blood Pressure](/guides/hypertension).
 
 **Obesity and metabolism**
 Sleep restriction of even a few nights impairs insulin sensitivity and disrupts hunger hormones — raising ghrelin (appetite) and suppressing leptin (satiety). Poor sleep is an independent risk factor for [insulin resistance](/guides/insulin-resistance) and [type 2 diabetes](/guides/type-2-diabetes). See [Obesity and Metabolic Health](/guides/obesity-basics).
@@ -173,7 +173,7 @@ The glymphatic system clears amyloid and tau from the brain predominantly during
 - [Dementia: Early Signs, Causes, and Prevention](/guides/dementia-overview)
 - [Brain Health Hub](/guides/brain-health-hub)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
-- [High Blood Pressure — What It Means and How to Manage It](/guides/high-blood-pressure)
+- [High Blood Pressure — What It Means and How to Manage It](/guides/hypertension)
 - [Ageing and Longevity Basics](/guides/aging-and-longevity-basics)
 - [Light Therapy](/guides/light-therapy)
 - [Mental Health Toolkit](/guides/mental-health-toolkit)

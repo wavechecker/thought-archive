@@ -179,7 +179,7 @@ Cardiovascular and metabolic conditions are the leading causes of death globally
 
 High blood pressure is the most common modifiable cardiovascular risk factor. It causes no symptoms until damage is already occurring.
 
-- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/high-blood-pressure) — what the diagnosis means and treatment options
+- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/hypertension) — what the diagnosis means and treatment options
 - [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home) — accurate home monitoring technique and what to do with results
 
 **Who should check:** All adults. Most guidelines recommend blood pressure checks every 1–2 years from age 18, or more frequently if readings are elevated or risk factors are present.

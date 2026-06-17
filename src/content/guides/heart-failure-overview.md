@@ -358,7 +358,7 @@ Yes, for most people with stable heart failure. Supervised exercise — particul
 - [Pacemakers and ICDs: What They Do and What to Expect](/guides/icd-and-pacemakers)
 - [Syncope and Fainting: Causes, Warning Signs, and When to Seek Help](/guides/syncope-fainting-overview)
 - [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
-- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/high-blood-pressure)
+- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/hypertension)
 - [Heart Attack Treatment — Emergency Care, Procedures, and Recovery](/guides/heart-attack-treatment)
 - [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)

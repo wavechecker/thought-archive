@@ -288,6 +288,19 @@
   to = "/guides/category/mens-health"
   status = 301
 
+# ---------- High blood pressure → hypertension canonical (2026-06-17) ----------
+[[redirects]]
+  from = "/guides/high-blood-pressure"
+  to = "/guides/hypertension"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/high-blood-pressure/"
+  to = "/guides/hypertension"
+  status = 301
+  force = true
+
 # ==== BEGIN_MAINTENANCE (leave commented by default) ====
 # [[redirects]]
 #   from = "/*"

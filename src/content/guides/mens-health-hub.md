@@ -107,7 +107,7 @@ Men engage with preventive health far less often than women. Closing this gap re
 Bowel cancer is the second most common cancer in Australian men. The [National Bowel Cancer Screening Program](/guides/bowel-cancer-screening) offers a free immunochemical faecal occult blood test (iFOBT) from age 45. Participation rates in men are lower than in women despite equivalent risk. See also [Understanding Bowel Cancer Screening](/guides/bowel-cancer-screening-explained) and [Bowel Cancer — Overview](/guides/bowel-cancer).
 
 ### Blood Pressure and Cardiovascular Risk
-Hypertension has no symptoms — routine measurement is the only way to detect it. Men's cardiovascular risk is higher than women's at every age until the menopausal transition. See [High Blood Pressure — What It Means and What to Do](/guides/high-blood-pressure) and [Cardiovascular Risk Assessment — Beyond Cholesterol](/guides/cardiovascular-risk-assessment).
+Hypertension has no symptoms — routine measurement is the only way to detect it. Men's cardiovascular risk is higher than women's at every age until the menopausal transition. See [High Blood Pressure — What It Means and What to Do](/guides/hypertension) and [Cardiovascular Risk Assessment — Beyond Cholesterol](/guides/cardiovascular-risk-assessment).
 
 ### Diabetes and Prediabetes
 Type 2 diabetes affects around 1 in 20 Australian adults, and up to half are undiagnosed. Men with obesity, inactivity, or family history should test from age 40. See [Prediabetes — Recognising and Reversing Early Risk](/guides/prediabetes) and [Type 2 Diabetes — Overview and Management](/guides/type-2-diabetes).
