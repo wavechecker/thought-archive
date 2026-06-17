@@ -131,6 +131,7 @@ See also: [Early Warning Signs of a Heart Attack](/guides/early-warning-signs-of
 - [Statin Side Effects: What the Evidence Actually Shows](/guides/statin-side-effects-evidence) — Separating myth from fact on statin muscle pain and other concerns.
 
 ### Blood Pressure
+- [Hypertension: Symptoms, Causes, Diagnosis, Treatment, and Home Blood Pressure Monitoring](/guides/hypertension) — A comprehensive patient guide to high blood pressure: who is at risk, how it is diagnosed, lifestyle and medication treatment options, and home monitoring.
 - [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home) — Technique, timing, and what the numbers mean.
 - [2025 High Blood Pressure Guideline — Key Updates](/guides/2025-high-blood-pressure-guideline) — What changed in the latest hypertension management guidance.
 

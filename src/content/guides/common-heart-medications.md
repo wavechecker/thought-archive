@@ -90,6 +90,7 @@ Many heart conditions require **long-term medication**. Understanding what your 
 ---
 
 ## Related Guides
+- [Hypertension: Symptoms, Causes, Diagnosis, Treatment, and Home Blood Pressure Monitoring](/guides/hypertension) — the condition most commonly treated with the medications in this guide
 - [Understanding Coronary Angiography](/guides/understanding-coronary-angiography)  
 - [Cardiac Rehabilitation After a Heart Event](/guides/cardiac-rehabilitation)  
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)  

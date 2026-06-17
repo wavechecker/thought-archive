@@ -117,6 +117,7 @@ Evidence-based guides to the most common mental health conditions — what they 
 
 - [Depression: Symptoms, Causes, and Treatment](/guides/depression)
 - [Anxiety Disorders](/guides/anxiety)
+- [Adult ADHD: Symptoms, Diagnosis, and Treatment Options](/guides/adult-adhd)
 - [PTSD: Symptoms, Causes, and Treatment](/guides/ptsd-overview)
 - [Panic Disorder: Panic Attacks, Symptoms, and Treatment](/guides/panic-disorder)
 - [Health Anxiety: Symptoms, Reassurance Loops, and Treatment](/guides/health-anxiety)
