@@ -67,6 +67,9 @@ A practical, evidence-based guide to managing PCOS day-to-day: diet and exercise
 ### [Endometriosis: Symptoms, Diagnosis, and Treatment Options](/guides/endometriosis)
 Endometriosis — tissue similar to the uterine lining growing outside the uterus — affects around 1 in 9 Australian women, but takes an average of 7–10 years to diagnose. A comprehensive guide to recognising symptoms, navigating the diagnostic process, and understanding hormonal and surgical treatment options.
 
+### [PMDD: Symptoms, Diagnosis, and Treatment Options](/guides/pmdd)
+Premenstrual dysphoric disorder (PMDD) is a severe, cyclical mood disorder causing significant emotional and physical symptoms in the 1–2 weeks before a period. Distinct from typical PMS by severity and impact on daily functioning. Covers the hormonal mechanism, how to track and confirm the diagnosis, and evidence-based treatment options including SSRIs and hormonal approaches.
+
 ### [Contraception Options](/guides/contraception-options)
 An overview of all contraceptive methods — hormonal and non-hormonal, short-acting and long-acting, reversible and permanent — with effectiveness data and considerations for different life stages.
 
