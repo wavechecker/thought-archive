@@ -114,6 +114,8 @@ Around 90–95% of hypertension cases are primary — meaning no single identifi
 - Chronic stress, which activates the sympathetic nervous system
 - Ageing, which reduces arterial elasticity
 
+Research also highlights that increased sympathetic (fight-or-flight) nervous system activity may play a larger role in sustaining elevated blood pressure than previously recognised, particularly in younger people with primary hypertension.
+
 ### Secondary hypertension
 
 Around 5–10% of cases have an identifiable underlying cause:
@@ -252,13 +254,14 @@ A: Target ranges are individualised. For most adults with hypertension, current 
 - [American Heart Association: High Blood Pressure](https://www.heart.org/en/health-topics/high-blood-pressure)
 - [NHS: High Blood Pressure (Hypertension)](https://www.nhs.uk/conditions/high-blood-pressure-hypertension/)
 - [MedlinePlus: High Blood Pressure](https://medlineplus.gov/highbloodpressure.html)
+- [Circulation Research: Sympathetic nervous system and hypertension](https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.125.326674)
 
 ---
 
 ## Related Guides
 
 - [Cardiovascular Risk Assessment: Understanding Your Numbers](/guides/cardiovascular-risk-assessment)
-- [Home Blood Pressure Monitoring](/guides/home-blood-pressure-monitoring)
+- [Blood Pressure at Home: How to Measure Correctly](/guides/blood-pressure-at-home)
 - [Common Heart Medications and Their Side Effects](/guides/common-heart-medications)
 - [Stroke — Symptoms, Emergency Response, and Treatment Time Windows](/guides/stroke-symptoms-fast-response)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)

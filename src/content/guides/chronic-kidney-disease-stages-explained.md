@@ -247,7 +247,7 @@ A: No. The majority of people with CKD — especially those diagnosed in early s
 - [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — practical guide to slowing progression, medicines, diet, and planning
 - [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease) — foundations: causes, symptoms, and tests
 - [Type 2 Diabetes](/guides/type-2-diabetes) — the leading cause of CKD; managing diabetes is inseparable from managing diabetic kidney disease
-- [High Blood Pressure](/guides/high-blood-pressure) — blood pressure control is the most important modifiable factor in slowing progression
+- [High Blood Pressure](/guides/hypertension) — blood pressure control is the most important modifiable factor in slowing progression
 - [Diabetes Hub](/guides/diabetes-hub) — broader context on diabetes types, complications, and management
 - [Could GLP-1 Drugs Help Protect the Kidneys?](/posts/ozempic-glp1-kidney-protection-2026) — emerging evidence on GLP-1 medications and kidney function
 

@@ -157,7 +157,7 @@ People with symptomatic PAD, rest pain, ulcers, or rapidly changing symptoms are
 Addressing the underlying cardiovascular risk factors is the cornerstone of PAD management and substantially reduces the risk of heart attack, stroke, and disease progression:
 
 - **Stop smoking** — the single most effective intervention. Smoking accelerates PAD dramatically; cessation is urgent and strongly recommended at any stage. See [Smoking and Tobacco Cessation](/guides/smoking-cessation)
-- **Blood pressure management** — lowering blood pressure reduces atherosclerosis progression and cardiovascular events. See [High Blood Pressure](/guides/high-blood-pressure)
+- **Blood pressure management** — lowering blood pressure reduces atherosclerosis progression and cardiovascular events. See [High Blood Pressure](/guides/hypertension)
 - **Cholesterol and lipid management** — lowering LDL cholesterol (typically with a statin) reduces plaque formation and cardiovascular risk
 - **Diabetes management** — keeping blood glucose well controlled protects blood vessels and reduces foot risk. See [Diabetes Hub](/guides/diabetes-hub) and [Type 2 Diabetes](/guides/type-2-diabetes)
 - **Antiplatelet medicines** — aspirin, clopidogrel, or similar medicines are often prescribed to reduce the risk of blood clots, heart attack, and stroke. These should only be started, changed, or stopped on clinician advice. See [Aspirin vs Clopidogrel](/guides/aspirin-vs-clopidogrel) and [Medication Safety](/guides/medication-safety)
@@ -284,7 +284,7 @@ Seek emergency care for sudden severe leg pain, a cold pale or blue foot, new in
 
 - [Heart & Circulation Hub](/guides/heart-circulation) — PAD is part of the broader atherosclerotic and cardiovascular disease spectrum
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease) — risk factor control that benefits PAD, heart disease, and stroke simultaneously
-- [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — a major PAD risk factor and target for management
+- [High Blood Pressure (Hypertension)](/guides/hypertension) — a major PAD risk factor and target for management
 - [Smoking and Tobacco Cessation](/guides/smoking-cessation) — the most important modifiable risk factor in PAD
 - [Diabetes Hub](/guides/diabetes-hub) — diabetes significantly raises PAD risk and increases the severity of foot complications
 - [Type 2 Diabetes](/guides/type-2-diabetes) — T2D and PAD commonly coexist; combined management is essential

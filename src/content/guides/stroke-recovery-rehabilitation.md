@@ -250,7 +250,7 @@ The risk of another stroke is highest in the first days and weeks after a first 
 
 High blood pressure is the single most important modifiable risk factor for stroke. Achieving and maintaining blood pressure targets after stroke significantly reduces the risk of recurrence. This usually involves prescribed medicines taken daily, combined with lifestyle measures.
 
-See: [High Blood Pressure — What It Means and How to Manage It](/guides/high-blood-pressure)
+See: [High Blood Pressure — What It Means and How to Manage It](/guides/hypertension)
 
 ### Atrial Fibrillation
 
@@ -427,7 +427,7 @@ Aphasia is difficulty with language — speaking, understanding, reading, or wri
 - [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention)
 - [Brain Health Hub: Stroke, Dementia, Sleep, and Prevention](/guides/brain-health-hub)
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
-- [High Blood Pressure — What It Means and How to Manage It](/guides/high-blood-pressure)
+- [High Blood Pressure — What It Means and How to Manage It](/guides/hypertension)
 - [Diabetes Hub](/guides/diabetes-hub)
 - [Falls Prevention: How to Reduce Fall Risk](/guides/falls-prevention)
 - [Frailty: What It Means and How to Reduce Risk](/guides/frailty-overview)

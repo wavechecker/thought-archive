@@ -327,7 +327,7 @@ Heart failure is serious, but many people live with it for years or decades. Mod
 - [Pacemakers and ICDs: What They Do and What to Expect](/guides/icd-and-pacemakers)
 - [Cardiac Rehabilitation — What It Is and Why It Matters](/guides/cardiac-rehabilitation)
 - [Atrial Fibrillation: Symptoms, Risks, and Treatment](/guides/atrial-fibrillation)
-- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/high-blood-pressure)
+- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/hypertension)
 - [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease)
 - [Sleep Health Hub](/guides/sleep-health-hub)
 - [Palliative Care — Guide Hub](/guides/palliative-care)

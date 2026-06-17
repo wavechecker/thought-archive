@@ -26,7 +26,7 @@ faq:
 ---
 
 ## Intro
-Sleep apnoea is a common but underdiagnosed condition where breathing repeatedly stops and starts during sleep. It disrupts sleep quality and places strain on the heart and circulation. Untreated, it increases the risk of [high blood pressure](/guides/high-blood-pressure), heart disease, [stroke](/guides/stroke-symptoms-fast-response), and type 2 diabetes.
+Sleep apnoea is a common but underdiagnosed condition where breathing repeatedly stops and starts during sleep. It disrupts sleep quality and places strain on the heart and circulation. Untreated, it increases the risk of [high blood pressure](/guides/hypertension), heart disease, [stroke](/guides/stroke-symptoms-fast-response), and type 2 diabetes.
 
 ## Key Points
 - Loud snoring and daytime sleepiness are hallmark signs.  
@@ -94,7 +94,7 @@ A: CPAP, lifestyle changes, oral appliances, and sometimes surgery.
 - [Cognitive Behavioural Therapy for Insomnia (CBT-I)](/guides/cbt-insomnia)
 - [Shortness of Breath — When to Seek Urgent Help](/guides/shortness-of-breath)
 - [Atrial Fibrillation — What It Is and How It's Treated](/guides/atrial-fibrillation)
-- [High Blood Pressure — What It Means and How to Manage It](/guides/high-blood-pressure)
+- [High Blood Pressure — What It Means and How to Manage It](/guides/hypertension)
 - [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment)
 - [Heart & Circulation — Guide Hub](/guides/heart-circulation)
 - [Dementia: Early Signs, Causes, and Prevention](/guides/dementia-overview)

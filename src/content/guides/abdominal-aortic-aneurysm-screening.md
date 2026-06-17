@@ -295,7 +295,7 @@ Australians who wish to be screened for AAA can:
 - [Preventing Heart Disease: Lifestyle and Medical Screening](/guides/preventing-heart-disease)
 - [Smoking Cessation — Methods, Support, and What Actually Works](/guides/smoking-cessation)
 - [Stroke Prevention: Reducing Your Risk](/guides/stroke-prevention)
-- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/high-blood-pressure)
+- [High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment](/guides/hypertension)
 
 ---
 

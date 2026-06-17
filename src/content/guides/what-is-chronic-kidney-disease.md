@@ -135,7 +135,7 @@ Both eGFR and urine albumin are used together to classify CKD severity and predi
 Speak to a doctor if:
 
 - You have [type 2 diabetes](/guides/type-2-diabetes) and have not had a recent kidney function test
-- You have [high blood pressure](/guides/high-blood-pressure) that is difficult to control
+- You have [high blood pressure](/guides/hypertension) that is difficult to control
 - You have a family history of kidney disease or polycystic kidney disease
 - A routine blood or urine test has flagged a concern about kidney function
 - You are taking regular NSAIDs or other medicines that may affect the kidneys
@@ -197,7 +197,7 @@ A: Yes, though it is far less common in children. When it does occur, inherited 
 - [Chronic Kidney Disease Stages Explained](/guides/chronic-kidney-disease-stages-explained) — the staging system, eGFR numbers, and how risk is classified
 - [Heart Failure: Symptoms, Causes, Diagnosis, and Treatment](/guides/heart-failure-overview) — heart and kidney disease frequently worsen each other (cardiorenal syndrome)
 - [Type 2 Diabetes](/guides/type-2-diabetes) — the leading cause of CKD globally
-- [High Blood Pressure](/guides/high-blood-pressure) — second leading cause; blood pressure control is central to kidney protection
+- [High Blood Pressure](/guides/hypertension) — second leading cause; blood pressure control is central to kidney protection
 - [Diabetes Hub](/guides/diabetes-hub) — overview of diabetes types, complications, and management
 - [GLP-1 Weight Loss Drugs](/guides/glp-1-weight-loss-drugs) — background on GLP-1 medications increasingly linked to kidney protection
 

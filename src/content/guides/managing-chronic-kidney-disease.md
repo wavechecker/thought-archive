@@ -102,7 +102,7 @@ High blood pressure damages the kidney's filtration units (glomeruli). As the ki
 
 ACE inhibitors (such as ramipril and perindopril) and ARBs (angiotensin receptor blockers, such as irbesartan and candesartan) are commonly used in CKD. Beyond their blood pressure-lowering effects, they reduce protein leakage from the kidneys and have direct kidney-protective properties. They require regular monitoring of kidney function and potassium.
 
-See: [High Blood Pressure (Hypertension)](/guides/high-blood-pressure)
+See: [High Blood Pressure (Hypertension)](/guides/hypertension)
 
 ---
 
@@ -319,7 +319,7 @@ Planning begins when kidney function has declined significantly and progression 
 - [Chronic Kidney Disease Hub](/guides/chronic-kidney-disease-hub) — central navigation for all CKD content
 - [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease) — causes, detection, and what tests show
 - [Chronic Kidney Disease Stages Explained](/guides/chronic-kidney-disease-stages-explained) — the staging system and what the numbers mean
-- [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — management and targets in CKD
+- [High Blood Pressure (Hypertension)](/guides/hypertension) — management and targets in CKD
 - [Type 2 Diabetes](/guides/type-2-diabetes) — diabetes management in the context of kidney disease
 - [Diabetes Hub](/guides/diabetes-hub) — diabetes types, complications, and management
 - [Heart & Circulation Hub](/guides/heart-circulation) — cardiovascular risk in CKD

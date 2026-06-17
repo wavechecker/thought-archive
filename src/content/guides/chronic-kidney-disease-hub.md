@@ -106,7 +106,7 @@ Blood pressure and kidney health are deeply interconnected. High blood pressure 
 
 Blood pressure monitoring and treatment are central to CKD care at every stage. For many people, keeping blood pressure well controlled is the single most important thing they can do to protect their kidney function.
 
-See: [High Blood Pressure (Hypertension)](/guides/high-blood-pressure)
+See: [High Blood Pressure (Hypertension)](/guides/hypertension)
 
 ---
 
@@ -130,7 +130,7 @@ High blood pressure is both a cause and a consequence of CKD. For this reason, d
 
 Certain blood pressure medicines (ACE inhibitors and ARBs) have additional kidney-protective properties beyond lowering blood pressure, and are commonly used in CKD with appropriate monitoring.
 
-See: [High Blood Pressure (Hypertension)](/guides/high-blood-pressure)
+See: [High Blood Pressure (Hypertension)](/guides/hypertension)
 
 ---
 
@@ -327,7 +327,7 @@ Specialist referral depends on kidney function, urine results, blood pressure, r
 - [What Is Chronic Kidney Disease?](/guides/what-is-chronic-kidney-disease) — causes, detection, and what the tests mean
 - [Chronic Kidney Disease Stages Explained](/guides/chronic-kidney-disease-stages-explained) — the staging system, eGFR, and albuminuria
 - [Managing Chronic Kidney Disease](/guides/managing-chronic-kidney-disease) — monitoring, medicines, diet, complications, and planning ahead
-- [High Blood Pressure (Hypertension)](/guides/high-blood-pressure) — the second most common cause of CKD and a central management target
+- [High Blood Pressure (Hypertension)](/guides/hypertension) — the second most common cause of CKD and a central management target
 - [Diabetes Hub](/guides/diabetes-hub) — the leading cause of CKD
 - [Type 2 Diabetes](/guides/type-2-diabetes) — managing diabetes to protect kidney function
 - [Heart & Circulation Hub](/guides/heart-circulation) — the cardiorenal connection; CKD and cardiovascular risk

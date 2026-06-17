@@ -107,7 +107,7 @@ Stroke is the second leading cause of death worldwide and the leading cause of a
 - [Stroke Prevention — How to Reduce Your Risk](/guides/stroke-prevention) — the modifiable risk factors that account for most strokes, and evidence-based strategies for reducing them
 - [Transient Ischaemic Attack (TIA) — Warning Signs](/guides/tia-warning-signs) — the warning stroke: identical symptoms that resolve fully, but stroke risk is highest in the days after; same-day assessment is essential
 
-**Vascular risk links:** [High Blood Pressure](/guides/high-blood-pressure) · [Atrial Fibrillation](/guides/atrial-fibrillation) · [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) · [Heart & Circulation Hub](/guides/heart-circulation)
+**Vascular risk links:** [High Blood Pressure](/guides/hypertension) · [Atrial Fibrillation](/guides/atrial-fibrillation) · [Cardiovascular Risk Assessment](/guides/cardiovascular-risk-assessment) · [Heart & Circulation Hub](/guides/heart-circulation)
 
 ---
 

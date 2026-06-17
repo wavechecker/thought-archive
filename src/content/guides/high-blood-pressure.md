@@ -1,11 +1,11 @@
-﻿---
+---
 title: "High Blood Pressure (Hypertension): Symptoms, Causes, and Treatment"
 description: "A clear guide to high blood pressure, including causes, risks, symptoms, and how it is treated."
 category: "Heart & Circulation"
 publishDate: "2026-04-10"
 updatedDate: "2026-06-11"
 tags: ["hypertension", "blood pressure", "heart health", "cardiovascular risk"]
-draft: false
+draft: true
 faq:
   - q: "What blood pressure reading is considered high?"
     a: "Blood pressure of 130/80 mmHg or above is generally classified as hypertension. A reading below 120/80 is considered normal. Your doctor can advise on what target is appropriate for you."
@@ -170,7 +170,7 @@ A: Causes may include medication resistance, underlying conditions, or persisten
 
 ## Further Reading
 
-- [High blood pressure: symptoms, causes, and treatment](/guides/high-blood-pressure)
+- [High blood pressure: symptoms, causes, and treatment](/guides/hypertension)
 - [2025 high blood pressure guideline explained](/guides/2025-high-blood-pressure-guideline)
 - [Circulation Research study abstract](https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.125.326674)
 
