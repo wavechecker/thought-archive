@@ -1,0 +1,39 @@
+name = "patientguide-x402-worker"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ROUTE BINDING — SAFETY CONTRACT
+#
+# This Worker ONLY intercepts requests that match /api/x402/*.
+# All public routes are unaffected:
+#   /                    → Netlify origin (untouched)
+#   /guides/*            → Netlify origin (untouched)
+#   /posts/*             → Netlify origin (untouched)
+#   /search/*            → Netlify origin (untouched)
+#   /sitemap*.xml        → Netlify origin (untouched)
+#   /robots.txt          → Netlify origin (untouched)
+#   /llms.txt            → Netlify origin (untouched)
+#
+# To disable the payment gate entirely, remove or comment out the [[routes]]
+# block below and run `wrangler deploy` — the Worker will stop receiving any
+# traffic. No changes to the Astro site or netlify.toml are needed.
+# ──────────────────────────────────────────────────────────────────────────────
+
+[[routes]]
+  pattern = "patientguide.io/api/x402/*"
+  zone_name = "patientguide.io"
+
+[vars]
+# Testnet identifier — this MUST remain "base-sepolia" for the experiment.
+# Changing to "base" or "ethereum" would enable mainnet payments. Do not do this.
+X402_NETWORK = "base-sepolia"
+
+# Price per request in USDC (testnet USDC has no real monetary value).
+X402_PRICE_USDC = "0.001"
+
+# Secrets below are NOT stored here — set them with `wrangler secret put`:
+#   wrangler secret put X402_RECEIVING_ADDRESS
+#   wrangler secret put X402_FACILITATOR_URL
+#   wrangler secret put PATIENTGUIDE_ORIGIN
+#   wrangler secret put X402_WORKER_SECRET
