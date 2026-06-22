@@ -37,7 +37,7 @@ Browser / curl / x402 client
 │                             │
 │  1. No X-PAYMENT → 402      │
 │  2. Verify via facilitator  │
-│  3. Settle via facilitator  │
+│  3. Settle via facilitator  │  ← required; failure → 402/502, no proxy
 │  4. Proxy to Netlify fn     │
 └─────────┬───────────────────┘
           │  GET /.netlify/functions/x402-ping
@@ -51,6 +51,11 @@ Browser / curl / x402 client
 │  Returns { ok, paid, ... }  │
 └─────────────────────────────┘
 ```
+
+**Settlement is required before origin access.** If the facilitator verifies a
+payment but settlement fails (network error, facilitator rejection, etc.), the
+Worker returns an error and does **not** proxy to the Netlify function. The
+resource is never served until payment is fully finalized.
 
 **Public routes are untouched.** The Cloudflare route binding in `wrangler.toml`
 restricts the Worker exclusively to `patientguide.io/api/x402/*`. All other paths
@@ -109,6 +114,11 @@ wrangler secret put X402_WORKER_SECRET
 
 Set the same `X402_WORKER_SECRET` value as a Netlify environment variable
 (`Site settings → Environment variables → Add variable`).
+
+> **Required before deploying:** `X402_WORKER_SECRET` must be configured in
+> Netlify before the Netlify function goes live. Without it, the function returns
+> `500 x402_origin_not_configured` in all deployed environments (it does not fall
+> back to open access).
 
 ### 3. Local development
 
