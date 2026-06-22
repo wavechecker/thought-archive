@@ -1,8 +1,9 @@
 # PatientGuide x402 Testnet Worker
 
-> **Status: TESTNET ONLY — Base Sepolia**
+> **Status: TESTNET ONLY — Base Sepolia (`eip155:84532`)**
 > This worker is a payment-gating experiment using the x402 protocol on Base Sepolia
-> testnet USDC. No real funds are involved. Mainnet is not configured.
+> testnet USDC. No real funds are involved. Mainnet (`eip155:8453`) is not configured
+> and must not be used in this experiment.
 
 ---
 
@@ -56,6 +57,15 @@ Browser / curl / x402 client
 payment but settlement fails (network error, facilitator rejection, etc.), the
 Worker returns an error and does **not** proxy to the Netlify function. The
 resource is never served until payment is fully finalized.
+
+**Facilitator:** `https://x402.org/facilitator` (testnet, free, no API key required)
+
+**Network identifiers:**
+
+| Identifier | Chain | Allowed in this experiment |
+|---|---|---|
+| `eip155:84532` | Base Sepolia testnet | ✅ yes |
+| `eip155:8453` | Base mainnet | ❌ NO — do not use |
 
 **Public routes are untouched.** The Cloudflare route binding in `wrangler.toml`
 restricts the Worker exclusively to `patientguide.io/api/x402/*`. All other paths
@@ -207,22 +217,24 @@ No other Astro/Netlify config needs to change.
 
 | Variable | Where | Description |
 |---|---|---|
-| `X402_NETWORK` | `wrangler.toml [vars]` | Chain identifier — must be `base-sepolia` |
+| `X402_NETWORK` | `wrangler.toml [vars]` | CAIP-2 chain identifier — must be `eip155:84532` (Base Sepolia testnet). `eip155:8453` is Base mainnet and must not be used. |
 | `X402_PRICE_USDC` | `wrangler.toml [vars]` | Price per request in USDC decimal string |
-| `X402_RECEIVING_ADDRESS` | Wrangler secret | Your testnet wallet address |
-| `X402_FACILITATOR_URL` | Wrangler secret | CDP/x402 facilitator base URL |
+| `X402_RECEIVING_ADDRESS` | Wrangler secret | Your Base Sepolia testnet wallet address |
+| `X402_FACILITATOR_URL` | Wrangler secret | `https://x402.org/facilitator` (testnet, free) |
 | `PATIENTGUIDE_ORIGIN` | Wrangler secret | `https://patientguide.io` |
 | `X402_WORKER_SECRET` | Wrangler secret + Netlify env | Shared secret for Worker→function auth |
 
 ---
 
-## Enabling mainnet (NOT for this PR)
+## Enabling mainnet (NOT for this experiment)
 
 To move to mainnet, all of the following changes would be required:
-- Set `X402_NETWORK` to `base` (or another mainnet identifier)
+- Set `X402_NETWORK` to `eip155:8453` (Base mainnet CAIP-2 identifier)
+- Update `REQUIRED_NETWORK` in `src/index.ts` to `"eip155:8453"`
 - Update `USDC_BASE_SEPOLIA` in `src/index.ts` to the mainnet USDC contract address
 - Update `X402_RECEIVING_ADDRESS` to a mainnet wallet
 - Update the Cloudflare route in `wrangler.toml`
 - A separate PR review with explicit sign-off
 
-This PR intentionally does none of the above.
+> ⚠️ `eip155:8453` = Base mainnet. Using this value would enable **real** USDC
+> payments with real monetary value. This experiment is `eip155:84532` (testnet) only.

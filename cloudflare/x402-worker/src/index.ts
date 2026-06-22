@@ -8,9 +8,10 @@
  * never touched by this Worker because the Cloudflare route binding does not
  * match them. The guard below is a second layer of protection.
  *
- * TESTNET ONLY: X402_NETWORK is validated at runtime against REQUIRED_NETWORK.
- * Any other value causes the Worker to return 503 and refuse all requests —
- * it fails closed rather than accidentally enabling mainnet payments.
+ * TESTNET ONLY: X402_NETWORK is validated at runtime against REQUIRED_NETWORK
+ * ("eip155:84532" = Base Sepolia testnet). Any other value — including the Base
+ * mainnet identifier "eip155:8453" — causes the Worker to return 503 and refuse
+ * all requests. It fails closed rather than accidentally enabling mainnet payments.
  */
 
 // USDC contract on Base Sepolia (testnet — no real monetary value)
@@ -18,9 +19,11 @@ const USDC_BASE_SEPOLIA = "0x036CbD53842c5426634e7929541eC2318f3dCF7e";
 const USDC_DECIMALS = 6;
 const X402_VERSION = 1;
 
-// Hard-coded allowed network. Changing this to "base" or "ethereum" would enable
-// real payments — that requires a separate PR with explicit review.
-const REQUIRED_NETWORK = "base-sepolia";
+// CAIP-2 identifier for Base Sepolia testnet.
+//   eip155:84532 = Base Sepolia testnet  ← required value
+//   eip155:8453  = Base mainnet          ← DO NOT USE — enables real payments
+// Changing this requires a separate PR with explicit review.
+const REQUIRED_NETWORK = "eip155:84532";
 
 export interface Env {
   /** Chain identifier — must equal REQUIRED_NETWORK ("base-sepolia"). Set in wrangler.toml [vars]. */

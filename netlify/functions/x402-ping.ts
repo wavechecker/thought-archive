@@ -51,7 +51,8 @@ export const handler: Handler = async (event) => {
     body: JSON.stringify({
       ok: true,
       service: "PatientGuide x402 test",
-      network: "base-sepolia",
+      network: "eip155:84532",
+      networkName: "Base Sepolia",
       paid: true,
     }),
     headers: {
