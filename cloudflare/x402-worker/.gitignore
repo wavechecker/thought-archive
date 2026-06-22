@@ -1,0 +1,9 @@
+# Wrangler local state and secrets
+.wrangler/
+.dev.vars
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
