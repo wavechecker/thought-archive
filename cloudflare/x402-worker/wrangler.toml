@@ -20,9 +20,11 @@ compatibility_date = "2025-01-01"
 # traffic. No changes to the Astro site or netlify.toml are needed.
 # ──────────────────────────────────────────────────────────────────────────────
 
-[[routes]]
-  pattern = "patientguide.io/api/x402/*"
-  zone_name = "patientguide.io"
+# [[routes]] requires patientguide.io as a Cloudflare zone (not applicable — domain is on Netlify).
+# Traffic is routed via Netlify proxy redirect → patientguide-x402-worker.wavechecker.workers.dev
+# [[routes]]
+#   pattern = "patientguide.io/api/x402/*"
+#   zone_name = "patientguide.io"
 
 [vars]
 # Network identifier (CAIP-2 format) — Base Sepolia testnet.

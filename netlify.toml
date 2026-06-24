@@ -9,6 +9,13 @@
 [[plugins]]
   package = "./netlify/plugins/cloudflare-purge"
 
+# ---------- x402 payment worker proxy ----------
+[[redirects]]
+  from = "/api/x402/*"
+  to = "https://patientguide-x402-worker.wavechecker.workers.dev/api/x402/:splat"
+  status = 200
+  force = true
+
 # ---------- Static asset redirects ----------
 # Browsers and bots request .ico; only .svg exists
 [[redirects]]
