@@ -26,7 +26,7 @@ const X402_VERSION = 1;
 const REQUIRED_NETWORK = "eip155:84532";
 
 export interface Env {
-  /** Chain identifier — must equal REQUIRED_NETWORK ("base-sepolia"). Set in wrangler.toml [vars]. */
+  /** Chain identifier — must equal REQUIRED_NETWORK ("eip155:84532"). Set in wrangler.toml [vars]. */
   X402_NETWORK: string;
   /** Price per request as a decimal USDC string, e.g. "0.001". Set in wrangler.toml [vars]. */
   X402_PRICE_USDC: string;
@@ -34,10 +34,8 @@ export interface Env {
   X402_RECEIVING_ADDRESS: string;
   /** CDP / x402.org facilitator base URL (no trailing slash). Set via `wrangler secret put`. */
   X402_FACILITATOR_URL: string;
-  /** Netlify origin base URL, e.g. "https://patientguide.io". Set via `wrangler secret put`. */
+  /** Canonical public origin, e.g. "https://patientguide.io". Set via `wrangler secret put`. */
   PATIENTGUIDE_ORIGIN: string;
-  /** Shared secret sent to the Netlify function to block direct origin access. Set via `wrangler secret put`. */
-  X402_WORKER_SECRET: string;
 }
 
 // ── Env validation ─────────────────────────────────────────────────────────────
@@ -54,7 +52,6 @@ function validateEnv(env: Env): Response | null {
     "X402_RECEIVING_ADDRESS",
     "X402_FACILITATOR_URL",
     "PATIENTGUIDE_ORIGIN",
-    "X402_WORKER_SECRET",
   ];
 
   for (const key of required) {
@@ -204,10 +201,20 @@ export default {
     const envError = validateEnv(env);
     if (envError) return envError;
 
-    // Strip trailing slashes to prevent double-slash URLs (e.g. .../verify → ...//verify).
-    const facilitatorBase = env.X402_FACILITATOR_URL.replace(/\/+$/, "");
+    // Only /api/x402/ping is intentionally supported in Part 1.
+    // Any other /api/x402/* path gets 404 rather than silently falling through.
+    if (url.pathname !== "/api/x402/ping") {
+      return jsonError(404, "not_found");
+    }
 
-    const resource = url.toString();
+    // Build canonical resource URL using the public-facing origin.
+    // The Worker is reached via a Netlify proxy redirect from patientguide.io,
+    // so request.url reflects the workers.dev hostname internally. We canonicalize
+    // to the public origin so x402 payment binding matches the client-facing URL.
+    const canonicalOrigin = env.PATIENTGUIDE_ORIGIN.replace(/\/+$/, "");
+    const resource = `${canonicalOrigin}${url.pathname}${url.search}`;
+
+    const facilitatorBase = env.X402_FACILITATOR_URL.replace(/\/+$/, "");
     const paymentRequirements = buildPaymentRequirements(env, resource);
     const paymentHeader = request.headers.get("X-PAYMENT");
 
@@ -229,9 +236,10 @@ export default {
     }
 
     // ── Step 3: Settle the payment ───────────────────────────────────────────
-    // Settlement is required before origin access.
-    // If the facilitator verifies but settlement fails, the Worker does NOT proxy
-    // to the origin — the resource is not served until payment is finalized.
+    // Settlement is required before the resource is served.
+    // If the facilitator verifies but settlement fails, the Worker returns an
+    // error and does NOT serve the resource — it is never returned until payment
+    // is fully finalized.
     let settleResult: SettleResult;
     try {
       settleResult = await settlePayment(facilitatorBase, paymentHeader, paymentRequirements);
@@ -243,38 +251,29 @@ export default {
       return jsonError(402, "payment_settlement_failed");
     }
 
-    // ── Step 4: Proxy to origin ──────────────────────────────────────────────
-    // The Worker forwards to the Netlify function via its /.netlify/functions/ URL.
-    // The X-Worker-Secret header prevents callers from hitting the function directly
-    // and bypassing the payment gate.
-    const originUrl = `${env.PATIENTGUIDE_ORIGIN}/.netlify/functions/x402-ping`;
-    let originResponse: Response;
-    try {
-      originResponse = await fetch(originUrl, {
-        method: "GET",
-        headers: {
-          "X-Worker-Secret": env.X402_WORKER_SECRET,
-          "Accept": "application/json",
-        },
-      });
-    } catch {
-      return jsonError(502, "origin_unreachable");
-    }
-
-    // Return origin body + payment receipt header.
-    const responseHeaders = new Headers(originResponse.headers);
-    responseHeaders.set(
-      "X-PAYMENT-RESPONSE",
+    // ── Step 4: Return paid response directly from Worker ────────────────────
+    // /api/x402/ping is handled entirely within the Worker — no Netlify function
+    // is required or called. The JSON response is built here after settlement.
+    return new Response(
       JSON.stringify({
-        success: true,
-        txHash: settleResult.txHash ?? null,
-        networkId: settleResult.networkId ?? env.X402_NETWORK,
-      })
+        ok: true,
+        service: "PatientGuide x402 test",
+        paid: true,
+        network: "eip155:84532",
+        networkName: "Base Sepolia",
+        origin: "cloudflare-worker",
+      }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "X-PAYMENT-RESPONSE": JSON.stringify({
+            success: true,
+            txHash: settleResult.txHash ?? null,
+            networkId: settleResult.networkId ?? env.X402_NETWORK,
+          }),
+        },
+      }
     );
-
-    return new Response(originResponse.body, {
-      status: originResponse.status,
-      headers: responseHeaders,
-    });
   },
 };

@@ -25,52 +25,114 @@ The whole flow happens in one HTTP round-trip for the caller.
 
 ---
 
-## Architecture for this experiment
+## Current deployed architecture (Part 1)
+
+`patientguide.io` is **not** currently configured as a native Cloudflare zone route
+for this Worker. Instead, traffic reaches the Worker via a Netlify proxy redirect:
 
 ```
 Browser / curl / x402 client
         │
-        │  GET /api/x402/ping
+        │  GET https://patientguide.io/api/x402/ping
         ▼
 ┌─────────────────────────────┐
-│  Cloudflare Worker          │  ← this project
-│  patientguide.io/api/x402/* │
-│                             │
-│  1. No X-PAYMENT → 402      │
-│  2. Verify via facilitator  │
-│  3. Settle via facilitator  │  ← required; failure → 402/502, no proxy
-│  4. Proxy to Netlify fn     │
+│  Netlify proxy redirect      │
+│  /api/x402/*                 │
+│  → patientguide-x402-worker  │
+│    .wavechecker.workers.dev  │
 └─────────┬───────────────────┘
-          │  GET /.netlify/functions/x402-ping
-          │  + X-Worker-Secret header
+          │  (internal — Worker sees workers.dev hostname)
           ▼
 ┌─────────────────────────────┐
-│  Netlify Function           │
-│  netlify/functions/         │
-│  x402-ping.ts               │
+│  Cloudflare Worker          │  ← this project
+│  patientguide-x402-worker   │
+│  .wavechecker.workers.dev   │
 │                             │
-│  Returns { ok, paid, ... }  │
+│  1. No X-PAYMENT → 402      │
+│     resource canonicalized  │
+│     to patientguide.io URL  │
+│  2. Verify via facilitator  │
+│  3. Settle via facilitator  │
+│  4. Return JSON directly    │
+│     (Worker-only, no        │
+│      Netlify function)      │
 └─────────────────────────────┘
 ```
 
-**Settlement is required before origin access.** If the facilitator verifies a
-payment but settlement fails (network error, facilitator rejection, etc.), the
-Worker returns an error and does **not** proxy to the Netlify function. The
-resource is never served until payment is fully finalized.
+### Canonical resource URL
 
-**Facilitator:** `https://x402.org/facilitator` (testnet, free, no API key required)
+Although the Worker is internally reached via `patientguide-x402-worker.wavechecker.workers.dev`,
+it canonicalizes the x402 `resource` field to the **public-facing URL**:
 
-**Network identifiers:**
+```
+https://patientguide.io/api/x402/ping
+```
+
+This is done using the `PATIENTGUIDE_ORIGIN` secret:
+
+```typescript
+const canonicalOrigin = env.PATIENTGUIDE_ORIGIN.replace(/\/+$/, "");
+const resource = `${canonicalOrigin}${url.pathname}${url.search}`;
+```
+
+Payment proofs are therefore bound to the client-facing URL, not the internal workers.dev hostname.
+
+### Part 1 does not use Netlify build minutes
+
+The `/api/x402/ping` response is returned directly from the Worker after payment
+settlement. No Netlify function is called. Deploying or updating this Worker uses
+only Wrangler — it does not trigger a Netlify build.
+
+---
+
+## Network identifiers
 
 | Identifier | Chain | Allowed in this experiment |
 |---|---|---|
 | `eip155:84532` | Base Sepolia testnet | ✅ yes |
 | `eip155:8453` | Base mainnet | ❌ NO — do not use |
 
-**Public routes are untouched.** The Cloudflare route binding in `wrangler.toml`
-restricts the Worker exclusively to `patientguide.io/api/x402/*`. All other paths
-(`/`, `/guides/*`, `/posts/*`, `/search/*`, `sitemap.xml`, `robots.txt`,
-`llms.txt`) continue to be served directly from Netlify.
+The Worker enforces `eip155:84532` at runtime. Any other value (including the mainnet
+identifier `eip155:8453`) causes the Worker to return `503 x402_network_not_allowed`
+and refuse all requests — it fails closed rather than accidentally enabling real payments.
+
+---
+
+## Public routes
+
+Public routes are never touched by this Worker. The Netlify proxy redirect only forwards
+`/api/x402/*` to the Worker. All other paths are served directly by Netlify:
+
+| Path | Served by |
+|---|---|
+| `/` | Netlify (Astro) |
+| `/guides/*` | Netlify (Astro) |
+| `/posts/*` | Netlify (Astro) |
+| `/search/*` | Netlify (Astro) |
+| `/sitemap*.xml` | Netlify (Astro) |
+| `/robots.txt` | Netlify (Astro) |
+| `/llms.txt` | Netlify (Astro) |
+| `/api/x402/*` | Cloudflare Worker (this project) |
+
+The Worker also enforces a belt-and-suspenders route guard: any request to a path that
+does not start with `/api/x402/` returns `404 not_found`. Within `/api/x402/*`, only
+`/api/x402/ping` is intentionally supported — all other sub-paths return `404 not_found`.
+
+---
+
+## Future Part 2 options (paused)
+
+Part 2 would extend x402 to a structured content endpoint. Two options under consideration:
+
+**Option A — Worker-only structured endpoint**
+Add a new route (e.g. `/api/x402/content`) entirely within the Worker. No Netlify build
+minutes required. Can proceed independently of Netlify quota.
+
+**Option B — Astro/content collections endpoint via Netlify function**
+Add a Netlify function backed by Astro content collections. Requires Netlify build
+minutes to deploy. Paused until quota resets.
+
+Part 2 remains paused. No mainnet (`eip155:8453`) support is planned.
 
 ---
 
@@ -79,9 +141,7 @@ restricts the Worker exclusively to `patientguide.io/api/x402/*`. All other path
 | Path | Purpose |
 |---|---|
 | `cloudflare/x402-worker/src/index.ts` | Worker entry point — x402 gate logic |
-| `cloudflare/x402-worker/wrangler.toml` | Cloudflare Worker config and route binding |
-| `cloudflare/x402-worker/.env.example` | Environment variable template |
-| `netlify/functions/x402-ping.ts` | Origin endpoint called after payment clears |
+| `cloudflare/x402-worker/wrangler.toml` | Cloudflare Worker config |
 
 ---
 
@@ -89,7 +149,6 @@ restricts the Worker exclusively to `patientguide.io/api/x402/*`. All other path
 
 ### Prerequisites
 
-- Cloudflare account with `patientguide.io` zone
 - Node.js ≥ 18
 - Wrangler CLI: `npm install -g wrangler` (or use the local one)
 - A Base Sepolia wallet address to receive testnet USDC
@@ -110,25 +169,13 @@ Set each secret via Wrangler (they are stored in Cloudflare, never in this repo)
 wrangler secret put X402_RECEIVING_ADDRESS
 
 # Official CDP / x402.org facilitator base URL
-# Check https://x402.org or https://docs.cdp.coinbase.com for the current value
 wrangler secret put X402_FACILITATOR_URL
+# → enter: https://x402.org/facilitator
 
-# Netlify origin base URL
+# Canonical public origin
 wrangler secret put PATIENTGUIDE_ORIGIN
 # → enter: https://patientguide.io
-
-# Random hex secret shared between the Worker and the Netlify function
-# Generate: openssl rand -hex 32
-wrangler secret put X402_WORKER_SECRET
 ```
-
-Set the same `X402_WORKER_SECRET` value as a Netlify environment variable
-(`Site settings → Environment variables → Add variable`).
-
-> **Required before deploying:** `X402_WORKER_SECRET` must be configured in
-> Netlify before the Netlify function goes live. Without it, the function returns
-> `500 x402_origin_not_configured` in all deployed environments (it does not fall
-> back to open access).
 
 ### 3. Local development
 
@@ -158,16 +205,9 @@ curl -i http://localhost:8787/api/x402/ping
 npm run deploy
 ```
 
-Wrangler reads `wrangler.toml` and registers the route binding automatically.
+This uses only Wrangler and does not trigger a Netlify build.
 
-### 5. Configure Cloudflare route (if not auto-registered)
-
-In the Cloudflare dashboard → **Workers & Pages → your worker → Triggers → Routes**:
-
-- Route: `patientguide.io/api/x402/*`
-- Zone: `patientguide.io`
-
-### 6. Verify the live endpoint
+### 5. Verify the live endpoint
 
 ```bash
 # Should return 402 with X-PAYMENT-REQUIRED header
@@ -176,40 +216,15 @@ curl -i https://patientguide.io/api/x402/ping
 # Expected 402 body (formatted):
 # {
 #   "x402Version": 1,
-#   "accepts": [{ "scheme": "exact", "network": "base-sepolia", ... }],
+#   "accepts": [{
+#     "scheme": "exact",
+#     "network": "eip155:84532",
+#     "resource": "https://patientguide.io/api/x402/ping",
+#     ...
+#   }],
 #   "error": "Payment required ..."
 # }
 ```
-
----
-
-## How to disable / remove the route
-
-**Temporary disable (keep the Worker, stop receiving traffic):**
-
-In `wrangler.toml`, comment out the `[[routes]]` block:
-
-```toml
-# [[routes]]
-#   pattern = "patientguide.io/api/x402/*"
-#   zone_name = "patientguide.io"
-```
-
-Then redeploy:
-
-```bash
-npm run deploy
-```
-
-**Full removal:**
-
-```bash
-wrangler delete
-```
-
-This deletes the Worker from Cloudflare entirely. The Netlify function
-(`netlify/functions/x402-ping.ts`) can be removed from the codebase separately.
-No other Astro/Netlify config needs to change.
 
 ---
 
@@ -217,12 +232,11 @@ No other Astro/Netlify config needs to change.
 
 | Variable | Where | Description |
 |---|---|---|
-| `X402_NETWORK` | `wrangler.toml [vars]` | CAIP-2 chain identifier — must be `eip155:84532` (Base Sepolia testnet). `eip155:8453` is Base mainnet and must not be used. |
+| `X402_NETWORK` | `wrangler.toml [vars]` | CAIP-2 chain identifier — must be `eip155:84532` (Base Sepolia). `eip155:8453` is mainnet and must not be used. |
 | `X402_PRICE_USDC` | `wrangler.toml [vars]` | Price per request in USDC decimal string |
-| `X402_RECEIVING_ADDRESS` | Wrangler secret | Your Base Sepolia testnet wallet address |
+| `X402_RECEIVING_ADDRESS` | Wrangler secret | Base Sepolia testnet wallet address |
 | `X402_FACILITATOR_URL` | Wrangler secret | `https://x402.org/facilitator` (testnet, free) |
-| `PATIENTGUIDE_ORIGIN` | Wrangler secret | `https://patientguide.io` |
-| `X402_WORKER_SECRET` | Wrangler secret + Netlify env | Shared secret for Worker→function auth |
+| `PATIENTGUIDE_ORIGIN` | Wrangler secret | `https://patientguide.io` — used to canonicalize the x402 resource URL |
 
 ---
 
@@ -233,8 +247,7 @@ To move to mainnet, all of the following changes would be required:
 - Update `REQUIRED_NETWORK` in `src/index.ts` to `"eip155:8453"`
 - Update `USDC_BASE_SEPOLIA` in `src/index.ts` to the mainnet USDC contract address
 - Update `X402_RECEIVING_ADDRESS` to a mainnet wallet
-- Update the Cloudflare route in `wrangler.toml`
 - A separate PR review with explicit sign-off
 
-> ⚠️ `eip155:8453` = Base mainnet. Using this value would enable **real** USDC
+> `eip155:8453` = Base mainnet. Using this value would enable **real** USDC
 > payments with real monetary value. This experiment is `eip155:84532` (testnet) only.

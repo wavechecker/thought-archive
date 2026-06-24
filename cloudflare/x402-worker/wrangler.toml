@@ -40,4 +40,3 @@ X402_PRICE_USDC = "0.001"
 #   wrangler secret put X402_RECEIVING_ADDRESS
 #   wrangler secret put X402_FACILITATOR_URL
 #   wrangler secret put PATIENTGUIDE_ORIGIN
-#   wrangler secret put X402_WORKER_SECRET
