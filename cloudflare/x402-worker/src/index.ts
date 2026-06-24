@@ -211,7 +211,8 @@ export default {
     // The Worker is reached via a Netlify proxy redirect from patientguide.io,
     // so request.url reflects the workers.dev hostname internally. We canonicalize
     // to the public origin so x402 payment binding matches the client-facing URL.
-    const canonicalOrigin = env.PATIENTGUIDE_ORIGIN.replace(/\/+$/, "");
+    // Strip BOM (﻿) that PowerShell may prepend when secrets are set on Windows.
+    const canonicalOrigin = env.PATIENTGUIDE_ORIGIN.replace(/^﻿/, "").replace(/\/+$/, "");
     const resource = `${canonicalOrigin}${url.pathname}${url.search}`;
 
     const facilitatorBase = env.X402_FACILITATOR_URL.replace(/\/+$/, "");
