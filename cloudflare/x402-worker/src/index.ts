@@ -12,6 +12,10 @@
  * ("eip155:84532" = Base Sepolia testnet). Any other value — including the Base
  * mainnet identifier "eip155:8453" — causes the Worker to return 503 and refuse
  * all requests. It fails closed rather than accidentally enabling mainnet payments.
+ *
+ * ROUTES:
+ *   /api/x402/ping         — Worker-only test endpoint (no origin call)
+ *   /api/x402/guide-brief  — Paid structured guide metadata (proxies to Netlify origin)
  */
 
 // USDC contract on Base Sepolia (testnet — no real monetary value)
@@ -25,6 +29,9 @@ const X402_VERSION = 1;
 // Changing this requires a separate PR with explicit review.
 const REQUIRED_NETWORK = "eip155:84532";
 
+// Allowed slug pattern — must match the same pattern in the Netlify function.
+const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,99}$/;
+
 export interface Env {
   /** Chain identifier — must equal REQUIRED_NETWORK ("eip155:84532"). Set in wrangler.toml [vars]. */
   X402_NETWORK: string;
@@ -36,15 +43,12 @@ export interface Env {
   X402_FACILITATOR_URL: string;
   /** Canonical public origin, e.g. "https://patientguide.io". Set via `wrangler secret put`. */
   PATIENTGUIDE_ORIGIN: string;
+  /** Shared secret sent to the Netlify function to block direct origin access. Set via `wrangler secret put`. */
+  X402_WORKER_SECRET: string;
 }
 
 // ── Env validation ─────────────────────────────────────────────────────────────
 
-/**
- * Validate all required env vars are present and the network is base-sepolia.
- * Returns an error Response if invalid, null if ok.
- * Never includes secret values in the error response.
- */
 function validateEnv(env: Env): Response | null {
   const required: Array<keyof Env> = [
     "X402_NETWORK",
@@ -52,6 +56,7 @@ function validateEnv(env: Env): Response | null {
     "X402_RECEIVING_ADDRESS",
     "X402_FACILITATOR_URL",
     "PATIENTGUIDE_ORIGIN",
+    "X402_WORKER_SECRET",
   ];
 
   for (const key of required) {
@@ -71,29 +76,12 @@ function validateEnv(env: Env): Response | null {
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
-/**
- * Convert a decimal USDC amount string to atomic units (integer string).
- *
- * Supports up to 6 decimal places. Rejects negative, empty, multi-dot, or
- * out-of-precision inputs rather than silently rounding.
- *
- * Examples:
- *   "0.001"    → "1000"
- *   "0.01"     → "10000"
- *   "1"        → "1000000"
- *   "1.234567" → "1234567"
- *
- * Rejects: "abc", "0.0000001", "-1", "", "1.2.3"
- */
 function usdcToAtomicUnits(usdc: string): string {
-  // Accept only non-negative decimals with at most 6 fractional digits.
-  // The regex rejects: negatives, empty strings, multiple dots, > 6 decimals.
   const match = usdc.match(/^(\d+)(?:\.(\d{1,6}))?$/);
   if (!match) {
     throw new Error(`Invalid USDC amount: "${usdc}"`);
   }
   const intPart = match[1];
-  // Pad fractional to exactly 6 digits before converting to BigInt.
   const fracPart = (match[2] ?? "").padEnd(USDC_DECIMALS, "0");
   const atomicUnits =
     BigInt(intPart) * BigInt(10 ** USDC_DECIMALS) + BigInt(fracPart);
@@ -125,13 +113,11 @@ function build402Response(env: Env, resource: string): Response {
     status: 402,
     headers: {
       "Content-Type": "application/json",
-      // Mirror in header so x402-compatible clients can parse without reading the body.
       "X-PAYMENT-REQUIRED": JSON.stringify(body),
     },
   });
 }
 
-/** Produce a JSON error response. Never include secret values in the body. */
 function jsonError(status: number, error: string): Response {
   return new Response(JSON.stringify({ error }), {
     status,
@@ -182,6 +168,55 @@ async function settlePayment(
   return (await res.json()) as SettleResult;
 }
 
+// ── Shared payment gate ────────────────────────────────────────────────────────
+
+// Runs the full 402 → verify → settle flow for a given resource URL.
+// Returns { settled: SettleResult } on success, or a Response to return directly on failure.
+async function runPaymentGate(
+  env: Env,
+  resource: string,
+  paymentHeader: string | null
+): Promise<{ settled: SettleResult } | Response> {
+  const facilitatorBase = env.X402_FACILITATOR_URL.replace(/\/+$/, "");
+  const paymentRequirements = buildPaymentRequirements(env, resource);
+
+  if (!paymentHeader) {
+    return build402Response(env, resource);
+  }
+
+  let verifyResult: VerifyResult;
+  try {
+    verifyResult = await verifyPayment(facilitatorBase, paymentHeader, paymentRequirements);
+  } catch {
+    return jsonError(502, "facilitator_unreachable");
+  }
+
+  if (!verifyResult.isValid) {
+    return jsonError(402, "payment_invalid");
+  }
+
+  let settleResult: SettleResult;
+  try {
+    settleResult = await settlePayment(facilitatorBase, paymentHeader, paymentRequirements);
+  } catch {
+    return jsonError(502, "payment_settlement_failed");
+  }
+
+  if (!settleResult.success) {
+    return jsonError(402, "payment_settlement_failed");
+  }
+
+  return { settled: settleResult };
+}
+
+function paymentReceiptHeader(settled: SettleResult, network: string): string {
+  return JSON.stringify({
+    success: true,
+    txHash: settled.txHash ?? null,
+    networkId: settled.networkId ?? network,
+  });
+}
+
 // ── Worker entry point ─────────────────────────────────────────────────────────
 
 export default {
@@ -201,80 +236,90 @@ export default {
     const envError = validateEnv(env);
     if (envError) return envError;
 
-    // Only /api/x402/ping is intentionally supported in Part 1.
-    // Any other /api/x402/* path gets 404 rather than silently falling through.
-    if (url.pathname !== "/api/x402/ping") {
-      return jsonError(404, "not_found");
-    }
-
-    // Build canonical resource URL using the public-facing origin.
-    // The Worker is reached via a Netlify proxy redirect from patientguide.io,
-    // so request.url reflects the workers.dev hostname internally. We canonicalize
-    // to the public origin so x402 payment binding matches the client-facing URL.
-    // Strip BOM (﻿) that PowerShell may prepend when secrets are set on Windows.
+    // Build canonical origin once — strip BOM that Windows PowerShell may
+    // prepend when secrets are set via piped input, and strip trailing slashes.
     const canonicalOrigin = env.PATIENTGUIDE_ORIGIN.replace(/^﻿/, "").replace(/\/+$/, "");
-    const resource = `${canonicalOrigin}${url.pathname}${url.search}`;
 
-    const facilitatorBase = env.X402_FACILITATOR_URL.replace(/\/+$/, "");
-    const paymentRequirements = buildPaymentRequirements(env, resource);
     const paymentHeader = request.headers.get("X-PAYMENT");
 
-    // ── Step 1: Require payment ──────────────────────────────────────────────
-    if (!paymentHeader) {
-      return build402Response(env, resource);
+    // ── /api/x402/ping ───────────────────────────────────────────────────────
+    if (url.pathname === "/api/x402/ping") {
+      const resource = `${canonicalOrigin}${url.pathname}`;
+
+      const gateResult = await runPaymentGate(env, resource, paymentHeader);
+      if (gateResult instanceof Response) return gateResult;
+
+      return new Response(
+        JSON.stringify({
+          ok: true,
+          service: "PatientGuide x402 test",
+          paid: true,
+          network: "eip155:84532",
+          networkName: "Base Sepolia",
+          origin: "cloudflare-worker",
+        }),
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "X-PAYMENT-RESPONSE": paymentReceiptHeader(gateResult.settled, env.X402_NETWORK),
+          },
+        }
+      );
     }
 
-    // ── Step 2: Verify with facilitator ─────────────────────────────────────
-    let verifyResult: VerifyResult;
-    try {
-      verifyResult = await verifyPayment(facilitatorBase, paymentHeader, paymentRequirements);
-    } catch {
-      return jsonError(502, "facilitator_unreachable");
-    }
+    // ── /api/x402/guide-brief ────────────────────────────────────────────────
+    if (url.pathname === "/api/x402/guide-brief") {
+      const slug = url.searchParams.get("slug");
 
-    if (!verifyResult.isValid) {
-      return jsonError(402, "payment_invalid");
-    }
-
-    // ── Step 3: Settle the payment ───────────────────────────────────────────
-    // Settlement is required before the resource is served.
-    // If the facilitator verifies but settlement fails, the Worker returns an
-    // error and does NOT serve the resource — it is never returned until payment
-    // is fully finalized.
-    let settleResult: SettleResult;
-    try {
-      settleResult = await settlePayment(facilitatorBase, paymentHeader, paymentRequirements);
-    } catch {
-      return jsonError(502, "payment_settlement_failed");
-    }
-
-    if (!settleResult.success) {
-      return jsonError(402, "payment_settlement_failed");
-    }
-
-    // ── Step 4: Return paid response directly from Worker ────────────────────
-    // /api/x402/ping is handled entirely within the Worker — no Netlify function
-    // is required or called. The JSON response is built here after settlement.
-    return new Response(
-      JSON.stringify({
-        ok: true,
-        service: "PatientGuide x402 test",
-        paid: true,
-        network: "eip155:84532",
-        networkName: "Base Sepolia",
-        origin: "cloudflare-worker",
-      }),
-      {
-        status: 200,
-        headers: {
-          "Content-Type": "application/json",
-          "X-PAYMENT-RESPONSE": JSON.stringify({
-            success: true,
-            txHash: settleResult.txHash ?? null,
-            networkId: settleResult.networkId ?? env.X402_NETWORK,
-          }),
-        },
+      // Validate slug before building payment requirements — clients should not
+      // be charged for a request that is structurally invalid.
+      if (!slug) {
+        return jsonError(400, "missing_slug");
       }
-    );
+      if (!SLUG_RE.test(slug)) {
+        return jsonError(400, "invalid_slug");
+      }
+
+      // Resource includes query string so payment proof binds to the specific guide.
+      const resource = `${canonicalOrigin}${url.pathname}?slug=${encodeURIComponent(slug)}`;
+
+      const gateResult = await runPaymentGate(env, resource, paymentHeader);
+      if (gateResult instanceof Response) return gateResult;
+
+      // ── Proxy to Netlify origin function ──────────────────────────────────
+      // Settlement is required before origin access. If settlement fails above,
+      // runPaymentGate returns an error Response and we never reach this point.
+      const originUrl =
+        `${canonicalOrigin}/.netlify/functions/x402-guide-brief` +
+        `?slug=${encodeURIComponent(slug)}`;
+
+      let originResponse: Response;
+      try {
+        originResponse = await fetch(originUrl, {
+          method: "GET",
+          headers: {
+            "X-Worker-Secret": env.X402_WORKER_SECRET,
+            "Accept": "application/json",
+          },
+        });
+      } catch {
+        return jsonError(502, "origin_unreachable");
+      }
+
+      const responseHeaders = new Headers(originResponse.headers);
+      responseHeaders.set(
+        "X-PAYMENT-RESPONSE",
+        paymentReceiptHeader(gateResult.settled, env.X402_NETWORK)
+      );
+
+      return new Response(originResponse.body, {
+        status: originResponse.status,
+        headers: responseHeaders,
+      });
+    }
+
+    // ── Unknown /api/x402/* path ─────────────────────────────────────────────
+    return jsonError(404, "not_found");
   },
 };
