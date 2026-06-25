@@ -14,12 +14,12 @@
  */
 
 import type { Handler, HandlerEvent } from "@netlify/functions";
-import { createRequire } from "node:module";
 
-// esbuild inlines the JSON at bundle time — the file does not need to exist
-// alongside the deployed function at runtime.
-const _require = createRequire(import.meta.url);
-const GUIDE_BRIEFS: Record<string, GuideBrief> = _require("./x402-guide-briefs.json");
+// esbuild resolves direct require() calls at bundle time and inlines the JSON.
+// createRequire wrapping is NOT statically tracked by esbuild and causes 502 at runtime.
+// This matches the pattern used by chat.js (require("./chatbot-index.json")).
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const GUIDE_BRIEFS: Record<string, GuideBrief> = require("./x402-guide-briefs.json");
 
 interface RelatedGuide {
   title: string;
