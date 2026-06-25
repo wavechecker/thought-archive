@@ -1,9 +1,10 @@
 # build output
 dist/
 
-# Generated chatbot index — rebuilt at deploy time via prebuild script.
-# Do not commit; committing balloons git history with 600KB+ diffs on every content update.
+# Generated indices — rebuilt at deploy time via prebuild scripts.
+# Do not commit; committing balloons git history with large diffs on every content update.
 netlify/functions/chatbot-index.json
+netlify/functions/x402-guide-briefs.json
 
 # generated types
 .astro/
