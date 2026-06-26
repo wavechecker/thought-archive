@@ -27,13 +27,32 @@ compatibility_date = "2025-01-01"
 #   zone_name = "patientguide.io"
 
 [vars]
-# Network identifier (CAIP-2 format) — Base Sepolia testnet.
-#   eip155:84532 = Base Sepolia testnet  ← this value
-#   eip155:8453  = Base mainnet          ← DO NOT USE — enables real payments
-# The Worker runtime also enforces this constant; any other value returns 503.
+# ── Mode switch ────────────────────────────────────────────────────────────────
+# X402_MODE controls which network and asset the Worker uses.
+#
+#   "testnet"  — Base Sepolia (eip155:84532), testnet USDC, NO real money.
+#   "mainnet"  — Base mainnet (eip155:8453),  native USDC, REAL money.
+#
+# Default: "testnet" when X402_MODE is absent.
+# Unknown values → 503. Mode/network mismatch → 503. Fails closed.
+#
+# To switch to mainnet for the micro-test, set X402_MODE and X402_NETWORK
+# via `wrangler secret put` (do NOT commit mainnet values here):
+#   wrangler secret put X402_MODE            # set to: mainnet
+#   wrangler secret put X402_NETWORK         # set to: eip155:8453
+#   wrangler secret put X402_RECEIVING_ADDRESS  # mainnet receiver address
+#   wrangler secret put X402_PRICE_USDC      # set to: 0.001
+# Then deploy: cd cloudflare/x402-worker && npm run deploy
+X402_MODE = "testnet"
+
+# Network identifier (CAIP-2). Must match X402_MODE exactly.
+#   testnet mode → eip155:84532 (Base Sepolia)
+#   mainnet mode → eip155:8453  (Base mainnet) — set as secret, not here
 X402_NETWORK = "eip155:84532"
 
-# Price per request in USDC (testnet USDC has no real monetary value).
+# Price per request in USDC.
+# Testnet USDC has no real monetary value.
+# Mainnet: capped at 0.01 USDC unless X402_ALLOW_HIGHER_MAINNET_PRICE=true.
 X402_PRICE_USDC = "0.001"
 
 # Secrets below are NOT stored here — set them with `wrangler secret put`:
