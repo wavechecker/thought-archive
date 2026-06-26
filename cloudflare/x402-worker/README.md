@@ -204,24 +204,103 @@ causes the Worker to return `503 x402_network_not_allowed` — fails closed.
 | `/search/*` | Netlify (Astro) | ✅ yes |
 | `/sitemap*.xml` | Netlify (Astro) | ✅ yes |
 | `/robots.txt` | Netlify (Astro) | ✅ yes |
-| `/api/x402/ping` | Cloudflare Worker | x402 gated (testnet) |
-| `/api/x402/guide-brief` | Cloudflare Worker → Netlify fn | x402 gated (testnet) |
+| `/api/x402/ping` | Cloudflare Worker | x402 gated |
+| `/api/x402/guide-brief` | Cloudflare Worker → Netlify fn | x402 gated |
 
 ---
 
-## Part 3 — Mainnet (disabled, not planned)
+## Part 3 — Guarded Base mainnet micro-test
 
-Part 3 would be moving to mainnet (`eip155:8453`). This is intentionally disabled.
-All of the following changes would be required before mainnet:
+> **Status: code-ready, not yet deployed.**
+> The Worker now supports an explicit mode switch. Mainnet requires setting
+> secrets via `wrangler secret put` and deploying — see below.
 
-- Set `X402_NETWORK` to `eip155:8453` in `wrangler.toml`
-- Update `REQUIRED_NETWORK` in `src/index.ts` to `"eip155:8453"`
-- Update `USDC_BASE_SEPOLIA` to the mainnet USDC contract address
-- Update `X402_RECEIVING_ADDRESS` to a mainnet wallet
-- A separate PR review with explicit sign-off
+### Mode switch overview
 
-> `eip155:8453` = Base mainnet. Using this value would enable **real** USDC
-> payments with real monetary value. This experiment is `eip155:84532` (testnet) only.
+| Var | Testnet | Mainnet micro-test |
+|---|---|---|
+| `X402_MODE` | `testnet` (default) | `mainnet` |
+| `X402_NETWORK` | `eip155:84532` | `eip155:8453` |
+| `X402_PRICE_USDC` | `0.001` | `0.001` |
+| `X402_RECEIVING_ADDRESS` | testnet wallet | `0x21Eacb622931926616C9a458648E7BA02A198561` |
+| USDC asset | Base Sepolia USDC | `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` |
+
+**Native Base mainnet USDC verified via:** Uniswap default token list, CoinGecko Base
+token list, and EIP-55 checksum — `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`.
+
+Do NOT use:
+- USDT or any non-USDC token
+- L2 Standard Bridged USDC (different contract)
+- Ethereum mainnet USDC
+- Base Sepolia USDC contract in mainnet mode
+
+### Guard behaviour
+
+The Worker enforces all of the following at runtime, returning `503` if any fails:
+
+| Check | Error code |
+|---|---|
+| `X402_MODE` is missing or unknown | `x402_invalid_mode` |
+| `X402_NETWORK` does not match `X402_MODE` | `x402_mode_network_mismatch` |
+| Any required env var is absent | `x402_not_configured` |
+| Mainnet price > 0.01 USDC without override | `x402_mainnet_price_cap_exceeded` |
+
+Mainnet is **never** inferred from the network value alone. Both `X402_MODE=mainnet`
+AND `X402_NETWORK=eip155:8453` must be set together. Mismatch fails closed.
+
+### Mainnet price cap
+
+In mainnet mode, `X402_PRICE_USDC` above `0.01` causes `503 x402_mainnet_price_cap_exceeded`
+unless `X402_ALLOW_HIGHER_MAINNET_PRICE=true` is also set.
+
+For the micro-test, set `X402_PRICE_USDC=0.001` and do **not** set
+`X402_ALLOW_HIGHER_MAINNET_PRICE`.
+
+### Wallet rules
+
+| Wallet | Role | Needs funding | Private key used? |
+|---|---|---|---|
+| Buyer `0x4B0116EEb712b02a93dB8F5d3FFBa9e1C71407dD` | Signs EIP-3009 auth | Yes — small Base ETH + small Base USDC | Yes — locally only |
+| Receiver `0x21Eacb622931926616C9a458648E7BA02A198561` | Receives USDC after settlement | No — starts blank | **Never** |
+
+The receiver wallet only needs to exist as an address. Do not fund it. Do not use its
+private key anywhere. It receives the USDC payment from the facilitator after settlement.
+
+### To deploy mainnet micro-test
+
+> **Wait for explicit instruction before deploying.**
+
+When ready, set mainnet secrets (do NOT commit these values):
+
+```bash
+cd cloudflare/x402-worker
+
+# These override wrangler.toml [vars] at runtime
+wrangler secret put X402_MODE              # mainnet
+wrangler secret put X402_NETWORK           # eip155:8453
+wrangler secret put X402_RECEIVING_ADDRESS # 0x21Eacb622931926616C9a458648E7BA02A198561
+wrangler secret put X402_PRICE_USDC        # 0.001
+wrangler secret put X402_FACILITATOR_URL   # https://x402.org/facilitator
+wrangler secret put PATIENTGUIDE_ORIGIN    # https://patientguide.io
+wrangler secret put X402_WORKER_SECRET     # (same value as Netlify)
+
+# Then deploy
+npm run deploy
+```
+
+To revert to testnet: set `X402_MODE=testnet` and `X402_NETWORK=eip155:84532` via
+`wrangler secret put`, then redeploy. No code changes needed.
+
+### Public routes remain free
+
+Enabling mainnet mode does **not** affect public routes. `/guides/*`, `/posts/*`, and
+all other public Astro pages remain completely free and unaffected. Only `/api/x402/*`
+is gated, and only after payment is verified and settled.
+
+### Direct origin protection remains intact
+
+The Netlify function `/.netlify/functions/x402-guide-brief` continues to require
+`X-Worker-Secret` and returns `403` for direct access regardless of mode.
 
 ---
 
@@ -229,11 +308,12 @@ All of the following changes would be required before mainnet:
 
 | Path | Purpose |
 |---|---|
-| `cloudflare/x402-worker/src/index.ts` | Worker entry point — x402 gate logic |
-| `cloudflare/x402-worker/wrangler.toml` | Cloudflare Worker config |
+| `cloudflare/x402-worker/src/index.ts` | Worker entry point — x402 gate + mode switch |
+| `cloudflare/x402-worker/wrangler.toml` | Cloudflare Worker config (testnet defaults) |
 | `netlify/functions/x402-guide-brief.ts` | Paid guide brief origin endpoint |
 | `netlify/functions/x402-guide-briefs.json` | Pre-built guide brief data (gitignored — built at deploy time) |
 | `scripts/build-x402-guide-briefs.mjs` | Build script that generates x402-guide-briefs.json |
+| `scripts/test-x402-paid-request.mjs` | Local buyer test client (testnet + mainnet) |
 
 ---
 
@@ -246,7 +326,7 @@ cd cloudflare/x402-worker
 npm install
 ```
 
-### 2. Configure Worker secrets
+### 2. Configure Worker secrets (testnet)
 
 ```bash
 wrangler secret put X402_RECEIVING_ADDRESS    # Base Sepolia wallet address
@@ -294,9 +374,82 @@ curl -i "https://patientguide.io/.netlify/functions/x402-guide-brief?slug=hypert
 
 | Variable | Where | Description |
 |---|---|---|
-| `X402_NETWORK` | `wrangler.toml [vars]` | CAIP-2 chain — must be `eip155:84532`. `eip155:8453` is mainnet and must not be used. |
-| `X402_PRICE_USDC` | `wrangler.toml [vars]` | Price per request in USDC decimal string |
-| `X402_RECEIVING_ADDRESS` | Wrangler secret | Base Sepolia testnet wallet address |
+| `X402_MODE` | `wrangler.toml [vars]` or secret | `"testnet"` (default) or `"mainnet"`. Unknown values fail closed. |
+| `X402_NETWORK` | `wrangler.toml [vars]` or secret | CAIP-2 chain. Must match `X402_MODE`: testnet→`eip155:84532`, mainnet→`eip155:8453`. |
+| `X402_PRICE_USDC` | `wrangler.toml [vars]` or secret | Price per request in decimal USDC. Mainnet capped at 0.01 without override. |
+| `X402_RECEIVING_ADDRESS` | Wrangler secret | Receiving wallet. Testnet: any Sepolia address. Mainnet micro-test: `0x21Eacb…8561`. |
 | `X402_FACILITATOR_URL` | Wrangler secret | `https://x402.org/facilitator` |
 | `PATIENTGUIDE_ORIGIN` | Wrangler secret | `https://patientguide.io` — used to canonicalize x402 resource URLs |
 | `X402_WORKER_SECRET` | Wrangler secret + Netlify env | Shared secret for Worker→origin auth; prevents direct origin bypass |
+| `X402_ALLOW_HIGHER_MAINNET_PRICE` | Wrangler secret (optional) | Set `"true"` to allow mainnet price above 0.01 USDC. Do not set for the micro-test. |
+
+---
+
+## Local buyer test client
+
+`scripts/test-x402-paid-request.mjs` works for both testnet and mainnet.
+
+### Required
+
+```bash
+export BUYER_PRIVATE_KEY=0x<disposable-wallet-private-key>
+```
+
+Use a **disposable** wallet. Never use a wallet that holds real funds you care about.
+The script never prints the private key.
+
+### Optional validation guards (strongly recommended for mainnet)
+
+```bash
+export X402_EXPECTED_NETWORK=eip155:8453   # abort before signing if network differs
+export X402_EXPECTED_PAYTO=0x21Eacb...     # abort before signing if payTo differs
+export X402_EXPECTED_ASSET=0x833589...     # abort before signing if asset differs
+export X402_MAX_USDC=0.001                 # abort before signing if price exceeds this
+```
+
+### Testnet run
+
+```bash
+export BUYER_PRIVATE_KEY=0x<disposable-sepolia-key>
+export X402_EXPECTED_NETWORK=eip155:84532
+export X402_MAX_USDC=0.01
+
+node scripts/test-x402-paid-request.mjs
+```
+
+Fund buyer with Base Sepolia test USDC: [faucet.circle.com](https://faucet.circle.com/) → Base Sepolia.
+
+### Mainnet micro-test run
+
+```bash
+export BUYER_PRIVATE_KEY=0x<disposable-base-mainnet-key>
+export X402_EXPECTED_NETWORK=eip155:8453
+export X402_EXPECTED_PAYTO=0x21Eacb622931926616C9a458648E7BA02A198561
+export X402_EXPECTED_ASSET=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
+export X402_MAX_USDC=0.001
+
+node scripts/test-x402-paid-request.mjs
+```
+
+**Real USDC is spent.** Fund buyer with small Base mainnet ETH + small Base mainnet USDC.
+The receiver wallet (`0x21Eacb…8561`) does not need prior funding — it receives the
+USDC payment after the facilitator settles on-chain.
+
+### Security rules
+
+- Use a **disposable** wallet. Never use a wallet with real funds you care about.
+- Set `BUYER_PRIVATE_KEY` **only in your local shell**. Never in `.env` files.
+- The receiver private key is **never used** — it is only an address.
+- The script never prints the private key.
+- `.env.local` and `*.local` are gitignored.
+- Do not use Base Sepolia USDC settings on mainnet.
+- Do not use Ethereum mainnet USDC for Base payments.
+- Do not use USDT.
+
+### Protocol notes
+
+The Worker uses x402 version 1 with CAIP-2 network IDs. The `X-PAYMENT` header value
+is `base64(JSON.stringify(paymentPayload))`. Payment signing is EIP-712
+`TransferWithAuthorization` (EIP-3009) — the buyer signs an off-chain authorisation;
+no on-chain transaction is sent from the buyer. The facilitator at `x402.org` handles
+chain settlement after verifying the signature.
