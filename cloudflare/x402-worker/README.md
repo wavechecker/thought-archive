@@ -516,6 +516,11 @@ cd cloudflare/x402-worker
 wrangler secret put X402_SOLANA_RECEIVING_ADDRESS
 # → paste base58 Solana public key
 
+# Facilitator fee-payer address — required by @x402/svm.
+# Source: GET https://www.x402.org/facilitator/supported → signers["solana:*"][0]
+wrangler secret put X402_SOLANA_FEE_PAYER
+# → paste base58 fee-payer public key from the facilitator supported endpoint
+
 # X402_FACILITATOR_URL must already be set (shared with EVM rail)
 # Then deploy:
 npm run deploy
@@ -533,6 +538,7 @@ Confirm the `accepts[0]` in the response body:
 - `asset`: `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU`
 - `payTo`: your Solana devnet receiver public key
 - `maxAmountRequired`: `1000` (0.001 USDC)
+- `extra.feePayer`: the x402.org/facilitator fee-payer address you set in `X402_SOLANA_FEE_PAYER`
 
 ### Solana Devnet buyer test client
 
