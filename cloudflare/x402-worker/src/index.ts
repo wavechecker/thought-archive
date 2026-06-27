@@ -25,11 +25,19 @@
  * match them. The guard below is a second layer of protection.
  *
  * ROUTES:
- *   /api/x402/ping         — Worker-only test endpoint (no origin call)
- *   /api/x402/guide-brief  — Paid structured guide metadata (proxies to Netlify origin)
+ *   /api/x402/ping                — Worker-only test endpoint (no origin call, Base/EVM)
+ *   /api/x402/guide-brief         — Paid structured guide metadata (Base/EVM)
+ *   /api/x402/solana/guide-brief  — Paid structured guide metadata (Solana Devnet)
+ *
+ * SOLANA DEVNET RAIL:
+ *   A second payment rail on Solana Devnet. No real monetary value.
+ *   Network: solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1
+ *   Facilitator: x402.org/facilitator (supports Solana Devnet without API key)
+ *   Requires: X402_SOLANA_RECEIVING_ADDRESS secret (base58 Solana public key)
+ *   Solana mainnet is NOT enabled — requires CDP API keys (future PR).
  */
 
-// ── Asset constants ────────────────────────────────────────────────────────────
+// ── EVM asset constants ────────────────────────────────────────────────────────
 
 // Testnet USDC — Base Sepolia. No real monetary value.
 const USDC_BASE_SEPOLIA = "0x036CbD53842c5426634e7929541eC2318f3dCF7e";
@@ -43,10 +51,21 @@ const USDC_BASE_MAINNET = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
 const USDC_DECIMALS = 6;
 const X402_VERSION = 1;
 
-// ── Network constants ──────────────────────────────────────────────────────────
+// ── EVM network constants ──────────────────────────────────────────────────────
 
 const NETWORK_TESTNET = "eip155:84532"; // Base Sepolia — testnet
 const NETWORK_MAINNET = "eip155:8453";  // Base mainnet  — REAL money, use with care
+
+// ── Solana constants (Devnet only — mainnet requires CDP API keys, future PR) ──
+
+// Devnet USDC mint issued by Circle. No real monetary value.
+// Faucet: faucet.circle.com → select "Solana Devnet"
+// Mainnet mint (future reference): EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+const USDC_SOLANA_DEVNET = "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU";
+
+// CAIP-2 identifier for Solana Devnet.
+// Mainnet CAIP-2 (future reference): solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp
+const NETWORK_SOLANA_DEVNET = "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1";
 
 // ── Mainnet price cap ──────────────────────────────────────────────────────────
 
@@ -61,6 +80,21 @@ const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,99}$/;
 // ── Types ──────────────────────────────────────────────────────────────────────
 
 type X402Mode = "testnet" | "mainnet";
+
+// Shared shape for both EVM and Solana payment requirements.
+// Both chains use 6-decimal USDC and the same x402 "exact" scheme.
+interface PaymentRequirements {
+  scheme: "exact";
+  network: string;
+  maxAmountRequired: string;
+  resource: string;
+  description: string;
+  mimeType: string;
+  payTo: string;
+  maxTimeoutSeconds: number;
+  asset: string;
+  extra: Record<string, string>;
+}
 
 export interface Env {
   /**
@@ -80,7 +114,7 @@ export interface Env {
   X402_NETWORK: string;
   /** Price per request as decimal USDC, e.g. "0.001". Set in wrangler.toml [vars]. */
   X402_PRICE_USDC: string;
-  /** Receiving wallet address. Set via `wrangler secret put X402_RECEIVING_ADDRESS`. */
+  /** Receiving wallet address (EVM). Set via `wrangler secret put X402_RECEIVING_ADDRESS`. */
   X402_RECEIVING_ADDRESS: string;
   /** Facilitator base URL (no trailing slash). Set via `wrangler secret put X402_FACILITATOR_URL`. */
   X402_FACILITATOR_URL: string;
@@ -93,6 +127,19 @@ export interface Env {
    * Do NOT set this for the micro-test. Leave unset.
    */
   X402_ALLOW_HIGHER_MAINNET_PRICE?: string;
+  /**
+   * Solana Devnet receiver address (base58 public key).
+   * Set via `wrangler secret put X402_SOLANA_RECEIVING_ADDRESS`.
+   * If absent, /api/x402/solana/* returns 503 x402_solana_not_configured.
+   * Solana mainnet is not supported in this build.
+   */
+  X402_SOLANA_RECEIVING_ADDRESS?: string;
+  /**
+   * Price per request in USDC for the Solana Devnet endpoint.
+   * Defaults to "0.001" when absent. No cap enforced (devnet only, no real value).
+   * Set in wrangler.toml [vars] or via `wrangler secret put X402_SOLANA_PRICE_USDC`.
+   */
+  X402_SOLANA_PRICE_USDC?: string;
 }
 
 // ── Mode helpers ───────────────────────────────────────────────────────────────
@@ -183,11 +230,11 @@ function validateEnv(env: Env): Response | null {
   return null;
 }
 
-// ── Payment requirements ───────────────────────────────────────────────────────
+// ── EVM payment requirements ───────────────────────────────────────────────────
 
-function buildPaymentRequirements(env: Env, mode: X402Mode, resource: string) {
+function buildPaymentRequirements(env: Env, mode: X402Mode, resource: string): PaymentRequirements {
   return {
-    scheme: "exact" as const,
+    scheme: "exact",
     network: env.X402_NETWORK,
     maxAmountRequired: usdcToAtomicUnits(env.X402_PRICE_USDC),
     resource,
@@ -218,6 +265,40 @@ function build402Response(env: Env, mode: X402Mode, resource: string): Response 
   });
 }
 
+// ── Solana Devnet payment requirements ────────────────────────────────────────
+
+function buildSolanaPaymentRequirements(env: Env, resource: string, payTo: string): PaymentRequirements {
+  return {
+    scheme: "exact",
+    network: NETWORK_SOLANA_DEVNET,
+    maxAmountRequired: usdcToAtomicUnits(env.X402_SOLANA_PRICE_USDC ?? "0.001"),
+    resource,
+    description: "PatientGuide x402 Solana Devnet experiment",
+    mimeType: "application/json",
+    payTo,
+    maxTimeoutSeconds: 300,
+    asset: USDC_SOLANA_DEVNET,
+    // No EIP-712 domain for Solana — extra is empty.
+    // Client uses @x402/svm or equivalent for Solana-native signing.
+    extra: {},
+  };
+}
+
+function buildSolana402Response(env: Env, resource: string, payTo: string): Response {
+  const body = {
+    x402Version: X402_VERSION,
+    accepts: [buildSolanaPaymentRequirements(env, resource, payTo)],
+    error: "Payment required — send X-PAYMENT header with Solana payment proof",
+  };
+  return new Response(JSON.stringify(body), {
+    status: 402,
+    headers: {
+      "Content-Type": "application/json",
+      "X-PAYMENT-REQUIRED": JSON.stringify(body),
+    },
+  });
+}
+
 // ── Facilitator calls ──────────────────────────────────────────────────────────
 
 interface VerifyResult {
@@ -228,7 +309,7 @@ interface VerifyResult {
 async function verifyPayment(
   facilitatorBase: string,
   paymentHeader: string,
-  paymentRequirements: ReturnType<typeof buildPaymentRequirements>
+  paymentRequirements: PaymentRequirements
 ): Promise<VerifyResult> {
   const res = await fetch(`${facilitatorBase}/verify`, {
     method: "POST",
@@ -250,7 +331,7 @@ interface SettleResult {
 async function settlePayment(
   facilitatorBase: string,
   paymentHeader: string,
-  paymentRequirements: ReturnType<typeof buildPaymentRequirements>
+  paymentRequirements: PaymentRequirements
 ): Promise<SettleResult> {
   const res = await fetch(`${facilitatorBase}/settle`, {
     method: "POST",
@@ -261,24 +342,19 @@ async function settlePayment(
   return (await res.json()) as SettleResult;
 }
 
-// ── Shared payment gate ────────────────────────────────────────────────────────
+// ── Payment gate (network-agnostic core) ──────────────────────────────────────
 
-async function runPaymentGate(
-  env: Env,
-  mode: X402Mode,
-  resource: string,
-  paymentHeader: string | null
+async function runGate(
+  facilitatorBase: string,
+  requirements: PaymentRequirements,
+  paymentHeader: string | null,
+  build402: () => Response
 ): Promise<{ settled: SettleResult } | Response> {
-  const facilitatorBase = env.X402_FACILITATOR_URL.replace(/\/+$/, "");
-  const paymentRequirements = buildPaymentRequirements(env, mode, resource);
-
-  if (!paymentHeader) {
-    return build402Response(env, mode, resource);
-  }
+  if (!paymentHeader) return build402();
 
   let verifyResult: VerifyResult;
   try {
-    verifyResult = await verifyPayment(facilitatorBase, paymentHeader, paymentRequirements);
+    verifyResult = await verifyPayment(facilitatorBase, paymentHeader, requirements);
   } catch {
     return jsonError(502, "facilitator_unreachable");
   }
@@ -289,7 +365,7 @@ async function runPaymentGate(
 
   let settleResult: SettleResult;
   try {
-    settleResult = await settlePayment(facilitatorBase, paymentHeader, paymentRequirements);
+    settleResult = await settlePayment(facilitatorBase, paymentHeader, requirements);
   } catch {
     return jsonError(502, "payment_settlement_failed");
   }
@@ -299,6 +375,38 @@ async function runPaymentGate(
   }
 
   return { settled: settleResult };
+}
+
+// ── EVM payment gate (Base Sepolia / Base mainnet) ────────────────────────────
+
+async function runPaymentGate(
+  env: Env,
+  mode: X402Mode,
+  resource: string,
+  paymentHeader: string | null
+): Promise<{ settled: SettleResult } | Response> {
+  return runGate(
+    env.X402_FACILITATOR_URL.replace(/\/+$/, ""),
+    buildPaymentRequirements(env, mode, resource),
+    paymentHeader,
+    () => build402Response(env, mode, resource)
+  );
+}
+
+// ── Solana payment gate (Devnet only) ─────────────────────────────────────────
+
+async function runSolanaPaymentGate(
+  env: Env,
+  resource: string,
+  paymentHeader: string | null,
+  payTo: string
+): Promise<{ settled: SettleResult } | Response> {
+  return runGate(
+    env.X402_FACILITATOR_URL.replace(/\/+$/, ""),
+    buildSolanaPaymentRequirements(env, resource, payTo),
+    paymentHeader,
+    () => buildSolana402Response(env, resource, payTo)
+  );
 }
 
 function paymentReceiptHeader(settled: SettleResult, network: string): string {
@@ -407,6 +515,64 @@ export default {
       responseHeaders.set(
         "X-PAYMENT-RESPONSE",
         paymentReceiptHeader(gateResult.settled, env.X402_NETWORK)
+      );
+
+      return new Response(originResponse.body, {
+        status: originResponse.status,
+        headers: responseHeaders,
+      });
+    }
+
+    // ── /api/x402/solana/guide-brief ─────────────────────────────────────────
+    if (url.pathname === "/api/x402/solana/guide-brief") {
+      // Note: validateEnv() above validates the shared EVM env (X402_RECEIVING_ADDRESS,
+      // X402_NETWORK, etc.) before reaching this branch. The EVM/testnet config must
+      // remain present even when only the Solana endpoint is exercised. Do not
+      // refactor validateEnv to skip EVM checks for Solana requests.
+
+      // Guard: trim before testing so a whitespace-only secret fails closed with
+      // x402_solana_not_configured rather than reaching the facilitator as an
+      // invalid payTo address and returning payment_invalid instead.
+      // Solana mainnet is not supported — this endpoint is Devnet-only.
+      const solanaPayTo = env.X402_SOLANA_RECEIVING_ADDRESS?.trim();
+      if (!solanaPayTo) {
+        return jsonError(503, "x402_solana_not_configured");
+      }
+
+      const slug = url.searchParams.get("slug");
+      if (!slug) return jsonError(400, "missing_slug");
+      if (!SLUG_RE.test(slug)) return jsonError(400, "invalid_slug");
+
+      // Resource path mirrors the EVM endpoint pattern but under /solana/.
+      // Binds the payment proof to this specific Solana endpoint + slug.
+      const resource = `${canonicalOrigin}${url.pathname}?slug=${encodeURIComponent(slug)}`;
+
+      const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader, solanaPayTo);
+      if (gateResult instanceof Response) return gateResult;
+
+      // ── Proxy to Netlify origin function ──────────────────────────────────
+      // Same origin function as the EVM endpoint — content is network-agnostic.
+      const originUrl =
+        `${canonicalOrigin}/.netlify/functions/x402-guide-brief` +
+        `?slug=${encodeURIComponent(slug)}`;
+
+      let originResponse: Response;
+      try {
+        originResponse = await fetch(originUrl, {
+          method: "GET",
+          headers: {
+            "X-Worker-Secret": env.X402_WORKER_SECRET,
+            "Accept": "application/json",
+          },
+        });
+      } catch {
+        return jsonError(502, "origin_unreachable");
+      }
+
+      const responseHeaders = new Headers(originResponse.headers);
+      responseHeaders.set(
+        "X-PAYMENT-RESPONSE",
+        paymentReceiptHeader(gateResult.settled, NETWORK_SOLANA_DEVNET)
       );
 
       return new Response(originResponse.body, {
