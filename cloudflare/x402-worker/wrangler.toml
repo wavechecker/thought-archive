@@ -62,3 +62,27 @@ X402_PRICE_USDC = "0.001"
 #   wrangler secret put X402_WORKER_SECRET
 # Set the same X402_WORKER_SECRET value in Netlify:
 #   Site settings → Environment variables → X402_WORKER_SECRET
+
+# ── Solana Devnet rail (optional second payment rail) ─────────────────────────
+#
+# Adds /api/x402/solana/guide-brief for Solana Devnet x402 payments.
+# No real monetary value. Solana mainnet is NOT supported in this build.
+#
+# Network : solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1  (Solana Devnet)
+# Mint    : 4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU  (Circle devnet USDC)
+# Faucet  : faucet.circle.com → select "Solana Devnet"
+#
+# Facilitator: x402.org/facilitator supports Solana Devnet without API key.
+#   (Same X402_FACILITATOR_URL secret — no additional facilitator needed.)
+#
+# Required secret:
+#   wrangler secret put X402_SOLANA_RECEIVING_ADDRESS
+#   → base58 Solana public key of your devnet receiver wallet
+#   → If absent, /api/x402/solana/* returns 503 x402_solana_not_configured
+#
+# Optional var (defaults to "0.001" when absent):
+# X402_SOLANA_PRICE_USDC = "0.001"
+#
+# Mainnet reference (do NOT use — requires CDP API keys, future PR):
+#   Network : solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp
+#   Mint    : EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v

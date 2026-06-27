@@ -1,9 +1,9 @@
-# PatientGuide x402 Testnet Worker
+# PatientGuide x402 Worker
 
-> **Status: TESTNET ONLY — Base Sepolia (`eip155:84532`)**
-> This worker is a payment-gating experiment using the x402 protocol on Base Sepolia
-> testnet USDC. No real funds are involved. Mainnet (`eip155:8453`) is not configured
-> and must not be used in this experiment.
+> **Status: Base Sepolia testnet active. Base mainnet code-ready (not deployed). Solana Devnet rail added (not deployed).**
+> No real funds are involved in testnet or Solana Devnet operation.
+> Base mainnet (`eip155:8453`) requires explicit secrets + deploy step.
+> Solana mainnet is NOT supported in this build (requires CDP API keys).
 
 ---
 
@@ -25,10 +25,10 @@ gated resource:
 
 1. Makes an initial request → receives a `402` response with a JSON
    `X-PAYMENT-REQUIRED` header describing how to pay (token, amount, address).
-2. Signs a USDC transfer authorisation (EIP-3009 `transferWithAuthorization`)
-   without broadcasting it to the chain.
+2. Signs a USDC transfer authorisation without broadcasting it to the chain.
+   (EVM: EIP-3009 `transferWithAuthorization`. Solana: SVM-native signing via `@x402/svm`.)
 3. Re-sends the request with the signed authorisation in an `X-PAYMENT` header.
-4. The server verifies and settles the payment via a **facilitator** (Coinbase CDP),
+4. The server verifies and settles the payment via a **facilitator** (`x402.org/facilitator`),
    then returns the protected resource.
 
 The whole flow happens in one HTTP round-trip for the caller.
@@ -184,13 +184,15 @@ Direct access to `/.netlify/functions/x402-guide-brief` without the correct secr
 
 ## Network identifiers
 
-| Identifier | Chain | Allowed in this experiment |
+| CAIP-2 identifier | Chain | Status |
 |---|---|---|
-| `eip155:84532` | Base Sepolia testnet | ✅ yes |
-| `eip155:8453` | Base mainnet | ❌ NO — do not use |
+| `eip155:84532` | Base Sepolia testnet | ✅ active (default) |
+| `eip155:8453` | Base mainnet | code-ready — not deployed |
+| `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1` | Solana Devnet | code-ready — not deployed |
+| `solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp` | Solana mainnet | ❌ NOT supported (requires CDP) |
 
-The Worker enforces `eip155:84532` at runtime. Any other value (including `eip155:8453`)
-causes the Worker to return `503 x402_network_not_allowed` — fails closed.
+The EVM path enforces mode/network consistency at runtime — a mismatch returns `503 x402_mode_network_mismatch`.
+The Solana Devnet endpoint is hard-coded to Devnet; Solana mainnet is blocked at code level.
 
 ---
 
@@ -204,8 +206,9 @@ causes the Worker to return `503 x402_network_not_allowed` — fails closed.
 | `/search/*` | Netlify (Astro) | ✅ yes |
 | `/sitemap*.xml` | Netlify (Astro) | ✅ yes |
 | `/robots.txt` | Netlify (Astro) | ✅ yes |
-| `/api/x402/ping` | Cloudflare Worker | x402 gated |
-| `/api/x402/guide-brief` | Cloudflare Worker → Netlify fn | x402 gated |
+| `/api/x402/ping` | Cloudflare Worker | x402 gated (EVM) |
+| `/api/x402/guide-brief` | Cloudflare Worker → Netlify fn | x402 gated (EVM) |
+| `/api/x402/solana/guide-brief` | Cloudflare Worker → Netlify fn | x402 gated (Solana Devnet) |
 
 ---
 
@@ -372,16 +375,25 @@ curl -i "https://patientguide.io/.netlify/functions/x402-guide-brief?slug=hypert
 
 ## Environment variables reference
 
+### EVM (Base) rail
+
 | Variable | Where | Description |
 |---|---|---|
 | `X402_MODE` | `wrangler.toml [vars]` or secret | `"testnet"` (default) or `"mainnet"`. Unknown values fail closed. |
 | `X402_NETWORK` | `wrangler.toml [vars]` or secret | CAIP-2 chain. Must match `X402_MODE`: testnet→`eip155:84532`, mainnet→`eip155:8453`. |
 | `X402_PRICE_USDC` | `wrangler.toml [vars]` or secret | Price per request in decimal USDC. Mainnet capped at 0.01 without override. |
-| `X402_RECEIVING_ADDRESS` | Wrangler secret | Receiving wallet. Testnet: any Sepolia address. Mainnet micro-test: `0x21Eacb…8561`. |
-| `X402_FACILITATOR_URL` | Wrangler secret | `https://x402.org/facilitator` |
+| `X402_RECEIVING_ADDRESS` | Wrangler secret | Receiving wallet (EVM). Testnet: any Sepolia address. Mainnet: `0x21Eacb…8561`. |
+| `X402_FACILITATOR_URL` | Wrangler secret | `https://x402.org/facilitator` (shared by EVM and Solana rails) |
 | `PATIENTGUIDE_ORIGIN` | Wrangler secret | `https://patientguide.io` — used to canonicalize x402 resource URLs |
 | `X402_WORKER_SECRET` | Wrangler secret + Netlify env | Shared secret for Worker→origin auth; prevents direct origin bypass |
 | `X402_ALLOW_HIGHER_MAINNET_PRICE` | Wrangler secret (optional) | Set `"true"` to allow mainnet price above 0.01 USDC. Do not set for the micro-test. |
+
+### Solana Devnet rail
+
+| Variable | Where | Description |
+|---|---|---|
+| `X402_SOLANA_RECEIVING_ADDRESS` | Wrangler secret | **Required** to activate Solana rail. Base58 Solana public key. If absent → `503 x402_solana_not_configured`. |
+| `X402_SOLANA_PRICE_USDC` | `wrangler.toml [vars]` or secret (optional) | Price per request in decimal USDC. Defaults to `"0.001"` when absent. |
 
 ---
 
@@ -453,3 +465,92 @@ is `base64(JSON.stringify(paymentPayload))`. Payment signing is EIP-712
 `TransferWithAuthorization` (EIP-3009) — the buyer signs an off-chain authorisation;
 no on-chain transaction is sent from the buyer. The facilitator at `x402.org` handles
 chain settlement after verifying the signature.
+
+---
+
+## Part 4 — Solana Devnet rail
+
+> **Status: code-ready, not yet deployed.**
+> Adds `/api/x402/solana/guide-brief` as a second payment rail on Solana Devnet.
+> No real monetary value. Solana mainnet requires CDP API keys and is blocked at code level.
+
+### Why a separate endpoint
+
+The Solana endpoint lives at `/api/x402/solana/guide-brief` (not the same path as the
+EVM endpoint) to keep each rail independently testable and deployable. A single endpoint
+with multiple `accepts` entries is a future optimisation once both rails are proven.
+
+### Solana Devnet config values
+
+| Field | Value |
+|---|---|
+| Network (CAIP-2) | `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1` |
+| USDC mint | `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU` (Circle devnet) |
+| USDC decimals | 6 (same as EVM USDC) |
+| Price default | `0.001` USDC = `1000` atomic units |
+| Facilitator | `https://x402.org/facilitator` (shared with EVM rail, no API key needed for devnet) |
+| Solana mainnet | `solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp` — NOT enabled |
+
+### What the Worker does
+
+The Worker produces a standard x402 `402` response with Solana Devnet payment requirements.
+The `X-PAYMENT` header from the client is passed to the facilitator unchanged. The Worker
+never parses the Solana payment payload — all network-specific verification and on-chain
+settlement is handled by `x402.org/facilitator`.
+
+The Netlify origin function (`x402-guide-brief`) is network-agnostic; the same function
+serves both EVM and Solana paid responses.
+
+### To deploy Solana Devnet rail
+
+```bash
+cd cloudflare/x402-worker
+
+# Create a Solana devnet receiver wallet (e.g. solana-keygen new)
+# and provide its base58 public key:
+wrangler secret put X402_SOLANA_RECEIVING_ADDRESS
+# → paste base58 Solana public key
+
+# X402_FACILITATOR_URL must already be set (shared with EVM rail)
+# Then deploy:
+npm run deploy
+```
+
+### To verify
+
+```bash
+# Should return 402 with Solana Devnet network and devnet USDC mint
+curl -i "https://patientguide.io/api/x402/solana/guide-brief?slug=hypertension"
+```
+
+Confirm the `accepts[0]` in the response body:
+- `network`: `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1`
+- `asset`: `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU`
+- `payTo`: your Solana devnet receiver public key
+- `maxAmountRequired`: `1000` (0.001 USDC)
+
+### Solana Devnet buyer test client
+
+A Solana test script is a **follow-up task** — it requires Solana-specific signing
+(`@x402/svm` or `@solana/web3.js`) which is fundamentally different from the EVM
+EIP-3009 flow. The existing `scripts/test-x402-paid-request.mjs` is EVM-only and
+cannot be used for Solana.
+
+**What a Solana buyer test would need:**
+- A Solana keypair (ed25519, not secp256k1) — generated with `solana-keygen new`
+- Devnet SOL for fees (Solana Devnet faucet: `solana airdrop 1`)
+- Devnet USDC — mint from [faucet.circle.com](https://faucet.circle.com/) → "Solana Devnet"
+- `@x402/svm` package for Solana payment payload construction
+- Guards equivalent to the EVM script (expected network, mint, receiver, max price)
+
+**Mainnet Solana note:** Solana mainnet requires a Coinbase CDP API key to use the CDP
+facilitator (`https://api.cdp.coinbase.com/platform/v2/x402`). This is a separate PR.
+
+### Facilitator support matrix
+
+| Network | Facilitator | API key required |
+|---|---|---|
+| Base Sepolia (`eip155:84532`) | `x402.org/facilitator` | No |
+| Base mainnet (`eip155:8453`) | `x402.org/facilitator` (verify) or CDP | TBD |
+| Solana Devnet | `x402.org/facilitator` | No |
+| Solana mainnet | `api.cdp.coinbase.com/platform/v2/x402` | Yes (CDP) |
