@@ -75,10 +75,20 @@ X402_PRICE_USDC = "0.001"
 # Facilitator: x402.org/facilitator supports Solana Devnet without API key.
 #   (Same X402_FACILITATOR_URL secret — no additional facilitator needed.)
 #
-# Required secret:
+# Required secrets:
 #   wrangler secret put X402_SOLANA_RECEIVING_ADDRESS
 #   → base58 Solana public key of your devnet receiver wallet
 #   → If absent, /api/x402/solana/* returns 503 x402_solana_not_configured
+#
+#   wrangler secret put X402_SOLANA_FEE_PAYER
+#   → base58 public key of the x402.org/facilitator Solana fee-payer address
+#   → Required by @x402/svm (ExactSvmScheme / ExactSvmSchemeV1): the client
+#     reads extra.feePayer from the 402 response to build its transaction.
+#     The facilitator validates that this address belongs to its own key pool.
+#   → Source: GET https://www.x402.org/facilitator/supported
+#             → signers["solana:*"][0]
+#   → If absent, /api/x402/solana/* returns 503 x402_solana_fee_payer_not_configured
+#   → Rotate if x402.org/facilitator rotates its Solana key pool.
 #
 # Optional var (defaults to "0.001" when absent):
 # X402_SOLANA_PRICE_USDC = "0.001"
