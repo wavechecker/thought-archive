@@ -267,7 +267,7 @@ function build402Response(env: Env, mode: X402Mode, resource: string): Response 
 
 // ── Solana Devnet payment requirements ────────────────────────────────────────
 
-function buildSolanaPaymentRequirements(env: Env, resource: string): PaymentRequirements {
+function buildSolanaPaymentRequirements(env: Env, resource: string, payTo: string): PaymentRequirements {
   return {
     scheme: "exact",
     network: NETWORK_SOLANA_DEVNET,
@@ -275,8 +275,7 @@ function buildSolanaPaymentRequirements(env: Env, resource: string): PaymentRequ
     resource,
     description: "PatientGuide x402 Solana Devnet experiment",
     mimeType: "application/json",
-    // X402_SOLANA_RECEIVING_ADDRESS is validated before this function is called.
-    payTo: env.X402_SOLANA_RECEIVING_ADDRESS!,
+    payTo,
     maxTimeoutSeconds: 300,
     asset: USDC_SOLANA_DEVNET,
     // No EIP-712 domain for Solana — extra is empty.
@@ -285,10 +284,10 @@ function buildSolanaPaymentRequirements(env: Env, resource: string): PaymentRequ
   };
 }
 
-function buildSolana402Response(env: Env, resource: string): Response {
+function buildSolana402Response(env: Env, resource: string, payTo: string): Response {
   const body = {
     x402Version: X402_VERSION,
-    accepts: [buildSolanaPaymentRequirements(env, resource)],
+    accepts: [buildSolanaPaymentRequirements(env, resource, payTo)],
     error: "Payment required — send X-PAYMENT header with Solana payment proof",
   };
   return new Response(JSON.stringify(body), {
@@ -399,13 +398,14 @@ async function runPaymentGate(
 async function runSolanaPaymentGate(
   env: Env,
   resource: string,
-  paymentHeader: string | null
+  paymentHeader: string | null,
+  payTo: string
 ): Promise<{ settled: SettleResult } | Response> {
   return runGate(
     env.X402_FACILITATOR_URL.replace(/\/+$/, ""),
-    buildSolanaPaymentRequirements(env, resource),
+    buildSolanaPaymentRequirements(env, resource, payTo),
     paymentHeader,
-    () => buildSolana402Response(env, resource)
+    () => buildSolana402Response(env, resource, payTo)
   );
 }
 
@@ -525,9 +525,17 @@ export default {
 
     // ── /api/x402/solana/guide-brief ─────────────────────────────────────────
     if (url.pathname === "/api/x402/solana/guide-brief") {
-      // Guard: receiver address must be configured. Fails closed if absent.
+      // Note: validateEnv() above validates the shared EVM env (X402_RECEIVING_ADDRESS,
+      // X402_NETWORK, etc.) before reaching this branch. The EVM/testnet config must
+      // remain present even when only the Solana endpoint is exercised. Do not
+      // refactor validateEnv to skip EVM checks for Solana requests.
+
+      // Guard: trim before testing so a whitespace-only secret fails closed with
+      // x402_solana_not_configured rather than reaching the facilitator as an
+      // invalid payTo address and returning payment_invalid instead.
       // Solana mainnet is not supported — this endpoint is Devnet-only.
-      if (!env.X402_SOLANA_RECEIVING_ADDRESS) {
+      const solanaPayTo = env.X402_SOLANA_RECEIVING_ADDRESS?.trim();
+      if (!solanaPayTo) {
         return jsonError(503, "x402_solana_not_configured");
       }
 
@@ -539,7 +547,7 @@ export default {
       // Binds the payment proof to this specific Solana endpoint + slug.
       const resource = `${canonicalOrigin}${url.pathname}?slug=${encodeURIComponent(slug)}`;
 
-      const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader);
+      const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader, solanaPayTo);
       if (gateResult instanceof Response) return gateResult;
 
       // ── Proxy to Netlify origin function ──────────────────────────────────
