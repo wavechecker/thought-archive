@@ -367,6 +367,10 @@ npm run deploy
 curl -i "https://patientguide.io/api/x402/ping"
 curl -i "https://patientguide.io/api/x402/guide-brief?slug=hypertension"
 
+# Solana Devnet endpoint — requires X402_SOLANA_RECEIVING_ADDRESS + X402_SOLANA_FEE_PAYER
+# X402_SOLANA_FEE_PAYER: GET https://www.x402.org/facilitator/supported → signers["solana:*"][0]
+curl -i "https://patientguide.io/api/x402/solana/guide-brief?slug=hypertension"
+
 # Origin bypass check — should return 403
 curl -i "https://patientguide.io/.netlify/functions/x402-guide-brief?slug=hypertension"
 ```
@@ -392,7 +396,8 @@ curl -i "https://patientguide.io/.netlify/functions/x402-guide-brief?slug=hypert
 
 | Variable | Where | Description |
 |---|---|---|
-| `X402_SOLANA_RECEIVING_ADDRESS` | Wrangler secret | **Required** to activate Solana rail. Base58 Solana public key. If absent → `503 x402_solana_not_configured`. |
+| `X402_SOLANA_RECEIVING_ADDRESS` | Wrangler secret | **Required.** Base58 Solana public key of your devnet receiver. If absent → `503 x402_solana_not_configured`. |
+| `X402_SOLANA_FEE_PAYER` | Wrangler secret | **Required.** Base58 public key of the x402.org/facilitator Solana fee-payer address. Required by `@x402/svm` — the client reads `extra.feePayer` from the 402 response to build its transaction. The facilitator validates it belongs to its own key pool. Source: `GET https://www.x402.org/facilitator/supported` → `signers["solana:*"][0]`. If absent → `503 x402_solana_fee_payer_not_configured`. Rotate if the facilitator rotates its Solana key pool. |
 | `X402_SOLANA_PRICE_USDC` | `wrangler.toml [vars]` or secret (optional) | Price per request in decimal USDC. Defaults to `"0.001"` when absent. |
 
 ---
@@ -511,6 +516,11 @@ cd cloudflare/x402-worker
 wrangler secret put X402_SOLANA_RECEIVING_ADDRESS
 # → paste base58 Solana public key
 
+# Facilitator fee-payer address — required by @x402/svm.
+# Source: GET https://www.x402.org/facilitator/supported → signers["solana:*"][0]
+wrangler secret put X402_SOLANA_FEE_PAYER
+# → paste base58 fee-payer public key from the facilitator supported endpoint
+
 # X402_FACILITATOR_URL must already be set (shared with EVM rail)
 # Then deploy:
 npm run deploy
@@ -528,6 +538,7 @@ Confirm the `accepts[0]` in the response body:
 - `asset`: `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU`
 - `payTo`: your Solana devnet receiver public key
 - `maxAmountRequired`: `1000` (0.001 USDC)
+- `extra.feePayer`: the x402.org/facilitator fee-payer address you set in `X402_SOLANA_FEE_PAYER`
 
 ### Solana Devnet buyer test client
 

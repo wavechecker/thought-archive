@@ -140,6 +140,21 @@ export interface Env {
    * Set in wrangler.toml [vars] or via `wrangler secret put X402_SOLANA_PRICE_USDC`.
    */
   X402_SOLANA_PRICE_USDC?: string;
+  /**
+   * Solana fee-payer address managed by the x402.org facilitator.
+   * Required by @x402/svm (ExactSvmScheme / ExactSvmSchemeV1): the client reads
+   * extra.feePayer from the 402 response to build the partially-signed transaction.
+   * The facilitator validates that this address belongs to its own key pool.
+   *
+   * Source: GET https://www.x402.org/facilitator/supported
+   *   → kinds[].extra.feePayer for network solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1
+   *   → signers["solana:*"][0]
+   *
+   * Set via `wrangler secret put X402_SOLANA_FEE_PAYER`.
+   * If absent, /api/x402/solana/* returns 503 x402_solana_fee_payer_not_configured.
+   * Rotate this value if x402.org/facilitator rotates its Solana key pool.
+   */
+  X402_SOLANA_FEE_PAYER?: string;
 }
 
 // ── Mode helpers ───────────────────────────────────────────────────────────────
@@ -267,7 +282,7 @@ function build402Response(env: Env, mode: X402Mode, resource: string): Response 
 
 // ── Solana Devnet payment requirements ────────────────────────────────────────
 
-function buildSolanaPaymentRequirements(env: Env, resource: string, payTo: string): PaymentRequirements {
+function buildSolanaPaymentRequirements(env: Env, resource: string, payTo: string, feePayer: string): PaymentRequirements {
   return {
     scheme: "exact",
     network: NETWORK_SOLANA_DEVNET,
@@ -278,16 +293,17 @@ function buildSolanaPaymentRequirements(env: Env, resource: string, payTo: strin
     payTo,
     maxTimeoutSeconds: 300,
     asset: USDC_SOLANA_DEVNET,
-    // No EIP-712 domain for Solana — extra is empty.
-    // Client uses @x402/svm or equivalent for Solana-native signing.
-    extra: {},
+    // feePayer is the x402.org/facilitator Solana address that sponsors gas fees.
+    // Required by @x402/svm; validated by the facilitator during verify/settle.
+    // Value sourced from GET https://www.x402.org/facilitator/supported (signers["solana:*"]).
+    extra: { feePayer },
   };
 }
 
-function buildSolana402Response(env: Env, resource: string, payTo: string): Response {
+function buildSolana402Response(env: Env, resource: string, payTo: string, feePayer: string): Response {
   const body = {
     x402Version: X402_VERSION,
-    accepts: [buildSolanaPaymentRequirements(env, resource, payTo)],
+    accepts: [buildSolanaPaymentRequirements(env, resource, payTo, feePayer)],
     error: "Payment required — send X-PAYMENT header with Solana payment proof",
   };
   return new Response(JSON.stringify(body), {
@@ -399,13 +415,14 @@ async function runSolanaPaymentGate(
   env: Env,
   resource: string,
   paymentHeader: string | null,
-  payTo: string
+  payTo: string,
+  feePayer: string
 ): Promise<{ settled: SettleResult } | Response> {
   return runGate(
     env.X402_FACILITATOR_URL.replace(/\/+$/, ""),
-    buildSolanaPaymentRequirements(env, resource, payTo),
+    buildSolanaPaymentRequirements(env, resource, payTo, feePayer),
     paymentHeader,
-    () => buildSolana402Response(env, resource, payTo)
+    () => buildSolana402Response(env, resource, payTo, feePayer)
   );
 }
 
@@ -530,13 +547,20 @@ export default {
       // remain present even when only the Solana endpoint is exercised. Do not
       // refactor validateEnv to skip EVM checks for Solana requests.
 
-      // Guard: trim before testing so a whitespace-only secret fails closed with
-      // x402_solana_not_configured rather than reaching the facilitator as an
-      // invalid payTo address and returning payment_invalid instead.
+      // Guard: trim before testing so whitespace-only secrets fail closed.
       // Solana mainnet is not supported — this endpoint is Devnet-only.
       const solanaPayTo = env.X402_SOLANA_RECEIVING_ADDRESS?.trim();
       if (!solanaPayTo) {
         return jsonError(503, "x402_solana_not_configured");
+      }
+
+      // feePayer must be the x402.org/facilitator Solana address (from its key pool).
+      // Required by @x402/svm and validated by the facilitator during verify/settle.
+      // Set via `wrangler secret put X402_SOLANA_FEE_PAYER`.
+      // Source: GET https://www.x402.org/facilitator/supported → signers["solana:*"][0]
+      const solanaFeePayer = env.X402_SOLANA_FEE_PAYER?.trim();
+      if (!solanaFeePayer) {
+        return jsonError(503, "x402_solana_fee_payer_not_configured");
       }
 
       const slug = url.searchParams.get("slug");
@@ -547,7 +571,7 @@ export default {
       // Binds the payment proof to this specific Solana endpoint + slug.
       const resource = `${canonicalOrigin}${url.pathname}?slug=${encodeURIComponent(slug)}`;
 
-      const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader, solanaPayTo);
+      const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader, solanaPayTo, solanaFeePayer);
       if (gateResult instanceof Response) return gateResult;
 
       // ── Proxy to Netlify origin function ──────────────────────────────────
