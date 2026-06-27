@@ -1,0 +1,99 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = {
+  title: "Structured Access — PatientGuide.io",
+  description: "PatientGuide keeps plain-language health guides open to everyone. Structured JSON access for agents, apps, and AI workflows is in testnet/devnet preview.",
+};
+---
+
+<Layout {frontmatter}>
+  <article class="sa-page">
+    <header class="sa-header">
+      <h1 class="sa-title">Structured Access</h1>
+      <p class="sa-lead">Humans will always read for free. Machines can test structured access.</p>
+    </header>
+
+    <section class="sa-body">
+      <p>
+        PatientGuide keeps plain-language health guides open to everyone. Structured JSON access
+        for agents, apps, and AI workflows is currently in testnet/devnet preview, with mainnet
+        access coming soon.
+      </p>
+
+      <h2>What stays free</h2>
+      <p>
+        All public guides at <code>/guides/*</code>, posts at <code>/posts/*</code>, the homepage,
+        sitemap, and <code>robots.txt</code> are freely accessible to any reader or crawler. Nothing
+        about that changes.
+      </p>
+
+      <h2>What structured access covers</h2>
+      <p>
+        The structured-access layer provides machine-readable JSON summaries of guide content — useful
+        for agents, health apps, and AI workflows that need reliable, cited health data rather than
+        raw HTML. It is separate from the public site and does not affect human readers.
+      </p>
+
+      <h2>Current status</h2>
+      <p>
+        Paid structured access endpoints are in testnet/devnet preview. Mainnet access is coming
+        soon. Nothing here implies public guides are paywalled — they are not.
+      </p>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .sa-page {
+    max-width: 38rem;
+    margin: 0 auto;
+  }
+
+  .sa-header {
+    padding: var(--pg-space-8) 0 var(--pg-space-6);
+    border-bottom: 1px solid var(--pg-border);
+    margin-bottom: var(--pg-space-8);
+  }
+
+  .sa-title {
+    font-size: var(--pg-text-3xl);
+    font-weight: 700;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-3);
+    line-height: var(--pg-leading-tight);
+  }
+
+  .sa-lead {
+    font-size: var(--pg-text-lg);
+    color: var(--pg-text-soft);
+    margin: 0;
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  .sa-body {
+    font-size: var(--pg-text-base);
+    color: var(--pg-text-soft);
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  .sa-body p {
+    margin: 0 0 var(--pg-space-5);
+  }
+
+  .sa-body h2 {
+    font-size: var(--pg-text-lg);
+    font-weight: 600;
+    color: var(--pg-text);
+    margin: var(--pg-space-8) 0 var(--pg-space-3);
+  }
+
+  .sa-body code {
+    font-family: ui-monospace, monospace;
+    font-size: 0.875em;
+    background: var(--pg-surface-soft);
+    padding: 0.1em 0.35em;
+    border-radius: var(--pg-radius-sm);
+    color: var(--pg-text);
+  }
+</style>
