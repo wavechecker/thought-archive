@@ -220,7 +220,7 @@ console.log("Step 3: Signing EIP-712 TransferWithAuthorization…");
 // Random 32-byte nonce as 0x-prefixed hex (bytes32)
 const nonce = toHex(randomBytes(32));
 const now = Math.floor(Date.now() / 1000);
-const validAfter  = (now - 600).toString();  // 10-min grace window
+const validAfter  = "0";                       // x402 v2: validAfter must be 0 (valid from epoch)
 const validBefore = (now + Number(req.maxTimeoutSeconds)).toString();
 
 const signature = await account.signTypedData({
@@ -254,12 +254,23 @@ const signature = await account.signTypedData({
 console.log("  Signature :", signature.slice(0, 22) + "…");
 console.log();
 
-// ── Step 4: Encode x402 v1 payment payload ────────────────────────────────────
+// ── Step 4: Encode x402 v2 payment payload ────────────────────────────────────
+// v2 shape: { x402Version, accepted, payload }
+// "accepted" mirrors the server's PaymentRequirements (scheme/network/asset/amount/etc).
+// "amount" is the v2 field name for what the 402 body calls "maxAmountRequired".
+// "payload" carries the EIP-3009 authorization + signature.
 
 const paymentPayload = {
-  x402Version: 1,
-  scheme:  req.scheme,
-  network: req.network,
+  x402Version: 2,
+  accepted: {
+    scheme:            req.scheme,
+    network:           req.network,
+    asset:             req.asset,
+    amount:            req.maxAmountRequired,  // v2 field name
+    payTo:             req.payTo,
+    maxTimeoutSeconds: req.maxTimeoutSeconds,
+    extra:             req.extra,
+  },
   payload: {
     authorization: {
       from:        account.address,
@@ -273,7 +284,7 @@ const paymentPayload = {
   },
 };
 
-// X-PAYMENT = base64(JSON.stringify(payload))  — x402 v1 spec
+// X-PAYMENT = base64(JSON.stringify(payload))  — x402 v2 spec
 const xPaymentHeader = Buffer.from(JSON.stringify(paymentPayload), "utf8").toString("base64");
 
 // ── Step 5: Paid request ───────────────────────────────────────────────────────
