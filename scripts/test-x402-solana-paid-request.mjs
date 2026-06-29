@@ -264,14 +264,39 @@ if (!req.extra?.feePayer) {
 console.log("  All checks passed.");
 console.log();
 
-// ── Step 3: Build Solana payment payload via @x402/svm ExactSvmSchemeV1 ───────
+// ── Step 3: Build Solana payment payload ─────────────────────────────────────
+//
+// x402Version 2 uses a different PaymentPayload structure than v1:
+//   v1: { x402Version, scheme, network, payload }
+//   v2: { x402Version, accepted: <PaymentRequirements>, payload }
+//
+// ExactSvmSchemeV1 produces v1 format; we re-wrap into v2 before encoding.
+// The facilitator /supported endpoint registers Solana Devnet only under v2 with
+// the CAIP-2 network id solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1.
 
 console.log("Step 3: Building Solana payment payload (partially-signed tx)…");
 const scheme = new ExactSvmSchemeV1(signer);
 
 let paymentPayload;
 try {
-  paymentPayload = await scheme.createPaymentPayload(paymentBody.x402Version, req);
+  const v1Payload = await scheme.createPaymentPayload(paymentBody.x402Version, req);
+  // x402 v2 PaymentRequirements uses "amount" not "maxAmountRequired".
+  // Map the 402 response fields (v1 names) to the v2 schema for the facilitator.
+  const v2Accepted = {
+    scheme: req.scheme,
+    network: req.network,
+    asset: req.asset,
+    amount: req.maxAmountRequired,
+    payTo: req.payTo,
+    maxTimeoutSeconds: req.maxTimeoutSeconds,
+    extra: req.extra ?? {},
+  };
+  // Wrap as x402 v2 PaymentPayload: { x402Version, accepted, payload }.
+  paymentPayload = {
+    x402Version: v1Payload.x402Version,
+    accepted: v2Accepted,
+    payload: v1Payload.payload,
+  };
 } catch (err) {
   console.error("ERROR: Failed to build Solana payment payload:", err.message);
   console.error();
@@ -283,8 +308,8 @@ try {
 }
 
 console.log("  Transaction built and partially signed.");
-console.log("  Payload scheme       :", paymentPayload.scheme);
-console.log("  Payload network      :", paymentPayload.network);
+console.log("  Payload scheme       :", paymentPayload.accepted?.scheme);
+console.log("  Payload network      :", paymentPayload.accepted?.network);
 console.log("  Tx (first 40 chars)  :", paymentPayload.payload?.transaction?.slice(0, 40) + "…");
 console.log();
 
