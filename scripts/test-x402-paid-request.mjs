@@ -46,7 +46,7 @@
  *     endpoint misconfiguration before any signing happens.
  *
  * ── PROTOCOL NOTES ────────────────────────────────────────────────────────────
- *   The Worker uses x402Version=1 with CAIP-2 network IDs.
+ *   The Worker uses x402Version=2 with CAIP-2 network IDs.
  *   X-PAYMENT = base64(JSON.stringify(paymentPayload))
  *   Payment signing is EIP-712 TransferWithAuthorization (EIP-3009).
  *   No on-chain transaction from the buyer — the x402.org facilitator settles.
