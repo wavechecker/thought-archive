@@ -317,6 +317,7 @@ The Netlify function `/.netlify/functions/x402-guide-brief` continues to require
 | `netlify/functions/x402-guide-briefs.json` | Pre-built guide brief data (gitignored — built at deploy time) |
 | `scripts/build-x402-guide-briefs.mjs` | Build script that generates x402-guide-briefs.json |
 | `scripts/test-x402-paid-request.mjs` | Local buyer test client (testnet + mainnet) |
+| `scripts/test-x402-solana-paid-request.mjs` | Solana Devnet buyer test client (`@x402/svm`) |
 
 ---
 
@@ -542,17 +543,31 @@ Confirm the `accepts[0]` in the response body:
 
 ### Solana Devnet buyer test client
 
-A Solana test script is a **follow-up task** — it requires Solana-specific signing
-(`@x402/svm` or `@solana/web3.js`) which is fundamentally different from the EVM
-EIP-3009 flow. The existing `scripts/test-x402-paid-request.mjs` is EVM-only and
-cannot be used for Solana.
+`scripts/test-x402-solana-paid-request.mjs` — uses `@x402/svm` (`ExactSvmSchemeV1`) to
+build a partially-signed Solana SPL Token transfer, then submits it via the X-PAYMENT header.
+The EVM script (`scripts/test-x402-paid-request.mjs`) is EVM-only and cannot be used here.
 
-**What a Solana buyer test would need:**
-- A Solana keypair (ed25519, not secp256k1) — generated with `solana-keygen new`
-- Devnet SOL for fees (Solana Devnet faucet: `solana airdrop 1`)
-- Devnet USDC — mint from [faucet.circle.com](https://faucet.circle.com/) → "Solana Devnet"
-- `@x402/svm` package for Solana payment payload construction
-- Guards equivalent to the EVM script (expected network, mint, receiver, max price)
+**Prerequisites:**
+- A Solana keypair (ed25519) — generated with `solana-keygen new --outfile /tmp/x402-buyer.json`
+- Devnet SOL for fees — `solana airdrop 1 /tmp/x402-buyer.json --url devnet`
+- Devnet USDC — [faucet.circle.com](https://faucet.circle.com/) → "Solana Devnet"
+- Receiver ATA must exist (see ATA setup commands in the script header)
+
+**Run:**
+
+```bash
+export X402_SOLANA_BUYER_KEYPAIR_PATH=/tmp/x402-buyer.json
+export X402_EXPECTED_SOLANA_NETWORK=solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1
+export X402_EXPECTED_SOLANA_MINT=4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU
+export X402_EXPECTED_SOLANA_PAYTO=DBti9QNp9BwZCDDnw5BEQfqLrUXZvFyTTDpPDYC2AUpS
+export X402_SOLANA_MAX_USDC=0.01
+
+npm run test:x402:solana
+# or: node scripts/test-x402-solana-paid-request.mjs
+```
+
+The script aborts before signing if any guard value does not match the 402 response.
+The buyer private key is loaded from the keypair FILE only — never from an env var.
 
 **Mainnet Solana note:** Solana mainnet requires a Coinbase CDP API key to use the CDP
 facilitator (`https://api.cdp.coinbase.com/platform/v2/x402`). This is a separate PR.

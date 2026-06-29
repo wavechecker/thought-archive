@@ -37,6 +37,11 @@
  *   Solana mainnet is NOT enabled — requires CDP API keys (future PR).
  */
 
+// ── Facilitator default ────────────────────────────────────────────────────────
+
+// Canonical x402.org facilitator URL. Use www to avoid redirect.
+const DEFAULT_FACILITATOR_URL = "https://www.x402.org/facilitator";
+
 // ── EVM asset constants ────────────────────────────────────────────────────────
 
 // Testnet USDC — Base Sepolia. No real monetary value.
@@ -49,7 +54,10 @@ const USDC_BASE_SEPOLIA = "0x036CbD53842c5426634e7929541eC2318f3dCF7e";
 const USDC_BASE_MAINNET = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
 
 const USDC_DECIMALS = 6;
-const X402_VERSION = 1;
+// x402 protocol version. Must be 2 for CAIP-2 network identifiers (eip155:*, solana:*).
+// The facilitator's /supported endpoint only maps CAIP-2 networks to x402Version 2;
+// x402Version 1 used legacy names ("base-sepolia", "solana-devnet").
+const X402_VERSION = 2;
 
 // ── EVM network constants ──────────────────────────────────────────────────────
 
@@ -178,6 +186,45 @@ function networkNameForMode(mode: X402Mode): string {
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
+
+function normalizeFacilitatorUrl(raw: string | undefined): string {
+  return (raw || DEFAULT_FACILITATOR_URL)
+    .replace(/^﻿/, "")
+    .trim()
+    .replace(/\/+$/, "");
+}
+
+// Decode the base64 X-PAYMENT header into a JSON object.
+// The x402.org facilitator /verify and /settle endpoints expect
+// { paymentPayload: <object>, paymentRequirements: <object> }, NOT the raw
+// base64 string in a paymentHeader field.
+function decodePaymentHeader(paymentHeader: string): object {
+  let decoded: unknown;
+  try {
+    decoded = JSON.parse(atob(paymentHeader));
+  } catch {
+    throw new Error("payment_header_not_base64_json");
+  }
+  if (!decoded || typeof decoded !== "object" || Array.isArray(decoded)) {
+    throw new Error("payment_header_not_object");
+  }
+  return decoded as object;
+}
+
+// Convert internal PaymentRequirements (v1 field names) to the x402 v2 wire
+// format that the facilitator /verify and /settle endpoints expect.
+// v2 uses "amount" instead of "maxAmountRequired" and drops v1-only fields.
+function toFacilitatorRequirements(req: PaymentRequirements): Record<string, unknown> {
+  return {
+    scheme: req.scheme,
+    network: req.network,
+    asset: req.asset,
+    amount: req.maxAmountRequired,
+    payTo: req.payTo,
+    maxTimeoutSeconds: req.maxTimeoutSeconds,
+    extra: req.extra,
+  };
+}
 
 function usdcToAtomicUnits(usdc: string): string {
   const match = usdc.match(/^(\d+)(?:\.(\d{1,6}))?$/);
@@ -327,13 +374,21 @@ async function verifyPayment(
   paymentHeader: string,
   paymentRequirements: PaymentRequirements
 ): Promise<VerifyResult> {
+  let paymentPayload: object;
+  try {
+    paymentPayload = decodePaymentHeader(paymentHeader);
+  } catch (e) {
+    return { isValid: false, invalidReason: String(e) };
+  }
   const res = await fetch(`${facilitatorBase}/verify`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ x402Version: X402_VERSION, paymentHeader, paymentRequirements }),
+    body: JSON.stringify({ x402Version: X402_VERSION, paymentPayload, paymentRequirements: toFacilitatorRequirements(paymentRequirements) }),
   });
   if (!res.ok) {
-    return { isValid: false, invalidReason: `Facilitator HTTP ${res.status}` };
+    let body = "";
+    try { body = await res.text(); } catch { /* ignore */ }
+    return { isValid: false, invalidReason: `Facilitator HTTP ${res.status}: ${body.slice(0, 500)}` };
   }
   return (await res.json()) as VerifyResult;
 }
@@ -349,10 +404,16 @@ async function settlePayment(
   paymentHeader: string,
   paymentRequirements: PaymentRequirements
 ): Promise<SettleResult> {
+  let paymentPayload: object;
+  try {
+    paymentPayload = decodePaymentHeader(paymentHeader);
+  } catch {
+    return { success: false };
+  }
   const res = await fetch(`${facilitatorBase}/settle`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ x402Version: X402_VERSION, paymentHeader, paymentRequirements }),
+    body: JSON.stringify({ x402Version: X402_VERSION, paymentPayload, paymentRequirements: toFacilitatorRequirements(paymentRequirements) }),
   });
   if (!res.ok) return { success: false };
   return (await res.json()) as SettleResult;
@@ -376,7 +437,10 @@ async function runGate(
   }
 
   if (!verifyResult.isValid) {
-    return jsonError(402, "payment_invalid");
+    return new Response(
+      JSON.stringify({ error: "payment_invalid", reason: verifyResult.invalidReason ?? null }),
+      { status: 402, headers: { "Content-Type": "application/json" } }
+    );
   }
 
   let settleResult: SettleResult;
@@ -402,7 +466,7 @@ async function runPaymentGate(
   paymentHeader: string | null
 ): Promise<{ settled: SettleResult } | Response> {
   return runGate(
-    env.X402_FACILITATOR_URL.replace(/\/+$/, ""),
+    normalizeFacilitatorUrl(env.X402_FACILITATOR_URL),
     buildPaymentRequirements(env, mode, resource),
     paymentHeader,
     () => build402Response(env, mode, resource)
@@ -419,7 +483,7 @@ async function runSolanaPaymentGate(
   feePayer: string
 ): Promise<{ settled: SettleResult } | Response> {
   return runGate(
-    env.X402_FACILITATOR_URL.replace(/\/+$/, ""),
+    normalizeFacilitatorUrl(env.X402_FACILITATOR_URL),
     buildSolanaPaymentRequirements(env, resource, payTo, feePayer),
     paymentHeader,
     () => buildSolana402Response(env, resource, payTo, feePayer)

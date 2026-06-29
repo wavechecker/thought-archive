@@ -23,11 +23,13 @@
     "validate:jsonld": "node scripts/validate-jsonld.mjs",
     "audit:nonclickable-links": "node scripts/content-linking/audit-nonclickable-links.mjs",
     "content:check": "node scripts/content/preflight.mjs",
-    "content:fix": "node scripts/content/preflight.mjs --fix"
+    "content:fix": "node scripts/content/preflight.mjs --fix",
+    "test:x402:solana": "node scripts/test-x402-solana-paid-request.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/markdown-remark": "^6.3.3",
+    "@x402/svm": "^2.17.0",
     "astro": "^5.12.3",
     "mermaid": "^11.12.2",
     "typescript": "^5.9.2"
