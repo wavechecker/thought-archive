@@ -399,6 +399,27 @@ interface SettleResult {
   networkId?: string;
 }
 
+// Map v2 facilitator settle response fields (transaction/network) to internal
+// SettleResult fields (txHash/networkId), preserving v1 responses as-is.
+function normalizeSettleResult(result: unknown): SettleResult {
+  const r = result as Record<string, unknown>;
+  return {
+    success: Boolean(r.success),
+    txHash:
+      typeof r.txHash === "string"
+        ? r.txHash
+        : typeof r.transaction === "string"
+          ? r.transaction
+          : undefined,
+    networkId:
+      typeof r.networkId === "string"
+        ? r.networkId
+        : typeof r.network === "string"
+          ? r.network
+          : undefined,
+  };
+}
+
 async function settlePayment(
   facilitatorBase: string,
   paymentHeader: string,
@@ -416,7 +437,7 @@ async function settlePayment(
     body: JSON.stringify({ x402Version: X402_VERSION, paymentPayload, paymentRequirements: toFacilitatorRequirements(paymentRequirements) }),
   });
   if (!res.ok) return { success: false };
-  return (await res.json()) as SettleResult;
+  return normalizeSettleResult(await res.json());
 }
 
 // ── Payment gate (network-agnostic core) ──────────────────────────────────────
