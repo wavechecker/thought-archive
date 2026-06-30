@@ -28,6 +28,8 @@
  *   /api/x402/ping                — Worker-only test endpoint (no origin call, Base/EVM)
  *   /api/x402/guide-brief         — Paid structured guide metadata (Base/EVM)
  *   /api/x402/solana/guide-brief  — Paid structured guide metadata (Solana Devnet)
+ *   /api/x402/red-flags           — Paid structured urgent-care signals (Base/EVM)
+ *   /api/x402/solana/red-flags    — Paid structured urgent-care signals (Solana Devnet)
  *
  * SOLANA DEVNET RAIL:
  *   A second payment rail on Solana Devnet. No real monetary value.
@@ -663,6 +665,101 @@ export default {
       // Same origin function as the EVM endpoint — content is network-agnostic.
       const originUrl =
         `${canonicalOrigin}/.netlify/functions/x402-guide-brief` +
+        `?slug=${encodeURIComponent(slug)}`;
+
+      let originResponse: Response;
+      try {
+        originResponse = await fetch(originUrl, {
+          method: "GET",
+          headers: {
+            "X-Worker-Secret": env.X402_WORKER_SECRET,
+            "Accept": "application/json",
+          },
+        });
+      } catch {
+        return jsonError(502, "origin_unreachable");
+      }
+
+      const responseHeaders = new Headers(originResponse.headers);
+      responseHeaders.set(
+        "X-PAYMENT-RESPONSE",
+        paymentReceiptHeader(gateResult.settled, NETWORK_SOLANA_DEVNET)
+      );
+
+      return new Response(originResponse.body, {
+        status: originResponse.status,
+        headers: responseHeaders,
+      });
+    }
+
+    // ── /api/x402/red-flags ──────────────────────────────────────────────────
+    if (url.pathname === "/api/x402/red-flags") {
+      const slug = url.searchParams.get("slug");
+
+      if (!slug) {
+        return jsonError(400, "missing_slug");
+      }
+      if (!SLUG_RE.test(slug)) {
+        return jsonError(400, "invalid_slug");
+      }
+
+      const resource = `${canonicalOrigin}${url.pathname}?slug=${encodeURIComponent(slug)}`;
+
+      const gateResult = await runPaymentGate(env, mode, resource, paymentHeader);
+      if (gateResult instanceof Response) return gateResult;
+
+      const originUrl =
+        `${canonicalOrigin}/.netlify/functions/x402-red-flags` +
+        `?slug=${encodeURIComponent(slug)}`;
+
+      let originResponse: Response;
+      try {
+        originResponse = await fetch(originUrl, {
+          method: "GET",
+          headers: {
+            "X-Worker-Secret": env.X402_WORKER_SECRET,
+            "Accept": "application/json",
+          },
+        });
+      } catch {
+        return jsonError(502, "origin_unreachable");
+      }
+
+      const responseHeaders = new Headers(originResponse.headers);
+      responseHeaders.set(
+        "X-PAYMENT-RESPONSE",
+        paymentReceiptHeader(gateResult.settled, env.X402_NETWORK)
+      );
+
+      return new Response(originResponse.body, {
+        status: originResponse.status,
+        headers: responseHeaders,
+      });
+    }
+
+    // ── /api/x402/solana/red-flags ───────────────────────────────────────────
+    if (url.pathname === "/api/x402/solana/red-flags") {
+      const solanaPayTo = env.X402_SOLANA_RECEIVING_ADDRESS?.trim();
+      if (!solanaPayTo) {
+        return jsonError(503, "x402_solana_not_configured");
+      }
+
+      const solanaFeePayer = env.X402_SOLANA_FEE_PAYER?.trim();
+      if (!solanaFeePayer) {
+        return jsonError(503, "x402_solana_fee_payer_not_configured");
+      }
+
+      const slug = url.searchParams.get("slug");
+      if (!slug) return jsonError(400, "missing_slug");
+      if (!SLUG_RE.test(slug)) return jsonError(400, "invalid_slug");
+
+      const resource = `${canonicalOrigin}${url.pathname}?slug=${encodeURIComponent(slug)}`;
+
+      const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader, solanaPayTo, solanaFeePayer);
+      if (gateResult instanceof Response) return gateResult;
+
+      const originUrl =
+        `${canonicalOrigin}/.netlify/functions/x402-red-flags` +
         `?slug=${encodeURIComponent(slug)}`;
 
       let originResponse: Response;
