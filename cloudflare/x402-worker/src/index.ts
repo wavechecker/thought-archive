@@ -523,6 +523,45 @@ function paymentReceiptHeader(settled: SettleResult, network: string): string {
   });
 }
 
+// ── Origin proxy helper ────────────────────────────────────────────────────────
+
+// Proxies a paid request to the Netlify origin function and returns the
+// composed response. X-PAYMENT-RESPONSE is attached only when the origin
+// returns 2xx — if the origin errors after settlement, the error is forwarded
+// without advertising a success receipt.
+async function proxyToOrigin(
+  canonicalOrigin: string,
+  workerSecret: string,
+  functionName: string,
+  slug: string,
+  settled: SettleResult,
+  network: string
+): Promise<Response> {
+  const originUrl =
+    `${canonicalOrigin}/.netlify/functions/${functionName}` +
+    `?slug=${encodeURIComponent(slug)}`;
+  let originResponse: Response;
+  try {
+    originResponse = await fetch(originUrl, {
+      method: "GET",
+      headers: {
+        "X-Worker-Secret": workerSecret,
+        "Accept": "application/json",
+      },
+    });
+  } catch {
+    return jsonError(502, "origin_unreachable");
+  }
+  const responseHeaders = new Headers(originResponse.headers);
+  if (originResponse.ok) {
+    responseHeaders.set("X-PAYMENT-RESPONSE", paymentReceiptHeader(settled, network));
+  }
+  return new Response(originResponse.body, {
+    status: originResponse.status,
+    headers: responseHeaders,
+  });
+}
+
 // ── Worker entry point ─────────────────────────────────────────────────────────
 
 export default {
@@ -547,7 +586,7 @@ export default {
 
     // Strip BOM that Windows PowerShell may prepend when secrets are set via
     // piped input, and strip trailing slashes.
-    const canonicalOrigin = env.PATIENTGUIDE_ORIGIN.replace(/^﻿/, "").replace(/\/+$/, "");
+    const canonicalOrigin = env.PATIENTGUIDE_ORIGIN.replace(/^﻿/, "").replace(/\r/g, "").replace(/\/+$/, "");
 
     const paymentHeader = request.headers.get("X-PAYMENT");
 
@@ -578,6 +617,24 @@ export default {
       );
     }
 
+    // ── Method guard: structured PSO endpoints only accept GET ───────────────
+    // Non-GET requests (POST, PUT, etc.) are rejected before any payment flow.
+    // /api/x402/ping is intentionally excluded — it is a Worker-only test route.
+    const STRUCTURED_PATHS = new Set([
+      "/api/x402/guide-brief",
+      "/api/x402/red-flags",
+      "/api/x402/visit-prep",
+      "/api/x402/solana/guide-brief",
+      "/api/x402/solana/red-flags",
+      "/api/x402/solana/visit-prep",
+    ]);
+    if (STRUCTURED_PATHS.has(url.pathname) && request.method !== "GET") {
+      return new Response(JSON.stringify({ error: "method_not_allowed" }), {
+        status: 405,
+        headers: { "Allow": "GET", "Content-Type": "application/json" },
+      });
+    }
+
     // ── /api/x402/guide-brief ────────────────────────────────────────────────
     if (url.pathname === "/api/x402/guide-brief") {
       const slug = url.searchParams.get("slug");
@@ -597,36 +654,7 @@ export default {
       const gateResult = await runPaymentGate(env, mode, resource, paymentHeader);
       if (gateResult instanceof Response) return gateResult;
 
-      // ── Proxy to Netlify origin function ──────────────────────────────────
-      // Settlement is required before origin access. If settlement fails above,
-      // runPaymentGate returns an error Response and we never reach this point.
-      const originUrl =
-        `${canonicalOrigin}/.netlify/functions/x402-guide-brief` +
-        `?slug=${encodeURIComponent(slug)}`;
-
-      let originResponse: Response;
-      try {
-        originResponse = await fetch(originUrl, {
-          method: "GET",
-          headers: {
-            "X-Worker-Secret": env.X402_WORKER_SECRET,
-            "Accept": "application/json",
-          },
-        });
-      } catch {
-        return jsonError(502, "origin_unreachable");
-      }
-
-      const responseHeaders = new Headers(originResponse.headers);
-      responseHeaders.set(
-        "X-PAYMENT-RESPONSE",
-        paymentReceiptHeader(gateResult.settled, env.X402_NETWORK)
-      );
-
-      return new Response(originResponse.body, {
-        status: originResponse.status,
-        headers: responseHeaders,
-      });
+      return proxyToOrigin(canonicalOrigin, env.X402_WORKER_SECRET, "x402-guide-brief", slug, gateResult.settled, env.X402_NETWORK);
     }
 
     // ── /api/x402/solana/guide-brief ─────────────────────────────────────────
@@ -663,35 +691,8 @@ export default {
       const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader, solanaPayTo, solanaFeePayer);
       if (gateResult instanceof Response) return gateResult;
 
-      // ── Proxy to Netlify origin function ──────────────────────────────────
       // Same origin function as the EVM endpoint — content is network-agnostic.
-      const originUrl =
-        `${canonicalOrigin}/.netlify/functions/x402-guide-brief` +
-        `?slug=${encodeURIComponent(slug)}`;
-
-      let originResponse: Response;
-      try {
-        originResponse = await fetch(originUrl, {
-          method: "GET",
-          headers: {
-            "X-Worker-Secret": env.X402_WORKER_SECRET,
-            "Accept": "application/json",
-          },
-        });
-      } catch {
-        return jsonError(502, "origin_unreachable");
-      }
-
-      const responseHeaders = new Headers(originResponse.headers);
-      responseHeaders.set(
-        "X-PAYMENT-RESPONSE",
-        paymentReceiptHeader(gateResult.settled, NETWORK_SOLANA_DEVNET)
-      );
-
-      return new Response(originResponse.body, {
-        status: originResponse.status,
-        headers: responseHeaders,
-      });
+      return proxyToOrigin(canonicalOrigin, env.X402_WORKER_SECRET, "x402-guide-brief", slug, gateResult.settled, NETWORK_SOLANA_DEVNET);
     }
 
     // ── /api/x402/red-flags ──────────────────────────────────────────────────
@@ -710,33 +711,7 @@ export default {
       const gateResult = await runPaymentGate(env, mode, resource, paymentHeader);
       if (gateResult instanceof Response) return gateResult;
 
-      const originUrl =
-        `${canonicalOrigin}/.netlify/functions/x402-red-flags` +
-        `?slug=${encodeURIComponent(slug)}`;
-
-      let originResponse: Response;
-      try {
-        originResponse = await fetch(originUrl, {
-          method: "GET",
-          headers: {
-            "X-Worker-Secret": env.X402_WORKER_SECRET,
-            "Accept": "application/json",
-          },
-        });
-      } catch {
-        return jsonError(502, "origin_unreachable");
-      }
-
-      const responseHeaders = new Headers(originResponse.headers);
-      responseHeaders.set(
-        "X-PAYMENT-RESPONSE",
-        paymentReceiptHeader(gateResult.settled, env.X402_NETWORK)
-      );
-
-      return new Response(originResponse.body, {
-        status: originResponse.status,
-        headers: responseHeaders,
-      });
+      return proxyToOrigin(canonicalOrigin, env.X402_WORKER_SECRET, "x402-red-flags", slug, gateResult.settled, env.X402_NETWORK);
     }
 
     // ── /api/x402/solana/red-flags ───────────────────────────────────────────
@@ -760,33 +735,7 @@ export default {
       const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader, solanaPayTo, solanaFeePayer);
       if (gateResult instanceof Response) return gateResult;
 
-      const originUrl =
-        `${canonicalOrigin}/.netlify/functions/x402-red-flags` +
-        `?slug=${encodeURIComponent(slug)}`;
-
-      let originResponse: Response;
-      try {
-        originResponse = await fetch(originUrl, {
-          method: "GET",
-          headers: {
-            "X-Worker-Secret": env.X402_WORKER_SECRET,
-            "Accept": "application/json",
-          },
-        });
-      } catch {
-        return jsonError(502, "origin_unreachable");
-      }
-
-      const responseHeaders = new Headers(originResponse.headers);
-      responseHeaders.set(
-        "X-PAYMENT-RESPONSE",
-        paymentReceiptHeader(gateResult.settled, NETWORK_SOLANA_DEVNET)
-      );
-
-      return new Response(originResponse.body, {
-        status: originResponse.status,
-        headers: responseHeaders,
-      });
+      return proxyToOrigin(canonicalOrigin, env.X402_WORKER_SECRET, "x402-red-flags", slug, gateResult.settled, NETWORK_SOLANA_DEVNET);
     }
 
     // ── /api/x402/visit-prep ─────────────────────────────────────────────────
@@ -805,33 +754,7 @@ export default {
       const gateResult = await runPaymentGate(env, mode, resource, paymentHeader);
       if (gateResult instanceof Response) return gateResult;
 
-      const originUrl =
-        `${canonicalOrigin}/.netlify/functions/x402-visit-prep` +
-        `?slug=${encodeURIComponent(slug)}`;
-
-      let originResponse: Response;
-      try {
-        originResponse = await fetch(originUrl, {
-          method: "GET",
-          headers: {
-            "X-Worker-Secret": env.X402_WORKER_SECRET,
-            "Accept": "application/json",
-          },
-        });
-      } catch {
-        return jsonError(502, "origin_unreachable");
-      }
-
-      const responseHeaders = new Headers(originResponse.headers);
-      responseHeaders.set(
-        "X-PAYMENT-RESPONSE",
-        paymentReceiptHeader(gateResult.settled, env.X402_NETWORK)
-      );
-
-      return new Response(originResponse.body, {
-        status: originResponse.status,
-        headers: responseHeaders,
-      });
+      return proxyToOrigin(canonicalOrigin, env.X402_WORKER_SECRET, "x402-visit-prep", slug, gateResult.settled, env.X402_NETWORK);
     }
 
     // ── /api/x402/solana/visit-prep ──────────────────────────────────────────
@@ -855,33 +778,7 @@ export default {
       const gateResult = await runSolanaPaymentGate(env, resource, paymentHeader, solanaPayTo, solanaFeePayer);
       if (gateResult instanceof Response) return gateResult;
 
-      const originUrl =
-        `${canonicalOrigin}/.netlify/functions/x402-visit-prep` +
-        `?slug=${encodeURIComponent(slug)}`;
-
-      let originResponse: Response;
-      try {
-        originResponse = await fetch(originUrl, {
-          method: "GET",
-          headers: {
-            "X-Worker-Secret": env.X402_WORKER_SECRET,
-            "Accept": "application/json",
-          },
-        });
-      } catch {
-        return jsonError(502, "origin_unreachable");
-      }
-
-      const responseHeaders = new Headers(originResponse.headers);
-      responseHeaders.set(
-        "X-PAYMENT-RESPONSE",
-        paymentReceiptHeader(gateResult.settled, NETWORK_SOLANA_DEVNET)
-      );
-
-      return new Response(originResponse.body, {
-        status: originResponse.status,
-        headers: responseHeaders,
-      });
+      return proxyToOrigin(canonicalOrigin, env.X402_WORKER_SECRET, "x402-visit-prep", slug, gateResult.settled, NETWORK_SOLANA_DEVNET);
     }
 
     // ── Unknown /api/x402/* path ─────────────────────────────────────────────
