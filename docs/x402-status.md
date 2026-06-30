@@ -12,11 +12,16 @@ PatientGuide human-readable pages (`/guides`, `/posts`, `/ask`) remain publicly 
 
 | Item | Status |
 |------|--------|
-| Base Sepolia `exact` rail — end-to-end paid guide JSON | ✅ verified |
-| Solana Devnet `exact` rail — end-to-end paid guide JSON | ✅ verified |
+| Base Sepolia `exact` rail — guide-brief end-to-end paid JSON | ✅ verified |
+| Solana Devnet `exact` rail — guide-brief end-to-end paid JSON | ✅ verified |
+| guide-brief endpoint — Base Sepolia + Solana Devnet | ✅ live |
+| red-flags endpoint — Base Sepolia + Solana Devnet | ✅ live (402 verified) |
+| visit-prep endpoint — Base Sepolia + Solana Devnet | ✅ live (402 verified) |
 | Public `/guides` and `/posts` routes remain free | ✅ confirmed |
 | Base mainnet payments | ❌ not enabled |
 | Solana mainnet payments | ❌ not enabled |
+
+Worker version deployed: `22d1ef92-bf0f-4211-85d0-a7e55ecf572a` (2026-06-30)
 
 ---
 
@@ -142,7 +147,9 @@ node scripts/test-x402-solana-paid-request.mjs
 
 ---
 
-## Preview endpoints (implemented, not yet deployed)
+## Live PSO endpoints
+
+All three Patient Support Object types are now live on both Base Sepolia and Solana Devnet.
 
 ### Base Sepolia (EVM) — red-flags
 
@@ -150,7 +157,7 @@ node scripts/test-x402-solana-paid-request.mjs
 https://patientguide.io/api/x402/red-flags?slug=hypertension
 ```
 
-Expected payment requirements (mirrors guide-brief rail):
+Payment requirements (from live 402 response):
 
 | Field | Value |
 |-------|-------|
@@ -162,15 +169,14 @@ Expected payment requirements (mirrors guide-brief rail):
 | `maxAmountRequired` | `1000` (0.001 USDC) |
 | `extra` | `{"name":"USDC","version":"2"}` |
 
-Expected paid JSON shape: `{ slug, title, type: "red_flags", redFlags: [...], disclaimer }`.
+Paid JSON shape: `{ slug, title, type: "red_flags", redFlags: [...], disclaimer }`.
 
-**Supported slugs (preview — testnet/devnet only):**
+**Supported slugs (testnet/devnet only):**
 `hypertension`, `stroke`, `early-warning-signs-of-a-heart-attack`, `atrial-fibrillation`, `type-1-diabetes`, `asthma`, `sepsis`, `depression`
 
-Note: the supported slug is `early-warning-signs-of-a-heart-attack` (matching the guide at that slug). A generic `heart-attack` slug is not supported and will return 404.
+Note: the correct slug is `early-warning-signs-of-a-heart-attack`. A generic `heart-attack` slug is not supported and returns 404.
 
-Unsupported slugs return 404 after successful payment — consistent with guide-brief behavior.
-Public human-readable guides remain free; no guide page is gated.
+Unsupported slugs return 404 after successful payment. Public human-readable guides remain free.
 
 Manual 402 check (unpaid):
 ```sh
@@ -183,7 +189,7 @@ curl -i "https://patientguide.io/api/x402/red-flags?slug=hypertension"
 https://patientguide.io/api/x402/solana/red-flags?slug=hypertension
 ```
 
-Expected payment requirements (mirrors solana/guide-brief rail):
+Payment requirements (from live 402 response):
 
 | Field | Value |
 |-------|-------|
@@ -210,7 +216,7 @@ curl -i "https://patientguide.io/api/x402/solana/red-flags?slug=hypertension"
 https://patientguide.io/api/x402/visit-prep?slug=hypertension
 ```
 
-Expected payment requirements (mirrors guide-brief and red-flags rails):
+Payment requirements (from live 402 response):
 
 | Field | Value |
 |-------|-------|
@@ -222,13 +228,12 @@ Expected payment requirements (mirrors guide-brief and red-flags rails):
 | `maxAmountRequired` | `1000` (0.001 USDC) |
 | `extra` | `{"name":"USDC","version":"2"}` |
 
-Expected paid JSON shape: `{ slug, title, type: "visit_prep", whatToTrack: [...], whatToBring: [...], questionsToAsk: [...], whenToSeekUrgentHelp: [...], disclaimer }`.
+Paid JSON shape: `{ slug, title, type: "visit_prep", whatToTrack: [...], whatToBring: [...], questionsToAsk: [...], whenToSeekUrgentHelp: [...], disclaimer }`.
 
-**Supported slugs (preview — testnet/devnet only):**
+**Supported slugs (testnet/devnet only):**
 `hypertension`, `stroke`, `early-warning-signs-of-a-heart-attack`, `atrial-fibrillation`, `type-1-diabetes`, `asthma`, `sepsis`, `depression`
 
-Educational only — appointment-preparation checklists for patients before a healthcare visit.
-Not a diagnosis, treatment plan, or emergency triage tool.
+Educational only — appointment-preparation checklists. Not a diagnosis, treatment plan, or emergency triage tool.
 Public human-readable guides remain free; no guide page is gated.
 
 Manual 402 check (unpaid):
@@ -242,7 +247,7 @@ curl -i "https://patientguide.io/api/x402/visit-prep?slug=hypertension"
 https://patientguide.io/api/x402/solana/visit-prep?slug=hypertension
 ```
 
-Expected payment requirements (mirrors solana/red-flags rail):
+Payment requirements (from live 402 response):
 
 | Field | Value |
 |-------|-------|
@@ -267,7 +272,6 @@ curl -i "https://patientguide.io/api/x402/solana/visit-prep?slug=hypertension"
 
 These are identified next steps — none are implemented yet:
 
-1. **Deploy red-flags and visit-prep endpoints** — deploy Worker and Netlify after PR is merged and verified.
-2. **Expand structured slugs further** — 8 slugs supported in preview for both red-flags and visit-prep. Additional slugs can be added to the curated static maps after content review. Do not add slugs speculatively. Note: API slugs are independently documented keys — they do not need to match the guide URL slug for each condition.
-3. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
-4. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
+1. **Expand structured slugs further** — 8 slugs supported for all three PSO types. Additional slugs can be added to the curated static maps after content review. Do not add slugs speculatively. Note: API slugs are independently documented keys — they do not need to match the guide URL slug for each condition.
+2. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
+3. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
