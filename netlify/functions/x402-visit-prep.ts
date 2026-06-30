@@ -275,7 +275,7 @@ const VISIT_PREP: Record<string, VisitPrepEntry> = {
       "How often will I be seen for follow-up?",
     ],
     whenToSeekUrgentHelp: [
-      "If you are having thoughts of ending your life or cannot keep yourself safe, seek help now. Call emergency services, go to your nearest emergency department, or call a crisis line — in the US call or text 988; in the UK call 116 123 (Samaritans); in Australia call 13 11 14 (Lifeline).",
+      "If you are having thoughts of ending your life or cannot keep yourself safe, seek help now. Call emergency services, go to your nearest emergency department, or call a crisis line — in the US call or text 988; in the UK call 116 123 (Samaritans); in Australia call 13 11 14 (Lifeline); in other countries search for a crisis line in your area.",
       "Do not wait for a scheduled appointment if you are in crisis.",
     ],
     disclaimer: DISCLAIMER,
