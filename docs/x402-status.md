@@ -142,10 +142,65 @@ node scripts/test-x402-solana-paid-request.mjs
 
 ---
 
+## Preview endpoints (implemented, not yet deployed)
+
+### Base Sepolia (EVM) — red-flags
+
+```
+https://patientguide.io/api/x402/red-flags?slug=hypertension
+```
+
+Expected payment requirements (mirrors guide-brief rail):
+
+| Field | Value |
+|-------|-------|
+| `x402Version` | `2` |
+| `scheme` | `exact` |
+| `network` | `eip155:84532` |
+| `asset` | `0x036CbD53842c5426634e7929541eC2318f3dCF7e` |
+| `payTo` | `0x28C58Bc26Cd14b7f378937ED18081dA1A2976220` |
+| `maxAmountRequired` | `1000` (0.001 USDC) |
+| `extra` | `{"name":"USDC","version":"2"}` |
+
+Expected paid JSON shape: `{ slug, title, type: "red_flags", redFlags: [...], disclaimer }`.
+Initial data: hypertension only (curated static map in `netlify/functions/x402-red-flags.ts`).
+Unsupported slug returns 404 after successful payment — consistent with guide-brief behavior.
+
+Manual 402 check (unpaid):
+```sh
+curl -i "https://patientguide.io/api/x402/red-flags?slug=hypertension"
+```
+
+### Solana Devnet (SVM) — red-flags
+
+```
+https://patientguide.io/api/x402/solana/red-flags?slug=hypertension
+```
+
+Expected payment requirements (mirrors solana/guide-brief rail):
+
+| Field | Value |
+|-------|-------|
+| `x402Version` | `2` |
+| `scheme` | `exact` |
+| `network` | `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1` |
+| `asset` (mint) | `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU` |
+| `payTo` | `DBti9QNp9BwZCDDnw5BEQfqLrUXZvFyTTDpPDYC2AUpS` |
+| `maxAmountRequired` | `1000` (0.001 USDC) |
+| `extra.feePayer` | present (same as solana/guide-brief) |
+
+Manual 402 check (unpaid):
+```sh
+curl -i "https://patientguide.io/api/x402/solana/red-flags?slug=hypertension"
+```
+
+---
+
 ## Next candidate work
 
 These are identified next steps — none are implemented yet:
 
-1. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
-2. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
-3. **Structured endpoint expansion** — identify which additional guide slugs or resource types make sense beyond `guide-brief` before expanding the `/api/x402/` surface.
+1. **Deploy red-flags endpoints** — deploy Worker and Netlify after PR is merged and verified.
+2. **Expand red-flags slugs** — add additional slugs to the curated static map in `x402-red-flags.ts` after content review. Do not add slugs speculatively.
+3. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
+4. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
