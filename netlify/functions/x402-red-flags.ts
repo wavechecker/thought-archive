@@ -100,6 +100,50 @@ const RED_FLAGS: Record<string, RedFlagsEntry> = {
     disclaimer: DISCLAIMER,
   },
 
+  "early-warning-signs-of-a-heart-attack": {
+    slug: "early-warning-signs-of-a-heart-attack",
+    title: "Early Warning Signs of a Heart Attack",
+    type: "red_flags",
+    redFlags: [
+      {
+        signal:
+          "Chest pressure, tightness, squeezing, heaviness, or discomfort lasting more than a few minutes — or that goes away and comes back",
+        whyItMatters:
+          "Can indicate a heart attack. Heart attack pain is often described as pressure or fullness rather than sharp pain, and may ease briefly before returning — a pattern that should not be ignored.",
+        suggestedAction: "Call emergency services immediately.",
+      },
+      {
+        signal:
+          "Pain, pressure, or discomfort spreading to the arms, jaw, neck, back, or shoulders",
+        whyItMatters:
+          "Can indicate a heart attack even when chest pain is mild or absent. These are recognised patterns of referred cardiac pain, sometimes the only symptom present.",
+        suggestedAction: "Call emergency services immediately.",
+      },
+      {
+        signal:
+          "Sudden shortness of breath at rest or with minimal effort, especially alongside chest or arm discomfort",
+        whyItMatters:
+          "Can indicate the heart is struggling to pump effectively. It may appear before chest pain or in place of it.",
+        suggestedAction: "Call emergency services immediately.",
+      },
+      {
+        signal:
+          "Sudden cold sweat, nausea, or lightheadedness without a clear cause",
+        whyItMatters:
+          "Can accompany a heart attack — particularly in women and older adults — sometimes without prominent chest pain. These symptoms are often mistaken for indigestion or anxiety.",
+        suggestedAction: "Seek urgent medical care or call emergency services.",
+      },
+      {
+        signal:
+          "Severe and uncharacteristic fatigue, especially if new, unexplained, and combined with any other warning sign",
+        whyItMatters:
+          "Can be an early warning sign of a heart attack, particularly in women — sometimes appearing hours or days before other symptoms.",
+        suggestedAction: "Seek same-day medical advice, or call emergency services if other warning signs are also present.",
+      },
+    ],
+    disclaimer: DISCLAIMER,
+  },
+
   "atrial-fibrillation": {
     slug: "atrial-fibrillation",
     title: "Atrial Fibrillation",

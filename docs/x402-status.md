@@ -165,7 +165,9 @@ Expected payment requirements (mirrors guide-brief rail):
 Expected paid JSON shape: `{ slug, title, type: "red_flags", redFlags: [...], disclaimer }`.
 
 **Supported slugs (preview — testnet/devnet only):**
-`hypertension`, `stroke`, `atrial-fibrillation`, `type-1-diabetes`, `asthma`, `sepsis`, `depression`
+`hypertension`, `stroke`, `early-warning-signs-of-a-heart-attack`, `atrial-fibrillation`, `type-1-diabetes`, `asthma`, `sepsis`, `depression`
+
+Note: the supported slug is `early-warning-signs-of-a-heart-attack` (matching the guide at that slug). A generic `heart-attack` slug is not supported and will return 404.
 
 Unsupported slugs return 404 after successful payment — consistent with guide-brief behavior.
 Public human-readable guides remain free; no guide page is gated.
