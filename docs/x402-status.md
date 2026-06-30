@@ -13,8 +13,7 @@ PatientGuide human-readable pages (`/guides`, `/posts`, `/ask`) remain publicly 
 | Item | Status |
 |------|--------|
 | Base Sepolia `exact` rail — end-to-end paid guide JSON | ✅ verified |
-| Solana Devnet 402 response includes `feePayer` | ✅ verified |
-| Solana Devnet paid request client (`scripts/test-x402-solana-paid-request.mjs`) | ✅ exists |
+| Solana Devnet `exact` rail — end-to-end paid guide JSON | ✅ verified |
 | Public `/guides` and `/posts` routes remain free | ✅ confirmed |
 | Base mainnet payments | ❌ not enabled |
 | Solana mainnet payments | ❌ not enabled |
@@ -26,8 +25,6 @@ PatientGuide human-readable pages (`/guides`, `/posts`, `/ask`) remain publicly 
 - **Mainnet payments are not live.** No Base mainnet facilitator or auth path is enabled.
 - **Solana mainnet is blocked.** Devnet only.
 - **No public human-facing guide is gated.** The `/api/x402/` endpoints are the only paid surface.
-- **Solana Devnet end-to-end confirmation** (buyer → facilitator → paid JSON) has not been fully confirmed in a live run at the same level as Base Sepolia.
-
 ---
 
 ## Verified endpoints
@@ -50,20 +47,37 @@ Payment requirements (from live 402 response):
 | `maxAmountRequired` | `1000` (0.001 USDC) |
 | `extra` | `{"name":"USDC","version":"2"}` |
 
-### Solana Devnet
+### Solana Devnet (SVM exact) — verified end-to-end
 
 ```
 https://patientguide.io/api/x402/solana/guide-brief?slug=hypertension
 ```
 
-Payment requirements (from 402 response):
+Payment requirements (from live 402 response):
 
 | Field | Value |
 |-------|-------|
+| `x402Version` | `2` |
+| `scheme` | `exact` |
 | `network` | `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1` |
 | `asset` (mint) | `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU` |
 | `payTo` | `DBti9QNp9BwZCDDnw5BEQfqLrUXZvFyTTDpPDYC2AUpS` |
-| `feePayer` | included (x402 Solana requirement) |
+| `maxAmountRequired` | `1000` (0.001 USDC) |
+| `extra.feePayer` | `CKPKJWNdJEqa81x7CkZ14BVPiY6y16Sxs7owznqtWYp5` |
+
+#### End-to-end proof
+
+| Field | Value |
+|-------|-------|
+| Paid HTTP status | `200` |
+| Paid JSON returned | yes |
+| Returned title | `Hypertension: Symptoms, Causes, Diagnosis, Treatment, and Home Blood Pressure Monitoring` |
+| Returned slug | `hypertension` |
+| Settlement txHash | `3nRfo9Uuo5ixxNBkGSPrCc1UEpqGhAVvRPJAgnwLbQVntDMuyknnxJ6SiKUs6RJ4hKcZXzY567DSNsVkJzEhu699` |
+| Network confirmed | `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1` |
+| Buyer (disposable Devnet key) | `7FpeGwUqsw98yp3B7AC5enDjdYDHgZ1kiSUZ15xFiK4z` |
+
+No private key or keypair material is committed. The buyer keypair file is local-only and git-ignored.
 
 ---
 
@@ -132,7 +146,6 @@ node scripts/test-x402-solana-paid-request.mjs
 
 These are identified next steps — none are implemented yet:
 
-1. **Solana Devnet end-to-end confirmation** — run a full buyer → facilitator → paid JSON cycle at the same level of confidence as Base Sepolia, and document the result here.
-2. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
-3. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
-4. **Structured endpoint expansion** — identify which additional guide slugs or resource types make sense beyond `guide-brief` before expanding the `/api/x402/` surface.
+1. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
+2. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
+3. **Structured endpoint expansion** — identify which additional guide slugs or resource types make sense beyond `guide-brief` before expanding the `/api/x402/` surface.
