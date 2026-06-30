@@ -163,8 +163,14 @@ Expected payment requirements (mirrors guide-brief rail):
 | `extra` | `{"name":"USDC","version":"2"}` |
 
 Expected paid JSON shape: `{ slug, title, type: "red_flags", redFlags: [...], disclaimer }`.
-Initial data: hypertension only (curated static map in `netlify/functions/x402-red-flags.ts`).
-Unsupported slug returns 404 after successful payment — consistent with guide-brief behavior.
+
+**Supported slugs (preview — testnet/devnet only):**
+`hypertension`, `stroke`, `early-warning-signs-of-a-heart-attack`, `atrial-fibrillation`, `type-1-diabetes`, `asthma`, `sepsis`, `depression`
+
+Note: the supported slug is `early-warning-signs-of-a-heart-attack` (matching the guide at that slug). A generic `heart-attack` slug is not supported and will return 404.
+
+Unsupported slugs return 404 after successful payment — consistent with guide-brief behavior.
+Public human-readable guides remain free; no guide page is gated.
 
 Manual 402 check (unpaid):
 ```sh
@@ -189,6 +195,8 @@ Expected payment requirements (mirrors solana/guide-brief rail):
 | `maxAmountRequired` | `1000` (0.001 USDC) |
 | `extra.feePayer` | present (same as solana/guide-brief) |
 
+Supported slugs mirror the Base Sepolia list above. Unsupported slugs return 404 after payment.
+
 Manual 402 check (unpaid):
 ```sh
 curl -i "https://patientguide.io/api/x402/solana/red-flags?slug=hypertension"
@@ -201,6 +209,6 @@ curl -i "https://patientguide.io/api/x402/solana/red-flags?slug=hypertension"
 These are identified next steps — none are implemented yet:
 
 1. **Deploy red-flags endpoints** — deploy Worker and Netlify after PR is merged and verified.
-2. **Expand red-flags slugs** — add additional slugs to the curated static map in `x402-red-flags.ts` after content review. Do not add slugs speculatively.
+2. **Expand red-flags slugs further** — 8 slugs now supported in preview. Additional slugs can be added to the curated static map in `x402-red-flags.ts` after content review. Do not add slugs speculatively. Note: API slugs are independently documented keys — they do not need to match the guide URL slug for each condition.
 3. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
 4. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
