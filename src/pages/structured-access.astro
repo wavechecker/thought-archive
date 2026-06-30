@@ -12,34 +12,154 @@ const frontmatter = {
     <header class="sa-header">
       <h1 class="sa-title">Structured Access</h1>
       <p class="sa-lead">Humans will always read for free. Machines can test structured access.</p>
+      <p class="sa-preview-notice">Structured access is currently in testnet/devnet preview, with mainnet access coming soon.</p>
     </header>
 
     <section class="sa-body">
-      <p>
-        PatientGuide keeps plain-language health guides open to everyone. Structured JSON access
-        for agents, apps, and AI workflows is currently in testnet/devnet preview, with mainnet
-        access coming soon.
-      </p>
 
       <h2>What stays free</h2>
       <p>
-        All public guides at <code>/guides/*</code>, posts at <code>/posts/*</code>, the homepage,
-        sitemap, and <code>robots.txt</code> are freely accessible to any reader or crawler. Nothing
-        about that changes.
+        All of the following are freely accessible to any reader, crawler, or agent, with no payment
+        or registration required:
+      </p>
+      <ul>
+        <li>Public health guides at <code>/guides/*</code></li>
+        <li>Posts at <code>/posts/*</code></li>
+        <li>Category and tag pages</li>
+        <li>The homepage</li>
+        <li><code>/llms.txt</code></li>
+        <li><code>/sitemap.xml</code></li>
+        <li><code>/robots.txt</code></li>
+        <li>All other human-readable pages</li>
+      </ul>
+      <p>
+        Nothing about that changes. Public guides will remain free.
       </p>
 
-      <h2>What structured access covers</h2>
+      <h2>What structured access means</h2>
       <p>
-        The structured-access layer provides machine-readable JSON summaries of guide content — useful
-        for agents, health apps, and AI workflows that need reliable, cited health data rather than
-        raw HTML. It is separate from the public site and does not affect human readers.
+        Structured access is not a paywall for human readers. It is a metered JSON layer for agents,
+        apps, retrieval systems, and AI workflows that need cleaner, more consistent data than
+        scraped HTML provides. The public site stays open. The structured API is a separate layer
+        for machine clients.
       </p>
 
-      <h2>Current status</h2>
+      <h2>Live preview endpoints</h2>
       <p>
-        Paid structured access endpoints are in testnet/devnet preview. Mainnet access is coming
-        soon. Nothing here implies public guides are paywalled — they are not.
+        Two endpoint types are currently live on testnet/devnet rails. Both return
+        <code>HTTP 402</code> on an unpaid request. Sending a valid payment header unlocks the
+        structured JSON response.
       </p>
+
+      <h3>A. Guide brief</h3>
+      <p>
+        A compact structured summary of a PatientGuide condition page — title, summary, key points,
+        and metadata. Suitable for agent context windows, search augmentation, and health app
+        integrations.
+      </p>
+      <pre><code>GET /api/x402/guide-brief?slug=hypertension        (Base Sepolia)
+GET /api/x402/solana/guide-brief?slug=hypertension  (Solana Devnet)</code></pre>
+
+      <h3>B. Red flags</h3>
+      <p>
+        Machine-readable urgent-care signals associated with a condition guide. Educational only —
+        not a diagnosis tool or emergency triage system. See the <a href="#disclaimer">medical
+        disclaimer</a> below.
+      </p>
+      <pre><code>GET /api/x402/red-flags?slug=hypertension        (Base Sepolia)
+GET /api/x402/solana/red-flags?slug=hypertension  (Solana Devnet)</code></pre>
+
+      <h2>Payment rails available</h2>
+      <p>
+        Two testnet/devnet rails are live. These are for testing the concept, not production billing.
+        No real funds are required.
+      </p>
+
+      <div class="sa-rail-grid">
+        <div class="sa-rail">
+          <h3>Base Sepolia</h3>
+          <dl>
+            <dt>Network</dt><dd><code>eip155:84532</code></dd>
+            <dt>Asset</dt><dd>Base Sepolia USDC</dd>
+            <dt>Price</dt><dd>0.001 USDC per request</dd>
+          </dl>
+        </div>
+        <div class="sa-rail">
+          <h3>Solana Devnet</h3>
+          <dl>
+            <dt>Network</dt><dd><code>solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1</code></dd>
+            <dt>Asset</dt><dd>Solana Devnet USDC</dd>
+            <dt>Price</dt><dd>0.001 USDC per request</dd>
+          </dl>
+        </div>
+      </div>
+
+      <h2>What an unpaid request returns</h2>
+      <p>
+        Any request without a valid payment header returns <code>HTTP 402</code> with an x402
+        payment descriptor. Example:
+      </p>
+      <pre><code>{`{
+  "x402Version": 2,
+  "accepts": [
+    {
+      "scheme": "exact",
+      "network": "eip155:84532",
+      "maxAmountRequired": "1000",
+      "resource": "https://patientguide.io/api/x402/guide-brief?slug=hypertension"
+    }
+  ]
+}`}</code></pre>
+      <p>
+        <code>maxAmountRequired: "1000"</code> is denominated in the smallest unit of USDC (6
+        decimals), meaning 0.001 USDC.
+      </p>
+
+      <h2>What a paid response contains</h2>
+      <p>These are approximate field shapes. Exact fields may evolve during preview.</p>
+
+      <h3>Guide brief</h3>
+      <ul>
+        <li><code>slug</code> — guide identifier</li>
+        <li><code>title</code> — guide title</li>
+        <li><code>summary</code> — short plain-text synopsis</li>
+        <li><code>keyPoints</code> — array of key points</li>
+        <li><code>updatedDate</code> — last revision date (ISO 8601)</li>
+      </ul>
+
+      <h3>Red flags</h3>
+      <ul>
+        <li><code>slug</code> — guide identifier</li>
+        <li><code>title</code> — guide title</li>
+        <li><code>type</code> — content type identifier</li>
+        <li><code>redFlags</code> — array of urgent-care signals</li>
+        <li><code>disclaimer</code> — medical disclaimer text</li>
+      </ul>
+
+      <h2 id="disclaimer">Medical disclaimer</h2>
+      <p class="sa-disclaimer">
+        Structured red-flags data is educational and informational. It is not a diagnosis, an
+        emergency triage tool, or a substitute for professional medical care. Red flags data
+        describes patterns associated with conditions — it does not evaluate any individual
+        patient's situation. If symptoms are severe, sudden, or concerning, seek urgent medical
+        help immediately.
+      </p>
+
+      <h2>Status and what's next</h2>
+      <ul>
+        <li>Both testnet/devnet rails are verified end-to-end.</li>
+        <li>Red flags preview currently supports <a href="/guides/hypertension">hypertension</a> first.</li>
+        <li>More condition slugs and endpoint types may be added during preview.</li>
+        <li>Mainnet access is coming soon. Mainnet is not currently live.</li>
+        <li>Public health guides will always remain free.</li>
+      </ul>
+
+      <h2>Related</h2>
+      <ul>
+        <li><a href="/guides/hypertension">Hypertension guide</a> — the first live structured-access slug</li>
+        <li><a href="/llms.txt">/llms.txt</a> — machine-readable content index for LLMs</li>
+      </ul>
+
     </section>
   </article>
 </Layout>
@@ -67,8 +187,16 @@ const frontmatter = {
   .sa-lead {
     font-size: var(--pg-text-lg);
     color: var(--pg-text-soft);
+    margin: 0 0 var(--pg-space-3);
+    line-height: var(--pg-leading-relaxed);
+  }
+
+  .sa-preview-notice {
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
     margin: 0;
     line-height: var(--pg-leading-relaxed);
+    font-style: italic;
   }
 
   .sa-body {
@@ -81,11 +209,37 @@ const frontmatter = {
     margin: 0 0 var(--pg-space-5);
   }
 
+  .sa-body ul {
+    margin: 0 0 var(--pg-space-5);
+    padding-left: var(--pg-space-6);
+  }
+
+  .sa-body li {
+    margin-bottom: var(--pg-space-1);
+  }
+
   .sa-body h2 {
     font-size: var(--pg-text-lg);
     font-weight: 600;
     color: var(--pg-text);
     margin: var(--pg-space-8) 0 var(--pg-space-3);
+  }
+
+  .sa-body h3 {
+    font-size: var(--pg-text-base);
+    font-weight: 600;
+    color: var(--pg-text);
+    margin: var(--pg-space-5) 0 var(--pg-space-2);
+  }
+
+  .sa-body a {
+    color: var(--pg-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .sa-body a:hover {
+    color: var(--pg-primary, #0057b8);
   }
 
   .sa-body code {
@@ -95,5 +249,75 @@ const frontmatter = {
     padding: 0.1em 0.35em;
     border-radius: var(--pg-radius-sm);
     color: var(--pg-text);
+  }
+
+  .sa-body pre {
+    background: var(--pg-surface-soft);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-sm);
+    padding: var(--pg-space-4);
+    overflow-x: auto;
+    margin: 0 0 var(--pg-space-5);
+  }
+
+  .sa-body pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.8125em;
+    color: var(--pg-text);
+    white-space: pre;
+  }
+
+  .sa-rail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--pg-space-4);
+    margin: 0 0 var(--pg-space-5);
+  }
+
+  @media (max-width: 36rem) {
+    .sa-rail-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sa-rail {
+    background: var(--pg-surface-soft);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-sm);
+    padding: var(--pg-space-4);
+  }
+
+  .sa-rail h3 {
+    font-size: var(--pg-text-sm);
+    font-weight: 600;
+    color: var(--pg-text);
+    margin: 0 0 var(--pg-space-3);
+  }
+
+  .sa-rail dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--pg-space-1) var(--pg-space-3);
+    margin: 0;
+    font-size: var(--pg-text-sm);
+  }
+
+  .sa-rail dt {
+    color: var(--pg-text-soft);
+    font-weight: 500;
+  }
+
+  .sa-rail dd {
+    margin: 0;
+    color: var(--pg-text);
+  }
+
+  .sa-disclaimer {
+    border-left: 3px solid var(--pg-border);
+    padding-left: var(--pg-space-4);
+    font-size: var(--pg-text-sm);
+    color: var(--pg-text-soft);
   }
 </style>
