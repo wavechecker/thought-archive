@@ -93,8 +93,7 @@ const RED_FLAGS: Record<string, RedFlagsEntry> = {
           "Any suspected stroke symptoms, even if they resolve quickly",
         whyItMatters:
           "A transient ischaemic attack (TIA or 'mini-stroke') can look identical to a stroke but resolve within minutes. It is a medical emergency because stroke risk is highest in the hours and days following a TIA.",
-        suggestedAction:
-          "Seek emergency assessment immediately — do not wait to see if symptoms return.",
+        suggestedAction: "Seek emergency assessment immediately.",
       },
     ],
     disclaimer: DISCLAIMER,
@@ -138,7 +137,7 @@ const RED_FLAGS: Record<string, RedFlagsEntry> = {
           "Severe and uncharacteristic fatigue, especially if new, unexplained, and combined with any other warning sign",
         whyItMatters:
           "Can be an early warning sign of a heart attack, particularly in women — sometimes appearing hours or days before other symptoms.",
-        suggestedAction: "Seek same-day medical advice, or call emergency services if other warning signs are also present.",
+        suggestedAction: "Seek same-day medical advice.",
       },
     ],
     disclaimer: DISCLAIMER,

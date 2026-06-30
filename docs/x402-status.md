@@ -209,6 +209,6 @@ curl -i "https://patientguide.io/api/x402/solana/red-flags?slug=hypertension"
 These are identified next steps — none are implemented yet:
 
 1. **Deploy red-flags endpoints** — deploy Worker and Netlify after PR is merged and verified.
-2. **Expand red-flags slugs further** — 7 priority slugs now supported in preview. Additional slugs can be added to the curated static map in `x402-red-flags.ts` after content review. Do not add slugs speculatively.
+2. **Expand red-flags slugs further** — 8 slugs now supported in preview. Additional slugs can be added to the curated static map in `x402-red-flags.ts` after content review. Do not add slugs speculatively. Note: API slugs are independently documented keys — they do not need to match the guide URL slug for each condition.
 3. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
 4. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
