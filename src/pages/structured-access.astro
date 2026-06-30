@@ -46,7 +46,7 @@ const frontmatter = {
 
       <h2>Live preview endpoints</h2>
       <p>
-        Two endpoint types are currently live on testnet/devnet rails. Both return
+        Three endpoint types are currently live on testnet/devnet rails. All return
         <code>HTTP 402</code> on an unpaid request. Sending a valid payment header unlocks the
         structured JSON response.
       </p>
@@ -68,6 +68,18 @@ GET /api/x402/solana/guide-brief?slug=hypertension  (Solana Devnet)</code></pre>
       </p>
       <pre><code>GET /api/x402/red-flags?slug=hypertension        (Base Sepolia)
 GET /api/x402/solana/red-flags?slug=hypertension  (Solana Devnet)</code></pre>
+
+      <h3>C. Visit prep</h3>
+      <p>
+        Structured appointment-preparation checklists for patients before a healthcare visit.
+        Covers what to track before the appointment, what to bring, questions to discuss with a
+        clinician, and when to seek urgent help. Educational only — not a diagnosis, treatment
+        plan, or triage tool. Currently supports selected high-priority guides: hypertension,
+        stroke, early warning signs of a heart attack, atrial fibrillation, type 1 diabetes,
+        asthma, sepsis, and depression.
+      </p>
+      <pre><code>GET /api/x402/visit-prep?slug=hypertension        (Base Sepolia)
+GET /api/x402/solana/visit-prep?slug=hypertension  (Solana Devnet)</code></pre>
 
       <h2>Payment rails available</h2>
       <p>
@@ -136,20 +148,32 @@ GET /api/x402/solana/red-flags?slug=hypertension  (Solana Devnet)</code></pre>
         <li><code>disclaimer</code> — medical disclaimer text</li>
       </ul>
 
+      <h3>Visit prep</h3>
+      <ul>
+        <li><code>slug</code> — guide identifier</li>
+        <li><code>title</code> — guide title</li>
+        <li><code>type</code> — content type identifier</li>
+        <li><code>whatToTrack</code> — items to monitor before the appointment</li>
+        <li><code>whatToBring</code> — records and items to bring to the appointment</li>
+        <li><code>questionsToAsk</code> — suggested questions to discuss with a clinician</li>
+        <li><code>whenToSeekUrgentHelp</code> — symptoms that should not wait for a scheduled visit</li>
+        <li><code>disclaimer</code> — medical disclaimer text</li>
+      </ul>
+
       <h2 id="disclaimer">Medical disclaimer</h2>
       <p class="sa-disclaimer">
-        Structured red-flags data is educational and informational. It is not a diagnosis, an
-        emergency triage tool, or a substitute for professional medical care. Red flags data
-        describes patterns associated with conditions — it does not evaluate any individual
-        patient's situation. If symptoms are severe, sudden, or concerning, seek urgent medical
-        help immediately.
+        Structured data from these endpoints is educational and informational only. It is not a
+        diagnosis, treatment plan, emergency triage tool, or substitute for professional medical
+        care. Content describes general patterns associated with conditions — it does not evaluate
+        any individual patient's situation. If symptoms are severe, sudden, or concerning, seek
+        urgent medical help immediately.
       </p>
 
       <h2>Status and what's next</h2>
       <ul>
         <li>Both testnet/devnet rails are verified end-to-end.</li>
-        <li>Red flags preview supports selected high-priority guides: hypertension, stroke, early warning signs of a heart attack, atrial fibrillation, type 1 diabetes, asthma, sepsis, and depression.</li>
-        <li>Unsupported slugs may still return 404 after payment. More slugs may be added during preview.</li>
+        <li>Red flags and visit prep previews support selected high-priority guides: hypertension, stroke, early warning signs of a heart attack, atrial fibrillation, type 1 diabetes, asthma, sepsis, and depression.</li>
+        <li>Unsupported slugs may return 404 after payment. More slugs may be added during preview.</li>
         <li>Mainnet access is coming soon. Mainnet is not currently live.</li>
         <li>Public health guides will always remain free.</li>
       </ul>

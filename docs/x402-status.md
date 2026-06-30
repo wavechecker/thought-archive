@@ -204,11 +204,70 @@ curl -i "https://patientguide.io/api/x402/solana/red-flags?slug=hypertension"
 
 ---
 
+### Base Sepolia (EVM) — visit-prep
+
+```
+https://patientguide.io/api/x402/visit-prep?slug=hypertension
+```
+
+Expected payment requirements (mirrors guide-brief and red-flags rails):
+
+| Field | Value |
+|-------|-------|
+| `x402Version` | `2` |
+| `scheme` | `exact` |
+| `network` | `eip155:84532` |
+| `asset` | `0x036CbD53842c5426634e7929541eC2318f3dCF7e` |
+| `payTo` | `0x28C58Bc26Cd14b7f378937ED18081dA1A2976220` |
+| `maxAmountRequired` | `1000` (0.001 USDC) |
+| `extra` | `{"name":"USDC","version":"2"}` |
+
+Expected paid JSON shape: `{ slug, title, type: "visit_prep", whatToTrack: [...], whatToBring: [...], questionsToAsk: [...], whenToSeekUrgentHelp: [...], disclaimer }`.
+
+**Supported slugs (preview — testnet/devnet only):**
+`hypertension`, `stroke`, `early-warning-signs-of-a-heart-attack`, `atrial-fibrillation`, `type-1-diabetes`, `asthma`, `sepsis`, `depression`
+
+Educational only — appointment-preparation checklists for patients before a healthcare visit.
+Not a diagnosis, treatment plan, or emergency triage tool.
+Public human-readable guides remain free; no guide page is gated.
+
+Manual 402 check (unpaid):
+```sh
+curl -i "https://patientguide.io/api/x402/visit-prep?slug=hypertension"
+```
+
+### Solana Devnet (SVM) — visit-prep
+
+```
+https://patientguide.io/api/x402/solana/visit-prep?slug=hypertension
+```
+
+Expected payment requirements (mirrors solana/red-flags rail):
+
+| Field | Value |
+|-------|-------|
+| `x402Version` | `2` |
+| `scheme` | `exact` |
+| `network` | `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1` |
+| `asset` (mint) | `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU` |
+| `payTo` | `DBti9QNp9BwZCDDnw5BEQfqLrUXZvFyTTDpPDYC2AUpS` |
+| `maxAmountRequired` | `1000` (0.001 USDC) |
+| `extra.feePayer` | present (same as solana/guide-brief and solana/red-flags) |
+
+Supported slugs mirror the Base Sepolia list above. Unsupported slugs return 404 after payment.
+
+Manual 402 check (unpaid):
+```sh
+curl -i "https://patientguide.io/api/x402/solana/visit-prep?slug=hypertension"
+```
+
+---
+
 ## Next candidate work
 
 These are identified next steps — none are implemented yet:
 
-1. **Deploy red-flags endpoints** — deploy Worker and Netlify after PR is merged and verified.
-2. **Expand red-flags slugs further** — 8 slugs now supported in preview. Additional slugs can be added to the curated static map in `x402-red-flags.ts` after content review. Do not add slugs speculatively. Note: API slugs are independently documented keys — they do not need to match the guide URL slug for each condition.
+1. **Deploy red-flags and visit-prep endpoints** — deploy Worker and Netlify after PR is merged and verified.
+2. **Expand structured slugs further** — 8 slugs supported in preview for both red-flags and visit-prep. Additional slugs can be added to the curated static maps after content review. Do not add slugs speculatively. Note: API slugs are independently documented keys — they do not need to match the guide URL slug for each condition.
 3. **Base mainnet facilitator/auth investigation** — determine what is required to enable the Base mainnet rail (facilitator registration, auth configuration) without enabling live payments prematurely.
 4. **"upto" or batch-style payments** — evaluate only after confirming facilitator support and official spec coverage. Do not implement speculatively.
