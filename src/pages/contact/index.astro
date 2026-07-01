@@ -2,32 +2,130 @@
 import Layout from "@/layouts/Layout.astro";
 
 const frontmatter = {
-  title: "Contact",
-  description: "Say hi at hello@patientguide.io.",
+  title: "Contact PatientGuide",
+  description: "Send feedback, corrections, or questions about PatientGuide.",
 };
 ---
 
 <Layout frontmatter={frontmatter}>
-  <!-- If Layout.astro auto-renders an H1, remove the <h1> below -->
-  <h1>Contact</h1>
-  <p>Say hi at <a href="mailto:hello@patientguide.io">hello@patientguide.io</a>.</p>
+  <article class="prose">
+    <h1>Contact PatientGuide</h1>
 
-  <form name="contact" method="POST" action="/contact/success" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact" />
-    <p style="display:none">
-      <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    <p>Use this page to send feedback, corrections, or questions about PatientGuide.</p>
+
+    <p>We welcome:</p>
+    <ul>
+      <li>content corrections or unclear wording</li>
+      <li>broken links or site issues</li>
+      <li>x402 structured-access tester feedback</li>
+      <li>partnership, media, or technical inquiries</li>
+    </ul>
+
+    <form class="contact-form not-prose" name="contact" method="POST" action="/contact/success" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none">
+        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+
+      <div class="contact-form__field">
+        <label for="email">Your Email</label>
+        <input id="email" type="email" name="email" required />
+      </div>
+
+      <div class="contact-form__field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <h2>Testing the x402 preview?</h2>
+
+    <p>
+      If you are testing the x402 structured-access preview, GitHub Issues are usually the best place for technical reports.
+    </p>
+    <p>
+      Please include the endpoint URL, rail, object type, client or tool used, and the 402 response or error you saw. If relevant, include a transaction hash or signature.
+    </p>
+    <p>
+      <a href="https://github.com/wavechecker/thought-archive/issues/new/choose">Open a GitHub issue</a>
     </p>
 
-    <label>
-      Your Email
-      <input type="email" name="email" required />
-    </label>
+    <h2>Safety and privacy</h2>
 
-    <label>
-      Message
-      <textarea name="message" rows="6" required></textarea>
-    </label>
-
-    <button type="submit">Send</button>
-  </form>
+    <p>
+      Please do not send private keys, seed phrases, keypair files, funded wallet credentials, or sensitive personal health information.
+    </p>
+    <p>
+      PatientGuide cannot respond to urgent medical questions or provide personal medical advice. If you may be experiencing a medical emergency, call your local emergency number or seek urgent medical care.
+    </p>
+    <p>
+      You can also reach us at <a href="mailto:hello@patientguide.io">hello@patientguide.io</a>.
+    </p>
+  </article>
 </Layout>
+
+<style>
+  .contact-form {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 65ch;
+  }
+
+  .contact-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .contact-form label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--pg-text);
+  }
+
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--pg-text);
+    background: var(--pg-surface);
+    border: 1px solid var(--pg-border);
+    border-radius: var(--pg-radius-md);
+    font-family: inherit;
+    line-height: 1.5;
+    transition: border-color var(--pg-transition-fast);
+  }
+
+  .contact-form input[type="email"]:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--pg-link);
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+  }
+
+  .contact-form button[type="submit"] {
+    align-self: flex-start;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #fff;
+    background: var(--pg-link);
+    border: none;
+    border-radius: var(--pg-radius-md);
+    cursor: pointer;
+    transition: opacity var(--pg-transition-fast);
+  }
+
+  .contact-form button[type="submit"]:hover {
+    opacity: 0.85;
+  }
+</style>
