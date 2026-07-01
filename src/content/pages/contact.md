@@ -1,16 +1,12 @@
 ---
-title: "Contact"
-description: "How to get in touch with the Patient Guide team."
+title: "Contact PatientGuide"
+description: "Send feedback, corrections, or questions about PatientGuide."
 publishDate: "2025-08-19"
 draft: false
 ---
 
-# Contact
+# Contact PatientGuide
 
-We'd love to hear from you.
+Use this page to send feedback, corrections, or questions about PatientGuide.
 
-- 📧 Email: [info@patientguide.io](mailto:info@patientguide.io)  
-- 🌐 Website: [patientguide.io](https://patientguide.io)  
-
-If you have feedback, corrections, or would like to contribute, please reach out.  
-We're always looking to improve the guides and make them more useful.
+You can reach us at [hello@patientguide.io](mailto:hello@patientguide.io).
