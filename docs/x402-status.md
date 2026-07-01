@@ -21,7 +21,7 @@ PatientGuide human-readable pages (`/guides`, `/posts`, `/ask`) remain publicly 
 | Base mainnet payments | ❌ not enabled |
 | Solana mainnet payments | ❌ not enabled |
 
-Worker version deployed: `22d1ef92-bf0f-4211-85d0-a7e55ecf572a` (2026-06-30)
+Worker version deployed: `5177bd0e-439e-4059-9325-771369855c45` (2026-07-01)
 
 ---
 
@@ -265,6 +265,14 @@ Manual 402 check (unpaid):
 ```sh
 curl -i "https://patientguide.io/api/x402/solana/visit-prep?slug=hypertension"
 ```
+
+---
+
+## Feedback intake
+
+Tester feedback should go through [GitHub Issues](https://github.com/wavechecker/thought-archive/issues) or the site contact page at `/contact`.
+
+Use the **x402 Preview Feedback** issue template for endpoint-specific reports. Never request or accept private keys, seed phrases, keypair files, or sensitive health information.
 
 ---
 
