@@ -276,6 +276,14 @@ Use the **x402 Preview Feedback** issue template for endpoint-specific reports. 
 
 ---
 
+## Tester documentation
+
+- [Tester runbook](x402-tester-runbook.md) — external tester guide for Base Sepolia and Solana Devnet
+- [Reddit drafts](x402-reddit-tester-posts.md) — launch copy and defensive reply templates
+- [Observability checklist](x402-observability.md) — post-launch monitoring and feedback triage
+
+---
+
 ## Next candidate work
 
 These are identified next steps — none are implemented yet:
